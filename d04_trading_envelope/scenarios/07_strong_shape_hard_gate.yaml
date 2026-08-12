@@ -1,0 +1,102 @@
+name: 07_strong_shape_hard_gate
+seed: 107
+steps:
+  - scenario_time: 0
+    return_shape:
+      return_shape_id: RS-007
+      candidate_id: TEST_G
+      version: 1
+      timestamp: 0.0
+      direction: LONG
+      shape_quality: 0.95
+      forward_support: 0.95
+      uncertainty: 0.05
+      expected_lifetime_seconds: 30
+      candidate_rr: 2.5
+      magnitude_score: 0.95
+      persistence_score: 0.90
+      decay_score: 0.05
+      reversal_risk: 0.05
+      active: true
+      metadata: {}
+    envelope_context:
+      timestamp: 0.0
+      market_eligible: true
+      data_integrity: 1.00
+      clock_event_quality: 0.95
+      capital_available: 0.90
+      portfolio_capacity: 0.90
+      position_capacity: 0.90
+      liquidity_quality: 0.02
+      spread_quality: 0.03
+      latency_quality: 0.10
+      execution_feasibility: 0.05
+      risk_capacity: 0.90
+      broker_health: 0.90
+      metadata: {}
+  - scenario_time: 1
+    return_shape:
+      return_shape_id: RS-007
+      candidate_id: TEST_G
+      version: 2
+      timestamp: 1.0
+      direction: LONG
+      shape_quality: 0.95
+      forward_support: 0.95
+      uncertainty: 0.05
+      expected_lifetime_seconds: 30
+      candidate_rr: 2.5
+      magnitude_score: 0.95
+      persistence_score: 0.90
+      decay_score: 0.05
+      reversal_risk: 0.05
+      active: true
+      metadata: {}
+    envelope_context:
+      timestamp: 1.0
+      market_eligible: true
+      data_integrity: 1.00
+      clock_event_quality: 0.95
+      capital_available: 0.90
+      portfolio_capacity: 0.90
+      position_capacity: 0.90
+      liquidity_quality: 0.02
+      spread_quality: 0.03
+      latency_quality: 0.10
+      execution_feasibility: 0.05
+      risk_capacity: 0.90
+      broker_health: 0.90
+      metadata: {}
+  - scenario_time: 2
+    return_shape:
+      return_shape_id: RS-007
+      candidate_id: TEST_G
+      version: 3
+      timestamp: 2.0
+      direction: LONG
+      shape_quality: 0.95
+      forward_support: 0.95
+      uncertainty: 0.05
+      expected_lifetime_seconds: 30
+      candidate_rr: 2.5
+      magnitude_score: 0.95
+      persistence_score: 0.90
+      decay_score: 0.05
+      reversal_risk: 0.05
+      active: true
+      metadata: {}
+    envelope_context:
+      timestamp: 2.0
+      market_eligible: true
+      data_integrity: 1.00
+      clock_event_quality: 0.95
+      capital_available: 0.90
+      portfolio_capacity: 0.90
+      position_capacity: 0.90
+      liquidity_quality: 0.02
+      spread_quality: 0.03
+      latency_quality: 0.10
+      execution_feasibility: 0.05
+      risk_capacity: 0.90
+      broker_health: 0.90
+      metadata: {}

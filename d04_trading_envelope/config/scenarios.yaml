@@ -1,0 +1,8 @@
+scenarios:
+  - 01_strong_shape_poor_capture
+  - 02_shape_becomes_capturable
+  - 03_open_then_shape_deteriorates
+  - 04_shape_up_envelope_down
+  - 05_threshold_noise_hysteresis
+  - 06_envelope_up_shape_down
+  - 07_strong_shape_hard_gate
