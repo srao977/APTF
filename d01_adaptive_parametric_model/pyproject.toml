@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aptf-d01-adaptive-parametric-model"
+version = "0.1.0"
+description = "APTF D01 Adaptive Parametric Model physical prototype v0.1"
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [{ name = "APTF" }]
+dependencies = [
+  "pydantic>=2.8",
+  "numpy>=1.26",
+  "PyYAML>=6.0",
+  "rich>=13.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

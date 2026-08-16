@@ -1,0 +1,17 @@
+name: perturbation_memory_reset
+description: Perturbation should shorten half-life.
+seed: 15
+steps: 100
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.0002
+price_noise: 0.0006
+base_volume: 1000.0
+volume_noise: 120.0
+spread: 0.02
+price_shocks:
+  - step: 45
+    displacement: 0.018
+volume_shocks:
+  - step: 45
+    multiplier: 3.0

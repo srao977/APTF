@@ -1,0 +1,11 @@
+scenario_id: S01
+name: stationary
+description: Constant price and activity.
+parameters:
+  price_start: 100.0
+  volume: 1000.0
+  dt_seconds: 1.0
+  count: 180
+expected:
+  low_velocity: true
+  low_perturbation: true

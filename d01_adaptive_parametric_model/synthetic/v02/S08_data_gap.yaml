@@ -1,0 +1,12 @@
+scenario_id: S08
+name: data_gap
+description: Observation interval temporarily expands.
+parameters:
+  drift_per_step: 0.01
+  gap_index: 95
+  gap_dt_seconds: 10.0
+  normal_dt_seconds: 1.0
+  volume: 1000.0
+  count: 180
+expected:
+  data_gap_detected: true

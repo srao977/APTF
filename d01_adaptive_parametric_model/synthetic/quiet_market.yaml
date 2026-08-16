@@ -1,0 +1,11 @@
+name: quiet_market
+description: Low displacement and moderate volume.
+seed: 11
+steps: 80
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.0002
+price_noise: 0.0006
+base_volume: 1000.0
+volume_noise: 120.0
+spread: 0.02

@@ -1,0 +1,14 @@
+name: volume_shock
+description: Isolated volume spike with limited displacement.
+seed: 12
+steps: 80
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.0001
+price_noise: 0.0008
+base_volume: 900.0
+volume_noise: 120.0
+spread: 0.03
+volume_shocks:
+  - step: 35
+    multiplier: 6.0

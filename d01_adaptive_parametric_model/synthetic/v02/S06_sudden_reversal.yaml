@@ -1,0 +1,12 @@
+scenario_id: S06
+name: sudden_reversal
+description: Abrupt direction change with strong perturbation.
+parameters:
+  drift_pre: 0.03
+  drift_post: -0.09
+  switch_index: 80
+  volume: 2000.0
+  dt_seconds: 1.0
+  count: 180
+expected:
+  relevance_shortens: true

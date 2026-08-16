@@ -1,0 +1,73 @@
+entity_id: TEST_ENTITY
+model_instance_id: D01-V0-TEST_ENTITY-001
+model_definition_version: D01_V0_1_2
+seed: 7
+
+runtime:
+  scenario_mode: ISOLATED
+  continuous_scenario_gap_seconds: 2.0
+
+temporal:
+  observation_interval_seconds: 120
+  forward_interval_seconds: 60
+  half_life:
+    min_seconds: 5.0
+    default_seconds: 60.0
+    max_seconds: 300.0
+    perturbation_shorten_factor: 0.35
+    reinforcement_lengthen_factor: 1.15
+
+volume:
+  baseline_method: half_life_weighted_mean
+  baseline_window: 20
+  half_life_seconds: 45.0
+
+perturbation:
+  displacement_threshold: 0.0025
+  velocity_threshold: 0.0012
+  acceleration_threshold: 0.0010
+  rv_threshold: 1.8
+  volume_density_threshold: 2500.0
+  spread_change_threshold: 0.08
+
+conditioning:
+  enabled: true
+  method: RUNNING_ZSCORE
+  minimum_warmup_observations: 12
+  epsilon: 1.0e-6
+  lower_bound: -8.0
+  upper_bound: 8.0
+
+parametric:
+  learning_rate: 0.03
+  l2_regularization: 0.0005
+  weight_clip: 5.0
+  polynomial_order: 2
+  interaction_max_order: 1
+  interaction_allowlist:
+    - volume_log_x_price_displacement
+    - relative_volume_x_price_velocity
+    - volume_density_x_price_displacement
+    - price_velocity_x_acceleration
+  output_overrides: {}
+
+fmo:
+  capture_every_n: 5
+  forward_eval_steps: 10
+
+observation_capabilities:
+  provider: FirstRateData
+  entity: SPY
+  has_price: true
+  has_open: true
+  has_high: true
+  has_low: true
+  has_close: true
+  has_volume: true
+  has_bid: false
+  has_ask: false
+  has_bid_size: false
+  has_ask_size: false
+  has_trade_size: false
+  has_quote_spread: false
+  has_order_book: false

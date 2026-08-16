@@ -1,0 +1,16 @@
+{
+  "source_path": "c:\\Users\\chino\\APTF\\data\\market\\raw\\SPY_1min_firstratedata.csv",
+  "source_filename": "SPY_1min_firstratedata.csv",
+  "file_size_bytes": 11448549,
+  "sha256": "B8688041F151AA291FC297205DC57539A4B2430B78FEA277566A0238EEE037CB",
+  "inspection_timestamp": "2026-08-13T23:03:11+00:00",
+  "row_count": 207824,
+  "column_names": [
+    "timestamp",
+    "open",
+    "high",
+    "low",
+    "close",
+    "volume"
+  ]
+}

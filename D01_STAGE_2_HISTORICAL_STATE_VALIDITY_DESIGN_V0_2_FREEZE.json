@@ -1,0 +1,94 @@
+{
+  "freeze_id": "D01_STAGE2_DESIGN_V0_2_FROZEN_20260815T171006Z",
+  "freeze_timestamp_utc": "2026-08-15T17:10:06.4910259Z",
+  "status": "FROZEN",
+  "stage": "Stage 2 Historical State Validity",
+  "model": "D01 v0.2",
+  "human_approval_to_freeze": true,
+  "stage_1": {
+    "freeze_id": "D01_V0_2_STAGE1_ACCEPTED_20260815T161928Z",
+    "freeze_manifest_path": "D01_V0_2_STAGE_1_SYNTHETIC_ACCEPTANCE_FREEZE.json",
+    "freeze_manifest_sha256": "57F800A510FC68A60928B5FCA36A2E58C3E9F7B6FD2A39E7EC3A709831573C94",
+    "integrity_verification": "PASS",
+    "protected_hashes": {
+      "model_and_configuration": {
+        "d01_adaptive_parametric_model/src/d01/v02/__init__.py": "5329EF480EB7F9AF93083F63E10EB95324A1A5E43555809E356B5FDFC9F3C8E2",
+        "d01_adaptive_parametric_model/src/d01/v02/adaptation.py": "50CD69CF8F5D2A92C91E15F8AB1FDFA9B6A398A7F1A3E130A7465987F0FC8F3F",
+        "d01_adaptive_parametric_model/src/d01/v02/coherence.py": "CE8F2F85BD51EADE1F50CC2ADC9D7F6A27C3DAA76AFDF0C399E59F92B55C1229",
+        "d01_adaptive_parametric_model/src/d01/v02/config.py": "838C083A69D2B528548989B5ED691C350CAA76B8271F3E875E86AB4A6AA4BAF6",
+        "d01_adaptive_parametric_model/src/d01/v02/forward.py": "EA2FF54DF1F4E480B54E96263C44146FC2CE2106E554204099D689B497B593AC",
+        "d01_adaptive_parametric_model/src/d01/v02/half_life.py": "CE204BE01D3AD44A8940A66A71523E86815D37860A39028318974D3951816099",
+        "d01_adaptive_parametric_model/src/d01/v02/health.py": "129A58D0E1013CC0F866DDA5306FC80CCBA90013B31F8DFF913D0679F45AF957",
+        "d01_adaptive_parametric_model/src/d01/v02/innovation.py": "09B3B931DC3980F5205C36EA611D35851003D7B68EC649C5883183D32440E2C3",
+        "d01_adaptive_parametric_model/src/d01/v02/kinematics.py": "00083B5A98863F3D5836E82BDCC82F10DED09631E68BF68493D959E4E6999937",
+        "d01_adaptive_parametric_model/src/d01/v02/model.py": "77CC090643E74D810B5A73E3B35B23C0E67DBCD9EFABBDD3553BA87C45BCBACF",
+        "d01_adaptive_parametric_model/src/d01/v02/observations.py": "EAD25C148BF94183E480911E07AC016EB20A65E6F210AB2D0E1814CE862C3846",
+        "d01_adaptive_parametric_model/src/d01/v02/outputs.py": "739029F458FDF535F932C34FEA6A64EE2660B00FC6DE6EBD8F2AA3C3DA415755",
+        "d01_adaptive_parametric_model/src/d01/v02/persistence.py": "B5DDC9A65B42744D8928D6D74B6F5D55315141201D93E26866ED6B1F7840BCE8",
+        "d01_adaptive_parametric_model/src/d01/v02/perturbation.py": "C4AE83F30CA48F8040D329D5217EB3869CBDA8535EA1E8DE80EAF8FB7A8C202F",
+        "d01_adaptive_parametric_model/src/d01/v02/reference.py": "49E6D923D12C8ED1BDA2E13C373277154015036E4F457A334712EBB4DCB52FA8",
+        "d01_adaptive_parametric_model/src/d01/v02/reversal.py": "0B484585B3FBFF7293844CBC0C03EC38E3400169557A5E9AF38A4657BD9BFCA6",
+        "d01_adaptive_parametric_model/src/d01/v02/snapshot.py": "FFF517E154139F6A7CDF420FBBD049DB141BF7D6A192056736B92591D090CA6F",
+        "d01_adaptive_parametric_model/src/d01/v02/state.py": "520B5404AEF7624BFCE8742023D31F82758CBA97320A9F958B7A9ABAFE8DAE3B",
+        "d01_adaptive_parametric_model/src/d01/v02/strength.py": "F34C9711A353BE54C90AC1690A1EC1D76F0D73680F23B631009B2993CF5E4EA7",
+        "d01_adaptive_parametric_model/src/d01/v02/trace.py": "9584525D3EA25BFF8BD029E08769F86348ABF0735C5A05E7096B474DEB7B8820",
+        "d01_adaptive_parametric_model/src/d01/v02/uncertainty.py": "8613C5429D2D2FAF1D07F4915700FA7BED8548515C6AF95B5D1164F0F458AF99",
+        "d01_adaptive_parametric_model/src/d01/v02/volume.py": "E14A6AA97A4DD89F6335B739A6AFC41EF1ACB0BCFBC123D7324035356DA57C8B",
+        "d01_adaptive_parametric_model/output/d01_v02_phase_b/v02_default_config.json": "A7326875839D6987142575C01868B164A32F90ED8BC3D8D119325B59D05E2840",
+        "d01_adaptive_parametric_model/output/d01_v02_phase_b/v02_output_schema.json": "ED4AC9E090141EDE1802316CD4356A70B60FC1579D1F227FBEFEA0253733E1B7",
+        "d01_adaptive_parametric_model/pyproject.toml": "04B00BE1B3EBA678F998CD21977E39A57D8269D8DBEF87323707CE33F77D7441"
+      },
+      "design_authority": {
+        "D01_ADAPTIVE_PARAMETRIC_MODEL_V0_2_IMPLEMENTATION_DESIGN.md": "8D081E85A6FC86F93AC2B515CE9E93DB2F23A4D06C1A81A2F750BE3E843165A2",
+        "D01_ADAPTIVE_PARAMETRIC_MODEL_DESIGN_V0_3_ADDENDUM_PERTURBATION_SEMANTICS.md": "AF00CB7B22C7B29CC28B3EC9C9CFFC10AF01D7DB564525594490CA248B780BCB"
+      },
+      "acceptance_evidence": {
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/semantic_acceptance_manifest.json": "4B86F9B0E026D6EE99C9409BFA8A204B40BBD7A990CC36BDB6724E04566813D9",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/semantic_assertions.csv": "F56784F5380B8D72E1DF44DEAE209C1831A75BF3CFC9A4A95B5A6F5AA5DD07F9",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/cross_scenario_assertions.csv": "91227622D246C1E2127E6C2073AFB56D975656C65019639EB6DF12AFB2CACDAE",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/ablation_effects.csv": "C5418092E1334BCA7DC85435CD3A2A0583F63DA83B98CFF2BCE2EB3B47C64778",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/determinism_results.json": "5F21CCD920BB3325CB7EB830F2935A2C22FB2270B3DC38B872838FC7BFA6BDA0",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/numerical_health.json": "D32DD223FA1798A4BAAB20F2DA86421E1BD012EDAF571A0FBD9DB4C201E06308",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/worker_process_evidence.csv": "E5B810897B500397FD84CAEE98BA92099A55D57FF6A44D4604F2F694B700CD32",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/D01_V0_2_SEMANTIC_ACCEPTANCE_REVIEW.md": "65BC0C6D54526C0DA835E2313BF0563BC4B8F79980C40D7122D0E19B4B919A20",
+        "d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/logs/semantic_acceptance_20260814_180349.log": "B565D3E0438BB048FA1FC0C9391F15C364A5D7000C661577BBF9D7B41DF65522"
+      }
+    }
+  },
+  "stage_2_design_authority": [
+    {"relative_path":"D01_STAGE_2_HISTORICAL_STATE_VALIDITY_DESIGN_V0_2.md","sha256":"AAB0CDE910C63856B9D7A01AF476F999A975971A139B6A07F2FE8756AEAAC4BF","size_bytes":25784,"role":"Approved Stage 2 Design v0.2"},
+    {"relative_path":"D01_STAGE_2_PREIMPLEMENTATION_DECISION_REGISTER_V0_2.md","sha256":"7A0626AD346DAF37180C3161C7B0C290F6A7CF5833E7C87BF7D3FC709B901FE4","size_bytes":18751,"role":"Approved nine-decision register"},
+    {"relative_path":"D01_STAGE_2_DESIGN_V0_2_CONSISTENCY_REVIEW.md","sha256":"A610C35DF4AFC94DBF22006E7EB878C541AF1D7FFED7FC3B0F128AF8E9E88036","size_bytes":9419,"role":"Approved consistency review"},
+    {"relative_path":"D01_STAGE_2_DATA_PARTITION_MANIFEST.json","sha256":"06927C0CE9AEBE4E05F467CCB120D4E504E3D7DC6920E201E19FB89544CB7B2C","size_bytes":2501,"role":"Stage 2 data partition authority"}
+  ],
+  "design_consistency": "PASS",
+  "canonical_specifications": {
+    "realized_state_observer": {"relative_path":"D01_STAGE_2_REALIZED_STATE_OBSERVER_SPEC_V0_2.md","sha256":"3D5D34662BCBE0C5C992BE61B142728CE475621848F66540EDCE304CE956625D","size_bytes":2797,"role":"Canonical realized-state observer extract"},
+    "evidence_contracts": {"relative_path":"D01_STAGE_2_EVIDENCE_CONTRACTS_V0_2.md","sha256":"9A1EC96E62BFD6EAA39FE11FA19A57ADC49B86FADC949309E55657CA20C64704","size_bytes":6807,"role":"Canonical evidence-contract extract"},
+    "scoring": {"relative_path":"D01_STAGE_2_SCORING_SPEC_V0_2.md","sha256":"6942F517321E2C01A053CCFA61203BBB6623433C0E9BFD5D249372E9EE715843","size_bytes":5004,"role":"Canonical scoring extract"},
+    "input_mapping": {"relative_path":"D01_STAGE_2_INPUT_MAPPING_SPEC_V0_2.md","sha256":"0920AC1322EF2246AD1A3774778FF48F6F48897062B7047D4859C3655CF3DE8E","size_bytes":2799,"role":"Canonical input-mapping extract"},
+    "causal_replay_protocol": {"relative_path":"D01_STAGE_2_CAUSAL_REPLAY_PROTOCOL_V0_2.md","sha256":"732C1A3E76B91F41F763C08FFF40AE731EAE1415DD632B40633D2DF6D2A77F1D","size_bytes":4882,"role":"Canonical causal-replay extract"}
+  },
+  "dataset": {
+    "path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "sha256": "73957227A0CC09103F7CA5FF62B011EDD7C80C220017D91FB97C5FB5E6A1055D",
+    "primary_interval": "[2022-09-30T04:00:00-04:00, 2023-03-30T04:00:00-04:00)",
+    "reserve_interval": "[2023-03-30T04:00:00-04:00, 2023-09-30T04:00:00-04:00)",
+    "primary_observation_count": 106603,
+    "reserve_observation_count": 101221,
+    "reserve_sealed": true,
+    "reserve_observation_values_inspected": false,
+    "primary_outcomes_inspected_during_freeze": false,
+    "reserve_accessed": false
+  },
+  "forward_interval_warning": "FORWARD_INTERVAL_RANGE_WARNING",
+  "canonical_extraction_integrity": "PASS",
+  "d01_model_modified": false,
+  "parameters_tuned": false,
+  "stage_2_implemented": false,
+  "historical_replay_started": false,
+  "historical_dmo_fmo_generated": false,
+  "historical_state_validity_scores_calculated": false,
+  "bootstrap_intervals_calculated": false,
+  "stage_2_classifications_calculated": false
+}

@@ -1,0 +1,10 @@
+scenario_id: S02
+name: smooth_persistent_drift
+description: Gradual monotonic displacement with coherent activity.
+parameters:
+  drift_per_step: 0.02
+  volume: 1100.0
+  dt_seconds: 1.0
+  count: 180
+expected:
+  positive_persistence: true

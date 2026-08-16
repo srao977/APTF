@@ -1,0 +1,88 @@
+{
+  "freeze_id": "D01_STAGE2_CLOSEOUT_STAGE3_BOUNDARY_FROZEN_20260816T002802Z",
+  "freeze_timestamp_utc": "2026-08-16T00:28:02.1544357Z",
+  "status": "FROZEN",
+  "scope": "Stage 2 closeout and Stage 3 decision boundary governance",
+  "frozen_artifacts": [
+    {
+      "relative_path": "D01_STAGE_2_PRIMARY_EMPIRICAL_CHARACTERIZATION_CLOSEOUT_V0_2.md",
+      "sha256": "25F170EF7115BBFC8C6FCBBF4135DE0AC0E31873958A4DBB98E29207E69FD13B",
+      "size_bytes": 6463,
+      "role": "Stage 2 primary empirical characterization closeout"
+    },
+    {
+      "relative_path": "D01_REMAINING_HISTORICAL_DATA_AND_FINAL_BACKTEST_GOVERNANCE_V0_1.md",
+      "sha256": "D2296953C6B4F819D46A77D6147205FD99706EE18307278F6944E46637F60000",
+      "size_bytes": 4549,
+      "role": "Remaining historical data and one-way final backtest governance"
+    },
+    {
+      "relative_path": "D01_STAGE_3_TRADING_DECISION_BOUNDARY_V0_1.md",
+      "sha256": "05E1DCC79739900C681D5D2A361282E013B5F090EA0C0E0A721BAD26ABCBFF99",
+      "size_bytes": 4385,
+      "role": "Stage 2 to Stage 3 causal and claim boundary"
+    },
+    {
+      "relative_path": "D01_STAGE_2_EMPIRICAL_EVIDENCE_REGISTER_V0_2.json",
+      "sha256": "611CCB7D0A966C8062875D6E77B9DAE15B025FAA292DCBACC59C9AA0FD84FD3D",
+      "size_bytes": 6575,
+      "role": "Machine-readable frozen Stage 2 evidence and operational claim register"
+    }
+  ],
+  "authority_links": {
+    "stage_1_freeze": {
+      "relative_path": "D01_V0_2_STAGE_1_SYNTHETIC_ACCEPTANCE_FREEZE.json",
+      "sha256": "57F800A510FC68A60928B5FCA36A2E58C3E9F7B6FD2A39E7EC3A709831573C94",
+      "freeze_id": "D01_V0_2_STAGE1_ACCEPTED_20260815T161928Z"
+    },
+    "stage_2_design_freeze": {
+      "relative_path": "D01_STAGE_2_HISTORICAL_STATE_VALIDITY_DESIGN_V0_2_FREEZE.json",
+      "sha256": "094AF0595575F93B045AEEC6E993128CF3D6EBEC31565602D9394AB52694AABF",
+      "freeze_id": "D01_STAGE2_DESIGN_V0_2_FROZEN_20260815T171006Z"
+    },
+    "stage_2_implementation_freeze": {
+      "relative_path": "D01_STAGE_2_IMPLEMENTATION_V0_2_2_FREEZE.json",
+      "sha256": "281A50D5B3D615EE258EBA0C3A8691B9574C92CF0C59BBAE1DA7951D03CD69E7",
+      "freeze_id": "D01_STAGE2_IMPLEMENTATION_V0_2_2_FROZEN_20260815T191720Z"
+    },
+    "stage_2_primary_run_manifest": {
+      "relative_path": "d01_adaptive_parametric_model/output/d01_stage2_historical_state_validity/manifests/stage2_run_manifest.json",
+      "canonical_replay_seal": "6CF2BE31F8815ADB3B5B2E70916A4CD5CDAF427783DA9098E5167313EB70F981",
+      "status": "PRIMARY_COMPLETE"
+    },
+    "stage_2_primary_interpretation_manifest": {
+      "relative_path": "d01_adaptive_parametric_model/output/d01_stage2_primary_evidence_interpretation/manifests/primary_evidence_interpretation_manifest.json",
+      "sha256": "69C39C3A966A1EEF514093DC26859F06A583C42A7AB7F8DB3B8F63860E47B6DB"
+    }
+  },
+  "stage_2_closeout": {
+    "status": "COMPLETE - DIMENSION-LEVEL EMPIRICAL CHARACTERIZATION ACCEPTED",
+    "rerun_required": false,
+    "one_level_interpretation_only": true,
+    "new_stage_2_hypotheses_tested": false,
+    "post_hoc_optimization": false,
+    "new_historical_diagnostics": false,
+    "d01_modified": false,
+    "d01_v0_3_created": false
+  },
+  "data_governance": {
+    "first_six_months": "CONSUMED / DEVELOPMENT EVIDENCE",
+    "second_six_months": "SEALED FINAL-BACKTEST RESERVE",
+    "reserve_accessed": false,
+    "reserve_outcomes_inspected": false,
+    "reserve_available_to_development": false,
+    "reserve_backtest_one_way": true,
+    "post_hoc_reserve_retuning_prohibited": true,
+    "poor_performance_allowed_final_result": true
+  },
+  "stage_3": {
+    "status": "NOT STARTED",
+    "boundary_defined": true,
+    "trading_rules_defined": false,
+    "buy_sell_hold_logic_implemented": false,
+    "backtest_executed": false,
+    "outcomes_are_evaluators_not_inputs": true,
+    "decision_commitment_before_outcome_reveal": true,
+    "complete_system_freeze_required_before_reserve": true
+  }
+}

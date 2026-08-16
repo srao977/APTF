@@ -1,0 +1,11 @@
+scenarios:
+  - quiet_market
+  - volume_shock
+  - price_volume_confirmation
+  - price_volume_divergence
+  - perturbation_memory_reset
+  - reinforcement_extends_half_life
+  - reversal_after_persistence
+  - high_volume_low_displacement
+  - low_volume_high_displacement
+  - irregular_event_time_sampling

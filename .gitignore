@@ -1,0 +1,17 @@
+# Generated D01 experiment and replay artifacts
+/d01_adaptive_parametric_model/output/
+
+# Generated market datasets and diagnostics
+/data/market/raw/
+/data/market/normalized/
+/data/market/diagnostics/
+
+# Python-generated files
+**/__pycache__/
+**/*.py[cod]
+**/.pytest_cache/
+**/*.egg-info/
+
+# Local virtual environments
+.venv/
+venv/

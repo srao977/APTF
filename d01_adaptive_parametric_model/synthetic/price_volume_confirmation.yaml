@@ -1,0 +1,12 @@
+name: price_volume_confirmation
+description: Upward displacement with reinforced volume.
+seed: 13
+steps: 90
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.0012
+price_noise: 0.0007
+base_volume: 1100.0
+volume_noise: 140.0
+spread: 0.02
+volume_trend_multiplier: 1.6

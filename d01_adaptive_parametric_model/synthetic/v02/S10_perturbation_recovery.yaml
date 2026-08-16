@@ -1,0 +1,16 @@
+scenario_id: S10
+name: perturbation_recovery
+description: Large disturbance followed by coherent stabilization.
+parameters:
+  drift_pre: 0.02
+  shock_drift: -0.14
+  recovery_drift: 0.03
+  shock_start: 50
+  shock_end: 70
+  volume_pre: 1400.0
+  volume_shock: 6000.0
+  volume_recovery: 1800.0
+  dt_seconds: 1.0
+  count: 180
+expected:
+  confidence_rebuilds: true

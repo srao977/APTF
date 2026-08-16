@@ -1,0 +1,71 @@
+{
+  "freeze_id": "D01_STAGE2_SCORING_V0_2_2_FROZEN_20260815T185154Z",
+  "freeze_timestamp_utc": "2026-08-15T18:51:54.3492474Z",
+  "status": "FROZEN",
+  "stage": "Stage 2 Historical State Validity",
+  "clarification_version": "v0.2.2",
+  "supplements": [
+    {
+      "relative_path": "D01_STAGE_2_HISTORICAL_STATE_VALIDITY_DESIGN_V0_2_FREEZE.json",
+      "sha256": "094AF0595575F93B045AEEC6E993128CF3D6EBEC31565602D9394AB52694AABF",
+      "freeze_id": "D01_STAGE2_DESIGN_V0_2_FROZEN_20260815T171006Z"
+    },
+    {
+      "relative_path": "D01_STAGE_2_SCORING_CLARIFICATION_ADDENDUM_V0_2_1_FREEZE.json",
+      "sha256": "E273F07AC7237FF5F6D653B07A90AC32C11175A18FACA7888A8BFE1DCB2C709F",
+      "freeze_id": "D01_STAGE2_SCORING_V0_2_1_FROZEN_20260815T183222Z"
+    }
+  ],
+  "frozen_authority": {
+    "addendum": {
+      "relative_path": "D01_STAGE_2_SCORING_CLARIFICATION_ADDENDUM_V0_2_2.md",
+      "sha256": "62F99F6B1EA3D1470603655F0F480F5BEDF04DD73A55A9A450BE40DC0D4C2F1D",
+      "size_bytes": 6797,
+      "role": "Authoritative scoring clarification addendum"
+    },
+    "clarification_spec": {
+      "relative_path": "D01_STAGE_2_SCORING_CLARIFICATION_SPEC_V0_2_2.md",
+      "sha256": "982C0EB46467FA6512212F970903FBBC30300E2CE67F222AD881C6581773EED1",
+      "size_bytes": 3196,
+      "role": "Canonical implementation-facing clarification extract"
+    },
+    "consistency_review": {
+      "relative_path": "D01_STAGE_2_SCORING_CLARIFICATION_V0_2_2_CONSISTENCY_REVIEW.md",
+      "sha256": "8078E25818F4529729575AA352D2551D4099E7C172333F128EE4D22549F042F1",
+      "size_bytes": 4434,
+      "role": "Scoring clarification consistency review"
+    }
+  },
+  "resolved_ambiguity": {
+    "dimensions": ["strength", "coherence", "uncertainty"],
+    "primary_fixed_horizon_minutes": 15,
+    "primary_statistics": {
+      "strength": "Spearman(strength, abs(b15) * E15)",
+      "coherence": "Spearman(coherence, E15)",
+      "uncertainty": "Spearman(uncertainty, Arealized15)"
+    },
+    "primary_null": 0,
+    "expected_direction": "positive",
+    "anchor_population": "existing frozen eligible anchor population",
+    "availability": "per dimension",
+    "exclusion": "relevant statistic only with deterministic reason tracking",
+    "weighting": "one valid anchor, one equal-weight record",
+    "secondary_coordinates": "other fixed and all adaptive horizons",
+    "pooling": false,
+    "best_horizon_selection": false
+  },
+  "unchanged": {
+    "bootstrap_replicates": 2000,
+    "block_minutes": 1800,
+    "support_thresholds": {"adequate_minimum_blocks": 30, "limited_minimum_blocks": 10},
+    "reserve_hard_stop": true,
+    "d01_modified": false
+  },
+  "design_consistency": "PASS",
+  "canonical_extraction_integrity": "PASS",
+  "historical_primary_outcomes_inspected": false,
+  "reserve_values_inspected": false,
+  "reserve_accessed": false,
+  "historical_replay_started": false,
+  "historical_scoring_calculated": false
+}

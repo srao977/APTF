@@ -1,0 +1,10 @@
+scenario_id: S07
+name: noisy_incoherent_market
+description: Alternating motion with inconsistent activity.
+parameters:
+  oscillation_amplitude: 0.05
+  volume_cycle: [800.0, 1100.0, 1400.0, 1700.0, 2000.0]
+  dt_seconds: 1.0
+  count: 180
+expected:
+  uncertainty_elevated: true

@@ -1,0 +1,12 @@
+name: reinforcement_extends_half_life
+description: Persistent coherent movement should lengthen half-life.
+seed: 16
+steps: 100
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.0010
+price_noise: 0.0005
+base_volume: 1300.0
+volume_noise: 100.0
+spread: 0.02
+volume_trend_multiplier: 1.4

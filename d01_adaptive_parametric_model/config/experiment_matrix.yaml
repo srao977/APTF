@@ -1,0 +1,106 @@
+experiments:
+  - id: A_n1
+    variant: A
+    polynomial_order: 1
+    adaptive_half_life: false
+    perturbation_responsive_half_life: false
+    include_volume: false
+    include_volume_interactions: false
+  - id: A_n2
+    variant: A
+    polynomial_order: 2
+    adaptive_half_life: false
+    perturbation_responsive_half_life: false
+    include_volume: false
+    include_volume_interactions: false
+  - id: A_n3
+    variant: A
+    polynomial_order: 3
+    adaptive_half_life: false
+    perturbation_responsive_half_life: false
+    include_volume: false
+    include_volume_interactions: false
+  - id: B_n1
+    variant: B
+    polynomial_order: 1
+    adaptive_half_life: false
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: false
+  - id: B_n2
+    variant: B
+    polynomial_order: 2
+    adaptive_half_life: false
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: false
+  - id: B_n3
+    variant: B
+    polynomial_order: 3
+    adaptive_half_life: false
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: false
+  - id: C_n1
+    variant: C
+    polynomial_order: 1
+    adaptive_half_life: true
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: false
+  - id: C_n2
+    variant: C
+    polynomial_order: 2
+    adaptive_half_life: true
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: false
+  - id: C_n3
+    variant: C
+    polynomial_order: 3
+    adaptive_half_life: true
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: false
+  - id: D_n1
+    variant: D
+    polynomial_order: 1
+    adaptive_half_life: true
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: true
+  - id: D_n2
+    variant: D
+    polynomial_order: 2
+    adaptive_half_life: true
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: true
+  - id: D_n3
+    variant: D
+    polynomial_order: 3
+    adaptive_half_life: true
+    perturbation_responsive_half_life: false
+    include_volume: true
+    include_volume_interactions: true
+  - id: E_n1
+    variant: E
+    polynomial_order: 1
+    adaptive_half_life: true
+    perturbation_responsive_half_life: true
+    include_volume: true
+    include_volume_interactions: true
+  - id: E_n2
+    variant: E
+    polynomial_order: 2
+    adaptive_half_life: true
+    perturbation_responsive_half_life: true
+    include_volume: true
+    include_volume_interactions: true
+  - id: E_n3
+    variant: E
+    polynomial_order: 3
+    adaptive_half_life: true
+    perturbation_responsive_half_life: true
+    include_volume: true
+    include_volume_interactions: true

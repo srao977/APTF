@@ -1,0 +1,13 @@
+scenario_id: S05
+name: high_volume_contradiction
+description: High-volume opposition to prior evolution.
+parameters:
+  drift_pre: 0.03
+  drift_post: -0.05
+  volume_pre: 900.0
+  volume_post: 6000.0
+  switch_index: 90
+  dt_seconds: 1.0
+  count: 180
+expected:
+  reversal_rises: true

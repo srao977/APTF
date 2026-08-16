@@ -1,0 +1,13 @@
+name: reversal_after_persistence
+description: Persistent trend then reversal.
+seed: 17
+steps: 120
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.0011
+price_noise: 0.0005
+base_volume: 1100.0
+volume_noise: 120.0
+spread: 0.025
+reversal_step: 70
+reversal_drift: -0.0014

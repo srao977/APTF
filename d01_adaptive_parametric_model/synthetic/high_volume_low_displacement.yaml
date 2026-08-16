@@ -1,0 +1,11 @@
+name: high_volume_low_displacement
+description: High volume with low movement.
+seed: 18
+steps: 90
+dt_seconds: 1.0
+base_price: 100.0
+price_drift: 0.00005
+price_noise: 0.00025
+base_volume: 2800.0
+volume_noise: 250.0
+spread: 0.02

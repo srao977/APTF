@@ -1,0 +1,11 @@
+scenario_id: S09
+name: same_price_different_volume
+description: Same price path under two volume profiles.
+parameters:
+  drift_per_step: 0.025
+  volume_path_a: 700.0
+  volume_path_b: 5000.0
+  dt_seconds: 1.0
+  count: 180
+expected:
+  direction_same_strength_differs: true

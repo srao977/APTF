@@ -1,0 +1,52 @@
+{
+  "manifest_version": "0.1",
+  "created_at_utc": "2026-08-15T16:19:28.0670468Z",
+  "source_dataset": {
+    "relative_path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "filename": "SPY_1min_normalized_v0_1.csv",
+    "sha256": "73957227A0CC09103F7CA5FF62B011EDD7C80C220017D91FB97C5FB5E6A1055D",
+    "size_bytes": 55801877,
+    "row_count": 207824,
+    "timestamp_field": "event_timestamp_local",
+    "canonical_ordering_field": "event_timestamp_utc",
+    "timezone": "America/New_York (source timezone assumed; UTC conversion is DST-aware)",
+    "earliest_timestamp": "2022-09-30T04:00:00-04:00",
+    "latest_timestamp": "2023-09-29T19:48:00-04:00",
+    "chronological_order": "PASS",
+    "duplicate_timestamp_count": 0,
+    "schema_identity": ["entity_id","event_timestamp_local","event_timestamp_utc","timezone","open","high","low","close","volume","close_return_1m","high_low_range","high_low_range_fraction","open_close_change","open_close_return","session_type","is_regular_session","minute_of_session","source_provider","source_dataset","source_row_number","data_valid","quality_flags"]
+  },
+  "boundary_policy": {
+    "type": "calendar-month chronological half-open intervals",
+    "stage_2_interval": "[stage2_start, reserve_start)",
+    "reserve_interval": "[reserve_start, reserve_end)",
+    "random_split": false,
+    "overlap": false,
+    "intentional_gap": false
+  },
+  "stage_2_primary": {
+    "start": "2022-09-30T04:00:00-04:00",
+    "start_utc": "2022-09-30T08:00:00Z",
+    "end_exclusive": "2023-03-30T04:00:00-04:00",
+    "end_exclusive_utc": "2023-03-30T08:00:00Z",
+    "calendar_duration": "6 months",
+    "row_count": 106603
+  },
+  "reserve": {
+    "start": "2023-03-30T04:00:00-04:00",
+    "start_utc": "2023-03-30T08:00:00Z",
+    "end_exclusive": "2023-09-30T04:00:00-04:00",
+    "end_exclusive_utc": "2023-09-30T08:00:00Z",
+    "calendar_duration": "6 months",
+    "row_count": 101221,
+    "latest_available_timestamp": "2023-09-29T19:48:00-04:00",
+    "coverage_note": "The source dataset ends 8 hours 12 minutes before the nominal six-calendar-month boundary; this is dataset-native missing coverage, not an intentional partition gap.",
+    "sealed": true,
+    "observation_values_inspected": false,
+    "analytical_statistics_calculated": false,
+    "used_in_stage_2_design": false
+  },
+  "metadata_inspection_only": true,
+  "physical_partition_files_created": false,
+  "historical_replay_started": false
+}

@@ -1,0 +1,12 @@
+name: irregular_event_time_sampling
+description: Irregular observation spacing.
+seed: 20
+steps: 85
+dt_seconds: 1.0
+irregular_dt: true
+base_price: 100.0
+price_drift: 0.0009
+price_noise: 0.0009
+base_volume: 1000.0
+volume_noise: 130.0
+spread: 0.03

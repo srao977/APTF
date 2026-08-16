@@ -1,0 +1,11 @@
+scenario_id: S03
+name: accelerating_move
+description: Velocity increases coherently over time.
+parameters:
+  drift_start: 0.008
+  drift_acceleration: 0.0004
+  volume: 1200.0
+  dt_seconds: 1.0
+  count: 180
+expected:
+  acceleration_rises: true

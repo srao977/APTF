@@ -1,0 +1,69 @@
+{
+  "freeze_id": "D01_PRE_STAGE3_ARCHITECTURE_V0_1_FROZEN_20260816T005254Z",
+  "freeze_timestamp_utc": "2026-08-16T00:52:54.5161555Z",
+  "status": "FROZEN",
+  "scope": "Pre-Stage-3 causal architecture and D01 Q_t output contract",
+  "consistency": "PASS",
+  "frozen_artifacts": [
+    {"relative_path":"D01_PRE_STAGE_3_ARCHITECTURE_TRACE_V0_1.md","sha256":"3BA62182A2F334DD6632A48755BFAB252CCD68CA708B3321E323A3C4C01D5617","size_bytes":5444,"role":"Architecture history and causal trace"},
+    {"relative_path":"D01_QT_OUTPUT_CONTRACT_V0_1.md","sha256":"12966FAC725B681EE8E8F4430C4F1A19A418CC7EBA1B6EAD63A3407563E0C577","size_bytes":9326,"role":"Canonical D01 Q_t output contract"},
+    {"relative_path":"D01_QT_OUTPUT_SCHEMA_V0_1.json","sha256":"EAFE0A42241CF0A330C162C3D7499FBDD5FF87756CFDC1A0FE08C5C2914744F7","size_bytes":19446,"role":"Machine-readable canonical Q_t schema"},
+    {"relative_path":"D01_STAGE_2_TO_QT_RECONCILIATION_V0_1.md","sha256":"AA7EE9F9633111B6853B20DB8DA392F706B29C77B3828FF50A6B5A3DBC31FF33","size_bytes":5032,"role":"Stage 2 dimensions to Q_t and observer reconciliation"},
+    {"relative_path":"D01_STAGE_3_INPUT_INTERFACE_BOUNDARY_V0_1.md","sha256":"853354F19B6BD9A6C78B56660105656FB647BA0700F336D4E6C41990F19B5DFC","size_bytes":4895,"role":"Conceptual Stage3Input_t boundary"},
+    {"relative_path":"D01_PRE_STAGE_3_ARCHITECTURE_CONSISTENCY_REVIEW_V0_1.md","sha256":"C6804B3ADC6FB5B6E6B6A25CC970E15AB0876447D502CF381E05A905E81C5280","size_bytes":5017,"role":"A-J architecture consistency review"}
+  ],
+  "authority_links": {
+    "stage_1": {"relative_path":"D01_V0_2_STAGE_1_SYNTHETIC_ACCEPTANCE_FREEZE.json","sha256":"57F800A510FC68A60928B5FCA36A2E58C3E9F7B6FD2A39E7EC3A709831573C94","status":"FROZEN"},
+    "stage_2_design": {"relative_path":"D01_STAGE_2_HISTORICAL_STATE_VALIDITY_DESIGN_V0_2_FREEZE.json","sha256":"094AF0595575F93B045AEEC6E993128CF3D6EBEC31565602D9394AB52694AABF","status":"FROZEN"},
+    "stage_2_scoring_v0_2_1": {"relative_path":"D01_STAGE_2_SCORING_CLARIFICATION_ADDENDUM_V0_2_1_FREEZE.json","sha256":"E273F07AC7237FF5F6D653B07A90AC32C11175A18FACA7888A8BFE1DCB2C709F","status":"FROZEN"},
+    "stage_2_scoring_v0_2_2": {"relative_path":"D01_STAGE_2_SCORING_CLARIFICATION_ADDENDUM_V0_2_2_FREEZE.json","sha256":"1D508B86C85D1156679DB3F0E5BE85ABFE89FF8F4F0B8C6C0E92877F88922139","status":"FROZEN"},
+    "stage_2_implementation": {"relative_path":"D01_STAGE_2_IMPLEMENTATION_V0_2_2_FREEZE.json","sha256":"281A50D5B3D615EE258EBA0C3A8691B9574C92CF0C59BBAE1DA7951D03CD69E7","status":"FROZEN"},
+    "stage_2_primary_interpretation": {"relative_path":"d01_adaptive_parametric_model/output/d01_stage2_primary_evidence_interpretation/manifests/primary_evidence_interpretation_manifest.json","sha256":"69C39C3A966A1EEF514093DC26859F06A583C42A7AB7F8DB3B8F63860E47B6DB","status":"COMPLETE"},
+    "stage_2_closeout": {"relative_path":"D01_STAGE_2_CLOSEOUT_AND_STAGE_3_BOUNDARY_FREEZE.json","sha256":"2CBDD76F97036E5546132DEE171ADFA2B0DD376F7DDF9E5D6E3C8E87F09208EE","status":"FROZEN"}
+  },
+  "canonical_primary_replay_seal": "6CF2BE31F8815ADB3B5B2E70916A4CD5CDAF427783DA9098E5167313EB70F981",
+  "qt_contract": {
+    "structured": true,
+    "top_level_canonical_fields": 19,
+    "group_partition": {"identity":3,"current_state":14,"forward_state":2},
+    "nested_forward_sample_fields": 7,
+    "accepted_default_forward_sample_count": 8,
+    "emitted_diagnostic_internal_fields_excluded": 9,
+    "stage_2_observer_only_concepts": 12,
+    "future_prohibited_conceptual_classes": 4,
+    "stage_3_initial_availability": "DIRECTLY_AVAILABLE_WITH_EMPIRICAL_CLAIM_CONSTRAINTS"
+  },
+  "stage_2_reconciliation": {
+    "tested_dimensions": 11,
+    "supported_mapped": 2,
+    "limited_unresolved_mapped": 7,
+    "unsupported_mapped": 2,
+    "observer_values_misclassified_as_qt": 0,
+    "future_values_present_in_qt": 0
+  },
+  "stage_3_boundary": {
+    "conceptual_input": "Stage3Input_t = (Q_t, ExecutionContext_t)",
+    "execution_context_schema": "NOT_DEFINED",
+    "d01_is_market_state_inference_authority": true,
+    "stage_3_independent_market_predictor": false,
+    "stage_3_decision_logic_defined": false,
+    "stage_3_implemented": false,
+    "realized_observer_available_to_stage_3": false,
+    "reserve_available_to_stage_3": false
+  },
+  "data_governance": {
+    "first_six_months": "CONSUMED / DEVELOPMENT EVIDENCE",
+    "second_six_months": "SEALED FINAL-BACKTEST RESERVE",
+    "reserve_accessed": false,
+    "outcome_decision_columns_inspected": false
+  },
+  "attestations": {
+    "d01_source_modified": false,
+    "stage_2_source_modified": false,
+    "stage_3_source_created": false,
+    "trading_rules_created": false,
+    "historical_experiment_executed": false,
+    "reserve_accessed": false,
+    "outcome_columns_inspected": false
+  }
+}

@@ -1,0 +1,10 @@
+__pycache__/
+.pytest_cache/
+*.pyc
+.venv/
+output/audit/*.jsonl
+output/logs/*.log
+output/dmo/*.csv
+output/fmo/*.csv
+output/metrics/*.csv
+output/reports/*.md

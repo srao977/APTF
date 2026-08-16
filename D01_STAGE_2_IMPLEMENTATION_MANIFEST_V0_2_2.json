@@ -1,0 +1,64 @@
+{
+  "manifest_version": "v0.2.2",
+  "stage": "D01 v0.2 Stage 2 Historical State Validity",
+  "status": "IMPLEMENTATION_COMPLETE_NOT_HISTORICALLY_EXECUTED",
+  "protected_implementation": [
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/__init__.py","sha256":"052B600E42BA40BD8EC2A3187A3C78D204168A176204166F6DB1C3BE4DFDBE3A","size_bytes":192,"role":"package export"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/authority.py","sha256":"8E8DDEA6A9A68F4BDD56002A4355D80AA0C77F3600E96BAFDC550D7648A47186","size_bytes":4602,"role":"authority and canonical seals"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/constants.py","sha256":"1CC075D2EA96C4C660CE046DC7B94112C7A83B0FEFFDECFECEDE3E6C9240FDA6","size_bytes":1408,"role":"frozen constants"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/evidence.py","sha256":"F645F8DA8B0C248F57014B4453E4E400C4706333D9AE3D7F5751C079C411B972","size_bytes":7816,"role":"observer horizon and anchor evidence generation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/loader.py","sha256":"05AFD4389EBAF7158E5570175E0352657BDBDF49CAB22D0E7684B0925F3534C8","size_bytes":4295,"role":"primary-only input and timestamp-before-field-parse reserve guard"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/observer.py","sha256":"DA8EA983FDF094531265CB5EFDD875C3E808CB49A74071AF27CB88A07B0D5E42","size_bytes":4628,"role":"independent realized-state geometry"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/orchestration.py","sha256":"3994EF743E80CA5021AAAB8CCFE837A15C27CEF67E49BE5F83DCF80A65D5DC2B","size_bytes":2779,"role":"parallel read-only scoring and measured concurrency"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/replay.py","sha256":"43CD23E66F3C3F52ED3677040C0C827008DCFFD71B6948880D13E18644C07FA6","size_bytes":5520,"role":"canonical causal replay and deterministic seals"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01_stage2/scoring.py","sha256":"6A7C7C9345C171F6DDCC909A486DBEB7C4FBB9C97EC6E9D528C6187AF2E309A9","size_bytes":18731,"role":"eleven dimension scores bootstrap support and classifications"},
+    {"relative_path":"d01_adaptive_parametric_model/tests/test_stage2_historical_state_validity.py","sha256":"8A9C4354A60DA2FFFD7537E26D4DCE8740149C885E4A02E703A0E8BEFC3586CF","size_bytes":12202,"role":"34 synthetic Stage 2 tests"},
+    {"relative_path":"d01_adaptive_parametric_model/scripts/run_d01_stage2_historical_state_validity.py","sha256":"5706CEAAFC633AD4BD6A61443FB8E76D970AEEF376E965A40FECED9DB6F46C34","size_bytes":20099,"role":"Phase A-G runner and complete report/metric artifact generation"},
+    {"relative_path":"d01_adaptive_parametric_model/scripts/run_d01_stage2_historical_state_validity.ps1","sha256":"EF8F46E26EC017EE0A3E784D0459ABDF4644B21628DD143B10262747515DD904","size_bytes":1191,"role":"manual preflight-then-full launcher"}
+  ],
+  "authority_links": {
+    "stage_1": {"relative_path":"D01_V0_2_STAGE_1_SYNTHETIC_ACCEPTANCE_FREEZE.json","sha256":"57F800A510FC68A60928B5FCA36A2E58C3E9F7B6FD2A39E7EC3A709831573C94","freeze_id":"D01_V0_2_STAGE1_ACCEPTED_20260815T161928Z"},
+    "stage_2_design": {"relative_path":"D01_STAGE_2_HISTORICAL_STATE_VALIDITY_DESIGN_V0_2_FREEZE.json","sha256":"094AF0595575F93B045AEEC6E993128CF3D6EBEC31565602D9394AB52694AABF","freeze_id":"D01_STAGE2_DESIGN_V0_2_FROZEN_20260815T171006Z"},
+    "scoring_v021": {"relative_path":"D01_STAGE_2_SCORING_CLARIFICATION_ADDENDUM_V0_2_1_FREEZE.json","sha256":"E273F07AC7237FF5F6D653B07A90AC32C11175A18FACA7888A8BFE1DCB2C709F","freeze_id":"D01_STAGE2_SCORING_V0_2_1_FROZEN_20260815T183222Z"},
+    "scoring_v022": {"relative_path":"D01_STAGE_2_SCORING_CLARIFICATION_ADDENDUM_V0_2_2_FREEZE.json","sha256":"1D508B86C85D1156679DB3F0E5BE85ABFE89FF8F4F0B8C6C0E92877F88922139","freeze_id":"D01_STAGE2_SCORING_V0_2_2_FROZEN_20260815T185154Z"}
+  },
+  "data_boundaries": {
+    "dataset":"data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "dataset_sha256":"73957227A0CC09103F7CA5FF62B011EDD7C80C220017D91FB97C5FB5E6A1055D",
+    "primary_interval":"[2022-09-30T04:00:00-04:00, 2023-03-30T04:00:00-04:00)",
+    "expected_primary_rows":106603,
+    "reserve_interval":"[2023-03-30T04:00:00-04:00, 2023-09-30T04:00:00-04:00)",
+    "reserve_guard":"timestamp parsed then hard stop before any other reserve field access"
+  },
+  "scientific_contract": {
+    "dimensions":11,
+    "primary_strength":"Spearman(strength, abs(b15) * E15)",
+    "primary_coherence":"Spearman(coherence, E15)",
+    "primary_uncertainty":"Spearman(uncertainty, Arealized15)",
+    "primary_fixed_horizon_minutes":15,
+    "one_anchor_one_record":true,
+    "per_dimension_exclusions":true,
+    "horizon_pooling":false,
+    "best_horizon_selection":false,
+    "bootstrap_replicates":2000,
+    "block_minutes":1800,
+    "parallel_read_only_scoring":true,
+    "measured_peak_concurrency":true,
+    "canonical_seal":true
+  },
+  "validation": {
+    "synthetic_tests":"34 / 34 PASS",
+    "compile":"PASS",
+    "preflight":"PASS metadata/header/hash only; four unique PIDs; measured peak four",
+    "dry_run":"PASS synthetic only; 90 records; 88 eligible anchors; 11 dimensions; 64 diagnostic replicates; four unique PIDs; measured peak four; complete artifact schema exercised",
+    "historical_full_run":false,
+    "launcher_run":false,
+    "primary_values_inspected":false,
+    "reserve_values_inspected":false,
+    "reserve_accessed":false
+  },
+  "recovery": {
+    "phase_b_interruption":"restart from initial model state; partial artifact rejected",
+    "phase_c_or_later":"resume only after canonical and anchor artifact hashes match sealed phase manifest"
+  }
+}

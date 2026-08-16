@@ -1,0 +1,120 @@
+{
+  "register_version": "v0.2",
+  "stage_2_status": "COMPLETE - DIMENSION-LEVEL EMPIRICAL CHARACTERIZATION ACCEPTED",
+  "canonical_replay_seal": "6CF2BE31F8815ADB3B5B2E70916A4CD5CDAF427783DA9098E5167313EB70F981",
+  "operational_categories": {
+    "A": "EMPIRICALLY_SUPPORTED",
+    "B": "LIMITED / UNRESOLVED",
+    "C": "EMPIRICALLY_UNSUPPORTED_UNDER_FROZEN_STAGE_2_SEMANTICS"
+  },
+  "dimensions": [
+    {
+      "dimension_name": "Strength",
+      "stage2_classification": "EMPIRICALLY_SUPPORTED",
+      "primary_effect": 0.1280187733415987,
+      "confidence_interval": [0.1125364826009036, 0.14381152477612344],
+      "operational_evidence_category": "A",
+      "allowed_stage3_claim": "May be described as empirically supported D01 state information associated with subsequent realized expression.",
+      "prohibited_stage3_claim": "May not be described as a validated directional, causal, profitable, or independently sufficient trading signal."
+    },
+    {
+      "dimension_name": "Perturbation Magnitude",
+      "stage2_classification": "EMPIRICALLY_SUPPORTED",
+      "primary_effect": 0.06406418331708288,
+      "confidence_interval": [0.05048099050185866, 0.07787381302025188],
+      "operational_evidence_category": "A",
+      "allowed_stage3_claim": "May be described as empirically supported information about subsequent realized transition magnitude.",
+      "prohibited_stage3_claim": "May not be described as validated perturbation class, direction, causality, profitability, or sufficient decision evidence."
+    },
+    {
+      "dimension_name": "Coherence",
+      "stage2_classification": "PARTIALLY_SUPPORTED",
+      "primary_effect": 0.003569826393398819,
+      "confidence_interval": [-0.011791288207548786, 0.01862944805666219],
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May be described only as partially supported and unresolved D01 state information.",
+      "prohibited_stage3_claim": "May not be promoted to an independently validated predictor or claimed to improve decisions."
+    },
+    {
+      "dimension_name": "Uncertainty",
+      "stage2_classification": "INCONCLUSIVE",
+      "primary_effect": -0.009223552056559392,
+      "confidence_interval": [-0.02356858295452196, 0.004053627360204593],
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May remain an explicitly unresolved D01 state coordinate.",
+      "prohibited_stage3_claim": "May not be described as historically validated ambiguity or risk information."
+    },
+    {
+      "dimension_name": "Reversal Propensity",
+      "stage2_classification": "INCONCLUSIVE",
+      "primary_effect": -0.0017551197337429825,
+      "confidence_interval": [-0.0036439619310029508, 0.00022359269465715292],
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May remain an explicitly unresolved D01 state coordinate.",
+      "prohibited_stage3_claim": "May not be described as a historically validated reversal predictor or trade-timing signal."
+    },
+    {
+      "dimension_name": "Perturbation Class",
+      "stage2_classification": "INCONCLUSIVE",
+      "primary_effect": {"delta_rc": -0.0025960471339713104, "delta_rv": -0.0054491816857129005},
+      "confidence_interval": {"delta_rc": [-0.007470888380188437, 0.0021833534804821184], "delta_rv": [-0.016876165872513633, 0.006997781169773999]},
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May remain an explicitly unresolved semantic type coordinate distinct from supported perturbation magnitude.",
+      "prohibited_stage3_claim": "May not be described as historically validated reinforcing, contradicting, or reversing decision evidence."
+    },
+    {
+      "dimension_name": "Observation Half-Life",
+      "stage2_classification": "INCONCLUSIVE",
+      "primary_effect": -0.00009508651803841195,
+      "confidence_interval": [-0.0004212334782124752, 0.00024525349506860066],
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May remain an explicitly unresolved D01 temporal coordinate.",
+      "prohibited_stage3_claim": "May not be described as historically validated state-relevance duration."
+    },
+    {
+      "dimension_name": "Forward Half-Life",
+      "stage2_classification": "INCONCLUSIVE",
+      "primary_effect": -0.00009508651803841195,
+      "confidence_interval": [-0.0004212334782124752, 0.00024525349506860066],
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May remain an explicitly unresolved D01 forward-temporal coordinate.",
+      "prohibited_stage3_claim": "May not be described as a historically validated useful-state horizon."
+    },
+    {
+      "dimension_name": "Forward Interval",
+      "stage2_classification": "INCONCLUSIVE",
+      "primary_effect": -0.0020978237526434462,
+      "confidence_interval": [-0.004144059183586311, 0.00003089568624159382],
+      "operational_evidence_category": "B",
+      "allowed_stage3_claim": "May remain an explicitly unresolved D01 forward-interval coordinate with its range warning retained.",
+      "prohibited_stage3_claim": "May not be described as a historically validated useful horizon or be widened based on the primary result."
+    },
+    {
+      "dimension_name": "State/Kinematics",
+      "stage2_classification": "UNSUPPORTED",
+      "primary_effect": -0.006037548201870857,
+      "confidence_interval": [-0.009025445669069269, -0.0030105597569453535],
+      "operational_evidence_category": "C",
+      "allowed_stage3_claim": "Remains a mathematically defined D01 state quantity.",
+      "prohibited_stage3_claim": "May not be described as a historically validated directional predictor under frozen Stage 2 semantics."
+    },
+    {
+      "dimension_name": "Persistence",
+      "stage2_classification": "UNSUPPORTED",
+      "primary_effect": -0.0023134156294424835,
+      "confidence_interval": [-0.00427906903489802, -0.0003909978283945426],
+      "operational_evidence_category": "C",
+      "allowed_stage3_claim": "Remains a mathematically defined D01 state quantity.",
+      "prohibited_stage3_claim": "May not be described as a historically validated realized-persistence predictor under frozen Stage 2 semantics."
+    }
+  ],
+  "governance": {
+    "stage_2_rerun_required": false,
+    "d01_modified": false,
+    "d01_v0_3_created": false,
+    "reserve_sealed": true,
+    "reserve_accessed": false,
+    "stage_3_started": false,
+    "trading_claims_authorized": false
+  }
+}

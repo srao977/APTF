@@ -1,0 +1,71 @@
+{
+  "freeze_id": "D01_V0_2_STAGE1_ACCEPTED_20260815T161928Z",
+  "freeze_timestamp_utc": "2026-08-15T16:19:28.0670468Z",
+  "d01_version": "v0.2",
+  "stage": "Stage 1 - Synthetic Semantic Validity",
+  "status": "ACCEPTED / FROZEN",
+  "acceptance": {
+    "required_semantic_assertions": "81 / 81 PASS",
+    "cross_scenario_assertions": "9 / 9 PASS",
+    "ablation_assertions": "43 / 43 PASS",
+    "numerical_health": "PASS",
+    "determinism": "PASS",
+    "source_hash_guard": "PASS",
+    "tasks_completed": "27 / 27",
+    "worker_failures": 0,
+    "final_acceptance_decision": "READY FOR HISTORICAL STATE-VALIDITY DESIGN",
+    "carried_warning": "FORWARD_INTERVAL_RANGE_WARNING"
+  },
+  "model_authority_manifest": [
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/__init__.py","sha256":"5329EF480EB7F9AF93083F63E10EB95324A1A5E43555809E356B5FDFC9F3C8E2","size_bytes":206,"role":"D01 v0.2 package authority"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/adaptation.py","sha256":"50CD69CF8F5D2A92C91E15F8AB1FDFA9B6A398A7F1A3E130A7465987F0FC8F3F","size_bytes":1095,"role":"Bounded adaptive parameter updates"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/coherence.py","sha256":"CE8F2F85BD51EADE1F50CC2ADC9D7F6A27C3DAA76AFDF0C399E59F92B55C1229","size_bytes":417,"role":"Coherence implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/config.py","sha256":"838C083A69D2B528548989B5ED691C350CAA76B8271F3E875E86AB4A6AA4BAF6","size_bytes":5124,"role":"Frozen configuration and default parameter authority"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/forward.py","sha256":"EA2FF54DF1F4E480B54E96263C44146FC2CE2106E554204099D689B497B593AC","size_bytes":981,"role":"Forward interval and FMO propagation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/half_life.py","sha256":"CE204BE01D3AD44A8940A66A71523E86815D37860A39028318974D3951816099","size_bytes":826,"role":"Half-life implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/health.py","sha256":"129A58D0E1013CC0F866DDA5306FC80CCBA90013B31F8DFF913D0679F45AF957","size_bytes":990,"role":"Model-health implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/innovation.py","sha256":"09B3B931DC3980F5205C36EA611D35851003D7B68EC649C5883183D32440E2C3","size_bytes":379,"role":"Innovation implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/kinematics.py","sha256":"00083B5A98863F3D5836E82BDCC82F10DED09631E68BF68493D959E4E6999937","size_bytes":1105,"role":"Primitive kinematics implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/model.py","sha256":"77CC090643E74D810B5A73E3B35B23C0E67DBCD9EFABBDD3553BA87C45BCBACF","size_bytes":15433,"role":"D01 v0.2 orchestration and causal update sequence"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/observations.py","sha256":"EAD25C148BF94183E480911E07AC016EB20A65E6F210AB2D0E1814CE862C3846","size_bytes":1916,"role":"Provider-neutral observation contract"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/outputs.py","sha256":"739029F458FDF535F932C34FEA6A64EE2660B00FC6DE6EBD8F2AA3C3DA415755","size_bytes":1404,"role":"DMO/FMO runtime schema implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/persistence.py","sha256":"B5DDC9A65B42744D8928D6D74B6F5D55315141201D93E26866ED6B1F7840BCE8","size_bytes":749,"role":"Persistence implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/perturbation.py","sha256":"C4AE83F30CA48F8040D329D5217EB3869CBDA8535EA1E8DE80EAF8FB7A8C202F","size_bytes":2643,"role":"Perturbation magnitude and semantic classifier"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/reference.py","sha256":"49E6D923D12C8ED1BDA2E13C373277154015036E4F457A334712EBB4DCB52FA8","size_bytes":436,"role":"Adaptive reference and scale implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/reversal.py","sha256":"0B484585B3FBFF7293844CBC0C03EC38E3400169557A5E9AF38A4657BD9BFCA6","size_bytes":953,"role":"Reversal-propensity implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/snapshot.py","sha256":"FFF517E154139F6A7CDF420FBBD049DB141BF7D6A192056736B92591D090CA6F","size_bytes":1625,"role":"State snapshot serialization"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/state.py","sha256":"520B5404AEF7624BFCE8742023D31F82758CBA97320A9F958B7A9ABAFE8DAE3B","size_bytes":1389,"role":"Runtime state authority"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/strength.py","sha256":"F34C9711A353BE54C90AC1690A1EC1D76F0D73680F23B631009B2993CF5E4EA7","size_bytes":716,"role":"Strength implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/trace.py","sha256":"9584525D3EA25BFF8BD029E08769F86348ABF0735C5A05E7096B474DEB7B8820","size_bytes":703,"role":"Structured trace authority"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/uncertainty.py","sha256":"8613C5429D2D2FAF1D07F4915700FA7BED8548515C6AF95B5D1164F0F458AF99","size_bytes":784,"role":"Uncertainty implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/volume.py","sha256":"E14A6AA97A4DD89F6335B739A6AFC41EF1ACB0BCFBC123D7324035356DA57C8B","size_bytes":550,"role":"Volume influence implementation"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_phase_b/v02_default_config.json","sha256":"A7326875839D6987142575C01868B164A32F90ED8BC3D8D119325B59D05E2840","size_bytes":2712,"role":"Resolved accepted v0.2 configuration snapshot"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_phase_b/v02_output_schema.json","sha256":"ED4AC9E090141EDE1802316CD4356A70B60FC1579D1F227FBEFEA0253733E1B7","size_bytes":892,"role":"Resolved DMO/FMO schema snapshot"},
+    {"relative_path":"d01_adaptive_parametric_model/pyproject.toml","sha256":"04B00BE1B3EBA678F998CD21977E39A57D8269D8DBEF87323707CE33F77D7441","size_bytes":652,"role":"Package and build authority"}
+  ],
+  "configuration_manifest": [
+    {"relative_path":"d01_adaptive_parametric_model/src/d01/v02/config.py","sha256":"838C083A69D2B528548989B5ED691C350CAA76B8271F3E875E86AB4A6AA4BAF6","role":"Executable defaults and bounds"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_phase_b/v02_default_config.json","sha256":"A7326875839D6987142575C01868B164A32F90ED8BC3D8D119325B59D05E2840","role":"Resolved accepted configuration"}
+  ],
+  "design_authority_manifest": [
+    {"relative_path":"D01_ADAPTIVE_PARAMETRIC_MODEL_V0_2_IMPLEMENTATION_DESIGN.md","sha256":"8D081E85A6FC86F93AC2B515CE9E93DB2F23A4D06C1A81A2F750BE3E843165A2","size_bytes":45103,"role":"Authoritative D01 v0.2 implementation design"},
+    {"relative_path":"D01_ADAPTIVE_PARAMETRIC_MODEL_DESIGN_V0_3_ADDENDUM_PERTURBATION_SEMANTICS.md","sha256":"AF00CB7B22C7B29CC28B3EC9C9CFFC10AF01D7DB564525594490CA248B780BCB","size_bytes":7263,"role":"Frozen perturbation-semantics addendum"}
+  ],
+  "stage_1_evidence_manifest": [
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/semantic_acceptance_manifest.json","sha256":"4B86F9B0E026D6EE99C9409BFA8A204B40BBD7A990CC36BDB6724E04566813D9","size_bytes":2789,"role":"Final acceptance manifest"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/semantic_assertions.csv","sha256":"F56784F5380B8D72E1DF44DEAE209C1831A75BF3CFC9A4A95B5A6F5AA5DD07F9","size_bytes":10106,"role":"81 required semantic assertions"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/cross_scenario_assertions.csv","sha256":"91227622D246C1E2127E6C2073AFB56D975656C65019639EB6DF12AFB2CACDAE","size_bytes":1113,"role":"9 cross-scenario assertions"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/ablation_effects.csv","sha256":"C5418092E1334BCA7DC85435CD3A2A0583F63DA83B98CFF2BCE2EB3B47C64778","size_bytes":1850,"role":"43 ablation assertions"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/determinism_results.json","sha256":"5F21CCD920BB3325CB7EB830F2935A2C22FB2270B3DC38B872838FC7BFA6BDA0","size_bytes":1056,"role":"Determinism evidence"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/numerical_health.json","sha256":"D32DD223FA1798A4BAAB20F2DA86421E1BD012EDAF571A0FBD9DB4C201E06308","size_bytes":187,"role":"Numerical-health evidence"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/worker_process_evidence.csv","sha256":"E5B810897B500397FD84CAEE98BA92099A55D57FF6A44D4604F2F694B700CD32","size_bytes":6456,"role":"27-task PID and concurrency evidence"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/D01_V0_2_SEMANTIC_ACCEPTANCE_REVIEW.md","sha256":"65BC0C6D54526C0DA835E2313BF0563BC4B8F79980C40D7122D0E19B4B919A20","size_bytes":611,"role":"Final acceptance review"},
+    {"relative_path":"d01_adaptive_parametric_model/output/d01_v02_semantic_acceptance/logs/semantic_acceptance_20260814_180349.log","sha256":"B565D3E0438BB048FA1FC0C9391F15C364A5D7000C661577BBF9D7B41DF65522","size_bytes":11786,"role":"Final user-owned run log"}
+  ],
+  "stage_2_integrity_requirement": {
+    "model_policy": "D01 v0.2 SHALL NOT BE RETRAINED, RETUNED, RECALIBRATED, OR MODIFIED BEFORE OR DURING THE PRIMARY STAGE 2 EVALUATION.",
+    "required_abort_status": "STAGE_1_BASELINE_INTEGRITY_FAILURE"
+  },
+  "historical_data_used": false,
+  "reserve_data_used": false
+}
