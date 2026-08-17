@@ -1,0 +1,90 @@
+{
+  "vector_set": "D04_CAPTURABILITY_DETERMINISTIC_TEST_VECTORS_V0_2",
+  "status": "SYNTHETIC_MATHEMATICAL_DESIGN_VECTORS",
+  "historical_data_used": false,
+  "reserve_data_used": false,
+  "defaults": {
+    "strength": 1.0,
+    "coherence": 1.0,
+    "persistence": 1.0,
+    "uncertainty": 0.0,
+    "reversal_propensity": 0.0,
+    "all_feasibility_dimensions": 1.0,
+    "market_eligible": true,
+    "data_integrity": 1.0,
+    "critical_data_integrity_threshold": 0.2,
+    "projection_valid": true
+  },
+  "vectors": [
+    {
+      "id": "flat_path_excellent_support_context",
+      "inputs": {"terminal_displacement":0.0,"maximum_absolute_displacement":0.0},
+      "expected": {"geometry_quality":0.0,"structural_quality":1.0,"risk_quality":1.0,"B":0.0,"G":1.0,"H":1,"C":0.0,"reason_codes":["ZERO_GEOMETRY"]}
+    },
+    {
+      "id": "strong_directional_path_high_uncertainty",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"uncertainty":0.75},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":0.5,"B":0.5,"G":1.0,"H":1,"C":0.5,"reason_codes":["UNCERTAINTY_HIGH"]}
+    },
+    {
+      "id": "strong_path_high_reversal_propensity",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"reversal_propensity":0.75},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":0.5,"B":0.5,"G":1.0,"H":1,"C":0.5,"reason_codes":["REVERSAL_PROPENSITY_HIGH"]}
+    },
+    {
+      "id": "strong_shape_poor_feasibility_gate",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"liquidity_quality":0.1},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"B":1.0,"G":0.1,"H":1,"C":0.1,"reason_codes":["FEASIBILITY_GATE_LOW","GATE_LIQUIDITY_LOW"]}
+    },
+    {
+      "id": "weak_geometry_excellent_envelope",
+      "inputs": {"terminal_displacement":0.2,"maximum_absolute_displacement":1.0},
+      "expected": {"geometry_quality":0.2,"structural_quality":1.0,"risk_quality":1.0,"B":0.2,"G":1.0,"H":1,"C":0.2,"reason_codes":[]}
+    },
+    {
+      "id": "high_structure_zero_geometry",
+      "inputs": {"terminal_displacement":0.0,"maximum_absolute_displacement":0.0,"strength":1.0,"coherence":1.0,"persistence":1.0},
+      "expected": {"geometry_quality":0.0,"structural_quality":1.0,"risk_quality":1.0,"B":0.0,"G":1.0,"H":1,"C":0.0,"reason_codes":["ZERO_GEOMETRY"]}
+    },
+    {
+      "id": "low_structure_coherent_geometry",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"strength":0.125,"coherence":1.0,"persistence":1.0},
+      "expected": {"geometry_quality":1.0,"structural_quality":0.5,"risk_quality":1.0,"B":0.5,"G":1.0,"H":1,"C":0.5,"reason_codes":[]}
+    },
+    {
+      "id": "valid_shape_low_terminal_decay",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"terminal_decay_factor":0.01},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"temporal_quality":"OMITTED","B":1.0,"G":1.0,"H":1,"C":1.0,"reason_codes":[]}
+    },
+    {
+      "id": "shape_stale",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"model_time":100.0,"projection_interval":30.0,"evaluation_time":130.0000001},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"B":1.0,"G":1.0,"H":0,"C":0.0,"reason_codes":["SHAPE_STALE"]}
+    },
+    {
+      "id": "projection_endpoint_inclusive",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"model_time":100.0,"projection_interval":30.0,"evaluation_time":130.0},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"B":1.0,"G":1.0,"H":1,"C":1.0,"reason_codes":[]}
+    },
+    {
+      "id": "market_ineligible",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"market_eligible":false},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"B":1.0,"G":1.0,"H":0,"C":0.0,"reason_codes":["MARKET_INELIGIBLE"]}
+    },
+    {
+      "id": "data_invalid_at_critical_threshold",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"data_integrity":0.2,"critical_data_integrity_threshold":0.2},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"B":1.0,"G":0.2,"H":0,"C":0.0,"reason_codes":["DATA_INVALID"]}
+    },
+    {
+      "id": "one_hard_feasibility_bottleneck",
+      "inputs": {"terminal_displacement":2.0,"maximum_absolute_displacement":2.0,"spread_quality":0.02},
+      "expected": {"geometry_quality":1.0,"structural_quality":1.0,"risk_quality":1.0,"B":1.0,"G":0.02,"H":1,"C":0.02,"reason_codes":["FEASIBILITY_GATE_LOW","GATE_SPREAD_LOW"]}
+    },
+    {
+      "id": "invalid_geometry_invariant",
+      "inputs": {"terminal_displacement":1.0,"maximum_absolute_displacement":0.0},
+      "expected": {"evaluation":"REJECTED","B":null,"G":null,"H":0,"C":0.0,"reason_codes":["INVALID_RETURNSHAPE"]}
+    }
+  ]
+}

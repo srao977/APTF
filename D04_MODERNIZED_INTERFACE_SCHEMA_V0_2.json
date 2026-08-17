@@ -1,0 +1,135 @@
+{
+  "schema_id": "D04_MODERNIZED_INTERFACE_SCHEMA_V0_2",
+  "status": "HUMAN_RESOLVED_FREEZE_CANDIDATE",
+  "implementation_target": "d04_trading_envelope",
+  "frozen_return_shape": {
+    "schema": "D02_RETURNSHAPE_CANONICAL_SCHEMA_V0_2.json",
+    "freeze_manifest": "D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json",
+    "freeze_sha256": "6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6",
+    "field_count": 17,
+    "required": true,
+    "ownership": "D02",
+    "causal_at_evaluation": true
+  },
+  "d04_input": {
+    "type": "D04Input",
+    "required_fields": ["return_shape", "context"],
+    "return_shape_source": "frozen D02 ReturnShape v0.2",
+    "context_type": "D04Context"
+  },
+  "d04_context": {
+    "field_count": 13,
+    "extra_fields": "FORBIDDEN",
+    "fields": [
+      {"canonical_name":"evaluation_time","data_type":"float","range":"finite causal timestamp seconds","ownership":"D04_CAUSAL_OPERATIONAL","causal_at_evaluation":true,"required":true,"purpose":"Lifecycle and context-event evaluation time","consumer":"hard eligibility, output, events","replay_live_identical":true},
+      {"canonical_name":"market_eligible","data_type":"boolean","range":"true|false","ownership":"D04_CAUSAL_OPERATIONAL","causal_at_evaluation":true,"required":true,"purpose":"Current venue/session capture eligibility","consumer":"hard eligibility H","replay_live_identical":true},
+      {"canonical_name":"data_integrity","data_type":"float","range":"[0,1]","ownership":"D04_CAUSAL_OPERATIONAL","causal_at_evaluation":true,"required":true,"purpose":"Current causal input integrity","consumer":"hard eligibility H and feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"clock_event_quality","data_type":"float","range":"[0,1]","ownership":"D04_CAUSAL_OPERATIONAL","causal_at_evaluation":true,"required":true,"purpose":"Clock/event synchronization quality","consumer":"diagnostic context only","replay_live_identical":true},
+      {"canonical_name":"liquidity_quality","data_type":"float","range":"[0,1]","ownership":"D04_EXECUTION_FEASIBILITY","causal_at_evaluation":true,"required":true,"purpose":"Current liquidity realizability","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"spread_quality","data_type":"float","range":"[0,1]","ownership":"D04_EXECUTION_FEASIBILITY","causal_at_evaluation":true,"required":true,"purpose":"Current spread realizability","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"latency_quality","data_type":"float","range":"[0,1]","ownership":"D04_EXECUTION_FEASIBILITY","causal_at_evaluation":true,"required":true,"purpose":"Current execution latency quality","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"execution_feasibility","data_type":"float","range":"[0,1]","ownership":"D04_EXECUTION_FEASIBILITY","causal_at_evaluation":true,"required":true,"purpose":"Current aggregate execution feasibility input","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"broker_health","data_type":"float","range":"[0,1]","ownership":"D04_EXECUTION_FEASIBILITY","causal_at_evaluation":true,"required":true,"purpose":"Current broker/infrastructure health","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"capital_available","data_type":"float","range":"[0,1]","ownership":"D04_PORTFOLIO_CAPACITY","causal_at_evaluation":true,"required":true,"purpose":"Current capital capacity to capture","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"portfolio_capacity","data_type":"float","range":"[0,1]","ownership":"D04_PORTFOLIO_CAPACITY","causal_at_evaluation":true,"required":true,"purpose":"Current portfolio capacity","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"position_capacity","data_type":"float","range":"[0,1]","ownership":"D04_PORTFOLIO_CAPACITY","causal_at_evaluation":true,"required":true,"purpose":"Current capacity constraint, not a position decision","consumer":"minimum feasibility gate G","replay_live_identical":true},
+      {"canonical_name":"risk_capacity","data_type":"float","range":"[0,1]","ownership":"D04_PORTFOLIO_CAPACITY","causal_at_evaluation":true,"required":true,"purpose":"Current risk capacity","consumer":"minimum feasibility gate G","replay_live_identical":true}
+    ],
+    "classification_counts": {
+      "D04_CAUSAL_OPERATIONAL": 4,
+      "D04_EXECUTION_FEASIBILITY": 5,
+      "D04_PORTFOLIO_CAPACITY": 4,
+      "MOVE_TO_D03": 0,
+      "OBSOLETE": 0,
+      "PROHIBITED": 0
+    },
+    "retired_legacy_fields": ["timestamp", "metadata"],
+    "renames": {"timestamp":"evaluation_time"}
+  },
+  "capturability": {
+    "formula_schema": "D04_CAPTURABILITY_FORMULA_SCHEMA_V0_2.json",
+    "exact_formulas": {
+      "Q_G": "0 if M == 0 else abs(D) / M",
+      "Q_S": "(strength * coherence * persistence) ** (1/3)",
+      "Q_R": "sqrt((1 - uncertainty) * (1 - reversal_propensity))",
+      "B": "Q_G * Q_S * Q_R",
+      "G": "min(ten configured feasibility dimensions)",
+      "H": "projection_valid * market_eligible * data_integrity_above_critical * all_inputs_valid",
+      "C": "H * B * G"
+    },
+    "ranges": {"Q_G":"[0,1]","Q_S":"[0,1]","Q_R":"[0,1]","B":"[0,1]","G":"[0,1]","H":"{0,1}","C":"[0,1]"},
+    "formula_changed_by_boundary_closeout": false
+  },
+  "candidate_envelope": {
+    "required": false,
+    "ownership": "D04",
+    "creation_condition": "Current ReturnShape is valid and post-hysteresis envelope is OPEN with no current candidate for that source ReturnShape",
+    "identity_rule": "D04C|percent_encode_utf8(entity_id)|format17g(source_return_shape_model_time)|format17g(qualified_at)",
+    "fields": [
+      {"canonical_name":"candidate_id","data_type":"string","required":true},
+      {"canonical_name":"entity_id","data_type":"string","required":true},
+      {"canonical_name":"source_return_shape_model_time","data_type":"float","required":true},
+      {"canonical_name":"qualified_at","data_type":"float","required":true},
+      {"canonical_name":"status","data_type":"enum","range":"QUALIFIED|INVALIDATED","required":true}
+    ],
+    "capturability_effect": "NONE"
+  },
+  "d04_output": {
+    "type": "D04Evaluation",
+    "top_level_field_count": 23,
+    "fields": [
+      {"canonical_name":"evaluation_time","group":"IDENTITY_TIME","data_type":"float","range":"finite","required":true},
+      {"canonical_name":"entity_id","group":"IDENTITY_TIME","data_type":"string","required":true},
+      {"canonical_name":"return_shape_model_time","group":"IDENTITY_TIME","data_type":"float","range":"finite","required":true},
+      {"canonical_name":"source_model_version","group":"IDENTITY_TIME","data_type":"string","required":true},
+      {"canonical_name":"hard_eligibility","group":"CAPTURABILITY","data_type":"integer","range":"0|1","required":true},
+      {"canonical_name":"geometry_quality","group":"CAPTURABILITY","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"structural_quality","group":"CAPTURABILITY","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"risk_quality","group":"CAPTURABILITY","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"base_capturability_score","group":"CAPTURABILITY","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"feasibility_gate_score","group":"CAPTURABILITY","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"capturability_score","group":"CAPTURABILITY","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"previous_envelope_state","group":"ENVELOPE_STATE","data_type":"enum","range":"CLOSED|OPENING|OPEN|CLOSING","required":true},
+      {"canonical_name":"new_envelope_state","group":"ENVELOPE_STATE","data_type":"enum","range":"CLOSED|OPENING|OPEN|CLOSING","required":true},
+      {"canonical_name":"aperture_before","group":"ENVELOPE_STATE","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"aperture_after","group":"ENVELOPE_STATE","data_type":"float","range":"[0,1]","required":true},
+      {"canonical_name":"projection_valid","group":"LIFECYCLE_SAFETY","data_type":"boolean","required":true},
+      {"canonical_name":"stale","group":"LIFECYCLE_SAFETY","data_type":"boolean","required":true},
+      {"canonical_name":"safety_state","group":"LIFECYCLE_SAFETY","data_type":"enum","range":"CLEAR|SAFETY_CLOSED","required":true},
+      {"canonical_name":"safety_reason","group":"LIFECYCLE_SAFETY","data_type":"enum|null","range":"null|SHAPE_STALE|MARKET_INELIGIBLE|DATA_INVALID|INVALID_RETURNSHAPE|NO_VALID_RETURNSHAPE","required":true},
+      {"canonical_name":"candidate_envelope","group":"CANDIDATE","data_type":"CandidateEnvelope|null","required":true},
+      {"canonical_name":"gate_dimension_values","group":"EVENT_DIAGNOSTIC","data_type":"object<string,float>","range":"ten values in [0,1]","required":true},
+      {"canonical_name":"reason_codes","group":"EVENT_DIAGNOSTIC","data_type":"array<string>","required":true},
+      {"canonical_name":"events","group":"EVENT_DIAGNOSTIC","data_type":"array<enum>","required":true}
+    ],
+    "group_counts": {"IDENTITY_TIME":4,"CAPTURABILITY":7,"ENVELOPE_STATE":4,"LIFECYCLE_SAFETY":4,"CANDIDATE":1,"EVENT_DIAGNOSTIC":3},
+    "d03_decision_field_count": 0
+  },
+  "lifecycle": {
+    "projection_valid_rule": "evaluation_time <= model_time + projection_interval",
+    "stale_rule": "evaluation_time > model_time + projection_interval",
+    "supersession_rule": "Newer same-entity model_time becomes current immediately; invalidate prior candidate and evaluate new shape without forced closure solely for supersession",
+    "context_only_rule": "Use latest non-superseded shape only after checking projection validity",
+    "stale_response_by_state": {
+      "CLOSED":"remain CLOSED",
+      "OPENING":"force CLOSED immediately",
+      "OPEN":"force CLOSED immediately",
+      "CLOSING":"force CLOSED immediately"
+    },
+    "stale_aperture": "set exactly to 0.0 without smoothing",
+    "stale_hysteresis": "bypass close persistence and reset all counters",
+    "stale_candidate": "invalidate current candidate",
+    "recovery": "new valid shape begins from CLOSED and must satisfy normal opening persistence"
+  },
+  "events": ["RETURN_SHAPE_ACCEPTED","CONTEXT_REEVALUATED","CAPTURABILITY_EVALUATED","APERTURE_UPDATED","ENVELOPE_OPENING","ENVELOPE_OPENED","ENVELOPE_CLOSING","ENVELOPE_CLOSED","CANDIDATE_QUALIFIED","CANDIDATE_INVALIDATED","SHAPE_SUPERSEDED","SHAPE_STALE","MARKET_INELIGIBLE","DATA_INVALID","INVALID_RETURNSHAPE","NO_VALID_RETURNSHAPE"],
+  "ownership": {
+    "market_inference":"D01",
+    "return_shape_representation":"D02",
+    "capturability_feasibility_lifecycle_aperture_hysteresis_envelope_candidate_events":"D04",
+    "decisions_positions_orders_actions":"D03"
+  },
+  "prohibited_input_classes": ["Stage 2 observer fields","future observations","outcome labels","benchmark labels","P&L","reserve data","untyped metadata","D03 decision state as shape geometry"],
+  "prohibited_output_classes": ["BUY","SELL","HOLD","ENTER","EXIT","REDUCE","REVERSE","position_open","order state","position sizing","candidate reward/risk","trade recommendation"],
+  "replay_live_equivalence": "Identical ordered ReturnShape/context events, initial D04 state, and configuration produce identical D04 outputs",
+  "architecture_open_issues": 0
+}

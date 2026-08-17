@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aptf-d02-return-shape"
+version = "0.2.0"
+description = "Deterministic APTF D02 ReturnShape transformation"
+requires-python = ">=3.11"
+authors = [{ name = "APTF" }]
+dependencies = ["aptf-d01-adaptive-parametric-model==0.1.0"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

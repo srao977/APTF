@@ -1,0 +1,50 @@
+{
+  "schema_id": "D03_DECISION_SCHEMA_V0_1",
+  "status": "PROPOSED_FREEZE_READY_PENDING_HUMAN_REVIEW",
+  "output_type": "D03Decision",
+  "field_count": 21,
+  "extra_fields": "FORBIDDEN",
+  "fields": [
+    {"canonical_name":"decision_id","type":"string","range":"D03D deterministic identity","source":"DERIVED","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Stable identity of unique committed input/rule result","replay_commitment":true,"future_adapter_use":"idempotency and lineage","prohibited_interpretations":["broker order id","candidate id"]},
+    {"canonical_name":"decision_time","type":"float","range":"finite causal timestamp seconds","source":"DecisionContext.context_time","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Causal decision event time","replay_commitment":true,"future_adapter_use":"ordering","prohibited_interpretations":["wall-clock creation time","future outcome time"]},
+    {"canonical_name":"entity_id","type":"string","range":"non-empty","source":"validated D04/context identity","causal_at_t":true,"deterministic":true,"ownership":"UPSTREAM_IDENTITY","meaning":"Controlled entity","replay_commitment":true,"future_adapter_use":"routing key only","prohibited_interpretations":["venue"]},
+    {"canonical_name":"d03_model_version","type":"string","range":"version identifier","source":"D03 configuration","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Control-model version","replay_commitment":true,"future_adapter_use":"compatibility","prohibited_interpretations":["performance label"]},
+    {"canonical_name":"decision_rule_version","type":"string","range":"version identifier","source":"D03 configuration","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Rule-set version","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["tuned threshold"]},
+    {"canonical_name":"schema_version","type":"string","range":"schema identifier","source":"D03 schema","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Output schema version","replay_commitment":true,"future_adapter_use":"deserialization","prohibited_interpretations":[]},
+    {"canonical_name":"source_d04_fingerprint","type":"string","range":"lowercase SHA256 hex","source":"SHA256 RFC8785(D04Evaluation)","causal_at_t":true,"deterministic":true,"ownership":"D03_AUDIT","meaning":"Exact factual D04 input reference","replay_commitment":true,"future_adapter_use":"audit only","prohibited_interpretations":["D04-created evaluation id"]},
+    {"canonical_name":"input_fingerprint","type":"string","range":"lowercase SHA256 hex","source":"SHA256 RFC8785(D03Input)","causal_at_t":true,"deterministic":true,"ownership":"D03_AUDIT","meaning":"Exact complete input identity","replay_commitment":true,"future_adapter_use":"idempotency","prohibited_interpretations":["market feature"]},
+    {"canonical_name":"source_d04_evaluation_time","type":"float","range":"finite seconds","source":"D04Evaluation.evaluation_time","causal_at_t":true,"deterministic":true,"ownership":"D04_LINEAGE","meaning":"Source evaluation time","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":[]},
+    {"canonical_name":"source_d04_return_shape_model_time","type":"float","range":"finite seconds","source":"D04Evaluation.return_shape_model_time","causal_at_t":true,"deterministic":true,"ownership":"D02_D04_LINEAGE","meaning":"Source ReturnShape identity component","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["direct D02 input"]},
+    {"canonical_name":"source_d04_envelope_state","type":"enum","range":["CLOSED","OPENING","OPEN","CLOSING"],"source":"D04Evaluation.new_envelope_state","causal_at_t":true,"deterministic":true,"ownership":"D04_LINEAGE","meaning":"Factual envelope state used","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["position state"]},
+    {"canonical_name":"source_d04_safety_state","type":"enum","range":["CLEAR","SAFETY_CLOSED"],"source":"D04Evaluation.safety_state","causal_at_t":true,"deterministic":true,"ownership":"D04_LINEAGE","meaning":"Factual safety state used","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["order status"]},
+    {"canonical_name":"candidate_id","type":"string|null","range":"current causal D04 candidate or null","source":"resolved target rule candidate_lineage","causal_at_t":true,"deterministic":true,"ownership":"D04_IDENTITY_PRESERVED_BY_D03","meaning":"Candidate that caused the desired target, otherwise null","replay_commitment":true,"future_adapter_use":"lineage","prohibited_interpretations":["D03-minted candidate","position-origin fallback"]},
+    {"canonical_name":"candidate_source_return_shape_model_time","type":"float|null","range":"current causal D04 candidate source time or null","source":"resolved target rule candidate_lineage","causal_at_t":true,"deterministic":true,"ownership":"D02_D04_LINEAGE","meaning":"Source model time of candidate that caused target, otherwise null","replay_commitment":true,"future_adapter_use":"lineage","prohibited_interpretations":["new D02 lookup","position-origin fallback"]},
+    {"canonical_name":"prior_position_state","type":"enum","range":["FLAT","LONG","SHORT"],"source":"DecisionContext.actual_position_state","causal_at_t":true,"deterministic":true,"ownership":"POSITION_LEDGER","meaning":"Factual position before decision","replay_commitment":true,"future_adapter_use":"transition planning","prohibited_interpretations":["fill guarantee"]},
+    {"canonical_name":"desired_position_state","type":"enum","range":["FLAT","LONG","SHORT"],"source":"D03 rule table","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Primary control target","replay_commitment":true,"future_adapter_use":"target reconciliation","prohibited_interpretations":["submitted quantity","order"]},
+    {"canonical_name":"transition_intent","type":"enum","range":["NO_CHANGE","OPEN","CLOSE","REVERSE","RETARGET","BLOCKED"],"source":"D03 transition table","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Derived control transition","replay_commitment":true,"future_adapter_use":"transition classification","prohibited_interpretations":["broker command sequence"]},
+    {"canonical_name":"action_authorized","type":"boolean","source":"D03 authorization rule","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Whether adapter may act on this record now","replay_commitment":true,"future_adapter_use":"hard execution gate","prohibited_interpretations":["execution success"]},
+    {"canonical_name":"decision_rule_id","type":"string","range":"TARGET:<target>|TRANSITION:<transition_or_NONE>|OVERLAYS:<ordered_ids_or_NONE>","source":"D03 resolved rule path","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Canonical composition of exact governing rules","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["score","free-form prose"]},
+    {"canonical_name":"primary_reason_code","type":"enum","range":"reason of highest-precedence target/control rule","source":"resolved target rule reason","causal_at_t":true,"deterministic":true,"ownership":"D03","meaning":"Reason that determined desired position state","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["profit judgment","transition reason"]},
+    {"canonical_name":"supporting_reason_codes","type":"array<string>","range":"ordered duplicate-free non-primary reasons; empty array when none","source":"resolved same-level target details then transition reason then authorization overlays","causal_at_t":true,"deterministic":true,"ownership":"D03_AUDIT","meaning":"Canonical additional explanations","replay_commitment":true,"future_adapter_use":"audit","prohibited_interpretations":["untyped metadata","set iteration order","lexical sorting"]}
+  ],
+  "identity_rule": "decision_id = 'D03D|' + percent_encode_utf8(entity_id) + '|' + format17g(decision_time) + '|' + decision_rule_version + '|' + input_fingerprint",
+  "decision_rule_id_rule": "TARGET:<target_rule_id>|TRANSITION:<transition_rule_id_or_NONE>|OVERLAYS:<overlay_rule_ids_in_priority_order_joined_by_COMMA_or_NONE>",
+  "reason_rule": {
+    "primary": "resolved target rule reason",
+    "supporting_order": ["same-precedence target detail reasons", "transition reason", "authorization overlay reasons"],
+    "duplicate_policy": "first canonical occurrence retained; primary excluded",
+    "empty_representation": []
+  },
+  "candidate_lineage_rule": {
+    "emergency_flatten": "null candidate fields",
+    "disabled_preservation": "null candidate fields",
+    "ordinary_qualified_UPWARD_DOWNWARD_FLAT": "current D04 candidate_id and source_return_shape_model_time",
+    "no_candidate_invalidated_closed_opening_closing_safety": "null candidate fields"
+  },
+  "canonicalization": "RFC 8785 JSON Canonicalization Scheme; enum values serialized as strings; nonfinite values prohibited",
+  "commitment": "Every unique input_fingerprint/rule-version result is immutable; duplicate delivery is idempotent",
+  "outcome_field_count": 0,
+  "pnl_field_count": 0,
+  "broker_order_field_count": 0,
+  "position_size_field_count": 0
+}

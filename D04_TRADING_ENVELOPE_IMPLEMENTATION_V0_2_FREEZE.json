@@ -1,0 +1,100 @@
+{
+  "freeze_id": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_FROZEN_20260817T010953Z",
+  "freeze_timestamp_utc": "2026-08-17T01:09:53.9807488Z",
+  "status": "FROZEN_IMPLEMENTATION",
+  "scope": "In-place deterministic D04 Trading Envelope modernization implementation, executable tests, and implementation evidence",
+  "freeze_decision": "D04 IMPLEMENTATION FROZEN - STOP BEFORE D03, REPLAY, OR BACKTEST",
+  "implementation_target": "d04_trading_envelope",
+  "implementation_manifest": {
+    "relative_path": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_MANIFEST.json",
+    "sha256": "DA358810F725601207B6DD35E08005B89488E384B9C8170940A2CF6B7E784A36",
+    "size_bytes": 9784,
+    "verified_files": 50,
+    "status": "VERIFIED"
+  },
+  "authority": {
+    "d01_architecture": {
+      "relative_path": "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json",
+      "sha256": "B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235",
+      "status": "VERIFIED"
+    },
+    "d02_design": {
+      "relative_path": "D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json",
+      "sha256": "6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6",
+      "status": "VERIFIED"
+    },
+    "d02_implementation": {
+      "relative_path": "D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FREEZE.json",
+      "sha256": "C8029C4B9608547BBF7960F05E4F8613480C4FB2BF8594D94482516B954F7E72",
+      "status": "VERIFIED"
+    },
+    "d04_modernization_design": {
+      "relative_path": "D04_TRADING_ENVELOPE_MODERNIZATION_V0_2_FREEZE.json",
+      "sha256": "B5C489D060629A91DDED5B2C6EAA4076F6273AF05AED3480659CE649A1050E51",
+      "status": "VERIFIED"
+    }
+  },
+  "executable_validation": {
+    "d04_complete": {"passed": 69, "failed": 0, "skipped": 0, "status": "PASS"},
+    "d04_modernization": {"passed": 46, "failed": 0, "skipped": 0, "status": "PASS"},
+    "frozen_formula_vectors": {"passed": 14, "failed": 0, "status": "PASS"},
+    "d02_regression": {"passed": 26, "failed": 0, "skipped": 0, "status": "PASS"},
+    "d01_v02_regression": {"passed": 50, "failed": 0, "skipped": 0, "status": "PASS"},
+    "compileall": "PASS",
+    "manifest_files": "50/50 VERIFIED"
+  },
+  "interface_contract": {
+    "return_shape_source": "d02.v02.models.ReturnShape",
+    "return_shape_field_count": 17,
+    "context_field_count": 13,
+    "output_top_level_field_count": 23,
+    "candidate_field_count": 5,
+    "feasibility_gate_dimension_count": 10,
+    "d03_decision_field_count": 0
+  },
+  "capturability_formula": {
+    "Q_G": "0 if M == 0 else abs(D) / M",
+    "Q_S": "(strength * coherence * persistence) ** (1/3)",
+    "Q_R": "sqrt((1 - uncertainty) * (1 - reversal_propensity))",
+    "B": "Q_G * Q_S * Q_R",
+    "G": "min(g_1,...,g_10)",
+    "H": "projection_valid * market_eligible * data_integrity_above_critical * all_inputs_valid",
+    "C": "H * B * G",
+    "non_drift_status": "PASS"
+  },
+  "lifecycle": {
+    "projection_endpoint": "INCLUSIVE",
+    "stale_response_all_states": "IMMEDIATE_CLOSED",
+    "stale_aperture": 0.0,
+    "stale_hysteresis": "RESET",
+    "stale_candidate": "INVALIDATE",
+    "invalid_return_shape": "FAIL_CLOSED",
+    "supersession": "IMMEDIATE_WITHOUT_FORCED_CLOSURE_SOLELY_FOR_REPLACEMENT",
+    "recovery": "FROM_CLOSED_WITH_NORMAL_PERSISTENCE"
+  },
+  "evidence": [
+    "D04_TRADING_ENVELOPE_IMPLEMENTATION_TRACE_V0_2.md",
+    "D04_CAPTURABILITY_IMPLEMENTATION_NON_DRIFT_AUDIT_V0_2.md",
+    "D04_TEST_MIGRATION_AUDIT_V0_2.md",
+    "D04_EXECUTABLE_INTEGRATION_AUDIT_V0_2.md",
+    "D04_TRADING_ENVELOPE_IMPLEMENTATION_CONFORMANCE_V0_2.md",
+    "D04_TRADING_ENVELOPE_IMPLEMENTATION_DELTA_V0_2.md"
+  ],
+  "immutability_attestations": {
+    "d01_modified_by_d04_implementation": false,
+    "d02_modified_by_d04_implementation": false,
+    "d03_created_or_modified": false,
+    "parallel_d04_package_created": false,
+    "frozen_design_artifacts_modified": false,
+    "unrelated_output_deletion_claimed": false
+  },
+  "data_governance": {
+    "historical_replay_executed": false,
+    "final_backtest_executed": false,
+    "reserve_status": "SEALED",
+    "reserve_accessed": false,
+    "outcome_labels_inspected": false,
+    "learning_or_tuning_performed": false
+  },
+  "architecture_open_issues": 0
+}

@@ -1,0 +1,119 @@
+{
+  "freeze_id": "D04_TRADING_ENVELOPE_MODERNIZATION_V0_2_FROZEN_20260817T002143Z",
+  "freeze_timestamp_utc": "2026-08-17T00:21:43.7738957Z",
+  "status": "FROZEN_DESIGN_NOT_IMPLEMENTED",
+  "scope": "Preservation-first D04 modernization design, deterministic capturability, final D04Context/output boundary, candidate protocol, and lifecycle safety",
+  "consistency": "D04 MODERNIZATION DESIGN CONSISTENCY: PASS",
+  "system_authority": {
+    "relative_path": "APTF_INTEGRATED_SYSTEM_DESIGN_AUTHORITY_REPLAY_CORE_V0_2.md",
+    "sha256": "30C1DEF02735B477954F0E67192477C23DD59452E77020FDA8CE113D612CFA82",
+    "size_bytes": 31493
+  },
+  "frozen_d01_authority": {
+    "relative_path": "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json",
+    "sha256": "B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235",
+    "size_bytes": 4853,
+    "status": "VERIFIED"
+  },
+  "frozen_d02_authority": {
+    "relative_path": "D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json",
+    "sha256": "6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6",
+    "size_bytes": 7857,
+    "status": "VERIFIED",
+    "referenced_artifacts_verified": "14 / 14"
+  },
+  "implementation_target": "d04_trading_envelope",
+  "existing_regression_baseline": {
+    "tests_collected": 23,
+    "tests_passed": 23,
+    "tests_failed": 0,
+    "tests_skipped": 0,
+    "pre_freeze_runtime_seconds": 0.725,
+    "status": "PASS"
+  },
+  "frozen_artifacts": [
+    {"relative_path":"D04_EXISTING_ASSET_INVENTORY_V0_2.md","sha256":"C7FBD5F9E574D492E31AD9598ED52897C94ADC487A9AF2802714AB94DB0694CA","size_bytes":7448,"role":"Existing D04 asset inventory"},
+    {"relative_path":"D04_EXISTING_EXECUTION_TRACE_V0_2.md","sha256":"A38BB81F734DF2B0A2201B5A836525B7C85074EAC0BDEC5D859CC7D21A5DA4F3","size_bytes":3722,"role":"Source-derived existing execution trace"},
+    {"relative_path":"D04_PRESERVATION_CLASSIFICATION_V0_2.md","sha256":"089B3C0ED064BA82586DA2F0A4616617B26E1EC5D4187371889EC6758FE37D18","size_bytes":4777,"role":"Preservation classification authority"},
+    {"relative_path":"D04_LEGACY_RETURNSHAPE_DEPENDENCY_TRACE_V0_2.md","sha256":"A3ECA9ABA4F73E07692B812B611A18524B573E6879939A3F1A9DFAA78EEF2080","size_bytes":3219,"role":"Legacy field dependency trace"},
+    {"relative_path":"D04_D02_INTERFACE_MAPPING_V0_2.md","sha256":"07EDE4ECDC2818760FF4C84E0EB49DC29C7EC4F498769312BB967DCC881DAB95","size_bytes":4058,"role":"Frozen D02 to D04 mapping"},
+    {"relative_path":"D04_TEST_PRESERVATION_AND_REGRESSION_PLAN_V0_2.md","sha256":"8B8D80C40708E86ED8B1003BF484BE6BE7FD8DF21957383F06CDE48C0C076477","size_bytes":3684,"role":"Regression and implementation test plan"},
+    {"relative_path":"D04_TRADING_ENVELOPE_MODERNIZATION_DESIGN_V0_2.md","sha256":"27949E35E5249C8B2977476B8C46C2855552430B7D3CF5F670361CD0179AB39E","size_bytes":15394,"role":"Primary D04 modernization design"},
+    {"relative_path":"D04_MODERNIZATION_DELTA_V0_2.md","sha256":"3B3B343350D331F23BEF89FE37990C798E85B72C1FA46B2C497C78239C365BCA","size_bytes":4649,"role":"Exact existing-path implementation delta"},
+    {"relative_path":"D04_MODERNIZATION_OPEN_ISSUES_V0_2.md","sha256":"0C8EE67EAD34C4AED3BA16AF1C8CE739F13218678C4F17C1CDBCB927CA005615","size_bytes":4747,"role":"Resolved architecture issue ledger"},
+    {"relative_path":"D04_MODERNIZATION_CONSISTENCY_REVIEW_V0_2.md","sha256":"26E1DBCB7AD90A596EE547C8394531A3748C59651AECD82E7951887956DEC2EA","size_bytes":2772,"role":"Preservation modernization A-Z review"},
+    {"relative_path":"D04_HUMAN_BOUNDARY_DECISIONS_V0_2.md","sha256":"58FEC628388A2E586997A19537C3C070E35117AF317CAB82EBF39277593B3968","size_bytes":3618,"role":"Human I1/I2/L1/candidate boundary authority"},
+    {"relative_path":"D04_MODERNIZED_INTERFACE_SCHEMA_V0_2.json","sha256":"18FF393093C02965F2C317FC850CD9978CBEEF874240896CA8F860303FE4DEDF","size_bytes":11691,"role":"Machine-readable final D04 interface"},
+    {"relative_path":"D04_CAPTURABILITY_DETERMINISTIC_DESIGN_V0_2.md","sha256":"24786269836E18F4C08D8AAE179359753FE5B933FD70CDA409738E2B532D9B76","size_bytes":11667,"role":"Primary deterministic capturability design"},
+    {"relative_path":"D04_CAPTURABILITY_FORMULA_SPEC_V0_2.md","sha256":"02C4D6A030FE7CE98D8ACD0B2C267263B68E03A1588E6AA4B42350425D30B7E1","size_bytes":3639,"role":"Exact symbolic formula specification"},
+    {"relative_path":"D04_CAPTURABILITY_FORMULA_SCHEMA_V0_2.json","sha256":"EB8F1E354068E1AA24113E80643AE1F37FA591426434E1BB3BC2320963325387","size_bytes":9196,"role":"Machine-readable formula and field lineage"},
+    {"relative_path":"D04_CAPTURABILITY_DETERMINISTIC_TEST_VECTORS_V0_2.json","sha256":"A31ADB8380F00438B993B098A6D0364004F7C8AD21A860E97CFF876B69345F13","size_bytes":5147,"role":"Synthetic deterministic formula vectors"},
+    {"relative_path":"D04_CAPTURABILITY_V0_TO_V0_2_MATHEMATICS_TRACE.md","sha256":"F7596B4F1049802C38A298FC7558B03BA166C0B3143176AAE7271860E7A6D7F0","size_bytes":2976,"role":"Old-to-new mathematics trace"},
+    {"relative_path":"D04_CAPTURABILITY_DETERMINISTIC_CONSISTENCY_REVIEW_V0_2.md","sha256":"8D1571DBC05995F20F215F53487ADE6A236BE871D33A41C4E3D0CFC02D75FCED","size_bytes":2897,"role":"Deterministic capturability A-Z review"},
+    {"relative_path":"D04_MODERNIZATION_FINAL_CONSISTENCY_REVIEW_V0_2.md","sha256":"3E40FFB6D2B9FDA9BCAF85EBB90CE61BCC957A7B35A2B909C1EF3E7A6B3B22A8","size_bytes":4071,"role":"Final A-AF boundary consistency review"}
+  ],
+  "interface_contract": {
+    "schema_id": "D04_MODERNIZED_INTERFACE_SCHEMA_V0_2",
+    "context_type": "D04Context",
+    "context_field_count": 13,
+    "output_type": "D04Evaluation",
+    "output_top_level_field_count": 23,
+    "candidate_type": "CandidateEnvelope",
+    "candidate_nested_field_count": 5,
+    "d03_decision_field_count": 0
+  },
+  "capturability_formula": {
+    "formula_version": "D04_CAPTURABILITY_DETERMINISTIC_V0_2",
+    "Q_G": "0 if M == 0 else abs(D) / M",
+    "Q_S": "(strength * coherence * persistence) ** (1/3)",
+    "Q_R": "sqrt((1 - uncertainty) * (1 - reversal_propensity))",
+    "B": "Q_G * Q_S * Q_R",
+    "G": "min(g_1,...,g_10)",
+    "H": "projection_valid * market_eligible * data_integrity_above_critical * all_inputs_valid",
+    "C": "H * B * G",
+    "changed_by_boundary_closeout": false
+  },
+  "lifecycle_policy": {
+    "projection_endpoint": "INCLUSIVE",
+    "valid_rule": "evaluation_time <= model_time + projection_interval",
+    "stale_rule": "evaluation_time > model_time + projection_interval",
+    "stale_state_response": {"CLOSED":"remain CLOSED","OPENING":"force CLOSED","OPEN":"force CLOSED","CLOSING":"force CLOSED"},
+    "stale_aperture": 0.0,
+    "stale_hysteresis": "BYPASS_CLOSE_PERSISTENCE_AND_RESET",
+    "stale_candidate": "INVALIDATE",
+    "recovery": "NEW_VALID_SHAPE_STARTS_FROM_CLOSED_AND_REQUALIFIES"
+  },
+  "candidate_policy": {
+    "owner": "D04",
+    "identity_rule": "D04C|percent_encode_utf8(entity_id)|format17g(source_model_time)|format17g(qualified_at)",
+    "random_uuid": false,
+    "wall_clock_dependency": false,
+    "capturability_effect": false
+  },
+  "responsibility_boundary": {
+    "D01": "market-state inference",
+    "D02": "deterministic ReturnShape representation",
+    "D04": "capturability, feasibility, lifecycle, aperture, hysteresis, envelope state, candidate identity, factual events",
+    "D03": "decisions, positions, orders, actions"
+  },
+  "replay_feed_equivalence": true,
+  "architecture_open_issues": 0,
+  "immutability_attestations": {
+    "d01_modified": false,
+    "d02_modified": false,
+    "d03_modified": false,
+    "d04_source_modified": false,
+    "d04_tests_modified": false,
+    "d04_config_modified": false,
+    "d04_scenarios_modified": false
+  },
+  "data_governance": {
+    "historical_replay_executed": false,
+    "final_backtest_executed": false,
+    "reserve_status": "SEALED",
+    "reserve_accessed": false,
+    "outcome_labels_inspected": false
+  },
+  "implementation_status": "NOT_STARTED",
+  "freeze_decision": "D04 DESIGN FROZEN — READY FOR D02 IMPLEMENTATION"
+}

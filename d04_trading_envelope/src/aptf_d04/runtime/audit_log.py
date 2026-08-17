@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import json
-import time
 from pathlib import Path
 
 from aptf_d04.models.envelope_context import EnvelopeContext
@@ -26,28 +25,23 @@ class AuditLogger:
 
         payload = {
             "sequence_number": self.sequence_number,
-            "wall_clock_timestamp": time.time(),
             "scenario_time": scenario_time,
-            "candidate_id": return_shape.candidate_id,
-            "return_shape_id": return_shape.return_shape_id,
-            "return_shape_version": return_shape.version,
-            "return_shape": return_shape.model_dump(),
+            "candidate_id": evaluation.candidate_envelope.candidate_id if evaluation.candidate_envelope else None,
+            "return_shape_identity": [return_shape.entity_id, return_shape.model_time],
+            "return_shape": return_shape.to_dict(),
             "envelope_context": context.model_dump(),
-            "shape_component": evaluation.shape_component,
-            "envelope_component": evaluation.envelope_component,
-            "lifetime_component": evaluation.lifetime_component,
+            "geometry_quality": evaluation.geometry_quality,
+            "structural_quality": evaluation.structural_quality,
+            "risk_quality": evaluation.risk_quality,
             "base_capturability_score": evaluation.base_capturability_score,
             "feasibility_gate_score": evaluation.feasibility_gate_score,
             "capturability_score": evaluation.capturability_score,
             "gate_dimension_values": evaluation.gate_dimension_values,
-            "previous_aperture": evaluation.previous_aperture,
-            "new_aperture": evaluation.aperture,
-            "previous_state": evaluation.previous_state.value,
-            "new_state": evaluation.new_state.value,
-            "position_open": evaluation.position_open,
-            "entry_eligible": evaluation.entry_eligible,
-            "continuation_signal": evaluation.continuation_signal.value,
-            "events_emitted": [e.value for e in evaluation.events_emitted],
+            "previous_aperture": evaluation.aperture_before,
+            "new_aperture": evaluation.aperture_after,
+            "previous_state": evaluation.previous_envelope_state.value,
+            "new_state": evaluation.new_envelope_state.value,
+            "events_emitted": [e.value for e in evaluation.events],
             "reason_codes": evaluation.reason_codes,
         }
         with self.output_path.open("a", encoding="utf-8") as fh:

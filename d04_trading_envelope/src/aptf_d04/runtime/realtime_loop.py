@@ -43,7 +43,7 @@ class RealtimeLoop:
         states: list[str] = []
         transitions: list[str] = []
         captures: list[float] = []
-        shapes: list[float] = []
+        geometries: list[float] = []
         bases: list[float] = []
         gates: list[float] = []
 
@@ -52,22 +52,24 @@ class RealtimeLoop:
             ctx = obs.context
 
             evaluation = self.envelope.process(rs, ctx)
-            states.append(evaluation.new_state.value)
-            transitions.append(f"{evaluation.previous_state.value}->{evaluation.new_state.value}")
+            states.append(evaluation.new_envelope_state.value)
+            transitions.append(
+                f"{evaluation.previous_envelope_state.value}->{evaluation.new_envelope_state.value}"
+            )
             captures.append(evaluation.capturability_score)
-            shapes.append(evaluation.shape_quality)
+            geometries.append(evaluation.geometry_quality)
             bases.append(evaluation.base_capturability_score)
             gates.append(evaluation.feasibility_gate_score)
 
-            for evt in evaluation.events_emitted:
+            for evt in evaluation.events:
                 event_counter[evt.value] = event_counter.get(evt.value, 0) + 1
                 self.event_bus.publish(
                     Event(
                         event_type=evt,
-                        timestamp=rs.timestamp,
-                        candidate_id=rs.candidate_id,
-                        return_shape_id=rs.return_shape_id,
-                        payload={"state": evaluation.new_state.value},
+                        timestamp=ctx.evaluation_time,
+                        candidate_id=evaluation.candidate_envelope.candidate_id if evaluation.candidate_envelope else None,
+                        return_shape_identity=(rs.entity_id, rs.model_time),
+                        payload={"state": evaluation.new_envelope_state.value},
                     )
                 )
 
@@ -79,13 +81,13 @@ class RealtimeLoop:
             )
 
             line = (
-                f"[{obs.scenario_time:.1f}s] {rs.candidate_id} {rs.return_shape_id} v{rs.version} "
-                f"shape={rs.shape_quality:.2f} base={evaluation.base_capturability_score:.2f} "
+                f"[{obs.scenario_time:.1f}s] {rs.entity_id} {format(rs.model_time, '.17g')} "
+                f"geometry={evaluation.geometry_quality:.2f} base={evaluation.base_capturability_score:.2f} "
                 f"gate={evaluation.feasibility_gate_score:.2f} capture={evaluation.capturability_score:.2f} "
-                f"aperture={evaluation.aperture:.2f} state={evaluation.previous_state.value}->{evaluation.new_state.value}"
+                f"aperture={evaluation.aperture_after:.2f} state={evaluation.previous_envelope_state.value}->{evaluation.new_envelope_state.value}"
             )
-            if self.verbose or evaluation.opportunity_event is not None:
-                events_joined = ",".join([e.value for e in evaluation.events_emitted])
+            if self.verbose or evaluation.candidate_envelope is not None:
+                events_joined = ",".join([e.value for e in evaluation.events])
                 line = f"{line} events={events_joined}"
             self._print_line(line)
 
@@ -102,7 +104,7 @@ class RealtimeLoop:
             "states": states,
             "transitions": transitions,
             "captures": captures,
-            "shapes": shapes,
+            "shapes": geometries,
             "bases": bases,
             "gates": gates,
             "event_summary_checksum": json.dumps(event_counter, sort_keys=True),

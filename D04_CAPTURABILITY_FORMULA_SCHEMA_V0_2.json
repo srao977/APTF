@@ -1,0 +1,172 @@
+{
+  "formula_version": "D04_CAPTURABILITY_DETERMINISTIC_V0_2",
+  "status": "PROPOSED_FOR_HUMAN_REVIEW_NOT_FROZEN",
+  "integration_target": "d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py::CapturabilityModel",
+  "frozen_d02_authority": {
+    "schema": "D02_RETURNSHAPE_CANONICAL_SCHEMA_V0_2.json",
+    "freeze_manifest": "D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json",
+    "freeze_sha256": "6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6"
+  },
+  "properties": {
+    "deterministic": true,
+    "causal": true,
+    "adaptive": false,
+    "stochastic": false,
+    "learned_model": false,
+    "fitted_parameters": [],
+    "historical_calibration": false,
+    "reserve_used": false,
+    "outcome_labels_used": false
+  },
+  "components": [
+    {
+      "name": "geometry_quality",
+      "symbol": "Q_G",
+      "input_fields": ["terminal_displacement", "maximum_absolute_displacement"],
+      "source_owner": "FROZEN_D02",
+      "consumer": "CapturabilityModel successor geometry component",
+      "units": "dimensionless endpoint efficiency",
+      "range": "[0,1]",
+      "exact_transformation": "0 if maximum_absolute_displacement == 0; otherwise abs(terminal_displacement) / maximum_absolute_displacement",
+      "zero_path_rule": "maximum_absolute_displacement == 0 requires terminal_displacement == 0 and yields 0",
+      "information_preserved": true
+    },
+    {
+      "name": "structural_quality",
+      "symbol": "Q_S",
+      "input_fields": ["strength", "coherence", "persistence"],
+      "source_owner": "FROZEN_D02",
+      "consumer": "CapturabilityModel successor structural component",
+      "units": "dimensionless quality",
+      "range": "[0,1]",
+      "exact_transformation": "(strength * coherence * persistence) ** (1/3)",
+      "aggregation_type": "UNWEIGHTED_GEOMETRIC_MEAN",
+      "information_preserved": true
+    },
+    {
+      "name": "risk_quality",
+      "symbol": "Q_R",
+      "input_fields": ["uncertainty", "reversal_propensity"],
+      "source_owner": "FROZEN_D02",
+      "consumer": "CapturabilityModel successor risk component",
+      "units": "dimensionless quality complement",
+      "range": "[0,1]",
+      "exact_transformation": "sqrt((1 - uncertainty) * (1 - reversal_propensity))",
+      "aggregation_type": "UNWEIGHTED_GEOMETRIC_MEAN_OF_COMPLEMENTS",
+      "information_preserved": true,
+      "probability_claim": false
+    }
+  ],
+  "temporal_component": {
+    "included": false,
+    "reason": "Avoid double counting D01 decay already expressed in FMO projections; projection time is enforced through hard lifecycle validity",
+    "diagnostic_fields_retained": ["projection_interval", "forward_half_life", "terminal_decay_factor", "forward_samples"]
+  },
+  "base_capturability": {
+    "symbol": "B",
+    "exact_formula": "B = geometry_quality * structural_quality * risk_quality",
+    "aggregation_type": "HIERARCHICAL_PRODUCT",
+    "range": "[0,1]",
+    "arbitrary_weights": []
+  },
+  "feasibility_gate": {
+    "symbol": "G",
+    "owner": "D04_CONTEXT",
+    "rule": "minimum",
+    "exact_formula": "G = min(liquidity_quality, spread_quality, latency_quality, execution_feasibility, capital_available, portfolio_capacity, position_capacity, risk_capacity, broker_health, data_integrity)",
+    "dimensions": [
+      "liquidity_quality",
+      "spread_quality",
+      "latency_quality",
+      "execution_feasibility",
+      "capital_available",
+      "portfolio_capacity",
+      "position_capacity",
+      "risk_capacity",
+      "broker_health",
+      "data_integrity"
+    ],
+    "dimension_range": "[0,1]",
+    "range": "[0,1]",
+    "warning_threshold": 0.5,
+    "preserved_from_existing_v0_2": true
+  },
+  "hard_eligibility": {
+    "symbol": "H",
+    "range": "{0,1}",
+    "exact_formula": "H = projection_valid * market_eligible * data_integrity_above_critical * all_inputs_valid",
+    "projection_valid_rule": "evaluation_time <= model_time + projection_interval",
+    "stale_rule": "evaluation_time > model_time + projection_interval",
+    "critical_data_integrity_rule": "data_integrity > configured critical_data_integrity_threshold",
+    "lifecycle_exclusion_conditions": ["SHAPE_STALE", "MARKET_INELIGIBLE", "DATA_INVALID", "INVALID_RETURNSHAPE", "NO_VALID_RETURNSHAPE"]
+  },
+  "final_capturability": {
+    "symbol": "C",
+    "exact_formula": "C = H * B * G",
+    "eligible_formula": "C = B * G when H == 1",
+    "range": "[0,1]",
+    "final_bounding_rule": "Analytically bounded by construction; defensive clamp only for floating-point roundoff after contract validation"
+  },
+  "reason_code_dependencies": {
+    "ZERO_GEOMETRY": "maximum_absolute_displacement == 0",
+    "UNCERTAINTY_HIGH": "uncertainty > 0.5",
+    "REVERSAL_PROPENSITY_HIGH": "reversal_propensity > 0.5",
+    "FEASIBILITY_GATE_LOW": "feasibility_gate_score < 0.5",
+    "SHAPE_STALE": "evaluation_time > model_time + projection_interval",
+    "MARKET_INELIGIBLE": "market_eligible == false",
+    "DATA_INVALID": "data_integrity <= critical_data_integrity_threshold",
+    "INVALID_RETURNSHAPE": "frozen D02 contract or deterministic-view invariant failure",
+    "NO_VALID_RETURNSHAPE": "context event has no latest projection-valid ReturnShape"
+  },
+  "d02_field_lineage": [
+    {"field":"model_time","use":"hard lifecycle validity and identity","score_active":false},
+    {"field":"entity_id","use":"per-entity latest-shape state and identity","score_active":false},
+    {"field":"source_model_version","use":"validation and provenance","score_active":false},
+    {"field":"current_level","use":"frozen geometry-view validation","score_active":false},
+    {"field":"projection_interval","use":"hard lifecycle validity","score_active":false},
+    {"field":"forward_half_life","use":"decay validation and diagnostics","score_active":false},
+    {"field":"forward_samples","use":"full FMO validation and diagnostics","score_active":false},
+    {"field":"terminal_displacement","use":"geometry_quality numerator","score_active":true},
+    {"field":"maximum_absolute_displacement","use":"geometry_quality denominator and zero-path branch","score_active":true},
+    {"field":"path_direction","use":"geometry consistency and diagnostics","score_active":false},
+    {"field":"terminal_decay_factor","use":"decay validation and diagnostics; temporal score omitted","score_active":false},
+    {"field":"strength","use":"structural_quality","score_active":true},
+    {"field":"coherence","use":"structural_quality","score_active":true},
+    {"field":"persistence","use":"structural_quality","score_active":true},
+    {"field":"uncertainty","use":"risk_quality and reason code","score_active":true},
+    {"field":"reversal_propensity","use":"risk_quality and reason code","score_active":true},
+    {"field":"state_support_ratio","use":"validation/diagnostic only to avoid double counting","score_active":false}
+  ],
+  "d04_context_lineage": [
+    {"field":"evaluation_time","use":"hard lifecycle validity","score_active":false},
+    {"field":"market_eligible","use":"hard eligibility","score_active":false},
+    {"field":"data_integrity","use":"hard eligibility and feasibility gate","score_active":true},
+    {"field":"clock_event_quality","use":"typed diagnostic context; omitted from formula because existing gate excludes it","score_active":false},
+    {"field":"capital_available","use":"feasibility gate","score_active":true},
+    {"field":"portfolio_capacity","use":"feasibility gate","score_active":true},
+    {"field":"position_capacity","use":"feasibility gate","score_active":true},
+    {"field":"liquidity_quality","use":"feasibility gate","score_active":true},
+    {"field":"spread_quality","use":"feasibility gate","score_active":true},
+    {"field":"latency_quality","use":"feasibility gate","score_active":true},
+    {"field":"execution_feasibility","use":"feasibility gate","score_active":true},
+    {"field":"risk_capacity","use":"feasibility gate","score_active":true},
+    {"field":"broker_health","use":"feasibility gate","score_active":true}
+  ],
+  "lineage_summary": {
+    "frozen_d02_fields_traced": 17,
+    "d04_context_fields_traced": 13,
+    "score_active_d02_fields": 7,
+    "score_active_gate_fields": 10,
+    "untraced_inputs": 0,
+    "total_boundary_inputs": 30
+  },
+  "implementation_delta": [
+    "src/aptf_d04/models/return_shape.py: align to frozen 17-field schema",
+    "src/aptf_d04/envelope/capturability_model.py: add deterministic successor behind existing CapturabilityModel interface",
+    "src/aptf_d04/models/capturability.py and envelope_state.py: replace misleading legacy components with selected diagnostics",
+    "src/aptf_d04/configuration.py and config/default.yaml: retire shape weights and target lifetime; preserve gate/safety/aperture/hysteresis config",
+    "src/aptf_d04/envelope/trading_envelope.py: canonical identity and hard lifecycle eligibility",
+    "src/aptf_d04/runtime and models/events.py: adapt payload/audit fields",
+    "src/aptf_d04/inputs, scenarios, cli, tests: canonical synthetic fixtures and regression vectors"
+  ]
+}

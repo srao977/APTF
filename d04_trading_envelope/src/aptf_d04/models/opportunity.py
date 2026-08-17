@@ -1,15 +1,20 @@
 from __future__ import annotations
 
 from pydantic import BaseModel, ConfigDict
+from d02.v02.models import PathDirection
 
-from .enums import EventType
+from .enums import CandidateStatus
 
 
-class OpportunityEvent(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+class CandidateEnvelope(BaseModel):
+    model_config = ConfigDict(extra="forbid", frozen=True)
 
-    event_type: EventType
     candidate_id: str
-    return_shape_id: str
-    timestamp: float
-    reason_codes: list[str]
+    entity_id: str
+    source_return_shape_model_time: float
+    qualified_at: float
+    status: CandidateStatus
+    path_direction: PathDirection
+
+
+OpportunityEvent = CandidateEnvelope

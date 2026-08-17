@@ -1,6 +1,5 @@
 runtime:
   default_loop_speed: 1.0
-  auto_open_position_on_qualified_opportunity: true
   critical_data_integrity_threshold: 0.2
 
 hysteresis:
@@ -11,27 +10,6 @@ hysteresis:
 
 capturability:
   capturability_model_version: V0_2
-  target_lifetime_seconds: 30.0
-  shape_weights: &EXPERIMENTAL_V0_WEIGHTS_SHAPE
-    shape_quality: 0.20
-    forward_support: 0.15
-    magnitude_score: 0.15
-    persistence_score: 0.15
-    inv_uncertainty: 0.15
-    inv_reversal_risk: 0.10
-    inv_decay_score: 0.10
-  envelope_weights: &EXPERIMENTAL_V0_WEIGHTS_ENVELOPE
-    data_integrity: 0.08
-    clock_event_quality: 0.08
-    capital_available: 0.10
-    portfolio_capacity: 0.09
-    position_capacity: 0.08
-    liquidity_quality: 0.13
-    spread_quality: 0.12
-    latency_quality: 0.10
-    execution_feasibility: 0.12
-    risk_capacity: 0.05
-    broker_health: 0.05
   feasibility_gate:
     mode: minimum
     warning_threshold: 0.50

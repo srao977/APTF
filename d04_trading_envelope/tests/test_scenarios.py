@@ -34,4 +34,4 @@ def test_scenario_04_shape_up_gate_down_capture_down() -> None:
 def test_scenario_07_stays_closed() -> None:
     summary = run_single(ROOT, "07_strong_shape_hard_gate", speed=0.0, verbose=False)
     assert summary["final_state"] == "CLOSED"
-    assert summary["events"].get("QUALIFIED_OPPORTUNITY", 0) == 0
+    assert summary["events"].get("CANDIDATE_QUALIFIED", 0) == 0

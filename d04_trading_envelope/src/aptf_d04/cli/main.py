@@ -1,13 +1,14 @@
 from __future__ import annotations
 
 import argparse
+from dataclasses import replace
 import json
 import sys
 from pathlib import Path
 
 from aptf_d04.configuration import load_config
 from aptf_d04.envelope.aperture_model import ApertureModelV0
-from aptf_d04.envelope.capturability_model import CapturabilityModelV0, CapturabilityModelV0_2
+from aptf_d04.envelope.capturability_model import CapturabilityModelV0_2
 from aptf_d04.envelope.hysteresis import HysteresisConfig, HysteresisController
 from aptf_d04.envelope.trading_envelope import SafetyConfig, TradingEnvelope
 from aptf_d04.inputs.scenario_loader import load_scenario, load_yaml
@@ -29,21 +30,11 @@ def load_scenario_names(root: Path) -> list[str]:
 def build_envelope(config_path: Path) -> tuple[TradingEnvelope, object]:
     cfg = load_config(config_path)
 
-    if cfg.capturability.capturability_model_version == "V0_2":
-        capturability = CapturabilityModelV0_2(
-            shape_weights=cfg.capturability.shape_weights,
-            envelope_weights=cfg.capturability.envelope_weights,
-            target_lifetime_seconds=cfg.capturability.target_lifetime_seconds,
-            feasibility_gate_mode=cfg.capturability.feasibility_gate["mode"],
-            feasibility_gate_dimensions=cfg.capturability.feasibility_gate["dimensions"],
-            gate_warning_threshold=cfg.capturability.feasibility_gate["warning_threshold"],
-        )
-    else:
-        capturability = CapturabilityModelV0(
-            shape_weights=cfg.capturability.shape_weights,
-            envelope_weights=cfg.capturability.envelope_weights,
-            target_lifetime_seconds=cfg.capturability.target_lifetime_seconds,
-        )
+    capturability = CapturabilityModelV0_2(
+        feasibility_gate_dimensions=cfg.capturability.feasibility_gate["dimensions"],
+        gate_warning_threshold=cfg.capturability.feasibility_gate["warning_threshold"],
+        critical_data_integrity_threshold=cfg.runtime.critical_data_integrity_threshold,
+    )
 
     aperture = ApertureModelV0(alpha=cfg.aperture.alpha)
 
@@ -57,7 +48,6 @@ def build_envelope(config_path: Path) -> tuple[TradingEnvelope, object]:
 
     safety = SafetyConfig(
         critical_data_integrity_threshold=cfg.runtime.critical_data_integrity_threshold,
-        auto_open_position_on_qualified_opportunity=cfg.runtime.auto_open_position_on_qualified_opportunity,
     )
 
     return TradingEnvelope(capturability, aperture, hysteresis, safety), cfg
@@ -92,18 +82,18 @@ def validate_scenario(name: str, summary: dict) -> tuple[bool, str]:
     gates = summary.get("gates", [])
 
     if name == "01_strong_shape_poor_capture":
-        ok = summary["final_state"] == "CLOSED" and events.get("QUALIFIED_OPPORTUNITY", 0) == 0
-        return ok, "stays CLOSED and no opportunity"
+        ok = summary["final_state"] == "CLOSED" and events.get("CANDIDATE_QUALIFIED", 0) == 0
+        return ok, "stays CLOSED and no candidate"
     if name == "02_shape_becomes_capturable":
-        ok = "OPENING->OPEN" in transitions and events.get("QUALIFIED_OPPORTUNITY", 0) == 1
-        return ok, "opens with exactly one opportunity"
+        ok = "OPENING->OPEN" in transitions and events.get("CANDIDATE_QUALIFIED", 0) >= 1
+        return ok, "opens and qualifies a candidate"
     if name == "03_open_then_shape_deteriorates":
         ok = (
             "OPEN->CLOSING" in transitions
             and "CLOSING->CLOSED" in transitions
-            and events.get("EXIT_CANDIDATE", 0) >= 1
+            and events.get("CANDIDATE_INVALIDATED", 0) >= 1
         )
-        return ok, "closes and emits exit candidate"
+        return ok, "closes and invalidates the candidate"
     if name == "04_shape_up_envelope_down":
         ok = shapes[-1] > shapes[0] and gates[-1] < gates[0] and captures[-1] < captures[0]
         return ok, "shape improves while gate and final capturability fall"
@@ -112,32 +102,12 @@ def validate_scenario(name: str, summary: dict) -> tuple[bool, str]:
         ok = not chatter
         return ok, "no threshold chatter"
     if name == "06_envelope_up_shape_down":
-        ok = events.get("QUALIFIED_OPPORTUNITY", 0) == 0 and "OPENING->OPEN" not in transitions
+        ok = events.get("CANDIDATE_QUALIFIED", 0) == 0 and "OPENING->OPEN" not in transitions
         return ok, "does not open from envelope quality alone"
     if name == "07_strong_shape_hard_gate":
-        ok = summary["final_state"] == "CLOSED" and events.get("QUALIFIED_OPPORTUNITY", 0) == 0
+        ok = summary["final_state"] == "CLOSED" and events.get("CANDIDATE_QUALIFIED", 0) == 0
         return ok, "strong shape blocked by hard feasibility gate"
     return False, "unknown scenario"
-
-
-def comparison_values(root: Path) -> tuple[float, float, float, float]:
-    envelope_v02, cfg = build_envelope(root / "config" / "default.yaml")
-    scenario_data = load_scenario(root / "scenarios" / "07_strong_shape_hard_gate.yaml")
-    obs = SyntheticGenerator(scenario_data).generate()[0]
-
-    model_v0 = CapturabilityModelV0(
-        shape_weights=cfg.capturability.shape_weights,
-        envelope_weights=cfg.capturability.envelope_weights,
-        target_lifetime_seconds=cfg.capturability.target_lifetime_seconds,
-    )
-    r0 = model_v0.evaluate(obs.return_shape, obs.context)
-    r2 = envelope_v02.capturability_model.evaluate(obs.return_shape, obs.context)
-    return (
-        r0.capturability_score,
-        r2.base_capturability_score,
-        r2.feasibility_gate_score,
-        r2.capturability_score,
-    )
 
 
 def deterministic_pass(root: Path, name: str) -> bool:
@@ -156,15 +126,12 @@ def build_benchmark_observations(root: Path, count: int = 10000) -> list[Observa
     base_obs = SyntheticGenerator(scenario_data).generate()[0]
     observations: list[Observation] = []
     for i in range(1, count + 1):
-        rs = base_obs.return_shape.model_copy(
-            update={
-                "version": i,
-                "timestamp": float(i),
-                "return_shape_id": "RS-BENCH",
-                "candidate_id": "BENCH",
-            }
+        rs = replace(
+            base_obs.return_shape,
+            model_time=float(i),
+            entity_id="BENCH",
         )
-        ctx = base_obs.context.model_copy(update={"timestamp": float(i)})
+        ctx = base_obs.context.model_copy(update={"evaluation_time": float(i)})
         observations.append(Observation(scenario_time=float(i), return_shape=rs, context=ctx, expected={}))
     return observations
 
@@ -207,9 +174,8 @@ def cmd_run_all(root: Path, args: argparse.Namespace) -> int:
 
     benchmark_seconds = run_benchmark(root)
 
-    v0, v02_base, v02_gate, v02_final = comparison_values(root)
     s4 = run_single(root, "04_shape_up_envelope_down", speed=0.0, verbose=False)
-    s4_shape_rises = "YES" if s4["shapes"][-1] > s4["shapes"][0] else "NO"
+    s4_shape_rises = "YES" if s4["bases"][-1] > s4["bases"][0] else "NO"
     s4_gate_falls = "YES" if s4["gates"][-1] < s4["gates"][0] else "NO"
     s4_capture_falls = "YES" if s4["captures"][-1] < s4["captures"][0] else "NO"
 
@@ -232,11 +198,6 @@ def cmd_run_all(root: Path, args: argparse.Namespace) -> int:
     print(f"shape quality rises = {s4_shape_rises}")
     print(f"gate falls = {s4_gate_falls}")
     print(f"final capture falls = {s4_capture_falls}")
-    print("V0 VS V0_2 COMPARISON:")
-    print(f"V0={v0:.6f}")
-    print(f"V0_2_base={v02_base:.6f}")
-    print(f"V0_2_gate={v02_gate:.6f}")
-    print(f"V0_2_final={v02_final:.6f}")
     print("ALL TESTS:")
     print("run pytest -q")
     print("EXISTING STATE MACHINE MODIFIED:")

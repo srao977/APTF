@@ -1,0 +1,20 @@
+{
+  "schema_id": "D04_CANDIDATE_SCHEMA_V0_2_1",
+  "status": "IMPLEMENTED_VERIFIED_FREEZE_CANDIDATE",
+  "type": "CandidateEnvelope",
+  "field_count": 6,
+  "extra_fields": "FORBIDDEN",
+  "immutable": true,
+  "fields": [
+    {"canonical_name":"candidate_id","type":"string","required":true,"ownership":"D04","causal_at_t":true,"mutable":false},
+    {"canonical_name":"entity_id","type":"string","required":true,"ownership":"UPSTREAM_IDENTITY_CARRIED_BY_D04","causal_at_t":true,"mutable":false},
+    {"canonical_name":"source_return_shape_model_time","type":"float","range":"finite timestamp seconds","required":true,"ownership":"D02_LINEAGE_CARRIED_BY_D04","causal_at_t":true,"mutable":false},
+    {"canonical_name":"qualified_at","type":"float","range":"finite timestamp seconds","required":true,"ownership":"D04","causal_at_t":true,"mutable":false},
+    {"canonical_name":"status","type":"enum","range":["QUALIFIED","INVALIDATED"],"required":true,"ownership":"D04","causal_at_t":true,"mutable":"copy-on-write lifecycle only"},
+    {"canonical_name":"path_direction","type":"d02.v02.models.PathDirection","range":["UPWARD","DOWNWARD","FLAT"],"required":true,"source":"D02 ReturnShape.path_direction","ownership":"D02_SEMANTIC_AUTHORITY_D04_PROVENANCE_CARRIER","causal_at_t":true,"adaptive":false,"inferred_by_d04":false,"recomputed_by_d04":false,"mutable":false,"available_to_d03":true}
+  ],
+  "identity_rule": "D04C|percent_encode_utf8(entity_id)|format17g(source_return_shape_model_time)|format17g(qualified_at)",
+  "identity_changed_from_v0_2": false,
+  "d04_evaluation_top_level_field_count": 23,
+  "supersedes": "five-field CandidateEnvelope in D04 v0.2 for current interface authority"
+}

@@ -1,0 +1,80 @@
+{
+  "table_id": "D03_DETERMINISTIC_DECISION_TABLE_V0_1",
+  "status": "RECONCILED_FREEZE_CANDIDATE",
+  "canonical_rule_authority": true,
+  "evaluation_model": "PRECOMMIT_VALIDATION_THEN_FIRST_MATCH_TARGET_THEN_TRANSITION_THEN_AUTHORIZATION",
+  "commitment_policy": "COMMIT_IF_NEW_INPUT_FINGERPRINT",
+  "precommit_validation": {
+    "rule_id": "V00",
+    "when": "input schema or semantic invariant fails, including control_state_valid == false",
+    "result": "REJECT_NO_DECISION_RECORD",
+    "committed": false,
+    "blocked": false
+  },
+  "target_rules": [
+    {"priority":0,"rule_id":"R10","when":"emergency_flatten == true","desired":"FLAT","reason":"EMERGENCY_FLATTEN","candidate_lineage":"NONE"},
+    {"priority":1,"rule_id":"R20","when":"system_enabled == false","desired":"ACTUAL","forced_intent":"NO_CHANGE","authorized":false,"deferred_target":"NONE","reason":"SYSTEM_DISABLED","candidate_lineage":"NONE"},
+    {"priority":2,"rule_id":"R21","when":"trading_enabled == false","desired":"ACTUAL","forced_intent":"NO_CHANGE","authorized":false,"deferred_target":"NONE","reason":"TRADING_DISABLED","candidate_lineage":"NONE"},
+    {"priority":3,"rule_id":"R30","when":"safety_state == SAFETY_CLOSED OR stale == true OR projection_valid == false","desired":"FLAT","reason":"D04_SAFETY_CLOSED","candidate_lineage":"NONE","supporting_target_detail":"D04 safety_reason when non-null"},
+    {"priority":4,"rule_id":"R31","when":"new_envelope_state == CLOSED","desired":"FLAT","reason":"ENVELOPE_CLOSED","candidate_lineage":"NONE"},
+    {"priority":5,"rule_id":"R32","when":"new_envelope_state == OPENING","desired":"FLAT","reason":"ENVELOPE_NOT_QUALIFIED","candidate_lineage":"NONE"},
+    {"priority":6,"rule_id":"R33","when":"new_envelope_state == CLOSING","desired":"FLAT","reason":"ENVELOPE_CLOSING","candidate_lineage":"NONE"},
+    {"priority":7,"rule_id":"R34","when":"new_envelope_state == OPEN AND candidate_envelope == null","desired":"FLAT","reason":"NO_VALID_CANDIDATE","candidate_lineage":"NONE"},
+    {"priority":8,"rule_id":"R35","when":"new_envelope_state == OPEN AND candidate.status != QUALIFIED","desired":"FLAT","reason":"CANDIDATE_INVALIDATED","candidate_lineage":"NONE"},
+    {"priority":9,"rule_id":"R36","when":"new_envelope_state == OPEN AND candidate.status == QUALIFIED AND candidate.path_direction == FLAT","desired":"FLAT","reason":"CANDIDATE_NON_DIRECTIONAL","candidate_lineage":"CURRENT_D04_CANDIDATE"},
+    {"priority":10,"rule_id":"R40","when":"new_envelope_state == OPEN AND candidate.status == QUALIFIED AND candidate.path_direction == UPWARD","desired":"LONG","reason":"CANDIDATE_QUALIFIED","candidate_lineage":"CURRENT_D04_CANDIDATE"},
+    {"priority":11,"rule_id":"R41","when":"new_envelope_state == OPEN AND candidate.status == QUALIFIED AND candidate.path_direction == DOWNWARD","desired":"SHORT","reason":"CANDIDATE_QUALIFIED","candidate_lineage":"CURRENT_D04_CANDIDATE"}
+  ],
+  "transition_matrix": {
+    "FLAT": {"FLAT":"NO_CHANGE","LONG":"OPEN","SHORT":"OPEN"},
+    "LONG": {"FLAT":"CLOSE","LONG":"NO_CHANGE","SHORT":"REVERSE"},
+    "SHORT": {"FLAT":"CLOSE","LONG":"REVERSE","SHORT":"NO_CHANGE"}
+  },
+  "transition_rules": [
+    {"priority":0,"transition_rule_id":"T00","when":"pending_target_state != NONE AND desired_position_state != pending_target_state","intent":"RETARGET","reason":"PENDING_TARGET_CONFLICT"},
+    {"priority":1,"transition_rule_id":"T10","when":"pending_target_state != NONE AND desired_position_state == pending_target_state","intent":"NO_CHANGE","reason":"TRANSITION_ALREADY_PENDING"},
+    {"priority":2,"transition_rule_id":"T20","when":"pending_target_state == NONE AND actual_position_state == desired_position_state","intent":"NO_CHANGE","reason":"POSITION_ALREADY_ALIGNED"},
+    {"priority":3,"transition_rule_id":"T21","when":"pending_target_state == NONE AND matrix_intent == OPEN","intent":"OPEN","reason":"POSITION_OPEN_REQUIRED"},
+    {"priority":4,"transition_rule_id":"T22","when":"pending_target_state == NONE AND matrix_intent == CLOSE","intent":"CLOSE","reason":"POSITION_CLOSE_REQUIRED"},
+    {"priority":5,"transition_rule_id":"T23","when":"pending_target_state == NONE AND matrix_intent == REVERSE","intent":"REVERSE","reason":"POSITION_OPPOSED"}
+  ],
+  "authorization_overlays": [
+    {"priority":0,"overlay_rule_id":"A00","when":"execution_available == false AND transition_intent IN [OPEN,CLOSE,REVERSE,RETARGET]","final_intent":"BLOCKED","authorized":false,"reason":"EXECUTION_UNAVAILABLE"}
+  ],
+  "authorization_default": {
+    "authorized_when":"final transition intent IN [OPEN,CLOSE,REVERSE,RETARGET] and no authorization overlay applies",
+    "unauthorized_when":"final transition intent IN [NO_CHANGE,BLOCKED]"
+  },
+  "committed_output_rules": {
+    "primary_reason_code":"reason of resolved target rule",
+    "supporting_reason_codes_order":["target supporting detail when defined","transition rule reason","authorization overlay reasons in priority order"],
+    "supporting_reason_codes_duplicate_policy":"exclude primary; retain first canonical occurrence; never lexical-sort",
+    "supporting_reason_codes_empty":[],
+    "decision_rule_id":"TARGET:<target_rule_id>|TRANSITION:<transition_rule_id_or_NONE>|OVERLAYS:<overlay_rule_ids_in_priority_order_joined_by_COMMA_or_NONE>",
+    "forced_target_transition":"TRANSITION:NONE",
+    "no_overlay":"OVERLAYS:NONE",
+    "candidate_lineage":"use resolved target rule candidate_lineage; CURRENT_D04_CANDIDATE copies candidate_id and source_return_shape_model_time, NONE emits nulls"
+  },
+  "reason_registry": [
+    "EMERGENCY_FLATTEN","SYSTEM_DISABLED","TRADING_DISABLED","D04_SAFETY_CLOSED",
+    "SHAPE_STALE","MARKET_INELIGIBLE","DATA_INVALID","INVALID_RETURNSHAPE","NO_VALID_RETURNSHAPE",
+    "ENVELOPE_CLOSED","ENVELOPE_NOT_QUALIFIED","ENVELOPE_CLOSING","NO_VALID_CANDIDATE",
+    "CANDIDATE_INVALIDATED","CANDIDATE_NON_DIRECTIONAL","CANDIDATE_QUALIFIED",
+    "PENDING_TARGET_CONFLICT","TRANSITION_ALREADY_PENDING","POSITION_ALREADY_ALIGNED",
+    "POSITION_OPEN_REQUIRED","POSITION_CLOSE_REQUIRED","POSITION_OPPOSED","EXECUTION_UNAVAILABLE"
+  ],
+  "invariants": [
+    "schema-invalid or semantically invalid input commits no D03Decision",
+    "BLOCKED applies only to schema-valid actionable transition with execution unavailable",
+    "only OPEN plus QUALIFIED directional candidate can target LONG or SHORT",
+    "no D04 score threshold is evaluated",
+    "MAINTAIN is represented as NO_CHANGE plus unchanged desired state",
+    "REVERSE is a target-state change, not broker sequencing",
+    "BLOCKED decisions are never queued",
+    "disabled control preserves actual state and accumulates no deferred target",
+    "re-enable evaluates current D04 facts only",
+    "D03 never creates candidate identity or queries D02 directly"
+  ],
+  "directional_authority": "D04 candidate.path_direction propagated verbatim from D02 ReturnShape",
+  "open_architectural_issues": 0
+}

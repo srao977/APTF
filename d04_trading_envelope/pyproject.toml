@@ -10,6 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 authors = [{ name = "APTF" }]
 dependencies = [
+  "aptf-d02-return-shape==0.2.0",
   "pydantic>=2.8",
   "PyYAML>=6.0",
   "rich>=13.0",

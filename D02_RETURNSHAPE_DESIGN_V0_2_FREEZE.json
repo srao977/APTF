@@ -1,0 +1,204 @@
+{
+  "freeze_id": "D02_RETURNSHAPE_DESIGN_V0_2_FROZEN_20260816T184955Z",
+  "freeze_timestamp_utc": "2026-08-16T18:49:55.2701775Z",
+  "status": "FROZEN_DESIGN_NOT_IMPLEMENTED",
+  "scope": "Canonical deterministic D02 ReturnShape design and D01-to-D02-to-D04 responsibility boundary",
+  "consistency": "PASS",
+  "system_authority": {
+    "relative_path": "APTF_INTEGRATED_SYSTEM_DESIGN_AUTHORITY_REPLAY_CORE_V0_2.md",
+    "sha256": "30C1DEF02735B477954F0E67192477C23DD59452E77020FDA8CE113D612CFA82",
+    "size_bytes": 31493,
+    "status": "GOVERNING"
+  },
+  "frozen_d01_authority": {
+    "qt_contract": {
+      "relative_path": "D01_QT_OUTPUT_CONTRACT_V0_1.md",
+      "sha256": "12966FAC725B681EE8E8F4430C4F1A19A418CC7EBA1B6EAD63A3407563E0C577",
+      "size_bytes": 9326
+    },
+    "qt_schema": {
+      "relative_path": "D01_QT_OUTPUT_SCHEMA_V0_1.json",
+      "sha256": "EAFE0A42241CF0A330C162C3D7499FBDD5FF87756CFDC1A0FE08C5C2914744F7",
+      "size_bytes": 19446
+    },
+    "pre_stage_3_freeze": {
+      "relative_path": "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json",
+      "sha256": "B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235",
+      "size_bytes": 4853,
+      "status": "FROZEN"
+    },
+    "canonical_primary_replay_seal": "6CF2BE31F8815ADB3B5B2E70916A4CD5CDAF427783DA9098E5167313EB70F981",
+    "authority_chain_anchors": [
+      {
+        "relative_path": "D01_V0_2_STAGE_1_SYNTHETIC_ACCEPTANCE_FREEZE.json",
+        "sha256": "57F800A510FC68A60928B5FCA36A2E58C3E9F7B6FD2A39E7EC3A709831573C94",
+        "size_bytes": 9763
+      },
+      {
+        "relative_path": "D01_STAGE_2_CLOSEOUT_AND_STAGE_3_BOUNDARY_FREEZE.json",
+        "sha256": "2CBDD76F97036E5546132DEE171ADFA2B0DD376F7DDF9E5D6E3C8E87F09208EE",
+        "size_bytes": 4038
+      }
+    ],
+    "protected_hash_verification": "PASS"
+  },
+  "frozen_artifacts": [
+    {
+      "relative_path": "D02_D04_CONTRACT_MODERNIZATION_V0_2.md",
+      "sha256": "0010825D436D61E7E0698AD9D925896E4E50A53F16B57AB72501B8036B76E94E",
+      "size_bytes": 6682,
+      "role": "D02/D04 contract modernization authority"
+    },
+    {
+      "relative_path": "D02_RETURNSHAPE_CANONICAL_DESIGN_V0_2.md",
+      "sha256": "2A965641A54EFEA1DE3B93AED31A40AEBC19306EC52827C88531A8A014A46308",
+      "size_bytes": 9115,
+      "role": "Canonical D02 design authority"
+    },
+    {
+      "relative_path": "D02_RETURNSHAPE_CANONICAL_SCHEMA_V0_2.json",
+      "sha256": "FEF2EEA82C658267826A52ECD2AFAFFDB4B2FD8BC7F38E0BFDC0BFCB90566F94",
+      "size_bytes": 20287,
+      "role": "Machine-readable 17-field canonical ReturnShape contract"
+    },
+    {
+      "relative_path": "D02_D04_FIELD_MIGRATION_V0_2.md",
+      "sha256": "6C17B4FD1CA3B6AF5253FEA00A7AD0B51E975C0445A6015BE2DF399DB1ED26F8",
+      "size_bytes": 6395,
+      "role": "Legacy D04 to canonical D02 field migration"
+    },
+    {
+      "relative_path": "D02_D04_MODERNIZED_INTERFACE_CONSISTENCY_REVIEW_V0_2.md",
+      "sha256": "53DE307ACA205104984087F92F987442F3F0D4868E66279CCFB9462A1F4E0402",
+      "size_bytes": 5289,
+      "role": "Final A-V design consistency review"
+    },
+    {
+      "relative_path": "D02_PREVIOUS_EIGHT_GAPS_RECLASSIFICATION_V0_2.md",
+      "sha256": "C7292AC4DAD518A3517E89653D36AB1A73084F6C926A3F8C49A11024C74C5144",
+      "size_bytes": 5313,
+      "role": "Reclassification of prior scientific-gap findings"
+    },
+    {
+      "relative_path": "D02_D04_MODERNIZATION_OPEN_ISSUES_V0_2.md",
+      "sha256": "75A58BBDF2639D0807D17B66A9E1AC576399FF4F667D559BE1930C8DB0A9493D",
+      "size_bytes": 3345,
+      "role": "Resolved issue ledger and deferred D04 design scope"
+    },
+    {
+      "relative_path": "D02_HUMAN_DESIGN_DECISIONS_V0_2.md",
+      "sha256": "5FDA1F0AB570A3BA12D965D56D6D8BE8871635AF324AF570171B9FA317E66E13",
+      "size_bytes": 3443,
+      "role": "Human decision authority closing R1/R2/R3/P1/L1/O1"
+    }
+  ],
+  "canonical_return_shape": {
+    "field_count": 17,
+    "field_names": [
+      "model_time",
+      "entity_id",
+      "source_model_version",
+      "current_level",
+      "projection_interval",
+      "forward_half_life",
+      "forward_samples",
+      "terminal_displacement",
+      "maximum_absolute_displacement",
+      "path_direction",
+      "terminal_decay_factor",
+      "strength",
+      "coherence",
+      "persistence",
+      "uncertainty",
+      "reversal_propensity",
+      "state_support_ratio"
+    ],
+    "canonical_identity": ["entity_id", "model_time"],
+    "nested_forward_sample_fields": [
+      "tau",
+      "level",
+      "velocity",
+      "uncertainty",
+      "strength",
+      "persistence",
+      "reversal_propensity"
+    ],
+    "derived_geometry_view_count": 4,
+    "full_fmo_preserved": true
+  },
+  "d02_architecture": {
+    "deterministic": true,
+    "adaptive": false,
+    "learned_parameters": false,
+    "stochastic": false,
+    "scientifically_stateful": false,
+    "independent_predictor": false,
+    "independent_market_inference": false,
+    "pure_function_statement": "For identical valid Q_t, D02 emits identical canonical ReturnShape.",
+    "replay_live_equivalence": true
+  },
+  "resolved_human_decisions": {
+    "R1": "Exact-zero direction: UPWARD if terminal_displacement > 0, DOWNWARD if < 0, FLAT if == 0; no D02 tolerance",
+    "R2": "Preserve terminal_displacement, maximum_absolute_displacement, and full forward_samples; D04 consumption deferred",
+    "R3": "Preserve natural unbounded state_support_ratio and projected support coordinates; D04 consumption deferred",
+    "P1": "Canonical ReturnShape identity is (entity_id, model_time); no separate D02 ID/version/sequence",
+    "L1": "Newer same-entity shape supersedes; endpoint is inclusive; stale only when evaluation_time > model_time + projection_interval",
+    "O1": "D04 owns candidate formation and candidate identity"
+  },
+  "prohibited_input_classes": [
+    "D01 diagnostic/internal fields excluded from Q_t",
+    "Stage 2 realized observer/evaluator fields",
+    "future observations before causal reveal",
+    "future outcomes and benchmark labels",
+    "BUY/SELL/HOLD or vendor decisions",
+    "P&L and performance outcomes",
+    "sealed reserve data",
+    "candidate and execution context"
+  ],
+  "prohibited_output_classes": [
+    "shape_quality",
+    "magnitude_score",
+    "forward_support score",
+    "candidate_id",
+    "candidate_rr",
+    "active",
+    "expected_lifetime",
+    "reversal_probability or reversal_risk",
+    "untyped metadata",
+    "capturability",
+    "trading decisions or actions"
+  ],
+  "d04_responsibility_boundary": {
+    "owns": [
+      "capturability",
+      "feasibility",
+      "ReturnShape supersession and projection staleness",
+      "aperture",
+      "hysteresis",
+      "envelope state",
+      "candidate formation and identity",
+      "envelope transitions and events"
+    ],
+    "modernization_status": "DESIGN_DEFERRED_NOT_IMPLEMENTED"
+  },
+  "d03_responsibility_boundary": {
+    "owns": ["decision and control", "positions", "orders", "actions", "future explicitly designed reward/risk semantics"],
+    "status": "NOT_MODIFIED_NOT_IMPLEMENTED_BY_THIS_FREEZE"
+  },
+  "data_governance": {
+    "first_six_months": "CONSUMED_DEVELOPMENT_EVIDENCE_NOT_ACCESSED_IN_THIS_TASK",
+    "second_six_months": "SEALED_FINAL_BACKTEST_RESERVE",
+    "reserve_accessed": false,
+    "outcome_decision_columns_inspected": false,
+    "historical_replay_executed": false
+  },
+  "implementation_status": {
+    "d02_implemented": false,
+    "d04_source_modified": false,
+    "d03_modified": false,
+    "d01_modified": false,
+    "stage_2_modified": false,
+    "pre_stage_3_authority_modified": false
+  },
+  "freeze_decision": "D02 DESIGN CONSISTENCY: PASS"
+}

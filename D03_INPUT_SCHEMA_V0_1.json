@@ -1,0 +1,71 @@
+{
+  "schema_id": "D03_INPUT_SCHEMA_V0_1",
+  "status": "PROPOSED_FREEZE_READY_PENDING_HUMAN_REVIEW",
+  "input_type": "D03Input",
+  "required_fields": ["d04_evaluation", "decision_context"],
+  "d04_evaluation": {
+    "source": "D04_MODERNIZED_INTERFACE_SCHEMA_V0_2.json",
+    "implementation_freeze": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FREEZE.json",
+    "implementation_freeze_sha256": "F72A86B3085BD11D8626F06F1FE3FAEDDE60570365488176011239382A46F1AF",
+    "top_level_field_count": 23,
+    "candidate_field_count": 6,
+    "required": true,
+    "immutable": true
+  },
+  "decision_context": {
+    "field_count": 12,
+    "extra_fields": "FORBIDDEN",
+    "fields": [
+      {"canonical_name":"context_time","type":"float","range":"finite causal timestamp seconds","required":true,"source":"CONTROL_EVENT_CLOCK","ownership":"D03_INPUT_BOUNDARY","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"entity_id","type":"string","range":"non-empty; equals D04 entity_id","required":true,"source":"POSITION_CONTROL_LEDGER","ownership":"D03_INPUT_BOUNDARY","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"actual_position_state","type":"enum","range":["FLAT","LONG","SHORT"],"required":true,"source":"POSITION_LEDGER","ownership":"POSITION_CONTROL_LEDGER","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"position_candidate_id","type":"string|null","range":"null iff actual position FLAT","required":true,"source":"POSITION_LEDGER","ownership":"POSITION_CONTROL_LEDGER","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"position_source_return_shape_model_time","type":"float|null","range":"finite or null iff actual position FLAT","required":true,"source":"POSITION_LEDGER","ownership":"POSITION_CONTROL_LEDGER","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"pending_target_state","type":"enum","range":["NONE","FLAT","LONG","SHORT"],"required":true,"source":"EXECUTION_CONTROLLER","ownership":"EXECUTION_ADAPTER","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"pending_decision_id","type":"string|null","range":"null iff pending target NONE","required":true,"source":"EXECUTION_CONTROLLER","ownership":"EXECUTION_ADAPTER","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"execution_available","type":"boolean","required":true,"source":"EXECUTION_CONTROLLER","ownership":"EXECUTION_ADAPTER","causal_at_t":true,"classification":"BELONGS_TO_EXECUTION_ADAPTER"},
+      {"canonical_name":"system_enabled","type":"boolean","required":true,"source":"OPERATOR_SYSTEM_CONTROL","ownership":"D03_CONTROL_POLICY","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"trading_enabled","type":"boolean","required":true,"source":"OPERATOR_RISK_CONTROL","ownership":"D03_CONTROL_POLICY","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"emergency_flatten","type":"boolean","required":true,"source":"OPERATOR_RISK_CONTROL","ownership":"D03_CONTROL_POLICY","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"},
+      {"canonical_name":"control_state_valid","type":"boolean","required":true,"source":"POSITION_EXECUTION_RECONCILER","ownership":"D03_INPUT_BOUNDARY","causal_at_t":true,"classification":"REQUIRED_FOR_DECISION"}
+    ]
+  },
+  "cross_field_invariants": [
+    "decision_context.entity_id == d04_evaluation.entity_id",
+    "decision_context.context_time >= d04_evaluation.evaluation_time",
+    "FLAT iff position lineage fields are null",
+    "pending_target_state is NONE iff pending_decision_id is null",
+    "decision_context.control_state_valid == true for policy evaluation and commitment"
+  ],
+  "invalid_input_policy": {
+    "stage": "PRE_POLICY_SCHEMA_AND_SEMANTIC_BOUNDARY_VALIDATION",
+    "committed_decision_produced": false,
+    "blocked_decision_produced": false,
+    "fabricated_defaults": false,
+    "conditions": [
+      "missing or extra field",
+      "unknown enum or invalid scalar/domain",
+      "entity or causal-time invariant failure",
+      "position or pending-lineage invariant failure",
+      "control_state_valid == false"
+    ]
+  },
+  "direct_d01_inputs": 0,
+  "direct_d02_inputs": 0,
+  "future_inputs": 0,
+  "outcome_inputs": 0,
+  "pnl_inputs": 0,
+  "directional_authority": {
+    "required_for_directional_decision": true,
+    "source": "D04Evaluation.candidate_envelope.path_direction",
+    "domain": ["UPWARD", "DOWNWARD", "FLAT"],
+    "available_in_d04_v0_2_1": true,
+    "silent_d02_lookup_permitted": false,
+    "status": "RESOLVED"
+  },
+  "prohibited_inputs": [
+    "future observations", "outcome labels", "benchmark decisions", "realized or expected P&L",
+    "reserve data", "raw D01 state", "raw D02 ReturnShape/FMO", "D04Context duplicates",
+    "broker order mechanics", "position size", "transaction cost outcomes", "hidden metadata", "replay flags"
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "freeze_id": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FROZEN_20260817T013559Z",
+  "freeze_timestamp_utc": "2026-08-17T01:35:59.9022188Z",
+  "status": "FROZEN_PATCH_IMPLEMENTATION",
+  "scope": "One-field immutable D02 path_direction provenance propagation through D04 CandidateEnvelope",
+  "freeze_decision": "D04 V0.2.1 DIRECTIONAL PROVENANCE AMENDMENT FROZEN",
+  "implementation_target": "d04_trading_envelope",
+  "supersession": {
+    "supersedes_for_current_executable_and_interface_authority": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_FREEZE.json",
+    "superseded_freeze_sha256": "7BBA0E80723EBA002EC14FABEE8D7D3B2952DF6E8730528E8D6CC9649E8A3ABC",
+    "historical_authority_preserved": true,
+    "modernization_design_v0_2_preserved": true
+  },
+  "implementation_manifest": {
+    "relative_path": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_MANIFEST.json",
+    "sha256": "910845BF7ABF902EF8F02D1BFC98FF4EB2EFCC0847E2EEB8384859EAA207BCED",
+    "size_bytes": 4589,
+    "verification": "47/47 base unchanged, 3/3 replacements, 5/5 additions",
+    "status": "VERIFIED"
+  },
+  "authority": {
+    "d01_architecture": {"path":"D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json","sha256":"B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235","status":"VERIFIED_UNCHANGED"},
+    "d02_design": {"path":"D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json","sha256":"6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6","status":"VERIFIED_UNCHANGED"},
+    "d02_implementation": {"path":"D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FREEZE.json","sha256":"C8029C4B9608547BBF7960F05E4F8613480C4FB2BF8594D94482516B954F7E72","status":"VERIFIED_UNCHANGED"},
+    "d04_modernization_design": {"path":"D04_TRADING_ENVELOPE_MODERNIZATION_V0_2_FREEZE.json","sha256":"B5C489D060629A91DDED5B2C6EAA4076F6273AF05AED3480659CE649A1050E51","status":"VERIFIED_UNCHANGED"},
+    "d04_implementation_v0_2": {"path":"D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_FREEZE.json","sha256":"7BBA0E80723EBA002EC14FABEE8D7D3B2952DF6E8730528E8D6CC9649E8A3ABC","status":"VERIFIED_HISTORICAL"}
+  },
+  "interface_amendment": {
+    "old_candidate_field_count": 5,
+    "new_candidate_field_count": 6,
+    "new_field": "path_direction",
+    "type": "d02.v02.models.PathDirection",
+    "domain": ["UPWARD", "DOWNWARD", "FLAT"],
+    "source": "D02 ReturnShape.path_direction",
+    "propagation": "VERBATIM",
+    "immutable": true,
+    "d04_recomputes": false,
+    "d04_reinterprets": false,
+    "candidate_identity_changed": false,
+    "d04_evaluation_top_level_field_count": 23
+  },
+  "non_drift": {
+    "Q_G":"UNCHANGED","Q_S":"UNCHANGED","Q_R":"UNCHANGED","B":"UNCHANGED","G":"UNCHANGED","H":"UNCHANGED","C":"UNCHANGED",
+    "aperture":"UNCHANGED","hysteresis":"UNCHANGED","envelope_lifecycle":"UNCHANGED","candidate_qualification":"UNCHANGED",
+    "candidate_identity":"UNCHANGED","stale_safety":"UNCHANGED","recovery":"UNCHANGED","context":"UNCHANGED","scenarios":"UNCHANGED"
+  },
+  "executable_validation": {
+    "focused_directional_provenance":{"passed":10,"failed":0,"status":"PASS"},
+    "d04_complete":{"passed":79,"failed":0,"status":"PASS"},
+    "d04_modernization":{"passed":46,"failed":0,"status":"PASS"},
+    "frozen_formula_vectors":{"passed":14,"failed":0,"status":"PASS"},
+    "d02_regression":{"passed":26,"failed":0,"status":"PASS"},
+    "d01_v02_regression":{"passed":50,"failed":0,"status":"PASS"},
+    "compileall":"PASS"
+  },
+  "evidence": [
+    "D04_DIRECTIONAL_PROVENANCE_AMENDMENT_V0_2_1.md",
+    "D04_CANDIDATE_CONTRACT_V0_2_1.md",
+    "D04_CANDIDATE_SCHEMA_V0_2_1.json",
+    "D04_DIRECTIONAL_PROVENANCE_NON_DRIFT_AUDIT_V0_2_1.md"
+  ],
+  "data_governance": {
+    "historical_data_accessed": false,
+    "first_six_months_used": false,
+    "reserve_status": "SEALED",
+    "reserve_accessed": false,
+    "outcome_labels_inspected": false,
+    "pnl_inspected": false,
+    "replay_executed": false,
+    "backtest_executed": false
+  },
+  "d03_implementation_authorized": false,
+  "architecture_open_issues": 0
+}

@@ -1,0 +1,89 @@
+{
+  "freeze_id": "D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FROZEN_20260817T004207Z",
+  "timestamp_utc": "2026-08-17T00:42:07.5337418Z",
+  "implementation_status": "COMPLETE",
+  "conformance_status": "D02 IMPLEMENTATION CONFORMANCE: PASS",
+  "system_authority": {
+    "relative_path": "APTF_INTEGRATED_SYSTEM_DESIGN_AUTHORITY_REPLAY_CORE_V0_2.md",
+    "sha256": "30C1DEF02735B477954F0E67192477C23DD59452E77020FDA8CE113D612CFA82",
+    "size_bytes": 31493
+  },
+  "frozen_d01_authority": {
+    "relative_path": "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json",
+    "sha256": "B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235",
+    "size_bytes": 4853,
+    "protected_artifacts_verified": "29 / 29"
+  },
+  "d02_design_freeze": {
+    "relative_path": "D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json",
+    "sha256": "6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6",
+    "size_bytes": 7857,
+    "frozen_artifacts_verified": "8 / 8"
+  },
+  "d04_downstream_design_freeze": {
+    "relative_path": "D04_TRADING_ENVELOPE_MODERNIZATION_V0_2_FREEZE.json",
+    "sha256": "B5C489D060629A91DDED5B2C6EAA4076F6273AF05AED3480659CE649A1050E51",
+    "size_bytes": 8089,
+    "frozen_artifacts_verified": "19 / 19"
+  },
+  "frozen_files": [
+    {"relative_path":"d02_return_shape/pyproject.toml","sha256":"158F64C1FF7ED37D6BFDB55DB76C5EC329ADCD77D479462DF5F432141E63F688","size_bytes":574,"role":"Package authority"},
+    {"relative_path":"d02_return_shape/src/d02/__init__.py","sha256":"A15D302DD1F63CE67B205ECF073225E2A6FA220A903680210B43064C332B4F4A","size_bytes":166,"role":"Top-level public exports"},
+    {"relative_path":"d02_return_shape/src/d02/v02/__init__.py","sha256":"AC542F51577387A2C5F1A35AEB5E75EF54297998730C2547E428ECD8B5A52BB7","size_bytes":201,"role":"Versioned public API"},
+    {"relative_path":"d02_return_shape/src/d02/v02/models.py","sha256":"46257FE809539C49E47F0CD39D03C343E2BD4E54E45D9D832719CE06DEF2EAA4","size_bytes":3961,"role":"Immutable canonical data models"},
+    {"relative_path":"d02_return_shape/src/d02/v02/builder.py","sha256":"BF290887B5E2E3B1CDE552494E7142BF3383DD00199C8E1708EB3AB5598BED5E","size_bytes":4577,"role":"Pure canonical transformation"},
+    {"relative_path":"d02_return_shape/tests/conftest.py","sha256":"429AFACA4F6CDB9319D97FB85F7CD3F43F94CFE76EC41120838AACDF0E3E797C","size_bytes":263,"role":"Test import boundary"},
+    {"relative_path":"d02_return_shape/tests/helpers.py","sha256":"1974C5C37172E072B3C160AF097808ED419867F15CB899DE3B5B68DDC4C16CE2","size_bytes":1753,"role":"Synthetic D01-type fixtures"},
+    {"relative_path":"d02_return_shape/tests/test_geometry_and_contract.py","sha256":"8C28AEB31B03CD1AF79DE37267CA02DE3626C8F64FEF8F6986FB976C5DAD5493","size_bytes":4865,"role":"Schema, geometry, propagation, validation, invariant tests"},
+    {"relative_path":"d02_return_shape/tests/test_integration_and_boundaries.py","sha256":"BE9CC6B6598FECBD2E1539E3A4BFA0D51924C719DC28B195335740758502DE06","size_bytes":4043,"role":"Actual D01 integration, D04 compatibility, determinism tests"},
+    {"relative_path":"D02_RETURNSHAPE_IMPLEMENTATION_TRACE_V0_2.md","sha256":"574EE6ACDA30CAD3131F8ABB024B903EC58406FD581682D105DEA0BCA4E34040","size_bytes":6288,"role":"Implementation and lineage trace"},
+    {"relative_path":"D02_RETURNSHAPE_IMPLEMENTATION_CONFORMANCE_V0_2.md","sha256":"A93F230DD5E3CC7C6E674EBB3CA6FA3CBA1D31008AAC199B3B31A2DB4C0130A3","size_bytes":2511,"role":"A-AF conformance review"},
+    {"relative_path":"D02_RETURNSHAPE_IMPLEMENTATION_DELTA_V0_2.md","sha256":"264D13D9632DE06340FCB78AFB4587C7023B5A8AD00DBDD79F68ACFC8E255EAB","size_bytes":2088,"role":"Exact implementation delta"},
+    {"relative_path":"D02_RETURNSHAPE_IMPLEMENTATION_V0_2_MANIFEST.json","sha256":"FE2DCFD3C3B9FBDECB7A88A0A8603FAC5A201B338751A84BCD2FCE25B80435A2","size_bytes":4748,"role":"Machine implementation manifest"}
+  ],
+  "canonical_identity": {
+    "top_level_field_count": 17,
+    "nested_fmo_field_count": 7,
+    "top_level_fields": ["model_time","entity_id","source_model_version","current_level","projection_interval","forward_half_life","forward_samples","terminal_displacement","maximum_absolute_displacement","path_direction","terminal_decay_factor","strength","coherence","persistence","uncertainty","reversal_propensity","state_support_ratio"],
+    "nested_fmo_fields": ["tau","level","velocity","uncertainty","strength","persistence","reversal_propensity"]
+  },
+  "attestations": {
+    "deterministic": true,
+    "adaptive": false,
+    "scientifically_stateful": false,
+    "learned_parameters": [],
+    "fitted_parameters": [],
+    "randomness": false,
+    "wall_clock_dependency": false,
+    "D01_integration": "PASS",
+    "D04_compatibility": "PASS",
+    "top_level_lineage": "17 / 17",
+    "nested_lineage": "7 / 7",
+    "untraced_fields": 0
+  },
+  "test_results": {
+    "D02": {"collected":26,"passed":26,"failed":0},
+    "frozen_design_vectors": {"applicable":0,"passed":0},
+    "D01_v0_2": {"collected":50,"passed":50,"failed":0},
+    "existing_D04": {"collected":23,"passed":23,"failed":0},
+    "determinism": "PASS",
+    "invariants": "PASS",
+    "compile_import": "PASS"
+  },
+  "immutability": {
+    "D01_modified": false,
+    "D02_design_modified": false,
+    "D04_modified": false,
+    "D03_modified": false
+  },
+  "data_governance": {
+    "historical_data_used": false,
+    "first_six_month_development_data_used": false,
+    "reserve_used": false,
+    "reserve_status": "SEALED",
+    "outcome_decision_columns_inspected": false,
+    "historical_replay_executed": false,
+    "final_backtest_executed": false
+  },
+  "freeze_decision": "D02 IMPLEMENTED AND FROZEN — READY FOR D04 MODERNIZATION IMPLEMENTATION"
+}

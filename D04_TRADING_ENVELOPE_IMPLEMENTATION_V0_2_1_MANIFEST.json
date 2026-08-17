@@ -1,0 +1,72 @@
+{
+  "manifest_id": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1",
+  "created_utc": "2026-08-17T01:35:59.9022188Z",
+  "status": "IMPLEMENTED_VERIFIED_FREEZE_CANDIDATE",
+  "implementation_target": "d04_trading_envelope",
+  "versioning_model": "BASE_V0_2_MANIFEST_PLUS_VERIFIED_REPLACEMENTS_AND_ADDITIONS",
+  "base_manifest": {
+    "path": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_MANIFEST.json",
+    "sha256": "DA358810F725601207B6DD35E08005B89488E384B9C8170940A2CF6B7E784A36",
+    "size": 9784,
+    "file_count": 50,
+    "unchanged_file_count": 47,
+    "replaced_file_count": 3,
+    "status": "VERIFIED"
+  },
+  "authority": {
+    "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json": "B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235",
+    "D02_RETURNSHAPE_DESIGN_V0_2_FREEZE.json": "6FC2D51FDA74284B7866B67DE2B6EA7025F9F3599606E2A9945FCF53D07A7CE6",
+    "D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FREEZE.json": "C8029C4B9608547BBF7960F05E4F8613480C4FB2BF8594D94482516B954F7E72",
+    "D04_TRADING_ENVELOPE_MODERNIZATION_V0_2_FREEZE.json": "B5C489D060629A91DDED5B2C6EAA4076F6273AF05AED3480659CE649A1050E51",
+    "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_FREEZE.json": "7BBA0E80723EBA002EC14FABEE8D7D3B2952DF6E8730528E8D6CC9649E8A3ABC"
+  },
+  "contract": {
+    "d04_evaluation_top_level_field_count": 23,
+    "candidate_field_count": 6,
+    "new_candidate_field": "path_direction",
+    "new_candidate_field_type": "d02.v02.models.PathDirection",
+    "new_candidate_field_domain": ["UPWARD", "DOWNWARD", "FLAT"],
+    "candidate_identity_changed": false,
+    "mathematics_changed": false,
+    "lifecycle_changed": false
+  },
+  "validation": {
+    "focused_directional_provenance": {"passed": 10, "failed": 0},
+    "d04_complete": {"passed": 79, "failed": 0},
+    "d04_modernization": {"passed": 46, "failed": 0},
+    "frozen_formula_vectors": {"passed": 14, "failed": 0},
+    "d02_regression": {"passed": 26, "failed": 0},
+    "d01_v02_regression": {"passed": 50, "failed": 0},
+    "compileall": "PASS",
+    "base_non_drift": "47 unchanged, 3 authorized replacements, 0 unexpected"
+  },
+  "replacements": [
+    {"path":"d04_trading_envelope/src/aptf_d04/models/opportunity.py","size":482,"sha256":"2DF58E531A4E90BB70E512E384B38ABD245169D2EC0B186EC8B6DDEF2BA8BB49","replaces_base_sha256":"F6F83515BB07CF5DF21122F6399F7529A4C54FD8955E42C33B695C413FC6FD20","delta":"required immutable path_direction field"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py","size":8873,"sha256":"D19C5C3338D81E1BE2E3BB902DFC207FAE9D05E9A99480212E04E1A9BEE3677D","replaces_base_sha256":"8CF5AF81C7EBD940BDB36483761D424E3EF3E6039ACCCA67A88C0A21F941419E","delta":"verbatim source ReturnShape.path_direction assignment"},
+    {"path":"d04_trading_envelope/tests/test_modernization_v02.py","size":18745,"sha256":"7B46F42651F211AA668CFD6B95F48B9BFF831FA1A97695947417BD2F2410DF3A","replaces_base_sha256":"1D3F55C87944CDEE9CE5E2100163439FE651E56C5B2F095A55CCEA002BA304B4","delta":"candidate schema count and required fixture field"}
+  ],
+  "additions": [
+    {"path":"d04_trading_envelope/tests/test_directional_provenance_v021.py","size":5953,"sha256":"05C895DB23DA3983CFAF1839C97FBCA8CA7173639AA4FBED0AA0B80B387C5BF3","role":"ten focused directional provenance tests"},
+    {"path":"D04_DIRECTIONAL_PROVENANCE_AMENDMENT_V0_2_1.md","size":3364,"sha256":"8999D7D63ED8B904A70E183C8AE11A86A9F909159DCF06186F77E32AE03D0BEA","role":"patch design authority"},
+    {"path":"D04_CANDIDATE_CONTRACT_V0_2_1.md","size":1930,"sha256":"3FE11000A641FC15CB4B47D20ACC32A84CC9B95A1EF44B2FCF21DC31BDECEC35","role":"six-field candidate contract"},
+    {"path":"D04_CANDIDATE_SCHEMA_V0_2_1.json","size":1712,"sha256":"7F61D152C083BA35BD250BE3A8E0F36CB39DC6A9B839AF8EB7946CB46EDCFB06","role":"machine-readable six-field candidate schema"},
+    {"path":"D04_DIRECTIONAL_PROVENANCE_NON_DRIFT_AUDIT_V0_2_1.md","size":1997,"sha256":"66BD22E25A9B52E6BEAB5447851138EA309E91728E2BE737011CB1889C6F2948","role":"mathematical and lifecycle non-drift evidence"}
+  ],
+  "effective_file_count": 51,
+  "evidence_file_count": 10,
+  "excluded": [
+    "d04_trading_envelope/output/**",
+    "**/__pycache__/**",
+    "**/*.pyc",
+    "D03 design artifacts (unfrozen downstream design records)"
+  ],
+  "data_governance": {
+    "historical_data_accessed": false,
+    "first_six_months_used": false,
+    "reserve_accessed": false,
+    "outcomes_inspected": false,
+    "pnl_inspected": false,
+    "replay_executed": false,
+    "backtest_executed": false
+  }
+}

@@ -1,14 +1,12 @@
 from __future__ import annotations
 
-from typing import Any
-
 from pydantic import BaseModel, ConfigDict, Field
 
 
 class EnvelopeContext(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="forbid", allow_inf_nan=False)
 
-    timestamp: float
+    evaluation_time: float
     market_eligible: bool
 
     data_integrity: float = Field(ge=0.0, le=1.0)
@@ -23,4 +21,3 @@ class EnvelopeContext(BaseModel):
     risk_capacity: float = Field(ge=0.0, le=1.0)
     broker_health: float = Field(ge=0.0, le=1.0)
 
-    metadata: dict[str, Any] = Field(default_factory=dict)

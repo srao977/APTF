@@ -13,5 +13,5 @@ class Event(BaseModel):
     event_type: EventType
     timestamp: float
     candidate_id: str | None = None
-    return_shape_id: str | None = None
+    return_shape_identity: tuple[str, float] | None = None
     payload: dict[str, Any] = Field(default_factory=dict)
