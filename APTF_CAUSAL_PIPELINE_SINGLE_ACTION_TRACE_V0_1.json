@@ -1,0 +1,26 @@
+{
+  "audit_id": "APTF_CAUSAL_PIPELINE_SINGLE_ACTION_TRACE_V0_1",
+  "zero_based_output_index": 27950,
+  "one_based_source_row_number_by_preserved_order": 27951,
+  "timestamp": "2022-11-14T18:35:00Z",
+  "ohlcv": {"open":"399.95","high":"400.08","low":"399.94","close":"400.07","volume":"112280"},
+  "lineage": {
+    "D01_output_identity": null,
+    "D02_ReturnShape_identity": null,
+    "D04_evaluation_identity": null,
+    "D04_candidate_identity": null,
+    "D03_record_type": "fabricated seven-field dictionary, not frozen DecisionRecord",
+    "D03_decision_id": "D03D|SPY|27950.0|v0_1|mock_hash",
+    "D03_hash_argument": "d03_hash_mock",
+    "prior_position_state": "FLAT",
+    "desired_position_state": "LONG",
+    "transition_intent": "OPEN",
+    "action_authorized": true,
+    "transition_plan_id": "APTFPTP|b0c92624aab6f5f796b8a79cf4f8e656",
+    "transition_class": "OPEN_LONG",
+    "ordered_execution_verbs": ["BUY"]
+  },
+  "mock_governing_condition": "close > 400.0 AND volume > 1000",
+  "genuine_full_pipeline_output": false,
+  "future_outcome_evaluated": false
+}

@@ -1,0 +1,46 @@
+{
+  "test_id": "APTF_TEST_002_TWO_OBSERVATIONS_V0_1",
+  "clock_domain_id": "2e5f52dd-b1a5-421f-8c57-5128cd9efc11",
+  "processing_order": [
+    "E0(t1)", "D01(t1)", "D02(t1)", "D04(t1)", "D03(t1)", "POSITION_CONTROLLER(t1)",
+    "E0(t2)", "D01(t2)", "D02(t2)", "D04(t2)", "D03(t2)", "POSITION_CONTROLLER(t2)"
+  ],
+  "observations": [
+    {
+      "observation": "t1",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "events": [
+        {"stage":"E0","event_id":"aptf:evt:v1:sha256:a4927b853c27014cedf619fe813809a4422be6e196ceec10b58f27d47fed5143","execution_id":"209afd0a-23e6-45b3-969d-c88f807ac708","parent_event_id":null,"received_at_utc":"2026-08-18T18:30:44.394124Z","emitted_at_utc":"2026-08-18T18:30:44.394143Z","processing_duration_ns":11600,"processing_duration_us":11.6,"processing_duration_ms":0.0116},
+        {"stage":"D01","event_id":"aptf:evt:v1:sha256:1bed3437d89a99bf77b9ef10297b7ed3fbaf86ee486dcf860c9fcf10819263ae","execution_id":"804a624f-22c2-411e-8c2a-a6ea2a7a5b56","parent_event_id":"aptf:evt:v1:sha256:a4927b853c27014cedf619fe813809a4422be6e196ceec10b58f27d47fed5143","received_at_utc":"2026-08-18T18:30:44.394333Z","emitted_at_utc":"2026-08-18T18:30:44.394381Z","processing_duration_ns":46600,"processing_duration_us":46.6,"processing_duration_ms":0.0466},
+        {"stage":"D02","event_id":"aptf:evt:v1:sha256:44aa341620badc4c175702c5e323e28bcca2ec5f3841d7e3e0258888da72c13a","execution_id":"057280e6-3b7a-4e07-83b3-3ff274dd8404","parent_event_id":"aptf:evt:v1:sha256:1bed3437d89a99bf77b9ef10297b7ed3fbaf86ee486dcf860c9fcf10819263ae","received_at_utc":"2026-08-18T18:30:44.394823Z","emitted_at_utc":"2026-08-18T18:30:44.394852Z","processing_duration_ns":28300,"processing_duration_us":28.3,"processing_duration_ms":0.0283},
+        {"stage":"D04","event_id":"aptf:evt:v1:sha256:71218ec92bd3a2797a1ff6fc212a34642f6825a6c0c5c08ea7cc7e96c68f23c2","execution_id":"ea463410-c44a-4d01-a1e4-1ce2539d3763","parent_event_id":"aptf:evt:v1:sha256:44aa341620badc4c175702c5e323e28bcca2ec5f3841d7e3e0258888da72c13a","received_at_utc":"2026-08-18T18:30:44.395192Z","emitted_at_utc":"2026-08-18T18:30:44.395218Z","processing_duration_ns":24300,"processing_duration_us":24.3,"processing_duration_ms":0.0243},
+        {"stage":"D03","event_id":"aptf:evt:v1:sha256:7e08cd9ab07bbd9d5cc4f1060bbd0374dd8d99d4ed1b550c63f3826d10f405ce","execution_id":"eeaec3b2-dcd4-4c0f-bd00-b8e2fbf33cf9","parent_event_id":"aptf:evt:v1:sha256:71218ec92bd3a2797a1ff6fc212a34642f6825a6c0c5c08ea7cc7e96c68f23c2","received_at_utc":"2026-08-18T18:30:44.395396Z","emitted_at_utc":"2026-08-18T18:30:44.395454Z","processing_duration_ns":57500,"processing_duration_us":57.5,"processing_duration_ms":0.0575},
+        {"stage":"POSITION_CONTROLLER","event_id":"aptf:evt:v1:sha256:f4e75c7d667d91fc6fd0aefb055a681f6119ef6c4770237316d9f51711edfc8b","execution_id":"ff77f3ec-62a6-41c3-a0b0-72158556b2cd","parent_event_id":"aptf:evt:v1:sha256:7e08cd9ab07bbd9d5cc4f1060bbd0374dd8d99d4ed1b550c63f3826d10f405ce","received_at_utc":"2026-08-18T18:30:44.395576Z","emitted_at_utc":"2026-08-18T18:30:44.395585Z","processing_duration_ns":8000,"processing_duration_us":8.0,"processing_duration_ms":0.008}
+      ]
+    },
+    {
+      "observation": "t2",
+      "market_event_time_utc": "2022-09-30T08:09:00Z",
+      "observation_id": "aptf:obs:v1:sha256:3ad98ae11f9f797e81ea3cb6b3c28f4bb6bf0d59460425776e0d5a8f9316a0b9",
+      "events": [
+        {"stage":"E0","event_id":"aptf:evt:v1:sha256:efb571903f45f9ef8c32dcaecffdac742e08d98f6e2eae7e5355462681483645","execution_id":"e00486ba-8678-48b7-94aa-d156a14043e5","parent_event_id":null,"received_at_utc":"2026-08-18T18:30:44.396278Z","emitted_at_utc":"2026-08-18T18:30:44.396286Z","processing_duration_ns":6800,"processing_duration_us":6.8,"processing_duration_ms":0.0068},
+        {"stage":"D01","event_id":"aptf:evt:v1:sha256:5766305319bf2c8fff4064e57de46d5069276eeb0a71d487bc7fb5561b653a7b","execution_id":"700c0a88-8420-4c27-a81b-4f52403af308","parent_event_id":"aptf:evt:v1:sha256:efb571903f45f9ef8c32dcaecffdac742e08d98f6e2eae7e5355462681483645","received_at_utc":"2026-08-18T18:30:44.396438Z","emitted_at_utc":"2026-08-18T18:30:44.396486Z","processing_duration_ns":46800,"processing_duration_us":46.8,"processing_duration_ms":0.0468},
+        {"stage":"D02","event_id":"aptf:evt:v1:sha256:cc1113c145da61da852a7e04cdb40637de597fd6107d540a1cf446bd321bcf66","execution_id":"0895c385-640a-47ad-bbb2-88130e1fb966","parent_event_id":"aptf:evt:v1:sha256:5766305319bf2c8fff4064e57de46d5069276eeb0a71d487bc7fb5561b653a7b","received_at_utc":"2026-08-18T18:30:44.397025Z","emitted_at_utc":"2026-08-18T18:30:44.397059Z","processing_duration_ns":32300,"processing_duration_us":32.3,"processing_duration_ms":0.0323},
+        {"stage":"D04","event_id":"aptf:evt:v1:sha256:6100aefb51fa1a02661acd62559dab1b6786f53d47d972f49e2c936b4d115e67","execution_id":"10577098-086f-450a-a3d1-579749e61101","parent_event_id":"aptf:evt:v1:sha256:cc1113c145da61da852a7e04cdb40637de597fd6107d540a1cf446bd321bcf66","received_at_utc":"2026-08-18T18:30:44.397409Z","emitted_at_utc":"2026-08-18T18:30:44.397456Z","processing_duration_ns":46500,"processing_duration_us":46.5,"processing_duration_ms":0.0465},
+        {"stage":"D03","event_id":"aptf:evt:v1:sha256:19a88742a35b97c4214ed75317534f47cc075aafbb05809c616bc6218c9ca3d8","execution_id":"fd0472d6-739a-4abb-ad38-fba9bc065a2b","parent_event_id":"aptf:evt:v1:sha256:6100aefb51fa1a02661acd62559dab1b6786f53d47d972f49e2c936b4d115e67","received_at_utc":"2026-08-18T18:30:44.397668Z","emitted_at_utc":"2026-08-18T18:30:44.397747Z","processing_duration_ns":77500,"processing_duration_us":77.5,"processing_duration_ms":0.0775},
+        {"stage":"POSITION_CONTROLLER","event_id":"aptf:evt:v1:sha256:f30a7a9eccaad8b8fb8eac5a4a71b254bed243021621205d1a9c5d88e48918a8","execution_id":"d282c266-32db-4cb5-a046-b64cf4241531","parent_event_id":"aptf:evt:v1:sha256:19a88742a35b97c4214ed75317534f47cc075aafbb05809c616bc6218c9ca3d8","received_at_utc":"2026-08-18T18:30:44.397883Z","emitted_at_utc":"2026-08-18T18:30:44.397896Z","processing_duration_ns":12000,"processing_duration_us":12.0,"processing_duration_ms":0.012}
+      ]
+    }
+  ],
+  "checks": {
+    "t1_observation_id_preserved": true,
+    "t2_observation_id_preserved": true,
+    "distinct_observation_ids": true,
+    "t1_parent_chain_complete": true,
+    "t2_parent_chain_complete": true,
+    "cross_observation_parent_links": [],
+    "market_times_preserved": true,
+    "sequential_no_overlap_requested": true
+  }
+}

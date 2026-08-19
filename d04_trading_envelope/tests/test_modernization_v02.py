@@ -21,18 +21,15 @@ from d02.v02.models import PathDirection, ReturnShape
 
 ROOT = Path(__file__).resolve().parents[1]
 CONTEXT_FIELDS = {
-    "evaluation_time", "market_eligible", "data_integrity", "clock_event_quality",
-    "capital_available", "portfolio_capacity", "position_capacity", "liquidity_quality",
-    "spread_quality", "latency_quality", "execution_feasibility", "risk_capacity",
-    "broker_health",
+    "evaluation_time", "market_eligible",
 }
 OUTPUT_FIELDS = {
     "evaluation_time", "entity_id", "return_shape_model_time", "source_model_version",
     "hard_eligibility", "geometry_quality", "structural_quality", "risk_quality",
-    "base_capturability_score", "feasibility_gate_score", "capturability_score",
+    "base_capturability_score", "capturability_score",
     "previous_envelope_state", "new_envelope_state", "aperture_before", "aperture_after",
     "projection_valid", "stale", "safety_state", "safety_reason", "candidate_envelope",
-    "gate_dimension_values", "reason_codes", "events",
+    "reason_codes", "events",
 }
 CANDIDATE_FIELDS = {
     "candidate_id", "entity_id", "source_return_shape_model_time", "qualified_at", "status",
@@ -55,14 +52,16 @@ def model_and_observation():
     return envelope.capturability_model, observation(), config
 
 
-def test_context_schema_is_exactly_frozen_13_fields() -> None:
-    assert set(EnvelopeContext.model_fields) == CONTEXT_FIELDS
-    assert len(EnvelopeContext.model_fields) == 13
+def test_context_schema_has_two_current_values_plus_provenance_control() -> None:
+    assert set(EnvelopeContext.model_fields) == CONTEXT_FIELDS | {
+        "context_role", "provenance"
+    }
+    assert len(CONTEXT_FIELDS) == 2
 
 
-def test_output_schema_is_exactly_frozen_23_fields() -> None:
+def test_output_schema_removes_two_gate_fields() -> None:
     assert set(EnvelopeEvaluation.model_fields) == OUTPUT_FIELDS
-    assert len(EnvelopeEvaluation.model_fields) == 23
+    assert len(EnvelopeEvaluation.model_fields) == 21
 
 
 def test_candidate_schema_is_exactly_amended_6_fields() -> None:
@@ -141,7 +140,6 @@ def test_risk_quality_complement_product(uncertainty, reversal, expected) -> Non
     ("updates", "time_offset", "expected_reason"),
     [
         ({"market_eligible": False}, 0.0, "MARKET_INELIGIBLE"),
-        ({"data_integrity": 0.0}, 0.0, "DATA_INVALID"),
         ({}, 31.0, "SHAPE_STALE"),
     ],
 )
@@ -156,15 +154,11 @@ def test_hard_eligibility_failure_branches(updates, time_offset, expected_reason
     assert expected_reason in result.reason_codes
 
 
-@pytest.mark.parametrize("dimension", list(CapturabilityModelV0_2.GATE_REASON_CODE_MAP))
-def test_each_frozen_gate_dimension_can_bind(dimension: str) -> None:
+def test_current_equation_emits_no_gate_fields() -> None:
     model, item, _ = model_and_observation()
-    context = item.context.model_copy(
-        update={name: 0.9 for name in model.feasibility_gate_dimensions} | {dimension: 0.123}
-    )
-    result = model.evaluate(item.return_shape, context)
-    assert result.feasibility_gate_score == 0.123
-    assert result.gate_dimension_values[dimension] == 0.123
+    result = model.evaluate(item.return_shape, item.context)
+    assert "feasibility_gate_score" not in result.model_dump()
+    assert "gate_dimension_values" not in result.model_dump()
 
 
 @pytest.mark.parametrize("prior_state", list(EnvelopeState))
@@ -212,11 +206,10 @@ def test_context_only_reevaluation_emits_factual_event() -> None:
     envelope, _ = build_envelope(ROOT / "config" / "default.yaml")
     item = observation()
     envelope.process(item.return_shape, item.context)
-    context = item.context.model_copy(update={"spread_quality": 0.4})
+    context = item.context.model_copy(update={"evaluation_time": item.context.evaluation_time + 0.1})
     result = envelope.process(item.return_shape, context)
     assert EventType.CONTEXT_REEVALUATED in result.events
     assert EventType.RETURN_SHAPE_ACCEPTED not in result.events
-    assert result.feasibility_gate_score == 0.4
 
 
 def test_newer_shape_supersedes_without_forced_closure() -> None:
@@ -333,17 +326,6 @@ def _frozen_vector_input(vector: dict) -> tuple[ReturnShape, EnvelopeContext]:
     context_values = {
         "evaluation_time": inputs.get("evaluation_time", model_time),
         "market_eligible": inputs.get("market_eligible", True),
-        "data_integrity": inputs.get("data_integrity", 1.0),
-        "clock_event_quality": 1.0,
-        "capital_available": inputs.get("capital_available", 1.0),
-        "portfolio_capacity": inputs.get("portfolio_capacity", 1.0),
-        "position_capacity": inputs.get("position_capacity", 1.0),
-        "liquidity_quality": inputs.get("liquidity_quality", 1.0),
-        "spread_quality": inputs.get("spread_quality", 1.0),
-        "latency_quality": inputs.get("latency_quality", 1.0),
-        "execution_feasibility": inputs.get("execution_feasibility", 1.0),
-        "risk_capacity": inputs.get("risk_capacity", 1.0),
-        "broker_health": inputs.get("broker_health", 1.0),
     }
     return shape, EnvelopeContext(**context_values)
 
@@ -371,10 +353,12 @@ def test_all_14_frozen_formula_vectors() -> None:
         assert result.structural_quality == pytest.approx(expected["structural_quality"]), vector["id"]
         assert result.risk_quality == pytest.approx(expected["risk_quality"]), vector["id"]
         assert result.base_capturability_score == pytest.approx(expected["B"]), vector["id"]
-        assert result.feasibility_gate_score == pytest.approx(expected["G"]), vector["id"]
-        assert result.hard_eligibility == expected["H"], vector["id"]
-        assert result.capturability_score == pytest.approx(expected["C"]), vector["id"]
-        assert set(expected["reason_codes"]).issubset(result.reason_codes), vector["id"]
+        expected_h = int(
+            context.evaluation_time <= shape.model_time + shape.projection_interval
+            and context.market_eligible is not False
+        )
+        assert result.hard_eligibility == expected_h, vector["id"]
+        assert result.capturability_score == pytest.approx(expected_h * expected["B"]), vector["id"]
 
 
 def test_invalid_shape_fails_closed_with_canonical_output() -> None:

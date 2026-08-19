@@ -1,0 +1,14 @@
+{
+  "schema_id": "APTF_CANONICAL_EXECUTION_VERB_SCHEMA_V0_1",
+  "status": "DESIGN_FREEZE_CANDIDATE",
+  "verb_domain": ["BUY", "SELL", "SELL_SHORT", "BUY_TO_COVER", "HOLD", "NO_ACTION"],
+  "verbs": [
+    {"verb":"BUY","valid_source":["FLAT"],"result":"LONG","changes_exposure":true,"opens":true,"closes":false},
+    {"verb":"SELL","valid_source":["LONG"],"result":"FLAT","changes_exposure":true,"opens":false,"closes":true},
+    {"verb":"SELL_SHORT","valid_source":["FLAT"],"result":"SHORT","changes_exposure":true,"opens":true,"closes":false},
+    {"verb":"BUY_TO_COVER","valid_source":["SHORT"],"result":"FLAT","changes_exposure":true,"opens":false,"closes":true},
+    {"verb":"HOLD","valid_source":["LONG","SHORT"],"result":"UNCHANGED","changes_exposure":false,"opens":false,"closes":false},
+    {"verb":"NO_ACTION","valid_source":["FLAT"],"result":"FLAT","changes_exposure":false,"opens":false,"closes":false}
+  ],
+  "excluded_fields": ["quantity", "price", "order_type", "time_in_force", "broker", "venue", "account", "leverage", "margin"]
+}

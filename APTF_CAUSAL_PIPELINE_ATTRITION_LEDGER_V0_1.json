@@ -1,0 +1,38 @@
+{
+  "audit_id": "APTF_CAUSAL_PIPELINE_ATTRITION_LEDGER_V0_1",
+  "source_artifact": "output/SPY_APTF_position_actions_development_v0_1.csv",
+  "reported_run_rows": 107451,
+  "stages": [
+    {"stage":"generated CSV source rows","input":107451,"output":107451,"attrition":0},
+    {"stage":"normalized rows mapped to frozen D01 input","input":107451,"output":0,"attrition":107451},
+    {"stage":"frozen D01 invocations","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D01 valid DMO/FMO outputs","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D02 invocations","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D02 ReturnShapes","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D04 invocations","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D04 evaluations","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D04 candidates","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D04 actionable candidates","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D03 invocations","input":0,"output":0,"attrition":0},
+    {"stage":"frozen D03 DecisionRecords","input":0,"output":0,"attrition":0},
+    {"stage":"fabricated mock-D03 dictionaries","input":107451,"output":107351,"attrition":100},
+    {"stage":"Position Transition Controller invocations","input":107351,"output":107351,"attrition":0},
+    {"stage":"PositionTransitionPlans produced","input":107351,"output":47948,"attrition":59403},
+    {"stage":"READY/authorized transition plans","input":47948,"output":1,"attrition":47947},
+    {"stage":"populated APTF_position_action rows","input":107451,"output":1,"attrition":107450}
+  ],
+  "mock_path_distributions": {
+    "fabricated_desired_LONG": 20098,
+    "fabricated_desired_FLAT": 87253,
+    "fabricated_D03_action_authorized_true": 1,
+    "fabricated_D03_NO_CHANGE": 107350,
+    "fabricated_D03_BLOCKED": 0,
+    "real_D03_records": 0
+  },
+  "boundary": {
+    "frozen_primary_rows": 106603,
+    "reported_rows": 107451,
+    "rows_at_or_after_reserve_start_in_derived_output": 848,
+    "reserve_start_utc": "2023-03-30T08:00:00Z"
+  }
+}

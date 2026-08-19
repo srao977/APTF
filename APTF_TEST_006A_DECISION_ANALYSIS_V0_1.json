@@ -1,0 +1,4077 @@
+{
+  "actionable_count": 985,
+  "counts": {
+    "BUY": 131,
+    "HOLD": 752,
+    "SELL": 102
+  },
+  "first_occurrences": {
+    "BUY": {
+      "adaptive_properties": {
+        "delta_C": 0.04866087044290998,
+        "direction_balance": 1,
+        "down_count": 7,
+        "flat_count": 0,
+        "prior_15_max_C": 0.24931857044648367,
+        "prior_15_median_C": 0.10404565335847517,
+        "prior_15_min_C": 0.06466313609095346,
+        "prior_15_range_C": 0.18465543435553022,
+        "prior_C": 0.07521571359702607,
+        "up_count": 8
+      },
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "ADAPTIVE_DECISION": 5100,
+        "D01": 36600,
+        "D02": 23400,
+        "FOUR_FACTOR": 11200,
+        "SOURCE_ADMISSION": 3900
+      },
+      "context_end_timestamp": "2022-09-30T11:04:00Z",
+      "context_start_timestamp": "2022-09-30T10:49:00Z",
+      "decision_rule_path": "UPWARD_AND_PRIOR_DIRECTION_AGREEMENT_AND_C_GE_PRIOR_MEDIAN",
+      "direct_lifecycle_ns": 216100,
+      "emission_id": "6402b889e30f05bf25f984234f1edcc03c34f71791aa6f5fa67cf383ecf38e20",
+      "feedback_generated": [
+        "prior_decision",
+        "position_state"
+      ],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 257394470271200,
+      "lifecycle_start_ns": 257394470055100,
+      "mathematics": {
+        "C": 0.12387658403993605,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.4283225971039834,
+        "Q_S": 0.2892132819456702,
+        "dmo": {
+          "coherence": 0.12296453441363842,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664535900.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05333292032509547
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 1.954990969564585e-05
+          },
+          "persistence": 0.3255300285579625,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.044484340899046425,
+          "reversal_propensity": 0.6457403649373972,
+          "state_acceleration": 0.00010017110761252268,
+          "state_curvature": 0.00010017033849768236,
+          "state_hash": "53105EF4FE18D58E8EC0A53B904249C63DB4F7CC90CC9BBFE1295F9F83DF4A0A",
+          "state_level": -1.1948006630386097,
+          "state_support_ratio": 0.17442769407819492,
+          "state_velocity": 0.0022624558734827753,
+          "strength": 0.6043433885569666,
+          "trace_id": "SPY:47",
+          "uncertainty": 0.48213053638617
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 40.13875164432651,
+          "model_time": 1664535900.0,
+          "samples": [
+            {
+              "level": -1.1926046921288844,
+              "persistence": 0.31153984754914676,
+              "reversal_propensity": 0.6500380271441034,
+              "strength": 0.5783707511482257,
+              "tau": 0.9506089191617527,
+              "uncertainty": 0.4885770296962294,
+              "velocity": 0.0021652231624646992
+            },
+            {
+              "level": -1.1867626404769316,
+              "persistence": 0.2793569661708992,
+              "reversal_propensity": 0.6599243290379139,
+              "strength": 0.5186235392802001,
+              "tau": 3.310212520202334,
+              "uncertainty": 0.5034064825369451,
+              "velocity": 0.0019415499445979462
+            },
+            {
+              "level": -1.1769000826368357,
+              "persistence": 0.23700781948923158,
+              "reversal_propensity": 0.6729336194155994,
+              "strength": 0.4400027529844806,
+              "tau": 6.867839595519992,
+              "uncertainty": 0.5229204181034732,
+              "velocity": 0.0016472204903495728
+            },
+            {
+              "level": -1.1620669626841311,
+              "persistence": 0.19110100048145667,
+              "reversal_propensity": 0.6870357958603143,
+              "strength": 0.35477718199820774,
+              "tau": 11.526829496368098,
+              "uncertainty": 0.5440736827705457,
+              "velocity": 0.0013281649710872145
+            },
+            {
+              "level": -1.140971238778332,
+              "persistence": 0.14686465941053653,
+              "reversal_propensity": 0.7006248159783289,
+              "strength": 0.27265283734531054,
+              "tau": 17.22455031797682,
+              "uncertainty": 0.5644572129475676,
+              "velocity": 0.0010207193872784374
+            },
+            {
+              "level": -1.1120477770688864,
+              "persistence": 0.107806452530379,
+              "reversal_propensity": 0.7126231582059809,
+              "strength": 0.2001416493560572,
+              "tau": 23.915206514029418,
+              "uncertainty": 0.5824547262890455,
+              "velocity": 0.0007492621888283615
+            },
+            {
+              "level": -1.0734943570651758,
+              "persistence": 0.07571180857634396,
+              "reversal_propensity": 0.7224823543287497,
+              "strength": 0.14055824942323872,
+              "tau": 31.563005921992122,
+              "uncertainty": 0.5972435204731988,
+              "velocity": 0.0005262022270705911
+            },
+            {
+              "level": -1.0232947020527852,
+              "persistence": 0.05094010557728956,
+              "reversal_propensity": 0.7300920065346579,
+              "strength": 0.09456981942465349,
+              "tau": 40.13875164432651,
+              "uncertainty": 0.6086579987820611,
+              "velocity": 0.0003540372037864107
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.12296453441363842,
+          "current_level": -1.1948006630386097,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": -1.1926046921288844,
+              "persistence": 0.31153984754914676,
+              "reversal_propensity": 0.6500380271441034,
+              "strength": 0.5783707511482257,
+              "tau": 0.9506089191617527,
+              "uncertainty": 0.4885770296962294,
+              "velocity": 0.0021652231624646992
+            },
+            {
+              "level": -1.1867626404769316,
+              "persistence": 0.2793569661708992,
+              "reversal_propensity": 0.6599243290379139,
+              "strength": 0.5186235392802001,
+              "tau": 3.310212520202334,
+              "uncertainty": 0.5034064825369451,
+              "velocity": 0.0019415499445979462
+            },
+            {
+              "level": -1.1769000826368357,
+              "persistence": 0.23700781948923158,
+              "reversal_propensity": 0.6729336194155994,
+              "strength": 0.4400027529844806,
+              "tau": 6.867839595519992,
+              "uncertainty": 0.5229204181034732,
+              "velocity": 0.0016472204903495728
+            },
+            {
+              "level": -1.1620669626841311,
+              "persistence": 0.19110100048145667,
+              "reversal_propensity": 0.6870357958603143,
+              "strength": 0.35477718199820774,
+              "tau": 11.526829496368098,
+              "uncertainty": 0.5440736827705457,
+              "velocity": 0.0013281649710872145
+            },
+            {
+              "level": -1.140971238778332,
+              "persistence": 0.14686465941053653,
+              "reversal_propensity": 0.7006248159783289,
+              "strength": 0.27265283734531054,
+              "tau": 17.22455031797682,
+              "uncertainty": 0.5644572129475676,
+              "velocity": 0.0010207193872784374
+            },
+            {
+              "level": -1.1120477770688864,
+              "persistence": 0.107806452530379,
+              "reversal_propensity": 0.7126231582059809,
+              "strength": 0.2001416493560572,
+              "tau": 23.915206514029418,
+              "uncertainty": 0.5824547262890455,
+              "velocity": 0.0007492621888283615
+            },
+            {
+              "level": -1.0734943570651758,
+              "persistence": 0.07571180857634396,
+              "reversal_propensity": 0.7224823543287497,
+              "strength": 0.14055824942323872,
+              "tau": 31.563005921992122,
+              "uncertainty": 0.5972435204731988,
+              "velocity": 0.0005262022270705911
+            },
+            {
+              "level": -1.0232947020527852,
+              "persistence": 0.05094010557728956,
+              "reversal_propensity": 0.7300920065346579,
+              "strength": 0.09456981942465349,
+              "tau": 40.13875164432651,
+              "uncertainty": 0.6086579987820611,
+              "velocity": 0.0003540372037864107
+            }
+          ],
+          "maximum_absolute_displacement": 0.1715059609858245,
+          "model_time": 1664535900.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.3255300285579625,
+          "projection_interval": 40.13875164432651,
+          "reversal_propensity": 0.6457403649373972,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.17442769407819492,
+          "strength": 0.6043433885569666,
+          "terminal_decay_factor": 0.15648358402739299,
+          "terminal_displacement": 0.1715059609858245,
+          "uncertainty": 0.48213053638617
+        }
+      },
+      "observation_id": "07e345a294d8aa858588ccc5d1da1bba98e60089db4d41c476a7ca5b0d5af3d4",
+      "observation_index": 47,
+      "observation_timestamp": "2022-09-30T11:05:00Z",
+      "physical_row": 161,
+      "position_decision": "BUY",
+      "position_state_before": "SHORT",
+      "prior_context_ids": [
+        "57586461f457ffa2534a3d9a24e8b9fd6874540d4044cccca124de2b366fee80",
+        "4edc8595a8c782c360a069e95f1f92b92befdd866bc228b338d9c357a9ea6bda",
+        "80e090b6095f651730b427ea4691da5703cec2bc9f1eccd6df996165862092a8",
+        "2c53ef5b30f9991851f4420e48fdde29effcc03e9c7ce50c708451b4eef07e9b",
+        "2fa6f4fbfbf8b4fbf04e1822e723b778fcda6c1b66d7ed74f0fcc4bdf8f60e1f",
+        "8b9bd69364da8e0bc6669690a7e60be2a50a7d9e95596472e24b310f61af077e",
+        "9e5943ec8157d10d1c8c591ae53cd19221a288e9e590b5348d80b7de7fae31ce",
+        "7ce9d15570447c2c3a6d899cd28fa3a7c1f602acea32940206dbfe8c91683288",
+        "c5f45de3f3442adb1c01ccb6b22f0a96043bb13b59beff67f588b8d7a43943ea",
+        "937096d9a3191834ae59873abb78af5ef74adec40f7d3663b45490223ab17f2a",
+        "583d81df4bfd4cea5b1ac695ef72d4ea7896ff3522614f2d1adba43794bcb4ea",
+        "396dfdf36809100afd8ba24891aa6bfc81cd844123d31f2a93add09424733b4f",
+        "249c64e0648a3cdd2209089abdec6f4ef2913ba0664f04e60260befa317e8ed5",
+        "f5c39c9132305947bcb3d2140ab08b02bc11e3dc54d455e5f56590f9f67063f9",
+        "443f55111594a98b43b555333706ec06e26f8a8e0c2548b99833776113e5f08c"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "07e345a294d8aa858588ccc5d1da1bba98e60089db4d41c476a7ca5b0d5af3d4",
+      "state_after": {
+        "completed_count": 47,
+        "position_state": "LONG",
+        "previous_decision": "BUY"
+      },
+      "state_before": {
+        "completed_count": 46,
+        "context_ids": [
+          "57586461f457ffa2534a3d9a24e8b9fd6874540d4044cccca124de2b366fee80",
+          "4edc8595a8c782c360a069e95f1f92b92befdd866bc228b338d9c357a9ea6bda",
+          "80e090b6095f651730b427ea4691da5703cec2bc9f1eccd6df996165862092a8",
+          "2c53ef5b30f9991851f4420e48fdde29effcc03e9c7ce50c708451b4eef07e9b",
+          "2fa6f4fbfbf8b4fbf04e1822e723b778fcda6c1b66d7ed74f0fcc4bdf8f60e1f",
+          "8b9bd69364da8e0bc6669690a7e60be2a50a7d9e95596472e24b310f61af077e",
+          "9e5943ec8157d10d1c8c591ae53cd19221a288e9e590b5348d80b7de7fae31ce",
+          "7ce9d15570447c2c3a6d899cd28fa3a7c1f602acea32940206dbfe8c91683288",
+          "c5f45de3f3442adb1c01ccb6b22f0a96043bb13b59beff67f588b8d7a43943ea",
+          "937096d9a3191834ae59873abb78af5ef74adec40f7d3663b45490223ab17f2a",
+          "583d81df4bfd4cea5b1ac695ef72d4ea7896ff3522614f2d1adba43794bcb4ea",
+          "396dfdf36809100afd8ba24891aa6bfc81cd844123d31f2a93add09424733b4f",
+          "249c64e0648a3cdd2209089abdec6f4ef2913ba0664f04e60260befa317e8ed5",
+          "f5c39c9132305947bcb3d2140ab08b02bc11e3dc54d455e5f56590f9f67063f9",
+          "443f55111594a98b43b555333706ec06e26f8a8e0c2548b99833776113e5f08c"
+        ],
+        "d01_state_hash": "fd8b91a5215de3787a3131c37bcde0cfaed1824e1611ec150207dcf6fe44f699",
+        "position_state": "SHORT",
+        "previous_decision": "HOLD"
+      },
+      "status": "ACTIONABLE"
+    },
+    "HOLD": {
+      "adaptive_properties": {
+        "delta_C": -0.13743287982853403,
+        "direction_balance": -4,
+        "down_count": 9,
+        "flat_count": 1,
+        "prior_15_max_C": 0.3886402509284536,
+        "prior_15_median_C": 0.2786650400538378,
+        "prior_15_min_C": 0.0,
+        "prior_15_range_C": 0.3886402509284536,
+        "prior_C": 0.38574925689889744,
+        "up_count": 5
+      },
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "ADAPTIVE_DECISION": 8000,
+        "D01": 38100,
+        "D02": 23800,
+        "FOUR_FACTOR": 11400,
+        "SOURCE_ADMISSION": 3800
+      },
+      "context_end_timestamp": "2022-09-30T10:30:00Z",
+      "context_start_timestamp": "2022-09-30T10:16:00Z",
+      "decision_rule_path": "AFFIRM_POSITION_STATE_TRANSITION_PREDICATE_NOT_SATISFIED",
+      "direct_lifecycle_ns": 225600,
+      "emission_id": "f59a3aa33cb978726cbb5a7ed115c3f2a23dd5ec8a7ec1a428b708d6e8e1c38e",
+      "feedback_generated": [
+        "prior_decision",
+        "position_state"
+      ],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 257394451862100,
+      "lifecycle_start_ns": 257394451636500,
+      "mathematics": {
+        "C": 0.24831637707036341,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.6026230554443315,
+        "Q_S": 0.41205920488268166,
+        "dmo": {
+          "coherence": 0.23070647536700276,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664533860.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.0518583082654568
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 2.4940617119446895e-05
+          },
+          "persistence": 0.5266617509301641,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.017556040328659296,
+          "reversal_propensity": 0.3671367852982499,
+          "state_acceleration": -3.844960718048638e-05,
+          "state_curvature": -3.8448064141906076e-05,
+          "state_hash": "F843A6E2EE38318C01F77CAF02BE1DBBDE97A91262E54FBC016C35F2EAF83C22",
+          "state_level": -0.34220063309362364,
+          "state_support_ratio": 0.3822757404776684,
+          "state_velocity": -0.005172542544208495,
+          "strength": 0.5758207324269023,
+          "trace_id": "SPY:16",
+          "uncertainty": 0.4261721355945678
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 48.08008279969,
+          "model_time": 1664533860.0,
+          "samples": [
+            {
+              "level": -0.3481154515969677,
+              "persistence": 0.4996661265924944,
+              "reversal_propensity": 0.372262584597324,
+              "strength": 0.5463053173602409,
+              "tau": 1.1386840315419027,
+              "uncertainty": 0.4338608345431789,
+              "velocity": -0.004907408394733147
+            },
+            {
+              "level": -0.36301268387803837,
+              "persistence": 0.4384872256292826,
+              "reversal_propensity": 0.38387894003896383,
+              "strength": 0.479415934374878,
+              "tau": 3.9651281003004195,
+              "uncertainty": 0.4512853677056387,
+              "velocity": -0.004306547467427847
+            },
+            {
+              "level": -0.3860542627710106,
+              "persistence": 0.36010940729143215,
+              "reversal_propensity": 0.39876094318413685,
+              "strength": 0.3937222748645479,
+              "tau": 8.226620980482444,
+              "uncertainty": 0.47360837242339826,
+              "velocity": -0.003536769523313325
+            },
+            {
+              "level": -0.417284970694098,
+              "persistence": 0.27825060411922836,
+              "reversal_propensity": 0.4143038989859639,
+              "strength": 0.3042227129256778,
+              "tau": 13.807378005031282,
+              "uncertainty": 0.4969228061261388,
+              "velocity": -0.0027328035218362992
+            },
+            {
+              "level": -0.4571063757626103,
+              "persistence": 0.2029866673925979,
+              "reversal_propensity": 0.4285946532687086,
+              "strength": 0.22193358694544857,
+              "tau": 20.632375735402565,
+              "uncertainty": 0.5183589375502557,
+              "velocity": -0.001993608176673034
+            },
+            {
+              "level": -0.5061537885401974,
+              "persistence": 0.14016176161235033,
+              "reversal_propensity": 0.4405235441876503,
+              "strength": 0.15324455988559235,
+              "tau": 28.64675811433082,
+              "uncertainty": 0.5362522739286684,
+              "velocity": -0.0013765812188385519
+            },
+            {
+              "level": -0.5652426098280021,
+              "persistence": 0.09178730784217817,
+              "reversal_propensity": 0.44970865278624045,
+              "strength": 0.10035480027898393,
+              "tau": 37.807651607694886,
+              "uncertainty": 0.5500299368265535,
+              "velocity": -0.0009014775688447216
+            },
+            {
+              "level": -0.6353387769746913,
+              "persistence": 0.05709901777753435,
+              "reversal_propensity": 0.4562950984514855,
+              "strength": 0.06242868060846954,
+              "tau": 48.08008279969,
+              "uncertainty": 0.5599096053244212,
+              "velocity": -0.0005607908646587418
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.23070647536700276,
+          "current_level": -0.34220063309362364,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": -0.3481154515969677,
+              "persistence": 0.4996661265924944,
+              "reversal_propensity": 0.372262584597324,
+              "strength": 0.5463053173602409,
+              "tau": 1.1386840315419027,
+              "uncertainty": 0.4338608345431789,
+              "velocity": -0.004907408394733147
+            },
+            {
+              "level": -0.36301268387803837,
+              "persistence": 0.4384872256292826,
+              "reversal_propensity": 0.38387894003896383,
+              "strength": 0.479415934374878,
+              "tau": 3.9651281003004195,
+              "uncertainty": 0.4512853677056387,
+              "velocity": -0.004306547467427847
+            },
+            {
+              "level": -0.3860542627710106,
+              "persistence": 0.36010940729143215,
+              "reversal_propensity": 0.39876094318413685,
+              "strength": 0.3937222748645479,
+              "tau": 8.226620980482444,
+              "uncertainty": 0.47360837242339826,
+              "velocity": -0.003536769523313325
+            },
+            {
+              "level": -0.417284970694098,
+              "persistence": 0.27825060411922836,
+              "reversal_propensity": 0.4143038989859639,
+              "strength": 0.3042227129256778,
+              "tau": 13.807378005031282,
+              "uncertainty": 0.4969228061261388,
+              "velocity": -0.0027328035218362992
+            },
+            {
+              "level": -0.4571063757626103,
+              "persistence": 0.2029866673925979,
+              "reversal_propensity": 0.4285946532687086,
+              "strength": 0.22193358694544857,
+              "tau": 20.632375735402565,
+              "uncertainty": 0.5183589375502557,
+              "velocity": -0.001993608176673034
+            },
+            {
+              "level": -0.5061537885401974,
+              "persistence": 0.14016176161235033,
+              "reversal_propensity": 0.4405235441876503,
+              "strength": 0.15324455988559235,
+              "tau": 28.64675811433082,
+              "uncertainty": 0.5362522739286684,
+              "velocity": -0.0013765812188385519
+            },
+            {
+              "level": -0.5652426098280021,
+              "persistence": 0.09178730784217817,
+              "reversal_propensity": 0.44970865278624045,
+              "strength": 0.10035480027898393,
+              "tau": 37.807651607694886,
+              "uncertainty": 0.5500299368265535,
+              "velocity": -0.0009014775688447216
+            },
+            {
+              "level": -0.6353387769746913,
+              "persistence": 0.05709901777753435,
+              "reversal_propensity": 0.4562950984514855,
+              "strength": 0.06242868060846954,
+              "tau": 48.08008279969,
+              "uncertainty": 0.5599096053244212,
+              "velocity": -0.0005607908646587418
+            }
+          ],
+          "maximum_absolute_displacement": 0.2931381438810677,
+          "model_time": 1664533860.0,
+          "path_direction": "DOWNWARD",
+          "persistence": 0.5266617509301641,
+          "projection_interval": 48.08008279969,
+          "reversal_propensity": 0.3671367852982499,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.3822757404776684,
+          "strength": 0.5758207324269023,
+          "terminal_decay_factor": 0.10841686846764337,
+          "terminal_displacement": -0.2931381438810677,
+          "uncertainty": 0.4261721355945678
+        }
+      },
+      "observation_id": "bbc37c73d7adeea5c774551a1147e8ecb34725d99be2e722001874ebf09ddaae",
+      "observation_index": 16,
+      "observation_timestamp": "2022-09-30T10:31:00Z",
+      "physical_row": 130,
+      "position_decision": "HOLD",
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "1ee230b58e320eb1f5987faa18110b95fc0cb23933e5617971e20f7c96a9bc27",
+        "eff1cbff835cbd48c66fb3083d456a8c5bea0b3508b0ee340ca13057f15a5edd",
+        "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+        "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+        "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+        "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+        "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+        "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+        "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+        "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+        "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+        "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+        "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+        "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+        "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "bbc37c73d7adeea5c774551a1147e8ecb34725d99be2e722001874ebf09ddaae",
+      "state_after": {
+        "completed_count": 16,
+        "position_state": "FLAT",
+        "previous_decision": "HOLD"
+      },
+      "state_before": {
+        "completed_count": 15,
+        "context_ids": [
+          "1ee230b58e320eb1f5987faa18110b95fc0cb23933e5617971e20f7c96a9bc27",
+          "eff1cbff835cbd48c66fb3083d456a8c5bea0b3508b0ee340ca13057f15a5edd",
+          "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+          "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+          "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+          "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+          "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+          "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+          "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+          "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+          "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+          "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+          "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+          "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+          "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1"
+        ],
+        "d01_state_hash": "f51e25b31841c3d39bb1b9ec3c0ec238e4203b0f30a4b315d88d7e0b11cb4eb9",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "ACTIONABLE"
+    },
+    "SELL": {
+      "adaptive_properties": {
+        "delta_C": 0.08334331266132605,
+        "direction_balance": -3,
+        "down_count": 9,
+        "flat_count": 0,
+        "prior_15_max_C": 0.3886402509284536,
+        "prior_15_median_C": 0.27331608158163456,
+        "prior_15_min_C": 0.01789468411221759,
+        "prior_15_range_C": 0.37074556681623605,
+        "prior_C": 0.22367626737560747,
+        "up_count": 6
+      },
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "ADAPTIVE_DECISION": 5900,
+        "D01": 39200,
+        "D02": 23600,
+        "FOUR_FACTOR": 11600,
+        "SOURCE_ADMISSION": 3900
+      },
+      "context_end_timestamp": "2022-09-30T10:32:00Z",
+      "context_start_timestamp": "2022-09-30T10:18:00Z",
+      "decision_rule_path": "DOWNWARD_AND_PRIOR_DIRECTION_AGREEMENT_AND_C_GE_PRIOR_MEDIAN",
+      "direct_lifecycle_ns": 222800,
+      "emission_id": "28b8bb52911212e1493901b0df72b1e70867ae69b2210fd660502f5ea9c90bcc",
+      "feedback_generated": [
+        "prior_decision",
+        "position_state"
+      ],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 257394453053100,
+      "lifecycle_start_ns": 257394452830300,
+      "mathematics": {
+        "C": 0.3070195800369335,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5079620693347965,
+        "Q_S": 0.6044143816466299,
+        "dmo": {
+          "coherence": 0.5864946536629158,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664534040.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05195881479294211
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 7.635388315321151e-05
+          },
+          "persistence": 0.537062915358768,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.015663039815842494,
+          "reversal_propensity": 0.5954885237658134,
+          "state_acceleration": -1.210487726619486e-05,
+          "state_curvature": -1.2104876820303555e-05,
+          "state_hash": "0FAF3DFB8DF952E91EE931120ADA6AE6AF587973CD468005AB8E91557E9B1B4B",
+          "state_level": -0.22683823805557157,
+          "state_support_ratio": 0.39314021283836725,
+          "state_velocity": 0.00015670710386958978,
+          "strength": 0.7009953644467503,
+          "trace_id": "SPY:18",
+          "uncertainty": 0.36213067108754143
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 55.38711349459146,
+          "model_time": 1664534040.0,
+          "samples": [
+            {
+              "level": -0.2266430937072598,
+              "persistence": 0.5054757828833651,
+              "reversal_propensity": 0.6013699822638932,
+              "strength": 0.659766613013352,
+              "tau": 1.3117369608584983,
+              "uncertainty": 0.370952858834661,
+              "velocity": 0.00014749044059195722
+            },
+            {
+              "level": -0.22624872100314145,
+              "persistence": 0.43486739545462166,
+              "reversal_propensity": 0.6145171174336294,
+              "strength": 0.5676058049159525,
+              "tau": 4.567733400686847,
+              "uncertainty": 0.3906735615892654,
+              "velocity": 0.0001268879458256432
+            },
+            {
+              "level": -0.2258967210800617,
+              "persistence": 0.346606723363038,
+              "reversal_propensity": 0.6309510713648226,
+              "strength": 0.45240454966297283,
+              "tau": 9.476871989203525,
+              "uncertainty": 0.41532449248605535,
+              "velocity": 0.00010113477256880758
+            },
+            {
+              "level": -0.22587691870931953,
+              "persistence": 0.25752390102205547,
+              "reversal_propensity": 0.6475381079658276,
+              "strength": 0.3361301919908431,
+              "tau": 15.90577153981782,
+              "uncertainty": 0.4402050473875626,
+              "velocity": 7.514170789358406e-05
+            },
+            {
+              "level": -0.2265327549684516,
+              "persistence": 0.17907417763619365,
+              "reversal_propensity": 0.6621452836136669,
+              "strength": 0.23373456782289498,
+              "tau": 23.768006833115624,
+              "uncertainty": 0.4621158108593216,
+              "velocity": 5.2251225978711084e-05
+            },
+            {
+              "level": -0.22825810275897623,
+              "persistence": 0.11688302644702973,
+              "reversal_propensity": 0.6737251468681645,
+              "strength": 0.15256026319959368,
+              "tau": 33.00038499394556,
+              "uncertainty": 0.4794856057410681,
+              "velocity": 3.410475764052895e-05
+            },
+            {
+              "level": -0.23149401680810466,
+              "persistence": 0.07177350715533576,
+              "reversal_propensity": 0.6821244457215512,
+              "strength": 0.09368156759132415,
+              "tau": 43.55351672923641,
+              "uncertainty": 0.4920845540211481,
+              "velocity": 2.0942459662035052e-05
+            },
+            {
+              "level": -0.23672594564639898,
+              "persistence": 0.041541259766951645,
+              "reversal_propensity": 0.6877536274289101,
+              "strength": 0.05422126476645392,
+              "tau": 55.38711349459146,
+              "uncertainty": 0.5005283265821864,
+              "velocity": 1.2121132036876215e-05
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.5864946536629158,
+          "current_level": -0.22683823805557157,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": -0.2266430937072598,
+              "persistence": 0.5054757828833651,
+              "reversal_propensity": 0.6013699822638932,
+              "strength": 0.659766613013352,
+              "tau": 1.3117369608584983,
+              "uncertainty": 0.370952858834661,
+              "velocity": 0.00014749044059195722
+            },
+            {
+              "level": -0.22624872100314145,
+              "persistence": 0.43486739545462166,
+              "reversal_propensity": 0.6145171174336294,
+              "strength": 0.5676058049159525,
+              "tau": 4.567733400686847,
+              "uncertainty": 0.3906735615892654,
+              "velocity": 0.0001268879458256432
+            },
+            {
+              "level": -0.2258967210800617,
+              "persistence": 0.346606723363038,
+              "reversal_propensity": 0.6309510713648226,
+              "strength": 0.45240454966297283,
+              "tau": 9.476871989203525,
+              "uncertainty": 0.41532449248605535,
+              "velocity": 0.00010113477256880758
+            },
+            {
+              "level": -0.22587691870931953,
+              "persistence": 0.25752390102205547,
+              "reversal_propensity": 0.6475381079658276,
+              "strength": 0.3361301919908431,
+              "tau": 15.90577153981782,
+              "uncertainty": 0.4402050473875626,
+              "velocity": 7.514170789358406e-05
+            },
+            {
+              "level": -0.2265327549684516,
+              "persistence": 0.17907417763619365,
+              "reversal_propensity": 0.6621452836136669,
+              "strength": 0.23373456782289498,
+              "tau": 23.768006833115624,
+              "uncertainty": 0.4621158108593216,
+              "velocity": 5.2251225978711084e-05
+            },
+            {
+              "level": -0.22825810275897623,
+              "persistence": 0.11688302644702973,
+              "reversal_propensity": 0.6737251468681645,
+              "strength": 0.15256026319959368,
+              "tau": 33.00038499394556,
+              "uncertainty": 0.4794856057410681,
+              "velocity": 3.410475764052895e-05
+            },
+            {
+              "level": -0.23149401680810466,
+              "persistence": 0.07177350715533576,
+              "reversal_propensity": 0.6821244457215512,
+              "strength": 0.09368156759132415,
+              "tau": 43.55351672923641,
+              "uncertainty": 0.4920845540211481,
+              "velocity": 2.0942459662035052e-05
+            },
+            {
+              "level": -0.23672594564639898,
+              "persistence": 0.041541259766951645,
+              "reversal_propensity": 0.6877536274289101,
+              "strength": 0.05422126476645392,
+              "tau": 55.38711349459146,
+              "uncertainty": 0.5005283265821864,
+              "velocity": 1.2121132036876215e-05
+            }
+          ],
+          "maximum_absolute_displacement": 0.00988770759082741,
+          "model_time": 1664534040.0,
+          "path_direction": "DOWNWARD",
+          "persistence": 0.537062915358768,
+          "projection_interval": 55.38711349459146,
+          "reversal_propensity": 0.5954885237658134,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.39314021283836725,
+          "strength": 0.7009953644467503,
+          "terminal_decay_factor": 0.07734896336903342,
+          "terminal_displacement": -0.00988770759082741,
+          "uncertainty": 0.36213067108754143
+        }
+      },
+      "observation_id": "c1ef355889ac8ab31e8ac03b48fb0cdc81c146479cfdea231a5bfd4aa4244f0c",
+      "observation_index": 18,
+      "observation_timestamp": "2022-09-30T10:34:00Z",
+      "physical_row": 132,
+      "position_decision": "SELL",
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+        "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+        "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+        "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+        "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+        "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+        "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+        "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+        "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+        "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+        "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+        "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+        "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1",
+        "bbc37c73d7adeea5c774551a1147e8ecb34725d99be2e722001874ebf09ddaae",
+        "be83bb6e24450ba83582695092faa83160ab7418eb12e76c9b43d8954bb876c4"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 120.0,
+      "source_fingerprint": "c1ef355889ac8ab31e8ac03b48fb0cdc81c146479cfdea231a5bfd4aa4244f0c",
+      "state_after": {
+        "completed_count": 18,
+        "position_state": "SHORT",
+        "previous_decision": "SELL"
+      },
+      "state_before": {
+        "completed_count": 17,
+        "context_ids": [
+          "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+          "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+          "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+          "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+          "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+          "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+          "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+          "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+          "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+          "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+          "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+          "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+          "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1",
+          "bbc37c73d7adeea5c774551a1147e8ecb34725d99be2e722001874ebf09ddaae",
+          "be83bb6e24450ba83582695092faa83160ab7418eb12e76c9b43d8954bb876c4"
+        ],
+        "d01_state_hash": "e47caffad1132653686ea4fa95d9aeac39561d0b0f47990f7866210b26767ca1",
+        "position_state": "FLAT",
+        "previous_decision": "HOLD"
+      },
+      "status": "ACTIONABLE"
+    }
+  },
+  "longest_runs": {
+    "BUY": {
+      "decision": "BUY",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 104,
+      "end_timestamp": "2022-09-30T12:02:00Z",
+      "observation_count": 5,
+      "start_observation": 100,
+      "start_timestamp": "2022-09-30T11:58:00Z"
+    },
+    "HOLD": {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 1200.0,
+      "end_observation": 722,
+      "end_timestamp": "2022-09-30T22:28:00Z",
+      "observation_count": 19,
+      "start_observation": 704,
+      "start_timestamp": "2022-09-30T22:08:00Z"
+    },
+    "SELL": {
+      "decision": "SELL",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 198,
+      "end_timestamp": "2022-09-30T13:36:00Z",
+      "observation_count": 3,
+      "start_observation": 196,
+      "start_timestamp": "2022-09-30T13:34:00Z"
+    }
+  },
+  "non_degenerate": true,
+  "percentages": {
+    "BUY": 13.2994923857868,
+    "HOLD": 76.34517766497461,
+    "SELL": 10.355329949238579
+  },
+  "runs": [
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 17,
+      "end_timestamp": "2022-09-30T10:32:00Z",
+      "observation_count": 2,
+      "start_observation": 16,
+      "start_timestamp": "2022-09-30T10:31:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 18,
+      "end_timestamp": "2022-09-30T10:34:00Z",
+      "observation_count": 1,
+      "start_observation": 18,
+      "start_timestamp": "2022-09-30T10:34:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 19,
+      "end_timestamp": "2022-09-30T10:35:00Z",
+      "observation_count": 1,
+      "start_observation": 19,
+      "start_timestamp": "2022-09-30T10:35:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 21,
+      "end_timestamp": "2022-09-30T10:38:00Z",
+      "observation_count": 2,
+      "start_observation": 20,
+      "start_timestamp": "2022-09-30T10:37:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 600.0,
+      "end_observation": 32,
+      "end_timestamp": "2022-09-30T10:49:00Z",
+      "observation_count": 11,
+      "start_observation": 22,
+      "start_timestamp": "2022-09-30T10:39:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 33,
+      "end_timestamp": "2022-09-30T10:50:00Z",
+      "observation_count": 1,
+      "start_observation": 33,
+      "start_timestamp": "2022-09-30T10:50:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 780.0,
+      "end_observation": 46,
+      "end_timestamp": "2022-09-30T11:04:00Z",
+      "observation_count": 13,
+      "start_observation": 34,
+      "start_timestamp": "2022-09-30T10:51:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 47,
+      "end_timestamp": "2022-09-30T11:05:00Z",
+      "observation_count": 1,
+      "start_observation": 47,
+      "start_timestamp": "2022-09-30T11:05:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 50,
+      "end_timestamp": "2022-09-30T11:08:00Z",
+      "observation_count": 3,
+      "start_observation": 48,
+      "start_timestamp": "2022-09-30T11:06:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 51,
+      "end_timestamp": "2022-09-30T11:09:00Z",
+      "observation_count": 1,
+      "start_observation": 51,
+      "start_timestamp": "2022-09-30T11:09:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 53,
+      "end_timestamp": "2022-09-30T11:11:00Z",
+      "observation_count": 2,
+      "start_observation": 52,
+      "start_timestamp": "2022-09-30T11:10:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 54,
+      "end_timestamp": "2022-09-30T11:12:00Z",
+      "observation_count": 1,
+      "start_observation": 54,
+      "start_timestamp": "2022-09-30T11:12:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 480.0,
+      "end_observation": 63,
+      "end_timestamp": "2022-09-30T11:21:00Z",
+      "observation_count": 9,
+      "start_observation": 55,
+      "start_timestamp": "2022-09-30T11:13:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 64,
+      "end_timestamp": "2022-09-30T11:22:00Z",
+      "observation_count": 1,
+      "start_observation": 64,
+      "start_timestamp": "2022-09-30T11:22:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 67,
+      "end_timestamp": "2022-09-30T11:25:00Z",
+      "observation_count": 3,
+      "start_observation": 65,
+      "start_timestamp": "2022-09-30T11:23:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 68,
+      "end_timestamp": "2022-09-30T11:26:00Z",
+      "observation_count": 1,
+      "start_observation": 68,
+      "start_timestamp": "2022-09-30T11:26:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 70,
+      "end_timestamp": "2022-09-30T11:28:00Z",
+      "observation_count": 2,
+      "start_observation": 69,
+      "start_timestamp": "2022-09-30T11:27:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 71,
+      "end_timestamp": "2022-09-30T11:29:00Z",
+      "observation_count": 1,
+      "start_observation": 71,
+      "start_timestamp": "2022-09-30T11:29:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 840.0,
+      "end_observation": 86,
+      "end_timestamp": "2022-09-30T11:44:00Z",
+      "observation_count": 15,
+      "start_observation": 72,
+      "start_timestamp": "2022-09-30T11:30:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 87,
+      "end_timestamp": "2022-09-30T11:45:00Z",
+      "observation_count": 1,
+      "start_observation": 87,
+      "start_timestamp": "2022-09-30T11:45:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 92,
+      "end_timestamp": "2022-09-30T11:50:00Z",
+      "observation_count": 5,
+      "start_observation": 88,
+      "start_timestamp": "2022-09-30T11:46:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 93,
+      "end_timestamp": "2022-09-30T11:51:00Z",
+      "observation_count": 1,
+      "start_observation": 93,
+      "start_timestamp": "2022-09-30T11:51:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 97,
+      "end_timestamp": "2022-09-30T11:55:00Z",
+      "observation_count": 4,
+      "start_observation": 94,
+      "start_timestamp": "2022-09-30T11:52:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 98,
+      "end_timestamp": "2022-09-30T11:56:00Z",
+      "observation_count": 1,
+      "start_observation": 98,
+      "start_timestamp": "2022-09-30T11:56:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 99,
+      "end_timestamp": "2022-09-30T11:57:00Z",
+      "observation_count": 1,
+      "start_observation": 99,
+      "start_timestamp": "2022-09-30T11:57:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 104,
+      "end_timestamp": "2022-09-30T12:02:00Z",
+      "observation_count": 5,
+      "start_observation": 100,
+      "start_timestamp": "2022-09-30T11:58:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 110,
+      "end_timestamp": "2022-09-30T12:08:00Z",
+      "observation_count": 6,
+      "start_observation": 105,
+      "start_timestamp": "2022-09-30T12:03:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 112,
+      "end_timestamp": "2022-09-30T12:10:00Z",
+      "observation_count": 2,
+      "start_observation": 111,
+      "start_timestamp": "2022-09-30T12:09:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 540.0,
+      "end_observation": 122,
+      "end_timestamp": "2022-09-30T12:20:00Z",
+      "observation_count": 10,
+      "start_observation": 113,
+      "start_timestamp": "2022-09-30T12:11:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 123,
+      "end_timestamp": "2022-09-30T12:21:00Z",
+      "observation_count": 1,
+      "start_observation": 123,
+      "start_timestamp": "2022-09-30T12:21:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 124,
+      "end_timestamp": "2022-09-30T12:22:00Z",
+      "observation_count": 1,
+      "start_observation": 124,
+      "start_timestamp": "2022-09-30T12:22:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 125,
+      "end_timestamp": "2022-09-30T12:23:00Z",
+      "observation_count": 1,
+      "start_observation": 125,
+      "start_timestamp": "2022-09-30T12:23:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 720.0,
+      "end_observation": 138,
+      "end_timestamp": "2022-09-30T12:36:00Z",
+      "observation_count": 13,
+      "start_observation": 126,
+      "start_timestamp": "2022-09-30T12:24:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 139,
+      "end_timestamp": "2022-09-30T12:37:00Z",
+      "observation_count": 1,
+      "start_observation": 139,
+      "start_timestamp": "2022-09-30T12:37:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 142,
+      "end_timestamp": "2022-09-30T12:40:00Z",
+      "observation_count": 3,
+      "start_observation": 140,
+      "start_timestamp": "2022-09-30T12:38:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 144,
+      "end_timestamp": "2022-09-30T12:42:00Z",
+      "observation_count": 2,
+      "start_observation": 143,
+      "start_timestamp": "2022-09-30T12:41:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 146,
+      "end_timestamp": "2022-09-30T12:44:00Z",
+      "observation_count": 2,
+      "start_observation": 145,
+      "start_timestamp": "2022-09-30T12:43:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 147,
+      "end_timestamp": "2022-09-30T12:45:00Z",
+      "observation_count": 1,
+      "start_observation": 147,
+      "start_timestamp": "2022-09-30T12:45:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 154,
+      "end_timestamp": "2022-09-30T12:52:00Z",
+      "observation_count": 7,
+      "start_observation": 148,
+      "start_timestamp": "2022-09-30T12:46:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 155,
+      "end_timestamp": "2022-09-30T12:53:00Z",
+      "observation_count": 1,
+      "start_observation": 155,
+      "start_timestamp": "2022-09-30T12:53:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 158,
+      "end_timestamp": "2022-09-30T12:56:00Z",
+      "observation_count": 3,
+      "start_observation": 156,
+      "start_timestamp": "2022-09-30T12:54:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 160,
+      "end_timestamp": "2022-09-30T12:58:00Z",
+      "observation_count": 2,
+      "start_observation": 159,
+      "start_timestamp": "2022-09-30T12:57:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 660.0,
+      "end_observation": 172,
+      "end_timestamp": "2022-09-30T13:10:00Z",
+      "observation_count": 12,
+      "start_observation": 161,
+      "start_timestamp": "2022-09-30T12:59:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 173,
+      "end_timestamp": "2022-09-30T13:11:00Z",
+      "observation_count": 1,
+      "start_observation": 173,
+      "start_timestamp": "2022-09-30T13:11:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 1020.0,
+      "end_observation": 191,
+      "end_timestamp": "2022-09-30T13:29:00Z",
+      "observation_count": 18,
+      "start_observation": 174,
+      "start_timestamp": "2022-09-30T13:12:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 192,
+      "end_timestamp": "2022-09-30T13:30:00Z",
+      "observation_count": 1,
+      "start_observation": 192,
+      "start_timestamp": "2022-09-30T13:30:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 195,
+      "end_timestamp": "2022-09-30T13:33:00Z",
+      "observation_count": 3,
+      "start_observation": 193,
+      "start_timestamp": "2022-09-30T13:31:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 198,
+      "end_timestamp": "2022-09-30T13:36:00Z",
+      "observation_count": 3,
+      "start_observation": 196,
+      "start_timestamp": "2022-09-30T13:34:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 199,
+      "end_timestamp": "2022-09-30T13:37:00Z",
+      "observation_count": 1,
+      "start_observation": 199,
+      "start_timestamp": "2022-09-30T13:37:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 200,
+      "end_timestamp": "2022-09-30T13:38:00Z",
+      "observation_count": 1,
+      "start_observation": 200,
+      "start_timestamp": "2022-09-30T13:38:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 201,
+      "end_timestamp": "2022-09-30T13:39:00Z",
+      "observation_count": 1,
+      "start_observation": 201,
+      "start_timestamp": "2022-09-30T13:39:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 202,
+      "end_timestamp": "2022-09-30T13:40:00Z",
+      "observation_count": 1,
+      "start_observation": 202,
+      "start_timestamp": "2022-09-30T13:40:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 204,
+      "end_timestamp": "2022-09-30T13:42:00Z",
+      "observation_count": 2,
+      "start_observation": 203,
+      "start_timestamp": "2022-09-30T13:41:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 206,
+      "end_timestamp": "2022-09-30T13:44:00Z",
+      "observation_count": 2,
+      "start_observation": 205,
+      "start_timestamp": "2022-09-30T13:43:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 213,
+      "end_timestamp": "2022-09-30T13:51:00Z",
+      "observation_count": 7,
+      "start_observation": 207,
+      "start_timestamp": "2022-09-30T13:45:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 215,
+      "end_timestamp": "2022-09-30T13:53:00Z",
+      "observation_count": 2,
+      "start_observation": 214,
+      "start_timestamp": "2022-09-30T13:52:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 216,
+      "end_timestamp": "2022-09-30T13:54:00Z",
+      "observation_count": 1,
+      "start_observation": 216,
+      "start_timestamp": "2022-09-30T13:54:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 217,
+      "end_timestamp": "2022-09-30T13:55:00Z",
+      "observation_count": 1,
+      "start_observation": 217,
+      "start_timestamp": "2022-09-30T13:55:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 219,
+      "end_timestamp": "2022-09-30T13:57:00Z",
+      "observation_count": 2,
+      "start_observation": 218,
+      "start_timestamp": "2022-09-30T13:56:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 220,
+      "end_timestamp": "2022-09-30T13:58:00Z",
+      "observation_count": 1,
+      "start_observation": 220,
+      "start_timestamp": "2022-09-30T13:58:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 222,
+      "end_timestamp": "2022-09-30T14:00:00Z",
+      "observation_count": 2,
+      "start_observation": 221,
+      "start_timestamp": "2022-09-30T13:59:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 223,
+      "end_timestamp": "2022-09-30T14:01:00Z",
+      "observation_count": 1,
+      "start_observation": 223,
+      "start_timestamp": "2022-09-30T14:01:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 960.0,
+      "end_observation": 240,
+      "end_timestamp": "2022-09-30T14:18:00Z",
+      "observation_count": 17,
+      "start_observation": 224,
+      "start_timestamp": "2022-09-30T14:02:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 241,
+      "end_timestamp": "2022-09-30T14:19:00Z",
+      "observation_count": 1,
+      "start_observation": 241,
+      "start_timestamp": "2022-09-30T14:19:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 246,
+      "end_timestamp": "2022-09-30T14:24:00Z",
+      "observation_count": 5,
+      "start_observation": 242,
+      "start_timestamp": "2022-09-30T14:20:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 247,
+      "end_timestamp": "2022-09-30T14:25:00Z",
+      "observation_count": 1,
+      "start_observation": 247,
+      "start_timestamp": "2022-09-30T14:25:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 253,
+      "end_timestamp": "2022-09-30T14:31:00Z",
+      "observation_count": 6,
+      "start_observation": 248,
+      "start_timestamp": "2022-09-30T14:26:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 254,
+      "end_timestamp": "2022-09-30T14:32:00Z",
+      "observation_count": 1,
+      "start_observation": 254,
+      "start_timestamp": "2022-09-30T14:32:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 256,
+      "end_timestamp": "2022-09-30T14:34:00Z",
+      "observation_count": 2,
+      "start_observation": 255,
+      "start_timestamp": "2022-09-30T14:33:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 257,
+      "end_timestamp": "2022-09-30T14:35:00Z",
+      "observation_count": 1,
+      "start_observation": 257,
+      "start_timestamp": "2022-09-30T14:35:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 258,
+      "end_timestamp": "2022-09-30T14:36:00Z",
+      "observation_count": 1,
+      "start_observation": 258,
+      "start_timestamp": "2022-09-30T14:36:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 259,
+      "end_timestamp": "2022-09-30T14:37:00Z",
+      "observation_count": 1,
+      "start_observation": 259,
+      "start_timestamp": "2022-09-30T14:37:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 260,
+      "end_timestamp": "2022-09-30T14:38:00Z",
+      "observation_count": 1,
+      "start_observation": 260,
+      "start_timestamp": "2022-09-30T14:38:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 261,
+      "end_timestamp": "2022-09-30T14:39:00Z",
+      "observation_count": 1,
+      "start_observation": 261,
+      "start_timestamp": "2022-09-30T14:39:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 262,
+      "end_timestamp": "2022-09-30T14:40:00Z",
+      "observation_count": 1,
+      "start_observation": 262,
+      "start_timestamp": "2022-09-30T14:40:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 263,
+      "end_timestamp": "2022-09-30T14:41:00Z",
+      "observation_count": 1,
+      "start_observation": 263,
+      "start_timestamp": "2022-09-30T14:41:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 266,
+      "end_timestamp": "2022-09-30T14:44:00Z",
+      "observation_count": 3,
+      "start_observation": 264,
+      "start_timestamp": "2022-09-30T14:42:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 269,
+      "end_timestamp": "2022-09-30T14:47:00Z",
+      "observation_count": 3,
+      "start_observation": 267,
+      "start_timestamp": "2022-09-30T14:45:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 276,
+      "end_timestamp": "2022-09-30T14:54:00Z",
+      "observation_count": 7,
+      "start_observation": 270,
+      "start_timestamp": "2022-09-30T14:48:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 278,
+      "end_timestamp": "2022-09-30T14:56:00Z",
+      "observation_count": 2,
+      "start_observation": 277,
+      "start_timestamp": "2022-09-30T14:55:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 840.0,
+      "end_observation": 293,
+      "end_timestamp": "2022-09-30T15:11:00Z",
+      "observation_count": 15,
+      "start_observation": 279,
+      "start_timestamp": "2022-09-30T14:57:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 294,
+      "end_timestamp": "2022-09-30T15:12:00Z",
+      "observation_count": 1,
+      "start_observation": 294,
+      "start_timestamp": "2022-09-30T15:12:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 295,
+      "end_timestamp": "2022-09-30T15:13:00Z",
+      "observation_count": 1,
+      "start_observation": 295,
+      "start_timestamp": "2022-09-30T15:13:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 297,
+      "end_timestamp": "2022-09-30T15:15:00Z",
+      "observation_count": 2,
+      "start_observation": 296,
+      "start_timestamp": "2022-09-30T15:14:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 780.0,
+      "end_observation": 311,
+      "end_timestamp": "2022-09-30T15:29:00Z",
+      "observation_count": 14,
+      "start_observation": 298,
+      "start_timestamp": "2022-09-30T15:16:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 312,
+      "end_timestamp": "2022-09-30T15:30:00Z",
+      "observation_count": 1,
+      "start_observation": 312,
+      "start_timestamp": "2022-09-30T15:30:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 1020.0,
+      "end_observation": 330,
+      "end_timestamp": "2022-09-30T15:48:00Z",
+      "observation_count": 18,
+      "start_observation": 313,
+      "start_timestamp": "2022-09-30T15:31:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 331,
+      "end_timestamp": "2022-09-30T15:49:00Z",
+      "observation_count": 1,
+      "start_observation": 331,
+      "start_timestamp": "2022-09-30T15:49:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 335,
+      "end_timestamp": "2022-09-30T15:53:00Z",
+      "observation_count": 4,
+      "start_observation": 332,
+      "start_timestamp": "2022-09-30T15:50:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 336,
+      "end_timestamp": "2022-09-30T15:54:00Z",
+      "observation_count": 1,
+      "start_observation": 336,
+      "start_timestamp": "2022-09-30T15:54:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 340,
+      "end_timestamp": "2022-09-30T15:58:00Z",
+      "observation_count": 4,
+      "start_observation": 337,
+      "start_timestamp": "2022-09-30T15:55:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 342,
+      "end_timestamp": "2022-09-30T16:00:00Z",
+      "observation_count": 2,
+      "start_observation": 341,
+      "start_timestamp": "2022-09-30T15:59:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 347,
+      "end_timestamp": "2022-09-30T16:05:00Z",
+      "observation_count": 5,
+      "start_observation": 343,
+      "start_timestamp": "2022-09-30T16:01:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 348,
+      "end_timestamp": "2022-09-30T16:06:00Z",
+      "observation_count": 1,
+      "start_observation": 348,
+      "start_timestamp": "2022-09-30T16:06:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 351,
+      "end_timestamp": "2022-09-30T16:09:00Z",
+      "observation_count": 3,
+      "start_observation": 349,
+      "start_timestamp": "2022-09-30T16:07:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 352,
+      "end_timestamp": "2022-09-30T16:10:00Z",
+      "observation_count": 1,
+      "start_observation": 352,
+      "start_timestamp": "2022-09-30T16:10:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 355,
+      "end_timestamp": "2022-09-30T16:13:00Z",
+      "observation_count": 3,
+      "start_observation": 353,
+      "start_timestamp": "2022-09-30T16:11:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 357,
+      "end_timestamp": "2022-09-30T16:15:00Z",
+      "observation_count": 2,
+      "start_observation": 356,
+      "start_timestamp": "2022-09-30T16:14:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 358,
+      "end_timestamp": "2022-09-30T16:16:00Z",
+      "observation_count": 1,
+      "start_observation": 358,
+      "start_timestamp": "2022-09-30T16:16:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 359,
+      "end_timestamp": "2022-09-30T16:17:00Z",
+      "observation_count": 1,
+      "start_observation": 359,
+      "start_timestamp": "2022-09-30T16:17:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 364,
+      "end_timestamp": "2022-09-30T16:22:00Z",
+      "observation_count": 5,
+      "start_observation": 360,
+      "start_timestamp": "2022-09-30T16:18:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 367,
+      "end_timestamp": "2022-09-30T16:25:00Z",
+      "observation_count": 3,
+      "start_observation": 365,
+      "start_timestamp": "2022-09-30T16:23:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 370,
+      "end_timestamp": "2022-09-30T16:28:00Z",
+      "observation_count": 3,
+      "start_observation": 368,
+      "start_timestamp": "2022-09-30T16:26:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 372,
+      "end_timestamp": "2022-09-30T16:30:00Z",
+      "observation_count": 2,
+      "start_observation": 371,
+      "start_timestamp": "2022-09-30T16:29:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 373,
+      "end_timestamp": "2022-09-30T16:31:00Z",
+      "observation_count": 1,
+      "start_observation": 373,
+      "start_timestamp": "2022-09-30T16:31:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 374,
+      "end_timestamp": "2022-09-30T16:32:00Z",
+      "observation_count": 1,
+      "start_observation": 374,
+      "start_timestamp": "2022-09-30T16:32:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 375,
+      "end_timestamp": "2022-09-30T16:33:00Z",
+      "observation_count": 1,
+      "start_observation": 375,
+      "start_timestamp": "2022-09-30T16:33:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 376,
+      "end_timestamp": "2022-09-30T16:34:00Z",
+      "observation_count": 1,
+      "start_observation": 376,
+      "start_timestamp": "2022-09-30T16:34:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 377,
+      "end_timestamp": "2022-09-30T16:35:00Z",
+      "observation_count": 1,
+      "start_observation": 377,
+      "start_timestamp": "2022-09-30T16:35:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 378,
+      "end_timestamp": "2022-09-30T16:36:00Z",
+      "observation_count": 1,
+      "start_observation": 378,
+      "start_timestamp": "2022-09-30T16:36:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 384,
+      "end_timestamp": "2022-09-30T16:42:00Z",
+      "observation_count": 6,
+      "start_observation": 379,
+      "start_timestamp": "2022-09-30T16:37:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 385,
+      "end_timestamp": "2022-09-30T16:43:00Z",
+      "observation_count": 1,
+      "start_observation": 385,
+      "start_timestamp": "2022-09-30T16:43:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 392,
+      "end_timestamp": "2022-09-30T16:50:00Z",
+      "observation_count": 7,
+      "start_observation": 386,
+      "start_timestamp": "2022-09-30T16:44:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 395,
+      "end_timestamp": "2022-09-30T16:53:00Z",
+      "observation_count": 3,
+      "start_observation": 393,
+      "start_timestamp": "2022-09-30T16:51:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 720.0,
+      "end_observation": 408,
+      "end_timestamp": "2022-09-30T17:06:00Z",
+      "observation_count": 13,
+      "start_observation": 396,
+      "start_timestamp": "2022-09-30T16:54:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 409,
+      "end_timestamp": "2022-09-30T17:07:00Z",
+      "observation_count": 1,
+      "start_observation": 409,
+      "start_timestamp": "2022-09-30T17:07:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 410,
+      "end_timestamp": "2022-09-30T17:08:00Z",
+      "observation_count": 1,
+      "start_observation": 410,
+      "start_timestamp": "2022-09-30T17:08:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 411,
+      "end_timestamp": "2022-09-30T17:09:00Z",
+      "observation_count": 1,
+      "start_observation": 411,
+      "start_timestamp": "2022-09-30T17:09:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 414,
+      "end_timestamp": "2022-09-30T17:12:00Z",
+      "observation_count": 3,
+      "start_observation": 412,
+      "start_timestamp": "2022-09-30T17:10:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 416,
+      "end_timestamp": "2022-09-30T17:14:00Z",
+      "observation_count": 2,
+      "start_observation": 415,
+      "start_timestamp": "2022-09-30T17:13:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 423,
+      "end_timestamp": "2022-09-30T17:21:00Z",
+      "observation_count": 7,
+      "start_observation": 417,
+      "start_timestamp": "2022-09-30T17:15:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 424,
+      "end_timestamp": "2022-09-30T17:22:00Z",
+      "observation_count": 1,
+      "start_observation": 424,
+      "start_timestamp": "2022-09-30T17:22:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 426,
+      "end_timestamp": "2022-09-30T17:24:00Z",
+      "observation_count": 2,
+      "start_observation": 425,
+      "start_timestamp": "2022-09-30T17:23:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 427,
+      "end_timestamp": "2022-09-30T17:25:00Z",
+      "observation_count": 1,
+      "start_observation": 427,
+      "start_timestamp": "2022-09-30T17:25:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 428,
+      "end_timestamp": "2022-09-30T17:26:00Z",
+      "observation_count": 1,
+      "start_observation": 428,
+      "start_timestamp": "2022-09-30T17:26:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 429,
+      "end_timestamp": "2022-09-30T17:27:00Z",
+      "observation_count": 1,
+      "start_observation": 429,
+      "start_timestamp": "2022-09-30T17:27:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 431,
+      "end_timestamp": "2022-09-30T17:29:00Z",
+      "observation_count": 2,
+      "start_observation": 430,
+      "start_timestamp": "2022-09-30T17:28:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 433,
+      "end_timestamp": "2022-09-30T17:31:00Z",
+      "observation_count": 2,
+      "start_observation": 432,
+      "start_timestamp": "2022-09-30T17:30:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 720.0,
+      "end_observation": 446,
+      "end_timestamp": "2022-09-30T17:44:00Z",
+      "observation_count": 13,
+      "start_observation": 434,
+      "start_timestamp": "2022-09-30T17:32:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 447,
+      "end_timestamp": "2022-09-30T17:45:00Z",
+      "observation_count": 1,
+      "start_observation": 447,
+      "start_timestamp": "2022-09-30T17:45:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 452,
+      "end_timestamp": "2022-09-30T17:50:00Z",
+      "observation_count": 5,
+      "start_observation": 448,
+      "start_timestamp": "2022-09-30T17:46:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 453,
+      "end_timestamp": "2022-09-30T17:51:00Z",
+      "observation_count": 1,
+      "start_observation": 453,
+      "start_timestamp": "2022-09-30T17:51:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 454,
+      "end_timestamp": "2022-09-30T17:52:00Z",
+      "observation_count": 1,
+      "start_observation": 454,
+      "start_timestamp": "2022-09-30T17:52:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 455,
+      "end_timestamp": "2022-09-30T17:53:00Z",
+      "observation_count": 1,
+      "start_observation": 455,
+      "start_timestamp": "2022-09-30T17:53:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 458,
+      "end_timestamp": "2022-09-30T17:56:00Z",
+      "observation_count": 3,
+      "start_observation": 456,
+      "start_timestamp": "2022-09-30T17:54:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 460,
+      "end_timestamp": "2022-09-30T17:58:00Z",
+      "observation_count": 2,
+      "start_observation": 459,
+      "start_timestamp": "2022-09-30T17:57:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 461,
+      "end_timestamp": "2022-09-30T17:59:00Z",
+      "observation_count": 1,
+      "start_observation": 461,
+      "start_timestamp": "2022-09-30T17:59:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 462,
+      "end_timestamp": "2022-09-30T18:00:00Z",
+      "observation_count": 1,
+      "start_observation": 462,
+      "start_timestamp": "2022-09-30T18:00:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 465,
+      "end_timestamp": "2022-09-30T18:03:00Z",
+      "observation_count": 3,
+      "start_observation": 463,
+      "start_timestamp": "2022-09-30T18:01:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 467,
+      "end_timestamp": "2022-09-30T18:05:00Z",
+      "observation_count": 2,
+      "start_observation": 466,
+      "start_timestamp": "2022-09-30T18:04:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 470,
+      "end_timestamp": "2022-09-30T18:08:00Z",
+      "observation_count": 3,
+      "start_observation": 468,
+      "start_timestamp": "2022-09-30T18:06:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 471,
+      "end_timestamp": "2022-09-30T18:09:00Z",
+      "observation_count": 1,
+      "start_observation": 471,
+      "start_timestamp": "2022-09-30T18:09:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 473,
+      "end_timestamp": "2022-09-30T18:11:00Z",
+      "observation_count": 2,
+      "start_observation": 472,
+      "start_timestamp": "2022-09-30T18:10:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 475,
+      "end_timestamp": "2022-09-30T18:13:00Z",
+      "observation_count": 2,
+      "start_observation": 474,
+      "start_timestamp": "2022-09-30T18:12:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 476,
+      "end_timestamp": "2022-09-30T18:14:00Z",
+      "observation_count": 1,
+      "start_observation": 476,
+      "start_timestamp": "2022-09-30T18:14:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 477,
+      "end_timestamp": "2022-09-30T18:15:00Z",
+      "observation_count": 1,
+      "start_observation": 477,
+      "start_timestamp": "2022-09-30T18:15:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 481,
+      "end_timestamp": "2022-09-30T18:19:00Z",
+      "observation_count": 4,
+      "start_observation": 478,
+      "start_timestamp": "2022-09-30T18:16:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 482,
+      "end_timestamp": "2022-09-30T18:20:00Z",
+      "observation_count": 1,
+      "start_observation": 482,
+      "start_timestamp": "2022-09-30T18:20:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 480.0,
+      "end_observation": 491,
+      "end_timestamp": "2022-09-30T18:29:00Z",
+      "observation_count": 9,
+      "start_observation": 483,
+      "start_timestamp": "2022-09-30T18:21:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 492,
+      "end_timestamp": "2022-09-30T18:30:00Z",
+      "observation_count": 1,
+      "start_observation": 492,
+      "start_timestamp": "2022-09-30T18:30:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 495,
+      "end_timestamp": "2022-09-30T18:33:00Z",
+      "observation_count": 3,
+      "start_observation": 493,
+      "start_timestamp": "2022-09-30T18:31:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 496,
+      "end_timestamp": "2022-09-30T18:34:00Z",
+      "observation_count": 1,
+      "start_observation": 496,
+      "start_timestamp": "2022-09-30T18:34:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 503,
+      "end_timestamp": "2022-09-30T18:41:00Z",
+      "observation_count": 7,
+      "start_observation": 497,
+      "start_timestamp": "2022-09-30T18:35:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 505,
+      "end_timestamp": "2022-09-30T18:43:00Z",
+      "observation_count": 2,
+      "start_observation": 504,
+      "start_timestamp": "2022-09-30T18:42:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 506,
+      "end_timestamp": "2022-09-30T18:44:00Z",
+      "observation_count": 1,
+      "start_observation": 506,
+      "start_timestamp": "2022-09-30T18:44:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 507,
+      "end_timestamp": "2022-09-30T18:45:00Z",
+      "observation_count": 1,
+      "start_observation": 507,
+      "start_timestamp": "2022-09-30T18:45:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 508,
+      "end_timestamp": "2022-09-30T18:46:00Z",
+      "observation_count": 1,
+      "start_observation": 508,
+      "start_timestamp": "2022-09-30T18:46:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 509,
+      "end_timestamp": "2022-09-30T18:47:00Z",
+      "observation_count": 1,
+      "start_observation": 509,
+      "start_timestamp": "2022-09-30T18:47:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 511,
+      "end_timestamp": "2022-09-30T18:49:00Z",
+      "observation_count": 2,
+      "start_observation": 510,
+      "start_timestamp": "2022-09-30T18:48:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 512,
+      "end_timestamp": "2022-09-30T18:50:00Z",
+      "observation_count": 1,
+      "start_observation": 512,
+      "start_timestamp": "2022-09-30T18:50:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 514,
+      "end_timestamp": "2022-09-30T18:52:00Z",
+      "observation_count": 2,
+      "start_observation": 513,
+      "start_timestamp": "2022-09-30T18:51:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 515,
+      "end_timestamp": "2022-09-30T18:53:00Z",
+      "observation_count": 1,
+      "start_observation": 515,
+      "start_timestamp": "2022-09-30T18:53:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 516,
+      "end_timestamp": "2022-09-30T18:54:00Z",
+      "observation_count": 1,
+      "start_observation": 516,
+      "start_timestamp": "2022-09-30T18:54:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 517,
+      "end_timestamp": "2022-09-30T18:55:00Z",
+      "observation_count": 1,
+      "start_observation": 517,
+      "start_timestamp": "2022-09-30T18:55:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 518,
+      "end_timestamp": "2022-09-30T18:56:00Z",
+      "observation_count": 1,
+      "start_observation": 518,
+      "start_timestamp": "2022-09-30T18:56:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 519,
+      "end_timestamp": "2022-09-30T18:57:00Z",
+      "observation_count": 1,
+      "start_observation": 519,
+      "start_timestamp": "2022-09-30T18:57:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 523,
+      "end_timestamp": "2022-09-30T19:01:00Z",
+      "observation_count": 4,
+      "start_observation": 520,
+      "start_timestamp": "2022-09-30T18:58:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 524,
+      "end_timestamp": "2022-09-30T19:02:00Z",
+      "observation_count": 1,
+      "start_observation": 524,
+      "start_timestamp": "2022-09-30T19:02:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 528,
+      "end_timestamp": "2022-09-30T19:06:00Z",
+      "observation_count": 4,
+      "start_observation": 525,
+      "start_timestamp": "2022-09-30T19:03:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 529,
+      "end_timestamp": "2022-09-30T19:07:00Z",
+      "observation_count": 1,
+      "start_observation": 529,
+      "start_timestamp": "2022-09-30T19:07:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 900.0,
+      "end_observation": 545,
+      "end_timestamp": "2022-09-30T19:23:00Z",
+      "observation_count": 16,
+      "start_observation": 530,
+      "start_timestamp": "2022-09-30T19:08:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 546,
+      "end_timestamp": "2022-09-30T19:24:00Z",
+      "observation_count": 1,
+      "start_observation": 546,
+      "start_timestamp": "2022-09-30T19:24:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 549,
+      "end_timestamp": "2022-09-30T19:27:00Z",
+      "observation_count": 3,
+      "start_observation": 547,
+      "start_timestamp": "2022-09-30T19:25:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 552,
+      "end_timestamp": "2022-09-30T19:30:00Z",
+      "observation_count": 3,
+      "start_observation": 550,
+      "start_timestamp": "2022-09-30T19:28:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 555,
+      "end_timestamp": "2022-09-30T19:33:00Z",
+      "observation_count": 3,
+      "start_observation": 553,
+      "start_timestamp": "2022-09-30T19:31:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 556,
+      "end_timestamp": "2022-09-30T19:34:00Z",
+      "observation_count": 1,
+      "start_observation": 556,
+      "start_timestamp": "2022-09-30T19:34:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 558,
+      "end_timestamp": "2022-09-30T19:36:00Z",
+      "observation_count": 2,
+      "start_observation": 557,
+      "start_timestamp": "2022-09-30T19:35:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 559,
+      "end_timestamp": "2022-09-30T19:37:00Z",
+      "observation_count": 1,
+      "start_observation": 559,
+      "start_timestamp": "2022-09-30T19:37:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 561,
+      "end_timestamp": "2022-09-30T19:39:00Z",
+      "observation_count": 2,
+      "start_observation": 560,
+      "start_timestamp": "2022-09-30T19:38:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 562,
+      "end_timestamp": "2022-09-30T19:40:00Z",
+      "observation_count": 1,
+      "start_observation": 562,
+      "start_timestamp": "2022-09-30T19:40:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 564,
+      "end_timestamp": "2022-09-30T19:42:00Z",
+      "observation_count": 2,
+      "start_observation": 563,
+      "start_timestamp": "2022-09-30T19:41:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 566,
+      "end_timestamp": "2022-09-30T19:44:00Z",
+      "observation_count": 2,
+      "start_observation": 565,
+      "start_timestamp": "2022-09-30T19:43:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 568,
+      "end_timestamp": "2022-09-30T19:46:00Z",
+      "observation_count": 2,
+      "start_observation": 567,
+      "start_timestamp": "2022-09-30T19:45:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 570,
+      "end_timestamp": "2022-09-30T19:48:00Z",
+      "observation_count": 2,
+      "start_observation": 569,
+      "start_timestamp": "2022-09-30T19:47:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 720.0,
+      "end_observation": 583,
+      "end_timestamp": "2022-09-30T20:01:00Z",
+      "observation_count": 13,
+      "start_observation": 571,
+      "start_timestamp": "2022-09-30T19:49:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 584,
+      "end_timestamp": "2022-09-30T20:02:00Z",
+      "observation_count": 1,
+      "start_observation": 584,
+      "start_timestamp": "2022-09-30T20:02:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 588,
+      "end_timestamp": "2022-09-30T20:06:00Z",
+      "observation_count": 4,
+      "start_observation": 585,
+      "start_timestamp": "2022-09-30T20:03:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 592,
+      "end_timestamp": "2022-09-30T20:10:00Z",
+      "observation_count": 4,
+      "start_observation": 589,
+      "start_timestamp": "2022-09-30T20:07:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 594,
+      "end_timestamp": "2022-09-30T20:12:00Z",
+      "observation_count": 2,
+      "start_observation": 593,
+      "start_timestamp": "2022-09-30T20:11:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 596,
+      "end_timestamp": "2022-09-30T20:14:00Z",
+      "observation_count": 2,
+      "start_observation": 595,
+      "start_timestamp": "2022-09-30T20:13:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 602,
+      "end_timestamp": "2022-09-30T20:20:00Z",
+      "observation_count": 6,
+      "start_observation": 597,
+      "start_timestamp": "2022-09-30T20:15:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 603,
+      "end_timestamp": "2022-09-30T20:21:00Z",
+      "observation_count": 1,
+      "start_observation": 603,
+      "start_timestamp": "2022-09-30T20:21:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 609,
+      "end_timestamp": "2022-09-30T20:27:00Z",
+      "observation_count": 6,
+      "start_observation": 604,
+      "start_timestamp": "2022-09-30T20:22:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 610,
+      "end_timestamp": "2022-09-30T20:28:00Z",
+      "observation_count": 1,
+      "start_observation": 610,
+      "start_timestamp": "2022-09-30T20:28:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 615,
+      "end_timestamp": "2022-09-30T20:33:00Z",
+      "observation_count": 5,
+      "start_observation": 611,
+      "start_timestamp": "2022-09-30T20:29:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 616,
+      "end_timestamp": "2022-09-30T20:34:00Z",
+      "observation_count": 1,
+      "start_observation": 616,
+      "start_timestamp": "2022-09-30T20:34:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 619,
+      "end_timestamp": "2022-09-30T20:37:00Z",
+      "observation_count": 3,
+      "start_observation": 617,
+      "start_timestamp": "2022-09-30T20:35:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 620,
+      "end_timestamp": "2022-09-30T20:38:00Z",
+      "observation_count": 1,
+      "start_observation": 620,
+      "start_timestamp": "2022-09-30T20:38:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 622,
+      "end_timestamp": "2022-09-30T20:40:00Z",
+      "observation_count": 2,
+      "start_observation": 621,
+      "start_timestamp": "2022-09-30T20:39:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 623,
+      "end_timestamp": "2022-09-30T20:41:00Z",
+      "observation_count": 1,
+      "start_observation": 623,
+      "start_timestamp": "2022-09-30T20:41:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 624,
+      "end_timestamp": "2022-09-30T20:42:00Z",
+      "observation_count": 1,
+      "start_observation": 624,
+      "start_timestamp": "2022-09-30T20:42:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 625,
+      "end_timestamp": "2022-09-30T20:43:00Z",
+      "observation_count": 1,
+      "start_observation": 625,
+      "start_timestamp": "2022-09-30T20:43:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 627,
+      "end_timestamp": "2022-09-30T20:45:00Z",
+      "observation_count": 2,
+      "start_observation": 626,
+      "start_timestamp": "2022-09-30T20:44:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 628,
+      "end_timestamp": "2022-09-30T20:46:00Z",
+      "observation_count": 1,
+      "start_observation": 628,
+      "start_timestamp": "2022-09-30T20:46:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 631,
+      "end_timestamp": "2022-09-30T20:49:00Z",
+      "observation_count": 3,
+      "start_observation": 629,
+      "start_timestamp": "2022-09-30T20:47:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 632,
+      "end_timestamp": "2022-09-30T20:50:00Z",
+      "observation_count": 1,
+      "start_observation": 632,
+      "start_timestamp": "2022-09-30T20:50:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 634,
+      "end_timestamp": "2022-09-30T20:52:00Z",
+      "observation_count": 2,
+      "start_observation": 633,
+      "start_timestamp": "2022-09-30T20:51:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 635,
+      "end_timestamp": "2022-09-30T20:53:00Z",
+      "observation_count": 1,
+      "start_observation": 635,
+      "start_timestamp": "2022-09-30T20:53:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 639,
+      "end_timestamp": "2022-09-30T20:57:00Z",
+      "observation_count": 4,
+      "start_observation": 636,
+      "start_timestamp": "2022-09-30T20:54:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 640,
+      "end_timestamp": "2022-09-30T20:58:00Z",
+      "observation_count": 1,
+      "start_observation": 640,
+      "start_timestamp": "2022-09-30T20:58:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 643,
+      "end_timestamp": "2022-09-30T21:01:00Z",
+      "observation_count": 3,
+      "start_observation": 641,
+      "start_timestamp": "2022-09-30T20:59:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 644,
+      "end_timestamp": "2022-09-30T21:02:00Z",
+      "observation_count": 1,
+      "start_observation": 644,
+      "start_timestamp": "2022-09-30T21:02:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 649,
+      "end_timestamp": "2022-09-30T21:07:00Z",
+      "observation_count": 5,
+      "start_observation": 645,
+      "start_timestamp": "2022-09-30T21:03:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 650,
+      "end_timestamp": "2022-09-30T21:08:00Z",
+      "observation_count": 1,
+      "start_observation": 650,
+      "start_timestamp": "2022-09-30T21:08:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 651,
+      "end_timestamp": "2022-09-30T21:09:00Z",
+      "observation_count": 1,
+      "start_observation": 651,
+      "start_timestamp": "2022-09-30T21:09:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 652,
+      "end_timestamp": "2022-09-30T21:10:00Z",
+      "observation_count": 1,
+      "start_observation": 652,
+      "start_timestamp": "2022-09-30T21:10:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 659,
+      "end_timestamp": "2022-09-30T21:17:00Z",
+      "observation_count": 7,
+      "start_observation": 653,
+      "start_timestamp": "2022-09-30T21:11:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 660,
+      "end_timestamp": "2022-09-30T21:18:00Z",
+      "observation_count": 1,
+      "start_observation": 660,
+      "start_timestamp": "2022-09-30T21:18:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 662,
+      "end_timestamp": "2022-09-30T21:20:00Z",
+      "observation_count": 2,
+      "start_observation": 661,
+      "start_timestamp": "2022-09-30T21:19:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 663,
+      "end_timestamp": "2022-09-30T21:21:00Z",
+      "observation_count": 1,
+      "start_observation": 663,
+      "start_timestamp": "2022-09-30T21:21:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 420.0,
+      "end_observation": 670,
+      "end_timestamp": "2022-09-30T21:30:00Z",
+      "observation_count": 7,
+      "start_observation": 664,
+      "start_timestamp": "2022-09-30T21:23:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 671,
+      "end_timestamp": "2022-09-30T21:31:00Z",
+      "observation_count": 1,
+      "start_observation": 671,
+      "start_timestamp": "2022-09-30T21:31:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 677,
+      "end_timestamp": "2022-09-30T21:37:00Z",
+      "observation_count": 6,
+      "start_observation": 672,
+      "start_timestamp": "2022-09-30T21:32:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 678,
+      "end_timestamp": "2022-09-30T21:38:00Z",
+      "observation_count": 1,
+      "start_observation": 678,
+      "start_timestamp": "2022-09-30T21:38:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 683,
+      "end_timestamp": "2022-09-30T21:45:00Z",
+      "observation_count": 5,
+      "start_observation": 679,
+      "start_timestamp": "2022-09-30T21:40:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 684,
+      "end_timestamp": "2022-09-30T21:46:00Z",
+      "observation_count": 1,
+      "start_observation": 684,
+      "start_timestamp": "2022-09-30T21:46:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 688,
+      "end_timestamp": "2022-09-30T21:51:00Z",
+      "observation_count": 4,
+      "start_observation": 685,
+      "start_timestamp": "2022-09-30T21:47:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 690,
+      "end_timestamp": "2022-09-30T21:53:00Z",
+      "observation_count": 2,
+      "start_observation": 689,
+      "start_timestamp": "2022-09-30T21:52:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 691,
+      "end_timestamp": "2022-09-30T21:54:00Z",
+      "observation_count": 1,
+      "start_observation": 691,
+      "start_timestamp": "2022-09-30T21:54:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 693,
+      "end_timestamp": "2022-09-30T21:56:00Z",
+      "observation_count": 2,
+      "start_observation": 692,
+      "start_timestamp": "2022-09-30T21:55:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 694,
+      "end_timestamp": "2022-09-30T21:57:00Z",
+      "observation_count": 1,
+      "start_observation": 694,
+      "start_timestamp": "2022-09-30T21:57:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 696,
+      "end_timestamp": "2022-09-30T21:59:00Z",
+      "observation_count": 2,
+      "start_observation": 695,
+      "start_timestamp": "2022-09-30T21:58:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 698,
+      "end_timestamp": "2022-09-30T22:01:00Z",
+      "observation_count": 2,
+      "start_observation": 697,
+      "start_timestamp": "2022-09-30T22:00:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 699,
+      "end_timestamp": "2022-09-30T22:02:00Z",
+      "observation_count": 1,
+      "start_observation": 699,
+      "start_timestamp": "2022-09-30T22:02:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 702,
+      "end_timestamp": "2022-09-30T22:05:00Z",
+      "observation_count": 3,
+      "start_observation": 700,
+      "start_timestamp": "2022-09-30T22:03:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 703,
+      "end_timestamp": "2022-09-30T22:07:00Z",
+      "observation_count": 1,
+      "start_observation": 703,
+      "start_timestamp": "2022-09-30T22:07:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 1200.0,
+      "end_observation": 722,
+      "end_timestamp": "2022-09-30T22:28:00Z",
+      "observation_count": 19,
+      "start_observation": 704,
+      "start_timestamp": "2022-09-30T22:08:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 724,
+      "end_timestamp": "2022-09-30T22:31:00Z",
+      "observation_count": 2,
+      "start_observation": 723,
+      "start_timestamp": "2022-09-30T22:29:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 725,
+      "end_timestamp": "2022-09-30T22:32:00Z",
+      "observation_count": 1,
+      "start_observation": 725,
+      "start_timestamp": "2022-09-30T22:32:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 726,
+      "end_timestamp": "2022-09-30T22:33:00Z",
+      "observation_count": 1,
+      "start_observation": 726,
+      "start_timestamp": "2022-09-30T22:33:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 728,
+      "end_timestamp": "2022-09-30T22:35:00Z",
+      "observation_count": 2,
+      "start_observation": 727,
+      "start_timestamp": "2022-09-30T22:34:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 729,
+      "end_timestamp": "2022-09-30T22:36:00Z",
+      "observation_count": 1,
+      "start_observation": 729,
+      "start_timestamp": "2022-09-30T22:36:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 735,
+      "end_timestamp": "2022-09-30T22:42:00Z",
+      "observation_count": 6,
+      "start_observation": 730,
+      "start_timestamp": "2022-09-30T22:37:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 738,
+      "end_timestamp": "2022-09-30T22:45:00Z",
+      "observation_count": 3,
+      "start_observation": 736,
+      "start_timestamp": "2022-09-30T22:43:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 739,
+      "end_timestamp": "2022-09-30T22:46:00Z",
+      "observation_count": 1,
+      "start_observation": 739,
+      "start_timestamp": "2022-09-30T22:46:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 741,
+      "end_timestamp": "2022-09-30T22:48:00Z",
+      "observation_count": 2,
+      "start_observation": 740,
+      "start_timestamp": "2022-09-30T22:47:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 1020.0,
+      "end_observation": 755,
+      "end_timestamp": "2022-09-30T23:09:00Z",
+      "observation_count": 14,
+      "start_observation": 742,
+      "start_timestamp": "2022-09-30T22:52:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 756,
+      "end_timestamp": "2022-09-30T23:12:00Z",
+      "observation_count": 1,
+      "start_observation": 756,
+      "start_timestamp": "2022-09-30T23:12:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 759,
+      "end_timestamp": "2022-09-30T23:16:00Z",
+      "observation_count": 3,
+      "start_observation": 757,
+      "start_timestamp": "2022-09-30T23:13:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 760,
+      "end_timestamp": "2022-09-30T23:17:00Z",
+      "observation_count": 1,
+      "start_observation": 760,
+      "start_timestamp": "2022-09-30T23:17:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 761,
+      "end_timestamp": "2022-09-30T23:18:00Z",
+      "observation_count": 1,
+      "start_observation": 761,
+      "start_timestamp": "2022-09-30T23:18:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 762,
+      "end_timestamp": "2022-09-30T23:20:00Z",
+      "observation_count": 1,
+      "start_observation": 762,
+      "start_timestamp": "2022-09-30T23:20:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 763,
+      "end_timestamp": "2022-09-30T23:21:00Z",
+      "observation_count": 1,
+      "start_observation": 763,
+      "start_timestamp": "2022-09-30T23:21:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 764,
+      "end_timestamp": "2022-09-30T23:22:00Z",
+      "observation_count": 1,
+      "start_observation": 764,
+      "start_timestamp": "2022-09-30T23:22:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 767,
+      "end_timestamp": "2022-09-30T23:25:00Z",
+      "observation_count": 3,
+      "start_observation": 765,
+      "start_timestamp": "2022-09-30T23:23:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 768,
+      "end_timestamp": "2022-09-30T23:30:00Z",
+      "observation_count": 1,
+      "start_observation": 768,
+      "start_timestamp": "2022-09-30T23:30:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 771,
+      "end_timestamp": "2022-09-30T23:36:00Z",
+      "observation_count": 3,
+      "start_observation": 769,
+      "start_timestamp": "2022-09-30T23:31:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 772,
+      "end_timestamp": "2022-09-30T23:37:00Z",
+      "observation_count": 1,
+      "start_observation": 772,
+      "start_timestamp": "2022-09-30T23:37:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 900.0,
+      "end_observation": 784,
+      "end_timestamp": "2022-09-30T23:54:00Z",
+      "observation_count": 12,
+      "start_observation": 773,
+      "start_timestamp": "2022-09-30T23:39:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 785,
+      "end_timestamp": "2022-09-30T23:55:00Z",
+      "observation_count": 1,
+      "start_observation": 785,
+      "start_timestamp": "2022-09-30T23:55:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 786,
+      "end_timestamp": "2022-09-30T23:56:00Z",
+      "observation_count": 1,
+      "start_observation": 786,
+      "start_timestamp": "2022-09-30T23:56:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 787,
+      "end_timestamp": "2022-09-30T23:57:00Z",
+      "observation_count": 1,
+      "start_observation": 787,
+      "start_timestamp": "2022-09-30T23:57:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 201840.0,
+      "end_observation": 792,
+      "end_timestamp": "2022-10-03T08:02:00Z",
+      "observation_count": 5,
+      "start_observation": 788,
+      "start_timestamp": "2022-09-30T23:58:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 793,
+      "end_timestamp": "2022-10-03T08:03:00Z",
+      "observation_count": 1,
+      "start_observation": 793,
+      "start_timestamp": "2022-10-03T08:03:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 794,
+      "end_timestamp": "2022-10-03T08:04:00Z",
+      "observation_count": 1,
+      "start_observation": 794,
+      "start_timestamp": "2022-10-03T08:04:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 798,
+      "end_timestamp": "2022-10-03T08:08:00Z",
+      "observation_count": 4,
+      "start_observation": 795,
+      "start_timestamp": "2022-10-03T08:05:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 802,
+      "end_timestamp": "2022-10-03T08:14:00Z",
+      "observation_count": 4,
+      "start_observation": 799,
+      "start_timestamp": "2022-10-03T08:09:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 803,
+      "end_timestamp": "2022-10-03T08:15:00Z",
+      "observation_count": 1,
+      "start_observation": 803,
+      "start_timestamp": "2022-10-03T08:15:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 806,
+      "end_timestamp": "2022-10-03T08:20:00Z",
+      "observation_count": 3,
+      "start_observation": 804,
+      "start_timestamp": "2022-10-03T08:16:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 807,
+      "end_timestamp": "2022-10-03T08:21:00Z",
+      "observation_count": 1,
+      "start_observation": 807,
+      "start_timestamp": "2022-10-03T08:21:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 810,
+      "end_timestamp": "2022-10-03T08:25:00Z",
+      "observation_count": 3,
+      "start_observation": 808,
+      "start_timestamp": "2022-10-03T08:22:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 811,
+      "end_timestamp": "2022-10-03T08:26:00Z",
+      "observation_count": 1,
+      "start_observation": 811,
+      "start_timestamp": "2022-10-03T08:26:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 813,
+      "end_timestamp": "2022-10-03T08:30:00Z",
+      "observation_count": 2,
+      "start_observation": 812,
+      "start_timestamp": "2022-10-03T08:27:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 814,
+      "end_timestamp": "2022-10-03T08:33:00Z",
+      "observation_count": 1,
+      "start_observation": 814,
+      "start_timestamp": "2022-10-03T08:33:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 240.0,
+      "end_observation": 819,
+      "end_timestamp": "2022-10-03T08:38:00Z",
+      "observation_count": 5,
+      "start_observation": 815,
+      "start_timestamp": "2022-10-03T08:34:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 821,
+      "end_timestamp": "2022-10-03T08:42:00Z",
+      "observation_count": 2,
+      "start_observation": 820,
+      "start_timestamp": "2022-10-03T08:41:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 822,
+      "end_timestamp": "2022-10-03T08:44:00Z",
+      "observation_count": 1,
+      "start_observation": 822,
+      "start_timestamp": "2022-10-03T08:44:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 823,
+      "end_timestamp": "2022-10-03T08:46:00Z",
+      "observation_count": 1,
+      "start_observation": 823,
+      "start_timestamp": "2022-10-03T08:46:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 824,
+      "end_timestamp": "2022-10-03T08:47:00Z",
+      "observation_count": 1,
+      "start_observation": 824,
+      "start_timestamp": "2022-10-03T08:47:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 826,
+      "end_timestamp": "2022-10-03T08:49:00Z",
+      "observation_count": 2,
+      "start_observation": 825,
+      "start_timestamp": "2022-10-03T08:48:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 831,
+      "end_timestamp": "2022-10-03T08:55:00Z",
+      "observation_count": 5,
+      "start_observation": 827,
+      "start_timestamp": "2022-10-03T08:50:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 832,
+      "end_timestamp": "2022-10-03T08:56:00Z",
+      "observation_count": 1,
+      "start_observation": 832,
+      "start_timestamp": "2022-10-03T08:56:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 900.0,
+      "end_observation": 847,
+      "end_timestamp": "2022-10-03T09:12:00Z",
+      "observation_count": 15,
+      "start_observation": 833,
+      "start_timestamp": "2022-10-03T08:57:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 848,
+      "end_timestamp": "2022-10-03T09:13:00Z",
+      "observation_count": 1,
+      "start_observation": 848,
+      "start_timestamp": "2022-10-03T09:13:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 849,
+      "end_timestamp": "2022-10-03T09:14:00Z",
+      "observation_count": 1,
+      "start_observation": 849,
+      "start_timestamp": "2022-10-03T09:14:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 850,
+      "end_timestamp": "2022-10-03T09:15:00Z",
+      "observation_count": 1,
+      "start_observation": 850,
+      "start_timestamp": "2022-10-03T09:15:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 851,
+      "end_timestamp": "2022-10-03T09:16:00Z",
+      "observation_count": 1,
+      "start_observation": 851,
+      "start_timestamp": "2022-10-03T09:16:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 853,
+      "end_timestamp": "2022-10-03T09:18:00Z",
+      "observation_count": 2,
+      "start_observation": 852,
+      "start_timestamp": "2022-10-03T09:17:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 854,
+      "end_timestamp": "2022-10-03T09:19:00Z",
+      "observation_count": 1,
+      "start_observation": 854,
+      "start_timestamp": "2022-10-03T09:19:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 856,
+      "end_timestamp": "2022-10-03T09:22:00Z",
+      "observation_count": 2,
+      "start_observation": 855,
+      "start_timestamp": "2022-10-03T09:21:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 857,
+      "end_timestamp": "2022-10-03T09:23:00Z",
+      "observation_count": 1,
+      "start_observation": 857,
+      "start_timestamp": "2022-10-03T09:23:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 858,
+      "end_timestamp": "2022-10-03T09:24:00Z",
+      "observation_count": 1,
+      "start_observation": 858,
+      "start_timestamp": "2022-10-03T09:24:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 859,
+      "end_timestamp": "2022-10-03T09:25:00Z",
+      "observation_count": 1,
+      "start_observation": 859,
+      "start_timestamp": "2022-10-03T09:25:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 860,
+      "end_timestamp": "2022-10-03T09:27:00Z",
+      "observation_count": 1,
+      "start_observation": 860,
+      "start_timestamp": "2022-10-03T09:27:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 861,
+      "end_timestamp": "2022-10-03T09:28:00Z",
+      "observation_count": 1,
+      "start_observation": 861,
+      "start_timestamp": "2022-10-03T09:28:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 862,
+      "end_timestamp": "2022-10-03T09:29:00Z",
+      "observation_count": 1,
+      "start_observation": 862,
+      "start_timestamp": "2022-10-03T09:29:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 540.0,
+      "end_observation": 870,
+      "end_timestamp": "2022-10-03T09:39:00Z",
+      "observation_count": 8,
+      "start_observation": 863,
+      "start_timestamp": "2022-10-03T09:30:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 872,
+      "end_timestamp": "2022-10-03T09:47:00Z",
+      "observation_count": 2,
+      "start_observation": 871,
+      "start_timestamp": "2022-10-03T09:46:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 875,
+      "end_timestamp": "2022-10-03T09:51:00Z",
+      "observation_count": 3,
+      "start_observation": 873,
+      "start_timestamp": "2022-10-03T09:48:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 876,
+      "end_timestamp": "2022-10-03T09:52:00Z",
+      "observation_count": 1,
+      "start_observation": 876,
+      "start_timestamp": "2022-10-03T09:52:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 880,
+      "end_timestamp": "2022-10-03T09:57:00Z",
+      "observation_count": 4,
+      "start_observation": 877,
+      "start_timestamp": "2022-10-03T09:54:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 882,
+      "end_timestamp": "2022-10-03T09:59:00Z",
+      "observation_count": 2,
+      "start_observation": 881,
+      "start_timestamp": "2022-10-03T09:58:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 884,
+      "end_timestamp": "2022-10-03T10:01:00Z",
+      "observation_count": 2,
+      "start_observation": 883,
+      "start_timestamp": "2022-10-03T10:00:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 885,
+      "end_timestamp": "2022-10-03T10:02:00Z",
+      "observation_count": 1,
+      "start_observation": 885,
+      "start_timestamp": "2022-10-03T10:02:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 889,
+      "end_timestamp": "2022-10-03T10:06:00Z",
+      "observation_count": 4,
+      "start_observation": 886,
+      "start_timestamp": "2022-10-03T10:03:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 890,
+      "end_timestamp": "2022-10-03T10:07:00Z",
+      "observation_count": 1,
+      "start_observation": 890,
+      "start_timestamp": "2022-10-03T10:07:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 893,
+      "end_timestamp": "2022-10-03T10:10:00Z",
+      "observation_count": 3,
+      "start_observation": 891,
+      "start_timestamp": "2022-10-03T10:08:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 894,
+      "end_timestamp": "2022-10-03T10:11:00Z",
+      "observation_count": 1,
+      "start_observation": 894,
+      "start_timestamp": "2022-10-03T10:11:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 896,
+      "end_timestamp": "2022-10-03T10:13:00Z",
+      "observation_count": 2,
+      "start_observation": 895,
+      "start_timestamp": "2022-10-03T10:12:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 897,
+      "end_timestamp": "2022-10-03T10:14:00Z",
+      "observation_count": 1,
+      "start_observation": 897,
+      "start_timestamp": "2022-10-03T10:14:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 901,
+      "end_timestamp": "2022-10-03T10:18:00Z",
+      "observation_count": 4,
+      "start_observation": 898,
+      "start_timestamp": "2022-10-03T10:15:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 903,
+      "end_timestamp": "2022-10-03T10:22:00Z",
+      "observation_count": 2,
+      "start_observation": 902,
+      "start_timestamp": "2022-10-03T10:19:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 905,
+      "end_timestamp": "2022-10-03T10:24:00Z",
+      "observation_count": 2,
+      "start_observation": 904,
+      "start_timestamp": "2022-10-03T10:23:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 906,
+      "end_timestamp": "2022-10-03T10:25:00Z",
+      "observation_count": 1,
+      "start_observation": 906,
+      "start_timestamp": "2022-10-03T10:25:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 912,
+      "end_timestamp": "2022-10-03T10:31:00Z",
+      "observation_count": 6,
+      "start_observation": 907,
+      "start_timestamp": "2022-10-03T10:26:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 914,
+      "end_timestamp": "2022-10-03T10:33:00Z",
+      "observation_count": 2,
+      "start_observation": 913,
+      "start_timestamp": "2022-10-03T10:32:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 917,
+      "end_timestamp": "2022-10-03T10:36:00Z",
+      "observation_count": 3,
+      "start_observation": 915,
+      "start_timestamp": "2022-10-03T10:34:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 918,
+      "end_timestamp": "2022-10-03T10:37:00Z",
+      "observation_count": 1,
+      "start_observation": 918,
+      "start_timestamp": "2022-10-03T10:37:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 720.0,
+      "end_observation": 931,
+      "end_timestamp": "2022-10-03T10:50:00Z",
+      "observation_count": 13,
+      "start_observation": 919,
+      "start_timestamp": "2022-10-03T10:38:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 933,
+      "end_timestamp": "2022-10-03T10:52:00Z",
+      "observation_count": 2,
+      "start_observation": 932,
+      "start_timestamp": "2022-10-03T10:51:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 934,
+      "end_timestamp": "2022-10-03T10:53:00Z",
+      "observation_count": 1,
+      "start_observation": 934,
+      "start_timestamp": "2022-10-03T10:53:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 935,
+      "end_timestamp": "2022-10-03T10:54:00Z",
+      "observation_count": 1,
+      "start_observation": 935,
+      "start_timestamp": "2022-10-03T10:54:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 120.0,
+      "end_observation": 938,
+      "end_timestamp": "2022-10-03T10:57:00Z",
+      "observation_count": 3,
+      "start_observation": 936,
+      "start_timestamp": "2022-10-03T10:55:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 939,
+      "end_timestamp": "2022-10-03T10:58:00Z",
+      "observation_count": 1,
+      "start_observation": 939,
+      "start_timestamp": "2022-10-03T10:58:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 300.0,
+      "end_observation": 945,
+      "end_timestamp": "2022-10-03T11:04:00Z",
+      "observation_count": 6,
+      "start_observation": 940,
+      "start_timestamp": "2022-10-03T10:59:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 946,
+      "end_timestamp": "2022-10-03T11:05:00Z",
+      "observation_count": 1,
+      "start_observation": 946,
+      "start_timestamp": "2022-10-03T11:05:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 948,
+      "end_timestamp": "2022-10-03T11:07:00Z",
+      "observation_count": 2,
+      "start_observation": 947,
+      "start_timestamp": "2022-10-03T11:06:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 949,
+      "end_timestamp": "2022-10-03T11:08:00Z",
+      "observation_count": 1,
+      "start_observation": 949,
+      "start_timestamp": "2022-10-03T11:08:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 953,
+      "end_timestamp": "2022-10-03T11:12:00Z",
+      "observation_count": 4,
+      "start_observation": 950,
+      "start_timestamp": "2022-10-03T11:09:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 954,
+      "end_timestamp": "2022-10-03T11:13:00Z",
+      "observation_count": 1,
+      "start_observation": 954,
+      "start_timestamp": "2022-10-03T11:13:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 180.0,
+      "end_observation": 958,
+      "end_timestamp": "2022-10-03T11:17:00Z",
+      "observation_count": 4,
+      "start_observation": 955,
+      "start_timestamp": "2022-10-03T11:14:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 959,
+      "end_timestamp": "2022-10-03T11:18:00Z",
+      "observation_count": 1,
+      "start_observation": 959,
+      "start_timestamp": "2022-10-03T11:18:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 960,
+      "end_timestamp": "2022-10-03T11:19:00Z",
+      "observation_count": 1,
+      "start_observation": 960,
+      "start_timestamp": "2022-10-03T11:19:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 962,
+      "end_timestamp": "2022-10-03T11:21:00Z",
+      "observation_count": 2,
+      "start_observation": 961,
+      "start_timestamp": "2022-10-03T11:20:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 963,
+      "end_timestamp": "2022-10-03T11:22:00Z",
+      "observation_count": 1,
+      "start_observation": 963,
+      "start_timestamp": "2022-10-03T11:22:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 964,
+      "end_timestamp": "2022-10-03T11:23:00Z",
+      "observation_count": 1,
+      "start_observation": 964,
+      "start_timestamp": "2022-10-03T11:23:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 1020.0,
+      "end_observation": 982,
+      "end_timestamp": "2022-10-03T11:41:00Z",
+      "observation_count": 18,
+      "start_observation": 965,
+      "start_timestamp": "2022-10-03T11:24:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 984,
+      "end_timestamp": "2022-10-03T11:43:00Z",
+      "observation_count": 2,
+      "start_observation": 983,
+      "start_timestamp": "2022-10-03T11:42:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 985,
+      "end_timestamp": "2022-10-03T11:44:00Z",
+      "observation_count": 1,
+      "start_observation": 985,
+      "start_timestamp": "2022-10-03T11:44:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 986,
+      "end_timestamp": "2022-10-03T11:45:00Z",
+      "observation_count": 1,
+      "start_observation": 986,
+      "start_timestamp": "2022-10-03T11:45:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 987,
+      "end_timestamp": "2022-10-03T11:46:00Z",
+      "observation_count": 1,
+      "start_observation": 987,
+      "start_timestamp": "2022-10-03T11:46:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 989,
+      "end_timestamp": "2022-10-03T11:48:00Z",
+      "observation_count": 2,
+      "start_observation": 988,
+      "start_timestamp": "2022-10-03T11:47:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 360.0,
+      "end_observation": 996,
+      "end_timestamp": "2022-10-03T11:55:00Z",
+      "observation_count": 7,
+      "start_observation": 990,
+      "start_timestamp": "2022-10-03T11:49:00Z"
+    },
+    {
+      "decision": "SELL",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 997,
+      "end_timestamp": "2022-10-03T11:56:00Z",
+      "observation_count": 1,
+      "start_observation": 997,
+      "start_timestamp": "2022-10-03T11:56:00Z"
+    },
+    {
+      "decision": "HOLD",
+      "elapsed_source_seconds": 0.0,
+      "end_observation": 998,
+      "end_timestamp": "2022-10-03T11:57:00Z",
+      "observation_count": 1,
+      "start_observation": 998,
+      "start_timestamp": "2022-10-03T11:57:00Z"
+    },
+    {
+      "decision": "BUY",
+      "elapsed_source_seconds": 60.0,
+      "end_observation": 1000,
+      "end_timestamp": "2022-10-03T11:59:00Z",
+      "observation_count": 2,
+      "start_observation": 999,
+      "start_timestamp": "2022-10-03T11:58:00Z"
+    }
+  ],
+  "status": "PASS",
+  "transition_count": 345,
+  "transition_matrix": {
+    "BUY": {
+      "BUY": 35,
+      "HOLD": 95,
+      "SELL": 0
+    },
+    "HOLD": {
+      "BUY": 96,
+      "HOLD": 579,
+      "SELL": 77
+    },
+    "SELL": {
+      "BUY": 0,
+      "HOLD": 77,
+      "SELL": 25
+    }
+  }
+}

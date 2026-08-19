@@ -1,0 +1,17 @@
+{
+  "OPENING_1_count": 0,
+  "OPENING_2_count": 0,
+  "execution_timestamp_utc": "2026-08-18T22:08:15.120144Z",
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "note": "OPENING_1/2 derive from OPENING plus persistence counter.",
+  "open_observed": false,
+  "opening_observed": false,
+  "run_id": "TEST005R_FROZEN_D04_100OBS_V0_3_RUN_001",
+  "source_data_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "state_counts": {
+    "CLOSED": 100
+  },
+  "transition_count": 0,
+  "transitions": []
+}

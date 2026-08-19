@@ -1,12 +1,10 @@
 name: 06_envelope_up_shape_down
 entity_id: TEST_F
 shape_defaults: {terminal_displacement: 0.5, maximum_absolute_displacement: 1.0, strength: 0.6, coherence: 0.6, persistence: 0.6, uncertainty: 0.4, reversal_propensity: 0.4, state_support_ratio: 0.8}
-context_defaults: {market_eligible: true, data_integrity: 0.8, clock_event_quality: 0.8, capital_available: 0.7, portfolio_capacity: 0.7, position_capacity: 0.7, liquidity_quality: 0.65, spread_quality: 0.65, latency_quality: 0.65, execution_feasibility: 0.65, risk_capacity: 0.7, broker_health: 0.8}
+context_defaults: {market_eligible: true}
 steps:
   - {scenario_time: 0}
   - scenario_time: 1
     shape: {terminal_displacement: 0.35, strength: 0.5, coherence: 0.5, persistence: 0.5, uncertainty: 0.5, reversal_propensity: 0.5}
-    context: {data_integrity: 0.9, capital_available: 0.9, portfolio_capacity: 0.9, position_capacity: 0.9, liquidity_quality: 0.85, spread_quality: 0.85, latency_quality: 0.85, execution_feasibility: 0.85, risk_capacity: 0.9, broker_health: 0.9}
   - scenario_time: 2
     shape: {terminal_displacement: 0.2, strength: 0.4, coherence: 0.4, persistence: 0.4, uncertainty: 0.6, reversal_propensity: 0.6}
-    context: {data_integrity: 0.95, capital_available: 0.95, portfolio_capacity: 0.95, position_capacity: 0.95, liquidity_quality: 0.93, spread_quality: 0.93, latency_quality: 0.93, execution_feasibility: 0.93, risk_capacity: 0.95, broker_health: 0.95}

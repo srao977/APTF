@@ -1,0 +1,14 @@
+{
+  "test_id":"APTF_TEST_004A_BACKWARD_BOUNDARY_V0_1",
+  "formula":"Q_R=sqrt((1-uncertainty)*(1-reversal_propensity))",
+  "cycles":[
+    {"cycle":1,"uncertainty":0.3799587892055599,"reversal_propensity":0.785306864585095,"Q_R_actual":0.36485420599454843,"Q_R_required":1.2409769832631439,"product_actual":0.13311859163191236,"product_required":1.5400238729888933,"product_ratio":11.568811344152662,"equal_contribution_u_required":-0.24097698326314387,"uncertainty_required_holding_reversal":-6.17313979328087,"reversal_required_holding_uncertainty":-1.4837443804996564,"any_conditional_value_legal":false,"Q_R_only_legal":false},
+    {"cycle":2,"uncertainty":0.42387487667499785,"reversal_propensity":0.5972582524083497,"Q_R_actual":0.48169454948065005,"Q_R_required":2.0449996424872214,"product_actual":0.23202963899936643,"product_required":4.182023537772864,"product_ratio":18.023660924560946,"equal_contribution_u_required":-1.0449996424872214,"uncertainty_required_holding_reversal":-9.3838838729307,"reversal_required_holding_uncertainty":-6.258880698757015,"any_conditional_value_legal":false,"Q_R_only_legal":false},
+    {"cycle":3,"uncertainty":0.3925572376200038,"reversal_propensity":0.5804399974703249,"Q_R_actual":0.5048353067296146,"Q_R_required":1.4869945604297479,"product_actual":0.25485868692078406,"product_required":2.211152822747659,"product_ratio":8.675995507404211,"equal_contribution_u_required":-0.48699456042974787,"uncertainty_required_holding_reversal":-4.270170677414052,"reversal_required_holding_uncertainty":-2.6401006970339607,"any_conditional_value_legal":false,"Q_R_only_legal":false},
+    {"cycle":4,"uncertainty":0.44643451950928553,"reversal_propensity":0.6158801168445487,"Q_R_actual":0.46112417816135437,"Q_R_required":3.908468542788756,"product_actual":0.2126355076849845,"product_required":15.276126349969264,"product_ratio":71.84184107482443,"equal_contribution_u_required":-2.908468542788756,"uncertainty_required_holding_reversal":-38.76916327392273,"reversal_required_holding_uncertainty":-26.59587959933406,"any_conditional_value_legal":false,"Q_R_only_legal":false},
+    {"cycle":5,"uncertainty":0.37855430696274,"reversal_propensity":0.5902238033057716,"Q_R_actual":0.5046321953114142,"Q_R_required":1.3500485730645544,"product_actual":0.25465365254481737,"product_required":1.8226311496336394,"product_ratio":7.157294354192969,"equal_contribution_u_required":-0.3500485730645544,"uncertainty_required_holding_reversal":-3.447869750213119,"reversal_required_holding_uncertainty":-1.9328888590822686,"any_conditional_value_legal":false,"Q_R_only_legal":false}
+  ],
+  "legal_product_maximum":1.0,
+  "zero_denominators_encountered":false,
+  "conclusion":"No cycle can close the boundary by changing Q_R alone, uncertainty alone, or reversal alone while other actual factors remain fixed."
+}

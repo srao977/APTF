@@ -1,0 +1,36 @@
+﻿{
+    "created":  "2026-08-17T12:06:06.9315225-07:00",
+    "implementation_id":  "APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_V0_1",
+    "files":  [
+                  {
+                      "absolute_path":  "C:\\Users\\chino\\APTF\\position_transition_controller\\position_transition_controller.py",
+                      "relative_path":  "position_transition_controller.py",
+                      "size_bytes":  11111,
+                      "sha256":  "67F1C3AC7220E51C9702337440879C0245C0B466C04AEA97EE1433A204CA8E92"
+                  },
+                  {
+                      "absolute_path":  "C:\\Users\\chino\\APTF\\position_transition_controller\\causal_replay_harness.py",
+                      "relative_path":  "causal_replay_harness.py",
+                      "size_bytes":  9655,
+                      "sha256":  "C9178B8371863426189C8D8D7B36028B299CEF2C20105413F1BA2F951E08B483"
+                  },
+                  {
+                      "absolute_path":  "C:\\Users\\chino\\APTF\\position_transition_controller\\main.py",
+                      "relative_path":  "main.py",
+                      "size_bytes":  7239,
+                      "sha256":  "F57ED7E2C635AFADE7DE056CF142CAED215CD67A911BFCD56641CF9D57181A16"
+                  },
+                  {
+                      "absolute_path":  "C:\\Users\\chino\\APTF\\position_transition_controller\\test_controller.py",
+                      "relative_path":  "test_controller.py",
+                      "size_bytes":  10882,
+                      "sha256":  "171CD572ABD877CDA2E2360D41C5D35EF42EF58BFB9B105831FC0BF807F3DDB3"
+                  },
+                  {
+                      "absolute_path":  "C:\\Users\\chino\\APTF\\position_transition_controller\\APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_TRACE_V0_1.md",
+                      "relative_path":  "APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_TRACE_V0_1.md",
+                      "size_bytes":  9058,
+                      "sha256":  "C007B3CFA516402B3DF753FD51A811F0BADE49EC741C799D93A249B5B2614D27"
+                  }
+              ]
+}

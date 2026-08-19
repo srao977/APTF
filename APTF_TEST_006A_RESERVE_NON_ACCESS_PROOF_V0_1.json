@@ -1,0 +1,15 @@
+{
+  "status": "FINAL_PASS_RESERVE_REMAINS_SEALED",
+  "reserve_start_utc": "2023-03-30T08:00:00Z",
+  "reserved_observations_accessed": 0,
+  "reserve_values_logged": 0,
+  "reserve_statistics_calculated": 0,
+  "reserve_samples_inspected": 0,
+  "reserve_C_or_Q_calculated": 0,
+  "reserve_labels_created": 0,
+  "development_rows_exposed": 1000,
+  "development_last_physical_row": 1114,
+  "test006b_executed": false,
+  "reserve_sealed_after": true,
+  "enforcement": "DevelopmentObservationStream owns the file iterator, yields only physical rows 115-1114, rejects reserve timestamps, and never passes the iterator or full dataset to the Emitter."
+}

@@ -10,7 +10,7 @@ from aptf_d04.configuration import load_config
 from aptf_d04.envelope.aperture_model import ApertureModelV0
 from aptf_d04.envelope.capturability_model import CapturabilityModelV0_2
 from aptf_d04.envelope.hysteresis import HysteresisConfig, HysteresisController
-from aptf_d04.envelope.trading_envelope import SafetyConfig, TradingEnvelope
+from aptf_d04.envelope.trading_envelope import TradingEnvelope
 from aptf_d04.inputs.scenario_loader import load_scenario, load_yaml
 from aptf_d04.inputs.synthetic_generator import Observation, SyntheticGenerator
 from aptf_d04.runtime.audit_log import AuditLogger
@@ -30,11 +30,7 @@ def load_scenario_names(root: Path) -> list[str]:
 def build_envelope(config_path: Path) -> tuple[TradingEnvelope, object]:
     cfg = load_config(config_path)
 
-    capturability = CapturabilityModelV0_2(
-        feasibility_gate_dimensions=cfg.capturability.feasibility_gate["dimensions"],
-        gate_warning_threshold=cfg.capturability.feasibility_gate["warning_threshold"],
-        critical_data_integrity_threshold=cfg.runtime.critical_data_integrity_threshold,
-    )
+    capturability = CapturabilityModelV0_2()
 
     aperture = ApertureModelV0(alpha=cfg.aperture.alpha)
 
@@ -46,11 +42,7 @@ def build_envelope(config_path: Path) -> tuple[TradingEnvelope, object]:
     )
     hysteresis = HysteresisController(hysteresis_cfg)
 
-    safety = SafetyConfig(
-        critical_data_integrity_threshold=cfg.runtime.critical_data_integrity_threshold,
-    )
-
-    return TradingEnvelope(capturability, aperture, hysteresis, safety), cfg
+    return TradingEnvelope(capturability, aperture, hysteresis), cfg
 
 
 def run_single(root: Path, scenario_name: str, speed: float, verbose: bool) -> dict:
@@ -79,11 +71,10 @@ def validate_scenario(name: str, summary: dict) -> tuple[bool, str]:
     states = summary["states"]
     captures = summary["captures"]
     shapes = summary["shapes"]
-    gates = summary.get("gates", [])
 
     if name == "01_strong_shape_poor_capture":
-        ok = summary["final_state"] == "CLOSED" and events.get("CANDIDATE_QUALIFIED", 0) == 0
-        return ok, "stays CLOSED and no candidate"
+        ok = "OPENING->OPEN" in transitions and events.get("CANDIDATE_QUALIFIED", 0) >= 1
+        return ok, "strong four-factor score opens without an executable gate"
     if name == "02_shape_becomes_capturable":
         ok = "OPENING->OPEN" in transitions and events.get("CANDIDATE_QUALIFIED", 0) >= 1
         return ok, "opens and qualifies a candidate"
@@ -95,8 +86,8 @@ def validate_scenario(name: str, summary: dict) -> tuple[bool, str]:
         )
         return ok, "closes and invalidates the candidate"
     if name == "04_shape_up_envelope_down":
-        ok = shapes[-1] > shapes[0] and gates[-1] < gates[0] and captures[-1] < captures[0]
-        return ok, "shape improves while gate and final capturability fall"
+        ok = shapes[-1] > shapes[0] and captures[-1] > captures[0]
+        return ok, "shape and capturability improve without an executable gate"
     if name == "05_threshold_noise_hysteresis":
         chatter = "OPEN->CLOSED" in transitions and "CLOSED->OPEN" in transitions and transitions.count("OPEN->CLOSED") > 1
         ok = not chatter
@@ -105,8 +96,8 @@ def validate_scenario(name: str, summary: dict) -> tuple[bool, str]:
         ok = events.get("CANDIDATE_QUALIFIED", 0) == 0 and "OPENING->OPEN" not in transitions
         return ok, "does not open from envelope quality alone"
     if name == "07_strong_shape_hard_gate":
-        ok = summary["final_state"] == "CLOSED" and events.get("CANDIDATE_QUALIFIED", 0) == 0
-        return ok, "strong shape blocked by hard feasibility gate"
+        ok = captures[0] == shapes[0] and "OPENING->OPEN" in transitions
+        return ok, "strong shape is not modified by a non-existent gate"
     return False, "unknown scenario"
 
 
@@ -185,7 +176,7 @@ def cmd_run_all(root: Path, args: argparse.Namespace) -> int:
     print("CAPTURABILITY MODEL DEFAULT:")
     print(model_default)
     print("FORM:")
-    print("C_i(t) = B_i(t) * G_i(t)")
+    print("C_i(t) = H_i(t) * Q_G_i(t) * Q_S_i(t) * Q_R_i(t)")
     print("BASE SCORE:")
     print("PASS")
     print("FEASIBILITY GATE:")

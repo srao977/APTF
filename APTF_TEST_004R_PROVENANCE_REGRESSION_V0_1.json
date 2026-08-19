@@ -1,0 +1,73 @@
+{
+  "all_pass": true,
+  "expected_identity_changes": [
+    "D04 input fingerprint",
+    "D04 source fingerprint",
+    "D03 decision ID",
+    "Position Controller transition ID",
+    "downstream logical event IDs"
+  ],
+  "rows": [
+    {
+      "D04_INPUT_FINGERPRINT_CHANGED": true,
+      "D04_SOURCE_FINGERPRINT_CHANGED": true,
+      "DATA_INTEGRITY_PRESENT_IN_D04": false,
+      "DECISION_ID_CHANGED": true,
+      "G_PRESENT_IN_EXECUTABLE_C": false,
+      "NUMERIC_EQUAL": true,
+      "SEMANTIC_EQUAL": true,
+      "TRANSITION_ID_CHANGED": true,
+      "cycle": 1,
+      "physical_row": 10
+    },
+    {
+      "D04_INPUT_FINGERPRINT_CHANGED": true,
+      "D04_SOURCE_FINGERPRINT_CHANGED": true,
+      "DATA_INTEGRITY_PRESENT_IN_D04": false,
+      "DECISION_ID_CHANGED": true,
+      "G_PRESENT_IN_EXECUTABLE_C": false,
+      "NUMERIC_EQUAL": true,
+      "SEMANTIC_EQUAL": true,
+      "TRANSITION_ID_CHANGED": true,
+      "cycle": 2,
+      "physical_row": 11
+    },
+    {
+      "D04_INPUT_FINGERPRINT_CHANGED": true,
+      "D04_SOURCE_FINGERPRINT_CHANGED": true,
+      "DATA_INTEGRITY_PRESENT_IN_D04": false,
+      "DECISION_ID_CHANGED": true,
+      "G_PRESENT_IN_EXECUTABLE_C": false,
+      "NUMERIC_EQUAL": true,
+      "SEMANTIC_EQUAL": true,
+      "TRANSITION_ID_CHANGED": true,
+      "cycle": 3,
+      "physical_row": 12
+    },
+    {
+      "D04_INPUT_FINGERPRINT_CHANGED": true,
+      "D04_SOURCE_FINGERPRINT_CHANGED": true,
+      "DATA_INTEGRITY_PRESENT_IN_D04": false,
+      "DECISION_ID_CHANGED": true,
+      "G_PRESENT_IN_EXECUTABLE_C": false,
+      "NUMERIC_EQUAL": true,
+      "SEMANTIC_EQUAL": true,
+      "TRANSITION_ID_CHANGED": true,
+      "cycle": 4,
+      "physical_row": 13
+    },
+    {
+      "D04_INPUT_FINGERPRINT_CHANGED": true,
+      "D04_SOURCE_FINGERPRINT_CHANGED": true,
+      "DATA_INTEGRITY_PRESENT_IN_D04": false,
+      "DECISION_ID_CHANGED": true,
+      "G_PRESENT_IN_EXECUTABLE_C": false,
+      "NUMERIC_EQUAL": true,
+      "SEMANTIC_EQUAL": true,
+      "TRANSITION_ID_CHANGED": true,
+      "cycle": 5,
+      "physical_row": 14
+    }
+  ],
+  "test_id": "APTF_TEST_004R_DATA_INTEGRITY_REMOVAL_REGRESSION_V0_1"
+}

@@ -1,0 +1,2951 @@
+{
+  "artifact_id": "APTF_TWO_ROW_DIRECTION_PROPAGATION_TRACE_V0_1",
+  "artifact_status": "DIAGNOSTIC_ONLY_NOT_IMPLEMENTATION_AUTHORITY",
+  "authorities": {
+    "D01": {
+      "artifact": "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json",
+      "sha256": "b6ed942e41ec1c72350cf9247597e5819a942dbe9d04770c23e243204165b235",
+      "verified": true
+    },
+    "D02": {
+      "artifact": "D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FREEZE.json",
+      "sha256": "c8029c4b9608547bbf7960f05e4f8613480c4fb2bf8594d94482516b954f7e72",
+      "verified": true
+    },
+    "D03": {
+      "artifact": "D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_FREEZE.json",
+      "sha256": "6a93291ffe555a3fff1239a9a4f88c0a1546b6c46a02b60586614b60a3c91ad6",
+      "verified": true
+    },
+    "D04": {
+      "artifact": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FREEZE.json",
+      "sha256": "f72a86b3085bd11d8626f06f1fe3faedde60570365488176011239382a46f1af",
+      "verified": true
+    }
+  },
+  "d01_ohlcv_consumption": {
+    "close": {
+      "consumed": true,
+      "mapping": "source close -> NormalizedObservation.price"
+    },
+    "high": {
+      "consumed": false
+    },
+    "low": {
+      "consumed": false
+    },
+    "open": {
+      "consumed": false
+    },
+    "volume": {
+      "consumed": true,
+      "mapping": "source volume -> NormalizedObservation.volume; frozen D01 volume channel enabled by default configuration"
+    }
+  },
+  "d01_to_d02": {
+    "adapter": null,
+    "consumer_signature": "build_return_shape(dmo: DMOOutput, fmo: FMOOutput) -> ReturnShape",
+    "producer_types": [
+      "d01.v02.outputs.DMOOutput",
+      "d01.v02.outputs.FMOOutput"
+    ],
+    "relationship": "DIRECT PAIR",
+    "synthesized_by_harness_fields": 0
+  },
+  "d02_semantics": {
+    "changing_information_received": true,
+    "direction_changed": false,
+    "direction_field": "path_direction",
+    "magnitude_fields": [
+      "terminal_displacement",
+      "maximum_absolute_displacement"
+    ],
+    "output_changed": true,
+    "row_a": "UPWARD",
+    "row_b": "UPWARD",
+    "shape_fields": [
+      "projection_interval",
+      "forward_half_life",
+      "forward_samples",
+      "terminal_decay_factor"
+    ],
+    "uncertainty_fields": [
+      "uncertainty",
+      "forward_samples[*].uncertainty"
+    ]
+  },
+  "diagnostic_status": "FAIL_ZERO_MOCK_FULL_CHAIN_UNREACHABLE",
+  "diff_counts": {
+    "d01_input": {
+      "changed": 5,
+      "flattened_fields": 14,
+      "not_present": 0,
+      "same": 9
+    },
+    "d01_output": {
+      "changed": 75,
+      "flattened_fields": 85,
+      "not_present": 0,
+      "same": 10
+    },
+    "d02_input": {
+      "changed": 75,
+      "flattened_fields": 85,
+      "not_present": 0,
+      "same": 10
+    },
+    "d02_output": {
+      "changed": 68,
+      "flattened_fields": 72,
+      "not_present": 0,
+      "same": 4
+    }
+  },
+  "diffs": {
+    "d01_input": {
+      "ask": {
+        "classification": "SAME",
+        "row_a": null,
+        "row_b": null
+      },
+      "ask_size": {
+        "classification": "SAME",
+        "row_a": null,
+        "row_b": null
+      },
+      "availability_mask.price": {
+        "classification": "SAME",
+        "row_a": true,
+        "row_b": true
+      },
+      "availability_mask.volume": {
+        "classification": "SAME",
+        "row_a": true,
+        "row_b": true
+      },
+      "bid": {
+        "classification": "SAME",
+        "row_a": null,
+        "row_b": null
+      },
+      "bid_size": {
+        "classification": "SAME",
+        "row_a": null,
+        "row_b": null
+      },
+      "entity_id": {
+        "classification": "SAME",
+        "row_a": "SPY",
+        "row_b": "SPY"
+      },
+      "event_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "price": {
+        "classification": "CHANGED",
+        "row_a": 366.0,
+        "row_b": 366.17
+      },
+      "receive_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "sequence_id": {
+        "classification": "CHANGED",
+        "row_a": 16,
+        "row_b": 17
+      },
+      "session": {
+        "classification": "SAME",
+        "row_a": "PREMARKET",
+        "row_b": "PREMARKET"
+      },
+      "source_quality": {
+        "classification": "SAME",
+        "row_a": 1.0,
+        "row_b": 1.0
+      },
+      "volume": {
+        "classification": "CHANGED",
+        "row_a": 616.0,
+        "row_b": 2398.0
+      }
+    },
+    "d01_output": {
+      "dmo.coherence": {
+        "classification": "CHANGED",
+        "row_a": 0.9999999907876206,
+        "row_b": 0.9999931783150069
+      },
+      "dmo.config_hash": {
+        "classification": "SAME",
+        "row_a": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+        "row_b": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD"
+      },
+      "dmo.data_quality": {
+        "classification": "SAME",
+        "row_a": 1.0,
+        "row_b": 1.0
+      },
+      "dmo.dmo_schema_version": {
+        "classification": "SAME",
+        "row_a": "0.2.0",
+        "row_b": "0.2.0"
+      },
+      "dmo.entity_id": {
+        "classification": "SAME",
+        "row_a": "SPY",
+        "row_b": "SPY"
+      },
+      "dmo.fmo_schema_version": {
+        "classification": "SAME",
+        "row_a": "0.2.0",
+        "row_b": "0.2.0"
+      },
+      "dmo.forward_half_life": {
+        "classification": "SAME",
+        "row_a": 15.0,
+        "row_b": 15.0
+      },
+      "dmo.model_health": {
+        "classification": "SAME",
+        "row_a": "DEGRADED_DATA",
+        "row_b": "DEGRADED_DATA"
+      },
+      "dmo.model_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "dmo.model_version": {
+        "classification": "SAME",
+        "row_a": "0.2",
+        "row_b": "0.2"
+      },
+      "dmo.observation_half_life": {
+        "classification": "SAME",
+        "row_a": 15.0,
+        "row_b": 15.0
+      },
+      "dmo.parameter_state.ref_alpha": {
+        "classification": "CHANGED",
+        "row_a": 0.051562086467087535,
+        "row_b": 0.05176646431379669
+      },
+      "dmo.parameter_update_magnitude.ref_alpha": {
+        "classification": "CHANGED",
+        "row_a": 0.00014554768354110847,
+        "row_b": 0.00020437784670915282
+      },
+      "dmo.persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.6840391573948615,
+        "row_b": 0.6672308993184185
+      },
+      "dmo.perturbation_class": {
+        "classification": "CHANGED",
+        "row_a": "REVERSING",
+        "row_b": "CONTRADICTING"
+      },
+      "dmo.perturbation_magnitude": {
+        "classification": "CHANGED",
+        "row_a": 0.027385217798428497,
+        "row_b": 0.003949663883064501
+      },
+      "dmo.reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5091154115712131,
+        "row_b": 0.7484880373502629
+      },
+      "dmo.state_acceleration": {
+        "classification": "CHANGED",
+        "row_a": 6.0582676702565786e-05,
+        "row_b": -8.532022211364249e-06
+      },
+      "dmo.state_curvature": {
+        "classification": "CHANGED",
+        "row_a": 6.0580182036429116e-05,
+        "row_b": -8.531736177522575e-06
+      },
+      "dmo.state_hash": {
+        "classification": "CHANGED",
+        "row_a": "FCCB692875A5CF82F914D2E27640C3A503998D00968F9A711E439589AD9BEC03",
+        "row_b": "0237A5C4ABA304EB7C9D5B1BFC651A080250A381B0E655D402EFBC6790B95509"
+      },
+      "dmo.state_level": {
+        "classification": "CHANGED",
+        "row_a": 0.1861982523830909,
+        "row_b": 0.4698558421496643
+      },
+      "dmo.state_support_ratio": {
+        "classification": "CHANGED",
+        "row_a": 0.6827851084628193,
+        "row_b": 0.5864884257246546
+      },
+      "dmo.state_velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.005239547828088794,
+        "row_b": 0.004727626495321619
+      },
+      "dmo.strength": {
+        "classification": "CHANGED",
+        "row_a": 0.8043937518637954,
+        "row_b": 0.8976642163450754
+      },
+      "dmo.trace_id": {
+        "classification": "CHANGED",
+        "row_a": "SPY:17",
+        "row_b": "SPY:18"
+      },
+      "dmo.uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.296755743816712,
+        "row_b": 0.2727585484077373
+      },
+      "fmo.entity_id": {
+        "classification": "SAME",
+        "row_a": "SPY",
+        "row_b": "SPY"
+      },
+      "fmo.interval_length": {
+        "classification": "CHANGED",
+        "row_a": 67.3155665570578,
+        "row_b": 72.006895138787
+      },
+      "fmo.model_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "fmo.samples[0].level": {
+        "classification": "CHANGED",
+        "row_a": 0.19462833422987413,
+        "row_b": 0.4779056672740783
+      },
+      "fmo.samples[0].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.635457786134345,
+        "row_b": 0.6166690634559729
+      },
+      "fmo.samples[0].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5162175446487312,
+        "row_b": 0.7560658992139888
+      },
+      "fmo.samples[0].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.7472646371391879,
+        "row_b": 0.8296404620303484
+      },
+      "fmo.samples[0].tau": {
+        "classification": "CHANGED",
+        "row_a": 1.594239365852591,
+        "row_b": 1.7053444353880702
+      },
+      "fmo.samples[0].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.30740894343298913,
+        "row_b": 0.28412534120332605
+      },
+      "fmo.samples[0].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0048674281686777185,
+        "row_b": 0.004369373490073243
+      },
+      "fmo.samples[1].level": {
+        "classification": "CHANGED",
+        "row_a": 0.21621895429655258,
+        "row_b": 0.49777972613807386
+      },
+      "fmo.samples[1].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.5292617228701793,
+        "row_b": 0.5071089788286183
+      },
+      "fmo.samples[1].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5317423961307151,
+        "row_b": 0.772486014760087
+      },
+      "fmo.samples[1].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.6223837018319762,
+        "row_b": 0.6822429604905098
+      },
+      "fmo.samples[1].tau": {
+        "classification": "CHANGED",
+        "row_a": 5.551463911887316,
+        "row_b": 5.938354235363982
+      },
+      "fmo.samples[1].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.3306962206559649,
+        "row_b": 0.3087555145224734
+      },
+      "fmo.samples[1].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.004053996150039425,
+        "row_b": 0.0035930917569534787
+      },
+      "fmo.samples[2].level": {
+        "classification": "CHANGED",
+        "row_a": 0.25056511169068635,
+        "row_b": 0.527455273135219
+      },
+      "fmo.samples[2].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.40172871716234093,
+        "row_b": 0.37758869942444917
+      },
+      "fmo.samples[2].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5503865050723059,
+        "row_b": 0.7918976276719703
+      },
+      "fmo.samples[2].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.47241165441514005,
+        "row_b": 0.5079918575651131
+      },
+      "fmo.samples[2].tau": {
+        "classification": "CHANGED",
+        "row_a": 11.517859785277338,
+        "row_b": 12.320557698622846
+      },
+      "fmo.samples[2].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.35866238406835116,
+        "row_b": 0.3378729338902984
+      },
+      "fmo.samples[2].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0030771291449237913,
+        "row_b": 0.0026753832017620115
+      },
+      "fmo.samples[3].level": {
+        "classification": "CHANGED",
+        "row_a": 0.2988055001269704,
+        "row_b": 0.5657921485680542
+      },
+      "fmo.samples[3].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.27998008997850254,
+        "row_b": 0.25661687918335097
+      },
+      "fmo.samples[3].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5681849930488588,
+        "row_b": 0.8100280560386229
+      },
+      "fmo.samples[3].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.3292417292055194,
+        "row_b": 0.3452414898475953
+      },
+      "fmo.samples[3].tau": {
+        "classification": "CHANGED",
+        "row_a": 19.33132014244643,
+        "row_b": 20.678550498592156
+      },
+      "fmo.samples[3].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.38536011603318054,
+        "row_b": 0.36506857644027735
+      },
+      "fmo.samples[3].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.002144568854715667,
+        "row_b": 0.0018182442665848337
+      },
+      "fmo.samples[4].level": {
+        "classification": "CHANGED",
+        "row_a": 0.3628285929114741,
+        "row_b": 0.6118661554346266
+      },
+      "fmo.samples[4].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.18003679591315763,
+        "row_b": 0.1600128563323852
+      },
+      "fmo.samples[4].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5827957493169613,
+        "row_b": 0.8245064057298089
+      },
+      "fmo.samples[4].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.21171371868485547,
+        "row_b": 0.21527452555251092
+      },
+      "fmo.samples[4].tau": {
+        "classification": "CHANGED",
+        "row_a": 28.88680678510959,
+        "row_b": 30.89997415837988
+      },
+      "fmo.samples[4].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.4072762504353342,
+        "row_b": 0.38678610097705635
+      },
+      "fmo.samples[4].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.001379031292002958,
+        "row_b": 0.0011337619704990091
+      },
+      "fmo.samples[5].level": {
+        "classification": "CHANGED",
+        "row_a": 0.4450705464748999,
+        "row_b": 0.6648314712296783
+      },
+      "fmo.samples[5].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.10719550621243867,
+        "row_b": 0.09189178830503945
+      },
+      "fmo.samples[5].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5934444510635297,
+        "row_b": 0.8347159251176148
+      },
+      "fmo.samples[5].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.12605622718084775,
+        "row_b": 0.12362732334736433
+      },
+      "fmo.samples[5].tau": {
+        "classification": "CHANGED",
+        "row_a": 40.10751729615585,
+        "row_b": 42.90267377863407
+      },
+      "fmo.samples[5].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.42324930305518693,
+        "row_b": 0.4021003800587652
+      },
+      "fmo.samples[5].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0008210874709209755,
+        "row_b": 0.0006510940268760986
+      },
+      "fmo.samples[6].level": {
+        "classification": "CHANGED",
+        "row_a": 0.5484202090992059,
+        "row_b": 0.7238683285913438
+      },
+      "fmo.samples[6].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.05926219098192461,
+        "row_b": 0.04874603453262663
+      },
+      "fmo.samples[6].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.6004518445310421,
+        "row_b": 0.8411823153607056
+      },
+      "fmo.samples[6].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.06968919195966662,
+        "row_b": 0.06558085204590938
+      },
+      "fmo.samples[6].tau": {
+        "classification": "CHANGED",
+        "row_a": 52.93342565084451,
+        "row_b": 56.62244002576115
+      },
+      "fmo.samples[6].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.4337603932564555,
+        "row_b": 0.41179996542340136
+      },
+      "fmo.samples[6].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.00045393173868829594,
+        "row_b": 0.00034538724845284863
+      },
+      "fmo.samples[7].level": {
+        "classification": "CHANGED",
+        "row_a": 0.6761631143414789,
+        "row_b": 0.7881583099566002
+      },
+      "fmo.samples[7].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.030489290348908064,
+        "row_b": 0.02394383961392316
+      },
+      "fmo.samples[7].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.6046581681489176,
+        "row_b": 0.8448994985643071
+      },
+      "fmo.samples[7].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.03585378759430505,
+        "row_b": 0.03221302857118924
+      },
+      "fmo.samples[7].tau": {
+        "classification": "CHANGED",
+        "row_a": 67.3155665570578,
+        "row_b": 72.006895138787
+      },
+      "fmo.samples[7].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.44006987868326874,
+        "row_b": 0.4173757402288036
+      },
+      "fmo.samples[7].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0002335394009255148,
+        "row_b": 0.0001696527104397393
+      }
+    },
+    "d02_input": {
+      "dmo.coherence": {
+        "classification": "CHANGED",
+        "row_a": 0.9999999907876206,
+        "row_b": 0.9999931783150069
+      },
+      "dmo.config_hash": {
+        "classification": "SAME",
+        "row_a": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+        "row_b": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD"
+      },
+      "dmo.data_quality": {
+        "classification": "SAME",
+        "row_a": 1.0,
+        "row_b": 1.0
+      },
+      "dmo.dmo_schema_version": {
+        "classification": "SAME",
+        "row_a": "0.2.0",
+        "row_b": "0.2.0"
+      },
+      "dmo.entity_id": {
+        "classification": "SAME",
+        "row_a": "SPY",
+        "row_b": "SPY"
+      },
+      "dmo.fmo_schema_version": {
+        "classification": "SAME",
+        "row_a": "0.2.0",
+        "row_b": "0.2.0"
+      },
+      "dmo.forward_half_life": {
+        "classification": "SAME",
+        "row_a": 15.0,
+        "row_b": 15.0
+      },
+      "dmo.model_health": {
+        "classification": "SAME",
+        "row_a": "DEGRADED_DATA",
+        "row_b": "DEGRADED_DATA"
+      },
+      "dmo.model_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "dmo.model_version": {
+        "classification": "SAME",
+        "row_a": "0.2",
+        "row_b": "0.2"
+      },
+      "dmo.observation_half_life": {
+        "classification": "SAME",
+        "row_a": 15.0,
+        "row_b": 15.0
+      },
+      "dmo.parameter_state.ref_alpha": {
+        "classification": "CHANGED",
+        "row_a": 0.051562086467087535,
+        "row_b": 0.05176646431379669
+      },
+      "dmo.parameter_update_magnitude.ref_alpha": {
+        "classification": "CHANGED",
+        "row_a": 0.00014554768354110847,
+        "row_b": 0.00020437784670915282
+      },
+      "dmo.persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.6840391573948615,
+        "row_b": 0.6672308993184185
+      },
+      "dmo.perturbation_class": {
+        "classification": "CHANGED",
+        "row_a": "REVERSING",
+        "row_b": "CONTRADICTING"
+      },
+      "dmo.perturbation_magnitude": {
+        "classification": "CHANGED",
+        "row_a": 0.027385217798428497,
+        "row_b": 0.003949663883064501
+      },
+      "dmo.reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5091154115712131,
+        "row_b": 0.7484880373502629
+      },
+      "dmo.state_acceleration": {
+        "classification": "CHANGED",
+        "row_a": 6.0582676702565786e-05,
+        "row_b": -8.532022211364249e-06
+      },
+      "dmo.state_curvature": {
+        "classification": "CHANGED",
+        "row_a": 6.0580182036429116e-05,
+        "row_b": -8.531736177522575e-06
+      },
+      "dmo.state_hash": {
+        "classification": "CHANGED",
+        "row_a": "FCCB692875A5CF82F914D2E27640C3A503998D00968F9A711E439589AD9BEC03",
+        "row_b": "0237A5C4ABA304EB7C9D5B1BFC651A080250A381B0E655D402EFBC6790B95509"
+      },
+      "dmo.state_level": {
+        "classification": "CHANGED",
+        "row_a": 0.1861982523830909,
+        "row_b": 0.4698558421496643
+      },
+      "dmo.state_support_ratio": {
+        "classification": "CHANGED",
+        "row_a": 0.6827851084628193,
+        "row_b": 0.5864884257246546
+      },
+      "dmo.state_velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.005239547828088794,
+        "row_b": 0.004727626495321619
+      },
+      "dmo.strength": {
+        "classification": "CHANGED",
+        "row_a": 0.8043937518637954,
+        "row_b": 0.8976642163450754
+      },
+      "dmo.trace_id": {
+        "classification": "CHANGED",
+        "row_a": "SPY:17",
+        "row_b": "SPY:18"
+      },
+      "dmo.uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.296755743816712,
+        "row_b": 0.2727585484077373
+      },
+      "fmo.entity_id": {
+        "classification": "SAME",
+        "row_a": "SPY",
+        "row_b": "SPY"
+      },
+      "fmo.interval_length": {
+        "classification": "CHANGED",
+        "row_a": 67.3155665570578,
+        "row_b": 72.006895138787
+      },
+      "fmo.model_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "fmo.samples[0].level": {
+        "classification": "CHANGED",
+        "row_a": 0.19462833422987413,
+        "row_b": 0.4779056672740783
+      },
+      "fmo.samples[0].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.635457786134345,
+        "row_b": 0.6166690634559729
+      },
+      "fmo.samples[0].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5162175446487312,
+        "row_b": 0.7560658992139888
+      },
+      "fmo.samples[0].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.7472646371391879,
+        "row_b": 0.8296404620303484
+      },
+      "fmo.samples[0].tau": {
+        "classification": "CHANGED",
+        "row_a": 1.594239365852591,
+        "row_b": 1.7053444353880702
+      },
+      "fmo.samples[0].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.30740894343298913,
+        "row_b": 0.28412534120332605
+      },
+      "fmo.samples[0].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0048674281686777185,
+        "row_b": 0.004369373490073243
+      },
+      "fmo.samples[1].level": {
+        "classification": "CHANGED",
+        "row_a": 0.21621895429655258,
+        "row_b": 0.49777972613807386
+      },
+      "fmo.samples[1].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.5292617228701793,
+        "row_b": 0.5071089788286183
+      },
+      "fmo.samples[1].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5317423961307151,
+        "row_b": 0.772486014760087
+      },
+      "fmo.samples[1].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.6223837018319762,
+        "row_b": 0.6822429604905098
+      },
+      "fmo.samples[1].tau": {
+        "classification": "CHANGED",
+        "row_a": 5.551463911887316,
+        "row_b": 5.938354235363982
+      },
+      "fmo.samples[1].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.3306962206559649,
+        "row_b": 0.3087555145224734
+      },
+      "fmo.samples[1].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.004053996150039425,
+        "row_b": 0.0035930917569534787
+      },
+      "fmo.samples[2].level": {
+        "classification": "CHANGED",
+        "row_a": 0.25056511169068635,
+        "row_b": 0.527455273135219
+      },
+      "fmo.samples[2].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.40172871716234093,
+        "row_b": 0.37758869942444917
+      },
+      "fmo.samples[2].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5503865050723059,
+        "row_b": 0.7918976276719703
+      },
+      "fmo.samples[2].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.47241165441514005,
+        "row_b": 0.5079918575651131
+      },
+      "fmo.samples[2].tau": {
+        "classification": "CHANGED",
+        "row_a": 11.517859785277338,
+        "row_b": 12.320557698622846
+      },
+      "fmo.samples[2].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.35866238406835116,
+        "row_b": 0.3378729338902984
+      },
+      "fmo.samples[2].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0030771291449237913,
+        "row_b": 0.0026753832017620115
+      },
+      "fmo.samples[3].level": {
+        "classification": "CHANGED",
+        "row_a": 0.2988055001269704,
+        "row_b": 0.5657921485680542
+      },
+      "fmo.samples[3].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.27998008997850254,
+        "row_b": 0.25661687918335097
+      },
+      "fmo.samples[3].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5681849930488588,
+        "row_b": 0.8100280560386229
+      },
+      "fmo.samples[3].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.3292417292055194,
+        "row_b": 0.3452414898475953
+      },
+      "fmo.samples[3].tau": {
+        "classification": "CHANGED",
+        "row_a": 19.33132014244643,
+        "row_b": 20.678550498592156
+      },
+      "fmo.samples[3].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.38536011603318054,
+        "row_b": 0.36506857644027735
+      },
+      "fmo.samples[3].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.002144568854715667,
+        "row_b": 0.0018182442665848337
+      },
+      "fmo.samples[4].level": {
+        "classification": "CHANGED",
+        "row_a": 0.3628285929114741,
+        "row_b": 0.6118661554346266
+      },
+      "fmo.samples[4].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.18003679591315763,
+        "row_b": 0.1600128563323852
+      },
+      "fmo.samples[4].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5827957493169613,
+        "row_b": 0.8245064057298089
+      },
+      "fmo.samples[4].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.21171371868485547,
+        "row_b": 0.21527452555251092
+      },
+      "fmo.samples[4].tau": {
+        "classification": "CHANGED",
+        "row_a": 28.88680678510959,
+        "row_b": 30.89997415837988
+      },
+      "fmo.samples[4].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.4072762504353342,
+        "row_b": 0.38678610097705635
+      },
+      "fmo.samples[4].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.001379031292002958,
+        "row_b": 0.0011337619704990091
+      },
+      "fmo.samples[5].level": {
+        "classification": "CHANGED",
+        "row_a": 0.4450705464748999,
+        "row_b": 0.6648314712296783
+      },
+      "fmo.samples[5].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.10719550621243867,
+        "row_b": 0.09189178830503945
+      },
+      "fmo.samples[5].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5934444510635297,
+        "row_b": 0.8347159251176148
+      },
+      "fmo.samples[5].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.12605622718084775,
+        "row_b": 0.12362732334736433
+      },
+      "fmo.samples[5].tau": {
+        "classification": "CHANGED",
+        "row_a": 40.10751729615585,
+        "row_b": 42.90267377863407
+      },
+      "fmo.samples[5].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.42324930305518693,
+        "row_b": 0.4021003800587652
+      },
+      "fmo.samples[5].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0008210874709209755,
+        "row_b": 0.0006510940268760986
+      },
+      "fmo.samples[6].level": {
+        "classification": "CHANGED",
+        "row_a": 0.5484202090992059,
+        "row_b": 0.7238683285913438
+      },
+      "fmo.samples[6].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.05926219098192461,
+        "row_b": 0.04874603453262663
+      },
+      "fmo.samples[6].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.6004518445310421,
+        "row_b": 0.8411823153607056
+      },
+      "fmo.samples[6].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.06968919195966662,
+        "row_b": 0.06558085204590938
+      },
+      "fmo.samples[6].tau": {
+        "classification": "CHANGED",
+        "row_a": 52.93342565084451,
+        "row_b": 56.62244002576115
+      },
+      "fmo.samples[6].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.4337603932564555,
+        "row_b": 0.41179996542340136
+      },
+      "fmo.samples[6].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.00045393173868829594,
+        "row_b": 0.00034538724845284863
+      },
+      "fmo.samples[7].level": {
+        "classification": "CHANGED",
+        "row_a": 0.6761631143414789,
+        "row_b": 0.7881583099566002
+      },
+      "fmo.samples[7].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.030489290348908064,
+        "row_b": 0.02394383961392316
+      },
+      "fmo.samples[7].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.6046581681489176,
+        "row_b": 0.8448994985643071
+      },
+      "fmo.samples[7].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.03585378759430505,
+        "row_b": 0.03221302857118924
+      },
+      "fmo.samples[7].tau": {
+        "classification": "CHANGED",
+        "row_a": 67.3155665570578,
+        "row_b": 72.006895138787
+      },
+      "fmo.samples[7].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.44006987868326874,
+        "row_b": 0.4173757402288036
+      },
+      "fmo.samples[7].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0002335394009255148,
+        "row_b": 0.0001696527104397393
+      }
+    },
+    "d02_output": {
+      "coherence": {
+        "classification": "CHANGED",
+        "row_a": 0.9999999907876206,
+        "row_b": 0.9999931783150069
+      },
+      "current_level": {
+        "classification": "CHANGED",
+        "row_a": 0.1861982523830909,
+        "row_b": 0.4698558421496643
+      },
+      "entity_id": {
+        "classification": "SAME",
+        "row_a": "SPY",
+        "row_b": "SPY"
+      },
+      "forward_half_life": {
+        "classification": "SAME",
+        "row_a": 15.0,
+        "row_b": 15.0
+      },
+      "forward_samples[0].level": {
+        "classification": "CHANGED",
+        "row_a": 0.19462833422987413,
+        "row_b": 0.4779056672740783
+      },
+      "forward_samples[0].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.635457786134345,
+        "row_b": 0.6166690634559729
+      },
+      "forward_samples[0].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5162175446487312,
+        "row_b": 0.7560658992139888
+      },
+      "forward_samples[0].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.7472646371391879,
+        "row_b": 0.8296404620303484
+      },
+      "forward_samples[0].tau": {
+        "classification": "CHANGED",
+        "row_a": 1.594239365852591,
+        "row_b": 1.7053444353880702
+      },
+      "forward_samples[0].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.30740894343298913,
+        "row_b": 0.28412534120332605
+      },
+      "forward_samples[0].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0048674281686777185,
+        "row_b": 0.004369373490073243
+      },
+      "forward_samples[1].level": {
+        "classification": "CHANGED",
+        "row_a": 0.21621895429655258,
+        "row_b": 0.49777972613807386
+      },
+      "forward_samples[1].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.5292617228701793,
+        "row_b": 0.5071089788286183
+      },
+      "forward_samples[1].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5317423961307151,
+        "row_b": 0.772486014760087
+      },
+      "forward_samples[1].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.6223837018319762,
+        "row_b": 0.6822429604905098
+      },
+      "forward_samples[1].tau": {
+        "classification": "CHANGED",
+        "row_a": 5.551463911887316,
+        "row_b": 5.938354235363982
+      },
+      "forward_samples[1].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.3306962206559649,
+        "row_b": 0.3087555145224734
+      },
+      "forward_samples[1].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.004053996150039425,
+        "row_b": 0.0035930917569534787
+      },
+      "forward_samples[2].level": {
+        "classification": "CHANGED",
+        "row_a": 0.25056511169068635,
+        "row_b": 0.527455273135219
+      },
+      "forward_samples[2].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.40172871716234093,
+        "row_b": 0.37758869942444917
+      },
+      "forward_samples[2].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5503865050723059,
+        "row_b": 0.7918976276719703
+      },
+      "forward_samples[2].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.47241165441514005,
+        "row_b": 0.5079918575651131
+      },
+      "forward_samples[2].tau": {
+        "classification": "CHANGED",
+        "row_a": 11.517859785277338,
+        "row_b": 12.320557698622846
+      },
+      "forward_samples[2].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.35866238406835116,
+        "row_b": 0.3378729338902984
+      },
+      "forward_samples[2].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0030771291449237913,
+        "row_b": 0.0026753832017620115
+      },
+      "forward_samples[3].level": {
+        "classification": "CHANGED",
+        "row_a": 0.2988055001269704,
+        "row_b": 0.5657921485680542
+      },
+      "forward_samples[3].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.27998008997850254,
+        "row_b": 0.25661687918335097
+      },
+      "forward_samples[3].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5681849930488588,
+        "row_b": 0.8100280560386229
+      },
+      "forward_samples[3].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.3292417292055194,
+        "row_b": 0.3452414898475953
+      },
+      "forward_samples[3].tau": {
+        "classification": "CHANGED",
+        "row_a": 19.33132014244643,
+        "row_b": 20.678550498592156
+      },
+      "forward_samples[3].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.38536011603318054,
+        "row_b": 0.36506857644027735
+      },
+      "forward_samples[3].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.002144568854715667,
+        "row_b": 0.0018182442665848337
+      },
+      "forward_samples[4].level": {
+        "classification": "CHANGED",
+        "row_a": 0.3628285929114741,
+        "row_b": 0.6118661554346266
+      },
+      "forward_samples[4].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.18003679591315763,
+        "row_b": 0.1600128563323852
+      },
+      "forward_samples[4].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5827957493169613,
+        "row_b": 0.8245064057298089
+      },
+      "forward_samples[4].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.21171371868485547,
+        "row_b": 0.21527452555251092
+      },
+      "forward_samples[4].tau": {
+        "classification": "CHANGED",
+        "row_a": 28.88680678510959,
+        "row_b": 30.89997415837988
+      },
+      "forward_samples[4].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.4072762504353342,
+        "row_b": 0.38678610097705635
+      },
+      "forward_samples[4].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.001379031292002958,
+        "row_b": 0.0011337619704990091
+      },
+      "forward_samples[5].level": {
+        "classification": "CHANGED",
+        "row_a": 0.4450705464748999,
+        "row_b": 0.6648314712296783
+      },
+      "forward_samples[5].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.10719550621243867,
+        "row_b": 0.09189178830503945
+      },
+      "forward_samples[5].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5934444510635297,
+        "row_b": 0.8347159251176148
+      },
+      "forward_samples[5].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.12605622718084775,
+        "row_b": 0.12362732334736433
+      },
+      "forward_samples[5].tau": {
+        "classification": "CHANGED",
+        "row_a": 40.10751729615585,
+        "row_b": 42.90267377863407
+      },
+      "forward_samples[5].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.42324930305518693,
+        "row_b": 0.4021003800587652
+      },
+      "forward_samples[5].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0008210874709209755,
+        "row_b": 0.0006510940268760986
+      },
+      "forward_samples[6].level": {
+        "classification": "CHANGED",
+        "row_a": 0.5484202090992059,
+        "row_b": 0.7238683285913438
+      },
+      "forward_samples[6].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.05926219098192461,
+        "row_b": 0.04874603453262663
+      },
+      "forward_samples[6].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.6004518445310421,
+        "row_b": 0.8411823153607056
+      },
+      "forward_samples[6].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.06968919195966662,
+        "row_b": 0.06558085204590938
+      },
+      "forward_samples[6].tau": {
+        "classification": "CHANGED",
+        "row_a": 52.93342565084451,
+        "row_b": 56.62244002576115
+      },
+      "forward_samples[6].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.4337603932564555,
+        "row_b": 0.41179996542340136
+      },
+      "forward_samples[6].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.00045393173868829594,
+        "row_b": 0.00034538724845284863
+      },
+      "forward_samples[7].level": {
+        "classification": "CHANGED",
+        "row_a": 0.6761631143414789,
+        "row_b": 0.7881583099566002
+      },
+      "forward_samples[7].persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.030489290348908064,
+        "row_b": 0.02394383961392316
+      },
+      "forward_samples[7].reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.6046581681489176,
+        "row_b": 0.8448994985643071
+      },
+      "forward_samples[7].strength": {
+        "classification": "CHANGED",
+        "row_a": 0.03585378759430505,
+        "row_b": 0.03221302857118924
+      },
+      "forward_samples[7].tau": {
+        "classification": "CHANGED",
+        "row_a": 67.3155665570578,
+        "row_b": 72.006895138787
+      },
+      "forward_samples[7].uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.44006987868326874,
+        "row_b": 0.4173757402288036
+      },
+      "forward_samples[7].velocity": {
+        "classification": "CHANGED",
+        "row_a": 0.0002335394009255148,
+        "row_b": 0.0001696527104397393
+      },
+      "maximum_absolute_displacement": {
+        "classification": "CHANGED",
+        "row_a": 0.489964861958388,
+        "row_b": 0.3183024678069359
+      },
+      "model_time": {
+        "classification": "CHANGED",
+        "row_a": 1664525760.0,
+        "row_b": 1664525820.0
+      },
+      "path_direction": {
+        "classification": "SAME",
+        "row_a": "UPWARD",
+        "row_b": "UPWARD"
+      },
+      "persistence": {
+        "classification": "CHANGED",
+        "row_a": 0.6840391573948615,
+        "row_b": 0.6672308993184185
+      },
+      "projection_interval": {
+        "classification": "CHANGED",
+        "row_a": 67.3155665570578,
+        "row_b": 72.006895138787
+      },
+      "reversal_propensity": {
+        "classification": "CHANGED",
+        "row_a": 0.5091154115712131,
+        "row_b": 0.7484880373502629
+      },
+      "source_model_version": {
+        "classification": "SAME",
+        "row_a": "0.2",
+        "row_b": "0.2"
+      },
+      "state_support_ratio": {
+        "classification": "CHANGED",
+        "row_a": 0.6827851084628193,
+        "row_b": 0.5864884257246546
+      },
+      "strength": {
+        "classification": "CHANGED",
+        "row_a": 0.8043937518637954,
+        "row_b": 0.8976642163450754
+      },
+      "terminal_decay_factor": {
+        "classification": "CHANGED",
+        "row_a": 0.04457243422295505,
+        "row_b": 0.03588538785955803
+      },
+      "terminal_displacement": {
+        "classification": "CHANGED",
+        "row_a": 0.489964861958388,
+        "row_b": 0.3183024678069359
+      },
+      "uncertainty": {
+        "classification": "CHANGED",
+        "row_a": 0.296755743816712,
+        "row_b": 0.2727585484077373
+      }
+    }
+  },
+  "freeze_changes": "NONE",
+  "harness_synthetic_values_declared": [
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.market_eligible",
+      "value": true
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.clock_event_quality",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.capital_available",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.portfolio_capacity",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.position_capacity",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.liquidity_quality",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.spread_quality",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.latency_quality",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.execution_feasibility",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.risk_capacity",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D04",
+      "field": "EnvelopeContext.broker_health",
+      "value": 1.0
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D03 when initialized LONG/SHORT",
+      "field": "DecisionContext.position_candidate_id",
+      "value": "D04C|SPY|0.0|0.0"
+    },
+    {
+      "classification": "MOCK/SYNTHETIC VALUE",
+      "destination": "D03 when initialized LONG/SHORT",
+      "field": "DecisionContext.position_source_return_shape_model_time",
+      "value": 0.0
+    }
+  ],
+  "historical_context": {
+    "initialization": "D01 frozen initial RuntimeState plus genuine source rows 0-15; no synthetic warm-up observations",
+    "preceding_rows_before_row_a": 16,
+    "rows_processed": 18
+  },
+  "implementation_changes": "NONE",
+  "prior_csv_observation": {
+    "evidence_source": "output/SPY_APTF_position_actions_development_v0_2.csv",
+    "excluded_from_zero_mock_trace": true,
+    "reason": "That replay used the 13 harness synthetic values listed above.",
+    "row_a_desired_position": "FLAT",
+    "row_b_desired_position": "FLAT"
+  },
+  "replay_csv_regenerated": false,
+  "rows": {
+    "A": {
+      "d01_input": {
+        "ask": null,
+        "ask_size": null,
+        "availability_mask": {
+          "price": true,
+          "volume": true
+        },
+        "bid": null,
+        "bid_size": null,
+        "entity_id": "SPY",
+        "event_time": 1664525760.0,
+        "price": 366.0,
+        "receive_time": 1664525760.0,
+        "sequence_id": 16,
+        "session": "PREMARKET",
+        "source_quality": 1.0,
+        "volume": 616.0
+      },
+      "d01_output": {
+        "dmo": {
+          "coherence": 0.9999999907876206,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664525760.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.051562086467087535
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00014554768354110847
+          },
+          "persistence": 0.6840391573948615,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.027385217798428497,
+          "reversal_propensity": 0.5091154115712131,
+          "state_acceleration": 6.0582676702565786e-05,
+          "state_curvature": 6.0580182036429116e-05,
+          "state_hash": "FCCB692875A5CF82F914D2E27640C3A503998D00968F9A711E439589AD9BEC03",
+          "state_level": 0.1861982523830909,
+          "state_support_ratio": 0.6827851084628193,
+          "state_velocity": 0.005239547828088794,
+          "strength": 0.8043937518637954,
+          "trace_id": "SPY:17",
+          "uncertainty": 0.296755743816712
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 67.3155665570578,
+          "model_time": 1664525760.0,
+          "samples": [
+            {
+              "level": 0.19462833422987413,
+              "persistence": 0.635457786134345,
+              "reversal_propensity": 0.5162175446487312,
+              "strength": 0.7472646371391879,
+              "tau": 1.594239365852591,
+              "uncertainty": 0.30740894343298913,
+              "velocity": 0.0048674281686777185
+            },
+            {
+              "level": 0.21621895429655258,
+              "persistence": 0.5292617228701793,
+              "reversal_propensity": 0.5317423961307151,
+              "strength": 0.6223837018319762,
+              "tau": 5.551463911887316,
+              "uncertainty": 0.3306962206559649,
+              "velocity": 0.004053996150039425
+            },
+            {
+              "level": 0.25056511169068635,
+              "persistence": 0.40172871716234093,
+              "reversal_propensity": 0.5503865050723059,
+              "strength": 0.47241165441514005,
+              "tau": 11.517859785277338,
+              "uncertainty": 0.35866238406835116,
+              "velocity": 0.0030771291449237913
+            },
+            {
+              "level": 0.2988055001269704,
+              "persistence": 0.27998008997850254,
+              "reversal_propensity": 0.5681849930488588,
+              "strength": 0.3292417292055194,
+              "tau": 19.33132014244643,
+              "uncertainty": 0.38536011603318054,
+              "velocity": 0.002144568854715667
+            },
+            {
+              "level": 0.3628285929114741,
+              "persistence": 0.18003679591315763,
+              "reversal_propensity": 0.5827957493169613,
+              "strength": 0.21171371868485547,
+              "tau": 28.88680678510959,
+              "uncertainty": 0.4072762504353342,
+              "velocity": 0.001379031292002958
+            },
+            {
+              "level": 0.4450705464748999,
+              "persistence": 0.10719550621243867,
+              "reversal_propensity": 0.5934444510635297,
+              "strength": 0.12605622718084775,
+              "tau": 40.10751729615585,
+              "uncertainty": 0.42324930305518693,
+              "velocity": 0.0008210874709209755
+            },
+            {
+              "level": 0.5484202090992059,
+              "persistence": 0.05926219098192461,
+              "reversal_propensity": 0.6004518445310421,
+              "strength": 0.06968919195966662,
+              "tau": 52.93342565084451,
+              "uncertainty": 0.4337603932564555,
+              "velocity": 0.00045393173868829594
+            },
+            {
+              "level": 0.6761631143414789,
+              "persistence": 0.030489290348908064,
+              "reversal_propensity": 0.6046581681489176,
+              "strength": 0.03585378759430505,
+              "tau": 67.3155665570578,
+              "uncertainty": 0.44006987868326874,
+              "velocity": 0.0002335394009255148
+            }
+          ]
+        }
+      },
+      "d02_input": {
+        "dmo": {
+          "coherence": 0.9999999907876206,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664525760.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.051562086467087535
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00014554768354110847
+          },
+          "persistence": 0.6840391573948615,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.027385217798428497,
+          "reversal_propensity": 0.5091154115712131,
+          "state_acceleration": 6.0582676702565786e-05,
+          "state_curvature": 6.0580182036429116e-05,
+          "state_hash": "FCCB692875A5CF82F914D2E27640C3A503998D00968F9A711E439589AD9BEC03",
+          "state_level": 0.1861982523830909,
+          "state_support_ratio": 0.6827851084628193,
+          "state_velocity": 0.005239547828088794,
+          "strength": 0.8043937518637954,
+          "trace_id": "SPY:17",
+          "uncertainty": 0.296755743816712
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 67.3155665570578,
+          "model_time": 1664525760.0,
+          "samples": [
+            {
+              "level": 0.19462833422987413,
+              "persistence": 0.635457786134345,
+              "reversal_propensity": 0.5162175446487312,
+              "strength": 0.7472646371391879,
+              "tau": 1.594239365852591,
+              "uncertainty": 0.30740894343298913,
+              "velocity": 0.0048674281686777185
+            },
+            {
+              "level": 0.21621895429655258,
+              "persistence": 0.5292617228701793,
+              "reversal_propensity": 0.5317423961307151,
+              "strength": 0.6223837018319762,
+              "tau": 5.551463911887316,
+              "uncertainty": 0.3306962206559649,
+              "velocity": 0.004053996150039425
+            },
+            {
+              "level": 0.25056511169068635,
+              "persistence": 0.40172871716234093,
+              "reversal_propensity": 0.5503865050723059,
+              "strength": 0.47241165441514005,
+              "tau": 11.517859785277338,
+              "uncertainty": 0.35866238406835116,
+              "velocity": 0.0030771291449237913
+            },
+            {
+              "level": 0.2988055001269704,
+              "persistence": 0.27998008997850254,
+              "reversal_propensity": 0.5681849930488588,
+              "strength": 0.3292417292055194,
+              "tau": 19.33132014244643,
+              "uncertainty": 0.38536011603318054,
+              "velocity": 0.002144568854715667
+            },
+            {
+              "level": 0.3628285929114741,
+              "persistence": 0.18003679591315763,
+              "reversal_propensity": 0.5827957493169613,
+              "strength": 0.21171371868485547,
+              "tau": 28.88680678510959,
+              "uncertainty": 0.4072762504353342,
+              "velocity": 0.001379031292002958
+            },
+            {
+              "level": 0.4450705464748999,
+              "persistence": 0.10719550621243867,
+              "reversal_propensity": 0.5934444510635297,
+              "strength": 0.12605622718084775,
+              "tau": 40.10751729615585,
+              "uncertainty": 0.42324930305518693,
+              "velocity": 0.0008210874709209755
+            },
+            {
+              "level": 0.5484202090992059,
+              "persistence": 0.05926219098192461,
+              "reversal_propensity": 0.6004518445310421,
+              "strength": 0.06968919195966662,
+              "tau": 52.93342565084451,
+              "uncertainty": 0.4337603932564555,
+              "velocity": 0.00045393173868829594
+            },
+            {
+              "level": 0.6761631143414789,
+              "persistence": 0.030489290348908064,
+              "reversal_propensity": 0.6046581681489176,
+              "strength": 0.03585378759430505,
+              "tau": 67.3155665570578,
+              "uncertainty": 0.44006987868326874,
+              "velocity": 0.0002335394009255148
+            }
+          ]
+        }
+      },
+      "d02_output": {
+        "coherence": 0.9999999907876206,
+        "current_level": 0.1861982523830909,
+        "entity_id": "SPY",
+        "forward_half_life": 15.0,
+        "forward_samples": [
+          {
+            "level": 0.19462833422987413,
+            "persistence": 0.635457786134345,
+            "reversal_propensity": 0.5162175446487312,
+            "strength": 0.7472646371391879,
+            "tau": 1.594239365852591,
+            "uncertainty": 0.30740894343298913,
+            "velocity": 0.0048674281686777185
+          },
+          {
+            "level": 0.21621895429655258,
+            "persistence": 0.5292617228701793,
+            "reversal_propensity": 0.5317423961307151,
+            "strength": 0.6223837018319762,
+            "tau": 5.551463911887316,
+            "uncertainty": 0.3306962206559649,
+            "velocity": 0.004053996150039425
+          },
+          {
+            "level": 0.25056511169068635,
+            "persistence": 0.40172871716234093,
+            "reversal_propensity": 0.5503865050723059,
+            "strength": 0.47241165441514005,
+            "tau": 11.517859785277338,
+            "uncertainty": 0.35866238406835116,
+            "velocity": 0.0030771291449237913
+          },
+          {
+            "level": 0.2988055001269704,
+            "persistence": 0.27998008997850254,
+            "reversal_propensity": 0.5681849930488588,
+            "strength": 0.3292417292055194,
+            "tau": 19.33132014244643,
+            "uncertainty": 0.38536011603318054,
+            "velocity": 0.002144568854715667
+          },
+          {
+            "level": 0.3628285929114741,
+            "persistence": 0.18003679591315763,
+            "reversal_propensity": 0.5827957493169613,
+            "strength": 0.21171371868485547,
+            "tau": 28.88680678510959,
+            "uncertainty": 0.4072762504353342,
+            "velocity": 0.001379031292002958
+          },
+          {
+            "level": 0.4450705464748999,
+            "persistence": 0.10719550621243867,
+            "reversal_propensity": 0.5934444510635297,
+            "strength": 0.12605622718084775,
+            "tau": 40.10751729615585,
+            "uncertainty": 0.42324930305518693,
+            "velocity": 0.0008210874709209755
+          },
+          {
+            "level": 0.5484202090992059,
+            "persistence": 0.05926219098192461,
+            "reversal_propensity": 0.6004518445310421,
+            "strength": 0.06968919195966662,
+            "tau": 52.93342565084451,
+            "uncertainty": 0.4337603932564555,
+            "velocity": 0.00045393173868829594
+          },
+          {
+            "level": 0.6761631143414789,
+            "persistence": 0.030489290348908064,
+            "reversal_propensity": 0.6046581681489176,
+            "strength": 0.03585378759430505,
+            "tau": 67.3155665570578,
+            "uncertainty": 0.44006987868326874,
+            "velocity": 0.0002335394009255148
+          }
+        ],
+        "maximum_absolute_displacement": 0.489964861958388,
+        "model_time": 1664525760.0,
+        "path_direction": "UPWARD",
+        "persistence": 0.6840391573948615,
+        "projection_interval": 67.3155665570578,
+        "reversal_propensity": 0.5091154115712131,
+        "source_model_version": "0.2",
+        "state_support_ratio": 0.6827851084628193,
+        "strength": 0.8043937518637954,
+        "terminal_decay_factor": 0.04457243422295505,
+        "terminal_displacement": 0.489964861958388,
+        "uncertainty": 0.296755743816712
+      },
+      "runtime_types": {
+        "d01_dmo": "d01.v02.outputs.DMOOutput",
+        "d01_fmo": "d01.v02.outputs.FMOOutput",
+        "d01_input": "d01.v02.observations.NormalizedObservation",
+        "d02_output": "d02.v02.models.ReturnShape"
+      },
+      "source_row": {
+        "close": "366.0",
+        "close_return_1m": "0.0005193953145075092",
+        "data_valid": "true",
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:16:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:16:00Z",
+        "high": "366.0",
+        "high_low_range": "0.0",
+        "high_low_range_fraction": "0.0",
+        "is_regular_session": "false",
+        "low": "366.0",
+        "minute_of_session": "-1",
+        "open": "366.0",
+        "open_close_change": "0.0",
+        "open_close_return": "0.0",
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": "17",
+        "timezone": "America/New_York",
+        "volume": "616.0"
+      },
+      "source_row_index_zero_based": 16
+    },
+    "B": {
+      "d01_input": {
+        "ask": null,
+        "ask_size": null,
+        "availability_mask": {
+          "price": true,
+          "volume": true
+        },
+        "bid": null,
+        "bid_size": null,
+        "entity_id": "SPY",
+        "event_time": 1664525820.0,
+        "price": 366.17,
+        "receive_time": 1664525820.0,
+        "sequence_id": 17,
+        "session": "PREMARKET",
+        "source_quality": 1.0,
+        "volume": 2398.0
+      },
+      "d01_output": {
+        "dmo": {
+          "coherence": 0.9999931783150069,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664525820.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05176646431379669
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00020437784670915282
+          },
+          "persistence": 0.6672308993184185,
+          "perturbation_class": "CONTRADICTING",
+          "perturbation_magnitude": 0.003949663883064501,
+          "reversal_propensity": 0.7484880373502629,
+          "state_acceleration": -8.532022211364249e-06,
+          "state_curvature": -8.531736177522575e-06,
+          "state_hash": "0237A5C4ABA304EB7C9D5B1BFC651A080250A381B0E655D402EFBC6790B95509",
+          "state_level": 0.4698558421496643,
+          "state_support_ratio": 0.5864884257246546,
+          "state_velocity": 0.004727626495321619,
+          "strength": 0.8976642163450754,
+          "trace_id": "SPY:18",
+          "uncertainty": 0.2727585484077373
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 72.006895138787,
+          "model_time": 1664525820.0,
+          "samples": [
+            {
+              "level": 0.4779056672740783,
+              "persistence": 0.6166690634559729,
+              "reversal_propensity": 0.7560658992139888,
+              "strength": 0.8296404620303484,
+              "tau": 1.7053444353880702,
+              "uncertainty": 0.28412534120332605,
+              "velocity": 0.004369373490073243
+            },
+            {
+              "level": 0.49777972613807386,
+              "persistence": 0.5071089788286183,
+              "reversal_propensity": 0.772486014760087,
+              "strength": 0.6822429604905098,
+              "tau": 5.938354235363982,
+              "uncertainty": 0.3087555145224734,
+              "velocity": 0.0035930917569534787
+            },
+            {
+              "level": 0.527455273135219,
+              "persistence": 0.37758869942444917,
+              "reversal_propensity": 0.7918976276719703,
+              "strength": 0.5079918575651131,
+              "tau": 12.320557698622846,
+              "uncertainty": 0.3378729338902984,
+              "velocity": 0.0026753832017620115
+            },
+            {
+              "level": 0.5657921485680542,
+              "persistence": 0.25661687918335097,
+              "reversal_propensity": 0.8100280560386229,
+              "strength": 0.3452414898475953,
+              "tau": 20.678550498592156,
+              "uncertainty": 0.36506857644027735,
+              "velocity": 0.0018182442665848337
+            },
+            {
+              "level": 0.6118661554346266,
+              "persistence": 0.1600128563323852,
+              "reversal_propensity": 0.8245064057298089,
+              "strength": 0.21527452555251092,
+              "tau": 30.89997415837988,
+              "uncertainty": 0.38678610097705635,
+              "velocity": 0.0011337619704990091
+            },
+            {
+              "level": 0.6648314712296783,
+              "persistence": 0.09189178830503945,
+              "reversal_propensity": 0.8347159251176148,
+              "strength": 0.12362732334736433,
+              "tau": 42.90267377863407,
+              "uncertainty": 0.4021003800587652,
+              "velocity": 0.0006510940268760986
+            },
+            {
+              "level": 0.7238683285913438,
+              "persistence": 0.04874603453262663,
+              "reversal_propensity": 0.8411823153607056,
+              "strength": 0.06558085204590938,
+              "tau": 56.62244002576115,
+              "uncertainty": 0.41179996542340136,
+              "velocity": 0.00034538724845284863
+            },
+            {
+              "level": 0.7881583099566002,
+              "persistence": 0.02394383961392316,
+              "reversal_propensity": 0.8448994985643071,
+              "strength": 0.03221302857118924,
+              "tau": 72.006895138787,
+              "uncertainty": 0.4173757402288036,
+              "velocity": 0.0001696527104397393
+            }
+          ]
+        }
+      },
+      "d02_input": {
+        "dmo": {
+          "coherence": 0.9999931783150069,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1664525820.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05176646431379669
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00020437784670915282
+          },
+          "persistence": 0.6672308993184185,
+          "perturbation_class": "CONTRADICTING",
+          "perturbation_magnitude": 0.003949663883064501,
+          "reversal_propensity": 0.7484880373502629,
+          "state_acceleration": -8.532022211364249e-06,
+          "state_curvature": -8.531736177522575e-06,
+          "state_hash": "0237A5C4ABA304EB7C9D5B1BFC651A080250A381B0E655D402EFBC6790B95509",
+          "state_level": 0.4698558421496643,
+          "state_support_ratio": 0.5864884257246546,
+          "state_velocity": 0.004727626495321619,
+          "strength": 0.8976642163450754,
+          "trace_id": "SPY:18",
+          "uncertainty": 0.2727585484077373
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 72.006895138787,
+          "model_time": 1664525820.0,
+          "samples": [
+            {
+              "level": 0.4779056672740783,
+              "persistence": 0.6166690634559729,
+              "reversal_propensity": 0.7560658992139888,
+              "strength": 0.8296404620303484,
+              "tau": 1.7053444353880702,
+              "uncertainty": 0.28412534120332605,
+              "velocity": 0.004369373490073243
+            },
+            {
+              "level": 0.49777972613807386,
+              "persistence": 0.5071089788286183,
+              "reversal_propensity": 0.772486014760087,
+              "strength": 0.6822429604905098,
+              "tau": 5.938354235363982,
+              "uncertainty": 0.3087555145224734,
+              "velocity": 0.0035930917569534787
+            },
+            {
+              "level": 0.527455273135219,
+              "persistence": 0.37758869942444917,
+              "reversal_propensity": 0.7918976276719703,
+              "strength": 0.5079918575651131,
+              "tau": 12.320557698622846,
+              "uncertainty": 0.3378729338902984,
+              "velocity": 0.0026753832017620115
+            },
+            {
+              "level": 0.5657921485680542,
+              "persistence": 0.25661687918335097,
+              "reversal_propensity": 0.8100280560386229,
+              "strength": 0.3452414898475953,
+              "tau": 20.678550498592156,
+              "uncertainty": 0.36506857644027735,
+              "velocity": 0.0018182442665848337
+            },
+            {
+              "level": 0.6118661554346266,
+              "persistence": 0.1600128563323852,
+              "reversal_propensity": 0.8245064057298089,
+              "strength": 0.21527452555251092,
+              "tau": 30.89997415837988,
+              "uncertainty": 0.38678610097705635,
+              "velocity": 0.0011337619704990091
+            },
+            {
+              "level": 0.6648314712296783,
+              "persistence": 0.09189178830503945,
+              "reversal_propensity": 0.8347159251176148,
+              "strength": 0.12362732334736433,
+              "tau": 42.90267377863407,
+              "uncertainty": 0.4021003800587652,
+              "velocity": 0.0006510940268760986
+            },
+            {
+              "level": 0.7238683285913438,
+              "persistence": 0.04874603453262663,
+              "reversal_propensity": 0.8411823153607056,
+              "strength": 0.06558085204590938,
+              "tau": 56.62244002576115,
+              "uncertainty": 0.41179996542340136,
+              "velocity": 0.00034538724845284863
+            },
+            {
+              "level": 0.7881583099566002,
+              "persistence": 0.02394383961392316,
+              "reversal_propensity": 0.8448994985643071,
+              "strength": 0.03221302857118924,
+              "tau": 72.006895138787,
+              "uncertainty": 0.4173757402288036,
+              "velocity": 0.0001696527104397393
+            }
+          ]
+        }
+      },
+      "d02_output": {
+        "coherence": 0.9999931783150069,
+        "current_level": 0.4698558421496643,
+        "entity_id": "SPY",
+        "forward_half_life": 15.0,
+        "forward_samples": [
+          {
+            "level": 0.4779056672740783,
+            "persistence": 0.6166690634559729,
+            "reversal_propensity": 0.7560658992139888,
+            "strength": 0.8296404620303484,
+            "tau": 1.7053444353880702,
+            "uncertainty": 0.28412534120332605,
+            "velocity": 0.004369373490073243
+          },
+          {
+            "level": 0.49777972613807386,
+            "persistence": 0.5071089788286183,
+            "reversal_propensity": 0.772486014760087,
+            "strength": 0.6822429604905098,
+            "tau": 5.938354235363982,
+            "uncertainty": 0.3087555145224734,
+            "velocity": 0.0035930917569534787
+          },
+          {
+            "level": 0.527455273135219,
+            "persistence": 0.37758869942444917,
+            "reversal_propensity": 0.7918976276719703,
+            "strength": 0.5079918575651131,
+            "tau": 12.320557698622846,
+            "uncertainty": 0.3378729338902984,
+            "velocity": 0.0026753832017620115
+          },
+          {
+            "level": 0.5657921485680542,
+            "persistence": 0.25661687918335097,
+            "reversal_propensity": 0.8100280560386229,
+            "strength": 0.3452414898475953,
+            "tau": 20.678550498592156,
+            "uncertainty": 0.36506857644027735,
+            "velocity": 0.0018182442665848337
+          },
+          {
+            "level": 0.6118661554346266,
+            "persistence": 0.1600128563323852,
+            "reversal_propensity": 0.8245064057298089,
+            "strength": 0.21527452555251092,
+            "tau": 30.89997415837988,
+            "uncertainty": 0.38678610097705635,
+            "velocity": 0.0011337619704990091
+          },
+          {
+            "level": 0.6648314712296783,
+            "persistence": 0.09189178830503945,
+            "reversal_propensity": 0.8347159251176148,
+            "strength": 0.12362732334736433,
+            "tau": 42.90267377863407,
+            "uncertainty": 0.4021003800587652,
+            "velocity": 0.0006510940268760986
+          },
+          {
+            "level": 0.7238683285913438,
+            "persistence": 0.04874603453262663,
+            "reversal_propensity": 0.8411823153607056,
+            "strength": 0.06558085204590938,
+            "tau": 56.62244002576115,
+            "uncertainty": 0.41179996542340136,
+            "velocity": 0.00034538724845284863
+          },
+          {
+            "level": 0.7881583099566002,
+            "persistence": 0.02394383961392316,
+            "reversal_propensity": 0.8448994985643071,
+            "strength": 0.03221302857118924,
+            "tau": 72.006895138787,
+            "uncertainty": 0.4173757402288036,
+            "velocity": 0.0001696527104397393
+          }
+        ],
+        "maximum_absolute_displacement": 0.3183024678069359,
+        "model_time": 1664525820.0,
+        "path_direction": "UPWARD",
+        "persistence": 0.6672308993184185,
+        "projection_interval": 72.006895138787,
+        "reversal_propensity": 0.7484880373502629,
+        "source_model_version": "0.2",
+        "state_support_ratio": 0.5864884257246546,
+        "strength": 0.8976642163450754,
+        "terminal_decay_factor": 0.03588538785955803,
+        "terminal_displacement": 0.3183024678069359,
+        "uncertainty": 0.2727585484077373
+      },
+      "runtime_types": {
+        "d01_dmo": "d01.v02.outputs.DMOOutput",
+        "d01_fmo": "d01.v02.outputs.FMOOutput",
+        "d01_input": "d01.v02.observations.NormalizedObservation",
+        "d02_output": "d02.v02.models.ReturnShape"
+      },
+      "source_row": {
+        "close": "366.17",
+        "close_return_1m": "0.00046448087431705254",
+        "data_valid": "true",
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:17:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:17:00Z",
+        "high": "366.2",
+        "high_low_range": "0.13999999999998636",
+        "high_low_range_fraction": "0.0003823360734084888",
+        "is_regular_session": "false",
+        "low": "366.06",
+        "minute_of_session": "-1",
+        "open": "366.06",
+        "open_close_change": "0.11000000000001364",
+        "open_close_return": "0.0003004971862536898",
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": "18",
+        "timezone": "America/New_York",
+        "volume": "2398.0"
+      },
+      "source_row_index_zero_based": 17
+    }
+  },
+  "runtime_call_chain": [
+    {
+      "stage": "source mapping",
+      "symbol": "position_transition_controller.real_causal_replay_harness_v0_2.RealCausalReplayHarness.source_row_to_normalized_observation"
+    },
+    {
+      "stage": "D01",
+      "symbol": "d01.v02.model.D01V02Model.step"
+    },
+    {
+      "stage": "D02",
+      "symbol": "d02.v02.builder.build_return_shape"
+    },
+    {
+      "executed": false,
+      "stage": "D04",
+      "symbol": "aptf_d04.envelope.trading_envelope.TradingEnvelope.process"
+    },
+    {
+      "executed": false,
+      "stage": "D03",
+      "symbol": "d03.v01.evaluate_decision"
+    }
+  ],
+  "schemas": {
+    "D03Input": [
+      {
+        "field": "d04_evaluation",
+        "required": true,
+        "type": "<class 'aptf_d04.models.envelope_state.EnvelopeEvaluation'>"
+      },
+      {
+        "field": "decision_context",
+        "required": true,
+        "type": "<class 'd03.v01.DecisionContext'>"
+      }
+    ],
+    "DMOOutput": [
+      {
+        "field": "model_time",
+        "type": "float"
+      },
+      {
+        "field": "entity_id",
+        "type": "str"
+      },
+      {
+        "field": "model_version",
+        "type": "str"
+      },
+      {
+        "field": "state_level",
+        "type": "float"
+      },
+      {
+        "field": "state_velocity",
+        "type": "float"
+      },
+      {
+        "field": "state_acceleration",
+        "type": "float"
+      },
+      {
+        "field": "state_curvature",
+        "type": "float"
+      },
+      {
+        "field": "strength",
+        "type": "float"
+      },
+      {
+        "field": "coherence",
+        "type": "float"
+      },
+      {
+        "field": "persistence",
+        "type": "float"
+      },
+      {
+        "field": "perturbation_magnitude",
+        "type": "float"
+      },
+      {
+        "field": "perturbation_class",
+        "type": "str"
+      },
+      {
+        "field": "uncertainty",
+        "type": "float"
+      },
+      {
+        "field": "reversal_propensity",
+        "type": "float"
+      },
+      {
+        "field": "state_support_ratio",
+        "type": "float"
+      },
+      {
+        "field": "observation_half_life",
+        "type": "float"
+      },
+      {
+        "field": "forward_half_life",
+        "type": "float"
+      },
+      {
+        "field": "parameter_state",
+        "type": "dict[str, float]"
+      },
+      {
+        "field": "parameter_update_magnitude",
+        "type": "dict[str, float]"
+      },
+      {
+        "field": "data_quality",
+        "type": "float"
+      },
+      {
+        "field": "model_health",
+        "type": "str"
+      },
+      {
+        "field": "dmo_schema_version",
+        "type": "str"
+      },
+      {
+        "field": "fmo_schema_version",
+        "type": "str"
+      },
+      {
+        "field": "config_hash",
+        "type": "str"
+      },
+      {
+        "field": "state_hash",
+        "type": "str"
+      },
+      {
+        "field": "trace_id",
+        "type": "str"
+      }
+    ],
+    "DecisionContext": [
+      {
+        "field": "context_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "entity_id",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "actual_position_state",
+        "required": true,
+        "type": "<enum 'PositionState'>"
+      },
+      {
+        "field": "position_candidate_id",
+        "required": true,
+        "type": "str | None"
+      },
+      {
+        "field": "position_source_return_shape_model_time",
+        "required": true,
+        "type": "float | None"
+      },
+      {
+        "field": "pending_target_state",
+        "required": true,
+        "type": "<enum 'PendingTargetState'>"
+      },
+      {
+        "field": "pending_decision_id",
+        "required": true,
+        "type": "str | None"
+      },
+      {
+        "field": "execution_available",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "system_enabled",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "trading_enabled",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "emergency_flatten",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "control_state_valid",
+        "required": true,
+        "type": "<class 'bool'>"
+      }
+    ],
+    "DecisionRecord": [
+      {
+        "field": "decision_id",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "decision_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "entity_id",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "d03_model_version",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "decision_rule_version",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "schema_version",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "source_d04_fingerprint",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "input_fingerprint",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "source_d04_evaluation_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "source_d04_return_shape_model_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "source_d04_envelope_state",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "source_d04_safety_state",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "candidate_id",
+        "required": true,
+        "type": "str | None"
+      },
+      {
+        "field": "candidate_source_return_shape_model_time",
+        "required": true,
+        "type": "float | None"
+      },
+      {
+        "field": "prior_position_state",
+        "required": true,
+        "type": "<enum 'PositionState'>"
+      },
+      {
+        "field": "desired_position_state",
+        "required": true,
+        "type": "<enum 'PositionState'>"
+      },
+      {
+        "field": "transition_intent",
+        "required": true,
+        "type": "<enum 'TransitionIntent'>"
+      },
+      {
+        "field": "action_authorized",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "decision_rule_id",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "primary_reason_code",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "supporting_reason_codes",
+        "required": false,
+        "type": "tuple[str, ...]"
+      }
+    ],
+    "EnvelopeContext": [
+      {
+        "field": "evaluation_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "market_eligible",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "data_integrity",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "clock_event_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "capital_available",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "portfolio_capacity",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "position_capacity",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "liquidity_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "spread_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "latency_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "execution_feasibility",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "risk_capacity",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "broker_health",
+        "required": true,
+        "type": "<class 'float'>"
+      }
+    ],
+    "EnvelopeEvaluation": [
+      {
+        "field": "evaluation_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "entity_id",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "return_shape_model_time",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "source_model_version",
+        "required": true,
+        "type": "<class 'str'>"
+      },
+      {
+        "field": "hard_eligibility",
+        "required": true,
+        "type": "<class 'int'>"
+      },
+      {
+        "field": "geometry_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "structural_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "risk_quality",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "base_capturability_score",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "feasibility_gate_score",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "capturability_score",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "previous_envelope_state",
+        "required": true,
+        "type": "<enum 'EnvelopeState'>"
+      },
+      {
+        "field": "new_envelope_state",
+        "required": true,
+        "type": "<enum 'EnvelopeState'>"
+      },
+      {
+        "field": "aperture_before",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "aperture_after",
+        "required": true,
+        "type": "<class 'float'>"
+      },
+      {
+        "field": "projection_valid",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "stale",
+        "required": true,
+        "type": "<class 'bool'>"
+      },
+      {
+        "field": "safety_state",
+        "required": true,
+        "type": "<enum 'SafetyState'>"
+      },
+      {
+        "field": "safety_reason",
+        "required": true,
+        "type": "aptf_d04.models.enums.SafetyReason | None"
+      },
+      {
+        "field": "candidate_envelope",
+        "required": true,
+        "type": "aptf_d04.models.opportunity.CandidateEnvelope | None"
+      },
+      {
+        "field": "gate_dimension_values",
+        "required": true,
+        "type": "dict[str, float]"
+      },
+      {
+        "field": "reason_codes",
+        "required": false,
+        "type": "list[str]"
+      },
+      {
+        "field": "events",
+        "required": false,
+        "type": "list[aptf_d04.models.enums.EventType]"
+      }
+    ],
+    "FMOOutput": [
+      {
+        "field": "model_time",
+        "type": "float"
+      },
+      {
+        "field": "entity_id",
+        "type": "str"
+      },
+      {
+        "field": "interval_length",
+        "type": "float"
+      },
+      {
+        "field": "samples",
+        "type": "list[FMOSample]"
+      }
+    ],
+    "FMOSample": [
+      {
+        "field": "tau",
+        "type": "float"
+      },
+      {
+        "field": "level",
+        "type": "float"
+      },
+      {
+        "field": "velocity",
+        "type": "float"
+      },
+      {
+        "field": "uncertainty",
+        "type": "float"
+      },
+      {
+        "field": "strength",
+        "type": "float"
+      },
+      {
+        "field": "persistence",
+        "type": "float"
+      },
+      {
+        "field": "reversal_propensity",
+        "type": "float"
+      }
+    ],
+    "ForwardSample": [
+      {
+        "field": "tau",
+        "type": "float"
+      },
+      {
+        "field": "level",
+        "type": "float"
+      },
+      {
+        "field": "velocity",
+        "type": "float"
+      },
+      {
+        "field": "uncertainty",
+        "type": "float"
+      },
+      {
+        "field": "strength",
+        "type": "float"
+      },
+      {
+        "field": "persistence",
+        "type": "float"
+      },
+      {
+        "field": "reversal_propensity",
+        "type": "float"
+      }
+    ],
+    "NormalizedObservation": [
+      {
+        "field": "entity_id",
+        "type": "str"
+      },
+      {
+        "field": "event_time",
+        "type": "float"
+      },
+      {
+        "field": "receive_time",
+        "type": "float"
+      },
+      {
+        "field": "sequence_id",
+        "type": "int"
+      },
+      {
+        "field": "price",
+        "type": "float"
+      },
+      {
+        "field": "volume",
+        "type": "float"
+      },
+      {
+        "field": "bid",
+        "type": "float | None"
+      },
+      {
+        "field": "ask",
+        "type": "float | None"
+      },
+      {
+        "field": "bid_size",
+        "type": "float | None"
+      },
+      {
+        "field": "ask_size",
+        "type": "float | None"
+      },
+      {
+        "field": "session",
+        "type": "str"
+      },
+      {
+        "field": "source_quality",
+        "type": "float"
+      },
+      {
+        "field": "availability_mask",
+        "type": "dict[str, bool] | None"
+      }
+    ],
+    "ReturnShape": [
+      {
+        "field": "model_time",
+        "type": "float"
+      },
+      {
+        "field": "entity_id",
+        "type": "str"
+      },
+      {
+        "field": "source_model_version",
+        "type": "str"
+      },
+      {
+        "field": "current_level",
+        "type": "float"
+      },
+      {
+        "field": "projection_interval",
+        "type": "float"
+      },
+      {
+        "field": "forward_half_life",
+        "type": "float"
+      },
+      {
+        "field": "forward_samples",
+        "type": "tuple[ForwardSample, ...]"
+      },
+      {
+        "field": "terminal_displacement",
+        "type": "float"
+      },
+      {
+        "field": "maximum_absolute_displacement",
+        "type": "float"
+      },
+      {
+        "field": "path_direction",
+        "type": "PathDirection"
+      },
+      {
+        "field": "terminal_decay_factor",
+        "type": "float"
+      },
+      {
+        "field": "strength",
+        "type": "float"
+      },
+      {
+        "field": "coherence",
+        "type": "float"
+      },
+      {
+        "field": "persistence",
+        "type": "float"
+      },
+      {
+        "field": "uncertainty",
+        "type": "float"
+      },
+      {
+        "field": "reversal_propensity",
+        "type": "float"
+      },
+      {
+        "field": "state_support_ratio",
+        "type": "float"
+      }
+    ]
+  },
+  "stop_boundary": {
+    "boundary": "D02 ReturnShape -> D04 TradingEnvelope.process",
+    "d03_executed": false,
+    "d04_executed": false,
+    "position_controller_executed": false,
+    "reason": "EnvelopeContext requires 13 fields. Only evaluation_time and data_integrity are available/derivable from the historical analytical observation. The replay harness hard-codes the remaining 11 as perfect conditions. The absolute zero-mock rule prohibits using them.",
+    "unavailable_runtime_values": [
+      "D04 geometry_quality/Q_G",
+      "D04 structural_quality/Q_S",
+      "D04 risk_quality/Q_R",
+      "D04 base_capturability_score/B",
+      "D04 feasibility_gate_score/G",
+      "D04 hard_eligibility/H",
+      "D04 capturability_score/C",
+      "D04 candidate",
+      "D04 path_direction propagation",
+      "D03 input",
+      "D03 DecisionRecord"
+    ]
+  },
+  "synthetic_value_count": 13,
+  "synthetic_values_used_in_this_diagnostic": 0,
+  "target_rows_verified": true
+}

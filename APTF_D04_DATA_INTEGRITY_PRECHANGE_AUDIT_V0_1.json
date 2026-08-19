@@ -1,0 +1,36 @@
+{
+  "audit_id": "APTF_D04_DATA_INTEGRITY_PRECHANGE_AUDIT_V0_1",
+  "status": "PASS_STOP_CONDITION_NOT_TRIGGERED",
+  "current_equation": "C = H * Q_G * Q_S * Q_R * G",
+  "current_g_construction": "min(context.active_gate_values(configured feasibility dimensions))",
+  "current_active_g_dimensions": {"data_integrity": 1.0},
+  "additional_producer_backed_g_determinants": [],
+  "architectural_responsibility": "UPSTREAM_OBSERVATION_ADMISSION",
+  "occurrences": [
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_context.py","location":"CONTEXT_VALUE_FIELDS / FEASIBILITY_GATE_FIELDS / EnvelopeContext.data_integrity / production / active_gate_values","purpose":"D04 runtime schema, provenance, production input, and active G extraction","runtime":true,"mathematical":true,"provenance":true,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py","location":"GATE_REASON_CODE_MAP / __init__ / evaluate","purpose":"G reason mapping, threshold, H integrity predicate, G construction/multiplication, DATA_INVALID reason","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py","location":"SafetyConfig / _safety_reason / invalid-shape fallback / EnvelopeEvaluation construction","purpose":"D04 safety recheck and emitted G fields","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/capturability.py","location":"CapturabilityResult","purpose":"emits feasibility_gate_score and gate_dimension_values","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"UPDATE"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_state.py","location":"EnvelopeEvaluation","purpose":"emits feasibility_gate_score and gate_dimension_values downstream","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"UPDATE"},
+    {"path":"d04_trading_envelope/src/aptf_d04/configuration.py","location":"RuntimeConfig / CapturabilitySettings validator","purpose":"integrity threshold and ten-field feasibility-gate configuration contract","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"d04_trading_envelope/config/default.yaml","location":"runtime / capturability.feasibility_gate","purpose":"integrity threshold and executable future-gate settings","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"d04_trading_envelope/src/aptf_d04/cli/main.py","location":"build_envelope / scenario validation","purpose":"passes G/integrity config and reports gate trajectories","runtime":true,"mathematical":true,"provenance":false,"documentation":false,"test":false,"historical":false,"action":"UPDATE"},
+    {"path":"aptf_runtime/src/aptf_runtime/single_observation_pipeline.py","location":"_context / evidence metadata","purpose":"injects source_quality as D04 data_integrity and labels active evidence","runtime":true,"mathematical":false,"provenance":true,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"position_transition_controller/real_causal_replay_harness_v0_2.py","location":"process_observation","purpose":"injects source_quality as D04 data_integrity","runtime":true,"mathematical":false,"provenance":true,"documentation":false,"test":false,"historical":false,"action":"REMOVE"},
+    {"path":"diagnostics/aptf_test_001_row_10.py","location":"context builder / recorded threshold","purpose":"current diagnostic D04 injection and metadata","runtime":true,"mathematical":false,"provenance":true,"documentation":false,"test":true,"historical":false,"action":"UPDATE"},
+    {"path":"diagnostics/aptf_test_002_two_observations.py","location":"context builder","purpose":"current diagnostic D04 injection","runtime":true,"mathematical":false,"provenance":true,"documentation":false,"test":true,"historical":false,"action":"UPDATE"},
+    {"path":"d04_trading_envelope/tests/*.py","location":"fixtures, schema assertions, G/integrity tests","purpose":"current executable-contract tests","runtime":false,"mathematical":true,"provenance":true,"documentation":false,"test":true,"historical":false,"action":"UPDATE"},
+    {"path":"d04_trading_envelope/scenarios/*.yaml","location":"context_defaults","purpose":"synthetic legacy G/data-integrity fixtures","runtime":false,"mathematical":true,"provenance":false,"documentation":false,"test":true,"historical":false,"action":"UPDATE"},
+    {"path":"d04_trading_envelope/README.md","location":"context and formula documentation","purpose":"current package documentation","runtime":false,"mathematical":false,"provenance":false,"documentation":true,"test":false,"historical":false,"action":"UPDATE"},
+    {"path":"APTF_D04_KNOWN_INPUT_* / D04_KNOWN_INPUT_CONTEXT_SCHEMA_V0_2_2.json","location":"V0.2.2 authority artifacts","purpose":"documents superseded data-integrity/G architecture","runtime":false,"mathematical":false,"provenance":true,"documentation":true,"test":false,"historical":true,"action":"PRESERVE_HISTORICAL"},
+    {"path":"APTF_TEST_004_*","location":"all twelve artifacts","purpose":"historical corrected-D04 regression authority","runtime":false,"mathematical":false,"provenance":true,"documentation":true,"test":true,"historical":true,"action":"PRESERVE_HISTORICAL"},
+    {"path":"APTF_TEST_004A_*","location":"all eleven artifacts","purpose":"historical backward-boundary evidence with G=data_integrity=1.0","runtime":false,"mathematical":false,"provenance":true,"documentation":true,"test":true,"historical":true,"action":"PRESERVE_HISTORICAL"},
+    {"path":"d04_trading_envelope/output/*.jsonl","location":"generated historical scenario/benchmark output","purpose":"historical serialized contexts and G results","runtime":false,"mathematical":false,"provenance":false,"documentation":false,"test":true,"historical":true,"action":"PRESERVE_HISTORICAL"},
+    {"path":"frozen D04 V0.2/V0.2.1 design, schema, vectors, and freeze artifacts","location":"repository-root D04 authority history","purpose":"historical design containing data_integrity and future G concepts","runtime":false,"mathematical":false,"provenance":false,"documentation":true,"test":false,"historical":true,"action":"PRESERVE_HISTORICAL"}
+  ],
+  "future_gate_concepts": {
+    "classification": "FUTURE_NOT_CURRENTLY_IMPLEMENTED_NO_CURRENT_PRODUCER_NON_EXECUTABLE",
+    "names": ["broker_health","capital_available","execution_feasibility","latency_quality","liquidity_quality","portfolio_capacity","position_capacity","risk_capacity","spread_quality"]
+  },
+  "prechange_gates": {"G01":true,"G02":true,"G03":true,"G04":true,"G05":true}
+}

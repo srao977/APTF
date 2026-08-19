@@ -1,0 +1,18 @@
+{
+  "source_path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "development_partition": {
+    "interval": "[2022-09-30T08:00:00Z, 2023-03-30T08:00:00Z)",
+    "observation_count_metadata_only": 106603
+  },
+  "validation_selection": {
+    "selection_policy": "Next fixed 1000 legal development observations immediately after Test 005R measured range; selected before value inspection.",
+    "physical_rows": [115, 1114],
+    "observation_count": 1000,
+    "initialization_physical_rows": [115, 129],
+    "actionable_physical_rows": [130, 1114],
+    "actionable_count": 985
+  },
+  "reserve_excluded": {"start_utc": "2023-03-30T08:00:00Z", "sealed": true},
+  "hard_stop": ["physical_row > 1114 rejected", "timestamp >= reserve_start rejected", "reader exposes next_observation only"]
+}

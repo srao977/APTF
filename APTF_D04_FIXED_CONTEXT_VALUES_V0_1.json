@@ -1,0 +1,47 @@
+{
+  "artifact_id": "APTF_D04_FIXED_CONTEXT_VALUES_V0_1",
+  "status": "EXPERIMENTAL_DIAGNOSTIC_NOT_FROZEN_AUTHORITY",
+  "terminology": "FIXED PERMISSIVE EXPERIMENTAL CONTEXT",
+  "frozen_d04_configuration": {
+    "source": "d04_trading_envelope/config/default.yaml",
+    "critical_data_integrity_threshold": 0.2,
+    "gate_warning_threshold": 0.5,
+    "open_threshold": 0.75,
+    "close_threshold": 0.55,
+    "open_persistence_observations": 3,
+    "close_persistence_observations": 2,
+    "aperture_alpha": 0.5,
+    "modified": false
+  },
+  "row_derived_fields": {
+    "evaluation_time": {
+      "classification": "REAL OBSERVATION-DERIVED",
+      "rule": "parse current row event_timestamp_utc to epoch seconds"
+    },
+    "data_integrity": {
+      "classification": "REAL CAUSALLY DERIVABLE",
+      "rule": "existing source mapper: 1.0 when current row data_valid=true, otherwise 0.5"
+    }
+  },
+  "fixed_permissive_experimental_context": {
+    "market_eligible": true,
+    "clock_event_quality": 1.0,
+    "capital_available": 1.0,
+    "portfolio_capacity": 1.0,
+    "position_capacity": 1.0,
+    "liquidity_quality": 1.0,
+    "spread_quality": 1.0,
+    "latency_quality": 1.0,
+    "execution_feasibility": 1.0,
+    "risk_capacity": 1.0,
+    "broker_health": 1.0
+  },
+  "fixed_field_count": 11,
+  "all_fixed_values_legal": true,
+  "all_fixed_values_non_restrictive_under_frozen_math": true,
+  "fixed_values_may_vary": false,
+  "d03_context": {
+    "provided": false,
+    "reason": "The experiment authorizes artificial constants only for D04 and explicitly prohibits ActualPosition use. Frozen D03 requires actual_position_state and additional position/pending/control context."
+  }
+}

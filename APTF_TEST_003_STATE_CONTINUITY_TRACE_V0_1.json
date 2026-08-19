@@ -1,0 +1,621 @@
+{
+  "component_classification": {
+    "D01": "STATEFUL; after-cycle state equals next before-cycle state",
+    "D02": "STATELESS",
+    "D03": "STATELESS",
+    "D04": "STATEFUL; after-cycle state equals next before-cycle state",
+    "POSITION_CONTROLLER": "controller algorithm stateless; harness-maintained INTERNAL CONTROLLER STATE continuous"
+  },
+  "cycles": [
+    {
+      "cycle": 1,
+      "state_after": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9899484499824,
+          "adaptive_scale": 0.7455782709158161,
+          "data_gap_count": 8,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525280.0,
+          "model_time": 1664525280.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05108942475062641
+          },
+          "prev_level": -0.6571388532831072,
+          "prev_velocity": -0.0009453815512633182,
+          "sequence": 9,
+          "state_vector": {
+            "acceleration": 4.3598246210338045e-05,
+            "curvature": 4.359818776174796e-05,
+            "decay_relevance": 1.0,
+            "level": -0.6571388532831072,
+            "persistence": 0.5179117484872026,
+            "perturbation_magnitude": 0.019860213546167346,
+            "reversal_propensity": 0.785306864585095,
+            "strength": 0.8777636556469071,
+            "uncertainty": 0.3799587892055599,
+            "velocity": -0.0009453815512633182
+          },
+          "volume_reference": 773.4877631255721
+        },
+        "d02": {
+          "stateful": false
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.2490565349467589,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525280.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      },
+      "state_before": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 366.0157352105078,
+          "adaptive_scale": 0.7590324720175738,
+          "data_gap_count": 7,
+          "half_life_state": {
+            "forward_half_life": 17.775628547068138,
+            "observation_half_life": 17.775628547068138
+          },
+          "last_event_time": 1664525220.0,
+          "model_time": 1664525220.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05095261450848489
+          },
+          "prev_level": -0.6004159601978543,
+          "prev_velocity": -0.0035612763243195837,
+          "sequence": 8,
+          "state_vector": {
+            "acceleration": -5.105635337734694e-05,
+            "curvature": -5.1055382094963564e-05,
+            "decay_relevance": 1.0,
+            "level": -0.6004159601978543,
+            "persistence": 0.49739241038059606,
+            "perturbation_magnitude": 0.023178841542804533,
+            "reversal_propensity": 0.3798813969072935,
+            "strength": 0.8005242210308087,
+            "uncertainty": 0.3967330512875907,
+            "velocity": -0.0035612763243195837
+          },
+          "volume_reference": 588.5134348690233
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.2776088557247953,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525220.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      }
+    },
+    {
+      "cycle": 2,
+      "state_after": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9649510274833,
+          "adaptive_scale": 0.732046908744191,
+          "data_gap_count": 9,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525340.0,
+          "model_time": 1664525340.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05113051824620091
+          },
+          "prev_level": -0.6487986245281485,
+          "prev_velocity": 0.00013900381255947696,
+          "sequence": 10,
+          "state_vector": {
+            "acceleration": 1.8073089394034406e-05,
+            "curvature": 1.8073088870220442e-05,
+            "decay_relevance": 1.0,
+            "level": -0.6487986245281485,
+            "persistence": 0.41432939878976205,
+            "perturbation_magnitude": 0.008329647098097139,
+            "reversal_propensity": 0.5972582524083497,
+            "strength": 0.6443499381248182,
+            "uncertainty": 0.42387487667499785,
+            "velocity": 0.00013900381255947696
+          },
+          "volume_reference": 772.7133749692935
+        },
+        "d02": {
+          "stateful": false
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.21285857927507087,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525340.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      },
+      "state_before": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9899484499824,
+          "adaptive_scale": 0.7455782709158161,
+          "data_gap_count": 8,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525280.0,
+          "model_time": 1664525280.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05108942475062641
+          },
+          "prev_level": -0.6571388532831072,
+          "prev_velocity": -0.0009453815512633182,
+          "sequence": 9,
+          "state_vector": {
+            "acceleration": 4.3598246210338045e-05,
+            "curvature": 4.359818776174796e-05,
+            "decay_relevance": 1.0,
+            "level": -0.6571388532831072,
+            "persistence": 0.5179117484872026,
+            "perturbation_magnitude": 0.019860213546167346,
+            "reversal_propensity": 0.785306864585095,
+            "strength": 0.8777636556469071,
+            "uncertainty": 0.3799587892055599,
+            "velocity": -0.0009453815512633182
+          },
+          "volume_reference": 773.4877631255721
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.2490565349467589,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525280.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      }
+    },
+    {
+      "cycle": 3,
+      "state_after": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.94520347610916,
+          "adaptive_scale": 0.7142047371124396,
+          "data_gap_count": 10,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525400.0,
+          "model_time": 1664525400.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.051207795573375355
+          },
+          "prev_level": -0.5253444238218404,
+          "prev_velocity": 0.002057570011428873,
+          "sequence": 11,
+          "state_vector": {
+            "acceleration": 3.1976103309160583e-05,
+            "curvature": 3.197590024945962e-05,
+            "decay_relevance": 1.0,
+            "level": -0.5253444238218404,
+            "persistence": 0.4514619202777661,
+            "perturbation_magnitude": 0.014643530178372497,
+            "reversal_propensity": 0.5804399974703249,
+            "strength": 0.7358255122296089,
+            "uncertainty": 0.3925572376200038,
+            "velocity": 0.002057570011428873
+          },
+          "volume_reference": 799.9777062208287
+        },
+        "d02": {
+          "stateful": false
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.23374195443228302,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525400.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      },
+      "state_before": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9649510274833,
+          "adaptive_scale": 0.732046908744191,
+          "data_gap_count": 9,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525340.0,
+          "model_time": 1664525340.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05113051824620091
+          },
+          "prev_level": -0.6487986245281485,
+          "prev_velocity": 0.00013900381255947696,
+          "sequence": 10,
+          "state_vector": {
+            "acceleration": 1.8073089394034406e-05,
+            "curvature": 1.8073088870220442e-05,
+            "decay_relevance": 1.0,
+            "level": -0.6487986245281485,
+            "persistence": 0.41432939878976205,
+            "perturbation_magnitude": 0.008329647098097139,
+            "reversal_propensity": 0.5972582524083497,
+            "strength": 0.6443499381248182,
+            "uncertainty": 0.42387487667499785,
+            "velocity": 0.00013900381255947696
+          },
+          "volume_reference": 772.7133749692935
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.21285857927507087,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525340.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      }
+    },
+    {
+      "cycle": 4,
+      "state_after": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9274433023037,
+          "adaptive_scale": 0.6953666653720031,
+          "data_gap_count": 11,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525460.0,
+          "model_time": 1664525460.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05121074487483189
+          },
+          "prev_level": -0.4852739124662928,
+          "prev_velocity": 0.0006678418558144867,
+          "sequence": 12,
+          "state_vector": {
+            "acceleration": -2.316213592304608e-05,
+            "curvature": -2.316212042714301e-05,
+            "decay_relevance": 1.0,
+            "level": -0.4852739124662928,
+            "persistence": 0.5611683781422404,
+            "perturbation_magnitude": 0.010650141487821037,
+            "reversal_propensity": 0.6158801168445487,
+            "strength": 0.46763294686467655,
+            "uncertainty": 0.44643451950928553,
+            "velocity": 0.0006678418558144867
+          },
+          "volume_reference": 764.9788209097873
+        },
+        "d02": {
+          "stateful": false
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.16111377075980543,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525460.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      },
+      "state_before": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.94520347610916,
+          "adaptive_scale": 0.7142047371124396,
+          "data_gap_count": 10,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525400.0,
+          "model_time": 1664525400.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.051207795573375355
+          },
+          "prev_level": -0.5253444238218404,
+          "prev_velocity": 0.002057570011428873,
+          "sequence": 11,
+          "state_vector": {
+            "acceleration": 3.1976103309160583e-05,
+            "curvature": 3.197590024945962e-05,
+            "decay_relevance": 1.0,
+            "level": -0.5253444238218404,
+            "persistence": 0.4514619202777661,
+            "perturbation_magnitude": 0.014643530178372497,
+            "reversal_propensity": 0.5804399974703249,
+            "strength": 0.7358255122296089,
+            "uncertainty": 0.3925572376200038,
+            "velocity": 0.002057570011428873
+          },
+          "volume_reference": 799.9777062208287
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.23374195443228302,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525400.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      }
+    },
+    {
+      "cycle": 5,
+      "state_after": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9110711371885,
+          "adaptive_scale": 0.6761518889628275,
+          "data_gap_count": 12,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525520.0,
+          "model_time": 1664525520.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.051278489840620105
+          },
+          "prev_level": -0.46006103401656456,
+          "prev_velocity": 0.0004202146407587684,
+          "sequence": 13,
+          "state_vector": {
+            "acceleration": -4.1271202502407854e-06,
+            "curvature": -4.1271191570885545e-06,
+            "decay_relevance": 1.0,
+            "level": -0.46006103401656456,
+            "persistence": 0.6489344961586315,
+            "perturbation_magnitude": 0.0019144400485194705,
+            "reversal_propensity": 0.5902238033057716,
+            "strength": 0.6929051031107131,
+            "uncertainty": 0.37855430696274,
+            "velocity": 0.0004202146407587684
+          },
+          "volume_reference": 772.7298798642979
+        },
+        "d02": {
+          "stateful": false
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.2207274518449448,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525520.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      },
+      "state_before": {
+        "controller": {
+          "broker_sourced": false,
+          "identity": "INITIAL",
+          "object_type": "ActualPositionState",
+          "semantic_label": "INTERNAL CONTROLLER STATE",
+          "state": "FLAT",
+          "version": 1
+        },
+        "d01": {
+          "adaptive_reference": 365.9274433023037,
+          "adaptive_scale": 0.6953666653720031,
+          "data_gap_count": 11,
+          "half_life_state": {
+            "forward_half_life": 15.0,
+            "observation_half_life": 15.0
+          },
+          "last_event_time": 1664525460.0,
+          "model_time": 1664525460.0,
+          "object_type": "RuntimeState",
+          "parameter_state": {
+            "ref_alpha": 0.05121074487483189
+          },
+          "prev_level": -0.4852739124662928,
+          "prev_velocity": 0.0006678418558144867,
+          "sequence": 12,
+          "state_vector": {
+            "acceleration": -2.316213592304608e-05,
+            "curvature": -2.316212042714301e-05,
+            "decay_relevance": 1.0,
+            "level": -0.4852739124662928,
+            "persistence": 0.5611683781422404,
+            "perturbation_magnitude": 0.010650141487821037,
+            "reversal_propensity": 0.6158801168445487,
+            "strength": 0.46763294686467655,
+            "uncertainty": 0.44643451950928553,
+            "velocity": 0.0006678418558144867
+          },
+          "volume_reference": 764.9788209097873
+        },
+        "d03": {
+          "stateful": false
+        },
+        "d04": {
+          "consecutive_close_qualifying": 0,
+          "consecutive_open_qualifying": 0,
+          "current_aperture": 0.16111377075980543,
+          "current_candidate": null,
+          "current_entity_id": "SPY",
+          "current_model_time": 1664525460.0,
+          "current_state": "CLOSED",
+          "object_type": "TradingEnvelope"
+        }
+      }
+    }
+  ],
+  "final_internal_controller_state": {
+    "broker_sourced": false,
+    "identity": "INITIAL",
+    "object_type": "ActualPositionState",
+    "semantic_label": "INTERNAL CONTROLLER STATE",
+    "state": "FLAT",
+    "version": 1
+  },
+  "links": [
+    {
+      "controller_equal": true,
+      "d01_equal": true,
+      "d04_equal": true,
+      "from_cycle": 1,
+      "to_cycle": 2
+    },
+    {
+      "controller_equal": true,
+      "d01_equal": true,
+      "d04_equal": true,
+      "from_cycle": 2,
+      "to_cycle": 3
+    },
+    {
+      "controller_equal": true,
+      "d01_equal": true,
+      "d04_equal": true,
+      "from_cycle": 3,
+      "to_cycle": 4
+    },
+    {
+      "controller_equal": true,
+      "d01_equal": true,
+      "d04_equal": true,
+      "from_cycle": 4,
+      "to_cycle": 5
+    }
+  ],
+  "test_id": "APTF_TEST_003_BOUNDED_LIFECYCLE_V0_1",
+  "unauthorized_reset": false
+}

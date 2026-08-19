@@ -1,0 +1,105 @@
+{
+  "test_id": "APTF_TEST_002A_VOLUME_DIFFERENTIAL_V0_1",
+  "capturability_formula": {
+    "geometry_quality": "abs(terminal_displacement) / maximum_absolute_displacement, or 0 when maximum is 0",
+    "structural_quality": "(strength * coherence * persistence) ** (1/3)",
+    "risk_quality": "sqrt((1 - uncertainty) * (1 - reversal_propensity))",
+    "base_capturability_score": "geometry_quality * structural_quality * risk_quality",
+    "feasibility_gate_score": "min(ten configured EnvelopeContext dimensions)",
+    "hard_eligibility": "int(projection_valid and market_eligible and data_integrity > critical_data_integrity_threshold)",
+    "capturability_score": "hard_eligibility * base_capturability_score * feasibility_gate_score",
+    "d04_persistent_state_in_formula": false,
+    "configuration_terms": ["critical_data_integrity_threshold=0.0 in frozen harness", "ten feasibility dimensions"],
+    "d04_state_use_after_score": "current state enters hysteresis; prior aperture enters aperture smoothing"
+  },
+  "reconstruction": {
+    "t1": {
+      "inputs": {"terminal_displacement":0.01978985584654247,"maximum_absolute_displacement":0.01978985584654247,"strength":0.8777636556469071,"coherence":0.4855782805501968,"persistence":0.5179117484872026,"uncertainty":0.3799587892055599,"reversal_propensity":0.785306864585095,"gate_values":"all 1.0","projection_valid":true,"market_eligible":true,"data_integrity":1.0},
+      "geometry_arithmetic": "abs(0.01978985584654247) / 0.01978985584654247 = 1.0",
+      "geometry_quality": 1.0,
+      "structural_arithmetic": "(0.8777636556469071 * 0.4855782805501968 * 0.5179117484872026) ** (1/3)",
+      "structural_quality": 0.6043625386410295,
+      "risk_arithmetic": "sqrt((1 - 0.3799587892055599) * (1 - 0.785306864585095))",
+      "risk_quality": 0.36485420599454843,
+      "base_arithmetic": "1.0 * 0.6043625386410295 * 0.36485420599454843",
+      "base_capturability_score": 0.22050421416872243,
+      "feasibility_gate_score": 1.0,
+      "hard_eligibility": 1,
+      "final_arithmetic": "1 * 0.22050421416872243 * 1.0",
+      "reconstructed": 0.22050421416872243,
+      "stored": 0.22050421416872243,
+      "absolute_error": 0.0
+    },
+    "t2": {
+      "inputs": {"terminal_displacement":0.026416809218216097,"maximum_absolute_displacement":0.026416809218216097,"strength":0.6443499381248182,"coherence":0.18477216178217787,"persistence":0.41432939878976205,"uncertainty":0.42387487667499785,"reversal_propensity":0.5972582524083497,"gate_values":"all 1.0","projection_valid":true,"market_eligible":true,"data_integrity":1.0},
+      "geometry_arithmetic": "abs(0.026416809218216097) / 0.026416809218216097 = 1.0",
+      "geometry_quality": 1.0,
+      "structural_arithmetic": "(0.6443499381248182 * 0.18477216178217787 * 0.41432939878976205) ** (1/3)",
+      "structural_quality": 0.3667482303751486,
+      "risk_arithmetic": "sqrt((1 - 0.42387487667499785) * (1 - 0.5972582524083497))",
+      "risk_quality": 0.48169454948065005,
+      "base_arithmetic": "1.0 * 0.3667482303751486 * 0.48169454948065005",
+      "base_capturability_score": 0.17666062360338286,
+      "feasibility_gate_score": 1.0,
+      "hard_eligibility": 1,
+      "final_arithmetic": "1 * 0.17666062360338286 * 1.0",
+      "reconstructed": 0.17666062360338286,
+      "stored": 0.17666062360338286,
+      "absolute_error": 0.0
+    }
+  },
+  "capturability_delta": {
+    "signed_delta": -0.04384359056533957,
+    "percent_change": -19.883334534274223,
+    "geometry_change": 0.0,
+    "structural_change": -0.23761430826588092,
+    "structural_percent_change": -39.31651832692688,
+    "risk_change": 0.11684034348610162,
+    "risk_percent_change": 32.02384447442752,
+    "gate_change": 0.0,
+    "hard_eligibility_change": 0,
+    "interaction": "Multiplicative: structural ratio 0.6068348167307311 times risk ratio 1.3202384447442752 equals final ratio 0.8011666546572578. Structural decline outweighed risk increase; no additive attribution is asserted."
+  },
+  "aperture": {
+    "role": "persistent smoothed state variable updated after hysteresis state selection",
+    "is_threshold": false,
+    "compared_directly_with_capturability": false,
+    "enters_capturability_formula": false,
+    "update_formula": "aperture_after = clamp(alpha * clamp(capturability) + (1-alpha) * clamp(aperture_before))",
+    "alpha": 0.5,
+    "t1_before": 0.2776088557247953,
+    "t1_after_reconstructed": 0.2490565349467589,
+    "t1_after_stored": 0.2490565349467589,
+    "t2_before": 0.2490565349467589,
+    "t2_after_reconstructed": 0.21285857927507087,
+    "t2_after_stored": 0.21285857927507087,
+    "t1_effect_on_t2": "t1 aperture_after became t2 aperture_before and affected t2 aperture smoothing only; it did not affect t2 capturability or open qualification"
+  },
+  "state_continuity": {
+    "before_t1": {"state":"CLOSED","aperture":0.2776088557247953,"model_time":1664525220.0,"candidate":null,"open_counter":0,"close_counter":0},
+    "after_t1": {"state":"CLOSED","aperture":0.2490565349467589,"model_time":1664525280.0,"candidate":null,"open_counter":0,"close_counter":0},
+    "before_t2": {"state":"CLOSED","aperture":0.2490565349467589,"model_time":1664525280.0,"candidate":null,"open_counter":0,"close_counter":0},
+    "after_t2": {"state":"CLOSED","aperture":0.21285857927507087,"model_time":1664525340.0,"candidate":null,"open_counter":0,"close_counter":0},
+    "after_t1_equals_before_t2": true
+  },
+  "closed_open_gate": {
+    "open_qualification": "capturability_score >= open_threshold",
+    "open_threshold": 0.75,
+    "from_CLOSED": "if open_qualification then set open counter=1 and return OPENING; else reset counters and return CLOSED",
+    "from_OPENING": "each qualifying observation increments counter; OPEN when counter >= open_persistence_observations=3",
+    "candidate_construction": "only after resulting current_state == OPEN and current_candidate is null",
+    "t1": {"prior_state":"CLOSED","capturability":0.22050421416872243,"margin_to_open":-0.5294957858312775,"open_qualifies":false,"result_state":"CLOSED","candidate":null,"decisive_condition":"capturability < 0.75"},
+    "t2": {"prior_state":"CLOSED","capturability":0.17666062360338286,"margin_to_open":-0.5733393763966171,"open_qualifies":false,"result_state":"CLOSED","candidate":null,"decisive_condition":"capturability < 0.75"}
+  },
+  "reason_codes": {
+    "t1": ["REVERSAL_PROPENSITY_HIGH"],
+    "t2": ["REVERSAL_PROPENSITY_HIGH"],
+    "same": ["REVERSAL_PROPENSITY_HIGH"],
+    "introduced": [],
+    "removed": [],
+    "meaning": "return_shape.reversal_propensity > 0.5",
+    "decisive_for_closed_state": false,
+    "decisive_rule": "CLOSED hysteresis open_qualification failed because capturability < 0.75"
+  },
+  "candidate_null_path": "Both safety checks passed. Hysteresis returned CLOSED, so TradingEnvelope did not enter the current_state == OPEN candidate-construction branch. Candidate null is consequent on not reaching OPEN, not an independent competing gate."
+}

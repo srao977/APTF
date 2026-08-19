@@ -1,0 +1,106 @@
+{
+  "test_id": "APTF_TEST_002A_VOLUME_DIFFERENTIAL_V0_1",
+  "execution": {
+    "new_pipeline_run": false,
+    "new_market_observation": false,
+    "csv_read": false,
+    "counterfactual": false
+  },
+  "evidence_verification": {
+    "quoted_values_match": true,
+    "discrepancies": [],
+    "d01_after_t1_equals_before_t2": true,
+    "d04_after_t1_equals_before_t2": true,
+    "unauthorized_reset": false
+  },
+  "source_differential": [
+    {"property":"market_event_time_epoch_s","t1":1664525280.0,"t2":1664525340.0,"signed_delta":60.0,"absolute_delta":60.0,"percent_change":null,"d01_consumed":true,"role":"causal sequence and dt"},
+    {"property":"sequence_id","t1":8,"t2":9,"signed_delta":1,"absolute_delta":1,"percent_change":12.5,"d01_consumed":true,"role":"causal sequence validation"},
+    {"property":"open","t1":365.68,"t2":365.54,"signed_delta":-0.13999999999998636,"absolute_delta":0.13999999999998636,"percent_change":-0.03828483920367161,"d01_consumed":false,"role":"retained in source payload only"},
+    {"property":"high","t1":365.7,"t2":365.54,"signed_delta":-0.15999999999996817,"absolute_delta":0.15999999999996817,"percent_change":-0.04375170905112611,"d01_consumed":false,"role":"retained in source payload only"},
+    {"property":"low","t1":365.5,"t2":365.49,"signed_delta":-0.009999999999990905,"absolute_delta":0.009999999999990905,"percent_change":-0.002735978112172614,"d01_consumed":false,"role":"retained in source payload only"},
+    {"property":"close / D01 price","t1":365.5,"t2":365.49,"signed_delta":-0.009999999999990905,"absolute_delta":0.009999999999990905,"percent_change":-0.002735978112172614,"d01_consumed":true,"role":"adaptive reference/scale and kinematics"},
+    {"property":"volume","t1":4288.0,"t2":758.0,"signed_delta":-3530.0,"absolute_delta":3530.0,"percent_change":-82.32276119402985,"d01_consumed":true,"role":"adaptive volume reference and volume influence"},
+    {"property":"source_quality","t1":1.0,"t2":1.0,"signed_delta":0.0,"absolute_delta":0.0,"percent_change":0.0,"d01_consumed":true,"role":"data quality, perturbation and uncertainty"}
+  ],
+  "volume_change": {
+    "calculation_delta": "758 - 4288",
+    "delta": -3530.0,
+    "calculation_ratio": "758 / 4288",
+    "ratio": 0.1767723880597015,
+    "calculation_percent": "((758 - 4288) / 4288) * 100",
+    "percent_change": -82.32276119402985
+  },
+  "volume_code_path": {
+    "source_field": "normalized source volume",
+    "d01_receiving_field": "NormalizedObservation.volume",
+    "entry_method": "D01V02Model.step",
+    "transformation_function": "update_volume_influence",
+    "enabled_condition": "config.volume.enabled and config.ablation.volume_influence",
+    "reference_formula": "ref = (1 - reference_alpha) * prev_reference + reference_alpha * volume",
+    "reference_alpha": 0.05,
+    "relative_formula": "relative = log1p(volume / max(ref, epsilon))",
+    "absolute_formula": "absolute = log1p(max(volume, 0)) / 10",
+    "influence_formula": "v_star = clamp(relative + absolute, 0, 3)",
+    "epsilon": 1e-08,
+    "coherence_use": "evidence['volume'] = volume_influence with weight 0.7",
+    "strength_use": "effective_mass = volume_influence; mass coefficient = 0.8",
+    "raw_absolute_volume_used": true,
+    "normalized_relative_to_adaptive_reference": true,
+    "compared_directly_with_prior_raw_volume": false,
+    "ratio_used": true,
+    "bounded": true,
+    "composite": true,
+    "persistent_volume_state": true
+  },
+  "volume_reconstruction": {
+    "t1": {
+      "raw_volume": 4288.0,
+      "prior_reference": 588.5134348690233,
+      "updated_reference": 773.4877631255721,
+      "relative_term": 1.8785058936449708,
+      "absolute_term": 0.836380888451688,
+      "unclamped_influence": 2.714886782096659,
+      "bounded_volume_influence": 2.714886782096659,
+      "clamp_active": false,
+      "coherence_reconstructed": 0.48557828055019686,
+      "coherence_stored": 0.4855782805501968,
+      "strength_raw": 1.971420953003358,
+      "strength_reconstructed": 0.8777636556469071,
+      "strength_stored": 0.8777636556469071
+    },
+    "t2": {
+      "raw_volume": 758.0,
+      "prior_reference": 773.4877631255721,
+      "updated_reference": 772.7133749692935,
+      "relative_term": 0.6835809796873471,
+      "absolute_term": 0.6632001777395631,
+      "unclamped_influence": 1.3467811574269102,
+      "bounded_volume_influence": 1.3467811574269102,
+      "clamp_active": false,
+      "coherence_reconstructed": 0.18477216178217784,
+      "coherence_stored": 0.18477216178217787,
+      "strength_raw": 0.5942946855498648,
+      "strength_reconstructed": 0.6443499381248182,
+      "strength_stored": 0.6443499381248182
+    },
+    "t1_effect_on_t2": "t1 updated persistent volume_reference to 773.4877631255721; that exact value was t2 prior_reference"
+  },
+  "d01_state_continuity": [
+    {"property":"sequence","before_t1":8,"after_t1":9,"before_t2":9,"changed_by_t1":true,"read_by_t2":true,"volume_related":false,"role":"causal sequence/first-observation branch"},
+    {"property":"model_time / last_event_time","before_t1":1664525220.0,"after_t1":1664525280.0,"before_t2":1664525280.0,"changed_by_t1":true,"read_by_t2":true,"volume_related":false,"role":"dt and causal order"},
+    {"property":"adaptive_reference","before_t1":366.0157352105078,"after_t1":365.9899484499824,"before_t2":365.9899484499824,"changed_by_t1":true,"read_by_t2":true,"volume_related":false,"role":"price normalization"},
+    {"property":"adaptive_scale","before_t1":0.7590324720175738,"after_t1":0.7455782709158161,"before_t2":0.7455782709158161,"changed_by_t1":true,"read_by_t2":true,"volume_related":false,"role":"price normalization"},
+    {"property":"volume_reference","before_t1":588.5134348690233,"after_t1":773.4877631255721,"before_t2":773.4877631255721,"changed_by_t1":true,"read_by_t2":true,"volume_related":true,"role":"adaptive denominator for volume influence"},
+    {"property":"prev_level","before_t1":-0.6004159601978543,"after_t1":-0.6571388532831072,"before_t2":-0.6571388532831072,"changed_by_t1":true,"read_by_t2":true,"volume_related":false,"role":"kinematics and innovation"},
+    {"property":"prev_velocity","before_t1":-0.0035612763243195837,"after_t1":-0.0009453815512633182,"before_t2":-0.0009453815512633182,"changed_by_t1":true,"read_by_t2":true,"volume_related":false,"role":"kinematics, perturbation, persistence"},
+    {"property":"prior persistence","before_t1":0.49739241038059606,"after_t1":0.5179117484872026,"before_t2":0.5179117484872026,"changed_by_t1":true,"read_by_t2":true,"volume_related":"not a direct current-volume input","role":"recursive persistence"},
+    {"property":"prior uncertainty","before_t1":0.3967330512875907,"after_t1":0.3799587892055599,"before_t2":0.3799587892055599,"changed_by_t1":true,"read_by_t2":true,"volume_related":"can be indirect through prior coherence","role":"strength and recursive state"},
+    {"property":"forward_half_life","before_t1":17.775628547068138,"after_t1":15.0,"before_t2":15.0,"changed_by_t1":true,"read_by_t2":true,"volume_related":"indirect through strength/uncertainty","role":"adaptive decay"}
+  ],
+  "causal_limit": {
+    "isolated_volume_sensitivity_identifiable": false,
+    "reason": "Price, kinematics, perturbation class, prior uncertainty/persistence, adaptive state, and volume all differed; no controlled counterfactual exists.",
+    "volume_entry_and_internal_influence_proven": true
+  }
+}

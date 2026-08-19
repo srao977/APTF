@@ -1,0 +1,73 @@
+{
+  "test_id": "APTF_TEST_003A_D04_REACHABILITY_V0_1",
+  "term_bounds": [
+    {"term":"Q_G","formula":"0 if M=0 else |D|/M","provable_range":"[0,1]","bound_types":["D02 invariant |D|<=M","exact zero branch","D04 validation"],"observed_range":[0.6832134425301885,1.0]},
+    {"term":"s","formula":"D01 strength copied by D02","provable_range":"[0,1]","bound_types":["D01 clamp","D02 schema"],"observed_range":[0.46763294686467655,0.8777636556469071]},
+    {"term":"c","formula":"D01 coherence copied by D02","provable_range":"[0,1]","bound_types":["D01 bounded ratio/clamp","D02 schema"],"observed_range":[0.0844299296192652,0.4855782805501968]},
+    {"term":"p","formula":"D01 persistence copied by D02","provable_range":"[0,1]","bound_types":["D01 recursive clamp","D02 schema"],"observed_range":[0.41432939878976205,0.6489344961586315]},
+    {"term":"Q_S","formula":"(s*c*p)^(1/3)","provable_range":"[0,1]","bound_types":["algebraic from bounded factors"],"observed_range":[0.2808653989173412,0.6043625386410295]},
+    {"term":"u","formula":"D01 uncertainty copied by D02","provable_range":"[0,1]","bound_types":["D01 sigmoid/clamp","D02 schema"],"observed_range":[0.37855430696274,0.44643451950928553]},
+    {"term":"r","formula":"D01 reversal propensity copied by D02","provable_range":"[0,1]","bound_types":["D01 sigmoid/clamp","D02 schema"],"observed_range":[0.5804399974703249,0.785306864585095]},
+    {"term":"Q_R","formula":"sqrt((1-u)*(1-r))","provable_range":"[0,1]","bound_types":["algebraic from bounded complements"],"observed_range":[0.36485420599454843,0.5048353067296146]},
+    {"term":"G","formula":"min(g_1,...,g_10)","provable_range":"[0,1]","bound_types":["EnvelopeContext schema","minimum"],"observed_range":[1.0,1.0]},
+    {"term":"H","formula":"product of boolean validity/eligibility conditions","provable_range":"{0,1}","bound_types":["hard branch"],"observed_range":[1,1]},
+    {"term":"C","formula":"H*Q_G*Q_S*Q_R*G","provable_range":"[0,1]","bound_types":["product of bounded nonnegative terms","output schema"],"observed_range":[0.08848558708732783,0.28034113293008417]}
+  ],
+  "formal_range": {
+    "theoretical_min": 0.0,
+    "theoretical_max": 1.0,
+    "minimum_attained_by": ["H=0", "G=0", "Q_G=0", "Q_S=0", "Q_R=0"],
+    "maximum_schema_valid_tuple": "H=Q_G=Q_S=Q_R=G=1",
+    "frozen_vector_witness": "valid_shape_low_terminal_decay and projection_endpoint_inclusive each specify C=1.0",
+    "algebraic_max_capurability": 1.0,
+    "d04_schema_valid_max": 1.0,
+    "end_to_end_reachable_max": null,
+    "end_to_end_reachable_max_text": "REACHABLE MAXIMUM NOT ESTABLISHED",
+    "reason_unresolved": "D01 s,c,p,u,r are coupled nonlinear/state-dependent outputs; no frozen proof or existing end-to-end witness establishes their simultaneous favorable region."
+  },
+  "threshold_assessment": {
+    "open_threshold": 0.75,
+    "inside_theoretical_range": true,
+    "inside_d04_schema_valid_range": true,
+    "inside_end_to_end_reachable_range": "UNKNOWN",
+    "mathematically_impossible": false,
+    "practically_reachable_from_existing_real_evidence": "UNKNOWN"
+  },
+  "required_region": {
+    "exact": "H=1 and Q_G*Q_S*Q_R*G >= 0.75",
+    "necessary_because_each_factor_le_1": ["Q_G>=0.75","Q_S>=0.75","Q_R>=0.75","G>=0.75"],
+    "structural_equivalent": "s*c*p >= 0.75^3 = 0.421875",
+    "risk_equivalent": "(1-u)*(1-r) >= 0.75^2 = 0.5625",
+    "general_structural_requirement": "s*c*p >= (0.75/(Q_G*Q_R*G))^3 when denominator > 0",
+    "general_risk_requirement": "(1-u)*(1-r) >= (0.75/(Q_G*Q_S*G))^2 when denominator > 0",
+    "general_geometry_gate_requirement": "Q_G*G >= 0.75/(Q_S*Q_R)",
+    "schema_valid_witness_region_example": {"Q_G":1.0,"G":1.0,"s":0.9,"c":0.9,"p":0.9,"u":0.1,"r":0.1,"Q_S":0.9,"Q_R":0.9,"C":0.81},
+    "witness_is_market_observation": false,
+    "witness_scope": "algebraic/schema-valid D04 boundary only"
+  },
+  "variable_dependence": {
+    "independent_maximization_is_end_to_end_proof": false,
+    "couplings": [
+      "coherence c is an explicit input to D01 strength s",
+      "prior uncertainty lowers D01 strength while current uncertainty enters Q_R",
+      "coherence also influences D01 uncertainty",
+      "uncertainty influences D01 reversal propensity",
+      "persistence and perturbation influence reversal and adaptive state",
+      "D and M arise from one common FMO path",
+      "data_integrity participates in both H and G"
+    ],
+    "conclusion": "Algebraic maximum 1 is valid at D04 schema boundary; joint D01-driven reachability cannot be inferred by independent maximization."
+  },
+  "observed": {
+    "minimum": 0.08848558708732783,
+    "maximum": 0.28034113293008417,
+    "range_width": 0.19185554584275633,
+    "threshold_minus_observed_max": 0.46965886706991583,
+    "existing_real_evidence_max_outside_test003": 0.4814590392445292,
+    "existing_real_evidence_source": "APTF_D04_TARGET_A_C_RECONSTRUCTION_V0_1.md / threshold diagnostic",
+    "synthetic_frozen_vector_max": 1.0
+  },
+  "primary_finding": "E",
+  "primary_finding_text": "CURRENT EVIDENCE IS INSUFFICIENT TO ESTABLISH END-TO-END REACHABILITY.",
+  "defect_classification": "NONE"
+}

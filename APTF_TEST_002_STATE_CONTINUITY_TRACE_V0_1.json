@@ -1,0 +1,128 @@
+{
+  "test_id": "APTF_TEST_002_TWO_OBSERVATIONS_V0_1",
+  "same_live_runtime": true,
+  "unauthorized_reset": false,
+  "components": {
+    "D01": {
+      "stateful": true,
+      "state_object": "D01V02Model.state / RuntimeState",
+      "state_before_t1": {
+        "sequence": 8,
+        "model_time": 1664525220.0,
+        "adaptive_reference": 366.0157352105078,
+        "adaptive_scale": 0.7590324720175738,
+        "volume_reference": 588.5134348690233,
+        "prev_level": -0.6004159601978543,
+        "prev_velocity": -0.0035612763243195837,
+        "forward_half_life": 17.775628547068138,
+        "persistence": 0.49739241038059606,
+        "uncertainty": 0.3967330512875907
+      },
+      "state_after_t1": {
+        "sequence": 9,
+        "model_time": 1664525280.0,
+        "adaptive_reference": 365.9899484499824,
+        "adaptive_scale": 0.7455782709158161,
+        "volume_reference": 773.4877631255721,
+        "prev_level": -0.6571388532831072,
+        "prev_velocity": -0.0009453815512633182,
+        "forward_half_life": 15.0,
+        "persistence": 0.5179117484872026,
+        "uncertainty": 0.3799587892055599
+      },
+      "state_read_during_t2": "Exact state_after_t1 snapshot; equality mechanically verified before t2",
+      "state_after_t2": {
+        "sequence": 10,
+        "model_time": 1664525340.0,
+        "adaptive_reference": 365.9649510274833,
+        "adaptive_scale": 0.732046908744191,
+        "volume_reference": 772.7133749692935,
+        "prev_level": -0.6487986245281485,
+        "prev_velocity": 0.00013900381255947696,
+        "forward_half_life": 15.0,
+        "persistence": 0.41432939878976205,
+        "uncertainty": 0.42387487667499785
+      },
+      "reset_between_t1_t2": false,
+      "authorized_reset": "N/A",
+      "classification": "DIRECT T1 STATE EFFECT plus PRIOR HISTORY STATE EFFECT"
+    },
+    "D02": {
+      "stateful": false,
+      "state_object": null,
+      "state_before_t1": null,
+      "state_after_t1": null,
+      "state_read_during_t2": null,
+      "reset_between_t1_t2": false,
+      "authorized_reset": "N/A",
+      "classification": "STATELESS; t2 inherits D01 continuity only through its t2 DMO/FMO input"
+    },
+    "D04": {
+      "stateful": true,
+      "state_object": "TradingEnvelope plus HysteresisController",
+      "state_before_t1": {
+        "current_state": "CLOSED",
+        "current_aperture": 0.2776088557247953,
+        "current_model_time": 1664525220.0,
+        "current_candidate": null,
+        "consecutive_open_qualifying": 0,
+        "consecutive_close_qualifying": 0
+      },
+      "state_after_t1": {
+        "current_state": "CLOSED",
+        "current_aperture": 0.2490565349467589,
+        "current_model_time": 1664525280.0,
+        "current_candidate": null,
+        "consecutive_open_qualifying": 0,
+        "consecutive_close_qualifying": 0
+      },
+      "state_read_during_t2": "Exact state_after_t1 snapshot; model time, current state, aperture, candidate, and hysteresis counters available to t2",
+      "state_after_t2": {
+        "current_state": "CLOSED",
+        "current_aperture": 0.21285857927507087,
+        "current_model_time": 1664525340.0,
+        "current_candidate": null,
+        "consecutive_open_qualifying": 0,
+        "consecutive_close_qualifying": 0
+      },
+      "reset_between_t1_t2": false,
+      "authorized_reset": "N/A",
+      "classification": "DIRECT T1 STATE EFFECT: aperture and current_model_time changed; state/counters/candidate remained continuous"
+    },
+    "D03": {
+      "stateful": false,
+      "state_object": null,
+      "state_before_t1": null,
+      "state_after_t1": null,
+      "state_read_during_t2": null,
+      "reset_between_t1_t2": false,
+      "authorized_reset": "N/A",
+      "classification": "STATELESS; each call consumes current D04 evaluation and DecisionContext"
+    },
+    "POSITION_CONTROLLER": {
+      "algorithm_stateful": false,
+      "internal_transition_state_stateful": true,
+      "state_object": "Harness-maintained legacy ActualPositionState; externally INTERNAL CONTROLLER STATE",
+      "state_before_t1": {"state":"FLAT","version":1,"identity":"INITIAL","broker_sourced":false},
+      "d03_position_t1": "FLAT",
+      "position_controller_decision_t1": ["NO_ACTION"],
+      "state_after_t1": {"state":"FLAT","version":1,"identity":"INITIAL","broker_sourced":false},
+      "state_before_t2": {"state":"FLAT","version":1,"identity":"INITIAL","broker_sourced":false},
+      "d03_position_t2": "FLAT",
+      "position_controller_decision_t2": ["NO_ACTION"],
+      "state_after_t2": {"state":"FLAT","version":1,"identity":"INITIAL","broker_sourced":false},
+      "after_t1_equals_before_t2": true,
+      "reset_between_t1_t2": false,
+      "authorized_reset": "N/A",
+      "classification": "STATEFUL BUT T1 DID NOT ALTER RELEVANT STATE; NO_ACTION plan was non-executable",
+      "initialization_classification": "TEST/REPLAY INITIAL CONTROL STATE, not broker state and not synthetic market data"
+    }
+  },
+  "continuity_checks": {
+    "d01_after_t1_equals_before_t2": true,
+    "d04_after_t1_equals_before_t2": true,
+    "controller_after_t1_equals_before_t2": true,
+    "t1_state_effect_identified": true,
+    "broker_semantics_introduced": false
+  }
+}

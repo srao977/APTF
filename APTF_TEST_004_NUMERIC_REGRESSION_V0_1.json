@@ -1,0 +1,1507 @@
+{
+  "all_pass": true,
+  "rows": [
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "state_level",
+      "pass": true,
+      "test003_value": -0.6571388532831072,
+      "test004_value": -0.6571388532831072,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "state_velocity",
+      "pass": true,
+      "test003_value": -0.0009453815512633182,
+      "test004_value": -0.0009453815512633182,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "state_acceleration",
+      "pass": true,
+      "test003_value": 4.3598246210338045e-05,
+      "test004_value": 4.3598246210338045e-05,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.8777636556469071,
+      "test004_value": 0.8777636556469071,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.4855782805501968,
+      "test004_value": 0.4855782805501968,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.5179117484872026,
+      "test004_value": 0.5179117484872026,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.3799587892055599,
+      "test004_value": 0.3799587892055599,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.785306864585095,
+      "test004_value": 0.785306864585095,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 1,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.39012915911128365,
+      "test004_value": 0.39012915911128365,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "terminal_displacement",
+      "pass": true,
+      "test003_value": 0.01978985584654247,
+      "test004_value": 0.01978985584654247,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "maximum_absolute_displacement",
+      "pass": true,
+      "test003_value": 0.01978985584654247,
+      "test004_value": 0.01978985584654247,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "projection_interval",
+      "pass": true,
+      "test003_value": 58.805642197812524,
+      "test004_value": 58.805642197812524,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "forward_half_life",
+      "pass": true,
+      "test003_value": 15.0,
+      "test004_value": 15.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "terminal_decay_factor",
+      "pass": true,
+      "test003_value": 0.06604640534760162,
+      "test004_value": 0.06604640534760162,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.8777636556469071,
+      "test004_value": 0.8777636556469071,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.4855782805501968,
+      "test004_value": 0.4855782805501968,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.5179117484872026,
+      "test004_value": 0.5179117484872026,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.3799587892055599,
+      "test004_value": 0.3799587892055599,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.785306864585095,
+      "test004_value": 0.785306864585095,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 1,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.39012915911128365,
+      "test004_value": 0.39012915911128365,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "hard_eligibility",
+      "pass": true,
+      "test003_value": 1,
+      "test004_value": 1,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "geometry_quality",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "structural_quality",
+      "pass": true,
+      "test003_value": 0.6043625386410295,
+      "test004_value": 0.6043625386410295,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "risk_quality",
+      "pass": true,
+      "test003_value": 0.36485420599454843,
+      "test004_value": 0.36485420599454843,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "base_capturability_score",
+      "pass": true,
+      "test003_value": 0.22050421416872243,
+      "test004_value": 0.22050421416872243,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "feasibility_gate_score",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "capturability_score",
+      "pass": true,
+      "test003_value": 0.22050421416872243,
+      "test004_value": 0.22050421416872243,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "aperture_before",
+      "pass": true,
+      "test003_value": 0.2776088557247953,
+      "test004_value": 0.2776088557247953,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "aperture_after",
+      "pass": true,
+      "test003_value": 0.2490565349467589,
+      "test004_value": 0.2490565349467589,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 1,
+      "field": "gate_margin",
+      "pass": true,
+      "test003_value": -0.5294957858312775,
+      "test004_value": -0.5294957858312775,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "state_level",
+      "pass": true,
+      "test003_value": -0.6487986245281485,
+      "test004_value": -0.6487986245281485,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "state_velocity",
+      "pass": true,
+      "test003_value": 0.00013900381255947696,
+      "test004_value": 0.00013900381255947696,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "state_acceleration",
+      "pass": true,
+      "test003_value": 1.8073089394034406e-05,
+      "test004_value": 1.8073089394034406e-05,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.6443499381248182,
+      "test004_value": 0.6443499381248182,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.18477216178217787,
+      "test004_value": 0.18477216178217787,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.41432939878976205,
+      "test004_value": 0.41432939878976205,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.42387487667499785,
+      "test004_value": 0.42387487667499785,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.5972582524083497,
+      "test004_value": 0.5972582524083497,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 2,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.26144791004198753,
+      "test004_value": 0.26144791004198753,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "terminal_displacement",
+      "pass": true,
+      "test003_value": 0.026416809218216097,
+      "test004_value": 0.026416809218216097,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "maximum_absolute_displacement",
+      "pass": true,
+      "test003_value": 0.026416809218216097,
+      "test004_value": 0.026416809218216097,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "projection_interval",
+      "pass": true,
+      "test003_value": 46.92093219652183,
+      "test004_value": 46.92093219652183,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "forward_half_life",
+      "pass": true,
+      "test003_value": 15.0,
+      "test004_value": 15.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "terminal_decay_factor",
+      "pass": true,
+      "test003_value": 0.11438246869903425,
+      "test004_value": 0.11438246869903425,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.6443499381248182,
+      "test004_value": 0.6443499381248182,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.18477216178217787,
+      "test004_value": 0.18477216178217787,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.41432939878976205,
+      "test004_value": 0.41432939878976205,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.42387487667499785,
+      "test004_value": 0.42387487667499785,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.5972582524083497,
+      "test004_value": 0.5972582524083497,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 2,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.26144791004198753,
+      "test004_value": 0.26144791004198753,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "hard_eligibility",
+      "pass": true,
+      "test003_value": 1,
+      "test004_value": 1,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "geometry_quality",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "structural_quality",
+      "pass": true,
+      "test003_value": 0.3667482303751486,
+      "test004_value": 0.3667482303751486,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "risk_quality",
+      "pass": true,
+      "test003_value": 0.48169454948065005,
+      "test004_value": 0.48169454948065005,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "base_capturability_score",
+      "pass": true,
+      "test003_value": 0.17666062360338286,
+      "test004_value": 0.17666062360338286,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "feasibility_gate_score",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "capturability_score",
+      "pass": true,
+      "test003_value": 0.17666062360338286,
+      "test004_value": 0.17666062360338286,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "aperture_before",
+      "pass": true,
+      "test003_value": 0.2490565349467589,
+      "test004_value": 0.2490565349467589,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "aperture_after",
+      "pass": true,
+      "test003_value": 0.21285857927507087,
+      "test004_value": 0.21285857927507087,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 2,
+      "field": "gate_margin",
+      "pass": true,
+      "test003_value": -0.5733393763966171,
+      "test004_value": -0.5733393763966171,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "state_level",
+      "pass": true,
+      "test003_value": -0.5253444238218404,
+      "test004_value": -0.5253444238218404,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "state_velocity",
+      "pass": true,
+      "test003_value": 0.002057570011428873,
+      "test004_value": 0.002057570011428873,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "state_acceleration",
+      "pass": true,
+      "test003_value": 3.1976103309160583e-05,
+      "test004_value": 3.1976103309160583e-05,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.7358255122296089,
+      "test004_value": 0.7358255122296089,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.38624216675125606,
+      "test004_value": 0.38624216675125606,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.4514619202777661,
+      "test004_value": 0.4514619202777661,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.3925572376200038,
+      "test004_value": 0.3925572376200038,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.5804399974703249,
+      "test004_value": 0.5804399974703249,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 3,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.34141638512437333,
+      "test004_value": 0.34141638512437333,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "terminal_displacement",
+      "pass": true,
+      "test003_value": 0.1502039423029219,
+      "test004_value": 0.1502039423029219,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "maximum_absolute_displacement",
+      "pass": true,
+      "test003_value": 0.1502039423029219,
+      "test004_value": 0.1502039423029219,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "projection_interval",
+      "pass": true,
+      "test003_value": 51.99425037323442,
+      "test004_value": 51.99425037323442,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "forward_half_life",
+      "pass": true,
+      "test003_value": 15.0,
+      "test004_value": 15.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "terminal_decay_factor",
+      "pass": true,
+      "test003_value": 0.09047836326827102,
+      "test004_value": 0.09047836326827102,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.7358255122296089,
+      "test004_value": 0.7358255122296089,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.38624216675125606,
+      "test004_value": 0.38624216675125606,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.4514619202777661,
+      "test004_value": 0.4514619202777661,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.3925572376200038,
+      "test004_value": 0.3925572376200038,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.5804399974703249,
+      "test004_value": 0.5804399974703249,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 3,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.34141638512437333,
+      "test004_value": 0.34141638512437333,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "hard_eligibility",
+      "pass": true,
+      "test003_value": 1,
+      "test004_value": 1,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "geometry_quality",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "structural_quality",
+      "pass": true,
+      "test003_value": 0.5043730622546775,
+      "test004_value": 0.5043730622546775,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "risk_quality",
+      "pass": true,
+      "test003_value": 0.5048353067296146,
+      "test004_value": 0.5048353067296146,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "base_capturability_score",
+      "pass": true,
+      "test003_value": 0.25462532958949513,
+      "test004_value": 0.25462532958949513,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "feasibility_gate_score",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "capturability_score",
+      "pass": true,
+      "test003_value": 0.25462532958949513,
+      "test004_value": 0.25462532958949513,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "aperture_before",
+      "pass": true,
+      "test003_value": 0.21285857927507087,
+      "test004_value": 0.21285857927507087,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "aperture_after",
+      "pass": true,
+      "test003_value": 0.23374195443228302,
+      "test004_value": 0.23374195443228302,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 3,
+      "field": "gate_margin",
+      "pass": true,
+      "test003_value": -0.49537467041050487,
+      "test004_value": -0.49537467041050487,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "state_level",
+      "pass": true,
+      "test003_value": -0.4852739124662928,
+      "test004_value": -0.4852739124662928,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "state_velocity",
+      "pass": true,
+      "test003_value": 0.0006678418558144867,
+      "test004_value": 0.0006678418558144867,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "state_acceleration",
+      "pass": true,
+      "test003_value": -2.316213592304608e-05,
+      "test004_value": -2.316213592304608e-05,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.46763294686467655,
+      "test004_value": 0.46763294686467655,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.0844299296192652,
+      "test004_value": 0.0844299296192652,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.5611683781422404,
+      "test004_value": 0.5611683781422404,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.44643451950928553,
+      "test004_value": 0.44643451950928553,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.6158801168445487,
+      "test004_value": 0.6158801168445487,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 4,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.2470273997717191,
+      "test004_value": 0.2470273997717191,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "terminal_displacement",
+      "pass": true,
+      "test003_value": 0.006548303521185184,
+      "test004_value": 0.006548303521185184,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "maximum_absolute_displacement",
+      "pass": true,
+      "test003_value": 0.009584564813207463,
+      "test004_value": 0.009584564813207463,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "projection_interval",
+      "pass": true,
+      "test003_value": 45.1407063259703,
+      "test004_value": 45.1407063259703,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "forward_half_life",
+      "pass": true,
+      "test003_value": 15.0,
+      "test004_value": 15.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "terminal_decay_factor",
+      "pass": true,
+      "test003_value": 0.12418988493389635,
+      "test004_value": 0.12418988493389635,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.46763294686467655,
+      "test004_value": 0.46763294686467655,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.0844299296192652,
+      "test004_value": 0.0844299296192652,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.5611683781422404,
+      "test004_value": 0.5611683781422404,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.44643451950928553,
+      "test004_value": 0.44643451950928553,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.6158801168445487,
+      "test004_value": 0.6158801168445487,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 4,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.2470273997717191,
+      "test004_value": 0.2470273997717191,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "hard_eligibility",
+      "pass": true,
+      "test003_value": 1,
+      "test004_value": 1,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "geometry_quality",
+      "pass": true,
+      "test003_value": 0.6832134425301885,
+      "test004_value": 0.6832134425301885,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "structural_quality",
+      "pass": true,
+      "test003_value": 0.2808653989173412,
+      "test004_value": 0.2808653989173412,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "risk_quality",
+      "pass": true,
+      "test003_value": 0.46112417816135437,
+      "test004_value": 0.46112417816135437,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "base_capturability_score",
+      "pass": true,
+      "test003_value": 0.08848558708732783,
+      "test004_value": 0.08848558708732783,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "feasibility_gate_score",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "capturability_score",
+      "pass": true,
+      "test003_value": 0.08848558708732783,
+      "test004_value": 0.08848558708732783,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "aperture_before",
+      "pass": true,
+      "test003_value": 0.23374195443228302,
+      "test004_value": 0.23374195443228302,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "aperture_after",
+      "pass": true,
+      "test003_value": 0.16111377075980543,
+      "test004_value": 0.16111377075980543,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 4,
+      "field": "gate_margin",
+      "pass": true,
+      "test003_value": -0.6615144129126722,
+      "test004_value": -0.6615144129126722,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "state_level",
+      "pass": true,
+      "test003_value": -0.46006103401656456,
+      "test004_value": -0.46006103401656456,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "state_velocity",
+      "pass": true,
+      "test003_value": 0.0004202146407587684,
+      "test004_value": 0.0004202146407587684,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "state_acceleration",
+      "pass": true,
+      "test003_value": -4.1271202502407854e-06,
+      "test004_value": -4.1271202502407854e-06,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.6929051031107131,
+      "test004_value": 0.6929051031107131,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.3812948915742014,
+      "test004_value": 0.3812948915742014,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.6489344961586315,
+      "test004_value": 0.6489344961586315,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.37855430696274,
+      "test004_value": 0.37855430696274,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.5902238033057716,
+      "test004_value": 0.5902238033057716,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D01",
+      "cycle": 5,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.4641413954411789,
+      "test004_value": 0.4641413954411789,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "terminal_displacement",
+      "pass": true,
+      "test003_value": 0.017447816321678744,
+      "test004_value": 0.017447816321678744,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "maximum_absolute_displacement",
+      "pass": true,
+      "test003_value": 0.017447816321678744,
+      "test004_value": 0.017447816321678744,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "projection_interval",
+      "pass": true,
+      "test003_value": 58.09512238289347,
+      "test004_value": 58.09512238289347,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "forward_half_life",
+      "pass": true,
+      "test003_value": 15.0,
+      "test004_value": 15.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "terminal_decay_factor",
+      "pass": true,
+      "test003_value": 0.06825089812935577,
+      "test004_value": 0.06825089812935577,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "strength",
+      "pass": true,
+      "test003_value": 0.6929051031107131,
+      "test004_value": 0.6929051031107131,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "coherence",
+      "pass": true,
+      "test003_value": 0.3812948915742014,
+      "test004_value": 0.3812948915742014,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "persistence",
+      "pass": true,
+      "test003_value": 0.6489344961586315,
+      "test004_value": 0.6489344961586315,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "uncertainty",
+      "pass": true,
+      "test003_value": 0.37855430696274,
+      "test004_value": 0.37855430696274,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "reversal_propensity",
+      "pass": true,
+      "test003_value": 0.5902238033057716,
+      "test004_value": 0.5902238033057716,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D02",
+      "cycle": 5,
+      "field": "state_support_ratio",
+      "pass": true,
+      "test003_value": 0.4641413954411789,
+      "test004_value": 0.4641413954411789,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "hard_eligibility",
+      "pass": true,
+      "test003_value": 1,
+      "test004_value": 1,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "geometry_quality",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "structural_quality",
+      "pass": true,
+      "test003_value": 0.5555355673592773,
+      "test004_value": 0.5555355673592773,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "risk_quality",
+      "pass": true,
+      "test003_value": 0.5046321953114142,
+      "test004_value": 0.5046321953114142,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "base_capturability_score",
+      "pass": true,
+      "test003_value": 0.28034113293008417,
+      "test004_value": 0.28034113293008417,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "feasibility_gate_score",
+      "pass": true,
+      "test003_value": 1.0,
+      "test004_value": 1.0,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "capturability_score",
+      "pass": true,
+      "test003_value": 0.28034113293008417,
+      "test004_value": 0.28034113293008417,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "aperture_before",
+      "pass": true,
+      "test003_value": 0.16111377075980543,
+      "test004_value": 0.16111377075980543,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "aperture_after",
+      "pass": true,
+      "test003_value": 0.2207274518449448,
+      "test004_value": 0.2207274518449448,
+      "tolerance": 0.0
+    },
+    {
+      "absolute_delta": 0.0,
+      "component": "D04",
+      "cycle": 5,
+      "field": "gate_margin",
+      "pass": true,
+      "test003_value": -0.46965886706991583,
+      "test004_value": -0.46965886706991583,
+      "tolerance": 0.0
+    }
+  ],
+  "test_id": "APTF_TEST_004_CORRECTED_D04_REGRESSION_V0_1",
+  "tolerance_policy": "exact deterministic equality; tolerance 0.0"
+}

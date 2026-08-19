@@ -1,0 +1,94 @@
+{
+  "test_id": "APTF_TEST_002_TWO_OBSERVATIONS_V0_1",
+  "canonical_unit": "integer nanoseconds",
+  "resolution": "nanosecond resolution",
+  "accuracy_claim": false,
+  "direct_boundary": {
+    "start": "immediately before create_source_event for the target",
+    "stop": "immediately after complete E5 StageResult and envelope return to caller",
+    "primitive": "time.perf_counter_ns() through SystemClock.monotonic_ns",
+    "clock_domain_id": "2e5f52dd-b1a5-421f-8c57-5128cd9efc11",
+    "utc_subtraction_used": false,
+    "market_time_subtraction_used": false,
+    "sum_derived": false
+  },
+  "observations": [
+    {
+      "observation": "t1",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "stage_duration_ns": {
+        "E0": 11600,
+        "D01": 46600,
+        "D02": 28300,
+        "D04": 24300,
+        "D03": 57500,
+        "POSITION_CONTROLLER": 8000
+      },
+      "t_math_components_ns": 164700,
+      "t_all_measured_stages_ns": 176300,
+      "t_direct_ns": 1547600,
+      "delta_math_ns": 1382900,
+      "delta_all_stages_ns": 1371300,
+      "t_direct_us": 1547.6,
+      "t_direct_ms": 1.5476,
+      "direct_start_monotonic_ns": 241279022036600,
+      "direct_stop_monotonic_ns": 241279023584200
+    },
+    {
+      "observation": "t2",
+      "market_event_time_utc": "2022-09-30T08:09:00Z",
+      "stage_duration_ns": {
+        "E0": 6800,
+        "D01": 46800,
+        "D02": 32300,
+        "D04": 46500,
+        "D03": 77500,
+        "POSITION_CONTROLLER": 12000
+      },
+      "t_math_components_ns": 215100,
+      "t_all_measured_stages_ns": 221900,
+      "t_direct_ns": 1711000,
+      "delta_math_ns": 1495900,
+      "delta_all_stages_ns": 1489100,
+      "t_direct_us": 1711.0,
+      "t_direct_ms": 1.711,
+      "direct_start_monotonic_ns": 241279024194800,
+      "direct_stop_monotonic_ns": 241279025905800
+    }
+  ],
+  "spacing": {
+    "market_event_interval_seconds": 60,
+    "inter_observation_runtime_gap_ns": 610600,
+    "inter_observation_runtime_gap_us": 610.6,
+    "inter_observation_runtime_gap_ms": 0.6106,
+    "artificial_wait_inserted": false
+  },
+  "overhead_accounting": {
+    "measured_separately": [
+      "each E0-E5 frozen stage call interval",
+      "outer direct E0-entry through E5-return interval",
+      "inter-observation runtime gap"
+    ],
+    "uninstrumented_inside_direct_boundary": [
+      "execution UUID generation before each stage timer",
+      "payload adapter normalization after each successful stage timer",
+      "canonical payload serialization and SHA256 hashing",
+      "deterministic event ID generation",
+      "TemporalEventEnvelope construction and validation",
+      "parent/child handoff and Python call overhead",
+      "target-local D03Input and controller-call argument construction between stage timers"
+    ],
+    "not_present": [
+      "network",
+      "database",
+      "queue",
+      "pub/sub",
+      "asynchronous overlap",
+      "artificial market-time sleep",
+      "Azure",
+      "broker input"
+    ],
+    "numeric_sub_breakdown_available": false,
+    "diagnostic_perturbation": "Outer timer sampling adds small overhead; state capture and report generation are outside each direct target boundary."
+  }
+}

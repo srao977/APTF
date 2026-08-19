@@ -1,0 +1,142 @@
+{
+  "adjacent_measured_pairs": 99,
+  "delta_t_counts": {
+    "distinct_values": {
+      "120.0": 5,
+      "180.0": 3,
+      "240.0": 4,
+      "60.0": 87
+    },
+    "equal_60": 87,
+    "greater_than_60": 12,
+    "less_than_60": 0
+  },
+  "delta_t_distribution": {
+    "maximum": 240.0,
+    "mean": 73.93939393939394,
+    "median": 60.0,
+    "minimum": 60.0
+  },
+  "execution_timestamp_utc": "2026-08-18T22:08:15.120144Z",
+  "first_timestamp": "2022-09-30T08:13:00Z",
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "gaps_invalidated_test": false,
+  "last_timestamp": "2022-09-30T10:15:00Z",
+  "observation_count": 100,
+  "run_id": "TEST005R_FROZEN_D04_100OBS_V0_3_RUN_001",
+  "source_data_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "source_gap_count": 12,
+  "source_time_gaps": [
+    {
+      "current_cycle": 32,
+      "current_physical_row": 46,
+      "current_timestamp": "2022-09-30T08:46:00Z",
+      "delta_t_seconds": 180.0,
+      "previous_cycle": 31,
+      "previous_physical_row": 45,
+      "previous_timestamp": "2022-09-30T08:43:00Z"
+    },
+    {
+      "current_cycle": 41,
+      "current_physical_row": 55,
+      "current_timestamp": "2022-09-30T08:57:00Z",
+      "delta_t_seconds": 180.0,
+      "previous_cycle": 40,
+      "previous_physical_row": 54,
+      "previous_timestamp": "2022-09-30T08:54:00Z"
+    },
+    {
+      "current_cycle": 56,
+      "current_physical_row": 70,
+      "current_timestamp": "2022-09-30T09:13:00Z",
+      "delta_t_seconds": 120.0,
+      "previous_cycle": 55,
+      "previous_physical_row": 69,
+      "previous_timestamp": "2022-09-30T09:11:00Z"
+    },
+    {
+      "current_cycle": 59,
+      "current_physical_row": 73,
+      "current_timestamp": "2022-09-30T09:17:00Z",
+      "delta_t_seconds": 120.0,
+      "previous_cycle": 58,
+      "previous_physical_row": 72,
+      "previous_timestamp": "2022-09-30T09:15:00Z"
+    },
+    {
+      "current_cycle": 68,
+      "current_physical_row": 82,
+      "current_timestamp": "2022-09-30T09:29:00Z",
+      "delta_t_seconds": 240.0,
+      "previous_cycle": 67,
+      "previous_physical_row": 81,
+      "previous_timestamp": "2022-09-30T09:25:00Z"
+    },
+    {
+      "current_cycle": 69,
+      "current_physical_row": 83,
+      "current_timestamp": "2022-09-30T09:31:00Z",
+      "delta_t_seconds": 120.0,
+      "previous_cycle": 68,
+      "previous_physical_row": 82,
+      "previous_timestamp": "2022-09-30T09:29:00Z"
+    },
+    {
+      "current_cycle": 72,
+      "current_physical_row": 86,
+      "current_timestamp": "2022-09-30T09:37:00Z",
+      "delta_t_seconds": 240.0,
+      "previous_cycle": 71,
+      "previous_physical_row": 85,
+      "previous_timestamp": "2022-09-30T09:33:00Z"
+    },
+    {
+      "current_cycle": 75,
+      "current_physical_row": 89,
+      "current_timestamp": "2022-09-30T09:41:00Z",
+      "delta_t_seconds": 120.0,
+      "previous_cycle": 74,
+      "previous_physical_row": 88,
+      "previous_timestamp": "2022-09-30T09:39:00Z"
+    },
+    {
+      "current_cycle": 78,
+      "current_physical_row": 92,
+      "current_timestamp": "2022-09-30T09:47:00Z",
+      "delta_t_seconds": 240.0,
+      "previous_cycle": 77,
+      "previous_physical_row": 91,
+      "previous_timestamp": "2022-09-30T09:43:00Z"
+    },
+    {
+      "current_cycle": 82,
+      "current_physical_row": 96,
+      "current_timestamp": "2022-09-30T09:53:00Z",
+      "delta_t_seconds": 180.0,
+      "previous_cycle": 81,
+      "previous_physical_row": 95,
+      "previous_timestamp": "2022-09-30T09:50:00Z"
+    },
+    {
+      "current_cycle": 84,
+      "current_physical_row": 98,
+      "current_timestamp": "2022-09-30T09:58:00Z",
+      "delta_t_seconds": 240.0,
+      "previous_cycle": 83,
+      "previous_physical_row": 97,
+      "previous_timestamp": "2022-09-30T09:54:00Z"
+    },
+    {
+      "current_cycle": 87,
+      "current_physical_row": 101,
+      "current_timestamp": "2022-09-30T10:02:00Z",
+      "delta_t_seconds": 120.0,
+      "previous_cycle": 86,
+      "previous_physical_row": 100,
+      "previous_timestamp": "2022-09-30T10:00:00Z"
+    }
+  ],
+  "source_time_span_seconds": 7320.0,
+  "status": "PASS"
+}

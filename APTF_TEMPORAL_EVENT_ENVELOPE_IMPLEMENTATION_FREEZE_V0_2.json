@@ -1,0 +1,77 @@
+{
+  "freeze_id": "APTF_TEMPORAL_EVENT_ENVELOPE_IMPLEMENTATION_V0_2_FROZEN_20260818",
+  "status": "FROZEN_IMPLEMENTATION",
+  "frozen_date": "2026-08-18",
+  "implementation_version": "0.2.0",
+  "acceptance_gates": {
+    "passed": 22,
+    "required": 22,
+    "status": "PASS"
+  },
+  "design_authority": {
+    "path": "APTF_TEMPORAL_EVENT_ENVELOPE_DESIGN_FREEZE_V0_2.json",
+    "sha256": "c4842db31abbf3abede1c394e94c7223171bf90e0f70c9063656acb0d97e513f"
+  },
+  "runtime": {
+    "python_version": "3.13.7",
+    "python_implementation": "cpython",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "canonical_json_profile": "APTF-CJSON-V1",
+    "utc_clock": "datetime.now(datetime.UTC)",
+    "monotonic_clock": "time.perf_counter_ns()"
+  },
+  "implementation_sources": [
+    {"path":"aptf_runtime/pyproject.toml","sha256":"1c377203e3f1f6497bbcc59522aec1609d452552b7a48f3187d1756ba0b4eda7"},
+    {"path":"aptf_runtime/src/aptf_runtime/__init__.py","sha256":"566e2b26642bb79a56e83fb3291fd921bd563b9a0d2f25142291ad0d854fad5d"},
+    {"path":"aptf_runtime/src/aptf_runtime/canonical_json.py","sha256":"e99a4b85574cc68aa9666cbbf92d4e303511c17a61d13929010f2547ad1249bb"},
+    {"path":"aptf_runtime/src/aptf_runtime/identity.py","sha256":"c4d52f32e92283473b851d5c9743ca732f1d9d3e8455649cec7394d03181e052"},
+    {"path":"aptf_runtime/src/aptf_runtime/clock.py","sha256":"780a995d5138d305d2ac5ff71190b9879b5486934162c2b4862ef3d0ec707024"},
+    {"path":"aptf_runtime/src/aptf_runtime/temporal_envelope.py","sha256":"fa3b73fab55b6772b15a6a15a74efc01513fed90f672a4a5bcfb08ad5d6623d1"},
+    {"path":"aptf_runtime/src/aptf_runtime/payload_serialization.py","sha256":"85c8394c89d1dbaf10dadf83a6e89cc87e7c179a55fbe19bd082da3e7d282b5d"},
+    {"path":"aptf_runtime/src/aptf_runtime/stage_wrappers.py","sha256":"0abd1ce14fa300acac05a42eda963fe5fc93a6dfc086f4ba30aa87b19a2673da"},
+    {"path":"aptf_runtime/src/aptf_runtime/single_observation_pipeline.py","sha256":"175bedade54375319f06f3a4021488b3de52e29b544aeefab9510ac702085b21"}
+  ],
+  "schema": {
+    "path": "aptf_runtime/schemas/temporal_event_envelope_v0_2.json",
+    "sha256": "954b4262a1a1931556045504f19b3bd1c21c85ec49fa996dde40b5f43047e64b",
+    "matches_design_schema": true
+  },
+  "tests": [
+    {"path":"aptf_runtime/tests/test_runtime_contract.py","sha256":"922453d6dbb7ad9d9173d33413a7846fc6537af11bcb6154e9293a68d92821f4"},
+    {"path":"aptf_runtime/tests/test_single_observation.py","sha256":"4d075c99757070b99a3fcd11710ad9067dd60d1322b0062f80b1e28db53341dd"}
+  ],
+  "evidence": [
+    {"path":"APTF_TEMPORAL_EVENT_ENVELOPE_IMPLEMENTATION_V0_2.md","sha256":"d287493c1e5efe6fba68e03aacb864e35ec251cedeafd4f42d5aba6e70360484"},
+    {"path":"APTF_SINGLE_OBSERVATION_TEMPORAL_PROOF_V0_2.md","sha256":"22d5785d24fc6bce809610a34eabc129d4d98f4ee7366ed35474fcd4de8464e4"},
+    {"path":"APTF_TEMPORAL_PAYLOAD_NON_DRIFT_AUDIT_V0_2.md","sha256":"4c18d314e9e5afe636238e1921f9bf90bf68e8e124ff2bc7ccac67b7320d08a4"},
+    {"path":"APTF_TEMPORAL_FROZEN_FILE_NON_DRIFT_AUDIT_V0_2.md","sha256":"d3e433fff3bcd908d036e967ed2a17f21006c6db3a7bb26045e8c38392689828"},
+    {"path":"APTF_TEMPORAL_RUNTIME_TEST_REPORT_V0_2.md","sha256":"9ab4dee6486ac7b55c700f54ded49a902caa734e0777137c070b240e36d904d7"},
+    {"path":"APTF_TEMPORAL_AZURE_COMPATIBILITY_AUDIT_V0_2.md","sha256":"095cb4a94b469e60d6939c1acefcc3fc3bba66a58a9cbd0c2c2028a6f9ba5821"},
+    {"path":"APTF_TEMPORAL_IMPLEMENTATION_DECISION_POINT_V0_2.md","sha256":"781e7974d60c1cd091b6f5295d29bd3d90d0ade6fb9acac186e8923da9ec37f2"}
+  ],
+  "non_drift": {
+    "protected_inventory_path": "APTF_TEMPORAL_PRE_IMPLEMENTATION_HASH_INVENTORY_V0_2.json",
+    "protected_artifacts_matched": 30,
+    "protected_artifacts_required": 30,
+    "payload_components_matched": 5,
+    "payload_components_required": 5,
+    "frozen_core_files_modified": false,
+    "mathematical_behavior_modified": false
+  },
+  "proof": {
+    "target_count": 1,
+    "instrument_id": "SPY",
+    "market_event_time_utc": "2022-09-30T08:16:00Z",
+    "market_event_time_role": "PROVIDER_EVENT",
+    "source_sequence_number": 16,
+    "normalized_source_row_number": 17,
+    "terminal_payload_type": "PositionTransitionPlan",
+    "mock_or_synthetic_market_data_used": false
+  },
+  "azure": {
+    "implemented": false,
+    "dependency_added": false,
+    "static_compatibility": "PASS"
+  },
+  "next_action": "HUMAN_REVIEW_BEFORE_AZURE_EVENT_STREAM_ARCHITECTURE"
+}

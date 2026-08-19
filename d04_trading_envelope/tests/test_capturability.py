@@ -13,13 +13,8 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def _model_v02() -> CapturabilityModelV0_2:
-    cfg = load_config(ROOT / "config" / "default.yaml")
-    gate = cfg.capturability.feasibility_gate
-    return CapturabilityModelV0_2(
-        feasibility_gate_dimensions=gate["dimensions"],
-        gate_warning_threshold=gate["warning_threshold"],
-        critical_data_integrity_threshold=cfg.runtime.critical_data_integrity_threshold,
-    )
+    load_config(ROOT / "config" / "default.yaml")
+    return CapturabilityModelV0_2()
 
 
 def _strong_observation():
@@ -38,7 +33,6 @@ def test_capturability_range() -> None:
         result = model.evaluate(observation.return_shape, observation.context)
         assert 0.0 <= result.capturability_score <= 1.0
         assert 0.0 <= result.base_capturability_score <= 1.0
-        assert 0.0 <= result.feasibility_gate_score <= 1.0
 
 
 def test_market_ineligible_forces_zero() -> None:
@@ -49,11 +43,11 @@ def test_market_ineligible_forces_zero() -> None:
     assert result.capturability_score == 0.0
 
 
-def test_minimum_gate_mode_uses_min_dimension() -> None:
+def test_current_result_emits_no_gate_fields() -> None:
     observation = _strong_observation()
     result = _model_v02().evaluate(observation.return_shape, observation.context)
-    assert result.feasibility_gate_score == min(result.gate_dimension_values.values())
-    assert len(result.gate_dimension_values) == 10
+    assert "feasibility_gate_score" not in type(result).model_fields
+    assert "gate_dimension_values" not in type(result).model_fields
 
 
 def test_final_capturability_never_exceeds_base() -> None:
@@ -62,28 +56,11 @@ def test_final_capturability_never_exceeds_base() -> None:
     assert result.capturability_score <= result.base_capturability_score
 
 
-@pytest.mark.parametrize(
-    ("field", "value"),
-    [
-        ("liquidity_quality", 0.01),
-        ("spread_quality", 0.01),
-        ("execution_feasibility", 0.02),
-        ("risk_capacity", 0.01),
-    ],
-)
-def test_poor_gate_dimension_reduces_final(field: str, value: float) -> None:
+def test_eligible_final_equals_base_without_gate_multiplier() -> None:
     observation = _strong_observation()
-    context = observation.context.model_copy(update={field: value})
-    result = _model_v02().evaluate(observation.return_shape, context)
-    assert result.capturability_score < 0.1
-
-
-def test_all_gate_values_high_final_close_to_base() -> None:
-    observation = _strong_observation()
-    updates = {name: 0.95 for name in _model_v02().feasibility_gate_dimensions}
-    context = observation.context.model_copy(update=updates)
-    result = _model_v02().evaluate(observation.return_shape, context)
-    assert result.capturability_score == pytest.approx(result.base_capturability_score * 0.95)
+    result = _model_v02().evaluate(observation.return_shape, observation.context)
+    assert result.hard_eligibility == 1
+    assert result.capturability_score == result.base_capturability_score
 
 
 def test_frozen_component_equations() -> None:
@@ -98,4 +75,7 @@ def test_frozen_component_equations() -> None:
     assert result.risk_quality == pytest.approx(expected_risk)
     assert result.base_capturability_score == pytest.approx(
         expected_geometry * expected_structural * expected_risk
+    )
+    assert result.capturability_score == pytest.approx(
+        result.hard_eligibility * expected_geometry * expected_structural * expected_risk
     )

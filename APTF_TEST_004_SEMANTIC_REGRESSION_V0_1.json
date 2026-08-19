@@ -1,0 +1,96 @@
+{
+  "all_pass": true,
+  "rows": [
+    {
+      "cycle": 1,
+      "pass": true,
+      "test003_candidate": null,
+      "test003_d03_position": "FLAT",
+      "test003_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test003_d04_state": "CLOSED",
+      "test003_pc_decision": [
+        "NO_ACTION"
+      ],
+      "test004_candidate": null,
+      "test004_d03_position": "FLAT",
+      "test004_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test004_d04_state": "CLOSED",
+      "test004_pc_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 2,
+      "pass": true,
+      "test003_candidate": null,
+      "test003_d03_position": "FLAT",
+      "test003_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test003_d04_state": "CLOSED",
+      "test003_pc_decision": [
+        "NO_ACTION"
+      ],
+      "test004_candidate": null,
+      "test004_d03_position": "FLAT",
+      "test004_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test004_d04_state": "CLOSED",
+      "test004_pc_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 3,
+      "pass": true,
+      "test003_candidate": null,
+      "test003_d03_position": "FLAT",
+      "test003_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test003_d04_state": "CLOSED",
+      "test003_pc_decision": [
+        "NO_ACTION"
+      ],
+      "test004_candidate": null,
+      "test004_d03_position": "FLAT",
+      "test004_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test004_d04_state": "CLOSED",
+      "test004_pc_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 4,
+      "pass": true,
+      "test003_candidate": null,
+      "test003_d03_position": "FLAT",
+      "test003_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test003_d04_state": "CLOSED",
+      "test003_pc_decision": [
+        "NO_ACTION"
+      ],
+      "test004_candidate": null,
+      "test004_d03_position": "FLAT",
+      "test004_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test004_d04_state": "CLOSED",
+      "test004_pc_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 5,
+      "pass": true,
+      "test003_candidate": null,
+      "test003_d03_position": "FLAT",
+      "test003_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test003_d04_state": "CLOSED",
+      "test003_pc_decision": [
+        "NO_ACTION"
+      ],
+      "test004_candidate": null,
+      "test004_d03_position": "FLAT",
+      "test004_d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "test004_d04_state": "CLOSED",
+      "test004_pc_decision": [
+        "NO_ACTION"
+      ]
+    }
+  ],
+  "test_id": "APTF_TEST_004_CORRECTED_D04_REGRESSION_V0_1"
+}

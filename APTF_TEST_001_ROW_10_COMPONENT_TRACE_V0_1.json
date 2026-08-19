@@ -1,0 +1,1034 @@
+{
+  "checks": {
+    "all_durations_nonnegative": true,
+    "all_market_times_preserved": true,
+    "observation_id_preserved": true,
+    "parent_lineage_complete": true,
+    "target_count": 1,
+    "target_payload_hashes": {
+      "D01OutputPair": "654c87a7ce257ccde33e5f0633250fa38986ead10a9e8c2415bb35e4131d60f4",
+      "DecisionRecord": "6c25b40a4700507d4cb3adba89a6318b737e5736fbc5a222d411ab817444dd05",
+      "EnvelopeEvaluation": "701cfb4daf4d34b6d115424cdfc1fc70c6e5e32ef5c4f2ee0909b61b1043034c",
+      "NormalizedObservationSourceRecord": "455bbcb7276f4ec5a621b65944e29338ea5eaa714c11849ee8eb55f1a567fe9b",
+      "PositionTransitionPlan": "e4ed5166bf07b50f54453e33e5de700497cf73a62fcbc2e3652fe0f69ceea1a5",
+      "ReturnShape": "0d5ab3450a920936663d2176c27627c75374439e1be84ac499698d624dbe3703"
+    },
+    "terminal_payload_complete": true,
+    "trace_sha256": "374276af7b869a447d81a53a602b37f041cffbddd09f2e4e49d365ecbe7ae8b6"
+  },
+  "controller_input": {
+    "actual_position_snapshot": {
+      "identity": "INITIAL",
+      "state": "FLAT",
+      "version": 1
+    },
+    "d03_decision": {
+      "action_authorized": false,
+      "candidate_id": null,
+      "candidate_source_return_shape_model_time": null,
+      "d03_model_version": "D03_CONTROL_V0_1_DESIGN",
+      "decision_id": "D03D|SPY|1664525280|D03_RULES_V0_1_DESIGN|3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+      "decision_rule_id": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "decision_rule_version": "D03_RULES_V0_1_DESIGN",
+      "decision_time": 1664525280.0,
+      "desired_position_state": "FLAT",
+      "entity_id": "SPY",
+      "input_fingerprint": "3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+      "primary_reason_code": "ENVELOPE_CLOSED",
+      "prior_position_state": "FLAT",
+      "schema_version": "D03_DECISION_SCHEMA_V0_1",
+      "source_d04_envelope_state": "CLOSED",
+      "source_d04_evaluation_time": 1664525280.0,
+      "source_d04_fingerprint": "701cfb4daf4d34b6d115424cdfc1fc70c6e5e32ef5c4f2ee0909b61b1043034c",
+      "source_d04_return_shape_model_time": 1664525280.0,
+      "source_d04_safety_state": "CLEAR",
+      "supporting_reason_codes": [
+        "POSITION_ALREADY_ALIGNED"
+      ],
+      "transition_intent": "NO_CHANGE"
+    },
+    "d03_decision_hash_argument": "3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+    "hash_argument_source": "existing RealCausalReplayHarness v0.2 behavior"
+  },
+  "controller_output": {
+    "action_authorized": false,
+    "decision_time": 1664525280.0,
+    "desired_position": "FLAT",
+    "entity_id": "SPY",
+    "ordered_execution_verbs": [
+      "NO_ACTION"
+    ],
+    "originating_d03_decision_hash": "3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+    "originating_d03_decision_id": "D03D|SPY|1664525280|D03_RULES_V0_1_DESIGN|3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+    "plan_status": "NON_EXECUTABLE_NO_CHANGE",
+    "source_position": "FLAT",
+    "transition_class": "NO_CHANGE_FLAT",
+    "transition_id": "APTFPTP|9e3ae647458b8a283b67395abd2ff19a"
+  },
+  "d01_input": {
+    "effective_observation_after_with_defaults": {
+      "ask": null,
+      "ask_size": null,
+      "availability_mask": {
+        "ask": false,
+        "bid": false,
+        "price": true,
+        "volume": true
+      },
+      "bid": null,
+      "bid_size": null,
+      "entity_id": "SPY",
+      "event_time": 1664525280.0,
+      "price": 365.5,
+      "receive_time": 1664525280.0,
+      "sequence_id": 8,
+      "session": "PREMARKET",
+      "source_quality": 1.0,
+      "volume": 4288.0
+    },
+    "prior_runtime_state_values_read": {
+      "adaptive_reference": 366.0157352105078,
+      "adaptive_scale": 0.7590324720175738,
+      "clipping_count": 0,
+      "data_gap_count": 7,
+      "half_life_state": {
+        "forward_half_life": 17.775628547068138,
+        "observation_half_life": 17.775628547068138
+      },
+      "innovation_extreme_count": 0,
+      "last_event_time": 1664525220.0,
+      "nonfinite_count": 0,
+      "parameter_bound_hits": 0,
+      "parameter_state": {
+        "ref_alpha": 0.05095261450848489
+      },
+      "prev_level": -0.6004159601978543,
+      "prev_velocity": -0.0035612763243195837,
+      "sequence": 8,
+      "state_type": "RuntimeState",
+      "state_vector": {
+        "acceleration": -5.105635337734694e-05,
+        "curvature": -5.1055382094963564e-05,
+        "decay_relevance": 1.0,
+        "level": -0.6004159601978543,
+        "persistence": 0.49739241038059606,
+        "perturbation_magnitude": 0.023178841542804533,
+        "reversal_propensity": 0.3798813969072935,
+        "strength": 0.8005242210308087,
+        "uncertainty": 0.3967330512875907,
+        "velocity": -0.0035612763243195837
+      },
+      "volume_reference": 588.5134348690233
+    },
+    "received_observation": {
+      "ask": null,
+      "ask_size": null,
+      "availability_mask": {
+        "price": true,
+        "volume": true
+      },
+      "bid": null,
+      "bid_size": null,
+      "entity_id": "SPY",
+      "event_time": 1664525280.0,
+      "price": 365.5,
+      "receive_time": 1664525280.0,
+      "sequence_id": 8,
+      "session": "PREMARKET",
+      "source_quality": 1.0,
+      "volume": 4288.0
+    }
+  },
+  "d01_output": {
+    "dmo": {
+      "coherence": 0.4855782805501968,
+      "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+      "data_quality": 1.0,
+      "dmo_schema_version": "0.2.0",
+      "entity_id": "SPY",
+      "fmo_schema_version": "0.2.0",
+      "forward_half_life": 15.0,
+      "model_health": "DEGRADED_DATA",
+      "model_time": 1664525280.0,
+      "model_version": "0.2",
+      "observation_half_life": 15.0,
+      "parameter_state": {
+        "ref_alpha": 0.05108942475062641
+      },
+      "parameter_update_magnitude": {
+        "ref_alpha": 0.00013681024214151627
+      },
+      "persistence": 0.5179117484872026,
+      "perturbation_class": "CONTRADICTING",
+      "perturbation_magnitude": 0.019860213546167346,
+      "reversal_propensity": 0.785306864585095,
+      "state_acceleration": 4.3598246210338045e-05,
+      "state_curvature": 4.359818776174796e-05,
+      "state_hash": "FDDDBC0F774A0C67B723D273629BECD128E6DBC5398FD00B8B458530DAA7F9C1",
+      "state_level": -0.6571388532831072,
+      "state_support_ratio": 0.39012915911128365,
+      "state_velocity": -0.0009453815512633182,
+      "strength": 0.8777636556469071,
+      "trace_id": "SPY:9",
+      "uncertainty": 0.3799587892055599
+    },
+    "fmo": {
+      "entity_id": "SPY",
+      "interval_length": 58.805642197812524,
+      "model_time": 1664525280.0,
+      "samples": [
+        {
+          "level": -0.658413202726016,
+          "persistence": 0.48563073717545263,
+          "reversal_propensity": 0.7915397819510442,
+          "strength": 0.8230533723221005,
+          "tau": 1.3926982200548028,
+          "uncertainty": 0.3893081652544837,
+          "velocity": -0.0008864567003801471
+        },
+        {
+          "level": -0.6612109321047579,
+          "persistence": 0.41393258614359707,
+          "reversal_propensity": 0.8053834823963967,
+          "strength": 0.7015384012161677,
+          "tau": 4.849656879880872,
+          "uncertainty": 0.4100737159225124,
+          "velocity": -0.0007555809103576271
+        },
+        {
+          "level": -0.6644441493795055,
+          "persistence": 0.32533369229604603,
+          "reversal_propensity": 0.8224904304635808,
+          "strength": 0.5513798284920343,
+          "tau": 10.061790698047371,
+          "uncertainty": 0.4357341380232886,
+          "velocity": -0.0005938549793462715
+        },
+        {
+          "level": -0.666887140499668,
+          "persistence": 0.23732661123734597,
+          "reversal_propensity": 0.8394831094896437,
+          "strength": 0.4022242678805201,
+          "tau": 16.887486114292866,
+          "uncertainty": 0.46122315656238283,
+          "velocity": -0.00043320932676848233
+        },
+        {
+          "level": -0.667113763760807,
+          "persistence": 0.16137018397319478,
+          "reversal_propensity": 0.8541490110618741,
+          "strength": 0.2734923141065323,
+          "tau": 25.234983688396127,
+          "uncertainty": 0.4832220089207286,
+          "velocity": -0.0002945605989781781
+        },
+        {
+          "level": -0.6635016605663079,
+          "persistence": 0.10259024833289869,
+          "reversal_propensity": 0.8654984225807265,
+          "strength": 0.17387130466424297,
+          "tau": 35.037190239811366,
+          "uncertainty": 0.5002461261990071,
+          "velocity": -0.00018726535630199425
+        },
+        {
+          "level": -0.6542419854858573,
+          "persistence": 0.06112898042884944,
+          "reversal_propensity": 0.8735038922433004,
+          "strength": 0.10360220150232982,
+          "tau": 46.241668136145385,
+          "uncertainty": 0.512254330692868,
+          "velocity": -0.00011158312302003839
+        },
+        {
+          "level": -0.6373489974365647,
+          "persistence": 0.03420620927487088,
+          "reversal_propensity": 0.8787022240503348,
+          "strength": 0.05797313420024822,
+          "tau": 58.805642197812524,
+          "uncertainty": 0.5200518284034197,
+          "velocity": -6.243905314288154e-05
+        }
+      ]
+    }
+  },
+  "d02_input": {
+    "dmo": {
+      "coherence": 0.4855782805501968,
+      "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+      "data_quality": 1.0,
+      "dmo_schema_version": "0.2.0",
+      "entity_id": "SPY",
+      "fmo_schema_version": "0.2.0",
+      "forward_half_life": 15.0,
+      "model_health": "DEGRADED_DATA",
+      "model_time": 1664525280.0,
+      "model_version": "0.2",
+      "observation_half_life": 15.0,
+      "parameter_state": {
+        "ref_alpha": 0.05108942475062641
+      },
+      "parameter_update_magnitude": {
+        "ref_alpha": 0.00013681024214151627
+      },
+      "persistence": 0.5179117484872026,
+      "perturbation_class": "CONTRADICTING",
+      "perturbation_magnitude": 0.019860213546167346,
+      "reversal_propensity": 0.785306864585095,
+      "state_acceleration": 4.3598246210338045e-05,
+      "state_curvature": 4.359818776174796e-05,
+      "state_hash": "FDDDBC0F774A0C67B723D273629BECD128E6DBC5398FD00B8B458530DAA7F9C1",
+      "state_level": -0.6571388532831072,
+      "state_support_ratio": 0.39012915911128365,
+      "state_velocity": -0.0009453815512633182,
+      "strength": 0.8777636556469071,
+      "trace_id": "SPY:9",
+      "uncertainty": 0.3799587892055599
+    },
+    "fmo": {
+      "entity_id": "SPY",
+      "interval_length": 58.805642197812524,
+      "model_time": 1664525280.0,
+      "samples": [
+        {
+          "level": -0.658413202726016,
+          "persistence": 0.48563073717545263,
+          "reversal_propensity": 0.7915397819510442,
+          "strength": 0.8230533723221005,
+          "tau": 1.3926982200548028,
+          "uncertainty": 0.3893081652544837,
+          "velocity": -0.0008864567003801471
+        },
+        {
+          "level": -0.6612109321047579,
+          "persistence": 0.41393258614359707,
+          "reversal_propensity": 0.8053834823963967,
+          "strength": 0.7015384012161677,
+          "tau": 4.849656879880872,
+          "uncertainty": 0.4100737159225124,
+          "velocity": -0.0007555809103576271
+        },
+        {
+          "level": -0.6644441493795055,
+          "persistence": 0.32533369229604603,
+          "reversal_propensity": 0.8224904304635808,
+          "strength": 0.5513798284920343,
+          "tau": 10.061790698047371,
+          "uncertainty": 0.4357341380232886,
+          "velocity": -0.0005938549793462715
+        },
+        {
+          "level": -0.666887140499668,
+          "persistence": 0.23732661123734597,
+          "reversal_propensity": 0.8394831094896437,
+          "strength": 0.4022242678805201,
+          "tau": 16.887486114292866,
+          "uncertainty": 0.46122315656238283,
+          "velocity": -0.00043320932676848233
+        },
+        {
+          "level": -0.667113763760807,
+          "persistence": 0.16137018397319478,
+          "reversal_propensity": 0.8541490110618741,
+          "strength": 0.2734923141065323,
+          "tau": 25.234983688396127,
+          "uncertainty": 0.4832220089207286,
+          "velocity": -0.0002945605989781781
+        },
+        {
+          "level": -0.6635016605663079,
+          "persistence": 0.10259024833289869,
+          "reversal_propensity": 0.8654984225807265,
+          "strength": 0.17387130466424297,
+          "tau": 35.037190239811366,
+          "uncertainty": 0.5002461261990071,
+          "velocity": -0.00018726535630199425
+        },
+        {
+          "level": -0.6542419854858573,
+          "persistence": 0.06112898042884944,
+          "reversal_propensity": 0.8735038922433004,
+          "strength": 0.10360220150232982,
+          "tau": 46.241668136145385,
+          "uncertainty": 0.512254330692868,
+          "velocity": -0.00011158312302003839
+        },
+        {
+          "level": -0.6373489974365647,
+          "persistence": 0.03420620927487088,
+          "reversal_propensity": 0.8787022240503348,
+          "strength": 0.05797313420024822,
+          "tau": 58.805642197812524,
+          "uncertainty": 0.5200518284034197,
+          "velocity": -6.243905314288154e-05
+        }
+      ]
+    }
+  },
+  "d02_output": {
+    "coherence": 0.4855782805501968,
+    "current_level": -0.6571388532831072,
+    "entity_id": "SPY",
+    "forward_half_life": 15.0,
+    "forward_samples": [
+      {
+        "level": -0.658413202726016,
+        "persistence": 0.48563073717545263,
+        "reversal_propensity": 0.7915397819510442,
+        "strength": 0.8230533723221005,
+        "tau": 1.3926982200548028,
+        "uncertainty": 0.3893081652544837,
+        "velocity": -0.0008864567003801471
+      },
+      {
+        "level": -0.6612109321047579,
+        "persistence": 0.41393258614359707,
+        "reversal_propensity": 0.8053834823963967,
+        "strength": 0.7015384012161677,
+        "tau": 4.849656879880872,
+        "uncertainty": 0.4100737159225124,
+        "velocity": -0.0007555809103576271
+      },
+      {
+        "level": -0.6644441493795055,
+        "persistence": 0.32533369229604603,
+        "reversal_propensity": 0.8224904304635808,
+        "strength": 0.5513798284920343,
+        "tau": 10.061790698047371,
+        "uncertainty": 0.4357341380232886,
+        "velocity": -0.0005938549793462715
+      },
+      {
+        "level": -0.666887140499668,
+        "persistence": 0.23732661123734597,
+        "reversal_propensity": 0.8394831094896437,
+        "strength": 0.4022242678805201,
+        "tau": 16.887486114292866,
+        "uncertainty": 0.46122315656238283,
+        "velocity": -0.00043320932676848233
+      },
+      {
+        "level": -0.667113763760807,
+        "persistence": 0.16137018397319478,
+        "reversal_propensity": 0.8541490110618741,
+        "strength": 0.2734923141065323,
+        "tau": 25.234983688396127,
+        "uncertainty": 0.4832220089207286,
+        "velocity": -0.0002945605989781781
+      },
+      {
+        "level": -0.6635016605663079,
+        "persistence": 0.10259024833289869,
+        "reversal_propensity": 0.8654984225807265,
+        "strength": 0.17387130466424297,
+        "tau": 35.037190239811366,
+        "uncertainty": 0.5002461261990071,
+        "velocity": -0.00018726535630199425
+      },
+      {
+        "level": -0.6542419854858573,
+        "persistence": 0.06112898042884944,
+        "reversal_propensity": 0.8735038922433004,
+        "strength": 0.10360220150232982,
+        "tau": 46.241668136145385,
+        "uncertainty": 0.512254330692868,
+        "velocity": -0.00011158312302003839
+      },
+      {
+        "level": -0.6373489974365647,
+        "persistence": 0.03420620927487088,
+        "reversal_propensity": 0.8787022240503348,
+        "strength": 0.05797313420024822,
+        "tau": 58.805642197812524,
+        "uncertainty": 0.5200518284034197,
+        "velocity": -6.243905314288154e-05
+      }
+    ],
+    "maximum_absolute_displacement": 0.01978985584654247,
+    "model_time": 1664525280.0,
+    "path_direction": "UPWARD",
+    "persistence": 0.5179117484872026,
+    "projection_interval": 58.805642197812524,
+    "reversal_propensity": 0.785306864585095,
+    "source_model_version": "0.2",
+    "state_support_ratio": 0.39012915911128365,
+    "strength": 0.8777636556469071,
+    "terminal_decay_factor": 0.06604640534760162,
+    "terminal_displacement": 0.01978985584654247,
+    "uncertainty": 0.3799587892055599
+  },
+  "d03_input": {
+    "d04_evaluation": {
+      "aperture_after": 0.2490565349467589,
+      "aperture_before": 0.2776088557247953,
+      "base_capturability_score": 0.22050421416872243,
+      "candidate_envelope": null,
+      "capturability_score": 0.22050421416872243,
+      "entity_id": "SPY",
+      "evaluation_time": 1664525280.0,
+      "events": [
+        "SHAPE_SUPERSEDED",
+        "RETURN_SHAPE_ACCEPTED",
+        "CAPTURABILITY_EVALUATED",
+        "APERTURE_UPDATED"
+      ],
+      "feasibility_gate_score": 1.0,
+      "gate_dimension_values": {
+        "broker_health": 1.0,
+        "capital_available": 1.0,
+        "data_integrity": 1.0,
+        "execution_feasibility": 1.0,
+        "latency_quality": 1.0,
+        "liquidity_quality": 1.0,
+        "portfolio_capacity": 1.0,
+        "position_capacity": 1.0,
+        "risk_capacity": 1.0,
+        "spread_quality": 1.0
+      },
+      "geometry_quality": 1.0,
+      "hard_eligibility": 1,
+      "new_envelope_state": "CLOSED",
+      "previous_envelope_state": "CLOSED",
+      "projection_valid": true,
+      "reason_codes": [
+        "REVERSAL_PROPENSITY_HIGH"
+      ],
+      "return_shape_model_time": 1664525280.0,
+      "risk_quality": 0.36485420599454843,
+      "safety_reason": null,
+      "safety_state": "CLEAR",
+      "source_model_version": "0.2",
+      "stale": false,
+      "structural_quality": 0.6043625386410295
+    },
+    "decision_context": {
+      "actual_position_state": "FLAT",
+      "context_time": 1664525280.0,
+      "control_state_valid": true,
+      "emergency_flatten": false,
+      "entity_id": "SPY",
+      "execution_available": true,
+      "pending_decision_id": null,
+      "pending_target_state": "NONE",
+      "position_candidate_id": null,
+      "position_source_return_shape_model_time": null,
+      "system_enabled": true,
+      "trading_enabled": true
+    }
+  },
+  "d03_output": {
+    "action_authorized": false,
+    "candidate_id": null,
+    "candidate_source_return_shape_model_time": null,
+    "d03_model_version": "D03_CONTROL_V0_1_DESIGN",
+    "decision_id": "D03D|SPY|1664525280|D03_RULES_V0_1_DESIGN|3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+    "decision_rule_id": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+    "decision_rule_version": "D03_RULES_V0_1_DESIGN",
+    "decision_time": 1664525280.0,
+    "desired_position_state": "FLAT",
+    "entity_id": "SPY",
+    "input_fingerprint": "3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+    "primary_reason_code": "ENVELOPE_CLOSED",
+    "prior_position_state": "FLAT",
+    "schema_version": "D03_DECISION_SCHEMA_V0_1",
+    "source_d04_envelope_state": "CLOSED",
+    "source_d04_evaluation_time": 1664525280.0,
+    "source_d04_fingerprint": "701cfb4daf4d34b6d115424cdfc1fc70c6e5e32ef5c4f2ee0909b61b1043034c",
+    "source_d04_return_shape_model_time": 1664525280.0,
+    "source_d04_safety_state": "CLEAR",
+    "supporting_reason_codes": [
+      "POSITION_ALREADY_ALIGNED"
+    ],
+    "transition_intent": "NO_CHANGE"
+  },
+  "d04_input": {
+    "envelope_context": {
+      "broker_health": 1.0,
+      "capital_available": 1.0,
+      "clock_event_quality": 1.0,
+      "data_integrity": 1.0,
+      "evaluation_time": 1664525280.0,
+      "execution_feasibility": 1.0,
+      "latency_quality": 1.0,
+      "liquidity_quality": 1.0,
+      "market_eligible": true,
+      "portfolio_capacity": 1.0,
+      "position_capacity": 1.0,
+      "risk_capacity": 1.0,
+      "spread_quality": 1.0
+    },
+    "implementation_configuration": {
+      "aperture_alpha": 0.5,
+      "close_persistence_observations": 2,
+      "close_threshold": 0.55,
+      "critical_data_integrity_threshold": 0.0,
+      "feasibility_gate_dimensions": [
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "risk_capacity",
+        "broker_health",
+        "data_integrity"
+      ],
+      "gate_warning_threshold": 0.5,
+      "open_persistence_observations": 3,
+      "open_threshold": 0.75
+    },
+    "prior_envelope_state": {
+      "consecutive_close_qualifying": 0,
+      "consecutive_open_qualifying": 0,
+      "current_aperture": 0.2776088557247953,
+      "current_candidate": null,
+      "current_entity_id": "SPY",
+      "current_model_time": 1664525220.0,
+      "current_state": "CLOSED"
+    },
+    "return_shape": {
+      "coherence": 0.4855782805501968,
+      "current_level": -0.6571388532831072,
+      "entity_id": "SPY",
+      "forward_half_life": 15.0,
+      "forward_samples": [
+        {
+          "level": -0.658413202726016,
+          "persistence": 0.48563073717545263,
+          "reversal_propensity": 0.7915397819510442,
+          "strength": 0.8230533723221005,
+          "tau": 1.3926982200548028,
+          "uncertainty": 0.3893081652544837,
+          "velocity": -0.0008864567003801471
+        },
+        {
+          "level": -0.6612109321047579,
+          "persistence": 0.41393258614359707,
+          "reversal_propensity": 0.8053834823963967,
+          "strength": 0.7015384012161677,
+          "tau": 4.849656879880872,
+          "uncertainty": 0.4100737159225124,
+          "velocity": -0.0007555809103576271
+        },
+        {
+          "level": -0.6644441493795055,
+          "persistence": 0.32533369229604603,
+          "reversal_propensity": 0.8224904304635808,
+          "strength": 0.5513798284920343,
+          "tau": 10.061790698047371,
+          "uncertainty": 0.4357341380232886,
+          "velocity": -0.0005938549793462715
+        },
+        {
+          "level": -0.666887140499668,
+          "persistence": 0.23732661123734597,
+          "reversal_propensity": 0.8394831094896437,
+          "strength": 0.4022242678805201,
+          "tau": 16.887486114292866,
+          "uncertainty": 0.46122315656238283,
+          "velocity": -0.00043320932676848233
+        },
+        {
+          "level": -0.667113763760807,
+          "persistence": 0.16137018397319478,
+          "reversal_propensity": 0.8541490110618741,
+          "strength": 0.2734923141065323,
+          "tau": 25.234983688396127,
+          "uncertainty": 0.4832220089207286,
+          "velocity": -0.0002945605989781781
+        },
+        {
+          "level": -0.6635016605663079,
+          "persistence": 0.10259024833289869,
+          "reversal_propensity": 0.8654984225807265,
+          "strength": 0.17387130466424297,
+          "tau": 35.037190239811366,
+          "uncertainty": 0.5002461261990071,
+          "velocity": -0.00018726535630199425
+        },
+        {
+          "level": -0.6542419854858573,
+          "persistence": 0.06112898042884944,
+          "reversal_propensity": 0.8735038922433004,
+          "strength": 0.10360220150232982,
+          "tau": 46.241668136145385,
+          "uncertainty": 0.512254330692868,
+          "velocity": -0.00011158312302003839
+        },
+        {
+          "level": -0.6373489974365647,
+          "persistence": 0.03420620927487088,
+          "reversal_propensity": 0.8787022240503348,
+          "strength": 0.05797313420024822,
+          "tau": 58.805642197812524,
+          "uncertainty": 0.5200518284034197,
+          "velocity": -6.243905314288154e-05
+        }
+      ],
+      "maximum_absolute_displacement": 0.01978985584654247,
+      "model_time": 1664525280.0,
+      "path_direction": "UPWARD",
+      "persistence": 0.5179117484872026,
+      "projection_interval": 58.805642197812524,
+      "reversal_propensity": 0.785306864585095,
+      "source_model_version": "0.2",
+      "state_support_ratio": 0.39012915911128365,
+      "strength": 0.8777636556469071,
+      "terminal_decay_factor": 0.06604640534760162,
+      "terminal_displacement": 0.01978985584654247,
+      "uncertainty": 0.3799587892055599
+    }
+  },
+  "d04_output": {
+    "aperture_after": 0.2490565349467589,
+    "aperture_before": 0.2776088557247953,
+    "base_capturability_score": 0.22050421416872243,
+    "candidate_envelope": null,
+    "capturability_score": 0.22050421416872243,
+    "entity_id": "SPY",
+    "evaluation_time": 1664525280.0,
+    "events": [
+      "SHAPE_SUPERSEDED",
+      "RETURN_SHAPE_ACCEPTED",
+      "CAPTURABILITY_EVALUATED",
+      "APERTURE_UPDATED"
+    ],
+    "feasibility_gate_score": 1.0,
+    "gate_dimension_values": {
+      "broker_health": 1.0,
+      "capital_available": 1.0,
+      "data_integrity": 1.0,
+      "execution_feasibility": 1.0,
+      "latency_quality": 1.0,
+      "liquidity_quality": 1.0,
+      "portfolio_capacity": 1.0,
+      "position_capacity": 1.0,
+      "risk_capacity": 1.0,
+      "spread_quality": 1.0
+    },
+    "geometry_quality": 1.0,
+    "hard_eligibility": 1,
+    "new_envelope_state": "CLOSED",
+    "previous_envelope_state": "CLOSED",
+    "projection_valid": true,
+    "reason_codes": [
+      "REVERSAL_PROPENSITY_HIGH"
+    ],
+    "return_shape_model_time": 1664525280.0,
+    "risk_quality": 0.36485420599454843,
+    "safety_reason": null,
+    "safety_state": "CLEAR",
+    "source_model_version": "0.2",
+    "stale": false,
+    "structural_quality": 0.6043625386410295
+  },
+  "normalized_source_payload": {
+    "close": 365.5,
+    "close_return_1m": -0.00016413174307916556,
+    "data_valid": true,
+    "entity_id": "SPY",
+    "event_timestamp_local": "2022-09-30T04:08:00-04:00",
+    "event_timestamp_utc": "2022-09-30T08:08:00Z",
+    "high": 365.7,
+    "high_low_range": 0.19999999999998863,
+    "high_low_range_fraction": 0.0005471956224349894,
+    "is_regular_session": false,
+    "low": 365.5,
+    "minute_of_session": -1,
+    "open": 365.68,
+    "open_close_change": -0.18000000000000682,
+    "open_close_return": -0.0004922336469044275,
+    "quality_flags": "",
+    "session_type": "PREMARKET",
+    "source_dataset": "SPY_1min_firstratedata",
+    "source_provider": "FirstRateData",
+    "source_row_number": 9,
+    "timezone": "America/New_York",
+    "volume": 4288.0
+  },
+  "raw_source_row": {
+    "close": "365.5",
+    "close_return_1m": "-0.00016413174307916556",
+    "data_valid": "true",
+    "entity_id": "SPY",
+    "event_timestamp_local": "2022-09-30T04:08:00-04:00",
+    "event_timestamp_utc": "2022-09-30T08:08:00Z",
+    "high": "365.7",
+    "high_low_range": "0.19999999999998863",
+    "high_low_range_fraction": "0.0005471956224349894",
+    "is_regular_session": "false",
+    "low": "365.5",
+    "minute_of_session": "-1",
+    "open": "365.68",
+    "open_close_change": "-0.18000000000000682",
+    "open_close_return": "-0.0004922336469044275",
+    "quality_flags": "",
+    "session_type": "PREMARKET",
+    "source_dataset": "SPY_1min_firstratedata",
+    "source_provider": "FirstRateData",
+    "source_row_number": "9",
+    "timezone": "America/New_York",
+    "volume": "4288.0"
+  },
+  "selection": {
+    "csv": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "data_observation_number": 9,
+    "future_rows_read": 0,
+    "header": [
+      "entity_id",
+      "event_timestamp_local",
+      "event_timestamp_utc",
+      "timezone",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "close_return_1m",
+      "high_low_range",
+      "high_low_range_fraction",
+      "open_close_change",
+      "open_close_return",
+      "session_type",
+      "is_regular_session",
+      "minute_of_session",
+      "source_provider",
+      "source_dataset",
+      "source_row_number",
+      "data_valid",
+      "quality_flags"
+    ],
+    "header_row": 1,
+    "last_data_index_read": 8,
+    "physical_csv_row": 10,
+    "source_row_number": 9,
+    "target_confirmed": true,
+    "zero_based_data_index": 8
+  },
+  "telemetry": [
+    {
+      "clock_domain_id": "90f85c1c-8d51-4930-bfc1-25b82f2b679d",
+      "emitted_at_utc": "2026-08-18T17:17:08.449821Z",
+      "emitted_monotonic_ns": 236863077742100,
+      "error": null,
+      "event_id": "aptf:evt:v1:sha256:a4927b853c27014cedf619fe813809a4422be6e196ceec10b58f27d47fed5143",
+      "execution_id": "74e420ca-5f92-46ad-9557-6f9a513d4426",
+      "instrument_id": "SPY",
+      "logical_output_ordinal": 0,
+      "market_event_time_role": "PROVIDER_EVENT",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "parent_event_id": null,
+      "payload_sha256": "455bbcb7276f4ec5a621b65944e29338ea5eaa714c11849ee8eb55f1a567fe9b",
+      "payload_type": "NormalizedObservationSourceRecord",
+      "payload_version": "v0_1",
+      "processing_duration_ns": 12500,
+      "producer_component": "SOURCE_GATEWAY",
+      "producer_version": "0.2",
+      "received_at_utc": "2026-08-18T17:17:08.449801Z",
+      "received_monotonic_ns": 236863077729600,
+      "runtime_instance_id": "57699654-27a7-401c-8f11-c638de22436d",
+      "schema_version": "0.2",
+      "scientific_ids": {},
+      "sequence_number": 8,
+      "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "stage": "E0",
+      "status": "SUCCESS",
+      "telemetry_flags": []
+    },
+    {
+      "clock_domain_id": "90f85c1c-8d51-4930-bfc1-25b82f2b679d",
+      "emitted_at_utc": "2026-08-18T17:17:08.450056Z",
+      "emitted_monotonic_ns": 236863077977200,
+      "error": null,
+      "event_id": "aptf:evt:v1:sha256:1bed3437d89a99bf77b9ef10297b7ed3fbaf86ee486dcf860c9fcf10819263ae",
+      "execution_id": "7c5e06e7-315f-4906-8c42-456ff7e6927c",
+      "instrument_id": "SPY",
+      "logical_output_ordinal": 0,
+      "market_event_time_role": "PROVIDER_EVENT",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "parent_event_id": "aptf:evt:v1:sha256:a4927b853c27014cedf619fe813809a4422be6e196ceec10b58f27d47fed5143",
+      "payload_sha256": "654c87a7ce257ccde33e5f0633250fa38986ead10a9e8c2415bb35e4131d60f4",
+      "payload_type": "D01OutputPair",
+      "payload_version": "0.2.0",
+      "processing_duration_ns": 45800,
+      "producer_component": "D01",
+      "producer_version": "0.2",
+      "received_at_utc": "2026-08-18T17:17:08.450009Z",
+      "received_monotonic_ns": 236863077931400,
+      "runtime_instance_id": "57699654-27a7-401c-8f11-c638de22436d",
+      "schema_version": "0.2",
+      "scientific_ids": {
+        "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+        "model_time": 1664525280.0,
+        "state_hash": "FDDDBC0F774A0C67B723D273629BECD128E6DBC5398FD00B8B458530DAA7F9C1",
+        "trace_id": "SPY:9"
+      },
+      "sequence_number": 8,
+      "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "stage": "E1",
+      "status": "SUCCESS",
+      "telemetry_flags": []
+    },
+    {
+      "clock_domain_id": "90f85c1c-8d51-4930-bfc1-25b82f2b679d",
+      "emitted_at_utc": "2026-08-18T17:17:08.450532Z",
+      "emitted_monotonic_ns": 236863078453300,
+      "error": null,
+      "event_id": "aptf:evt:v1:sha256:44aa341620badc4c175702c5e323e28bcca2ec5f3841d7e3e0258888da72c13a",
+      "execution_id": "74b6943a-7ff4-4982-8c47-bfdf91ef8b5d",
+      "instrument_id": "SPY",
+      "logical_output_ordinal": 0,
+      "market_event_time_role": "PROVIDER_EVENT",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "parent_event_id": "aptf:evt:v1:sha256:1bed3437d89a99bf77b9ef10297b7ed3fbaf86ee486dcf860c9fcf10819263ae",
+      "payload_sha256": "0d5ab3450a920936663d2176c27627c75374439e1be84ac499698d624dbe3703",
+      "payload_type": "ReturnShape",
+      "payload_version": "0.2",
+      "processing_duration_ns": 32000,
+      "producer_component": "D02",
+      "producer_version": "0.2",
+      "received_at_utc": "2026-08-18T17:17:08.450499Z",
+      "received_monotonic_ns": 236863078421300,
+      "runtime_instance_id": "57699654-27a7-401c-8f11-c638de22436d",
+      "schema_version": "0.2",
+      "scientific_ids": {
+        "entity_id": "SPY",
+        "model_time": 1664525280.0
+      },
+      "sequence_number": 8,
+      "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "stage": "E2",
+      "status": "SUCCESS",
+      "telemetry_flags": []
+    },
+    {
+      "clock_domain_id": "90f85c1c-8d51-4930-bfc1-25b82f2b679d",
+      "emitted_at_utc": "2026-08-18T17:17:08.450897Z",
+      "emitted_monotonic_ns": 236863078818600,
+      "error": null,
+      "event_id": "aptf:evt:v1:sha256:71218ec92bd3a2797a1ff6fc212a34642f6825a6c0c5c08ea7cc7e96c68f23c2",
+      "execution_id": "81cd4064-9d48-46b9-aa28-a75fb1f562c2",
+      "instrument_id": "SPY",
+      "logical_output_ordinal": 0,
+      "market_event_time_role": "PROVIDER_EVENT",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "parent_event_id": "aptf:evt:v1:sha256:44aa341620badc4c175702c5e323e28bcca2ec5f3841d7e3e0258888da72c13a",
+      "payload_sha256": "701cfb4daf4d34b6d115424cdfc1fc70c6e5e32ef5c4f2ee0909b61b1043034c",
+      "payload_type": "EnvelopeEvaluation",
+      "payload_version": "0.2.1",
+      "processing_duration_ns": 26700,
+      "producer_component": "D04",
+      "producer_version": "0.2.1",
+      "received_at_utc": "2026-08-18T17:17:08.450869Z",
+      "received_monotonic_ns": 236863078791900,
+      "runtime_instance_id": "57699654-27a7-401c-8f11-c638de22436d",
+      "schema_version": "0.2",
+      "scientific_ids": {
+        "candidate_id": null,
+        "entity_id": "SPY",
+        "evaluation_time": 1664525280.0,
+        "return_shape_model_time": 1664525280.0
+      },
+      "sequence_number": 8,
+      "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "stage": "E3",
+      "status": "SUCCESS",
+      "telemetry_flags": []
+    },
+    {
+      "clock_domain_id": "90f85c1c-8d51-4930-bfc1-25b82f2b679d",
+      "emitted_at_utc": "2026-08-18T17:17:08.451127Z",
+      "emitted_monotonic_ns": 236863079048400,
+      "error": null,
+      "event_id": "aptf:evt:v1:sha256:7e08cd9ab07bbd9d5cc4f1060bbd0374dd8d99d4ed1b550c63f3826d10f405ce",
+      "execution_id": "cb0425e6-dab6-4eb7-a364-6ca4d2ee160c",
+      "instrument_id": "SPY",
+      "logical_output_ordinal": 0,
+      "market_event_time_role": "PROVIDER_EVENT",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "parent_event_id": "aptf:evt:v1:sha256:71218ec92bd3a2797a1ff6fc212a34642f6825a6c0c5c08ea7cc7e96c68f23c2",
+      "payload_sha256": "6c25b40a4700507d4cb3adba89a6318b737e5736fbc5a222d411ab817444dd05",
+      "payload_type": "DecisionRecord",
+      "payload_version": "0.1",
+      "processing_duration_ns": 55000,
+      "producer_component": "D03",
+      "producer_version": "0.1",
+      "received_at_utc": "2026-08-18T17:17:08.451071Z",
+      "received_monotonic_ns": 236863078993400,
+      "runtime_instance_id": "57699654-27a7-401c-8f11-c638de22436d",
+      "schema_version": "0.2",
+      "scientific_ids": {
+        "decision_id": "D03D|SPY|1664525280|D03_RULES_V0_1_DESIGN|3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+        "input_fingerprint": "3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+        "source_d04_fingerprint": "701cfb4daf4d34b6d115424cdfc1fc70c6e5e32ef5c4f2ee0909b61b1043034c"
+      },
+      "sequence_number": 8,
+      "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "stage": "E4",
+      "status": "SUCCESS",
+      "telemetry_flags": []
+    },
+    {
+      "clock_domain_id": "90f85c1c-8d51-4930-bfc1-25b82f2b679d",
+      "emitted_at_utc": "2026-08-18T17:17:08.451258Z",
+      "emitted_monotonic_ns": 236863079179800,
+      "error": null,
+      "event_id": "aptf:evt:v1:sha256:f4e75c7d667d91fc6fd0aefb055a681f6119ef6c4770237316d9f51711edfc8b",
+      "execution_id": "bc6d2781-7045-4e48-90e3-71244ff95af5",
+      "instrument_id": "SPY",
+      "logical_output_ordinal": 0,
+      "market_event_time_role": "PROVIDER_EVENT",
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696",
+      "parent_event_id": "aptf:evt:v1:sha256:7e08cd9ab07bbd9d5cc4f1060bbd0374dd8d99d4ed1b550c63f3826d10f405ce",
+      "payload_sha256": "e4ed5166bf07b50f54453e33e5de700497cf73a62fcbc2e3652fe0f69ceea1a5",
+      "payload_type": "PositionTransitionPlan",
+      "payload_version": "0.1",
+      "processing_duration_ns": 8200,
+      "producer_component": "POSITION_TRANSITION_CONTROLLER",
+      "producer_version": "0.1",
+      "received_at_utc": "2026-08-18T17:17:08.451249Z",
+      "received_monotonic_ns": 236863079171600,
+      "runtime_instance_id": "57699654-27a7-401c-8f11-c638de22436d",
+      "schema_version": "0.2",
+      "scientific_ids": {
+        "originating_d03_decision_hash": "3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+        "originating_d03_decision_id": "D03D|SPY|1664525280|D03_RULES_V0_1_DESIGN|3a099b21046bba114ec4fcc8c576c60bb4803fbe74607cc43784fface946c64d",
+        "transition_id": "APTFPTP|9e3ae647458b8a283b67395abd2ff19a"
+      },
+      "sequence_number": 8,
+      "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "stage": "E5",
+      "status": "SUCCESS",
+      "telemetry_flags": []
+    }
+  ],
+  "test_id": "APTF_TEST_001_ROW_10_V0_1",
+  "warmup_and_position_provenance": {
+    "authorized_semantic_advancements": 1,
+    "broker_sourced": false,
+    "data_indices": [
+      0,
+      7
+    ],
+    "initial_actual_position": {
+      "identity": "INITIAL",
+      "state": "LONG",
+      "version": 0
+    },
+    "plans_generated": 8,
+    "position_source": "RealCausalReplayHarness explicit REPLAY_INITIAL_CONDITION plus semantic carry-forward",
+    "rows_consumed": 8,
+    "target_pre_state_actual_position": {
+      "identity": "INITIAL",
+      "state": "FLAT",
+      "version": 1
+    }
+  }
+}

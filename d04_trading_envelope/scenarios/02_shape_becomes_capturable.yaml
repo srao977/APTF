@@ -1,10 +1,9 @@
 name: 02_shape_becomes_capturable
 entity_id: TEST_B
 shape_defaults: {terminal_displacement: 1.0, maximum_absolute_displacement: 1.0, strength: 0.98, coherence: 0.98, persistence: 0.98, uncertainty: 0.02, reversal_propensity: 0.02, state_support_ratio: 2.0}
-context_defaults: {market_eligible: true, data_integrity: 0.95, clock_event_quality: 0.95, capital_available: 0.93, portfolio_capacity: 0.93, position_capacity: 0.93, liquidity_quality: 0.93, spread_quality: 0.93, latency_quality: 0.93, execution_feasibility: 0.93, risk_capacity: 0.93, broker_health: 0.93}
+context_defaults: {market_eligible: true}
 steps:
   - scenario_time: 0
-    context: {liquidity_quality: 0.6, spread_quality: 0.6, execution_feasibility: 0.6}
   - {scenario_time: 1}
   - {scenario_time: 2}
   - {scenario_time: 3}

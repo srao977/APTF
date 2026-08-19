@@ -1,0 +1,160 @@
+{
+  "by_decision": {
+    "BUY": {
+      "C": {
+        "count": 131,
+        "maximum": 0.6530244378797647,
+        "mean": 0.33382302327560404,
+        "median": 0.3304625638849011,
+        "minimum": 0.12387658403993605,
+        "population_standard_deviation": 0.0990397450926756
+      },
+      "Q_G": {
+        "count": 131,
+        "maximum": 1.0,
+        "mean": 0.9991959348978887,
+        "median": 1.0,
+        "minimum": 0.8946674716234112,
+        "population_standard_deviation": 0.009167752696072073
+      },
+      "Q_R": {
+        "count": 131,
+        "maximum": 0.712611720830071,
+        "mean": 0.5281419228186366,
+        "median": 0.5138471761656956,
+        "minimum": 0.34561144781338016,
+        "population_standard_deviation": 0.07656084700403988
+      },
+      "Q_S": {
+        "count": 131,
+        "maximum": 0.9163818371091381,
+        "mean": 0.6240535525654537,
+        "median": 0.6392092711658873,
+        "minimum": 0.2892132819456702,
+        "population_standard_deviation": 0.1250176769224475
+      },
+      "path_direction_counts": {
+        "UPWARD": 131
+      },
+      "state_velocity": {
+        "count": 131,
+        "maximum": 0.024715031099502266,
+        "mean": 0.006922984515515833,
+        "median": 0.005045371732997753,
+        "minimum": -0.0024180563602871326,
+        "population_standard_deviation": 0.006006930132857388
+      }
+    },
+    "HOLD": {
+      "C": {
+        "count": 752,
+        "maximum": 0.5389411148353593,
+        "mean": 0.2172432816204589,
+        "median": 0.19874806765110445,
+        "minimum": 0.0023286748222917037,
+        "population_standard_deviation": 0.11097792967845234
+      },
+      "Q_G": {
+        "count": 752,
+        "maximum": 1.0,
+        "mean": 0.9771333895061782,
+        "median": 1.0,
+        "minimum": 0.024858610539630066,
+        "population_standard_deviation": 0.11841331472183944
+      },
+      "Q_R": {
+        "count": 752,
+        "maximum": 0.6826010389008071,
+        "mean": 0.4699950207149988,
+        "median": 0.47350491683017093,
+        "minimum": 0.0039399589230584816,
+        "population_standard_deviation": 0.0885980311074996
+      },
+      "Q_S": {
+        "count": 752,
+        "maximum": 0.8579076163509556,
+        "mean": 0.4610032814209608,
+        "median": 0.45003204995009644,
+        "minimum": 0.05711019382389611,
+        "population_standard_deviation": 0.1816145854594896
+      },
+      "path_direction_counts": {
+        "DOWNWARD": 389,
+        "UPWARD": 363
+      },
+      "state_velocity": {
+        "count": 752,
+        "maximum": 0.05888856934763964,
+        "mean": -0.0003456000036825394,
+        "median": -8.369094965729053e-05,
+        "minimum": -0.10863150967029143,
+        "population_standard_deviation": 0.009572123500139198
+      }
+    },
+    "SELL": {
+      "C": {
+        "count": 102,
+        "maximum": 0.4924989613783858,
+        "mean": 0.28911093994228243,
+        "median": 0.28088809078968724,
+        "minimum": 0.11299293080855438,
+        "population_standard_deviation": 0.09616256823046486
+      },
+      "Q_G": {
+        "count": 102,
+        "maximum": 1.0,
+        "mean": 1.0,
+        "median": 1.0,
+        "minimum": 1.0,
+        "population_standard_deviation": 0.0
+      },
+      "Q_R": {
+        "count": 102,
+        "maximum": 0.6409690362799746,
+        "mean": 0.5301922221714807,
+        "median": 0.538186227789832,
+        "minimum": 0.4077292174241309,
+        "population_standard_deviation": 0.04651105675631159
+      },
+      "Q_S": {
+        "count": 102,
+        "maximum": 0.8405998957387346,
+        "mean": 0.5445908654661161,
+        "median": 0.5604201712395074,
+        "minimum": 0.20876374584334756,
+        "population_standard_deviation": 0.1696040363426829
+      },
+      "path_direction_counts": {
+        "DOWNWARD": 102
+      },
+      "state_velocity": {
+        "count": 102,
+        "maximum": 0.0011741080720944768,
+        "mean": -0.005121072260733657,
+        "median": -0.0037407280338311076,
+        "minimum": -0.02664682141506566,
+        "population_standard_deviation": 0.00528535009306661
+      }
+    }
+  },
+  "classification": "DESCRIPTIVE_NOT_CAUSAL_PROOF",
+  "overall_ranges": {
+    "C": {
+      "maximum": 0.6530244378797647,
+      "minimum": 0.0023286748222917037
+    },
+    "Q_G": {
+      "maximum": 1.0,
+      "minimum": 0.024858610539630066
+    },
+    "Q_R": {
+      "maximum": 0.712611720830071,
+      "minimum": 0.0039399589230584816
+    },
+    "Q_S": {
+      "maximum": 0.9163818371091381,
+      "minimum": 0.05711019382389611
+    }
+  },
+  "status": "PASS"
+}

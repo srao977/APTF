@@ -1,0 +1,6 @@
+output/SPY_APTF_position_ledger_v0_2.jsonl filter=lfs diff=lfs merge=lfs -text
+APTF_TEST_006B_WALK_FORWARD_EMISSIONS_V0_1.json filter=lfs diff=lfs merge=lfs -text
+APTF_TEST_006B_ADAPTATION_AUDIT_V0_1.json filter=lfs diff=lfs merge=lfs -text
+APTF_TEST_006B_ANALYSIS_JOURNAL_V0_1.jsonl filter=lfs diff=lfs merge=lfs -text
+APTF_TEST_006B_FEEDBACK_AUDIT_V0_1.json filter=lfs diff=lfs merge=lfs -text
+APTF_TEST_006B_OBSERVATIONS_WITH_EMITTED_POSITION_V0_1.csv filter=lfs diff=lfs merge=lfs -text

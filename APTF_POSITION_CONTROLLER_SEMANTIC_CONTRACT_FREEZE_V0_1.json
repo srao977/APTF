@@ -1,0 +1,140 @@
+{
+  "freeze_id": "APTF_POSITION_CONTROLLER_SEMANTIC_CONTRACT_V0_1_FROZEN_20260818",
+  "status": "FROZEN_SEMANTIC_CLARIFICATION",
+  "frozen_date": "2026-08-18",
+  "scope": "External Position Controller terminology and interpretation only",
+  "acceptance_gates": {
+    "passed": 14,
+    "required": 14,
+    "status": "PASS"
+  },
+  "semantic_authorities": [
+    {
+      "path": "APTF_POSITION_CONTROLLER_SEMANTIC_CONTRACT_V0_1.md",
+      "sha256": "7eb5b39c0e7ff61321a8d7c1d6678ffc55019c264e89bf05d8cb728337227b93"
+    },
+    {
+      "path": "APTF_POSITION_CONTROLLER_TERMINOLOGY_AUDIT_V0_1.md",
+      "sha256": "0c2562c0f4a304ac834c3061ac630fe60043c7cc29b03531c37d6657a38372a1"
+    },
+    {
+      "path": "APTF_TEMPORAL_EVENT_ENVELOPE_V0_2_POSITION_CONTROLLER_ADDENDUM_V0_1.md",
+      "sha256": "de0da51f9acc493e048732125c00c2f12f4ebdac5fc1e15e32c437ad8992a345"
+    },
+    {
+      "path": "APTF_TEST_001_POSITION_CONTROLLER_SEMANTIC_ADDENDUM_V0_1.md",
+      "sha256": "0e958b31ee5a3a0cb06a027643dd6ad01e365d7df9b9a8824268785ab0877b17"
+    }
+  ],
+  "transition_interpretation_authority": {
+    "external_columns": [
+      "CONTROLLER STATE",
+      "D03 POSITION",
+      "POSITION CONTROLLER DECISION"
+    ],
+    "transition_count": 9,
+    "mathematics_changed": false,
+    "frozen_transition_table": {
+      "path": "APTF_POSITION_TRANSITION_MATRIX_V0_1.md",
+      "sha256": "56ce4b2626279f5653c05bd1a5cc2bc2ca18f785e5c6fdd57d29f6b9aa2a3d7e"
+    },
+    "frozen_controller_source": {
+      "path": "position_transition_controller/position_transition_controller.py",
+      "sha256": "67f1c3ac7220e51c9702337440879c0245c0b466c04aea97ee1433a204ca8e92"
+    },
+    "frozen_verb_schema": {
+      "path": "APTF_CANONICAL_EXECUTION_VERB_SCHEMA_V0_1.json",
+      "sha256": "853c9d6116b26713bd6bf67d781c910b445b89b665014b6f10bf49799ede9c7e"
+    },
+    "verbs": [
+      "BUY",
+      "SELL",
+      "SELL_SHORT",
+      "BUY_TO_COVER",
+      "HOLD",
+      "NO_ACTION"
+    ]
+  },
+  "external_semantics": {
+    "terminal_terms": [
+      "D03 POSITION",
+      "POSITION CONTROLLER DECISION"
+    ],
+    "optional_diagnostic_term": "INTERNAL CONTROLLER STATE BEFORE DECISION",
+    "prohibited_future_heading_without_explicit_broker_contract": "ACTUAL POSITION",
+    "broker_position_in_current_analytical_contract": false
+  },
+  "legacy_internal_names": {
+    "retained": true,
+    "examples": [
+      "actual_position_state",
+      "actual_position_snapshot",
+      "actual_position_before",
+      "actual_position_after",
+      "actual_position",
+      "ActualPositionState"
+    ],
+    "implementation_or_schema_rename": false
+  },
+  "non_replacement_bindings": [
+    {
+      "path": "D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_FREEZE.json",
+      "sha256": "6a93291ffe555a3fff1239a9a4f88c0a1546b6c46a02b60586614b60a3c91ad6",
+      "replaced": false
+    },
+    {
+      "path": "position_transition_controller/APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_V0_1_FREEZE.json",
+      "sha256": "7c4f7ddc616a28090d3698634d67e4a6d71d4ef58744e9dee6c9cc5b06714bc2",
+      "replaced": false
+    },
+    {
+      "path": "APTF_TEMPORAL_EVENT_ENVELOPE_IMPLEMENTATION_FREEZE_V0_2.json",
+      "sha256": "4e23eae07adc848614f71842c97c49271a1d22db6624d3d85e427a92ff02296a",
+      "replaced": false
+    }
+  ],
+  "test_001_historical_evidence": {
+    "mathematical_result_changed": false,
+    "recalculation_performed": false,
+    "market_event_time_utc": "2022-09-30T08:08:00Z",
+    "d03_position": "FLAT",
+    "position_controller_decision": "NO_ACTION",
+    "artifacts": [
+      {
+        "path": "APTF_TEST_001_ROW_10_COMPONENT_TRACE_V0_1.json",
+        "sha256": "c88269889af44940cfee2b38bf40cca825791a7bdc63181a40689d92f405d949"
+      },
+      {
+        "path": "APTF_TEST_001_ROW_10_DECISION_CAUSAL_TRACE_V0_1.md",
+        "sha256": "3fb3ea748c2d53749e2266c35f355c16406d8ce0bc8722af4df233b7bbc673e4"
+      },
+      {
+        "path": "APTF_TEST_001_ROW_10_INPUT_V0_1.json",
+        "sha256": "57342364532f93daed4d22c858ee68c938e6aa0587d9ea3144552a75052a6b51"
+      },
+      {
+        "path": "APTF_TEST_001_ROW_10_MATHEMATICAL_TRACE_V0_1.md",
+        "sha256": "3eb29e0f67f0366776950a8b7fe1f47185977c69debe13f3dbab8b3bd54810ae"
+      },
+      {
+        "path": "APTF_TEST_001_ROW_10_RESULT_V0_1.md",
+        "sha256": "7c7bd684cf71a337820937dd438c0206ed3837f210d772bffcffcfa8e456112a"
+      },
+      {
+        "path": "APTF_TEST_001_ROW_10_SINGLE_OBSERVATION_PLAN_V0_1.md",
+        "sha256": "2634aab452a24be538b6dc533bea2f12d28fceeb5f20874e2b00779b554626c2"
+      },
+      {
+        "path": "APTF_TEST_001_ROW_10_TEMPORAL_TRACE_V0_1.md",
+        "sha256": "574e760e6776957d2e2fe9a25e39036202512604197ea4efb9ae8f100a862c79"
+      }
+    ]
+  },
+  "implementation_changes": [],
+  "schema_changes": [],
+  "mathematical_changes": [],
+  "temporal_architecture_changes": [],
+  "broker_integration_added": false,
+  "azure_changes": false,
+  "next_action": "HUMAN_REVIEW_THEN_NEXT_SINGLE_OBSERVATION_TEST_OR_DIAGNOSTIC"
+}

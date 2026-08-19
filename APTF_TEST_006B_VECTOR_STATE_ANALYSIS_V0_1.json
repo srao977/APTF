@@ -1,0 +1,142 @@
+{
+  "by_decision": {
+    "BUY": {
+      "C": {
+        "count": 14249,
+        "maximum": 0.6185298431164367,
+        "mean": 0.34861008593793874,
+        "median": 0.36040553936729675,
+        "minimum": 0.07533851265106918,
+        "population_standard_deviation": 0.10758380134676976
+      },
+      "Q_G": {
+        "count": 14249,
+        "maximum": 1.0,
+        "mean": 0.9969928471287902,
+        "median": 1.0,
+        "minimum": 0.3443541171335219,
+        "population_standard_deviation": 0.029450733308034684
+      },
+      "Q_R": {
+        "count": 14249,
+        "maximum": 0.7103017493432597,
+        "mean": 0.5481062566690275,
+        "median": 0.5446449396420303,
+        "minimum": 0.25297276026202997,
+        "population_standard_deviation": 0.08354003644431802
+      },
+      "Q_S": {
+        "count": 14249,
+        "maximum": 0.9215367319746877,
+        "mean": 0.6273254018946097,
+        "median": 0.6545976177303203,
+        "minimum": 0.18018698420184825,
+        "population_standard_deviation": 0.1327141215279695
+      },
+      "path_direction_counts": {
+        "UPWARD": 14249
+      }
+    },
+    "HOLD": {
+      "C": {
+        "count": 77178,
+        "maximum": 0.6072463581399233,
+        "mean": 0.2443730886098645,
+        "median": 0.24508943284607815,
+        "minimum": 7.476458871570953e-06,
+        "population_standard_deviation": 0.11566227632174583
+      },
+      "Q_G": {
+        "count": 77178,
+        "maximum": 1.0,
+        "mean": 0.9788966031572228,
+        "median": 1.0,
+        "minimum": 5.650984944039355e-05,
+        "population_standard_deviation": 0.11247717602800507
+      },
+      "Q_R": {
+        "count": 77178,
+        "maximum": 0.709168665903969,
+        "mean": 0.4820662640951936,
+        "median": 0.4891840131743434,
+        "minimum": 0.0029624659141543924,
+        "population_standard_deviation": 0.09031011619321465
+      },
+      "Q_S": {
+        "count": 77178,
+        "maximum": 0.9076782847174388,
+        "mean": 0.5055218764603442,
+        "median": 0.5334724559871742,
+        "minimum": 0.009344788745680531,
+        "population_standard_deviation": 0.18471814616024948
+      },
+      "path_direction_counts": {
+        "DOWNWARD": 41057,
+        "UPWARD": 36121
+      }
+    },
+    "SELL": {
+      "C": {
+        "count": 9779,
+        "maximum": 0.5734884783868738,
+        "mean": 0.32741500541137375,
+        "median": 0.34642684207733754,
+        "minimum": 0.07129937971104543,
+        "population_standard_deviation": 0.08966449590324431
+      },
+      "Q_G": {
+        "count": 9779,
+        "maximum": 1.0,
+        "mean": 0.9983030193289276,
+        "median": 1.0,
+        "minimum": 0.5299346323359211,
+        "population_standard_deviation": 0.016637378943892226
+      },
+      "Q_R": {
+        "count": 9779,
+        "maximum": 0.711335851223812,
+        "mean": 0.529855587645105,
+        "median": 0.5356770281199865,
+        "minimum": 0.24212447207914076,
+        "population_standard_deviation": 0.049207779908433384
+      },
+      "Q_S": {
+        "count": 9779,
+        "maximum": 0.918203216410032,
+        "mean": 0.6177745970406864,
+        "median": 0.6634803849892285,
+        "minimum": 0.15073693395769414,
+        "population_standard_deviation": 0.1545829071634193
+      },
+      "path_direction_counts": {
+        "DOWNWARD": 9779
+      }
+    }
+  },
+  "classification": "DESCRIPTIVE_NOT_CAUSAL_PROOF",
+  "execution_timestamp_utc": "2026-08-18T23:20:48.4668982Z",
+  "freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "freeze_manifest_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+  "historical_C_0_75_gate_used": false,
+  "ranges": {
+    "C": {
+      "maximum": 0.6185298431164367,
+      "minimum": 7.476458871570953e-06
+    },
+    "Q_G": {
+      "maximum": 1.0,
+      "minimum": 5.650984944039355e-05
+    },
+    "Q_R": {
+      "maximum": 0.711335851223812,
+      "minimum": 0.0029624659141543924
+    },
+    "Q_S": {
+      "maximum": 0.9215367319746877,
+      "minimum": 0.009344788745680531
+    }
+  },
+  "run_id": "TEST006B_ONE_WAY_RESERVE_RUN_V0_1_001",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "status": "PASS"
+}

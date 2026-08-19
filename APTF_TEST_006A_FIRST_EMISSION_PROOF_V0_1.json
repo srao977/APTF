@@ -1,0 +1,330 @@
+{
+  "S_15_inherited": {
+    "completed_count": 15,
+    "context_ids": [
+      "1ee230b58e320eb1f5987faa18110b95fc0cb23933e5617971e20f7c96a9bc27",
+      "eff1cbff835cbd48c66fb3083d456a8c5bea0b3508b0ee340ca13057f15a5edd",
+      "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+      "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+      "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+      "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+      "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+      "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+      "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+      "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+      "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+      "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+      "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+      "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+      "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1"
+    ],
+    "d01_state_hash": "f51e25b31841c3d39bb1b9ec3c0ec238e4203b0f30a4b315d88d7e0b11cb4eb9",
+    "position_state": "FLAT",
+    "previous_decision": null
+  },
+  "current_observation": "O_16",
+  "emission": {
+    "adaptive_properties": {
+      "delta_C": -0.13743287982853403,
+      "direction_balance": -4,
+      "down_count": 9,
+      "flat_count": 1,
+      "prior_15_max_C": 0.3886402509284536,
+      "prior_15_median_C": 0.2786650400538378,
+      "prior_15_min_C": 0.0,
+      "prior_15_range_C": 0.3886402509284536,
+      "prior_C": 0.38574925689889744,
+      "up_count": 5
+    },
+    "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+    "component_lifecycle_ns": {
+      "ADAPTIVE_DECISION": 8000,
+      "D01": 38100,
+      "D02": 23800,
+      "FOUR_FACTOR": 11400,
+      "SOURCE_ADMISSION": 3800
+    },
+    "context_end_timestamp": "2022-09-30T10:30:00Z",
+    "context_start_timestamp": "2022-09-30T10:16:00Z",
+    "decision_rule_path": "AFFIRM_POSITION_STATE_TRANSITION_PREDICATE_NOT_SATISFIED",
+    "direct_lifecycle_ns": 225600,
+    "emission_id": "f59a3aa33cb978726cbb5a7ed115c3f2a23dd5ec8a7ec1a428b708d6e8e1c38e",
+    "feedback_generated": [
+      "prior_decision",
+      "position_state"
+    ],
+    "future_access_count": 0,
+    "lifecycle_end_ns": 257394451862100,
+    "lifecycle_start_ns": 257394451636500,
+    "mathematics": {
+      "C": 0.24831637707036341,
+      "H": 1,
+      "Q_G": 1.0,
+      "Q_R": 0.6026230554443315,
+      "Q_S": 0.41205920488268166,
+      "dmo": {
+        "coherence": 0.23070647536700276,
+        "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+        "data_quality": 1.0,
+        "dmo_schema_version": "0.2.0",
+        "entity_id": "SPY",
+        "fmo_schema_version": "0.2.0",
+        "forward_half_life": 15.0,
+        "model_health": "DEGRADED_DATA",
+        "model_time": 1664533860.0,
+        "model_version": "0.2",
+        "observation_half_life": 15.0,
+        "parameter_state": {
+          "ref_alpha": 0.0518583082654568
+        },
+        "parameter_update_magnitude": {
+          "ref_alpha": 2.4940617119446895e-05
+        },
+        "persistence": 0.5266617509301641,
+        "perturbation_class": "REINFORCING",
+        "perturbation_magnitude": 0.017556040328659296,
+        "reversal_propensity": 0.3671367852982499,
+        "state_acceleration": -3.844960718048638e-05,
+        "state_curvature": -3.8448064141906076e-05,
+        "state_hash": "F843A6E2EE38318C01F77CAF02BE1DBBDE97A91262E54FBC016C35F2EAF83C22",
+        "state_level": -0.34220063309362364,
+        "state_support_ratio": 0.3822757404776684,
+        "state_velocity": -0.005172542544208495,
+        "strength": 0.5758207324269023,
+        "trace_id": "SPY:16",
+        "uncertainty": 0.4261721355945678
+      },
+      "fmo": {
+        "entity_id": "SPY",
+        "interval_length": 48.08008279969,
+        "model_time": 1664533860.0,
+        "samples": [
+          {
+            "level": -0.3481154515969677,
+            "persistence": 0.4996661265924944,
+            "reversal_propensity": 0.372262584597324,
+            "strength": 0.5463053173602409,
+            "tau": 1.1386840315419027,
+            "uncertainty": 0.4338608345431789,
+            "velocity": -0.004907408394733147
+          },
+          {
+            "level": -0.36301268387803837,
+            "persistence": 0.4384872256292826,
+            "reversal_propensity": 0.38387894003896383,
+            "strength": 0.479415934374878,
+            "tau": 3.9651281003004195,
+            "uncertainty": 0.4512853677056387,
+            "velocity": -0.004306547467427847
+          },
+          {
+            "level": -0.3860542627710106,
+            "persistence": 0.36010940729143215,
+            "reversal_propensity": 0.39876094318413685,
+            "strength": 0.3937222748645479,
+            "tau": 8.226620980482444,
+            "uncertainty": 0.47360837242339826,
+            "velocity": -0.003536769523313325
+          },
+          {
+            "level": -0.417284970694098,
+            "persistence": 0.27825060411922836,
+            "reversal_propensity": 0.4143038989859639,
+            "strength": 0.3042227129256778,
+            "tau": 13.807378005031282,
+            "uncertainty": 0.4969228061261388,
+            "velocity": -0.0027328035218362992
+          },
+          {
+            "level": -0.4571063757626103,
+            "persistence": 0.2029866673925979,
+            "reversal_propensity": 0.4285946532687086,
+            "strength": 0.22193358694544857,
+            "tau": 20.632375735402565,
+            "uncertainty": 0.5183589375502557,
+            "velocity": -0.001993608176673034
+          },
+          {
+            "level": -0.5061537885401974,
+            "persistence": 0.14016176161235033,
+            "reversal_propensity": 0.4405235441876503,
+            "strength": 0.15324455988559235,
+            "tau": 28.64675811433082,
+            "uncertainty": 0.5362522739286684,
+            "velocity": -0.0013765812188385519
+          },
+          {
+            "level": -0.5652426098280021,
+            "persistence": 0.09178730784217817,
+            "reversal_propensity": 0.44970865278624045,
+            "strength": 0.10035480027898393,
+            "tau": 37.807651607694886,
+            "uncertainty": 0.5500299368265535,
+            "velocity": -0.0009014775688447216
+          },
+          {
+            "level": -0.6353387769746913,
+            "persistence": 0.05709901777753435,
+            "reversal_propensity": 0.4562950984514855,
+            "strength": 0.06242868060846954,
+            "tau": 48.08008279969,
+            "uncertainty": 0.5599096053244212,
+            "velocity": -0.0005607908646587418
+          }
+        ]
+      },
+      "return_shape": {
+        "coherence": 0.23070647536700276,
+        "current_level": -0.34220063309362364,
+        "entity_id": "SPY",
+        "forward_half_life": 15.0,
+        "forward_samples": [
+          {
+            "level": -0.3481154515969677,
+            "persistence": 0.4996661265924944,
+            "reversal_propensity": 0.372262584597324,
+            "strength": 0.5463053173602409,
+            "tau": 1.1386840315419027,
+            "uncertainty": 0.4338608345431789,
+            "velocity": -0.004907408394733147
+          },
+          {
+            "level": -0.36301268387803837,
+            "persistence": 0.4384872256292826,
+            "reversal_propensity": 0.38387894003896383,
+            "strength": 0.479415934374878,
+            "tau": 3.9651281003004195,
+            "uncertainty": 0.4512853677056387,
+            "velocity": -0.004306547467427847
+          },
+          {
+            "level": -0.3860542627710106,
+            "persistence": 0.36010940729143215,
+            "reversal_propensity": 0.39876094318413685,
+            "strength": 0.3937222748645479,
+            "tau": 8.226620980482444,
+            "uncertainty": 0.47360837242339826,
+            "velocity": -0.003536769523313325
+          },
+          {
+            "level": -0.417284970694098,
+            "persistence": 0.27825060411922836,
+            "reversal_propensity": 0.4143038989859639,
+            "strength": 0.3042227129256778,
+            "tau": 13.807378005031282,
+            "uncertainty": 0.4969228061261388,
+            "velocity": -0.0027328035218362992
+          },
+          {
+            "level": -0.4571063757626103,
+            "persistence": 0.2029866673925979,
+            "reversal_propensity": 0.4285946532687086,
+            "strength": 0.22193358694544857,
+            "tau": 20.632375735402565,
+            "uncertainty": 0.5183589375502557,
+            "velocity": -0.001993608176673034
+          },
+          {
+            "level": -0.5061537885401974,
+            "persistence": 0.14016176161235033,
+            "reversal_propensity": 0.4405235441876503,
+            "strength": 0.15324455988559235,
+            "tau": 28.64675811433082,
+            "uncertainty": 0.5362522739286684,
+            "velocity": -0.0013765812188385519
+          },
+          {
+            "level": -0.5652426098280021,
+            "persistence": 0.09178730784217817,
+            "reversal_propensity": 0.44970865278624045,
+            "strength": 0.10035480027898393,
+            "tau": 37.807651607694886,
+            "uncertainty": 0.5500299368265535,
+            "velocity": -0.0009014775688447216
+          },
+          {
+            "level": -0.6353387769746913,
+            "persistence": 0.05709901777753435,
+            "reversal_propensity": 0.4562950984514855,
+            "strength": 0.06242868060846954,
+            "tau": 48.08008279969,
+            "uncertainty": 0.5599096053244212,
+            "velocity": -0.0005607908646587418
+          }
+        ],
+        "maximum_absolute_displacement": 0.2931381438810677,
+        "model_time": 1664533860.0,
+        "path_direction": "DOWNWARD",
+        "persistence": 0.5266617509301641,
+        "projection_interval": 48.08008279969,
+        "reversal_propensity": 0.3671367852982499,
+        "source_model_version": "0.2",
+        "state_support_ratio": 0.3822757404776684,
+        "strength": 0.5758207324269023,
+        "terminal_decay_factor": 0.10841686846764337,
+        "terminal_displacement": -0.2931381438810677,
+        "uncertainty": 0.4261721355945678
+      }
+    },
+    "observation_id": "bbc37c73d7adeea5c774551a1147e8ecb34725d99be2e722001874ebf09ddaae",
+    "observation_index": 16,
+    "observation_timestamp": "2022-09-30T10:31:00Z",
+    "physical_row": 130,
+    "position_decision": "HOLD",
+    "position_state_before": "FLAT",
+    "prior_context_ids": [
+      "1ee230b58e320eb1f5987faa18110b95fc0cb23933e5617971e20f7c96a9bc27",
+      "eff1cbff835cbd48c66fb3083d456a8c5bea0b3508b0ee340ca13057f15a5edd",
+      "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+      "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+      "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+      "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+      "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+      "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+      "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+      "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+      "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+      "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+      "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+      "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+      "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1"
+    ],
+    "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+    "source_delta_t_seconds": 60.0,
+    "source_fingerprint": "bbc37c73d7adeea5c774551a1147e8ecb34725d99be2e722001874ebf09ddaae",
+    "state_after": {
+      "completed_count": 16,
+      "position_state": "FLAT",
+      "previous_decision": "HOLD"
+    },
+    "state_before": {
+      "completed_count": 15,
+      "context_ids": [
+        "1ee230b58e320eb1f5987faa18110b95fc0cb23933e5617971e20f7c96a9bc27",
+        "eff1cbff835cbd48c66fb3083d456a8c5bea0b3508b0ee340ca13057f15a5edd",
+        "89d1d4401f01a5ce3a72fb187a732533ec0a1148bfc9df435b5138d912b3d2d3",
+        "372aece8df94340eb377b534b140e78442c89dfb81b0500d275aa0f83c18c13d",
+        "b6e7d1ee69cffeffcc473c26b2f6c16a827ce2b542d92080d749e53514c39895",
+        "16e28d96dbd6b3b9de02e637f59b16ac7a45370cdedf6b085da7ba62d9b44dff",
+        "eaca675e6cc728784e09bce06a10694b67172995e68e26fb9185fe13489476fe",
+        "0ea7124d8a8bb2d08cf781264e7763aa16025aa68ada9046b05e891e3f938d3a",
+        "8db3efbe664e330ebfe47fabc53c3a11cce5aaec4e186dae4e935188563533be",
+        "f8acfac556d7088e5b5db073594cdea6c5d63fdd7740327c6bf9518da3e5682b",
+        "2d32db45330ca6d2bcafdc3ad398ebe8f3aab3c351ef2ac16a1fd558cf7ca830",
+        "4d4895e7c4d36f20cb3e9a30653b2c12c3b616caf70bb12de0e8f41624b717cb",
+        "f82184c6677c8fe5c2110ef8c6327a26aeef5e5dc4d42f0b14cd4d84c465dff0",
+        "96bfe9d719437cd313542dda8c2e843d8feb2e598522dcc47838a9cc4d1ce3f2",
+        "bd25556d4bbe928107f617644457f9849bb49bcc950350f3a9a3184ef9bfc9b1"
+      ],
+      "d01_state_hash": "f51e25b31841c3d39bb1b9ec3c0ec238e4203b0f30a4b315d88d7e0b11cb4eb9",
+      "position_state": "FLAT",
+      "previous_decision": null
+    },
+    "status": "ACTIONABLE"
+  },
+  "emission_persisted": true,
+  "future_observations_accessed": 0,
+  "next_observation_permitted": "O_17",
+  "prior_context": "O_1...O_15",
+  "status": "PASS"
+}

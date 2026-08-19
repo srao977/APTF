@@ -1,0 +1,33 @@
+{
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_version": "V0.1",
+  "hash_algorithm": "SHA-256",
+  "pre_freeze_captured_at_utc": "2026-08-18T21:44:15.6360664Z",
+  "authority_file_count": 17,
+  "files": [
+    {"path":"d04_trading_envelope/src/aptf_d04/cli/main.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"ae7bdaee65f6b69c6cb8022ea376250d5f5b9b677adf738d06139fa2fc9450ab","test004r_identity_verified":true,"frozen":true,"notes":"Constructed the D04 instance used by Test 004R."},
+    {"path":"d04_trading_envelope/src/aptf_d04/configuration.py","authority_class":"CONFIGURATION_AUTHORITY","sha256":"383e8890b469170c8686191e9b442cc7845d9e192f467531fa7ac54d594c2481","test004r_identity_verified":true,"frozen":true,"notes":"Validated configuration schema loaded by Test 004R."},
+    {"path":"d04_trading_envelope/src/aptf_d04/inputs/scenario_loader.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"31d6534e8546b6dface1f06ba000f3f327a0c31d50df02be256ffac539fc0b8f","test004r_identity_verified":true,"frozen":true,"notes":"YAML loader on the Test 004R configuration construction path."},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/aperture_model.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"f113a61faa53f2ae0036d904d7cf7594c3de4024948ad55aa59d8b9cf71ab2d8","test004r_identity_verified":true,"frozen":true,"notes":"Adaptive aperture authority exercised by Test 004R."},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"fc9d4a300eabcb3e83b9bccac5a1efeae40b0df09b6cbfa52413601788f01336","test004r_identity_verified":true,"frozen":true,"notes":"Authoritative H, Q_G, Q_S, Q_R and four-factor C implementation."},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/hysteresis.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"fdbeeb203c309ca91c20f21b70cbb342406a97c2c86b8dc0d0a7033bff3cf101","test004r_identity_verified":true,"frozen":true,"notes":"Threshold, persistence-counter and state-transition authority."},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/lifecycle.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"9870371f1070381c096c43e9c0b558f07aa87c95a6602b1b31b3db302341151e","test004r_identity_verified":true,"frozen":true,"notes":"Maps D04 state changes to transition events."},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"50302214070c6051ddb84fdfa66a5f3c8e18eef668024684e65605887cd28191","test004r_identity_verified":true,"frozen":true,"notes":"D04 orchestration, state, safety, candidate and evaluation authority."},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/capturability.py","authority_class":"CONTRACT_AUTHORITY","sha256":"3f8727ed0a6828e7e2da7bbb3770e22003a7fa7d242c1f7c319c222f766ab2c2","test004r_identity_verified":true,"frozen":true,"notes":"Current capturability result schema; no G fields."},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_context.py","authority_class":"CONTRACT_AUTHORITY","sha256":"8d57bb4dca88b6bf7b5b4fa6e960f3fdc4cb46c3988fb53879aa7ab3f9349ff8","test004r_identity_verified":true,"frozen":true,"notes":"Current D04 input/provenance schema; no data_integrity field."},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/enums.py","authority_class":"CONTRACT_AUTHORITY","sha256":"6dfe44b79db989bf0083c6ef9313568e2292f5be248f02600d693f11dc2eb2d5","test004r_identity_verified":true,"frozen":true,"notes":"D04 states, safety reasons and event vocabulary."},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_state.py","authority_class":"CONTRACT_AUTHORITY","sha256":"eabc3d90694c51a0fa44eda738092d50d45f484ce2239a4e5ca2ff65314f6233","test004r_identity_verified":true,"frozen":true,"notes":"EnvelopeEvaluation schema consumed downstream; no G fields."},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/opportunity.py","authority_class":"CONTRACT_AUTHORITY","sha256":"2df58e531a4e90bb70e512e384b38abd245169d2ec0b186ec8b6ddef2ba8bb49","test004r_identity_verified":true,"frozen":true,"notes":"CandidateEnvelope contract used by D04 state orchestration."},
+    {"path":"d04_trading_envelope/config/default.yaml","authority_class":"CONFIGURATION_AUTHORITY","sha256":"4a54a654264ce701290373fa7980b9a30a108c5a3301c092a667e3563a03469c","test004r_identity_verified":true,"frozen":true,"notes":"Authoritative thresholds, persistence, aperture alpha and model version."},
+    {"path":"d04_trading_envelope/README.md","authority_class":"DESIGN_AUTHORITY","sha256":"180e556030ca5ea0747e1684a782440f0b4dc2a87aba805455acd595c6311537","test004r_identity_verified":true,"frozen":true,"notes":"Current design description predates Test 004R and agrees with executable authority."},
+    {"path":"APTF_D04_DATA_INTEGRITY_REMOVAL_PLAN_V0_1.md","authority_class":"IMPLEMENTATION_DOCUMENTATION","sha256":"f61e72aece1f9b02b0ee1244fc033a666330fa069ed2515d39390affb477edb5","test004r_identity_verified":true,"frozen":true,"notes":"Authorized correction plan predating Test 004R."},
+    {"path":"APTF_D04_DATA_INTEGRITY_POSTCHANGE_AUDIT_V0_1.json","authority_class":"IMPLEMENTATION_DOCUMENTATION","sha256":"6d6a7bd3db77d696eee8ac1282cde25621287dddd5d7dac2b763ce5e67958d66","test004r_identity_verified":true,"frozen":true,"notes":"Post-validation absence, tests and non-drift record; non-executable."}
+  ],
+  "post_freeze_verification": {
+    "authority_files_verified": 17,
+    "authority_files_failed": 0,
+    "pre_freeze_hash_equals_post_freeze_hash": true,
+    "manifest_hash_table_consistency": true,
+    "status": "PASS"
+  }
+}

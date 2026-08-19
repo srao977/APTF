@@ -1,0 +1,77 @@
+{
+  "test_id": "APTF_TEST_002A_VOLUME_DIFFERENTIAL_V0_1",
+  "d04_to_d03_differential": [
+    {"property":"evaluation_time","t1":1664525280.0,"t2":1664525340.0,"changed":true,"used_by_d03":true,"rule":"D03 input temporal invariant and output lineage; not target category selector"},
+    {"property":"entity_id","t1":"SPY","t2":"SPY","changed":false,"used_by_d03":true,"rule":"D03 input identity invariant"},
+    {"property":"return_shape_model_time","t1":1664525280.0,"t2":1664525340.0,"changed":true,"used_by_d03":true,"rule":"source lineage only"},
+    {"property":"source_model_version","t1":"0.2","t2":"0.2","changed":false,"used_by_d03":"fingerprint only","rule":"not read by target resolver"},
+    {"property":"hard_eligibility","t1":1,"t2":1,"changed":false,"used_by_d03":"fingerprint only","rule":"not read directly by target resolver"},
+    {"property":"geometry_quality","t1":1.0,"t2":1.0,"changed":false,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"structural_quality","t1":0.6043625386410295,"t2":0.3667482303751486,"changed":true,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"risk_quality","t1":0.36485420599454843,"t2":0.48169454948065005,"changed":true,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"base_capturability_score","t1":0.22050421416872243,"t2":0.17666062360338286,"changed":true,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"feasibility_gate_score","t1":1.0,"t2":1.0,"changed":false,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"capturability_score","t1":0.22050421416872243,"t2":0.17666062360338286,"changed":true,"used_by_d03":"fingerprint only","rule":"D03 does not threshold or compare raw capturability"},
+    {"property":"previous_envelope_state","t1":"CLOSED","t2":"CLOSED","changed":false,"used_by_d03":"fingerprint only","rule":"target resolver reads new state, not previous state"},
+    {"property":"new_envelope_state","t1":"CLOSED","t2":"CLOSED","changed":false,"used_by_d03":true,"rule":"R31: CLOSED -> D03 POSITION FLAT"},
+    {"property":"aperture_before","t1":0.2776088557247953,"t2":0.2490565349467589,"changed":true,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"aperture_after","t1":0.2490565349467589,"t2":0.21285857927507087,"changed":true,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"projection_valid","t1":true,"t2":true,"changed":false,"used_by_d03":true,"rule":"higher-priority R30 safety guard; both pass"},
+    {"property":"stale","t1":false,"t2":false,"changed":false,"used_by_d03":true,"rule":"higher-priority R30 safety guard; both pass"},
+    {"property":"safety_state","t1":"CLEAR","t2":"CLEAR","changed":false,"used_by_d03":true,"rule":"higher-priority R30 safety guard; both pass"},
+    {"property":"safety_reason","t1":null,"t2":null,"changed":false,"used_by_d03":true,"rule":"R30 supporting detail only if safety closes"},
+    {"property":"candidate_envelope","t1":null,"t2":null,"changed":false,"used_by_d03":true,"rule":"R34-R41 only after OPEN; not reached because R31 fires first"},
+    {"property":"gate_dimension_values","t1":"all ten 1.0","t2":"all ten 1.0","changed":false,"used_by_d03":"fingerprint only","rule":"not read directly"},
+    {"property":"reason_codes","t1":["REVERSAL_PROPENSITY_HIGH"],"t2":["REVERSAL_PROPENSITY_HIGH"],"changed":false,"used_by_d03":"fingerprint only","rule":"target resolver does not inspect reason_codes"},
+    {"property":"events","t1":["SHAPE_SUPERSEDED","RETURN_SHAPE_ACCEPTED","CAPTURABILITY_EVALUATED","APERTURE_UPDATED"],"t2":["SHAPE_SUPERSEDED","RETURN_SHAPE_ACCEPTED","CAPTURABILITY_EVALUATED","APERTURE_UPDATED"],"changed":false,"used_by_d03":"fingerprint only","rule":"target resolver does not inspect events"}
+  ],
+  "d03_rule_evaluation": {
+    "ordered_rules_before_R31": [
+      {"rule":"R10","condition":"emergency_flatten","t1":false,"t2":false},
+      {"rule":"R20","condition":"not system_enabled","t1":false,"t2":false},
+      {"rule":"R21","condition":"not trading_enabled","t1":false,"t2":false},
+      {"rule":"R30","condition":"safety_state == SAFETY_CLOSED or stale or not projection_valid","t1":false,"t2":false}
+    ],
+    "first_applicable": {
+      "t1": {"rule":"R31","input":"new_envelope_state == CLOSED","result":"FLAT","primary_reason":"ENVELOPE_CLOSED"},
+      "t2": {"rule":"R31","input":"new_envelope_state == CLOSED","result":"FLAT","primary_reason":"ENVELOPE_CLOSED"}
+    },
+    "subsequent_transition": {
+      "t1": "T20 because internal controller state FLAT == D03 POSITION FLAT; NO_CHANGE",
+      "t2": "T20 because internal controller state FLAT == D03 POSITION FLAT; NO_CHANGE"
+    },
+    "raw_capturability_directly_distinguished": false,
+    "information_R31_sees": ["new_envelope_state == CLOSED"],
+    "information_R31_does_not_branch_on": ["capturability_score", "structural_quality", "risk_quality", "aperture", "reason_codes", "events", "D02 path_direction"]
+  },
+  "position_controller": {
+    "t1_d03_position": "FLAT",
+    "t2_d03_position": "FLAT",
+    "internal_controller_state_t1": "FLAT",
+    "internal_controller_state_t2": "FLAT",
+    "matrix_key_t1": ["FLAT","FLAT"],
+    "matrix_key_t2": ["FLAT","FLAT"],
+    "decision_t1": ["NO_ACTION"],
+    "decision_t2": ["NO_ACTION"],
+    "changed": false
+  },
+  "decision_information_bottleneck": {
+    "location": "D04 CLOSED/open hysteresis boundary, consumed by D03 R31",
+    "mechanism": "Distinct continuous capturability values both fail capturability >= 0.75, so D04 emits the same categorical new_envelope_state=CLOSED and no candidate. D03 R31 branches on CLOSED and does not branch on raw capturability or D02 direction.",
+    "upstream_differences_still_present_in_d04_payload": true,
+    "upstream_properties": ["structural_quality", "risk_quality", "capturability_score", "aperture_before", "aperture_after", "evaluation/model time"],
+    "downstream_distinction_lost_at": "D04 new_envelope_state CLOSED category; terminal target selection is fixed by D03 R31",
+    "unique_bottleneck_established": true,
+    "d02_direction_compression_not_decisive": "Both positive displacements map to UPWARD, but D04 retains and responds to continuous D01/D02 score inputs afterward."
+  },
+  "response_vs_decision": {
+    "aptf_mathematical_response_different": true,
+    "d01_response_different": true,
+    "d02_continuous_output_different": true,
+    "d02_categorical_direction_different": false,
+    "d04_capturability_different": true,
+    "d04_categorical_state_different": false,
+    "d03_position_different": false,
+    "position_controller_decision_different": false
+  }
+}

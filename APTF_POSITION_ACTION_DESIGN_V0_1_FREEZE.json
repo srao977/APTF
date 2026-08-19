@@ -1,0 +1,60 @@
+{
+  "freeze_id": "APTF_POSITION_ACTION_DESIGN_V0_1_FROZEN_20260817T180228Z",
+  "timestamp_utc": "2026-08-17T18:02:28.5126654Z",
+  "status": "FROZEN_DESIGN",
+  "freeze_decision": "CANONICAL POSITION-EXECUTION LANGUAGE AND POSITION TRANSITION CONTROLLER DESIGN FROZEN",
+  "design_manifest": {
+    "path": "APTF_POSITION_ACTION_DESIGN_V0_1_MANIFEST.json",
+    "sha256": "63A8DD15ADA8070176F5C5370B08A25D580D7ECC4E12905B55A4E64199D03536",
+    "size_bytes": 4258,
+    "file_count": 13,
+    "files_verified": "13/13"
+  },
+  "authority": {
+    "d03_implementation_freeze": {"path":"D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_FREEZE.json","sha256":"6A93291FFE555A3FFF1239A9A4F88C0A1546B6C46A02B60586614B60A3C91AD6","status":"VERIFIED"},
+    "d03_implementation_manifest": {"path":"D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_MANIFEST.json","sha256":"30BB1FE71B83EAA61648CD58A62A614386891907C68E9ADCFCA41D8A98492CF5","status":"VERIFIED"}
+  },
+  "canonical_component_name": "Position Transition Controller",
+  "contract_identities": {
+    "verb_ontology": {"path":"APTF_CANONICAL_EXECUTION_VERB_SCHEMA_V0_1.json","sha256":"853C9D6116B26713BD6BF67D781C910B445B89B665014B6F10BF49799EDE9C7E"},
+    "transition_matrix": {"path":"APTF_POSITION_TRANSITION_MATRIX_V0_1.md","sha256":"56CE4B2626279F5653C05BD1A5CC2BC2CA18F785E5C6FDD57D29F6B9AA2A3D7E"},
+    "transition_plan_schema": {"path":"APTF_POSITION_TRANSITION_PLAN_SCHEMA_V0_1.json","sha256":"65109B432A4C90176CCEF639108F6CA8AAB05B851B05616E3A73824F45FF9820"},
+    "state_authority": {"path":"APTF_POSITION_EXECUTION_STATE_AUTHORITY_V0_1.md","sha256":"06061C3E1D18B2810D6C7F15ED6B33AC57072C808A908E5EF93A82F1A79EAC2B"},
+    "reversal_contract": {"path":"APTF_POSITION_REVERSAL_AND_PARTIAL_EXECUTION_V0_1.md","sha256":"66A5E71B430B9D6110F9E5571866F1EFAA2C288F53CE65AC980D94BB38FF0834"},
+    "d03_integration": {"path":"APTF_POSITION_ACTION_D03_INTEGRATION_CONTRACT_V0_1.md","sha256":"708A3B1DB1303B3B7751F39EED4CE95ECFB94D10DDCD8C5A9BBD4EAD046380D8"}
+  },
+  "ontology": {
+    "position_states": ["FLAT", "LONG", "SHORT"],
+    "execution_verbs": ["BUY", "SELL", "SELL_SHORT", "BUY_TO_COVER", "HOLD", "NO_ACTION"],
+    "transition_count": 9,
+    "hold_no_action_separate": true
+  },
+  "validation": {
+    "verb_domain": "6/6 PASS",
+    "transitions": "9/9 PASS",
+    "deterministic_results": "9/9 PASS",
+    "partial_execution_vectors": "6/6 PASS",
+    "authorization_overlay_vectors": "6/6 PASS",
+    "d03_fields": "7/7 PASS",
+    "human_translatability": "PASS",
+    "simulator_translatability": "PASS",
+    "broker_adapter_translatability": "PASS",
+    "market_data_independence": "PASS",
+    "profitability_independence": "PASS",
+    "d03_non_drift": "PASS",
+    "design_consistency": "PASS"
+  },
+  "implementation": {
+    "position_transition_controller_implemented": false,
+    "broker_adapter_implemented": false,
+    "backtest_simulator_implemented": false
+  },
+  "data_governance": {
+    "market_data_accessed": false,
+    "first_six_months_accessed": false,
+    "reserve_accessed": false,
+    "reserve_status": "SEALED",
+    "replay_executed": false,
+    "backtest_executed": false
+  }
+}

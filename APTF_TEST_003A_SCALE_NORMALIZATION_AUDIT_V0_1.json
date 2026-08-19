@@ -1,0 +1,60 @@
+{
+  "test_id": "APTF_TEST_003A_D04_REACHABILITY_V0_1",
+  "scale_audit": [
+    {"boundary":"D01 strength/coherence/persistence/uncertainty/reversal -> D02","producer_scale":"[0,1] floats","consumer_scale":"[0,1] floats","match":true},
+    {"boundary":"D02 D,M -> D04 Q_G","producer_scale":"same normalized-displacement units; |D|<=M","consumer_scale":"dimensionless [0,1] ratio","match":true},
+    {"boundary":"EnvelopeContext gates -> G","producer_scale":"ten [0,1] fractions","consumer_scale":"minimum [0,1]","match":true},
+    {"boundary":"C -> hysteresis threshold","producer_scale":"C in [0,1]","consumer_scale":"0.75/0.55 fractions on [0,1]","match":true},
+    {"boundary":"market/model/evaluation time","producer_scale":"seconds","consumer_scale":"seconds for projection validity only","match":true}
+  ],
+  "scale_mismatch": false,
+  "double_normalization": {
+    "found": false,
+    "details": [
+      "Q_G is the designed one-time scale-free geometry ratio, not a repeated normalization.",
+      "Q_S and Q_R aggregate already bounded coordinates with geometric means; no z-score, percentage conversion, or second clamp rescales them.",
+      "D01 coherence is a bounded ratio before D04, but inclusion in Q_S is aggregation, not another normalization of coherence.",
+      "No [0,100], signed/unsigned, unit, time, integer/fraction, or percentage/fraction mismatch exists."
+    ]
+  },
+  "double_penalization": {
+    "found_at_d04_field_level": false,
+    "design_controls": [
+      "state_support_ratio omitted to avoid reusing s,p,u,r",
+      "terminal decay omitted to avoid FMO/lifecycle time duplication",
+      "each selected D02 field appears once explicitly in D04 formula"
+    ],
+    "upstream_dependency_coupling": [
+      "D01 coherence c enters D01 strength s; D04 Q_S then contains both s and c.",
+      "D01 prior uncertainty lowers strength, while current uncertainty lowers Q_R.",
+      "D01 coherence affects uncertainty; uncertainty affects reversal propensity; Q_R contains both u and r."
+    ],
+    "interpretation": "These are real coupled dependencies, so term independence cannot be assumed. Frozen design/implementation authority nevertheless defines them as separate D01 coordinates and reports no D04 double-count contradiction. Coupling may affect reachable distributions but is not classified as a proven penalty defect."
+  },
+  "sign_semantics": [
+    {"input":"Q_G, strength, coherence, persistence, each gate","direction":"nondecreasing C","implementation":"positive product/root/minimum","design_match":true},
+    {"input":"uncertainty, reversal_propensity","direction":"nonincreasing C","implementation":"quality complements 1-u and 1-r","design_match":true},
+    {"input":"hard failure","direction":"zero C","implementation":"H=0 multiplication","design_match":true}
+  ],
+  "sign_or_semantic_inversion": false,
+  "clamp_saturation_path": [
+    {"variable":"D01 velocity","pre_domain":"unbounded finite calculation","transform":"hard clip","post_range":"[-50,50]","downstream":"strength/kinematics/FMO"},
+    {"variable":"D01 acceleration/curvature","pre_domain":"unbounded finite calculation","transform":"hard clip","post_range":"[-200,200]","downstream":"strength/state; acceleration affects projections"},
+    {"variable":"D01 volume influence","pre_domain":"log relative + log absolute","transform":"clamp","post_range":"[0,3]","downstream":"coherence and strength"},
+    {"variable":"D01 strength","pre_domain":"real sigmoid logit","transform":"sigmoid then clamp","post_range":"[0,1]","downstream":"Q_S"},
+    {"variable":"D01 coherence","pre_domain":"weighted signed/absolute ratio","transform":"abs ratio then clamp","post_range":"[0,1]","downstream":"Q_S"},
+    {"variable":"D01 persistence","pre_domain":"recursive convex update","transform":"clamp","post_range":"[0,1]","downstream":"Q_S"},
+    {"variable":"D01 uncertainty","pre_domain":"real sigmoid logit","transform":"sigmoid then clamp","post_range":"[0,1]","downstream":"Q_R"},
+    {"variable":"D01 reversal_propensity","pre_domain":"real sigmoid logit","transform":"sigmoid then clamp","post_range":"[0,1]","downstream":"Q_R"},
+    {"variable":"Q_G","pre_domain":"D,M same units with |D|<=M","transform":"exact ratio/zero branch","post_range":"[0,1]","downstream":"multiplicative C"},
+    {"variable":"G","pre_domain":"ten [0,1] context values","transform":"minimum","post_range":"[0,1]","downstream":"multiplicative bottleneck"},
+    {"variable":"C","pre_domain":"bounded product","transform":"no material clamp; output validation","post_range":"[0,1]","downstream":"hysteresis"}
+  ],
+  "d03_compression": {
+    "complete_d04_object_received": true,
+    "raw_capturability_present_in_input_and_fingerprint": true,
+    "raw_capturability_read_by_R31": false,
+    "closed_path": "continuous differences below the D04 opening boundary are invisible to the terminal D03 target-rule branch; R31 consumes new_envelope_state=CLOSED",
+    "defect_claim": false
+  }
+}

@@ -27,7 +27,6 @@ def test_envelope_context_validation() -> None:
         EnvelopeContext(
             evaluation_time=0.0,
             market_eligible=True,
-            data_integrity=0.8,
             clock_event_quality=0.8,
             capital_available=0.8,
             portfolio_capacity=0.8,

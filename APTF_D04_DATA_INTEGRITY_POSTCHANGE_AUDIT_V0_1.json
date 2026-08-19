@@ -1,0 +1,133 @@
+{
+  "audit_id": "APTF_D04_DATA_INTEGRITY_POSTCHANGE_AUDIT_V0_1",
+  "status": "PASS",
+  "current_equation": "C = H * Q_G * Q_S * Q_R",
+  "data_quality_responsibility": "UPSTREAM_OBSERVATION_ADMISSION",
+  "runtime_contract": {
+    "context_fields": ["evaluation_time", "market_eligible"],
+    "data_integrity_present": false,
+    "G_present": false,
+    "empty_gate_construction_present": false,
+    "neutral_gate_multiplier_present": false,
+    "replacement_data_quality_score_present": false,
+    "emitted_G_fields": []
+  },
+  "executable_scan": {
+    "paths": [
+      "d04_trading_envelope/src/**/*.py",
+      "d04_trading_envelope/config/**/*",
+      "d04_trading_envelope/scenarios/**/*",
+      "aptf_runtime/src/**/*.py",
+      "position_transition_controller/*.py",
+      "diagnostics/aptf_test_001_row_10.py",
+      "diagnostics/aptf_test_002_two_observations.py"
+    ],
+    "removed_term_matches": 0,
+    "result": "PASS"
+  },
+  "remaining_occurrences": [
+    {
+      "path": "d04_trading_envelope/output/*.jsonl",
+      "classification": "PRESERVE_HISTORICAL",
+      "purpose": "generated historical scenario and benchmark output from the superseded G architecture"
+    },
+    {
+      "path": "d04_trading_envelope/.pytest_cache/v/cache/nodeids",
+      "classification": "TOOL_CACHE_HISTORY",
+      "purpose": "pytest cache records obsolete collected test names; non-executable"
+    },
+    {
+      "path": "d04_trading_envelope/README.md",
+      "classification": "CURRENT_DOCUMENTATION_ABSENCE_STATEMENT",
+      "purpose": "states that D04 has no data_integrity input or G term"
+    },
+    {
+      "path": "d04_trading_envelope/tests/*.py",
+      "classification": "CURRENT_TEST_ABSENCE_ASSERTION",
+      "purpose": "asserts removed fields do not exist in current schemas and results"
+    },
+    {
+      "path": "APTF_TEST_004_* and APTF_TEST_004A_*",
+      "classification": "PRESERVE_HISTORICAL",
+      "purpose": "immutable evidence for the superseded architecture"
+    }
+  ],
+  "future_gate_concepts": {
+    "classification": "FUTURE_NOT_CURRENTLY_IMPLEMENTED_NO_CURRENT_PRODUCER_NON_EXECUTABLE",
+    "runtime_fields": [],
+    "numeric_scenario_values": [],
+    "concepts": [
+      "broker_health",
+      "capital_available",
+      "execution_feasibility",
+      "latency_quality",
+      "liquidity_quality",
+      "portfolio_capacity",
+      "position_capacity",
+      "risk_capacity",
+      "spread_quality"
+    ]
+  },
+  "preserved_mathematics": {
+    "H": "UNCHANGED_EXCEPT_REMOVAL_OF_OUT_OF_SCOPE_DATA_QUALITY_PREDICATE",
+    "Q_G": "UNCHANGED",
+    "Q_S": "UNCHANGED",
+    "Q_R": "UNCHANGED",
+    "open_threshold": 0.75,
+    "close_threshold": 0.55,
+    "open_persistence": 3,
+    "close_persistence": 2
+  },
+  "validation": {
+    "D04": {"passed": 72, "failed": 0},
+    "D03": {"passed": 40, "failed": 0},
+    "position_controller": {"passed": 6, "failed": 0, "pre_existing_warnings": 6},
+    "temporal_runtime_contract": {"passed": 7, "failed": 0},
+    "D02": {"passed": 26, "failed": 0}
+  },
+  "protected_hashes": [
+    {"path":"data/market/normalized/SPY_1min_normalized_v0_1.csv","sha256":"73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d"},
+    {"path":"d01_adaptive_parametric_model/src/d01/v02/model.py","sha256":"77cc090643e74d810b5a73e3b35b23c0e67dbcd9efabbdd3553ba87c45bcbacf"},
+    {"path":"d02_return_shape/src/d02/v02/builder.py","sha256":"bf290887b5e2e3b1cde552494e7142bf3383dd00199c8e1708eb3ab5598bed5e"},
+    {"path":"d03_decision_control/src/d03/v01/__init__.py","sha256":"ff7edfd0cf3ecaf20317a78296da0c9aabf2e5badab886d02ad5b1085539bdc3"},
+    {"path":"position_transition_controller/position_transition_controller.py","sha256":"67f1c3ac7220e51c9702337440879c0245c0b466c04aea97ee1433a204ca8e92"},
+    {"path":"aptf_runtime/src/aptf_runtime/temporal_envelope.py","sha256":"fa3b73fab55b6772b15a6a15a74efc01513fed90f672a4a5bcfb08ad5d6623d1"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/hysteresis.py","sha256":"fdbeeb203c309ca91c20f21b70cbb342406a97c2c86b8dc0d0a7033bff3cf101"}
+  ],
+  "historical_evidence": {
+    "Test004": {"artifact_count": 12, "modified_by_task": false},
+    "Test004A": {"artifact_count": 11, "modified_by_task": false, "result_B_preserved": true}
+  },
+  "non_drift": {
+    "market_data": true,
+    "D01": true,
+    "D02": true,
+    "D03_authority": true,
+    "position_controller_authority": true,
+    "temporal_authority": true,
+    "opening_threshold": true,
+    "closing_threshold": true,
+    "hysteresis_and_persistence": true,
+    "historical_Test004": true,
+    "historical_Test004A": true
+  },
+  "acceptance_gates": {
+    "G06": true,
+    "G07": true,
+    "G08": true,
+    "G09": true,
+    "G10": true,
+    "G11": true,
+    "G12": true,
+    "G13": true,
+    "G14": true,
+    "G15": true,
+    "G16": true,
+    "G17": true,
+    "G18": true,
+    "G19": true,
+    "G20": true,
+    "G21": true,
+    "G22": true
+  }
+}

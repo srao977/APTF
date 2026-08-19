@@ -1,0 +1,15 @@
+{
+  "audit_id": "APTF_CAUSAL_PIPELINE_REPRESENTATIVE_BLANK_TRACES_V0_1",
+  "traces": [
+    {"zero_based_index":0,"timestamp":"2022-09-30T08:00:00Z","furthest_stage":"harness row-index gate","reason":"HARDCODED_ROW_INDEX_WARMUP","mock_desired_position":null},
+    {"zero_based_index":1000,"timestamp":"2022-10-03T10:05:00Z","furthest_stage":"PositionTransitionPlan","reason":"FLAT_TO_FLAT_NO_ACTION_PLAN_SUPPRESSED_BECAUSE_ACTION_AUTHORIZED_FALSE","mock_desired_position":"FLAT"},
+    {"zero_based_index":53725,"timestamp":"2022-12-28T21:43:00Z","furthest_stage":"Position Transition Controller invocation","reason":"MOCK_NO_CHANGE_INTENT_CONFLICTS_WITH_REQUIRED_LONG_TO_FLAT_CLOSE; derive_transition_plan returned null","mock_desired_position":"FLAT"},
+    {"zero_based_index":80000,"timestamp":"2023-02-13T21:26:00Z","furthest_stage":"Position Transition Controller invocation","reason":"MOCK_NO_CHANGE_INTENT_CONFLICTS_WITH_REQUIRED_LONG_TO_FLAT_CLOSE; derive_transition_plan returned null","mock_desired_position":"FLAT"},
+    {"zero_based_index":107450,"timestamp":"2023-03-30T23:49:00Z","furthest_stage":"Position Transition Controller invocation","reason":"MOCK_NO_CHANGE_INTENT_CONFLICTS_WITH_REQUIRED_LONG_TO_FLAT_CLOSE; derive_transition_plan returned null","mock_desired_position":"FLAT","boundary_note":"timestamp is after frozen reserve start and should not have been included"}
+  ],
+  "common_causes": [
+    "hard-coded 100-row gate",
+    "non-executable HOLD/NO_ACTION plans blanked by CSV policy",
+    "fabricated NO_CHANGE intent invalid for LONG-to-FLAT close"
+  ]
+}

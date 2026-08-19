@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aptf.local/schemas/temporal-event-envelope/v0.2",
+  "title": "APTF Temporal Event Envelope V0.2",
+  "description": "External runtime/transport envelope for frozen APTF payloads.",
+  "x-aptf-status": "DESIGN_DIAGNOSTIC_NOT_FROZEN_IMPLEMENTATION_AUTHORITY",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "event_id", "observation_id", "execution_id", "parent_event_id",
+    "logical_output_ordinal", "source_stream_id", "sequence_number", "instrument_id",
+    "market_event_time_utc", "market_event_time_role", "producer_component", "producer_version",
+    "runtime_instance_id", "clock_domain_id", "received_at_utc", "emitted_at_utc",
+    "received_monotonic_ns", "emitted_monotonic_ns", "processing_duration_ns", "telemetry_flags",
+    "status", "payload_type", "payload_version", "payload_sha256", "scientific_ids", "payload", "error"
+  ],
+  "properties": {
+    "schema_version": {"const": "0.2"},
+    "event_id": {"type": "string", "pattern": "^aptf:evt:v1:sha256:[0-9a-f]{64}$"},
+    "observation_id": {"type": "string", "pattern": "^aptf:obs:v1:sha256:[0-9a-f]{64}$"},
+    "execution_id": {"type": "string", "format": "uuid"},
+    "parent_event_id": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^aptf:evt:v1:sha256:[0-9a-f]{64}$"}
+      ]
+    },
+    "logical_output_ordinal": {"type": "integer", "minimum": 0},
+    "source_stream_id": {"type": "string", "minLength": 1},
+    "sequence_number": {"type": "integer", "minimum": 0},
+    "instrument_id": {"type": "string", "minLength": 1},
+    "market_event_time_utc": {"type": "string", "format": "date-time", "pattern": "Z$"},
+    "market_event_time_role": {
+      "type": "string",
+      "enum": ["BAR_OPEN", "BAR_CLOSE", "PROVIDER_EVENT", "SAMPLE", "INSTANTANEOUS_EVENT", "OTHER"]
+    },
+    "producer_component": {
+      "type": "string",
+      "enum": ["SOURCE_GATEWAY", "D01", "D02", "D04", "D03", "POSITION_TRANSITION_CONTROLLER"]
+    },
+    "producer_version": {"type": "string", "minLength": 1},
+    "runtime_instance_id": {"type": "string", "format": "uuid"},
+    "clock_domain_id": {"type": "string", "format": "uuid"},
+    "received_at_utc": {"type": "string", "format": "date-time", "pattern": "Z$"},
+    "emitted_at_utc": {"type": "string", "format": "date-time", "pattern": "Z$"},
+    "received_monotonic_ns": {
+      "oneOf": [{"type": "integer", "minimum": 0}, {"type": "null"}]
+    },
+    "emitted_monotonic_ns": {
+      "oneOf": [{"type": "integer", "minimum": 0}, {"type": "null"}]
+    },
+    "processing_duration_ns": {"type": "integer", "minimum": 0},
+    "telemetry_flags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {"type": "string", "enum": ["WALL_CLOCK_INVERSION"]}
+    },
+    "status": {"type": "string", "enum": ["SUCCESS", "ERROR"]},
+    "payload_type": {"type": "string", "minLength": 1},
+    "payload_version": {"type": "string", "minLength": 1},
+    "payload_sha256": {
+      "oneOf": [{"type": "string", "pattern": "^[0-9a-f]{64}$"}, {"type": "null"}]
+    },
+    "scientific_ids": {
+      "type": "object",
+      "additionalProperties": {"type": ["string", "number", "integer", "null"]}
+    },
+    "payload": {"type": ["object", "array", "string", "number", "boolean", "null"]},
+    "error": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["error_type", "error_code", "message"],
+          "properties": {
+            "error_type": {"type": "string", "minLength": 1},
+            "error_code": {"type": "string", "minLength": 1},
+            "message": {"type": "string"}
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"producer_component": {"const": "SOURCE_GATEWAY"}}, "required": ["producer_component"]},
+      "then": {"properties": {"parent_event_id": {"type": "null"}}},
+      "else": {"properties": {"parent_event_id": {"type": "string"}}}
+    },
+    {
+      "if": {"properties": {"status": {"const": "SUCCESS"}}, "required": ["status"]},
+      "then": {
+        "properties": {"error": {"type": "null"}, "payload_sha256": {"type": "string"}}
+      },
+      "else": {
+        "properties": {"error": {"type": "object"}, "payload": {"type": "null"}, "payload_sha256": {"type": "null"}}
+      }
+    },
+    {
+      "oneOf": [
+        {
+          "properties": {
+            "received_monotonic_ns": {"type": "integer"},
+            "emitted_monotonic_ns": {"type": "integer"}
+          }
+        },
+        {
+          "properties": {
+            "received_monotonic_ns": {"type": "null"},
+            "emitted_monotonic_ns": {"type": "null"}
+          }
+        }
+      ]
+    }
+  ]
+}

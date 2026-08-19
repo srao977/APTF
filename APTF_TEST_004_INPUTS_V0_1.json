@@ -1,0 +1,254 @@
+{
+  "corrected_authority": {
+    "close_persistence": 2,
+    "close_threshold": 0.55,
+    "contract": "APTF_D04_KNOWN_INPUT_CONTEXT_CONTRACT_V0_2_2.md",
+    "critical_data_integrity_threshold": 0.2,
+    "implementation": "APTF_D04_KNOWN_INPUT_IMPLEMENTATION_V0_2_2.md",
+    "open_persistence": 3,
+    "open_threshold": 0.75,
+    "schema": "D04_KNOWN_INPUT_CONTEXT_SCHEMA_V0_2_2.json"
+  },
+  "inputs": [
+    {
+      "cycle": 1,
+      "normalized_source_payload": {
+        "close": 365.5,
+        "close_return_1m": -0.00016413174307916556,
+        "data_valid": true,
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:08:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:08:00Z",
+        "high": 365.7,
+        "high_low_range": 0.19999999999998863,
+        "high_low_range_fraction": 0.0005471956224349894,
+        "is_regular_session": false,
+        "low": 365.5,
+        "minute_of_session": -1,
+        "open": 365.68,
+        "open_close_change": -0.18000000000000682,
+        "open_close_return": -0.0004922336469044275,
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": 9,
+        "timezone": "America/New_York",
+        "volume": 4288.0
+      },
+      "selection": {
+        "data_observation_number": 9,
+        "market_event_time_utc": "2022-09-30T08:08:00Z",
+        "ohlcv": {
+          "close": 365.5,
+          "high": 365.7,
+          "low": 365.5,
+          "open": 365.68,
+          "volume": 4288.0
+        },
+        "physical_csv_row": 10,
+        "source_row_number": 9,
+        "zero_based_data_index": 8
+      }
+    },
+    {
+      "cycle": 2,
+      "normalized_source_payload": {
+        "close": 365.49,
+        "close_return_1m": -2.7359781121671922e-05,
+        "data_valid": true,
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:09:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:09:00Z",
+        "high": 365.54,
+        "high_low_range": 0.05000000000001137,
+        "high_low_range_fraction": 0.00013680264849930604,
+        "is_regular_session": false,
+        "low": 365.49,
+        "minute_of_session": -1,
+        "open": 365.54,
+        "open_close_change": -0.05000000000001137,
+        "open_close_return": -0.00013678393609461992,
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": 10,
+        "timezone": "America/New_York",
+        "volume": 758.0
+      },
+      "selection": {
+        "data_observation_number": 10,
+        "market_event_time_utc": "2022-09-30T08:09:00Z",
+        "ohlcv": {
+          "close": 365.49,
+          "high": 365.54,
+          "low": 365.49,
+          "open": 365.54,
+          "volume": 758.0
+        },
+        "physical_csv_row": 11,
+        "source_row_number": 10,
+        "zero_based_data_index": 9
+      }
+    },
+    {
+      "cycle": 3,
+      "normalized_source_payload": {
+        "close": 365.57,
+        "close_return_1m": 0.00021888423759874875,
+        "data_valid": true,
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:10:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:10:00Z",
+        "high": 365.58,
+        "high_low_range": 0.0999999999999659,
+        "high_low_range_fraction": 0.0002735454222172659,
+        "is_regular_session": false,
+        "low": 365.48,
+        "minute_of_session": -1,
+        "open": 365.5,
+        "open_close_change": 0.06999999999999318,
+        "open_close_return": 0.00019151846785225857,
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": 11,
+        "timezone": "America/New_York",
+        "volume": 1318.0
+      },
+      "selection": {
+        "data_observation_number": 11,
+        "market_event_time_utc": "2022-09-30T08:10:00Z",
+        "ohlcv": {
+          "close": 365.57,
+          "high": 365.58,
+          "low": 365.48,
+          "open": 365.5,
+          "volume": 1318.0
+        },
+        "physical_csv_row": 12,
+        "source_row_number": 11,
+        "zero_based_data_index": 10
+      }
+    },
+    {
+      "cycle": 4,
+      "normalized_source_payload": {
+        "close": 365.59,
+        "close_return_1m": 5.470908444338285e-05,
+        "data_valid": true,
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:11:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:11:00Z",
+        "high": 365.59,
+        "high_low_range": 0.0,
+        "high_low_range_fraction": 0.0,
+        "is_regular_session": false,
+        "low": 365.59,
+        "minute_of_session": -1,
+        "open": 365.59,
+        "open_close_change": 0.0,
+        "open_close_return": 0.0,
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": 12,
+        "timezone": "America/New_York",
+        "volume": 100.0
+      },
+      "selection": {
+        "data_observation_number": 12,
+        "market_event_time_utc": "2022-09-30T08:11:00Z",
+        "ohlcv": {
+          "close": 365.59,
+          "high": 365.59,
+          "low": 365.59,
+          "open": 365.59,
+          "volume": 100.0
+        },
+        "physical_csv_row": 13,
+        "source_row_number": 12,
+        "zero_based_data_index": 11
+      }
+    },
+    {
+      "cycle": 5,
+      "normalized_source_payload": {
+        "close": 365.6,
+        "close_return_1m": 2.7353045761735473e-05,
+        "data_valid": true,
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:12:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:12:00Z",
+        "high": 365.6,
+        "high_low_range": 0.0,
+        "high_low_range_fraction": 0.0,
+        "is_regular_session": false,
+        "low": 365.6,
+        "minute_of_session": -1,
+        "open": 365.6,
+        "open_close_change": 0.0,
+        "open_close_return": 0.0,
+        "quality_flags": "",
+        "session_type": "PREMARKET",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_provider": "FirstRateData",
+        "source_row_number": 13,
+        "timezone": "America/New_York",
+        "volume": 920.0
+      },
+      "selection": {
+        "data_observation_number": 13,
+        "market_event_time_utc": "2022-09-30T08:12:00Z",
+        "ohlcv": {
+          "close": 365.6,
+          "high": 365.6,
+          "low": 365.6,
+          "open": 365.6,
+          "volume": 920.0
+        },
+        "physical_csv_row": 14,
+        "source_row_number": 13,
+        "zero_based_data_index": 12
+      }
+    }
+  ],
+  "processed_cycles": 5,
+  "source": {
+    "last_physical_row_read": 14,
+    "path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "row15_read": false,
+    "sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+    "source_access": [
+      {
+        "cycle": 1,
+        "market_event_time_utc": "2022-09-30T08:08:00Z",
+        "physical_row": 10
+      },
+      {
+        "cycle": 2,
+        "market_event_time_utc": "2022-09-30T08:09:00Z",
+        "physical_row": 11
+      },
+      {
+        "cycle": 3,
+        "market_event_time_utc": "2022-09-30T08:10:00Z",
+        "physical_row": 12
+      },
+      {
+        "cycle": 4,
+        "market_event_time_utc": "2022-09-30T08:11:00Z",
+        "physical_row": 13
+      },
+      {
+        "cycle": 5,
+        "market_event_time_utc": "2022-09-30T08:12:00Z",
+        "physical_row": 14
+      }
+    ]
+  },
+  "test_id": "APTF_TEST_004_CORRECTED_D04_REGRESSION_V0_1"
+}

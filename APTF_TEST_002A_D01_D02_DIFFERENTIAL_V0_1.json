@@ -1,0 +1,61 @@
+{
+  "test_id": "APTF_TEST_002A_VOLUME_DIFFERENTIAL_V0_1",
+  "d01_output_differential": [
+    {"property":"model_time","t1":1664525280.0,"t2":1664525340.0,"signed_delta":60.0,"percent_change":null,"direct_volume":false,"indirect_volume":false,"other_dependence":"event time","passed_to_d02":true},
+    {"property":"entity_id","t1":"SPY","t2":"SPY","signed_delta":null,"changed":false,"direct_volume":false,"indirect_volume":false,"other_dependence":"configured identity","passed_to_d02":true},
+    {"property":"model_version","t1":"0.2","t2":"0.2","signed_delta":null,"changed":false,"direct_volume":false,"indirect_volume":false,"other_dependence":"configuration","passed_to_d02":true},
+    {"property":"state_level","t1":-0.6571388532831072,"t2":-0.6487986245281485,"signed_delta":0.008340228754958656,"absolute_delta":0.008340228754958656,"percent_change":null,"direct_volume":false,"indirect_volume":false,"other_dependence":"price, adaptive reference/scale, prior state","passed_to_d02":true},
+    {"property":"state_velocity","t1":-0.0009453815512633182,"t2":0.00013900381255947696,"signed_delta":0.0010843853638227952,"absolute_delta":0.0010843853638227952,"percent_change":null,"direct_volume":false,"indirect_volume":false,"other_dependence":"price/kinematics/prior state","passed_to_d02":false},
+    {"property":"state_acceleration","t1":0.000043598246210338045,"t2":0.000018073089394034406,"signed_delta":-0.00002552515681630364,"absolute_delta":0.00002552515681630364,"percent_change":-58.546292649384355,"direct_volume":false,"indirect_volume":false,"other_dependence":"kinematics/prior velocity","passed_to_d02":false},
+    {"property":"state_curvature","t1":0.00004359818776174796,"t2":0.000018073088870220442,"signed_delta":-0.00002552509889152752,"absolute_delta":0.00002552509889152752,"percent_change":-58.54623827718511,"direct_volume":false,"indirect_volume":false,"other_dependence":"kinematics","passed_to_d02":false},
+    {"property":"strength","t1":0.8777636556469071,"t2":0.6443499381248182,"signed_delta":-0.23341371752208884,"absolute_delta":0.23341371752208884,"percent_change":-26.591863996700138,"direct_volume":true,"indirect_volume":true,"other_dependence":"velocity, acceleration, coherence, prior uncertainty, configuration","passed_to_d02":true},
+    {"property":"coherence","t1":0.4855782805501968,"t2":0.18477216178217787,"signed_delta":-0.30080611876801894,"absolute_delta":0.30080611876801894,"percent_change":-61.948017614622906,"direct_volume":true,"indirect_volume":false,"other_dependence":"level, velocity, acceleration, channel weights","passed_to_d02":true},
+    {"property":"persistence","t1":0.5179117484872026,"t2":0.41432939878976205,"signed_delta":-0.10358234969744051,"absolute_delta":0.10358234969744051,"percent_change":-20.0,"direct_volume":false,"indirect_volume":"historical only cannot isolate","other_dependence":"prior persistence, velocity agreement, acceleration, perturbation class","passed_to_d02":true},
+    {"property":"perturbation_magnitude","t1":0.019860213546167346,"t2":0.008329647098097139,"signed_delta":-0.011530566448070207,"absolute_delta":0.011530566448070207,"percent_change":-58.05862268935871,"direct_volume":false,"indirect_volume":false,"other_dependence":"innovation, kinematics, quality","passed_to_d02":false},
+    {"property":"perturbation_class","t1":"CONTRADICTING","t2":"REVERSING","changed":true,"direct_volume":false,"indirect_volume":false,"other_dependence":"innovation and kinematics","passed_to_d02":false},
+    {"property":"uncertainty","t1":0.3799587892055599,"t2":0.42387487667499785,"signed_delta":0.043916087469437926,"absolute_delta":0.043916087469437926,"percent_change":11.558118595245618,"direct_volume":false,"indirect_volume":true,"other_dependence":"innovation, coherence, perturbation, quality, instability","passed_to_d02":true},
+    {"property":"reversal_propensity","t1":0.785306864585095,"t2":0.5972582524083497,"signed_delta":-0.1880486121767453,"absolute_delta":0.1880486121767453,"percent_change":-23.945876530201723,"direct_volume":false,"indirect_volume":true,"other_dependence":"velocity, acceleration, perturbation, persistence, level, uncertainty","passed_to_d02":true},
+    {"property":"state_support_ratio","t1":0.39012915911128365,"t2":0.26144791004198753,"signed_delta":-0.12868124906929612,"absolute_delta":0.12868124906929612,"percent_change":-32.98426843110951,"direct_volume":false,"indirect_volume":true,"other_dependence":"strength, persistence, uncertainty, reversal","passed_to_d02":true},
+    {"property":"observation_half_life","t1":15.0,"t2":15.0,"signed_delta":0.0,"percent_change":0.0,"direct_volume":false,"indirect_volume":true,"other_dependence":"prior half-life, persistence, strength, uncertainty, perturbation","passed_to_d02":false},
+    {"property":"forward_half_life","t1":15.0,"t2":15.0,"signed_delta":0.0,"percent_change":0.0,"direct_volume":false,"indirect_volume":true,"other_dependence":"prior half-life, persistence, strength, uncertainty, perturbation; lower bound active","passed_to_d02":true},
+    {"property":"data_quality","t1":1.0,"t2":1.0,"signed_delta":0.0,"percent_change":0.0,"direct_volume":false,"indirect_volume":false,"other_dependence":"source quality","passed_to_d02":false},
+    {"property":"FMO.interval_length","t1":58.805642197812524,"t2":46.92093219652183,"signed_delta":-11.884710001290692,"absolute_delta":11.884710001290692,"percent_change":-20.210152558682175,"direct_volume":false,"indirect_volume":true,"other_dependence":"persistence, strength, uncertainty, perturbation magnitude, configuration","passed_to_d02":true},
+    {"property":"FMO.sample_count","t1":8,"t2":8,"signed_delta":0,"percent_change":0.0,"direct_volume":false,"indirect_volume":false,"other_dependence":"configuration","passed_to_d02":true},
+    {"property":"FMO.forward_samples","t1":"8 exact seven-field samples in Test 002 component trace","t2":"8 exact seven-field samples in Test 002 component trace","signed_delta":"all sample coordinate/value tuples differ","percent_change":null,"direct_volume":false,"indirect_volume":true,"other_dependence":"level, velocity, acceleration, half-life, strength, persistence, uncertainty, reversal, interval configuration","passed_to_d02":true}
+  ],
+  "causal_classification": {
+    "direct_volume_input": ["coherence", "strength"],
+    "volume_plus_other_source_inputs": ["coherence", "strength"],
+    "prior_state_plus_current_input": ["strength", "persistence", "uncertainty", "reversal_propensity", "half_lives", "forward interval", "FMO samples"],
+    "price_kinematic_input": ["state_level", "state_velocity", "state_acceleration", "state_curvature", "perturbation", "coherence", "strength", "persistence", "uncertainty", "reversal_propensity", "FMO samples"],
+    "configuration": ["all bounded/composite calculations"],
+    "cannot_isolate_from_stored_evidence": ["the volume-only share of every observed t1-to-t2 output delta"]
+  },
+  "d01_to_d02_mapping": [
+    {"d01_property":"model_time","t1":1664525280.0,"t2":1664525340.0,"delta":60.0,"d02_field":"model_time","transformation":"DMO/FMO equality validation then copy","role":"identity/time","information_reduction":false,"effect":"D04 lineage time changes"},
+    {"d01_property":"entity_id","t1":"SPY","t2":"SPY","delta":null,"d02_field":"entity_id","transformation":"equality validation then copy","role":"identity","information_reduction":false,"effect":"unchanged"},
+    {"d01_property":"model_version","t1":"0.2","t2":"0.2","delta":null,"d02_field":"source_model_version","transformation":"validate then copy","role":"lineage","information_reduction":false,"effect":"unchanged"},
+    {"d01_property":"state_level","t1":-0.6571388532831072,"t2":-0.6487986245281485,"delta":0.008340228754958656,"d02_field":"current_level","transformation":"copy","role":"geometry reference","information_reduction":false,"effect":"changes geometry baseline"},
+    {"d01_property":"FMO.interval_length","t1":58.805642197812524,"t2":46.92093219652183,"delta":-11.884710001290692,"d02_field":"projection_interval","transformation":"copy","role":"terminal tau and validity window","information_reduction":false,"effect":"shorter projection"},
+    {"d01_property":"forward_half_life","t1":15.0,"t2":15.0,"delta":0.0,"d02_field":"forward_half_life","transformation":"copy","role":"terminal decay formula","information_reduction":false,"effect":"unchanged input"},
+    {"d01_property":"FMO.samples[0..7]","t1":"8 exact samples in Test 002 component trace","t2":"8 exact samples in Test 002 component trace","delta":"all sample coordinates/values differ","d02_field":"forward_samples","transformation":"ordered field-for-field immutable copy","role":"path geometry; terminal and maximum displacement","information_reduction":false,"effect":"terminal level and path geometry differ"},
+    {"d01_property":"strength","t1":0.8777636556469071,"t2":0.6443499381248182,"delta":-0.23341371752208884,"d02_field":"strength","transformation":"copy","role":"D04 structural quality","information_reduction":false,"effect":"pushes t2 structural quality downward"},
+    {"d01_property":"coherence","t1":0.4855782805501968,"t2":0.18477216178217787,"delta":-0.30080611876801894,"d02_field":"coherence","transformation":"copy","role":"D04 structural quality","information_reduction":false,"effect":"pushes t2 structural quality downward"},
+    {"d01_property":"persistence","t1":0.5179117484872026,"t2":0.41432939878976205,"delta":-0.10358234969744051,"d02_field":"persistence","transformation":"copy","role":"D04 structural quality","information_reduction":false,"effect":"pushes t2 structural quality downward"},
+    {"d01_property":"uncertainty","t1":0.3799587892055599,"t2":0.42387487667499785,"delta":0.043916087469437926,"d02_field":"uncertainty","transformation":"copy","role":"D04 risk quality","information_reduction":false,"effect":"pushes t2 risk quality downward ceteris paribus, but reversal also changes"},
+    {"d01_property":"reversal_propensity","t1":0.785306864585095,"t2":0.5972582524083497,"delta":-0.1880486121767453,"d02_field":"reversal_propensity","transformation":"copy","role":"D04 risk quality/reason","information_reduction":false,"effect":"pushes t2 risk quality upward"},
+    {"d01_property":"state_support_ratio","t1":0.39012915911128365,"t2":0.26144791004198753,"delta":-0.12868124906929612,"d02_field":"state_support_ratio","transformation":"copy","role":"ReturnShape provenance","information_reduction":false,"effect":"D04 does not use directly"},
+    {"d01_property":"perturbation/observation half-life/diagnostics","t1":"captured","t2":"captured","delta":"various","d02_field":null,"transformation":"discarded from ReturnShape","role":"none in D02 output","information_reduction":true,"effect":"no direct D02 field"}
+  ],
+  "forward_samples": {
+    "source_of_exact_values": "APTF_TEST_002_COMPONENT_TRACE_V0_1.json targets[*].mathematics.d01_fmo.samples",
+    "copy_semantics": "all eight samples and all seven fields are copied exactly by D02; no interpolation, resampling, sorting, or rounding",
+    "t1_terminal_sample": {"tau":58.805642197812524,"level":-0.6373489974365647,"velocity":-0.00006243905314288154,"uncertainty":0.5200518284034197,"strength":0.05797313420024822,"persistence":0.03420620927487088,"reversal_propensity":0.8787022240503348},
+    "t2_terminal_sample": {"tau":46.92093219652183,"level":-0.6223818153099324,"velocity":0.000015899599239130798,"uncertainty":0.5567175063701427,"strength":0.07370233662878667,"persistence":0.04739201948815964,"reversal_propensity":0.6858200055384464}
+  },
+  "information_boundary": {
+    "preserved": ["identity/time", "current level", "projection interval", "forward half-life", "all FMO samples", "strength", "coherence", "persistence", "uncertainty", "reversal propensity", "state support ratio"],
+    "derived": ["terminal displacement", "maximum absolute displacement", "path direction", "terminal decay factor"],
+    "discarded": ["state velocity/acceleration/curvature as DMO top-level fields", "perturbation fields", "observation half-life", "D01 diagnostics"]
+  }
+}

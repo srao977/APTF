@@ -1,0 +1,43 @@
+{
+  "test_id": "APTF_TEST_003A_D04_REACHABILITY_V0_1",
+  "opening_rules": {
+    "CLOSED": "C>=0.75 -> OPENING with open_counter=1; otherwise CLOSED and reset counters",
+    "OPENING": "C>=0.75 -> increment open_counter; when counter>=3 -> OPEN; otherwise remain OPENING; C<0.75 -> CLOSED and reset",
+    "OPEN": "C<=0.55 -> CLOSING with close_counter=1; otherwise remain OPEN",
+    "CLOSING": "C<=0.55 -> increment close_counter; when counter>=2 -> CLOSED; C>0.55 -> OPEN and reset close counter",
+    "safety_override": "invalid/stale/ineligible/data-invalid forces CLOSED, aperture=0, counters reset, candidate invalidated"
+  },
+  "conditions": [
+    {"condition":"valid ReturnShape and finite bounded score inputs","required":"true","range":"boolean","cycles":[true,true,true,true,true]},
+    {"condition":"projection_valid","required":"true","range":"boolean","cycles":[true,true,true,true,true]},
+    {"condition":"market_eligible","required":"true","range":"boolean","cycles":[true,true,true,true,true]},
+    {"condition":"data_integrity > critical threshold","required":"true","range":"boolean","cycles":[true,true,true,true,true]},
+    {"condition":"hard_eligibility H","required":1,"range":"{0,1}","cycles":[1,1,1,1,1]},
+    {"condition":"capturability C >= 0.75","required":true,"range":"C in [0,1]","cycles":[false,false,false,false,false]},
+    {"condition":"consecutive open qualification count to OPEN","required":3,"range":"integer 0..3","cycles_after_evaluation":[0,0,0,0,0]}
+  ],
+  "cycle_scores": [0.22050421416872243,0.17666062360338286,0.25462532958949513,0.08848558708732783,0.28034113293008417],
+  "cycle_gate_margins": [-0.5294957858312775,-0.5733393763966171,-0.49537467041050487,-0.6615144129126722,-0.46965886706991583],
+  "first_decisive_fail_each_cycle": "capturability C < 0.75",
+  "furthest_condition_from_satisfaction": "C opening qualification; all safety/hard/gate conditions passed and counters never started",
+  "would_one_C_ge_075_open_immediately": false,
+  "effect_of_one_C_ge_075_from_CLOSED": "state becomes OPENING, not OPEN",
+  "additional_requirements_beyond_one_C_ge_075": "two further consecutive C>=0.75 evaluations are required to reach counter 3 and OPEN",
+  "candidate_creation": {
+    "rule": "after hysteresis, current_state == OPEN and current_candidate is null",
+    "qualification_precedes_open": false,
+    "jointly_derived": false,
+    "own_numeric_threshold": false,
+    "first_possible_from_CLOSED": "third consecutive qualifying evaluation",
+    "reachability": "same as reaching OPEN plus no existing candidate"
+  },
+  "aperture": {
+    "participates_in_opening_boolean": false,
+    "modifies_capturability": false,
+    "state_variable": true,
+    "bounds": "[0,1] by clamp",
+    "update": "alpha*C + (1-alpha)*prior_aperture, clamped, after hysteresis",
+    "alpha": 0.5,
+    "test003_values": [0.2490565349467589,0.21285857927507087,0.23374195443228302,0.16111377075980543,0.2207274518449448]
+  }
+}

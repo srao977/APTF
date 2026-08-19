@@ -1,0 +1,18 @@
+{
+  "actionable_lifecycles": 985,
+  "direct_lifecycle_ns": {
+    "count": 985,
+    "maximum": 1320300,
+    "mean": 234074.72081218273,
+    "median": 222800,
+    "minimum": 211400,
+    "population_standard_deviation": 59433.97634101037
+  },
+  "initialization_lifecycles": 15,
+  "lifecycle_time_separate": true,
+  "nanosecond_lifecycles": 1000,
+  "source_first_timestamp": "2022-09-30T10:16:00Z",
+  "source_last_timestamp": "2022-10-03T11:59:00Z",
+  "source_time_preserved": true,
+  "status": "PASS"
+}

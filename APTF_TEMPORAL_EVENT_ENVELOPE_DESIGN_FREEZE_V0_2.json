@@ -1,0 +1,43 @@
+{
+  "freeze_id": "APTF_TEMPORAL_EVENT_ENVELOPE_DESIGN_V0_2_FROZEN_20260818",
+  "status": "FROZEN_DESIGN",
+  "design_version": "0.2",
+  "scope": "External temporal event envelope, causal identity, clock-domain, non-drift, and isolated implementation contract",
+  "design_decision": "DESIGN_A_EXTERNAL_EVENT_ENVELOPE_NO_FROZEN_PAYLOAD_CHANGES",
+  "artifacts": [
+    {"path":"APTF_TEMPORAL_EVENT_ENVELOPE_DESIGN_V0_2.md","sha256":"a49286c9dec5343c712853a453f12be529e0938a3ee8e0697ce8d8a24c059b63"},
+    {"path":"APTF_TEMPORAL_EVENT_ENVELOPE_SCHEMA_V0_2.json","sha256":"954b4262a1a1931556045504f19b3bd1c21c85ec49fa996dde40b5f43047e64b"},
+    {"path":"APTF_TEMPORAL_CLOCK_DOMAIN_DESIGN_V0_2.md","sha256":"cc904ad0436ce11546888ee740da136ec8598ed68a0ae45ae788534cf381db42"},
+    {"path":"APTF_CAUSAL_IDENTITY_DESIGN_V0_2.md","sha256":"8fea9cb95c62071231f5bfac7c634ef95f67070b4500b895638495d92a99a711"},
+    {"path":"APTF_SINGLE_OBSERVATION_TIMESTAMP_IMPLEMENTATION_PLAN_V0_2.md","sha256":"fab4edb7c3edd2b879f9a6d6f32392c79c75ced0796a3868cb451167555c013c"},
+    {"path":"APTF_TEMPORAL_TELEMETRY_NON_DRIFT_PLAN_V0_2.md","sha256":"04cf48e59c0bd4f7c44ab98f37cc30ad8cc2c3e5c1f9304f76bedfe7b8b86785"},
+    {"path":"APTF_TEMPORAL_TELEMETRY_DESIGN_DECISION_POINT_V0_2.md","sha256":"af4eb8603e98e3f23a4790fdc938df8ecfabf0796de0530eb382ce4222629d4a"}
+  ],
+  "validation": {
+    "schema_json_parse": "PASS",
+    "json_schema_draft_2020_12": "PASS",
+    "required_fields": "28/28 PASS",
+    "execution_id": "PASS_UUIDV4_ATTEMPT_ID",
+    "observation_id_recipe": "PASS_EXPLICIT_APTF_CJSON_V1",
+    "event_id_recipe": "PASS_EXPLICIT_APTF_CJSON_V1",
+    "payload_hash_recipe": "PASS_EXPLICIT_APTF_CJSON_V1",
+    "source_stream_and_sequence": "PASS",
+    "market_event_time_role": "PASS_PROVIDER_EVENT",
+    "utc_inversion": "PASS_TELEMETRY_FLAG_ONLY",
+    "cross_domain_monotonic_subtraction": "PROHIBITED",
+    "duration_unit": "INTEGER_NANOSECONDS",
+    "distributed_raw_monotonic": "NULL",
+    "frozen_core_changes_required": false,
+    "protected_baseline": "30/30 PASS",
+    "target_source_verification": "PASS_INDEX_16_SOURCE_ROW_17"
+  },
+  "protected_authorities": {
+    "D01":"b6ed942e41ec1c72350cf9247597e5819a942dbe9d04770c23e243204165b235",
+    "D02":"c8029c4b9608547bbf7960f05e4f8613480c4fb2bf8594d94482516b954f7e72",
+    "D04":"f72a86b3085bd11d8626f06f1fe3faedde60570365488176011239382a46f1af",
+    "D03":"6a93291ffe555a3fff1239a9a4f88c0a1546b6c46a02b60586614b60a3c91ad6",
+    "position_transition_controller":"7c4f7ddc616a28090d3698634d67e4a6d71d4ef58744e9dee6c9cc5b06714bc2"
+  },
+  "implementation_authorized": true,
+  "existing_freezes_modified": false
+}

@@ -1,0 +1,114 @@
+{
+  "all_pass": true,
+  "equation": "C = H * Q_G * Q_S * Q_R",
+  "maximum_historical_error": 0.0,
+  "maximum_reconstruction_error": 0.0,
+  "rows": [
+    {
+      "C_emitted": 0.22050421416872243,
+      "C_reconstructed": 0.22050421416872243,
+      "G_present": false,
+      "H": 1,
+      "Q_G": 1.0,
+      "Q_R": 0.36485420599454843,
+      "Q_S": 0.6043625386410295,
+      "current_factors": [
+        "H",
+        "Q_G",
+        "Q_S",
+        "Q_R"
+      ],
+      "cycle": 1,
+      "data_integrity_present": false,
+      "historical_C": 0.22050421416872243,
+      "historical_delta": 0.0,
+      "physical_row": 10,
+      "reconstruction_delta": 0.0
+    },
+    {
+      "C_emitted": 0.17666062360338286,
+      "C_reconstructed": 0.17666062360338286,
+      "G_present": false,
+      "H": 1,
+      "Q_G": 1.0,
+      "Q_R": 0.48169454948065005,
+      "Q_S": 0.3667482303751486,
+      "current_factors": [
+        "H",
+        "Q_G",
+        "Q_S",
+        "Q_R"
+      ],
+      "cycle": 2,
+      "data_integrity_present": false,
+      "historical_C": 0.17666062360338286,
+      "historical_delta": 0.0,
+      "physical_row": 11,
+      "reconstruction_delta": 0.0
+    },
+    {
+      "C_emitted": 0.25462532958949513,
+      "C_reconstructed": 0.25462532958949513,
+      "G_present": false,
+      "H": 1,
+      "Q_G": 1.0,
+      "Q_R": 0.5048353067296146,
+      "Q_S": 0.5043730622546775,
+      "current_factors": [
+        "H",
+        "Q_G",
+        "Q_S",
+        "Q_R"
+      ],
+      "cycle": 3,
+      "data_integrity_present": false,
+      "historical_C": 0.25462532958949513,
+      "historical_delta": 0.0,
+      "physical_row": 12,
+      "reconstruction_delta": 0.0
+    },
+    {
+      "C_emitted": 0.08848558708732783,
+      "C_reconstructed": 0.08848558708732783,
+      "G_present": false,
+      "H": 1,
+      "Q_G": 0.6832134425301885,
+      "Q_R": 0.46112417816135437,
+      "Q_S": 0.2808653989173412,
+      "current_factors": [
+        "H",
+        "Q_G",
+        "Q_S",
+        "Q_R"
+      ],
+      "cycle": 4,
+      "data_integrity_present": false,
+      "historical_C": 0.08848558708732783,
+      "historical_delta": 0.0,
+      "physical_row": 13,
+      "reconstruction_delta": 0.0
+    },
+    {
+      "C_emitted": 0.28034113293008417,
+      "C_reconstructed": 0.28034113293008417,
+      "G_present": false,
+      "H": 1,
+      "Q_G": 1.0,
+      "Q_R": 0.5046321953114142,
+      "Q_S": 0.5555355673592773,
+      "current_factors": [
+        "H",
+        "Q_G",
+        "Q_S",
+        "Q_R"
+      ],
+      "cycle": 5,
+      "data_integrity_present": false,
+      "historical_C": 0.28034113293008417,
+      "historical_delta": 0.0,
+      "physical_row": 14,
+      "reconstruction_delta": 0.0
+    }
+  ],
+  "test_id": "APTF_TEST_004R_DATA_INTEGRITY_REMOVAL_REGRESSION_V0_1"
+}

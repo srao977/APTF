@@ -1,0 +1,21 @@
+{
+  "actionable": 985,
+  "context_violations": 0,
+  "decision_counts": {
+    "BUY": 131,
+    "HOLD": 752,
+    "SELL": 102
+  },
+  "feedback_violations": 0,
+  "future_access_violations": 0,
+  "initialization": 15,
+  "manifest_sha256": "20a0f5e9d8cb13454f63d922875f9cc8ec8ca093d226a69a46ebba4bf2401170",
+  "missing_decisions": 0,
+  "multiple_decisions": 0,
+  "non_degenerate": true,
+  "reserve_accessed": 0,
+  "source_hash": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "state_continuity_violations": 0,
+  "status": "PASS",
+  "unexplained_adaptations": 0
+}

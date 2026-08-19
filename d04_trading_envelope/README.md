@@ -19,11 +19,11 @@ Both Return Shape and Trading Envelope are elastic and evolving.
 
 - Builds evolving Return Shape entities with stable return_shape_id and increasing version.
 - Builds evolving EnvelopeContext entities.
-- Evaluates deterministic placeholder capturability with a feasibility gate default in v0.2.
+- Evaluates deterministic capturability from H, Q_G, Q_S, and Q_R.
 - Updates adaptive aperture with configurable smoothing.
 - Applies hysteresis + persistence state transitions.
 - Emits typed state/opportunity/continuation events.
-- Applies safety overrides for market ineligible, data invalid, and shape expired.
+- Applies safety overrides for market ineligible and shape expired.
 - Writes one JSONL audit record per observation.
 - Replays six deterministic synthetic scenarios at configurable speed.
 - Supports deterministic replay checksum/event summaries.
@@ -68,7 +68,7 @@ flowchart LR
 ## Core Entities
 
 - ReturnShape: evolving candidate signal shape
-- EnvelopeContext: synthetic execution/environment quality vector
+- EnvelopeContext: evaluation time plus available market-eligibility evidence
 - CapturabilityResult: shape/envelope/lifetime components and score
 - EnvelopeEvaluation: state transition, aperture update, events, reason codes
 
@@ -104,33 +104,20 @@ Safety conditions market ineligible or shape expired force score to 0.
 
 Weights are defined as EXPERIMENTAL_V0_WEIGHTS in config.
 
-### V0_2 (default)
+### V0_2 Current Executable Equation
 
-CapturabilityModelV0_2 separates base score and feasibility gate:
+The current executable model is:
 
-- base_capturability_score = ((shape_component + envelope_component) / 2) * lifetime_component
-- feasibility_gate_score = minimum(configured gate dimensions)
-- capturability_score = base_capturability_score * feasibility_gate_score
+```text
+Q_G = abs(terminal_displacement) / maximum_absolute_displacement
+Q_S = (strength * coherence * persistence) ** (1 / 3)
+Q_R = sqrt((1 - uncertainty) * (1 - reversal_propensity))
+C = H * Q_G * Q_S * Q_R
+```
 
-This minimum gate is intentionally conservative and labeled EXPERIMENTAL_V0_2.
+H retains projection validity and any known market-eligibility condition. Data quality is evaluated at the upstream observation-admission boundary. Failed observations do not enter D01 and therefore do not reach D04. D04 has no `data_integrity` input, safety check, provenance field, score, or multiplier.
 
-Default gate dimensions:
-
-- liquidity_quality
-- spread_quality
-- latency_quality
-- execution_feasibility
-- capital_available
-- portfolio_capacity
-- position_capacity
-- risk_capacity
-- broker_health
-- data_integrity
-
-Example outcome:
-
-Very strong Return Shape with poor liquidity/spread/execution feasibility produces
-a low feasibility gate, low final capturability, and keeps the envelope CLOSED.
+There is no current executable G term and no neutral/default substitute. Broker health, capital availability, execution feasibility, latency quality, liquidity quality, portfolio capacity, position capacity, risk capacity, and spread quality are **FUTURE / NOT CURRENTLY IMPLEMENTED / NO CURRENT PRODUCER / NON-EXECUTABLE** concepts. They are not fields in the current runtime context and have no numeric values in current scenarios.
 
 ## ApertureModelV0
 
@@ -156,7 +143,6 @@ This suppresses threshold chatter around boundaries.
 Immediate safety-close behavior bypassing close persistence:
 
 - MARKET_INELIGIBLE
-- DATA_INVALID (data_integrity <= critical threshold)
 - SHAPE_EXPIRED (inactive shape or non-positive lifetime)
 
 ## Install

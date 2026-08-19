@@ -1,0 +1,32 @@
+{
+  "manifest_id": "TEST006A_PREEXECUTION_MANIFEST_V0_2",
+  "status": "RULES_FROZEN_BEFORE_O16",
+  "context_length": 15,
+  "development_physical_rows": [115, 1114],
+  "initialization_physical_rows": [115, 129],
+  "first_actionable_physical_row": 130,
+  "reserve_start_utc": "2023-03-30T08:00:00Z",
+  "reserve_sealed": true,
+  "reserved_observations_accessed": 0,
+  "source_path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+  "implementation_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+  "terminal_decisions": ["BUY", "SELL", "HOLD"],
+  "historical_C_0_75_gate_used": false,
+  "second_pass_permitted": false,
+  "parameter_search_permitted": false,
+  "broker_enabled": false,
+  "frozen_rules_and_code": [
+    {"path":"experimental_adaptive_emitter/__init__.py","role":"IMPLEMENTATION","sha256":"6defbbd97b2745b21c93123421099e02af27237a64d89a29667ac857f4e27e70"},
+    {"path":"experimental_adaptive_emitter/emitter.py","role":"IMPLEMENTATION","sha256":"e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410"},
+    {"path":"diagnostics/run_test_006a_development.py","role":"CAUSAL_COVER_LAUNCHER","sha256":"3d3bc9bd5c29f89a9083269c11b96efa921c097ca2b5cbe348de0e9fe3f51e4c"},
+    {"path":"APTF_TEST_006A_EMITTER_DEFINITION_V0_1.md","role":"DEFINITION_AUTHORITY","sha256":"b783259f8d59696a156a1f9b2a545c7acdaa6430f922a2ac9470d690617dfe69"},
+    {"path":"APTF_TEST_006A_EMITTER_ARCHITECTURE_V0_1.md","role":"ARCHITECTURE_AUTHORITY","sha256":"1e88c2e68ba4dbd47345487ee85e2aefbaf2040df5825cead6131142c21d2c42"},
+    {"path":"APTF_TEST_006A_EMITTER_DECISION_AUTHORITY_V0_1.md","role":"DECISION_AUTHORITY","sha256":"c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2"},
+    {"path":"APTF_TEST_006A_CAUSAL_COVER_PROOF_V0_1.md","role":"CAUSAL_COVER_AUTHORITY","sha256":"9515fcf3c7758849d72cb348149db28d2536a088d901d6b14fe74f635af0e94f"},
+    {"path":"APTF_TEST_006A_DIRECTIONAL_AUTHORITY_V0_1.md","role":"DIRECTIONAL_AUTHORITY","sha256":"adfbb3970bbf531031cc2f935db673a42a5580d8cd9a8a98218b78a5ed1dcf95"},
+    {"path":"APTF_TEST_006A_SIGNAL_PROPERTY_INVENTORY_V0_1.json","role":"SIGNAL_CONTRACT","sha256":"41618a65b5516536952d59010828435c070f53dc082bcc6a81cb269ed2d73bc5"},
+    {"path":"APTF_TEST_006A_DEVELOPMENT_SOURCE_AUTHORITY_V0_1.json","role":"SOURCE_AUTHORITY","sha256":"ac3ebe0e89dbb900c76f67b697d3c39914f17776be29330d6a232706b0516407"}
+  ]
+}

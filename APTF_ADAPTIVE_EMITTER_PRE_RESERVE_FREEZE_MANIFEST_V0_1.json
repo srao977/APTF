@@ -1,0 +1,40 @@
+{
+  "freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "freeze_version": "V0.1",
+  "status": "FROZEN_PRE_RESERVE_CANDIDATE",
+  "freeze_timestamp_utc": "2026-08-18T23:01:58.4562804Z",
+  "validated_implementation_path": "experimental_adaptive_emitter/emitter.py",
+  "development_validated_sha256": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+  "pre_reserve_frozen_sha256": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+  "implementation_identity": "EXACT_MATCH",
+  "context_length": 15,
+  "terminal_decisions": ["BUY", "SELL", "HOLD"],
+  "rule_sha256": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+  "causal_cover_sha256": "9515fcf3c7758849d72cb348149db28d2536a088d901d6b14fe74f635af0e94f",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "development_validation": {
+    "physical_rows": [115, 1114],
+    "initialization": 15,
+    "actionable": 985,
+    "BUY": 131,
+    "SELL": 102,
+    "HOLD": 752,
+    "non_degenerate": true,
+    "violations": 0,
+    "status": "PASS"
+  },
+  "reserve": {
+    "start_utc": "2023-03-30T08:00:00Z",
+    "sealed_before": true,
+    "observations_accessed": 0,
+    "sealed_after": true,
+    "test006b_executed": false,
+    "human_authorization_required": true
+  },
+  "hashes_artifact": "APTF_ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_HASHES_V0_1.json",
+  "frozen_file_count": 26,
+  "broker_execution": false,
+  "profitability_criterion": false,
+  "second_pass": false,
+  "rules_changed_after_O16": false
+}

@@ -1,0 +1,13 @@
+{
+  "test_id":"APTF_TEST_004A_BACKWARD_BOUNDARY_V0_1",
+  "formula":"Q_G=0 if M=0 else abs(D)/M; valid ReturnShape requires abs(D)<=M",
+  "cycles":[
+    {"cycle":1,"Q_G_actual":1.0,"Q_G_required":3.401295539078111,"D_actual":0.01978985584654247,"M_actual":0.01978985584654247,"required_abs_D_at_actual_M":0.06731114840984379,"legal_bound":"abs(D)<=M","algebraically_feasible":false,"reachability_status":"Q_G-only impossible"},
+    {"cycle":2,"Q_G_actual":1.0,"Q_G_required":4.2454282380651485,"D_actual":0.026416809218216097,"M_actual":0.026416809218216097,"required_abs_D_at_actual_M":0.11215066781459433,"legal_bound":"abs(D)<=M","algebraically_feasible":false,"reachability_status":"Q_G-only impossible"},
+    {"cycle":3,"Q_G_actual":1.0,"Q_G_required":2.945504287453035,"D_actual":0.1502039423029219,"M_actual":0.1502039423029219,"required_abs_D_at_actual_M":0.4424263560456047,"legal_bound":"abs(D)<=M","algebraically_feasible":false,"reachability_status":"Q_G-only impossible"},
+    {"cycle":4,"Q_G_actual":0.6832134425301885,"Q_G_required":5.79088751925142,"D_actual":0.006548303521185184,"M_actual":0.009584564813207463,"required_abs_D_at_actual_M":0.05550313675425942,"legal_bound":"abs(D)<=M","algebraically_feasible":false,"reachability_status":"Q_G-only impossible"},
+    {"cycle":5,"Q_G_actual":1.0,"Q_G_required":2.6753120106247366,"D_actual":0.017447816321678744,"M_actual":0.017447816321678744,"required_abs_D_at_actual_M":0.04667835256456146,"legal_bound":"abs(D)<=M","algebraically_feasible":false,"reachability_status":"Q_G-only impossible"}
+  ],
+  "source_variables":"D and M are deterministic views of the same D01 FMO path: terminal sample level-current level and max absolute sample excursion.",
+  "independence":false
+}

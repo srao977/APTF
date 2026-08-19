@@ -1,0 +1,186 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://aptf.local/schemas/temporal-event-envelope/v0.1",
+  "title": "APTF Temporal Event Envelope V0.1",
+  "description": "Design-only transport envelope. It does not alter frozen payload semantics.",
+  "x-aptf-status": "DESIGN_DIAGNOSTIC_NOT_FROZEN_IMPLEMENTATION_AUTHORITY",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "observation_id",
+    "parent_event_id",
+    "sequence_number",
+    "instrument_id",
+    "market_event_time_utc",
+    "producer_component",
+    "producer_version",
+    "runtime_instance_id",
+    "clock_domain_id",
+    "received_at_utc",
+    "emitted_at_utc",
+    "received_monotonic_ns",
+    "emitted_monotonic_ns",
+    "processing_duration_ns",
+    "status",
+    "payload_type",
+    "payload_version",
+    "payload_sha256",
+    "scientific_ids",
+    "payload",
+    "error"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "0.1"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^aptf:evt:v1:sha256:[0-9a-f]{64}$"
+    },
+    "observation_id": {
+      "type": "string",
+      "pattern": "^aptf:obs:v1:sha256:[0-9a-f]{64}$"
+    },
+    "parent_event_id": {
+      "oneOf": [
+        {"type": "null"},
+        {"type": "string", "pattern": "^aptf:evt:v1:sha256:[0-9a-f]{64}$"}
+      ]
+    },
+    "sequence_number": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Instrument-stream source sequence inherited unchanged by descendants."
+    },
+    "instrument_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "market_event_time_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$",
+      "description": "Immutable authoritative source event time in UTC."
+    },
+    "producer_component": {
+      "type": "string",
+      "enum": [
+        "SOURCE_GATEWAY",
+        "D01",
+        "D02",
+        "D04",
+        "D03",
+        "POSITION_TRANSITION_CONTROLLER"
+      ]
+    },
+    "producer_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "runtime_instance_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Opaque identity for one deployed worker/process lifetime."
+    },
+    "clock_domain_id": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Opaque process-local monotonic clock domain identifier."
+    },
+    "received_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "emitted_at_utc": {
+      "type": "string",
+      "format": "date-time",
+      "pattern": "Z$"
+    },
+    "received_monotonic_ns": {
+      "oneOf": [
+        {"type": "integer", "minimum": 0},
+        {"type": "null"}
+      ],
+      "description": "Process-local only. Null in distributed transport profile."
+    },
+    "emitted_monotonic_ns": {
+      "oneOf": [
+        {"type": "integer", "minimum": 0},
+        {"type": "null"}
+      ],
+      "description": "Process-local only. Null in distributed transport profile."
+    },
+    "processing_duration_ns": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Same-clock monotonic elapsed duration; canonical duration unit is ns."
+    },
+    "status": {
+      "type": "string",
+      "enum": ["SUCCESS", "ERROR"]
+    },
+    "payload_type": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "payload_sha256": {
+      "oneOf": [
+        {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        {"type": "null"}
+      ]
+    },
+    "scientific_ids": {
+      "type": "object",
+      "additionalProperties": {
+        "type": ["string", "number", "integer", "null"]
+      },
+      "description": "Existing payload identities copied for indexing, never redefined."
+    },
+    "payload": {
+      "type": ["object", "array", "string", "number", "boolean", "null"]
+    },
+    "error": {
+      "oneOf": [
+        {"type": "null"},
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["error_type", "error_code", "message"],
+          "properties": {
+            "error_type": {"type": "string", "minLength": 1},
+            "error_code": {"type": "string", "minLength": 1},
+            "message": {"type": "string"}
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"producer_component": {"const": "SOURCE_GATEWAY"}}},
+      "then": {"properties": {"parent_event_id": {"type": "null"}}},
+      "else": {"properties": {"parent_event_id": {"type": "string"}}}
+    },
+    {
+      "if": {"properties": {"status": {"const": "SUCCESS"}}},
+      "then": {
+        "properties": {
+          "error": {"type": "null"},
+          "payload_sha256": {"type": "string"}
+        }
+      },
+      "else": {
+        "properties": {
+          "error": {"type": "object"}
+        }
+      }
+    }
+  ]
+}

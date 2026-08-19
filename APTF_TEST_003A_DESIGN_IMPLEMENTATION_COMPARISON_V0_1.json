@@ -1,0 +1,46 @@
+{
+  "test_id": "APTF_TEST_003A_D04_REACHABILITY_V0_1",
+  "comparison": [
+    {"property":"Q_G","design":"0 if M=0 else |D|/M","implementation":"exact zero branch and ratio","match":true,"difference":null},
+    {"property":"Q_S","design":"(strength*coherence*persistence)^(1/3)","implementation":"exact unweighted geometric mean","match":true,"difference":null},
+    {"property":"Q_R","design":"sqrt((1-uncertainty)*(1-reversal_propensity))","implementation":"exact complement product square root","match":true,"difference":null},
+    {"property":"B","design":"Q_G*Q_S*Q_R","implementation":"geometry*structural*risk","match":true,"difference":null},
+    {"property":"G","design":"minimum of ten bounded feasibility dimensions","implementation":"exact min in frozen diagnostic order","match":true,"difference":null},
+    {"property":"projection validity","design":"evaluation_time <= model_time + projection_interval","implementation":"exact inclusive comparison","match":true,"difference":null},
+    {"property":"H","design":"projection valid, market eligible, integrity above critical, valid finite inputs","implementation":"integer of first three after strict model validation; invalid shape orchestration fails closed","match":true,"difference":null},
+    {"property":"C","design":"H*B*G","implementation":"hard_eligibility*base*gate","match":true,"difference":null},
+    {"property":"bounded output","design":"C in [0,1] analytically; defensive roundoff clamp only","implementation":"analytic operations plus Pydantic [0,1] validation; no material score clipping","match":true,"difference":null},
+    {"property":"temporal soft factor","design":"omitted to avoid double counting","implementation":"omitted","match":true,"difference":null},
+    {"property":"state_support_ratio","design":"diagnostic only to avoid double count","implementation":"not score-active","match":true,"difference":null},
+    {"property":"aperture","design":"preserved smoothing after hysteresis; does not enter C","implementation":"exact preserved update after next_state","match":true,"difference":null},
+    {"property":"hysteresis structure","design":"preserve CLOSED/OPENING/OPEN/CLOSING and counters","implementation":"exact four-state structure","match":true,"difference":null},
+    {"property":"open/close numeric thresholds","design":"inherited 0.75/0.55; explicitly not validated for new C scale","implementation":"0.75/0.55 from default config","match":true,"difference":"No code/design contradiction; calibration rationale remains unestablished."},
+    {"property":"candidate creation","design":"create after post-hysteresis state OPEN","implementation":"current_state==OPEN and no candidate","match":true,"difference":null}
+  ],
+  "overall_match": "YES",
+  "mathematical_mismatches": [],
+  "threshold_provenance": {
+    "source_file": "d04_trading_envelope/config/default.yaml",
+    "field": "hysteresis.open_threshold",
+    "value": 0.75,
+    "consumer": "HysteresisController.next_state",
+    "origin": "preserved/inherited from earlier D04 score",
+    "mathematically_derived": false,
+    "empirically_calibrated_for_deterministic_C": false,
+    "placeholder": "UNKNOWN; authority calls it inherited and requiring revalidation, not explicitly placeholder",
+    "rationale": "THRESHOLD RATIONALE NOT ESTABLISHED BY CURRENT AUTHORITY",
+    "probability_interpretation": false
+  },
+  "threshold_scale_consistency": {
+    "C_nominal_range": "[0,1]",
+    "threshold_scale": "fraction on [0,1]",
+    "scale_match": true,
+    "distribution_calibration_established": false
+  },
+  "implementation_non_drift_evidence": {
+    "frozen_vectors": "14/14 PASS",
+    "formula_non_drift": "PASS",
+    "D04_complete_tests_at_freeze": "69 PASS",
+    "D04_v0_2_1_patch_math_changed": false
+  }
+}

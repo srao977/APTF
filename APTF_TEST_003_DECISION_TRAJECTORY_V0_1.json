@@ -1,0 +1,201 @@
+{
+  "first_execution_changing_decision_depth": null,
+  "first_execution_changing_decision_depth_text": "NOT REACHED WITHIN N <= 5",
+  "first_semantic_decision_depth": null,
+  "first_semantic_decision_depth_text": "NOT REACHED WITHIN N <= 5",
+  "milestones": {
+    "FIRST_EXECUTION_CHANGING_PC_DECISION": null,
+    "M1_FIRST_D02_DIRECTION_CHANGE": null,
+    "M2_FIRST_D04_STATE_CHANGE": null,
+    "M3_FIRST_D04_THRESHOLD_CROSSING": null,
+    "M4_FIRST_NON_NULL_D04_CANDIDATE": null,
+    "M5_FIRST_D03_POSITION_CHANGE": null,
+    "M6_FIRST_PC_DECISION_NOT_NO_ACTION": null
+  },
+  "primary_stop_definition": "first ordered verb containing BUY, HOLD, SELL, SELL_SHORT, or BUY_TO_COVER",
+  "processed_lifecycle_depth": 5,
+  "stop_reason": "FIVE_CYCLE_HORIZON_EXHAUSTED",
+  "test_id": "APTF_TEST_003_BOUNDED_LIFECYCLE_V0_1",
+  "trajectory": [
+    {
+      "cycle": 1,
+      "d02_path_direction": "UPWARD",
+      "d03_position": "FLAT",
+      "d03_relevant_inputs": {
+        "candidate_envelope": null,
+        "new_envelope_state": "CLOSED",
+        "projection_valid": true,
+        "safety_state": "CLEAR",
+        "stale": false
+      },
+      "d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "execution_changing_decision": false,
+      "internal_controller_state_after": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "internal_controller_state_before": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "meaningful_decision": false,
+      "physical_row": 10,
+      "position_controller_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 2,
+      "d02_path_direction": "UPWARD",
+      "d03_position": "FLAT",
+      "d03_relevant_inputs": {
+        "candidate_envelope": null,
+        "new_envelope_state": "CLOSED",
+        "projection_valid": true,
+        "safety_state": "CLEAR",
+        "stale": false
+      },
+      "d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "execution_changing_decision": false,
+      "internal_controller_state_after": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "internal_controller_state_before": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "market_event_time_utc": "2022-09-30T08:09:00Z",
+      "meaningful_decision": false,
+      "physical_row": 11,
+      "position_controller_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 3,
+      "d02_path_direction": "UPWARD",
+      "d03_position": "FLAT",
+      "d03_relevant_inputs": {
+        "candidate_envelope": null,
+        "new_envelope_state": "CLOSED",
+        "projection_valid": true,
+        "safety_state": "CLEAR",
+        "stale": false
+      },
+      "d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "execution_changing_decision": false,
+      "internal_controller_state_after": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "internal_controller_state_before": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "market_event_time_utc": "2022-09-30T08:10:00Z",
+      "meaningful_decision": false,
+      "physical_row": 12,
+      "position_controller_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 4,
+      "d02_path_direction": "UPWARD",
+      "d03_position": "FLAT",
+      "d03_relevant_inputs": {
+        "candidate_envelope": null,
+        "new_envelope_state": "CLOSED",
+        "projection_valid": true,
+        "safety_state": "CLEAR",
+        "stale": false
+      },
+      "d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "execution_changing_decision": false,
+      "internal_controller_state_after": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "internal_controller_state_before": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "market_event_time_utc": "2022-09-30T08:11:00Z",
+      "meaningful_decision": false,
+      "physical_row": 13,
+      "position_controller_decision": [
+        "NO_ACTION"
+      ]
+    },
+    {
+      "cycle": 5,
+      "d02_path_direction": "UPWARD",
+      "d03_position": "FLAT",
+      "d03_relevant_inputs": {
+        "candidate_envelope": null,
+        "new_envelope_state": "CLOSED",
+        "projection_valid": true,
+        "safety_state": "CLEAR",
+        "stale": false
+      },
+      "d03_rule": "TARGET:R31|TRANSITION:T20|OVERLAYS:NONE",
+      "execution_changing_decision": false,
+      "internal_controller_state_after": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "internal_controller_state_before": {
+        "broker_sourced": false,
+        "identity": "INITIAL",
+        "object_type": "ActualPositionState",
+        "semantic_label": "INTERNAL CONTROLLER STATE",
+        "state": "FLAT",
+        "version": 1
+      },
+      "market_event_time_utc": "2022-09-30T08:12:00Z",
+      "meaningful_decision": false,
+      "physical_row": 14,
+      "position_controller_decision": [
+        "NO_ACTION"
+      ]
+    }
+  ]
+}

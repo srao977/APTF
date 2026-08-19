@@ -25,6 +25,6 @@ def test_audit_log_json_and_monotonic_sequence() -> None:
     assert len(sequence) > 0
     assert first is not None
     assert "base_capturability_score" in first
-    assert "feasibility_gate_score" in first
+    assert "feasibility_gate_score" not in first
+    assert "gate_dimension_values" not in first
     assert "capturability_score" in first
-    assert "gate_dimension_values" in first

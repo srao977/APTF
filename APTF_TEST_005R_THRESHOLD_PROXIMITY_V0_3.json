@@ -1,0 +1,94 @@
+{
+  "analysis_only": true,
+  "counts": {
+    "0.5": 2,
+    "0.55": 1,
+    "0.6": 0,
+    "0.65": 0,
+    "0.7": 0,
+    "0.725": 0,
+    "0.74": 0,
+    "0.75": 0
+  },
+  "execution_timestamp_utc": "2026-08-18T22:08:15.120144Z",
+  "first_events": {
+    "C_GE_0_55": {
+      "C": 0.5577135990257739,
+      "cycle": 13,
+      "physical_row": 27,
+      "source_timestamp": "2022-09-30T08:25:00Z"
+    },
+    "C_GE_0_70": null,
+    "C_GE_0_75": null,
+    "D03_NON_FLAT": null,
+    "D04_NON_CLOSED": null,
+    "D04_OPEN": null,
+    "PC_NON_NO_ACTION": null
+  },
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "longest_runs": {
+    "0.5": {
+      "elapsed_source_seconds": 0.0,
+      "end_cycle": 13,
+      "end_row": 27,
+      "end_timestamp": "2022-09-30T08:25:00Z",
+      "ending_C": 0.5577135990257739,
+      "observation_count": 1,
+      "start_cycle": 13,
+      "start_row": 27,
+      "start_timestamp": "2022-09-30T08:25:00Z",
+      "starting_C": 0.5577135990257739
+    },
+    "0.55": {
+      "elapsed_source_seconds": 0.0,
+      "end_cycle": 13,
+      "end_row": 27,
+      "end_timestamp": "2022-09-30T08:25:00Z",
+      "ending_C": 0.5577135990257739,
+      "observation_count": 1,
+      "start_cycle": 13,
+      "start_row": 27,
+      "start_timestamp": "2022-09-30T08:25:00Z",
+      "starting_C": 0.5577135990257739
+    },
+    "0.6": {
+      "elapsed_source_seconds": null,
+      "end_cycle": null,
+      "observation_count": 0,
+      "start_cycle": null
+    },
+    "0.65": {
+      "elapsed_source_seconds": null,
+      "end_cycle": null,
+      "observation_count": 0,
+      "start_cycle": null
+    },
+    "0.7": {
+      "elapsed_source_seconds": null,
+      "end_cycle": null,
+      "observation_count": 0,
+      "start_cycle": null
+    },
+    "0.725": {
+      "elapsed_source_seconds": null,
+      "end_cycle": null,
+      "observation_count": 0,
+      "start_cycle": null
+    },
+    "0.74": {
+      "elapsed_source_seconds": null,
+      "end_cycle": null,
+      "observation_count": 0,
+      "start_cycle": null
+    },
+    "0.75": {
+      "elapsed_source_seconds": null,
+      "end_cycle": null,
+      "observation_count": 0,
+      "start_cycle": null
+    }
+  },
+  "run_id": "TEST005R_FROZEN_D04_100OBS_V0_3_RUN_001",
+  "source_data_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d"
+}

@@ -1,0 +1,13 @@
+{
+  "test_id":"APTF_TEST_004A_BACKWARD_BOUNDARY_V0_1",
+  "target":0.75,
+  "cycles":[
+    {"cycle":1,"C_actual":0.22050421416872243,"C_if_QG_1":0.22050421416872243,"C_if_QS_1":0.36485420599454843,"C_if_QR_1":0.6043625386410295,"C_if_G_1":0.22050421416872243,"C_if_H_max":0.22050421416872243,"C_if_QG_QS_1":0.36485420599454843,"C_if_QG_QR_1":0.6043625386410295,"C_if_QS_QR_1":1.0,"C_unit_bound_max":1.0,"any_single_factor_can_reach":false,"two_factor_paths_reaching":["Q_S+Q_R"]},
+    {"cycle":2,"C_actual":0.17666062360338286,"C_if_QG_1":0.17666062360338286,"C_if_QS_1":0.48169454948065005,"C_if_QR_1":0.3667482303751486,"C_if_G_1":0.17666062360338286,"C_if_H_max":0.17666062360338286,"C_if_QG_QS_1":0.48169454948065005,"C_if_QG_QR_1":0.3667482303751486,"C_if_QS_QR_1":1.0,"C_unit_bound_max":1.0,"any_single_factor_can_reach":false,"two_factor_paths_reaching":["Q_S+Q_R"]},
+    {"cycle":3,"C_actual":0.25462532958949513,"C_if_QG_1":0.25462532958949513,"C_if_QS_1":0.5048353067296146,"C_if_QR_1":0.5043730622546775,"C_if_G_1":0.25462532958949513,"C_if_H_max":0.25462532958949513,"C_if_QG_QS_1":0.5048353067296146,"C_if_QG_QR_1":0.5043730622546775,"C_if_QS_QR_1":1.0,"C_unit_bound_max":1.0,"any_single_factor_can_reach":false,"two_factor_paths_reaching":["Q_S+Q_R"]},
+    {"cycle":4,"C_actual":0.08848558708732783,"C_if_QG_1":0.1295138262497199,"C_if_QS_1":0.3150462371955229,"C_if_QR_1":0.19189101608193135,"C_if_G_1":0.08848558708732783,"C_if_H_max":0.08848558708732783,"C_if_QG_QS_1":0.46112417816135437,"C_if_QG_QR_1":0.2808653989173412,"C_if_QS_QR_1":0.6832134425301885,"C_unit_bound_max":1.0,"any_single_factor_can_reach":false,"two_factor_paths_reaching":[]},
+    {"cycle":5,"C_actual":0.28034113293008417,"C_if_QG_1":0.28034113293008417,"C_if_QS_1":0.5046321953114142,"C_if_QR_1":0.5555355673592773,"C_if_G_1":0.28034113293008417,"C_if_H_max":0.28034113293008417,"C_if_QG_QS_1":0.5046321953114142,"C_if_QG_QR_1":0.5555355673592773,"C_if_QS_QR_1":1.0,"C_unit_bound_max":1.0,"any_single_factor_can_reach":false,"two_factor_paths_reaching":["Q_S+Q_R"]}
+  ],
+  "classification":"No single-factor unit-bound path reaches 0.75. Cycles 1,2,3,5 reach under Q_S=Q_R=1 unit-bound; cycle 4 requires all Q_G,Q_S,Q_R at 1.",
+  "reachability_claim":"UNIT-BOUND ONLY; simultaneous upstream reachability not proven"
+}

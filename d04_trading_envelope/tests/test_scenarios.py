@@ -24,14 +24,14 @@ def test_scenarios() -> None:
         assert ok, f"scenario failed: {name}"
 
 
-def test_scenario_04_shape_up_gate_down_capture_down() -> None:
+def test_scenario_04_shape_up_capture_up_without_gate() -> None:
     summary = run_single(ROOT, "04_shape_up_envelope_down", speed=0.0, verbose=False)
     assert summary["shapes"][-1] > summary["shapes"][0]
-    assert summary["gates"][-1] < summary["gates"][0]
-    assert summary["captures"][-1] < summary["captures"][0]
+    assert summary["captures"][-1] > summary["captures"][0]
+    assert "gates" not in summary
 
 
-def test_scenario_07_stays_closed() -> None:
+def test_scenario_07_strong_shape_is_not_gate_blocked() -> None:
     summary = run_single(ROOT, "07_strong_shape_hard_gate", speed=0.0, verbose=False)
-    assert summary["final_state"] == "CLOSED"
-    assert summary["events"].get("CANDIDATE_QUALIFIED", 0) == 0
+    assert summary["final_state"] == "OPEN"
+    assert summary["events"].get("CANDIDATE_QUALIFIED", 0) >= 1

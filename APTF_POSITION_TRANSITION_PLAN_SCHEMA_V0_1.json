@@ -1,0 +1,25 @@
+{
+  "schema_id": "APTF_POSITION_TRANSITION_PLAN_SCHEMA_V0_1",
+  "status": "DESIGN_FREEZE_CANDIDATE",
+  "extra_fields": "FORBIDDEN",
+  "fields": [
+    {"name":"transition_id","type":"string","required":true},
+    {"name":"entity_id","type":"string","required":true},
+    {"name":"decision_time","type":"finite float","required":true},
+    {"name":"originating_d03_decision_id","type":"string","required":true},
+    {"name":"originating_d03_decision_hash","type":"lowercase SHA256 hex","required":true},
+    {"name":"actual_position_identity","type":"string","required":true},
+    {"name":"actual_position_version","type":"nonnegative integer","required":true},
+    {"name":"source_position","type":"enum","domain":["FLAT","LONG","SHORT"],"required":true},
+    {"name":"desired_position","type":"enum","domain":["FLAT","LONG","SHORT"],"required":true},
+    {"name":"d03_transition_intent","type":"enum","domain":["NO_CHANGE","OPEN","CLOSE","REVERSE","RETARGET","BLOCKED"],"required":true},
+    {"name":"transition_class","type":"enum","domain":["NO_CHANGE_FLAT","OPEN_LONG","OPEN_SHORT","HOLD_LONG","HOLD_SHORT","CLOSE_LONG","CLOSE_SHORT","REVERSE_LONG_TO_SHORT","REVERSE_SHORT_TO_LONG"],"required":true},
+    {"name":"ordered_execution_verbs","type":"array<execution_verb>","required":true},
+    {"name":"action_authorized","type":"boolean","required":true},
+    {"name":"plan_status","type":"enum","domain":["READY","NON_EXECUTABLE_NO_CHANGE","PENDING_ALREADY","BLOCKED"],"required":true}
+  ],
+  "identity_rule": "transition_id = 'APTFPTP|' + SHA256(JCS(originating_d03_decision_id, originating_d03_decision_hash, actual_position_identity, actual_position_version, source_position, desired_position, transition_class, ordered_execution_verbs, plan_status))",
+  "authorization_rule": "Only plan_status READY and action_authorized true may be submitted to a consumer adapter",
+  "immutability": true,
+  "prohibited_fields": ["market_data", "Q_t", "ReturnShape", "TradingEnvelope", "quantity", "price", "P&L", "benchmark", "future_outcome"]
+}

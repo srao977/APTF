@@ -1,0 +1,19 @@
+{
+  "test_id":"APTF_TEST_004A_BACKWARD_BOUNDARY_V0_1",
+  "outputs":[
+    {"output":"Q_G / D,M","upstream_sources":["D01 state_level","state_velocity","state_acceleration","FMO tau/levels","forward interval"],"shared_with":["Q_S/Q_R through common D01 state and adaptive parameters"],"independent":false,"bounds":"0<=|D|/M<=1","constraint":"D and M arise from same projected path; cannot choose independently","authority":"D01 model FMO generation; D02 builder geometry"},
+    {"output":"strength","upstream_sources":["volume influence","velocity","acceleration","coherence","prior uncertainty","StrengthConfig"],"shared_with":["coherence","uncertainty","Q_G kinematics"],"independent":false,"bounds":"[0,1] sigmoid/clamp","constraint":"coherence is both an input and separate Q_S factor","authority":"d01/v02/strength.py; model.py"},
+    {"output":"coherence","upstream_sources":["state level","velocity","acceleration","volume influence","channel weights"],"shared_with":["strength","uncertainty","Q_G"],"independent":false,"bounds":"[0,1] bounded ratio","constraint":"same kinematics and volume also affect strength/state","authority":"d01/v02/coherence.py; model.py"},
+    {"output":"persistence","upstream_sources":["prior persistence","velocity","prior velocity","acceleration","perturbation class"],"shared_with":["reversal propensity","Q_G kinematics"],"independent":false,"bounds":"[0,1] recursive clamp","constraint":"recursive state and perturbation coupling","authority":"d01/v02/persistence.py; model.py"},
+    {"output":"uncertainty","upstream_sources":["innovation","coherence","unknown perturbation","data quality","instability"],"shared_with":["coherence","strength via prior uncertainty","reversal propensity"],"independent":false,"bounds":"[0,1] sigmoid/clamp","constraint":"coherence affects both Q_S and Q_R pathways","authority":"d01/v02/uncertainty.py; model.py"},
+    {"output":"reversal_propensity","upstream_sources":["velocity","acceleration","perturbation class","persistence","level","uncertainty"],"shared_with":["persistence","uncertainty","Q_G kinematics"],"independent":false,"bounds":"[0,1] sigmoid/clamp","constraint":"uncertainty and persistence are also separate D04 terms","authority":"d01/v02/reversal.py; model.py"},
+    {"output":"Q_S","upstream_sources":["strength","coherence","persistence"],"shared_with":["Q_R and Q_G through D01 state ancestors"],"independent":false,"bounds":"[0,1]","constraint":"component factors are coupled upstream","authority":"D04 structural_quality"},
+    {"output":"Q_R","upstream_sources":["uncertainty","reversal_propensity"],"shared_with":["Q_S and Q_G through D01 state ancestors"],"independent":false,"bounds":"[0,1]","constraint":"u feeds reversal; both share kinematic/coherence ancestry","authority":"D04 risk_quality"}
+  ],
+  "shared_ancestors":["adaptive reference/scale","prior level/velocity","volume reference/influence","innovation/perturbation","prior persistence","prior uncertainty","half-life/parameter state"],
+  "declared_unit_bound_maximum":1.0,
+  "proven_reachable_maximum":null,
+  "proven_reachable_maximum_text":"NOT DERIVABLE FROM CURRENT FROZEN AUTHORITY",
+  "threshold_below_proven_reachable_maximum":"NOT DETERMINABLE",
+  "threshold_proven_unreachable":false
+}

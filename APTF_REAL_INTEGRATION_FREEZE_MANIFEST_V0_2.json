@@ -1,0 +1,288 @@
+{
+  "freeze_manifest_version": "0.2",
+  "freeze_timestamp_utc": "2026-08-17T19:39:00Z",
+  "freeze_type": "REAL_INTEGRATION_V0_2",
+  "freeze_status": "READY_FOR_HUMAN_REVIEW",
+  "description": "APTF real end-to-end integration pipeline - D01/D02/D04/D03/Controller chain with zero mock behavior",
+  
+  "phase_context": {
+    "phase": "PHASE 2",
+    "prior_phase": "PHASE 1 - Diagnostic audit (mock harness analysis)",
+    "prior_finding": "107,451 rows → 1 action due to mock close > 400 heuristic",
+    "current_repair": "Replace mock harness with real frozen D01-D03 components"
+  },
+  
+  "frozen_component_versions": {
+    "d01_adaptive_parametric_model": {
+      "version": "v0.2",
+      "entry_point": "D01V02Model.step(observation: NormalizedObservation) → (DMOOutput, FMOOutput)",
+      "invocations_in_replay": 106603,
+      "valid_outputs": 106603,
+      "status": "FROZEN",
+      "authority_artifact": "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json",
+      "authority_sha256": "b6ed942e41ec1c72350cf9247597e5819a942dbe9d04770c23e243204165b235"
+    },
+    "d02_return_shape": {
+      "version": "v0.2",
+      "entry_point": "build_return_shape(dmo: DMOOutput, fmo: FMOOutput) → ReturnShape",
+      "invocations_in_replay": 106603,
+      "outputs": 106603,
+      "status": "FROZEN",
+      "authority_artifact": "D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FREEZE.json",
+      "authority_sha256": "c8029c4b9608547bbf7960f05e4f8613480c4fb2bf8594d94482516b954f7e72"
+    },
+    "d04_trading_envelope": {
+      "version": "v0.1",
+      "entry_point": "TradingEnvelope.process(return_shape: ReturnShape, context: EnvelopeContext) → EnvelopeEvaluation",
+      "concrete_implementations": [
+        "CapturabilityModelV0_2",
+        "ApertureModelV0",
+        "HysteresisController"
+      ],
+      "invocations_in_replay": 106603,
+      "evaluations": 106603,
+      "status": "FROZEN",
+      "authority_artifact": "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FREEZE.json",
+      "authority_sha256": "f72a86b3085bd11d8626f06f1fe3faedde60570365488176011239382a46f1af"
+    },
+    "d03_decision_control": {
+      "version": "v0.1",
+      "entry_point": "evaluate_decision(input_value: D03Input) → DecisionRecord",
+      "invocations_in_replay": 106603,
+      "records": 106603,
+      "status": "FROZEN",
+      "authority_artifact": "D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_FREEZE.json",
+      "authority_sha256": "6a93291ffe555a3fff1239a9a4f88c0a1546b6c46a02b60586614b60a3c91ad6"
+    },
+    "position_transition_controller": {
+      "version": "v0.1",
+      "entry_point": "derive_transition_plan(d03_decision: dict, actual_position: dict, hash: str) → Optional[PositionTransitionPlan]",
+      "transition_matrix": "9×9 (FLAT/LONG/SHORT → FLAT/LONG/SHORT)",
+      "invocations_in_replay": 106603,
+      "plans_generated": 106603,
+      "status": "FROZEN",
+      "implementation_artifact": "position_transition_controller/position_transition_controller.py",
+      "implementation_sha256": "67f1c3ac7220e51c9702337440879c0245c0b466c04aea97ee1433a204ca8e92",
+      "implementation_manifest": "position_transition_controller/APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_V0_1_MANIFEST.json"
+    }
+  },
+  
+  "harness_implementation": {
+    "primary_harness": "real_causal_replay_harness_v0_2.py",
+    "primary_harness_sha256": "d75453d28d30aabba049eac67898340c8b60ca34aeee8a5c29417e8772ef3d0c",
+    "main_runner": "main_real_integration_v0_2.py",
+    "main_runner_sha256": "7a56180c69a27408c74592477ac73823fef257ea9fdba2fe92e77374586651fe",
+    "test_proof": "test_small_real_integration_v0_2.py",
+    "test_proof_sha256": "b966efec0634964e0e35f369aecde7b8e436b5371bc1c6ca61c1d8e83038ecbb",
+    "harness_status": "FREEZE_CANDIDATE_PENDING_HUMAN_REVIEW",
+    "key_features": [
+      "Real D01/D02/D04/D03/Controller invocations (zero mocks)",
+      "Explicit pre-row-1 SPY LONG initialization",
+      "Strict causal order (no future-row access)",
+      "Position carry-forward (LONG → FLAT after action_0)",
+      "Distinct APTF_desired_position and APTF_position_action columns",
+      "Position ledger (JSONL) tracking state transitions",
+      "Comprehensive blank reason reporting"
+    ]
+  },
+  
+  "input_data": {
+    "source_csv": "SPY_1min_normalized_v0_1.csv",
+    "path": "c:\\Users\\chino\\APTF\\data\\market\\normalized\\SPY_1min_normalized_v0_1.csv",
+    "sha256_before": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+    "sha256_after": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+    "mutation_check": "PASS",
+    "total_rows_in_file": 207824,
+    "rows_processed": 106603,
+    "rows_excluded": 101221,
+    "boundary_boundary_utc": "2023-03-30T08:00:00Z",
+    "boundary_adherence": "PASS"
+  },
+  
+  "output_data": {
+    "primary_output_csv": "SPY_APTF_position_actions_development_v0_2.csv",
+    "path": "c:\\Users\\chino\\APTF\\output\\SPY_APTF_position_actions_development_v0_2.csv",
+    "sha256": "8ed93964bf5f8e808f0c0280fbf5cccf77d778e63255bd1a2b67a4efef4cacde",
+    "rows": 106603,
+    "schema": [
+      "timestamp",
+      "open",
+      "high",
+      "low",
+      "close",
+      "volume",
+      "APTF_desired_position",
+      "APTF_position_action"
+    ],
+    "position_ledger": "SPY_APTF_position_ledger_v0_2.jsonl",
+    "position_ledger_sha256": "3beb934c60f112f091f8063c1624ea3ab720bfd40a1622495085dca25a8fa7ad",
+    "ledger_entries": 106603,
+    "ledger_fields": [
+      "sequence",
+      "source_row_index",
+      "timestamp",
+      "actual_position_before",
+      "d01_output_identity",
+      "d02_output_identity",
+      "d04_output_identity",
+      "d03_output_identity",
+      "desired_position",
+      "transition_plan_identity",
+      "position_action",
+      "advancement_mode",
+      "actual_position_after",
+      "blank_reason"
+    ]
+  },
+  
+  "pipeline_statistics": {
+    "d01_invocations": 106603,
+    "d01_valid_outputs": 106603,
+    "d01_coverage": "100%",
+    
+    "d02_invocations": 106603,
+    "d02_outputs": 106603,
+    "d02_coverage": "100%",
+    
+    "d04_invocations": 106603,
+    "d04_evaluations": 106603,
+    "d04_coverage": "100%",
+    
+    "d03_invocations": 106603,
+    "d03_records": 106603,
+    "d03_coverage": "100%",
+    
+    "controller_invocations": 106603,
+    "controller_plans": 106603,
+    "controller_coverage": "100%",
+    
+    "desired_position_populated": 106603,
+    "desired_position_blank": 0,
+    "desired_position_coverage": "100%",
+    
+    "position_actions_populated": 1,
+    "position_actions_blank": 106602,
+    "action_verb_distribution": {
+      "SELL": 1,
+      "BUY": 0,
+      "SELL_SHORT": 0,
+      "BUY_TO_COVER": 0,
+      "HOLD": 0,
+      "NO_ACTION": 0
+    },
+    
+    "blank_reason_distribution": {
+      "NON_EXECUTABLE": 106602
+    }
+  },
+  
+  "acceptance_gates": {
+    "gate_1_d01_invoked": {
+      "criterion": "D01 valid outputs > 0",
+      "result": 106603,
+      "status": "PASS"
+    },
+    "gate_2_d03_invoked": {
+      "criterion": "D03 records > 0",
+      "result": 106603,
+      "status": "PASS"
+    },
+    "gate_3_zero_mock_guarantee": {
+      "criterion": "All synthetic data counts = 0",
+      "synthetic_rows": 0,
+      "fake_d01_outputs": 0,
+      "fake_d02_outputs": 0,
+      "fake_d04_outputs": 0,
+      "fake_d03_outputs": 0,
+      "fake_actions": 0,
+      "status": "PASS"
+    },
+    "gate_4_first_sample_boundary": {
+      "criterion": "Rows processed = manifest boundary (106603)",
+      "manifest_rows": 106603,
+      "actual_rows": 106603,
+      "deviation": 0,
+      "status": "PASS"
+    },
+    "gate_5_position_carry_forward": {
+      "criterion": "Terminal position = result of actions",
+      "initial_position": "LONG",
+      "terminal_position": "FLAT",
+      "terminal_version": 1,
+      "reason": "Single SELL action at row 0",
+      "status": "PASS"
+    },
+    "gate_6_source_non_mutation": {
+      "criterion": "Source file SHA256 unchanged",
+      "sha256_before": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "sha256_after": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+      "status": "PASS"
+    },
+    "gate_7_causal_order": {
+      "criterion": "Strict forward processing (no future-peek)",
+      "streaming": "row-by-row",
+      "look_ahead": "ZERO",
+      "status": "PASS"
+    },
+    "gate_8_stream_separation": {
+      "criterion": "Desired position ≠ Position action",
+      "desired_column": "APTF_desired_position",
+      "action_column": "APTF_position_action",
+      "distinct": true,
+      "status": "PASS"
+    }
+  },
+  
+  "comparison_to_phase_1": {
+    "phase_1_harness": "Old mock harness with close > 400 & volume > 1000 heuristic",
+    "phase_1_d01_invocations": 0,
+    "phase_1_actions": 1,
+    "phase_1_rows": 107451,
+    "phase_1_first_action": "Row 27950 (2022-11-14T18:35:00Z)",
+    
+    "phase_2_harness": "Real frozen D01→D02→D04→D03→Controller",
+    "phase_2_d01_invocations": 106603,
+    "phase_2_actions": 1,
+    "phase_2_rows": 106603,
+    "phase_2_first_action": "Row 0 (2022-09-30T08:00:00Z)",
+    
+    "improvements": [
+      "D01 invocations: 0 → 106603 (real parametric model)",
+      "D02 invocations: 0 → 106603 (real return shape builder)",
+      "D04 invocations: 0 → 106603 (real envelope processor)",
+      "D03 invocations: 0 → 106603 (real decision control)",
+      "Mock heuristic: removed (close > 400 & volume > 1000)",
+      "First sample rows: 107451 → 106603 (boundary corrected)",
+      "Desired positions: 1 → 106603 (all rows now populated)",
+      "Position carry-forward: implicit → explicit"
+    ]
+  },
+  
+  "critical_audit_reports": {
+    "zero_mock_audit": "APTF_REAL_PIPELINE_ZERO_MOCK_AUDIT_V0_2.md",
+    "zero_mock_status": "PASS",
+    "causality_audit": "APTF_REAL_PIPELINE_CAUSALITY_DETERMINISM_AUDIT_V0_2.md",
+    "causality_status": "PASS",
+    "determinism_status": "STATIC_PATH_REVIEW_PASS",
+    "replay_reproducibility_status": "NOT_INDEPENDENTLY_RERUN"
+  },
+  
+  "risk_assessment": {
+    "mock_substitution_risk": "No mock substitution observed in the executed path",
+    "boundary_violation_risk": "No boundary violation observed; row count matched the partition manifest",
+    "position_drift_risk": "No position drift observed in the generated ledger",
+    "data_integrity_risk": "Source hash was unchanged before and after the run",
+    "future_leak_risk": "No future-row access found in static path review",
+    "residual_risk": "Full replay was executed once; independent bitwise replay reproduction was not run",
+    "overall_risk": "ACCEPTANCE_GATES_PASS_WITH_DOCUMENTED_RESIDUAL_REPRODUCIBILITY_RISK"
+  },
+  
+  "freeze_decision": {
+    "gate_summary": "All 8 acceptance gates PASS",
+    "audit_summary": "Zero-mock and causal-path reviews pass; component determinism is supported, but full replay reproducibility was not independently rerun",
+    "risk_summary": "Residual risk: no second full replay hash comparison",
+    "recommendation": "READY FOR HUMAN REVIEW",
+    "next_step": "User review of audits and output, then freeze decision",
+    "status": "PENDING_HUMAN_REVIEW"
+  }
+}

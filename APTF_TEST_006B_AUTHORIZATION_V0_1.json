@@ -1,0 +1,14 @@
+{
+  "authorization_id": "TEST006B_ONE_WAY_RESERVE_AUTHORIZATION_V0_1",
+  "status": "AUTHORIZED_BY_EXPLICIT_USER_PROMPT",
+  "authorized_test": "APTF TEST 006B V0.1",
+  "emitter_freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "one_way_execution": true,
+  "second_pass": false,
+  "rewind": false,
+  "retuning": false,
+  "broker": false,
+  "reserve_status_before_authorization": "SEALED",
+  "reserve_observations_accessed_before_authorization": 0,
+  "historical_governance_modified": false
+}

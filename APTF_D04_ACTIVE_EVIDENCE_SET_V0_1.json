@@ -1,0 +1,37 @@
+{
+  "contract_id": "APTF_D04_ACTIVE_EVIDENCE_SET_V0_1",
+  "production_active_context": [
+    {"property":"evaluation_time","provenance":"DERIVED","producer":"normalized provider event time"},
+    {"property":"data_integrity","provenance":"DERIVED","producer":"normalized data_valid/source_quality"}
+  ],
+  "production_unavailable_context": [
+    "market_eligible", "clock_event_quality", "liquidity_quality", "spread_quality",
+    "latency_quality", "execution_feasibility", "capital_available", "portfolio_capacity",
+    "position_capacity", "risk_capacity", "broker_health"
+  ],
+  "active_formula": {
+    "H_active": "projection_valid * data_integrity_above_critical * valid_inputs * any available market-eligibility condition",
+    "Q_G": "unchanged D02-derived geometry",
+    "Q_S": "unchanged D01/D02-derived structure",
+    "Q_R": "unchanged D01/D02-derived risk quality",
+    "G_active": "min(non-null configured gate dimensions with valid production provenance)",
+    "C": "H_active * Q_G * Q_S * Q_R * G_active"
+  },
+  "current_real_path_gate_values": ["data_integrity"],
+  "nonempty_proof": "data_integrity is required, legitimately derived, and is a configured gate dimension",
+  "empty_active_gate_behavior": "raise ValueError; no implicit 0 or 1 identity",
+  "unavailable_representation": "null plus UNAVAILABLE provenance",
+  "unavailable_is_zero": false,
+  "unavailable_is_one": false,
+  "future_activation": "requires non-null value from an authoritative producer and OBSERVED/DERIVED/STATE/MATHEMATICAL_CONSTANT provenance",
+  "formula_authority": [
+    {"factor":"H","inputs":["projection validity","data_integrity","available market eligibility","valid inputs"],"all_inputs_known":true,"placeholders":false,"active":true},
+    {"factor":"Q_G","inputs":["D02 terminal/max displacement and FMO path"],"all_inputs_known":true,"placeholders":false,"active":true},
+    {"factor":"Q_S","inputs":["D01 strength/coherence/persistence via D02"],"all_inputs_known":true,"placeholders":false,"active":true},
+    {"factor":"Q_R","inputs":["D01 uncertainty/reversal via D02"],"all_inputs_known":true,"placeholders":false,"active":true},
+    {"factor":"G","inputs":["active known configured gate dimensions; currently data_integrity"],"all_inputs_known":true,"placeholders":false,"active":true},
+    {"factor":"CAPTURABILITY","inputs":["H,Q_G,Q_S,Q_R,G"],"all_inputs_known":true,"placeholders":false,"active":true}
+  ],
+  "arbitrary_active_placeholder_count": 0,
+  "unknown_active_input_count": 0
+}

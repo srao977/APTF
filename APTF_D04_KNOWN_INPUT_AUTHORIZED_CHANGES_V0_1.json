@@ -1,0 +1,45 @@
+{
+  "change_id": "APTF_D04_KNOWN_INPUT_AUTHORIZED_CHANGES_V0_1",
+  "scope": "D04 context provenance/applicability and real-market placeholder removal",
+  "implementation_files": [
+    "d04_trading_envelope/src/aptf_d04/models/envelope_context.py",
+    "d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py",
+    "d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py",
+    "position_transition_controller/real_causal_replay_harness_v0_2.py",
+    "aptf_runtime/src/aptf_runtime/single_observation_pipeline.py",
+    "diagnostics/aptf_test_001_row_10.py",
+    "diagnostics/aptf_test_002_two_observations.py"
+  ],
+  "test_files": [
+    "d04_trading_envelope/tests/test_modernization_v02.py",
+    "d04_trading_envelope/tests/test_known_input_authority_v022.py"
+  ],
+  "design_and_implementation_documents_added": [
+    "APTF_D04_KNOWN_INPUT_CONTEXT_CONTRACT_V0_2_2.md",
+    "D04_KNOWN_INPUT_CONTEXT_SCHEMA_V0_2_2.json",
+    "APTF_D04_KNOWN_INPUT_IMPLEMENTATION_V0_2_2.md"
+  ],
+  "artifact_hashes": [
+    {"path":"APTF_D04_KNOWN_INPUT_CONTEXT_CONTRACT_V0_2_2.md","sha256":"9559ae760880efeb428c0b39a4873dc1cc3532e9f715d2c651eb8c7342eadf01"},
+    {"path":"D04_KNOWN_INPUT_CONTEXT_SCHEMA_V0_2_2.json","sha256":"3c7ae5671283409a53d88320e52d7e6df421b2620d58d9427f4054eac24e4e58"},
+    {"path":"APTF_D04_KNOWN_INPUT_IMPLEMENTATION_V0_2_2.md","sha256":"679988b62416cf06c5fa8d5be70090f6ba89959644b8750017bfeb1c667bdcfb"},
+    {"path":"APTF_D04_KNOWN_INPUT_AUTHORITY_AUDIT_V0_1.md","sha256":"4ef9c6d856fbd70b91ad319a5100f6e9b26aab02f25dcf0dbda1d3d2b15d8010"},
+    {"path":"APTF_D04_INPUT_PROVENANCE_INVENTORY_V0_1.json","sha256":"b234e2438ce4c16dbae1944a9100f47fad397e8656399455345dbf3ed664ec3e"},
+    {"path":"APTF_D04_PLACEHOLDER_TRACE_V0_1.json","sha256":"4b6d2dc3db9767db23dec6098cd91eecdd43c060e807648e9674e2aa6c44db8d"},
+    {"path":"APTF_D04_ACTIVE_EVIDENCE_SET_V0_1.json","sha256":"0c9fa7750c76545ff624a2fb11259e4556271257d0c7ed3e31503cb628748cd3"},
+    {"path":"APTF_D04_BEFORE_AFTER_INPUT_AUTHORITY_V0_1.json","sha256":"56d2dc9bb5c1ea67486e749ad162635b1a4ed24ecf10331654ce290f9d2d3728"},
+    {"path":"APTF_D04_KNOWN_INPUT_VALIDATION_V0_1.json","sha256":"46d129ec067bf947f2e7a66ccda786d9c17955e2cbfbf36b2be8ab78f351d00e"},
+    {"path":"APTF_D04_KNOWN_INPUT_AUTHORITY_RESULT_V0_1.md","sha256":"b816d60fbd7fcf5f36e5a50482977c6387c15f4df47b9400348868c7c60c9028"}
+  ],
+  "old_freezes_modified": false,
+  "limited_supersession": {
+    "scope": "D04 context authority construction and H/G applicability only",
+    "historical_manifests_preserved": [
+      "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FREEZE.json",
+      "APTF_REAL_INTEGRATION_FREEZE_MANIFEST_V0_2.json",
+      "APTF_TEMPORAL_EVENT_ENVELOPE_IMPLEMENTATION_FREEZE_V0_2.json"
+    ],
+    "new_full_system_freeze_claimed": false
+  },
+  "full_system_freeze_created": false
+}

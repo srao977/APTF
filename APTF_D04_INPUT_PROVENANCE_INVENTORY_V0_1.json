@@ -1,0 +1,66 @@
+{
+  "audit_id": "APTF_D04_INPUT_PROVENANCE_INVENTORY_V0_1",
+  "counts": {
+    "total_consumed_properties": 43,
+    "d02_return_shape": 17,
+    "context_values": 13,
+    "persistent_state": 5,
+    "configuration_constants": 8,
+    "active_known_nonconstant": 24,
+    "future_unavailable": 11,
+    "valid_intrinsic_configuration": 8,
+    "unresolved_active": 0
+  },
+  "return_shape": [
+    {"property":"model_time","type":"float","producer":"D01->D02","source":"DMO/FMO model_time","class":"D02 DERIVED","active":true,"path":"lifecycle/time","validation":"finite/causal","status":"VALID ACTIVE INPUT"},
+    {"property":"entity_id","type":"string","producer":"D01->D02","source":"configured D01 entity","class":"D02 DERIVED","active":true,"path":"binding/identity","validation":"nonempty","status":"VALID ACTIVE INPUT"},
+    {"property":"source_model_version","type":"string","producer":"D01->D02","source":"D01 model version","class":"D02 DERIVED","active":true,"path":"validation/provenance","validation":"0.2","status":"VALID ACTIVE INPUT"},
+    {"property":"current_level","type":"float","producer":"D02","source":"D01 state_level","class":"D02 DERIVED","active":true,"path":"Q_G validation","validation":"finite","status":"VALID ACTIVE INPUT"},
+    {"property":"projection_interval","type":"float","producer":"D02","source":"D01 FMO interval","class":"D02 DERIVED","active":true,"path":"H projection validity","validation":"[10,600]","status":"VALID ACTIVE INPUT"},
+    {"property":"forward_half_life","type":"float","producer":"D02","source":"D01 forward half-life","class":"D02 DERIVED","active":true,"path":"validation/diagnostic","validation":"[15,900]","status":"VALID ACTIVE INPUT"},
+    {"property":"forward_samples","type":"tuple","producer":"D02","source":"D01 FMO samples","class":"D02 DERIVED","active":true,"path":"Q_G validation/path","validation":"nonempty ordered finite","status":"VALID ACTIVE INPUT"},
+    {"property":"terminal_displacement","type":"float","producer":"D02","source":"terminal level-current level","class":"D02 DERIVED","active":true,"path":"Q_G numerator","validation":"finite; |D|<=M","status":"VALID ACTIVE INPUT"},
+    {"property":"maximum_absolute_displacement","type":"float","producer":"D02","source":"max path excursion","class":"D02 DERIVED","active":true,"path":"Q_G denominator","validation":">=0","status":"VALID ACTIVE INPUT"},
+    {"property":"path_direction","type":"enum","producer":"D02","source":"sign terminal displacement","class":"D02 DERIVED","active":true,"path":"validation/candidate","validation":"UPWARD|DOWNWARD|FLAT","status":"VALID ACTIVE INPUT"},
+    {"property":"terminal_decay_factor","type":"float","producer":"D02","source":"interval/half-life formula","class":"D02 DERIVED","active":true,"path":"validation/diagnostic","validation":"(0,1)","status":"VALID ACTIVE INPUT"},
+    {"property":"strength","type":"float","producer":"D01 via D02","source":"D01 strength","class":"D01 DERIVED","active":true,"path":"Q_S","validation":"[0,1]","status":"VALID ACTIVE INPUT"},
+    {"property":"coherence","type":"float","producer":"D01 via D02","source":"D01 coherence","class":"D01 DERIVED","active":true,"path":"Q_S","validation":"[0,1]","status":"VALID ACTIVE INPUT"},
+    {"property":"persistence","type":"float","producer":"D01 via D02","source":"D01 persistence","class":"D01 DERIVED","active":true,"path":"Q_S","validation":"[0,1]","status":"VALID ACTIVE INPUT"},
+    {"property":"uncertainty","type":"float","producer":"D01 via D02","source":"D01 uncertainty","class":"D01 DERIVED","active":true,"path":"Q_R","validation":"[0,1]","status":"VALID ACTIVE INPUT"},
+    {"property":"reversal_propensity","type":"float","producer":"D01 via D02","source":"D01 reversal","class":"D01 DERIVED","active":true,"path":"Q_R","validation":"[0,1]","status":"VALID ACTIVE INPUT"},
+    {"property":"state_support_ratio","type":"float","producer":"D01 via D02","source":"D01 ratio","class":"D01 DERIVED","active":true,"path":"validation/diagnostic only","validation":">=0 finite","status":"VALID ACTIVE INPUT"}
+  ],
+  "context": [
+    {"property":"evaluation_time","type":"float","producer":"source gateway mapping","source":"provider event time parsed to epoch","class":"DERIVED","active":true,"path":"H/lifecycle","validation":"finite + provenance","status":"VALID ACTIVE INPUT"},
+    {"property":"data_integrity","type":"float","producer":"source normalization","source":"data_valid -> source_quality","class":"DERIVED","active":true,"path":"H and active G","validation":"[0,1] + provenance","status":"VALID ACTIVE INPUT"},
+    {"property":"market_eligible","type":"bool|null","producer":null,"source":null,"class":"FUTURE CONTEXT","active":false,"path":"H when available","validation":"null iff UNAVAILABLE","status":"FUTURE / UNAVAILABLE"},
+    {"property":"clock_event_quality","type":"float|null","producer":null,"source":null,"class":"FUTURE CONTEXT","active":false,"path":"diagnostic only","validation":"null iff UNAVAILABLE","status":"FUTURE / UNAVAILABLE"},
+    {"property":"liquidity_quality","type":"float|null","producer":null,"source":null,"class":"EXECUTION/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"spread_quality","type":"float|null","producer":null,"source":null,"class":"EXECUTION/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"latency_quality","type":"float|null","producer":null,"source":null,"class":"EXECUTION/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"execution_feasibility","type":"float|null","producer":null,"source":null,"class":"EXECUTION/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"capital_available","type":"float|null","producer":null,"source":null,"class":"ACCOUNT/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"portfolio_capacity","type":"float|null","producer":null,"source":null,"class":"PORTFOLIO/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"position_capacity","type":"float|null","producer":null,"source":null,"class":"PORTFOLIO/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"risk_capacity","type":"float|null","producer":null,"source":null,"class":"PORTFOLIO/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"},
+    {"property":"broker_health","type":"float|null","producer":null,"source":null,"class":"EXECUTION/FUTURE CONTEXT","active":false,"path":"G when available","validation":"null or [0,1] with provenance","status":"FUTURE / UNAVAILABLE"}
+  ],
+  "persistent_state": [
+    {"property":"current_state","producer":"D04 lifecycle","class":"STATE","active":true,"path":"hysteresis/candidate","status":"VALID ACTIVE INPUT"},
+    {"property":"current_aperture","producer":"D04 aperture lifecycle","class":"STATE","active":true,"path":"aperture smoothing","status":"VALID ACTIVE INPUT"},
+    {"property":"current_entity_id","producer":"prior D04 processing","class":"STATE","active":true,"path":"entity binding","status":"VALID ACTIVE INPUT"},
+    {"property":"current_model_time","producer":"prior D04 processing","class":"STATE","active":true,"path":"causal order/supersession","status":"VALID ACTIVE INPUT"},
+    {"property":"current_candidate","producer":"D04 candidate lifecycle","class":"STATE","active":true,"path":"candidate creation/invalidation","status":"VALID ACTIVE INPUT"}
+  ],
+  "configuration": [
+    {"property":"feasibility_gate_dimensions","value":"ten named future/current dimensions","producer":"default.yaml","class":"CONFIGURATION","path":"G applicability","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"gate_warning_threshold","value":0.5,"producer":"default.yaml","class":"CONFIGURATION","path":"reason codes","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"critical_data_integrity_threshold","value":0.2,"producer":"default.yaml","class":"CONFIGURATION","path":"H/safety","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"aperture_alpha","value":0.5,"producer":"default.yaml","class":"CONFIGURATION","path":"aperture update","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"open_threshold","value":0.75,"producer":"default.yaml","class":"CONFIGURATION","path":"hysteresis","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"close_threshold","value":0.55,"producer":"default.yaml","class":"CONFIGURATION","path":"hysteresis","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"open_persistence_observations","value":3,"producer":"default.yaml","class":"CONFIGURATION","path":"hysteresis","status":"VALID INTRINSIC CONSTANT"},
+    {"property":"close_persistence_observations","value":2,"producer":"default.yaml","class":"CONFIGURATION","path":"hysteresis","status":"VALID INTRINSIC CONSTANT"}
+  ],
+  "active_unresolved": []
+}

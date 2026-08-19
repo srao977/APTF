@@ -45,7 +45,6 @@ class RealtimeLoop:
         captures: list[float] = []
         geometries: list[float] = []
         bases: list[float] = []
-        gates: list[float] = []
 
         for obs in observations:
             rs = obs.return_shape
@@ -59,7 +58,6 @@ class RealtimeLoop:
             captures.append(evaluation.capturability_score)
             geometries.append(evaluation.geometry_quality)
             bases.append(evaluation.base_capturability_score)
-            gates.append(evaluation.feasibility_gate_score)
 
             for evt in evaluation.events:
                 event_counter[evt.value] = event_counter.get(evt.value, 0) + 1
@@ -83,7 +81,7 @@ class RealtimeLoop:
             line = (
                 f"[{obs.scenario_time:.1f}s] {rs.entity_id} {format(rs.model_time, '.17g')} "
                 f"geometry={evaluation.geometry_quality:.2f} base={evaluation.base_capturability_score:.2f} "
-                f"gate={evaluation.feasibility_gate_score:.2f} capture={evaluation.capturability_score:.2f} "
+                f"capture={evaluation.capturability_score:.2f} "
                 f"aperture={evaluation.aperture_after:.2f} state={evaluation.previous_envelope_state.value}->{evaluation.new_envelope_state.value}"
             )
             if self.verbose or evaluation.candidate_envelope is not None:
@@ -106,7 +104,6 @@ class RealtimeLoop:
             "captures": captures,
             "shapes": geometries,
             "bases": bases,
-            "gates": gates,
             "event_summary_checksum": json.dumps(event_counter, sort_keys=True),
         }
         return summary

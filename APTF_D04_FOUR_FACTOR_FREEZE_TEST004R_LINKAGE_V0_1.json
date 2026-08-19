@@ -1,0 +1,42 @@
+{
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "validation_test": "TEST 004R",
+  "validation_status": "PASS",
+  "validation_acceptance": "60/60 PASS",
+  "equation": "C = H * Q_G * Q_S * Q_R",
+  "evidence": [
+    {"path":"APTF_TEST_004R_INPUTS_V0_1.json","role":"TEST_EVIDENCE_INPUTS","sha256":"d0eccadfe8dbc76215ffa1c8cb20afd25784d2ee36fc3f77ba826df2009f21bf"},
+    {"path":"APTF_TEST_004R_COMPONENT_TRACE_V0_1.json","role":"TEST_EVIDENCE_COMPONENT_TRACE","sha256":"fd4b7572b44ec3f09805d88613c24f78cc2c82a2166e0e27fffcac5fcc9ec6d8"},
+    {"path":"APTF_TEST_004R_D04_EQUATION_PROOF_V0_1.json","role":"TEST_EVIDENCE_EQUATION_PROOF","sha256":"99333bd540af8510dbff503c7fa0c652688828a482d40abc6fb103006b5e86db"},
+    {"path":"APTF_TEST_004R_NUMERIC_REGRESSION_V0_1.json","role":"TEST_EVIDENCE_NUMERIC_REGRESSION","sha256":"cb0dcce1945a45fe9b7ded5620e957a77fefc70a1d4f4201532b98cb9b765208"},
+    {"path":"APTF_TEST_004R_SEMANTIC_REGRESSION_V0_1.json","role":"TEST_EVIDENCE_SEMANTIC_REGRESSION","sha256":"481abba9e137d1b9c70f7f1b7f185b8def79b59495051d6e81f121298e45d4aa"},
+    {"path":"APTF_TEST_004R_TEMPORAL_REGRESSION_V0_1.json","role":"TEST_EVIDENCE_TEMPORAL_REGRESSION","sha256":"dd6bb5b58da8bf3086d864044647201545f858a62e373278684f7a38eea45a81"},
+    {"path":"APTF_TEST_004R_PROVENANCE_REGRESSION_V0_1.json","role":"TEST_EVIDENCE_PROVENANCE_REGRESSION","sha256":"4333da3f04e756098aca5b1f226ab2c8ff1ed021a83e06c5ed5c47b85b0421e9"},
+    {"path":"APTF_TEST_004R_RESULT_V0_1.md","role":"TEST_EVIDENCE_RESULT","sha256":"e7cefedcacff0f8851743aeaa3c581c18ae6ea12185e4eb3abd3a6741ad6ec24"}
+  ],
+  "numeric_anchors": [
+    {"physical_row":10,"C":0.22050421416872243},
+    {"physical_row":11,"C":0.17666062360338286},
+    {"physical_row":12,"C":0.25462532958949513},
+    {"physical_row":13,"C":0.08848558708732783},
+    {"physical_row":14,"C":0.28034113293008417}
+  ],
+  "maximum_historical_C_delta": 0.0,
+  "maximum_four_factor_reconstruction_error": 0.0,
+  "semantic_anchors": {
+    "D04": {"CLOSED":5},
+    "D03": {"FLAT":5},
+    "Position_Controller": {"NO_ACTION":5},
+    "scope": "regression anchors, not universal future expectations"
+  },
+  "identity_basis": {
+    "method": "Strongest available provenance evidence; Test 004R did not embed a full D04 source hash manifest.",
+    "facts": [
+      "All executable/configuration/design authority files existed with their frozen content before the Test 004R component trace was written.",
+      "Test 004R imported and exercised the current D04 construction and execution dependency path.",
+      "The post-change audit verified executable absence, tests, thresholds and protected non-drift after Test 004R.",
+      "Current pre-freeze hashes match the recorded post-change authority state and no drift was detected."
+    ],
+    "confidence": "SUFFICIENT_FOR_EXACT_FREEZE_IDENTITY"
+  }
+}

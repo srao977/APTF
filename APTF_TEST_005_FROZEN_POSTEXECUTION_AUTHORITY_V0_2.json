@@ -1,0 +1,55 @@
+{
+  "run_id":"TEST005_FROZEN_D04_V0_2_RUN_001",
+  "freeze_id":"D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256":"a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "source_data_sha256":"73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "execution_timestamp_utc":"2026-08-18T21:54:17.859037Z",
+  "postexecution_timestamp_utc":"2026-08-18T21:56:33.4679402Z",
+  "status":"PASS_AUTHORITY_IDENTITY_TEST_RESULT_E_SOURCE_EVIDENCE_FAILURE",
+  "authority_files":[
+    {"path":"d04_trading_envelope/src/aptf_d04/cli/main.py","frozen_sha256":"ae7bdaee65f6b69c6cb8022ea376250d5f5b9b677adf738d06139fa2fc9450ab","post_sha256":"ae7bdaee65f6b69c6cb8022ea376250d5f5b9b677adf738d06139fa2fc9450ab","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/configuration.py","frozen_sha256":"383e8890b469170c8686191e9b442cc7845d9e192f467531fa7ac54d594c2481","post_sha256":"383e8890b469170c8686191e9b442cc7845d9e192f467531fa7ac54d594c2481","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/inputs/scenario_loader.py","frozen_sha256":"31d6534e8546b6dface1f06ba000f3f327a0c31d50df02be256ffac539fc0b8f","post_sha256":"31d6534e8546b6dface1f06ba000f3f327a0c31d50df02be256ffac539fc0b8f","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/aperture_model.py","frozen_sha256":"f113a61faa53f2ae0036d904d7cf7594c3de4024948ad55aa59d8b9cf71ab2d8","post_sha256":"f113a61faa53f2ae0036d904d7cf7594c3de4024948ad55aa59d8b9cf71ab2d8","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py","frozen_sha256":"fc9d4a300eabcb3e83b9bccac5a1efeae40b0df09b6cbfa52413601788f01336","post_sha256":"fc9d4a300eabcb3e83b9bccac5a1efeae40b0df09b6cbfa52413601788f01336","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/hysteresis.py","frozen_sha256":"fdbeeb203c309ca91c20f21b70cbb342406a97c2c86b8dc0d0a7033bff3cf101","post_sha256":"fdbeeb203c309ca91c20f21b70cbb342406a97c2c86b8dc0d0a7033bff3cf101","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/lifecycle.py","frozen_sha256":"9870371f1070381c096c43e9c0b558f07aa87c95a6602b1b31b3db302341151e","post_sha256":"9870371f1070381c096c43e9c0b558f07aa87c95a6602b1b31b3db302341151e","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py","frozen_sha256":"50302214070c6051ddb84fdfa66a5f3c8e18eef668024684e65605887cd28191","post_sha256":"50302214070c6051ddb84fdfa66a5f3c8e18eef668024684e65605887cd28191","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/capturability.py","frozen_sha256":"3f8727ed0a6828e7e2da7bbb3770e22003a7fa7d242c1f7c319c222f766ab2c2","post_sha256":"3f8727ed0a6828e7e2da7bbb3770e22003a7fa7d242c1f7c319c222f766ab2c2","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_context.py","frozen_sha256":"8d57bb4dca88b6bf7b5b4fa6e960f3fdc4cb46c3988fb53879aa7ab3f9349ff8","post_sha256":"8d57bb4dca88b6bf7b5b4fa6e960f3fdc4cb46c3988fb53879aa7ab3f9349ff8","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/enums.py","frozen_sha256":"6dfe44b79db989bf0083c6ef9313568e2292f5be248f02600d693f11dc2eb2d5","post_sha256":"6dfe44b79db989bf0083c6ef9313568e2292f5be248f02600d693f11dc2eb2d5","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_state.py","frozen_sha256":"eabc3d90694c51a0fa44eda738092d50d45f484ce2239a4e5ca2ff65314f6233","post_sha256":"eabc3d90694c51a0fa44eda738092d50d45f484ce2239a4e5ca2ff65314f6233","equal":true},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/opportunity.py","frozen_sha256":"2df58e531a4e90bb70e512e384b38abd245169d2ec0b186ec8b6ddef2ba8bb49","post_sha256":"2df58e531a4e90bb70e512e384b38abd245169d2ec0b186ec8b6ddef2ba8bb49","equal":true},
+    {"path":"d04_trading_envelope/config/default.yaml","frozen_sha256":"4a54a654264ce701290373fa7980b9a30a108c5a3301c092a667e3563a03469c","post_sha256":"4a54a654264ce701290373fa7980b9a30a108c5a3301c092a667e3563a03469c","equal":true},
+    {"path":"d04_trading_envelope/README.md","frozen_sha256":"180e556030ca5ea0747e1684a782440f0b4dc2a87aba805455acd595c6311537","post_sha256":"180e556030ca5ea0747e1684a782440f0b4dc2a87aba805455acd595c6311537","equal":true},
+    {"path":"APTF_D04_DATA_INTEGRITY_REMOVAL_PLAN_V0_1.md","frozen_sha256":"f61e72aece1f9b02b0ee1244fc033a666330fa069ed2515d39390affb477edb5","post_sha256":"f61e72aece1f9b02b0ee1244fc033a666330fa069ed2515d39390affb477edb5","equal":true},
+    {"path":"APTF_D04_DATA_INTEGRITY_POSTCHANGE_AUDIT_V0_1.json","frozen_sha256":"6d6a7bd3db77d696eee8ac1282cde25621287dddd5d7dac2b763ce5e67958d66","post_sha256":"6d6a7bd3db77d696eee8ac1282cde25621287dddd5d7dac2b763ce5e67958d66","equal":true}
+  ],
+  "authority_identity":"17/17 PASS",
+  "test004r_evidence":[
+    {"path":"APTF_TEST_004R_INPUTS_V0_1.json","post_sha256":"d0eccadfe8dbc76215ffa1c8cb20afd25784d2ee36fc3f77ba826df2009f21bf","equal":true},
+    {"path":"APTF_TEST_004R_COMPONENT_TRACE_V0_1.json","post_sha256":"fd4b7572b44ec3f09805d88613c24f78cc2c82a2166e0e27fffcac5fcc9ec6d8","equal":true},
+    {"path":"APTF_TEST_004R_D04_EQUATION_PROOF_V0_1.json","post_sha256":"99333bd540af8510dbff503c7fa0c652688828a482d40abc6fb103006b5e86db","equal":true},
+    {"path":"APTF_TEST_004R_NUMERIC_REGRESSION_V0_1.json","post_sha256":"cb0dcce1945a45fe9b7ded5620e957a77fefc70a1d4f4201532b98cb9b765208","equal":true},
+    {"path":"APTF_TEST_004R_SEMANTIC_REGRESSION_V0_1.json","post_sha256":"481abba9e137d1b9c70f7f1b7f185b8def79b59495051d6e81f121298e45d4aa","equal":true},
+    {"path":"APTF_TEST_004R_TEMPORAL_REGRESSION_V0_1.json","post_sha256":"dd6bb5b58da8bf3086d864044647201545f858a62e373278684f7a38eea45a81","equal":true},
+    {"path":"APTF_TEST_004R_PROVENANCE_REGRESSION_V0_1.json","post_sha256":"4333da3f04e756098aca5b1f226ab2c8ff1ed021a83e06c5ed5c47b85b0421e9","equal":true},
+    {"path":"APTF_TEST_004R_RESULT_V0_1.md","post_sha256":"e7cefedcacff0f8851743aeaa3c581c18ae6ea12185e4eb3abd3a6741ad6ec24","equal":true}
+  ],
+  "test004r_identity":"8/8 PASS",
+  "freeze_artifacts":[
+    {"path":"APTF_D04_FOUR_FACTOR_FREEZE_MANIFEST_V0_1.json","post_sha256":"a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79","equal":true},
+    {"path":"APTF_D04_FOUR_FACTOR_FREEZE_HASHES_V0_1.json","post_sha256":"b6559eb00b56616b56e372c9d83fa23b3df9d7c9ca3294cd5973be439c772da5","equal":true},
+    {"path":"APTF_D04_FOUR_FACTOR_FREEZE_TEST004R_LINKAGE_V0_1.json","post_sha256":"005081e914fac4d0d8a9c0b54ab792c186b5a9731195f7079d3bcee8e3ed74ee","equal":true},
+    {"path":"APTF_D04_FOUR_FACTOR_FREEZE_AUTHORITY_V0_1.md","post_sha256":"063b34b4d4465b023501fb0d1dc95887ba2e94dfa5610adeb7b9919fe477ebc2","equal":true},
+    {"path":"APTF_D04_FOUR_FACTOR_FREEZE_RESULT_V0_1.md","post_sha256":"259fbab7be65993d6151b4ea61a6079d075af85436f2624b4b6fbb6016b36264","equal":true}
+  ],
+  "freeze_artifact_identity":"5/5 PASS",
+  "source":{"pre_sha256":"73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d","post_sha256":"73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d","equal":true},
+  "historical_inventories":{
+    "Test004":{"count":12,"pre_digest":"76d7c550594233ddf7ff6232c77ce27e6f7e724fa7b8821c6a05b16ccce925a3","post_digest":"76d7c550594233ddf7ff6232c77ce27e6f7e724fa7b8821c6a05b16ccce925a3","equal":true},
+    "Test004A":{"count":11,"pre_digest":"6caae283e761158e2a4f9e51930a98bd05061ff83ec164f1ab2e6d786cfbfd93","post_digest":"6caae283e761158e2a4f9e51930a98bd05061ff83ec164f1ab2e6d786cfbfd93","equal":true},
+    "Test004R":{"count":8,"pre_digest":"d1a0c0fd38d56cf534110d1aced3e474da1fd6517b6c1f75cd9faa67ad9fe707","post_digest":"d1a0c0fd38d56cf534110d1aced3e474da1fd6517b6c1f75cd9faa67ad9fe707","equal":true}
+  },
+  "historical_non_drift":"PASS"
+}

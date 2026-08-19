@@ -1,0 +1,20 @@
+{
+  "status": "PASS_PREEXECUTION",
+  "governance_files": [
+    "D01_STAGE_2_DATA_PARTITION_MANIFEST.json",
+    "D01_REMAINING_HISTORICAL_DATA_AND_FINAL_BACKTEST_GOVERNANCE_V0_1.md",
+    "D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json"
+  ],
+  "reserve": {
+    "start_utc": "2023-03-30T08:00:00Z",
+    "row_count_metadata_only": 101221,
+    "sealed": true,
+    "available_to_stage3": false,
+    "observations_accessed": 0,
+    "statistics_calculated": false
+  },
+  "stage3_before_test006a": {"decision_logic_defined": false, "implemented": false},
+  "reserve_access_conditions": "Complete executable decision, execution, evaluation and scoring authority must be frozen and explicitly authorized for one-way use.",
+  "historical_governance_modified": false,
+  "test006b_authorized": false
+}

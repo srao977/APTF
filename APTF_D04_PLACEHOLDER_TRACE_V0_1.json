@@ -1,0 +1,27 @@
+{
+  "audit_id": "APTF_D04_PLACEHOLDER_TRACE_V0_1",
+  "arbitrary_placeholders_found": 12,
+  "arbitrary_placeholders_removed": 12,
+  "real_market_runtime_context": [
+    {"property":"market_eligible","previous_value":true,"assignment_sites":["position_transition_controller/real_causal_replay_harness_v0_2.py","aptf_runtime/src/aptf_runtime/single_observation_pipeline.py","diagnostics/aptf_test_001_row_10.py","diagnostics/aptf_test_002_two_observations.py"],"origin":"fixed harness injection","reason":"required schema/no producer","legitimate":false,"d04_effect":"H hard gate forced pass","new_status":"UNAVAILABLE null; omitted from H"},
+    {"property":"clock_event_quality","previous_value":1.0,"origin":"fixed harness injection","reason":"no synchronization-quality producer","legitimate":false,"d04_effect":"diagnostic only","new_status":"UNAVAILABLE null"},
+    {"property":"liquidity_quality","previous_value":1.0,"origin":"fixed harness injection","reason":"no liquidity-quality producer","legitimate":false,"d04_effect":"g1 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"spread_quality","previous_value":1.0,"origin":"fixed harness injection","reason":"no bid/ask spread producer","legitimate":false,"d04_effect":"g2 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"latency_quality","previous_value":1.0,"origin":"fixed harness injection","reason":"no execution-latency-quality producer","legitimate":false,"d04_effect":"g3 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"execution_feasibility","previous_value":1.0,"origin":"fixed harness injection","reason":"no execution venue producer","legitimate":false,"d04_effect":"g4 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"capital_available","previous_value":1.0,"origin":"fixed harness injection","reason":"no account/capital producer","legitimate":false,"d04_effect":"g5 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"portfolio_capacity","previous_value":1.0,"origin":"fixed harness injection","reason":"no portfolio producer","legitimate":false,"d04_effect":"g6 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"position_capacity","previous_value":1.0,"origin":"fixed harness injection","reason":"no position-capacity producer","legitimate":false,"d04_effect":"g7 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"risk_capacity","previous_value":1.0,"origin":"fixed harness injection","reason":"no risk-capacity producer","legitimate":false,"d04_effect":"g8 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"broker_health","previous_value":1.0,"origin":"fixed harness injection","reason":"no broker/infrastructure producer","legitimate":false,"d04_effect":"g9 forced neutral","new_status":"UNAVAILABLE null; non-participating"},
+    {"property":"critical_data_integrity_threshold","previous_value":0.0,"origin":"real replay constructor override","reason":"comment: allow minimal integrity for proof","legitimate":false,"d04_effect":"weakened H/safety cutoff versus authoritative config 0.2","new_status":"loaded from authoritative default.yaml = 0.2"}
+  ],
+  "legitimate_ones_preserved": [
+    {"location":"D04 formulas","value":1.0,"role":"bounded identity/maximum and complement constants","status":"VALID INTRINSIC CONSTANT"},
+    {"location":"synthetic scenarios/tests","value":1.0,"role":"explicit TEST_FIXTURE formula/gate conditions","status":"VALID TEST FIXTURE"},
+    {"location":"real source data_integrity","value":1.0,"role":"derived from data_valid=true","status":"VALID ACTIVE INPUT"}
+  ],
+  "real_path_fixed_neutral_scan_after": 0,
+  "historical_tests_placeholder_affected": ["Test 001","Test 002","Test 002A","Test 003","Test 003A"],
+  "historical_arithmetic_effect": "G and H were forced/assisted to 1. For stored valid rows corrected active data_integrity=1 and omitted unavailable market eligibility also yield G=H=1, so arithmetic values remain unchanged while prior provenance was invalid."
+}

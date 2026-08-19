@@ -1,0 +1,27 @@
+{
+  "run_id":"TEST005_FROZEN_D04_V0_2_RUN_001","freeze_id":"D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1","freeze_manifest_sha256":"a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79","source_data_sha256":"73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d","execution_timestamp_utc":"2026-08-18T21:54:17.859037Z",
+  "status":"SOURCE_CONTINUITY_FAILURE_RESULT_E",
+  "inspected_physical_rows":[15,114],
+  "row_count":100,
+  "first_timestamp":"2022-09-30T08:13:00Z",
+  "last_timestamp":"2022-09-30T10:15:00Z",
+  "non_60_second_gap_count":12,
+  "non_60_second_gaps":[
+    {"from_physical_row":45,"to_physical_row":46,"from_timestamp":"2022-09-30T08:43:00Z","to_timestamp":"2022-09-30T08:46:00Z","delta_seconds":180.0},
+    {"from_physical_row":54,"to_physical_row":55,"from_timestamp":"2022-09-30T08:54:00Z","to_timestamp":"2022-09-30T08:57:00Z","delta_seconds":180.0},
+    {"from_physical_row":69,"to_physical_row":70,"from_timestamp":"2022-09-30T09:11:00Z","to_timestamp":"2022-09-30T09:13:00Z","delta_seconds":120.0},
+    {"from_physical_row":72,"to_physical_row":73,"from_timestamp":"2022-09-30T09:15:00Z","to_timestamp":"2022-09-30T09:17:00Z","delta_seconds":120.0},
+    {"from_physical_row":81,"to_physical_row":82,"from_timestamp":"2022-09-30T09:25:00Z","to_timestamp":"2022-09-30T09:29:00Z","delta_seconds":240.0},
+    {"from_physical_row":82,"to_physical_row":83,"from_timestamp":"2022-09-30T09:29:00Z","to_timestamp":"2022-09-30T09:31:00Z","delta_seconds":120.0},
+    {"from_physical_row":85,"to_physical_row":86,"from_timestamp":"2022-09-30T09:33:00Z","to_timestamp":"2022-09-30T09:37:00Z","delta_seconds":240.0},
+    {"from_physical_row":88,"to_physical_row":89,"from_timestamp":"2022-09-30T09:39:00Z","to_timestamp":"2022-09-30T09:41:00Z","delta_seconds":120.0},
+    {"from_physical_row":91,"to_physical_row":92,"from_timestamp":"2022-09-30T09:43:00Z","to_timestamp":"2022-09-30T09:47:00Z","delta_seconds":240.0},
+    {"from_physical_row":95,"to_physical_row":96,"from_timestamp":"2022-09-30T09:50:00Z","to_timestamp":"2022-09-30T09:53:00Z","delta_seconds":180.0},
+    {"from_physical_row":97,"to_physical_row":98,"from_timestamp":"2022-09-30T09:54:00Z","to_timestamp":"2022-09-30T09:58:00Z","delta_seconds":240.0},
+    {"from_physical_row":100,"to_physical_row":101,"from_timestamp":"2022-09-30T10:00:00Z","to_timestamp":"2022-09-30T10:02:00Z","delta_seconds":120.0}
+  ],
+  "volume_analysis":null,
+  "price_analysis":null,
+  "descriptive_association_not_causal_proof":null,
+  "reason":"Source gap diagnosis is authoritative; downstream source/C analysis is unavailable because the complete trace was not serialized."
+}

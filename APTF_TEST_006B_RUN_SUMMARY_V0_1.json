@@ -1,0 +1,23 @@
+{
+  "actionable": 101206,
+  "adaptation_events": 373482,
+  "blank_actionable": 0,
+  "counts": {
+    "BUY": 14249,
+    "HOLD": 77178,
+    "SELL": 9779
+  },
+  "csv_emission_decision_mismatches": 0,
+  "emission_rows": 101206,
+  "execution_timestamp_utc": "2026-08-18T23:20:48.4668982Z",
+  "feedback_events": 202412,
+  "freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "freeze_manifest_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+  "initializing": 15,
+  "invalid_terminal": 0,
+  "journal_rows": 101221,
+  "run_id": "TEST006B_ONE_WAY_RESERVE_RUN_V0_1_001",
+  "source_field_mismatches": 0,
+  "source_rows": 101221,
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d"
+}

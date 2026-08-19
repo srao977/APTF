@@ -1,0 +1,16 @@
+{
+  "source_path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "source_data_row_count": 207824,
+  "original_column_count": 22,
+  "original_columns": ["entity_id","event_timestamp_local","event_timestamp_utc","timezone","open","high","low","close","volume","close_return_1m","high_low_range","high_low_range_fraction","open_close_change","open_close_return","session_type","is_regular_session","minute_of_session","source_provider","source_dataset","source_row_number","data_valid","quality_flags"],
+  "partition_authority": "D01_STAGE_2_DATA_PARTITION_MANIFEST.json",
+  "reserve_interval_utc": "[2023-03-30T08:00:00Z, 2023-09-30T08:00:00Z)",
+  "reserve_data_row_start_one_based": 106604,
+  "reserve_data_row_end_one_based": 207824,
+  "first_reserve_physical_row": 106605,
+  "last_reserve_physical_row": 207825,
+  "reserve_observation_count": 101221,
+  "values_inspected_before_authorization": false,
+  "statistics_calculated_before_authorization": false
+}

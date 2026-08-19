@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-from dataclasses import dataclass
 from urllib.parse import quote
 
 from aptf_d04.envelope.aperture_model import ApertureModel
@@ -14,12 +13,6 @@ from aptf_d04.models.enums import CandidateStatus, EnvelopeState, EventType, Saf
 from aptf_d04.models.opportunity import CandidateEnvelope
 from d02.v02.models import ReturnShape
 
-
-@dataclass
-class SafetyConfig:
-    critical_data_integrity_threshold: float
-
-
 def candidate_identity(entity_id: str, source_model_time: float, qualified_at: float) -> str:
     encoded = quote(entity_id, safe="-._~", encoding="utf-8", errors="strict")
     return f"D04C|{encoded}|{format(source_model_time, '.17g')}|{format(qualified_at, '.17g')}"
@@ -31,12 +24,10 @@ class TradingEnvelope:
         capturability_model: CapturabilityModel,
         aperture_model: ApertureModel,
         hysteresis: HysteresisController,
-        safety_config: SafetyConfig,
     ) -> None:
         self.capturability_model = capturability_model
         self.aperture_model = aperture_model
         self.hysteresis = hysteresis
-        self.safety_config = safety_config
         self.current_state = EnvelopeState.CLOSED
         self.current_aperture = 0.0
         self.current_entity_id: str | None = None
@@ -60,10 +51,8 @@ class TradingEnvelope:
             return SafetyReason.INVALID_RETURNSHAPE
         if context.evaluation_time > return_shape.model_time + return_shape.projection_interval:
             return SafetyReason.SHAPE_STALE
-        if not context.market_eligible:
+        if context.market_eligible is False:
             return SafetyReason.MARKET_INELIGIBLE
-        if context.data_integrity <= self.safety_config.critical_data_integrity_threshold:
-            return SafetyReason.DATA_INVALID
         return None
 
     def process(self, return_shape: ReturnShape, context: EnvelopeContext) -> EnvelopeEvaluation:
@@ -98,19 +87,13 @@ class TradingEnvelope:
             capture = self.capturability_model.evaluate(return_shape, context)
         except InvalidReturnShapeError:
             invalid_return_shape = True
-            gate_values = {
-                name: getattr(context, name)
-                for name in self.capturability_model.feasibility_gate_dimensions
-            }
             capture = CapturabilityResult(
                 hard_eligibility=0,
                 geometry_quality=0.0,
                 structural_quality=0.0,
                 risk_quality=0.0,
                 base_capturability_score=0.0,
-                feasibility_gate_score=min(gate_values.values()),
                 capturability_score=0.0,
-                gate_dimension_values=gate_values,
                 reason_codes=["INVALID_RETURNSHAPE"],
             )
         reasons.extend(capture.reason_codes)
@@ -166,7 +149,6 @@ class TradingEnvelope:
             structural_quality=capture.structural_quality,
             risk_quality=capture.risk_quality,
             base_capturability_score=capture.base_capturability_score,
-            feasibility_gate_score=capture.feasibility_gate_score,
             capturability_score=capture.capturability_score,
             previous_envelope_state=previous_state,
             new_envelope_state=self.current_state,
@@ -177,7 +159,6 @@ class TradingEnvelope:
             safety_state=SafetyState.CLEAR if safety_reason is None else SafetyState.SAFETY_CLOSED,
             safety_reason=safety_reason,
             candidate_envelope=candidate_for_output,
-            gate_dimension_values=capture.gate_dimension_values,
             reason_codes=sorted(set(reasons)),
             events=events,
         )

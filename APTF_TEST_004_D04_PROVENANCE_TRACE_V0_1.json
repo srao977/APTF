@@ -1,0 +1,340 @@
+{
+  "authority": {
+    "close_persistence": 2,
+    "close_threshold": 0.55,
+    "contract": "APTF_D04_KNOWN_INPUT_CONTEXT_CONTRACT_V0_2_2.md",
+    "critical_data_integrity_threshold": 0.2,
+    "implementation": "APTF_D04_KNOWN_INPUT_IMPLEMENTATION_V0_2_2.md",
+    "open_persistence": 3,
+    "open_threshold": 0.75,
+    "schema": "D04_KNOWN_INPUT_CONTEXT_SCHEMA_V0_2_2.json"
+  },
+  "cycles": [
+    {
+      "active_arbitrary_placeholder_count": 0,
+      "active_fields": [
+        "evaluation_time",
+        "data_integrity"
+      ],
+      "active_known_input_count": 2,
+      "context_role": "PRODUCTION",
+      "cycle": 1,
+      "g_active_inputs": {
+        "data_integrity": 1.0
+      },
+      "g_result": 1.0,
+      "g_unavailable_inputs": [
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "h_active_inputs": {
+        "critical_data_integrity_threshold": 0.2,
+        "data_integrity": 1.0,
+        "market_eligible": null,
+        "market_eligible_applicability": "UNAVAILABLE_NON_PARTICIPATING",
+        "projection_valid": "DERIVED_D02_AND_EVALUATION_TIME",
+        "valid_inputs": true
+      },
+      "provenance": {
+        "broker_health": "UNAVAILABLE",
+        "capital_available": "UNAVAILABLE",
+        "clock_event_quality": "UNAVAILABLE",
+        "data_integrity": "DERIVED",
+        "evaluation_time": "DERIVED",
+        "execution_feasibility": "UNAVAILABLE",
+        "latency_quality": "UNAVAILABLE",
+        "liquidity_quality": "UNAVAILABLE",
+        "market_eligible": "UNAVAILABLE",
+        "portfolio_capacity": "UNAVAILABLE",
+        "position_capacity": "UNAVAILABLE",
+        "risk_capacity": "UNAVAILABLE",
+        "spread_quality": "UNAVAILABLE"
+      },
+      "unavailable_fields": [
+        "market_eligible",
+        "clock_event_quality",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "unavailable_input_count": 11,
+      "unknown_active_input_count": 0
+    },
+    {
+      "active_arbitrary_placeholder_count": 0,
+      "active_fields": [
+        "evaluation_time",
+        "data_integrity"
+      ],
+      "active_known_input_count": 2,
+      "context_role": "PRODUCTION",
+      "cycle": 2,
+      "g_active_inputs": {
+        "data_integrity": 1.0
+      },
+      "g_result": 1.0,
+      "g_unavailable_inputs": [
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "h_active_inputs": {
+        "critical_data_integrity_threshold": 0.2,
+        "data_integrity": 1.0,
+        "market_eligible": null,
+        "market_eligible_applicability": "UNAVAILABLE_NON_PARTICIPATING",
+        "projection_valid": "DERIVED_D02_AND_EVALUATION_TIME",
+        "valid_inputs": true
+      },
+      "provenance": {
+        "broker_health": "UNAVAILABLE",
+        "capital_available": "UNAVAILABLE",
+        "clock_event_quality": "UNAVAILABLE",
+        "data_integrity": "DERIVED",
+        "evaluation_time": "DERIVED",
+        "execution_feasibility": "UNAVAILABLE",
+        "latency_quality": "UNAVAILABLE",
+        "liquidity_quality": "UNAVAILABLE",
+        "market_eligible": "UNAVAILABLE",
+        "portfolio_capacity": "UNAVAILABLE",
+        "position_capacity": "UNAVAILABLE",
+        "risk_capacity": "UNAVAILABLE",
+        "spread_quality": "UNAVAILABLE"
+      },
+      "unavailable_fields": [
+        "market_eligible",
+        "clock_event_quality",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "unavailable_input_count": 11,
+      "unknown_active_input_count": 0
+    },
+    {
+      "active_arbitrary_placeholder_count": 0,
+      "active_fields": [
+        "evaluation_time",
+        "data_integrity"
+      ],
+      "active_known_input_count": 2,
+      "context_role": "PRODUCTION",
+      "cycle": 3,
+      "g_active_inputs": {
+        "data_integrity": 1.0
+      },
+      "g_result": 1.0,
+      "g_unavailable_inputs": [
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "h_active_inputs": {
+        "critical_data_integrity_threshold": 0.2,
+        "data_integrity": 1.0,
+        "market_eligible": null,
+        "market_eligible_applicability": "UNAVAILABLE_NON_PARTICIPATING",
+        "projection_valid": "DERIVED_D02_AND_EVALUATION_TIME",
+        "valid_inputs": true
+      },
+      "provenance": {
+        "broker_health": "UNAVAILABLE",
+        "capital_available": "UNAVAILABLE",
+        "clock_event_quality": "UNAVAILABLE",
+        "data_integrity": "DERIVED",
+        "evaluation_time": "DERIVED",
+        "execution_feasibility": "UNAVAILABLE",
+        "latency_quality": "UNAVAILABLE",
+        "liquidity_quality": "UNAVAILABLE",
+        "market_eligible": "UNAVAILABLE",
+        "portfolio_capacity": "UNAVAILABLE",
+        "position_capacity": "UNAVAILABLE",
+        "risk_capacity": "UNAVAILABLE",
+        "spread_quality": "UNAVAILABLE"
+      },
+      "unavailable_fields": [
+        "market_eligible",
+        "clock_event_quality",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "unavailable_input_count": 11,
+      "unknown_active_input_count": 0
+    },
+    {
+      "active_arbitrary_placeholder_count": 0,
+      "active_fields": [
+        "evaluation_time",
+        "data_integrity"
+      ],
+      "active_known_input_count": 2,
+      "context_role": "PRODUCTION",
+      "cycle": 4,
+      "g_active_inputs": {
+        "data_integrity": 1.0
+      },
+      "g_result": 1.0,
+      "g_unavailable_inputs": [
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "h_active_inputs": {
+        "critical_data_integrity_threshold": 0.2,
+        "data_integrity": 1.0,
+        "market_eligible": null,
+        "market_eligible_applicability": "UNAVAILABLE_NON_PARTICIPATING",
+        "projection_valid": "DERIVED_D02_AND_EVALUATION_TIME",
+        "valid_inputs": true
+      },
+      "provenance": {
+        "broker_health": "UNAVAILABLE",
+        "capital_available": "UNAVAILABLE",
+        "clock_event_quality": "UNAVAILABLE",
+        "data_integrity": "DERIVED",
+        "evaluation_time": "DERIVED",
+        "execution_feasibility": "UNAVAILABLE",
+        "latency_quality": "UNAVAILABLE",
+        "liquidity_quality": "UNAVAILABLE",
+        "market_eligible": "UNAVAILABLE",
+        "portfolio_capacity": "UNAVAILABLE",
+        "position_capacity": "UNAVAILABLE",
+        "risk_capacity": "UNAVAILABLE",
+        "spread_quality": "UNAVAILABLE"
+      },
+      "unavailable_fields": [
+        "market_eligible",
+        "clock_event_quality",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "unavailable_input_count": 11,
+      "unknown_active_input_count": 0
+    },
+    {
+      "active_arbitrary_placeholder_count": 0,
+      "active_fields": [
+        "evaluation_time",
+        "data_integrity"
+      ],
+      "active_known_input_count": 2,
+      "context_role": "PRODUCTION",
+      "cycle": 5,
+      "g_active_inputs": {
+        "data_integrity": 1.0
+      },
+      "g_result": 1.0,
+      "g_unavailable_inputs": [
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "h_active_inputs": {
+        "critical_data_integrity_threshold": 0.2,
+        "data_integrity": 1.0,
+        "market_eligible": null,
+        "market_eligible_applicability": "UNAVAILABLE_NON_PARTICIPATING",
+        "projection_valid": "DERIVED_D02_AND_EVALUATION_TIME",
+        "valid_inputs": true
+      },
+      "provenance": {
+        "broker_health": "UNAVAILABLE",
+        "capital_available": "UNAVAILABLE",
+        "clock_event_quality": "UNAVAILABLE",
+        "data_integrity": "DERIVED",
+        "evaluation_time": "DERIVED",
+        "execution_feasibility": "UNAVAILABLE",
+        "latency_quality": "UNAVAILABLE",
+        "liquidity_quality": "UNAVAILABLE",
+        "market_eligible": "UNAVAILABLE",
+        "portfolio_capacity": "UNAVAILABLE",
+        "position_capacity": "UNAVAILABLE",
+        "risk_capacity": "UNAVAILABLE",
+        "spread_quality": "UNAVAILABLE"
+      },
+      "unavailable_fields": [
+        "market_eligible",
+        "clock_event_quality",
+        "capital_available",
+        "portfolio_capacity",
+        "position_capacity",
+        "liquidity_quality",
+        "spread_quality",
+        "latency_quality",
+        "execution_feasibility",
+        "risk_capacity",
+        "broker_health"
+      ],
+      "unavailable_input_count": 11,
+      "unknown_active_input_count": 0
+    }
+  ],
+  "invariants": {
+    "active_arbitrary_placeholder_count": 0,
+    "active_gate_set": [
+      "data_integrity"
+    ],
+    "critical_data_integrity_threshold": 0.2,
+    "proof_override_active": false,
+    "unavailable_future_context_numerically_fabricated": false,
+    "unknown_active_input_count": 0
+  },
+  "test_id": "APTF_TEST_004_CORRECTED_D04_REGRESSION_V0_1"
+}

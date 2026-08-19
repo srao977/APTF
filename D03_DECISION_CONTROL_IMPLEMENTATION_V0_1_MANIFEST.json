@@ -1,0 +1,83 @@
+{
+  "manifest_id": "D03_DECISION_CONTROL_IMPLEMENTATION_V0_1",
+  "created_utc": "2026-08-17T15:25:31.1152190Z",
+  "implementation_version": "0.1",
+  "status": "IMPLEMENTED_VERIFIED_FREEZE_CANDIDATE",
+  "implementation_target": "d03_decision_control",
+  "authority": {
+    "d03_design_freeze": {"path":"D03_DECISION_CONTROL_DESIGN_V0_1_FREEZE.json","sha256":"F1A6492A284F05CC11707A4D64431E6841D9AB5E19A943E6C07365DF76A27B73","size_bytes":4033},
+    "d03_design_manifest": {"path":"D03_DECISION_CONTROL_DESIGN_V0_1_MANIFEST.json","sha256":"1BDE7D10D7687B2B02A569591BE203C2D35614EB24C432599219377194231BEF","size_bytes":6789},
+    "d04": {"path":"D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FREEZE.json","sha256":"F72A86B3085BD11D8626F06F1FE3FAEDDE60570365488176011239382A46F1AF","size_bytes":4069},
+    "d02": {"path":"D02_RETURNSHAPE_IMPLEMENTATION_V0_2_FREEZE.json","sha256":"C8029C4B9608547BBF7960F05E4F8613480C4FB2BF8594D94482516B954F7E72","size_bytes":5773},
+    "d01": {"path":"D01_PRE_STAGE_3_ARCHITECTURE_FREEZE_V0_1.json","sha256":"B6ED942E41EC1C72350CF9247597E5819A942DBE9D04770C23E243204165B235","size_bytes":4853}
+  },
+  "contract": {
+    "d04_top_level_field_count": 23,
+    "d04_candidate_field_count": 6,
+    "decision_context_field_count": 12,
+    "d03_output_field_count": 21,
+    "direct_d01_input_count": 0,
+    "direct_d02_input_count": 0,
+    "direction_source": "D04 candidate_envelope.path_direction"
+  },
+  "validation": {
+    "valid_policy_classes_expected": 7680,
+    "valid_policy_classes_tested": 7680,
+    "valid_policy_classes_matched": 7680,
+    "mismatched_classes": 0,
+    "field_comparisons": 161280,
+    "field_level_mismatches": 0,
+    "exceptions": 0,
+    "invalid_classes_expected": 11,
+    "invalid_classes_tested": 11,
+    "invalid_classes_rejected": 11,
+    "invalid_classes_committed": 0,
+    "nondeterministic_repeats": 0,
+    "fresh_process_digest_mismatches": 0,
+    "primary_reason_mismatches": 0,
+    "supporting_reason_mismatches": 0,
+    "decision_rule_id_mismatches": 0,
+    "candidate_lineage_mismatches": 0,
+    "decision_identity_mismatches": 0,
+    "t00_mismatches": 0,
+    "feed_replay_invariance": "PASS",
+    "causality": "PASS",
+    "source_governance": "PASS",
+    "non_drift": "PASS",
+    "traceability": "20/20"
+  },
+  "tests": {
+    "d03": {"collected":40,"passed":40,"failed":0,"skipped":0},
+    "d04": {"collected":79,"passed":79,"failed":0,"skipped":0},
+    "d02": {"collected":26,"passed":26,"failed":0,"skipped":0},
+    "d01_v0_2": {"collected":50,"passed":50,"failed":0,"skipped":0}
+  },
+  "files": [
+    {"relative_path":"d03_decision_control/pyproject.toml","size_bytes":601,"sha256":"A35548D821F3634BA8BFBB6790229DCF2E6332A8A878819D8FD77A5EF80072CB","role":"package metadata"},
+    {"relative_path":"d03_decision_control/src/d03/__init__.py","size_bytes":25,"sha256":"D8918CBBE9C25583F9DD61DA96FFD2D5D64E2CF11E0EC545CCCFA95409293B50","role":"package root"},
+    {"relative_path":"d03_decision_control/src/d03/v01/__init__.py","size_bytes":12724,"sha256":"FF7EDFD0CF3ECAF20317A78296DA0C9AABF2E5BADAB886D02AD5B1085539BDC3","role":"runtime models, validation, policy, and public evaluator"},
+    {"relative_path":"d03_decision_control/tests/test_d03_decision_control.py","size_bytes":10712,"sha256":"6F5D741F3C8E24441E12238F9C546032BAB9D7AFF2DE869183CAA1F182E94180","role":"focused contract and invariant tests"},
+    {"relative_path":"d03_decision_control/tests/test_exhaustive_conformance.py","size_bytes":5491,"sha256":"D5260EA96B2E2CDA8212F5039C0822A9B3BEC51CB024580853C914BEA0C3AF1F","role":"independent frozen-oracle exhaustive comparator"},
+    {"relative_path":"d03_decision_control/tests/fresh_process_digest.py","size_bytes":1562,"sha256":"2830D0B67728A2CA370ACA8563B3477007950F6CFE51ECE1893D52BAE13EF232","role":"fresh-process full-space deterministic digest"},
+    {"relative_path":"D03_DECISION_CONTROL_IMPLEMENTATION_TRACE_V0_1.md","size_bytes":3063,"sha256":"FB234E9744B49B8D77F36C683E2BD48D6116DF5B1F30188A5E041B5A35A56809","role":"implementation trace"},
+    {"relative_path":"D03_DESIGN_TO_IMPLEMENTATION_TRACEABILITY_V0_1.md","size_bytes":3035,"sha256":"39DE80BD58630AC6A3DE51CD771826BA55099C06908E1FB8F1A219D6447DD106","role":"20-rule design/code/test traceability"},
+    {"relative_path":"D03_IMPLEMENTATION_NON_DRIFT_AUDIT_V0_1.md","size_bytes":998,"sha256":"C29FE135DDFFD9CFD51BCEBCC6040C0FDE5A89C820960382AE8CB4EE0FDCAD8A","role":"protected authority non-drift audit"},
+    {"relative_path":"D03_IMPLEMENTATION_DETERMINISM_CONFORMANCE_V0_1.md","size_bytes":1218,"sha256":"393F0D7C41365036F25244D2195E3FE0705E69CF0EE3B13AE343A6B0F090EFFF","role":"exhaustive determinism conformance"},
+    {"relative_path":"D03_IMPLEMENTATION_FEED_REPLAY_INVARIANCE_V0_1.md","size_bytes":583,"sha256":"000F7D66B67A997658E001C7D4D422389EFACB8264F62E364D2B67CCB1A01482","role":"synthetic transport invariance evidence"},
+    {"relative_path":"D03_IMPLEMENTATION_CAUSALITY_AUDIT_V0_1.md","size_bytes":1053,"sha256":"FB4B702D40E9834221008D54CB5A9C8EBD9AE164A69B7D8C427E5F319BEA6805","role":"runtime causality audit"},
+    {"relative_path":"D03_IMPLEMENTATION_TEST_EVIDENCE_V0_1.md","size_bytes":1548,"sha256":"47431995B189A4C5C87B48989FB9671EDFB72D17553548D4B227812F2E9BBD71","role":"executed test evidence"}
+  ],
+  "file_count": 13,
+  "excluded": ["**/__pycache__/**", "**/*.pyc", ".pytest_cache/**", "temporary output", "unrelated repository files"],
+  "data_governance": {
+    "historical_market_data_accessed": false,
+    "first_six_months_accessed": false,
+    "final_six_months_accessed": false,
+    "reserve_status": "SEALED",
+    "reserve_accessed": false,
+    "outcomes_inspected": false,
+    "pnl_inspected": false,
+    "replay_executed": false,
+    "backtest_executed": false
+  }
+}

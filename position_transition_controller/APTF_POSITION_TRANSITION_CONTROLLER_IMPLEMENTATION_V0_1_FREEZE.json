@@ -1,0 +1,60 @@
+﻿{
+    "canonical_verb_domain":  [
+                                  "BUY",
+                                  "SELL",
+                                  "SELL_SHORT",
+                                  "BUY_TO_COVER",
+                                  "HOLD",
+                                  "NO_ACTION"
+                              ],
+    "non_drift":  {
+                      "design_modified":  "NO",
+                      "d04_modified":  "NO",
+                      "d02_modified":  "NO",
+                      "d03_modified":  "NO",
+                      "d01_modified":  "NO"
+                  },
+    "historical_action_generation":  {
+                                         "source_non_mutation":  "PASS",
+                                         "causality_test":  "PASS",
+                                         "output_rows":  107451,
+                                         "output_file":  "SPY_APTF_position_actions_development_v0_1.csv",
+                                         "source_file":  "SPY_1min_normalized_v0_1.csv",
+                                         "input_rows":  107451,
+                                         "source_sha256":  "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+                                         "determinism_test":  "PASS",
+                                         "output_sha256":  "a4190aafd8507ba01760274ec64afa66d9590e872b6102a8141bc9436e5721c7"
+                                     },
+    "freeze_id":  "APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_V0_1_FROZEN_20260817T120630Z",
+    "transition_count":  9,
+    "implementation_package_identity":  "APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_V0_1",
+    "data_governance":  {
+                            "second_sample_accessed":  "NO",
+                            "broker_integration":  "NO",
+                            "pnl_calculated":  "NO",
+                            "first_sample_accessed":  "YES",
+                            "equity_calculated":  "NO"
+                        },
+    "test_results":  {
+                         "stale_position_protection":  "PASS",
+                         "controller_conformance":  "PASS",
+                         "idempotence":  "PASS",
+                         "frozen_vectors_9_9":  "PASS"
+                     },
+    "status":  "PASS",
+    "frozen_authorities":  {
+                               "position_action_design_freeze_sha256":  "APTF_POSITION_ACTION_DESIGN_V0_1_FROZEN_20260817T180228Z",
+                               "d03_freeze_sha256":  "D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_FROZEN_20260817T152629Z",
+                               "d03_implementation_freeze":  "D03_DECISION_CONTROL_IMPLEMENTATION_V0_1_FROZEN_20260817T152629Z",
+                               "position_action_design_freeze":  "APTF_POSITION_ACTION_DESIGN_V0_1_FROZEN_20260817T180228Z"
+                           },
+    "upstream_regression_results":  {
+                                        "d03":  "40/40 PASS",
+                                        "d04":  "1/1 PASS"
+                                    },
+    "implementation_manifest":  {
+                                    "sha256":  "7D543120D7FF7DDB03C4BA5E6BFDECA98AC83AADEA3F13A325DF370CBCD07AC0",
+                                    "path":  "APTF_POSITION_TRANSITION_CONTROLLER_IMPLEMENTATION_V0_1_MANIFEST.json"
+                                },
+    "timestamp_utc":  "2026-08-17T12:06:30.4552585-07:00"
+}

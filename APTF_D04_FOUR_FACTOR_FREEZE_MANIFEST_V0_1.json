@@ -1,0 +1,72 @@
+{
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_version": "V0.1",
+  "status": "FROZEN",
+  "creation_timestamp_utc": "2026-08-18T21:44:15.6360664Z",
+  "reason": "Freeze the exact current four-factor D04 authority validated by Test 004R as the baseline for subsequent experiments.",
+  "validation": {
+    "test": "TEST 004R",
+    "result": "PASS",
+    "acceptance": "60/60 PASS",
+    "maximum_C_delta": 0.0,
+    "maximum_reconstruction_error": 0.0
+  },
+  "capturability_equation": "C = H * Q_G * Q_S * Q_R",
+  "active_factors": ["H", "Q_G", "Q_S", "Q_R"],
+  "factor_authority": {
+    "H": "int(projection_valid and market_eligible is not False)",
+    "Q_G": "0 if maximum_absolute_displacement == 0 else abs(terminal_displacement) / maximum_absolute_displacement",
+    "Q_S": "(strength * coherence * persistence) ** (1 / 3)",
+    "Q_R": "sqrt((1 - uncertainty) * (1 - reversal_propensity))"
+  },
+  "removed_from_current_executable_authority": ["data_integrity", "G"],
+  "data_quality_responsibility": "UPSTREAM_OBSERVATION_ADMISSION",
+  "threshold_authority": {
+    "open_threshold": 0.75,
+    "close_threshold": 0.55,
+    "open_persistence_observations": 3,
+    "close_persistence_observations": 2
+  },
+  "state_machine": {
+    "states": ["CLOSED", "OPENING", "OPEN", "CLOSING"],
+    "authority": "d04_trading_envelope/src/aptf_d04/envelope/hysteresis.py",
+    "event_mapping_authority": "d04_trading_envelope/src/aptf_d04/envelope/lifecycle.py"
+  },
+  "future_context_parameters": {
+    "classification": ["FUTURE", "NON_EXECUTABLE", "NO_CURRENT_NUMERIC_PARTICIPATION"],
+    "parameters": ["broker_health", "capital_available", "execution_feasibility", "latency_quality", "liquidity_quality", "portfolio_capacity", "position_capacity", "risk_capacity", "spread_quality"],
+    "active_in_current_mathematics": false,
+    "placeholder_values": []
+  },
+  "authoritative_files": [
+    {"path":"d04_trading_envelope/src/aptf_d04/cli/main.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"ae7bdaee65f6b69c6cb8022ea376250d5f5b9b677adf738d06139fa2fc9450ab"},
+    {"path":"d04_trading_envelope/src/aptf_d04/configuration.py","authority_class":"CONFIGURATION_AUTHORITY","sha256":"383e8890b469170c8686191e9b442cc7845d9e192f467531fa7ac54d594c2481"},
+    {"path":"d04_trading_envelope/src/aptf_d04/inputs/scenario_loader.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"31d6534e8546b6dface1f06ba000f3f327a0c31d50df02be256ffac539fc0b8f"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/aperture_model.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"f113a61faa53f2ae0036d904d7cf7594c3de4024948ad55aa59d8b9cf71ab2d8"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"fc9d4a300eabcb3e83b9bccac5a1efeae40b0df09b6cbfa52413601788f01336"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/hysteresis.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"fdbeeb203c309ca91c20f21b70cbb342406a97c2c86b8dc0d0a7033bff3cf101"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/lifecycle.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"9870371f1070381c096c43e9c0b558f07aa87c95a6602b1b31b3db302341151e"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py","authority_class":"EXECUTABLE_AUTHORITY","sha256":"50302214070c6051ddb84fdfa66a5f3c8e18eef668024684e65605887cd28191"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/capturability.py","authority_class":"CONTRACT_AUTHORITY","sha256":"3f8727ed0a6828e7e2da7bbb3770e22003a7fa7d242c1f7c319c222f766ab2c2"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_context.py","authority_class":"CONTRACT_AUTHORITY","sha256":"8d57bb4dca88b6bf7b5b4fa6e960f3fdc4cb46c3988fb53879aa7ab3f9349ff8"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/enums.py","authority_class":"CONTRACT_AUTHORITY","sha256":"6dfe44b79db989bf0083c6ef9313568e2292f5be248f02600d693f11dc2eb2d5"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_state.py","authority_class":"CONTRACT_AUTHORITY","sha256":"eabc3d90694c51a0fa44eda738092d50d45f484ce2239a4e5ca2ff65314f6233"},
+    {"path":"d04_trading_envelope/src/aptf_d04/models/opportunity.py","authority_class":"CONTRACT_AUTHORITY","sha256":"2df58e531a4e90bb70e512e384b38abd245169d2ec0b186ec8b6ddef2ba8bb49"},
+    {"path":"d04_trading_envelope/config/default.yaml","authority_class":"CONFIGURATION_AUTHORITY","sha256":"4a54a654264ce701290373fa7980b9a30a108c5a3301c092a667e3563a03469c"},
+    {"path":"d04_trading_envelope/README.md","authority_class":"DESIGN_AUTHORITY","sha256":"180e556030ca5ea0747e1684a782440f0b4dc2a87aba805455acd595c6311537"},
+    {"path":"APTF_D04_DATA_INTEGRITY_REMOVAL_PLAN_V0_1.md","authority_class":"IMPLEMENTATION_DOCUMENTATION","sha256":"f61e72aece1f9b02b0ee1244fc033a666330fa069ed2515d39390affb477edb5"},
+    {"path":"APTF_D04_DATA_INTEGRITY_POSTCHANGE_AUDIT_V0_1.json","authority_class":"IMPLEMENTATION_DOCUMENTATION","sha256":"6d6a7bd3db77d696eee8ac1282cde25621287dddd5d7dac2b763ce5e67958d66"}
+  ],
+  "authority_hashes_artifact": "APTF_D04_FOUR_FACTOR_FREEZE_HASHES_V0_1.json",
+  "test004r_linkage_artifact": "APTF_D04_FOUR_FACTOR_FREEZE_TEST004R_LINKAGE_V0_1.json",
+  "test004r_evidence_references": ["APTF_TEST_004R_RESULT_V0_1.md", "APTF_TEST_004R_D04_EQUATION_PROOF_V0_1.json", "APTF_TEST_004R_NUMERIC_REGRESSION_V0_1.json", "APTF_TEST_004R_SEMANTIC_REGRESSION_V0_1.json", "APTF_TEST_004R_TEMPORAL_REGRESSION_V0_1.json", "APTF_TEST_004R_PROVENANCE_REGRESSION_V0_1.json"],
+  "previous_authority_references": ["D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_FREEZE.json", "D04_TRADING_ENVELOPE_IMPLEMENTATION_V0_2_1_FREEZE.json", "APTF_D04_DATA_INTEGRITY_POSTCHANGE_AUDIT_V0_1.json"],
+  "temporal_authority_reference": "APTF_TEMPORAL_EVENT_ENVELOPE_IMPLEMENTATION_FREEZE_V0_2.json",
+  "preliminary_test005_artifacts": [
+    {"path":"APTF_TEST_005_PLAN_V0_1.md","classification":"ABORTED_NON_AUTHORITATIVE"},
+    {"path":"diagnostics/aptf_test_005_empirical_100.py","classification":"ABORTED_NON_AUTHORITATIVE"}
+  ],
+  "execution_during_freeze": {"pipeline_executions":0,"market_observations_processed":0,"test005_executed":false},
+  "post_freeze_authority_hash_identity": "17/17 PASS",
+  "ready_as_test005_baseline": true
+}

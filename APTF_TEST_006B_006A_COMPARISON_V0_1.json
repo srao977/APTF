@@ -1,0 +1,116 @@
+{
+  "classification": "DESCRIPTIVE_NO_SIMILARITY_THRESHOLD",
+  "development": {
+    "actionable": 985,
+    "counts": {
+      "BUY": 131,
+      "HOLD": 752,
+      "SELL": 102
+    },
+    "percentages": {
+      "BUY": 13.2994923857868,
+      "HOLD": 76.34517766497461,
+      "SELL": 10.355329949238579
+    },
+    "ranges": {
+      "C": {
+        "maximum": 0.6530244378797647,
+        "minimum": 0.0023286748222917037
+      },
+      "Q_G": {
+        "maximum": 1.0,
+        "minimum": 0.024858610539630066
+      },
+      "Q_R": {
+        "maximum": 0.712611720830071,
+        "minimum": 0.0039399589230584816
+      },
+      "Q_S": {
+        "maximum": 0.9163818371091381,
+        "minimum": 0.05711019382389611
+      }
+    },
+    "transition_matrix": {
+      "BUY": {
+        "BUY": 35,
+        "HOLD": 95,
+        "SELL": 0
+      },
+      "HOLD": {
+        "BUY": 96,
+        "HOLD": 579,
+        "SELL": 77
+      },
+      "SELL": {
+        "BUY": 0,
+        "HOLD": 77,
+        "SELL": 25
+      }
+    }
+  },
+  "differences": {
+    "direct_reversal_difference": {
+      "BUY_TO_SELL": 0,
+      "SELL_TO_BUY": 0
+    },
+    "percentage_points": {
+      "BUY": 0.7797124044430284,
+      "HOLD": -0.0868530597140591,
+      "SELL": -0.6928593447289639
+    }
+  },
+  "execution_timestamp_utc": "2026-08-18T23:20:48.4668982Z",
+  "freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "freeze_manifest_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+  "reserve": {
+    "actionable": 101206,
+    "counts": {
+      "BUY": 14249,
+      "HOLD": 77178,
+      "SELL": 9779
+    },
+    "percentages": {
+      "BUY": 14.079204790229829,
+      "HOLD": 76.25832460526055,
+      "SELL": 9.662470604509615
+    },
+    "ranges": {
+      "C": {
+        "maximum": 0.6185298431164367,
+        "minimum": 7.476458871570953e-06
+      },
+      "Q_G": {
+        "maximum": 1.0,
+        "minimum": 5.650984944039355e-05
+      },
+      "Q_R": {
+        "maximum": 0.711335851223812,
+        "minimum": 0.0029624659141543924
+      },
+      "Q_S": {
+        "maximum": 0.9215367319746877,
+        "minimum": 0.009344788745680531
+      }
+    },
+    "transition_matrix": {
+      "BUY": {
+        "BUY": 3901,
+        "HOLD": 10348,
+        "SELL": 0
+      },
+      "HOLD": {
+        "BUY": 10348,
+        "HOLD": 59822,
+        "SELL": 7007
+      },
+      "SELL": {
+        "BUY": 0,
+        "HOLD": 7007,
+        "SELL": 2772
+      }
+    }
+  },
+  "run_id": "TEST006B_ONE_WAY_RESERVE_RUN_V0_1_001",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "status": "PASS"
+}

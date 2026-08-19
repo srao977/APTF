@@ -1,7 +1,7 @@
 name: 03_open_then_shape_deteriorates
 entity_id: TEST_C
 shape_defaults: {terminal_displacement: 1.0, maximum_absolute_displacement: 1.0, strength: 0.98, coherence: 0.98, persistence: 0.98, uncertainty: 0.02, reversal_propensity: 0.02, state_support_ratio: 2.0}
-context_defaults: {market_eligible: true, data_integrity: 0.96, clock_event_quality: 0.95, capital_available: 0.94, portfolio_capacity: 0.94, position_capacity: 0.94, liquidity_quality: 0.94, spread_quality: 0.94, latency_quality: 0.94, execution_feasibility: 0.94, risk_capacity: 0.94, broker_health: 0.94}
+context_defaults: {market_eligible: true}
 steps:
   - {scenario_time: 0}
   - {scenario_time: 1}

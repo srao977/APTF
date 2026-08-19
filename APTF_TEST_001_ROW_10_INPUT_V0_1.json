@@ -1,0 +1,112 @@
+{
+  "test_id": "APTF_TEST_001_ROW_10_V0_1",
+  "authority": {
+    "csv": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+    "temporal_runtime_freeze_sha256": "4e23eae07adc848614f71842c97c49271a1d22db6624d3d85e427a92ff02296a"
+  },
+  "selection": {
+    "physical_csv_row": 10,
+    "header_row": 1,
+    "data_observation_number": 9,
+    "zero_based_data_index": 8,
+    "source_row_number": 9,
+    "last_data_index_read": 8,
+    "future_rows_read": 0,
+    "target_confirmed": true
+  },
+  "header": [
+    "entity_id", "event_timestamp_local", "event_timestamp_utc", "timezone", "open", "high", "low", "close", "volume", "close_return_1m", "high_low_range", "high_low_range_fraction", "open_close_change", "open_close_return", "session_type", "is_regular_session", "minute_of_session", "source_provider", "source_dataset", "source_row_number", "data_valid", "quality_flags"
+  ],
+  "normalized_source_record": {
+    "entity_id": "SPY",
+    "event_timestamp_local": "2022-09-30T04:08:00-04:00",
+    "event_timestamp_utc": "2022-09-30T08:08:00Z",
+    "timezone": "America/New_York",
+    "open": 365.68,
+    "high": 365.7,
+    "low": 365.5,
+    "close": 365.5,
+    "volume": 4288.0,
+    "close_return_1m": -0.00016413174307916556,
+    "high_low_range": 0.19999999999998863,
+    "high_low_range_fraction": 0.0005471956224349894,
+    "open_close_change": -0.18000000000000682,
+    "open_close_return": -0.0004922336469044275,
+    "session_type": "PREMARKET",
+    "is_regular_session": false,
+    "minute_of_session": -1,
+    "source_provider": "FirstRateData",
+    "source_dataset": "SPY_1min_firstratedata",
+    "source_row_number": 9,
+    "data_valid": true,
+    "quality_flags": ""
+  },
+  "temporal_envelope_metadata": {
+    "source_stream_id": "aptf:source:v1:FirstRateData:SPY_1min_firstratedata:normalized_v0_1:sha256:73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+    "sequence_number": 8,
+    "instrument_id": "SPY",
+    "market_event_time_utc": "2022-09-30T08:08:00Z",
+    "market_event_time_role": "PROVIDER_EVENT",
+    "observation_id": "aptf:obs:v1:sha256:b509f4eab70253e21966fc6747eeec80329585c71e96a22b58cfa7f7dc21e696"
+  },
+  "d01_received_observation": {
+    "entity_id": "SPY",
+    "event_time": 1664525280.0,
+    "receive_time": 1664525280.0,
+    "sequence_id": 8,
+    "price": 365.5,
+    "volume": 4288.0,
+    "bid": null,
+    "ask": null,
+    "bid_size": null,
+    "ask_size": null,
+    "session": "PREMARKET",
+    "source_quality": 1.0,
+    "availability_mask": {"price": true, "volume": true}
+  },
+  "d01_effective_defaults": {
+    "availability_mask": {"price": true, "volume": true, "bid": false, "ask": false}
+  },
+  "prior_causal_state": {
+    "warmup_data_indices": [0, 7],
+    "warmup_rows": 8,
+    "d01_runtime_state_sequence": 8,
+    "d01_last_event_time": 1664525220.0,
+    "d04_state": "CLOSED",
+    "d04_aperture": 0.2776088557247953,
+    "position_initial_condition": {"state": "LONG", "version": 0, "identity": "INITIAL"},
+    "position_at_target": {"state": "FLAT", "version": 1, "identity": "INITIAL"},
+    "position_source": "RealCausalReplayHarness explicit REPLAY_INITIAL_CONDITION plus semantic carry-forward",
+    "broker_sourced": false
+  },
+  "d04_context": {
+    "evaluation_time": 1664525280.0,
+    "market_eligible": true,
+    "data_integrity": 1.0,
+    "clock_event_quality": 1.0,
+    "capital_available": 1.0,
+    "portfolio_capacity": 1.0,
+    "position_capacity": 1.0,
+    "liquidity_quality": 1.0,
+    "spread_quality": 1.0,
+    "latency_quality": 1.0,
+    "execution_feasibility": 1.0,
+    "risk_capacity": 1.0,
+    "broker_health": 1.0
+  },
+  "d03_context": {
+    "context_time": 1664525280.0,
+    "entity_id": "SPY",
+    "actual_position_state": "FLAT",
+    "position_candidate_id": null,
+    "position_source_return_shape_model_time": null,
+    "pending_target_state": "NONE",
+    "pending_decision_id": null,
+    "execution_available": true,
+    "system_enabled": true,
+    "trading_enabled": true,
+    "emergency_flatten": false,
+    "control_state_valid": true
+  }
+}

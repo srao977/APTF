@@ -1,7 +1,7 @@
 name: 07_strong_shape_hard_gate
 entity_id: TEST_G
 shape_defaults: {terminal_displacement: 1.0, maximum_absolute_displacement: 1.0, strength: 1.0, coherence: 1.0, persistence: 1.0, uncertainty: 0.0, reversal_propensity: 0.0, state_support_ratio: 3.0}
-context_defaults: {market_eligible: true, data_integrity: 1.0, clock_event_quality: 1.0, capital_available: 0.9, portfolio_capacity: 0.9, position_capacity: 0.9, liquidity_quality: 0.02, spread_quality: 0.03, latency_quality: 0.1, execution_feasibility: 0.05, risk_capacity: 0.9, broker_health: 0.9}
+context_defaults: {market_eligible: true}
 steps:
   - {scenario_time: 0}
   - {scenario_time: 1}

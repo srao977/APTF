@@ -1,0 +1,24 @@
+{
+  "audit_id": "APTF_CAUSAL_PIPELINE_STAGE_REASON_COUNTS_V0_1",
+  "reconciliation_total": 107451,
+  "reasons": [
+    {"stage":"source_to_frozen_pipeline","reason":"FROZEN_D01_D02_D04_D03_PATH_BYPASSED","count":107451},
+    {"stage":"mock_D03_gate","reason":"HARDCODED_ROW_INDEX_WARMUP_LT_100","count":100},
+    {"stage":"controller_output","reason":"PRE_BUY_FLAT_TO_FLAT_NO_ACTION_PLAN_NON_EXECUTABLE_AND_BLANKED","count":27850},
+    {"stage":"controller_output","reason":"POST_BUY_LONG_TO_LONG_HOLD_PLAN_NON_EXECUTABLE_AND_BLANKED","count":20097},
+    {"stage":"controller_derivation","reason":"MOCK_NO_CHANGE_INCONSISTENT_WITH_LONG_TO_FLAT_CLOSE_MATRIX_ROW_PLAN_REJECTED","count":59403},
+    {"stage":"controller_output","reason":"READY_OPEN_LONG_BUY_POPULATED","count":1}
+  ],
+  "blank_reconciliation": {
+    "hardcoded_warmup": 100,
+    "suppressed_NO_ACTION_plans": 27850,
+    "suppressed_HOLD_plans": 20097,
+    "rejected_inconsistent_close_transitions": 59403,
+    "blank_total": 107450
+  },
+  "classification": {
+    "previous_warmup_or_ineligible_label": "INACCURATE",
+    "true_hardcoded_warmup_rows": 100,
+    "other_blank_rows": 107350
+  }
+}

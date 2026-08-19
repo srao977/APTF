@@ -25,7 +25,6 @@ class EnvelopeEvaluation(BaseModel):
     structural_quality: float = Field(ge=0.0, le=1.0)
     risk_quality: float = Field(ge=0.0, le=1.0)
     base_capturability_score: float = Field(ge=0.0, le=1.0)
-    feasibility_gate_score: float = Field(ge=0.0, le=1.0)
     capturability_score: float = Field(ge=0.0, le=1.0)
     previous_envelope_state: EnvelopeState
     new_envelope_state: EnvelopeState
@@ -36,6 +35,5 @@ class EnvelopeEvaluation(BaseModel):
     safety_state: SafetyState
     safety_reason: SafetyReason | None
     candidate_envelope: CandidateEnvelope | None
-    gate_dimension_values: dict[str, float]
     reason_codes: list[str] = Field(default_factory=list)
     events: list[EventType] = Field(default_factory=list)

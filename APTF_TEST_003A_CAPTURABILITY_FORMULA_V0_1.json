@@ -1,0 +1,52 @@
+{
+  "test_id": "APTF_TEST_003A_D04_REACHABILITY_V0_1",
+  "source": {
+    "file": "d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py",
+    "class": "CapturabilityModelV0_2",
+    "method": "evaluate"
+  },
+  "exact_implementation": {
+    "geometry": "0.0 if maximum_absolute_displacement == 0.0 else abs(terminal_displacement) / maximum_absolute_displacement",
+    "structural": "(strength * coherence * persistence) ** (1.0 / 3.0)",
+    "risk": "sqrt((1.0 - uncertainty) * (1.0 - reversal_propensity))",
+    "base": "geometry * structural * risk",
+    "gate_values": "{name: getattr(context, name) for name in feasibility_gate_dimensions}",
+    "gate": "min(gate_values.values())",
+    "projection_valid": "context.evaluation_time <= return_shape.model_time + return_shape.projection_interval",
+    "hard_eligibility": "int(projection_valid and context.market_eligible and context.data_integrity > critical_data_integrity_threshold)",
+    "final": "hard_eligibility * base * gate"
+  },
+  "mathematical_formula": {
+    "Q_G": "0 when M=0; otherwise |D|/M",
+    "Q_S": "(s*c*p)^(1/3)",
+    "Q_R": "sqrt((1-u)*(1-r))",
+    "B": "Q_G*Q_S*Q_R",
+    "G": "min(g_1,...,g_10)",
+    "H": "projection_valid * market_eligible * 1[data_integrity > critical_threshold] * valid_finite_inputs",
+    "C": "H*Q_G*Q_S*Q_R*G"
+  },
+  "dependencies": [
+    {"term":"D / terminal_displacement","source_component":"D02","source_property":"last FMO level - current level","transformation":"signed difference","range":"finite unbounded; |D|<=M","stateful":"inherits D01 state","configurable":false,"frozen":true},
+    {"term":"M / maximum_absolute_displacement","source_component":"D02","source_property":"all FMO levels and current level","transformation":"max absolute difference","range":"[0,infinity)","stateful":"inherits D01 state","configurable":false,"frozen":true},
+    {"term":"s / strength","source_component":"D01 via D02 copy","source_property":"DMO.strength","transformation":"sigmoid of volume influence, kinematics, coherence, prior uncertainty; clamp [0,1]","range":"[0,1]","stateful":true,"configurable":true,"frozen":true},
+    {"term":"c / coherence","source_component":"D01 via D02 copy","source_property":"DMO.coherence","transformation":"abs(weighted evidence sum)/(weighted absolute sum+epsilon), clamp [0,1]","range":"[0,1]","stateful":true,"configurable":true,"frozen":true},
+    {"term":"p / persistence","source_component":"D01 via D02 copy","source_property":"DMO.persistence","transformation":"recursive bounded update","range":"[0,1]","stateful":true,"configurable":true,"frozen":true},
+    {"term":"u / uncertainty","source_component":"D01 via D02 copy","source_property":"DMO.uncertainty","transformation":"sigmoid of innovation/incoherence/perturbation/quality/instability; clamp [0,1]","range":"[0,1]","stateful":true,"configurable":true,"frozen":true},
+    {"term":"r / reversal_propensity","source_component":"D01 via D02 copy","source_property":"DMO.reversal_propensity","transformation":"sigmoid of kinematic/perturbation/persistence/level/uncertainty terms; clamp [0,1]","range":"[0,1]","stateful":true,"configurable":true,"frozen":true},
+    {"term":"g_1..g_10","source_component":"D04 EnvelopeContext","source_property":"ten feasibility dimensions","transformation":"minimum","range":"each [0,1]; G [0,1]","stateful":false,"configurable":"values supplied per context; dimension list frozen","frozen":true},
+    {"term":"projection_valid","source_component":"D02+D04 context","source_property":"model_time, projection_interval, evaluation_time","transformation":"inclusive time comparison","range":"boolean","stateful":false,"configurable":false,"frozen":true},
+    {"term":"market_eligible","source_component":"D04 context","source_property":"market_eligible","transformation":"boolean hard gate","range":"boolean","stateful":false,"configurable":"context supplied","frozen":true},
+    {"term":"data integrity hard gate","source_component":"D04 context/config","source_property":"data_integrity and critical threshold","transformation":"strict greater-than","range":"boolean","stateful":false,"configurable":true,"frozen":true}
+  ],
+  "formula_constants_and_branches": {
+    "root_exponents": ["1/3", "1/2"],
+    "geometry_zero_branch": "M=0 -> Q_G=0 and valid D requires D=0",
+    "invalid_shape_branch": "inconsistent/nonfinite/out-of-range shape -> fail closed C=0",
+    "hard_gate_zeroing": "any H failure -> C=0",
+    "gate_bottleneck": "one low context dimension sets all of G",
+    "score_clamp": "no material final clamp in implementation; Pydantic/schema enforce [0,1]",
+    "threshold_not_in_formula": 0.75,
+    "aperture_not_in_formula": true,
+    "persistent_d04_state_not_in_formula": true
+  }
+}

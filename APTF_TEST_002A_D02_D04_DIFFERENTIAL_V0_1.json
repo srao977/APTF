@@ -1,0 +1,51 @@
+{
+  "test_id": "APTF_TEST_002A_VOLUME_DIFFERENTIAL_V0_1",
+  "d02_differential": [
+    {"property":"model_time","t1":1664525280.0,"t2":1664525340.0,"delta":60.0,"changed":true,"consumed_by_d04":true,"role":"new-shape order and projection validity"},
+    {"property":"entity_id","t1":"SPY","t2":"SPY","delta":null,"changed":false,"consumed_by_d04":true,"role":"envelope binding/output"},
+    {"property":"source_model_version","t1":"0.2","t2":"0.2","delta":null,"changed":false,"consumed_by_d04":true,"role":"lineage output"},
+    {"property":"current_level","t1":-0.6571388532831072,"t2":-0.6487986245281485,"delta":0.008340228754958656,"changed":true,"consumed_by_d04":true,"role":"geometry validation/reference"},
+    {"property":"projection_interval","t1":58.805642197812524,"t2":46.92093219652183,"delta":-11.884710001290692,"changed":true,"consumed_by_d04":true,"role":"projection validity/staleness"},
+    {"property":"forward_half_life","t1":15.0,"t2":15.0,"delta":0.0,"changed":false,"consumed_by_d04":false,"role":"retained in ReturnShape only"},
+    {"property":"forward_samples","t1":"8 samples","t2":"8 samples","delta":"all values differ","changed":true,"consumed_by_d04":true,"role":"level values recompute terminal/maximum geometry validation"},
+    {"property":"terminal_displacement","t1":0.01978985584654247,"t2":0.026416809218216097,"delta":0.006626953371673627,"percent_change":33.48661770485528,"changed":true,"consumed_by_d04":true,"role":"geometry quality and sign validation"},
+    {"property":"maximum_absolute_displacement","t1":0.01978985584654247,"t2":0.026416809218216097,"delta":0.006626953371673627,"percent_change":33.48661770485528,"changed":true,"consumed_by_d04":true,"role":"geometry denominator/validation"},
+    {"property":"path_direction","t1":"UPWARD","t2":"UPWARD","delta":null,"changed":false,"consumed_by_d04":true,"role":"sign validation; copied only into a qualified candidate"},
+    {"property":"terminal_decay_factor","t1":0.06604640534760162,"t2":0.11438246869903425,"delta":0.04833606335143263,"percent_change":73.18500241919357,"changed":true,"consumed_by_d04":false,"role":"retained in ReturnShape only"},
+    {"property":"strength","t1":0.8777636556469071,"t2":0.6443499381248182,"delta":-0.23341371752208884,"changed":true,"consumed_by_d04":true,"role":"structural quality product"},
+    {"property":"coherence","t1":0.4855782805501968,"t2":0.18477216178217787,"delta":-0.30080611876801894,"changed":true,"consumed_by_d04":true,"role":"structural quality product"},
+    {"property":"persistence","t1":0.5179117484872026,"t2":0.41432939878976205,"delta":-0.10358234969744051,"changed":true,"consumed_by_d04":true,"role":"structural quality product"},
+    {"property":"uncertainty","t1":0.3799587892055599,"t2":0.42387487667499785,"delta":0.043916087469437926,"changed":true,"consumed_by_d04":true,"role":"risk quality and high-uncertainty reason"},
+    {"property":"reversal_propensity","t1":0.785306864585095,"t2":0.5972582524083497,"delta":-0.1880486121767453,"changed":true,"consumed_by_d04":true,"role":"risk quality and high-reversal reason"},
+    {"property":"state_support_ratio","t1":0.39012915911128365,"t2":0.26144791004198753,"delta":-0.12868124906929612,"changed":true,"consumed_by_d04":false,"role":"retained in ReturnShape only"}
+  ],
+  "first_categorical_compression": {
+    "component": "D02",
+    "rule": "terminal_displacement > 0 -> UPWARD; < 0 -> DOWNWARD; == 0 -> FLAT",
+    "t1_continuous_value": 0.01978985584654247,
+    "t2_continuous_value": 0.026416809218216097,
+    "boundary": 0.0,
+    "t1_margin_from_boundary": 0.01978985584654247,
+    "t2_margin_from_boundary": 0.026416809218216097,
+    "same_category": true,
+    "continuous_difference": 0.006626953371673627,
+    "terminal_decision_bottleneck": false,
+    "reason": "D04 still consumes continuous strength/coherence/persistence/uncertainty/reversal and produces distinct capturability values."
+  },
+  "d02_to_d04_input_mapping": [
+    {"property":"model_time","t1":1664525280.0,"t2":1664525340.0,"delta":60.0,"d04_use":"new shape ordering and projection validity","formula_rule":"is_new_shape and evaluation_time <= model_time + projection_interval","combined_with_d04_state":true,"combined_with_configuration":false},
+    {"property":"entity_id","t1":"SPY","t2":"SPY","delta":null,"d04_use":"single-entity binding","formula_rule":"must match current_entity_id","combined_with_d04_state":true,"combined_with_configuration":false},
+    {"property":"current_level + forward sample levels","t1":"stored path 1","t2":"stored path 2","delta":"different","d04_use":"ReturnShape geometry validation","formula_rule":"terminal=last.level-current; maximum=max(abs(level-current))","combined_with_d04_state":false,"combined_with_configuration":false},
+    {"property":"terminal_displacement / maximum","t1":"0.01978985584654247 / 0.01978985584654247","t2":"0.026416809218216097 / 0.026416809218216097","delta":"+0.006626953371673627 each","d04_use":"geometry_quality","formula_rule":"abs(terminal)/maximum = 1 for both","combined_with_d04_state":false,"combined_with_configuration":false},
+    {"property":"path_direction","t1":"UPWARD","t2":"UPWARD","delta":null,"d04_use":"validate exact sign; candidate propagation if OPEN","formula_rule":"must equal displacement sign","combined_with_d04_state":true,"combined_with_configuration":false},
+    {"property":"strength/coherence/persistence","t1":"0.8777636556469071 / 0.4855782805501968 / 0.5179117484872026","t2":"0.6443499381248182 / 0.18477216178217787 / 0.41432939878976205","delta":"all lower","d04_use":"structural_quality","formula_rule":"(strength*coherence*persistence)^(1/3)","combined_with_d04_state":false,"combined_with_configuration":false},
+    {"property":"uncertainty/reversal_propensity","t1":"0.3799587892055599 / 0.785306864585095","t2":"0.42387487667499785 / 0.5972582524083497","delta":"uncertainty higher, reversal lower","d04_use":"risk_quality and reason codes","formula_rule":"sqrt((1-uncertainty)*(1-reversal))","combined_with_d04_state":false,"combined_with_configuration":false},
+    {"property":"projection_interval","t1":58.805642197812524,"t2":46.92093219652183,"delta":-11.884710001290692,"d04_use":"projection validity","formula_rule":"evaluation_time <= model_time + interval","combined_with_d04_state":false,"combined_with_configuration":false},
+    {"property":"context feasibility dimensions","t1":"all 1.0","t2":"all 1.0","delta":0.0,"d04_use":"feasibility gate","formula_rule":"minimum of ten fields","combined_with_d04_state":false,"combined_with_configuration":true}
+  ],
+  "observation_vs_state": {
+    "current_observation_derived": ["ReturnShape fields", "EnvelopeContext evaluation time/data integrity"],
+    "d04_carried_state": ["current_state", "current_aperture", "current_model_time", "current_candidate", "open/close counters"],
+    "configuration": ["open threshold 0.75", "close threshold 0.55", "open persistence 3", "close persistence 2", "aperture alpha 0.5", "gate warning 0.5", "critical integrity 0.0 in frozen harness"]
+  }
+}

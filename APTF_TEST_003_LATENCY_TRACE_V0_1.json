@@ -1,0 +1,224 @@
+{
+  "accuracy_claim": false,
+  "artificial_wait": false,
+  "canonical_unit": "integer nanoseconds",
+  "cycles": [
+    {
+      "cycle": 1,
+      "delta_all_stages_ns": 1371600,
+      "delta_math_ns": 1382900,
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "physical_row": 10,
+      "stage_duration_ms": {
+        "D01": 0.044,
+        "D02": 0.0293,
+        "D03": 0.0554,
+        "D04": 0.0231,
+        "E0": 0.0113,
+        "POSITION_CONTROLLER": 0.008
+      },
+      "stage_duration_ns": {
+        "D01": 44000,
+        "D02": 29300,
+        "D03": 55400,
+        "D04": 23100,
+        "E0": 11300,
+        "POSITION_CONTROLLER": 8000
+      },
+      "stage_duration_us": {
+        "D01": 44.0,
+        "D02": 29.3,
+        "D03": 55.4,
+        "D04": 23.1,
+        "E0": 11.3,
+        "POSITION_CONTROLLER": 8.0
+      },
+      "t_all_measured_stages_ns": 171100,
+      "t_direct_ms": 1.5427,
+      "t_direct_ns": 1542700,
+      "t_direct_us": 1542.7,
+      "t_math_components_ns": 159800
+    },
+    {
+      "cycle": 2,
+      "delta_all_stages_ns": 1371100,
+      "delta_math_ns": 1381900,
+      "market_event_time_utc": "2022-09-30T08:09:00Z",
+      "physical_row": 11,
+      "stage_duration_ms": {
+        "D01": 0.0602,
+        "D02": 0.0291,
+        "D03": 0.0666,
+        "D04": 0.0329,
+        "E0": 0.0108,
+        "POSITION_CONTROLLER": 0.0105
+      },
+      "stage_duration_ns": {
+        "D01": 60200,
+        "D02": 29100,
+        "D03": 66600,
+        "D04": 32900,
+        "E0": 10800,
+        "POSITION_CONTROLLER": 10500
+      },
+      "stage_duration_us": {
+        "D01": 60.2,
+        "D02": 29.1,
+        "D03": 66.6,
+        "D04": 32.9,
+        "E0": 10.8,
+        "POSITION_CONTROLLER": 10.5
+      },
+      "t_all_measured_stages_ns": 210100,
+      "t_direct_ms": 1.5812,
+      "t_direct_ns": 1581200,
+      "t_direct_us": 1581.2,
+      "t_math_components_ns": 199300
+    },
+    {
+      "cycle": 3,
+      "delta_all_stages_ns": 1308500,
+      "delta_math_ns": 1316800,
+      "market_event_time_utc": "2022-09-30T08:10:00Z",
+      "physical_row": 12,
+      "stage_duration_ms": {
+        "D01": 0.1023,
+        "D02": 0.0277,
+        "D03": 0.0625,
+        "D04": 0.0285,
+        "E0": 0.0083,
+        "POSITION_CONTROLLER": 0.0087
+      },
+      "stage_duration_ns": {
+        "D01": 102300,
+        "D02": 27700,
+        "D03": 62500,
+        "D04": 28500,
+        "E0": 8300,
+        "POSITION_CONTROLLER": 8700
+      },
+      "stage_duration_us": {
+        "D01": 102.3,
+        "D02": 27.7,
+        "D03": 62.5,
+        "D04": 28.5,
+        "E0": 8.3,
+        "POSITION_CONTROLLER": 8.7
+      },
+      "t_all_measured_stages_ns": 238000,
+      "t_direct_ms": 1.5465,
+      "t_direct_ns": 1546500,
+      "t_direct_us": 1546.5,
+      "t_math_components_ns": 229700
+    },
+    {
+      "cycle": 4,
+      "delta_all_stages_ns": 1463600,
+      "delta_math_ns": 1471500,
+      "market_event_time_utc": "2022-09-30T08:11:00Z",
+      "physical_row": 13,
+      "stage_duration_ms": {
+        "D01": 0.0593,
+        "D02": 0.0286,
+        "D03": 0.0647,
+        "D04": 0.0293,
+        "E0": 0.0079,
+        "POSITION_CONTROLLER": 0.0157
+      },
+      "stage_duration_ns": {
+        "D01": 59300,
+        "D02": 28600,
+        "D03": 64700,
+        "D04": 29300,
+        "E0": 7900,
+        "POSITION_CONTROLLER": 15700
+      },
+      "stage_duration_us": {
+        "D01": 59.3,
+        "D02": 28.6,
+        "D03": 64.7,
+        "D04": 29.3,
+        "E0": 7.9,
+        "POSITION_CONTROLLER": 15.7
+      },
+      "t_all_measured_stages_ns": 205500,
+      "t_direct_ms": 1.6691,
+      "t_direct_ns": 1669100,
+      "t_direct_us": 1669.1,
+      "t_math_components_ns": 197600
+    },
+    {
+      "cycle": 5,
+      "delta_all_stages_ns": 1349600,
+      "delta_math_ns": 1357200,
+      "market_event_time_utc": "2022-09-30T08:12:00Z",
+      "physical_row": 14,
+      "stage_duration_ms": {
+        "D01": 0.0648,
+        "D02": 0.0293,
+        "D03": 0.0677,
+        "D04": 0.0389,
+        "E0": 0.0076,
+        "POSITION_CONTROLLER": 0.0104
+      },
+      "stage_duration_ns": {
+        "D01": 64800,
+        "D02": 29300,
+        "D03": 67700,
+        "D04": 38900,
+        "E0": 7600,
+        "POSITION_CONTROLLER": 10400
+      },
+      "stage_duration_us": {
+        "D01": 64.8,
+        "D02": 29.3,
+        "D03": 67.7,
+        "D04": 38.9,
+        "E0": 7.6,
+        "POSITION_CONTROLLER": 10.4
+      },
+      "t_all_measured_stages_ns": 218700,
+      "t_direct_ms": 1.5683,
+      "t_direct_ns": 1568300,
+      "t_direct_us": 1568.3,
+      "t_math_components_ns": 211100
+    }
+  ],
+  "direct_boundary": {
+    "primitive": "time.perf_counter_ns() through SystemClock.monotonic_ns",
+    "start": "immediately before create_source_event",
+    "stop": "immediately after complete E5 StageResult and envelope return"
+  },
+  "inter_lifecycle_gaps": [
+    {
+      "from_cycle": 1,
+      "inter_lifecycle_runtime_gap_ms": 1.1817,
+      "inter_lifecycle_runtime_gap_ns": 1181700,
+      "inter_lifecycle_runtime_gap_us": 1181.7,
+      "to_cycle": 2
+    },
+    {
+      "from_cycle": 2,
+      "inter_lifecycle_runtime_gap_ms": 1.123,
+      "inter_lifecycle_runtime_gap_ns": 1123000,
+      "inter_lifecycle_runtime_gap_us": 1123.0,
+      "to_cycle": 3
+    },
+    {
+      "from_cycle": 3,
+      "inter_lifecycle_runtime_gap_ms": 1.2681,
+      "inter_lifecycle_runtime_gap_ns": 1268100,
+      "inter_lifecycle_runtime_gap_us": 1268.1,
+      "to_cycle": 4
+    },
+    {
+      "from_cycle": 4,
+      "inter_lifecycle_runtime_gap_ms": 1.4345,
+      "inter_lifecycle_runtime_gap_ns": 1434500,
+      "inter_lifecycle_runtime_gap_us": 1434.5,
+      "to_cycle": 5
+    }
+  ],
+  "resolution": "nanosecond resolution",
+  "test_id": "APTF_TEST_003_BOUNDED_LIFECYCLE_V0_1"
+}

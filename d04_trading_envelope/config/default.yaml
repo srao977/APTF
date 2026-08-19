@@ -1,6 +1,5 @@
 runtime:
   default_loop_speed: 1.0
-  critical_data_integrity_threshold: 0.2
 
 hysteresis:
   open_threshold: 0.75
@@ -10,20 +9,6 @@ hysteresis:
 
 capturability:
   capturability_model_version: V0_2
-  feasibility_gate:
-    mode: minimum
-    warning_threshold: 0.50
-    dimensions:
-      - liquidity_quality
-      - spread_quality
-      - latency_quality
-      - execution_feasibility
-      - capital_available
-      - portfolio_capacity
-      - position_capacity
-      - risk_capacity
-      - broker_health
-      - data_integrity
 
 aperture:
   alpha: 0.5

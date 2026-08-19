@@ -1,0 +1,28 @@
+{
+  "run_id": "TEST005_FROZEN_D04_V0_2_RUN_001",
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "source_data_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "execution_timestamp_utc": "2026-08-18T21:54:17.859037Z",
+  "status": "INVALID_RESULT_E_EVIDENCE_NOT_SERIALIZED",
+  "runtime_observations_processed": 100,
+  "persisted_record_count": 0,
+  "first_runtime_physical_row": 15,
+  "last_runtime_physical_row": 114,
+  "row115_processed": false,
+  "failure_stage": "post-cycle source timestamp continuity validation before output write",
+  "exception": "RuntimeError: source timestamps are not consecutive one-minute observations",
+  "partial_console_checkpoints_non_authoritative": [
+    {"cycle":10,"physical_row":24,"timestamp":"2022-09-30T08:22:00Z","C":0.43568336429289467,"running_min":0.24259353710177683,"running_max":0.4814590392445292,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1315900},
+    {"cycle":20,"physical_row":34,"timestamp":"2022-09-30T08:32:00Z","C":0.1954888460566157,"running_min":0.11874565966913046,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1336400},
+    {"cycle":30,"physical_row":44,"timestamp":"2022-09-30T08:42:00Z","C":0.09041160060954019,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1386100},
+    {"cycle":40,"physical_row":54,"timestamp":"2022-09-30T08:54:00Z","C":0.29952022925887295,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1548100},
+    {"cycle":50,"physical_row":64,"timestamp":"2022-09-30T09:06:00Z","C":0.22414655948410006,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1346600},
+    {"cycle":60,"physical_row":74,"timestamp":"2022-09-30T09:18:00Z","C":0.23087626891081703,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1328200},
+    {"cycle":70,"physical_row":84,"timestamp":"2022-09-30T09:32:00Z","C":0.3564856961328044,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1629800},
+    {"cycle":80,"physical_row":94,"timestamp":"2022-09-30T09:49:00Z","C":0.3009140817707914,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1690500},
+    {"cycle":90,"physical_row":104,"timestamp":"2022-09-30T10:05:00Z","C":0.5130416716480966,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":1405500},
+    {"cycle":100,"physical_row":114,"timestamp":"2022-09-30T10:15:00Z","C":0.21775508255753778,"running_min":0.02642361014377076,"running_max":0.5577135990257739,"C_GE_0_70":0,"C_GE_0_75":0,"D04":"CLOSED","D03":"FLAT","PC":"NO_ACTION","direct_ns":2099100}
+  ],
+  "scientific_use": "NONE; checkpoint values are incomplete audit history and must not be used as a 100-observation empirical distribution"
+}

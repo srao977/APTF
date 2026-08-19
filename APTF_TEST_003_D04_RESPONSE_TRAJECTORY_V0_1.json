@@ -1,0 +1,106 @@
+{
+  "milestones": {
+    "M2_FIRST_D04_STATE_CHANGE": null,
+    "M3_FIRST_D04_THRESHOLD_CROSSING": null,
+    "M4_FIRST_NON_NULL_D04_CANDIDATE": null
+  },
+  "open_threshold": 0.75,
+  "test_id": "APTF_TEST_003_BOUNDED_LIFECYCLE_V0_1",
+  "trajectory": [
+    {
+      "aperture_after": 0.2490565349467589,
+      "aperture_before": 0.2776088557247953,
+      "candidate_envelope": null,
+      "capturability_score": 0.22050421416872243,
+      "cycle": 1,
+      "feasibility_gate_score": 1.0,
+      "gate_margin": -0.5294957858312775,
+      "hard_eligibility": 1,
+      "market_event_time_utc": "2022-09-30T08:08:00Z",
+      "new_state": "CLOSED",
+      "physical_row": 10,
+      "previous_state": "CLOSED",
+      "projection_valid": true,
+      "reason_codes": [
+        "REVERSAL_PROPENSITY_HIGH"
+      ],
+      "safety_state": "CLEAR"
+    },
+    {
+      "aperture_after": 0.21285857927507087,
+      "aperture_before": 0.2490565349467589,
+      "candidate_envelope": null,
+      "capturability_score": 0.17666062360338286,
+      "cycle": 2,
+      "feasibility_gate_score": 1.0,
+      "gate_margin": -0.5733393763966171,
+      "hard_eligibility": 1,
+      "market_event_time_utc": "2022-09-30T08:09:00Z",
+      "new_state": "CLOSED",
+      "physical_row": 11,
+      "previous_state": "CLOSED",
+      "projection_valid": true,
+      "reason_codes": [
+        "REVERSAL_PROPENSITY_HIGH"
+      ],
+      "safety_state": "CLEAR"
+    },
+    {
+      "aperture_after": 0.23374195443228302,
+      "aperture_before": 0.21285857927507087,
+      "candidate_envelope": null,
+      "capturability_score": 0.25462532958949513,
+      "cycle": 3,
+      "feasibility_gate_score": 1.0,
+      "gate_margin": -0.49537467041050487,
+      "hard_eligibility": 1,
+      "market_event_time_utc": "2022-09-30T08:10:00Z",
+      "new_state": "CLOSED",
+      "physical_row": 12,
+      "previous_state": "CLOSED",
+      "projection_valid": true,
+      "reason_codes": [
+        "REVERSAL_PROPENSITY_HIGH"
+      ],
+      "safety_state": "CLEAR"
+    },
+    {
+      "aperture_after": 0.16111377075980543,
+      "aperture_before": 0.23374195443228302,
+      "candidate_envelope": null,
+      "capturability_score": 0.08848558708732783,
+      "cycle": 4,
+      "feasibility_gate_score": 1.0,
+      "gate_margin": -0.6615144129126722,
+      "hard_eligibility": 1,
+      "market_event_time_utc": "2022-09-30T08:11:00Z",
+      "new_state": "CLOSED",
+      "physical_row": 13,
+      "previous_state": "CLOSED",
+      "projection_valid": true,
+      "reason_codes": [
+        "REVERSAL_PROPENSITY_HIGH"
+      ],
+      "safety_state": "CLEAR"
+    },
+    {
+      "aperture_after": 0.2207274518449448,
+      "aperture_before": 0.16111377075980543,
+      "candidate_envelope": null,
+      "capturability_score": 0.28034113293008417,
+      "cycle": 5,
+      "feasibility_gate_score": 1.0,
+      "gate_margin": -0.46965886706991583,
+      "hard_eligibility": 1,
+      "market_event_time_utc": "2022-09-30T08:12:00Z",
+      "new_state": "CLOSED",
+      "physical_row": 14,
+      "previous_state": "CLOSED",
+      "projection_valid": true,
+      "reason_codes": [
+        "REVERSAL_PROPENSITY_HIGH"
+      ],
+      "safety_state": "CLEAR"
+    }
+  ]
+}

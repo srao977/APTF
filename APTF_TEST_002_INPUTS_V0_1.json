@@ -1,0 +1,90 @@
+{
+  "test_id": "APTF_TEST_002_TWO_OBSERVATIONS_V0_1",
+  "source": {
+    "path": "data/market/normalized/SPY_1min_normalized_v0_1.csv",
+    "sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+    "physical_header_row": 1,
+    "last_zero_based_data_index_read": 9,
+    "future_rows_read": 0,
+    "target_count": 2,
+    "market_observation_interval_seconds": 60
+  },
+  "targets": [
+    {
+      "label": "t1",
+      "physical_csv_row": 10,
+      "data_observation_number": 9,
+      "zero_based_data_index": 8,
+      "source_row_number": 9,
+      "normalized_source_payload": {
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:08:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:08:00Z",
+        "timezone": "America/New_York",
+        "open": 365.68,
+        "high": 365.7,
+        "low": 365.5,
+        "close": 365.5,
+        "volume": 4288.0,
+        "close_return_1m": -0.00016413174307916556,
+        "high_low_range": 0.19999999999998863,
+        "high_low_range_fraction": 0.0005471956224349894,
+        "open_close_change": -0.18000000000000682,
+        "open_close_return": -0.0004922336469044275,
+        "session_type": "PREMARKET",
+        "is_regular_session": false,
+        "minute_of_session": -1,
+        "source_provider": "FirstRateData",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_row_number": 9,
+        "data_valid": true,
+        "quality_flags": ""
+      }
+    },
+    {
+      "label": "t2",
+      "physical_csv_row": 11,
+      "data_observation_number": 10,
+      "zero_based_data_index": 9,
+      "source_row_number": 10,
+      "normalized_source_payload": {
+        "entity_id": "SPY",
+        "event_timestamp_local": "2022-09-30T04:09:00-04:00",
+        "event_timestamp_utc": "2022-09-30T08:09:00Z",
+        "timezone": "America/New_York",
+        "open": 365.54,
+        "high": 365.54,
+        "low": 365.49,
+        "close": 365.49,
+        "volume": 758.0,
+        "close_return_1m": -2.7359781121671922e-05,
+        "high_low_range": 0.05000000000001137,
+        "high_low_range_fraction": 0.00013680264849930604,
+        "open_close_change": -0.05000000000001137,
+        "open_close_return": -0.00013678393609461992,
+        "session_type": "PREMARKET",
+        "is_regular_session": false,
+        "minute_of_session": -1,
+        "source_provider": "FirstRateData",
+        "source_dataset": "SPY_1min_firstratedata",
+        "source_row_number": 10,
+        "data_valid": true,
+        "quality_flags": ""
+      }
+    }
+  ],
+  "warmup": {
+    "data_indices": [0, 7],
+    "rows_consumed": 8,
+    "classification": "WARM-UP / PRIOR CAUSAL STATE",
+    "initial_control_state_classification": "TEST/REPLAY INITIAL CONTROL STATE",
+    "synthetic_market_data": false
+  },
+  "execution": {
+    "one_live_runtime": true,
+    "same_component_instances_t1_t2": true,
+    "artificial_wait_inserted": false,
+    "broker_data_used": false,
+    "azure_used": false
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "decision_counts": {
+    "BUY": 0,
+    "BUY_TO_COVER": 0,
+    "HOLD": 0,
+    "NO_ACTION": 100,
+    "SELL": 0,
+    "SELL_SHORT": 0
+  },
+  "execution_timestamp_utc": "2026-08-18T22:08:15.120144Z",
+  "first_non_no_action": null,
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "non_no_action_count": 0,
+  "other_decisions": {},
+  "run_id": "TEST005R_FROZEN_D04_100OBS_V0_3_RUN_001",
+  "source_data_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d"
+}

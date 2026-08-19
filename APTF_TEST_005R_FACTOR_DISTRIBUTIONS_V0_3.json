@@ -1,0 +1,66 @@
+{
+  "C_association": {
+    "Q_G": 0.322317210945655,
+    "Q_R": 0.7106626907881991,
+    "Q_S": 0.8927748455062755
+  },
+  "H_counts": {
+    "1": 100
+  },
+  "classification": "STRUCTURALLY RELATED BY PRODUCT EQUATION; NOT INDEPENDENT CAUSAL DISCOVERY",
+  "cross_row_max_product_calculated": false,
+  "distributions": {
+    "Q_G": {
+      "P10": 1.0,
+      "P25": 1.0,
+      "P50": 1.0,
+      "P75": 1.0,
+      "P90": 1.0,
+      "P95": 1.0,
+      "count": 100,
+      "maximum": 1.0,
+      "mean": 0.9834237857359907,
+      "median": 1.0,
+      "minimum": 0.3473724678455229,
+      "population_standard_deviation": 0.09419534346182896
+    },
+    "Q_R": {
+      "P10": 0.3654998962624752,
+      "P25": 0.4404977749744685,
+      "P50": 0.5060492836556995,
+      "P75": 0.564326634613232,
+      "P90": 0.5886459724391864,
+      "P95": 0.6207645331020165,
+      "count": 100,
+      "maximum": 0.6858402945293873,
+      "mean": 0.4947378756847796,
+      "median": 0.5060492836556995,
+      "minimum": 0.2866427051477405,
+      "population_standard_deviation": 0.08807066480786918
+    },
+    "Q_S": {
+      "P10": 0.3117885886732481,
+      "P25": 0.44833064637968123,
+      "P50": 0.5380138740947948,
+      "P75": 0.6911827164436244,
+      "P90": 0.7686559275889413,
+      "P95": 0.8041583782631023,
+      "count": 100,
+      "maximum": 0.8429381315925792,
+      "mean": 0.5513780445472637,
+      "median": 0.5380138740947948,
+      "minimum": 0.172850265222646,
+      "population_standard_deviation": 0.16558808112091047
+    }
+  },
+  "execution_timestamp_utc": "2026-08-18T22:08:15.120144Z",
+  "freeze_id": "D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1",
+  "freeze_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+  "lowest_factor_counts_including_ties": {
+    "Q_R": 64,
+    "Q_S": 36
+  },
+  "run_id": "TEST005R_FROZEN_D04_100OBS_V0_3_RUN_001",
+  "source_data_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "tie_patterns": {}
+}

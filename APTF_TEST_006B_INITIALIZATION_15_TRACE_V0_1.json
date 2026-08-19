@@ -1,0 +1,4029 @@
+{
+  "count": 15,
+  "execution_timestamp_utc": "2026-08-18T23:20:48.4668982Z",
+  "freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "freeze_manifest_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+  "records": [
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 107300,
+        "D02": 48000,
+        "FOUR_FACTOR": 89600,
+        "SOURCE_ADMISSION": 19100
+      },
+      "context_end_timestamp": null,
+      "context_start_timestamp": null,
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 350900,
+      "emission_id": "0b775944054600da1728deb343189f10f4c57a1162b1a6a73b0eda09d5dc6007",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746529166200,
+      "lifecycle_start_ns": 258746528815300,
+      "mathematics": {
+        "C": 0.0,
+        "H": 1,
+        "Q_G": 0.0,
+        "Q_R": 0.6718439044523016,
+        "Q_S": 0.5752710713443663,
+        "dmo": {
+          "coherence": 0.9999999952380952,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 112.84345589672996,
+          "model_health": "HEALTHY",
+          "model_time": 1680163200.0,
+          "model_version": "0.2",
+          "observation_half_life": 112.84345589672996,
+          "parameter_state": {
+            "ref_alpha": 0.0502376287481349
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00023762874813489793
+          },
+          "persistence": 0.2,
+          "perturbation_class": "NONE",
+          "perturbation_magnitude": 0.0,
+          "reversal_propensity": 0.3825744672088606,
+          "state_acceleration": 0.0,
+          "state_curvature": 0.0,
+          "state_hash": "E4A04DF63BB995491CB45FFF5ED6E4E62913C0B9F6B99B0EA6850871422DE5E3",
+          "state_level": 0.0,
+          "state_support_ratio": 0.29220833242458466,
+          "state_velocity": 0.0,
+          "strength": 0.9518918578430619,
+          "trace_id": "SPY:1",
+          "uncertainty": 0.26894142211899297
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 55.338187956395615,
+          "model_time": 1680163200.0,
+          "samples": [
+            {
+              "level": 0.0,
+              "persistence": 0.1983964034677923,
+              "reversal_propensity": 0.3833762654749645,
+              "strength": 0.9442596054316924,
+              "tau": 1.3105782538464847,
+              "uncertainty": 0.27014411951814876,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.19447130019577563,
+              "reversal_propensity": 0.38533881711097284,
+              "strength": 0.9255782362025632,
+              "tau": 4.563698548518832,
+              "uncertainty": 0.27308794697216127,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1886996459832291,
+              "reversal_propensity": 0.38822464421724606,
+              "strength": 0.8981082829465201,
+              "tau": 9.468500708715508,
+              "uncertainty": 0.2774166876315711,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.18139946483313832,
+              "reversal_propensity": 0.39187473479229146,
+              "strength": 0.863363367958766,
+              "tau": 15.891721368507092,
+              "uncertainty": 0.2828918234941392,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1728544708712928,
+              "reversal_propensity": 0.3961472317732142,
+              "strength": 0.8226938170707716,
+              "tau": 23.747011651153915,
+              "uncertainty": 0.28930056896552336,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.16333278277495572,
+              "reversal_propensity": 0.40090807582138277,
+              "strength": 0.7773757302116492,
+              "tau": 32.971234502168144,
+              "uncertainty": 0.2964418350377762,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1530896650809297,
+              "reversal_propensity": 0.4060296346683958,
+              "strength": 0.7286240285522912,
+              "tau": 43.51504425591447,
+              "uncertainty": 0.3041241733082957,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1423657543169263,
+              "reversal_propensity": 0.4113915900503975,
+              "strength": 0.6775840118498393,
+              "tau": 55.338187956395615,
+              "uncertainty": 0.31216710638129824,
+              "velocity": 0.0
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999999952380952,
+          "current_level": 0.0,
+          "entity_id": "SPY",
+          "forward_half_life": 112.84345589672996,
+          "forward_samples": [
+            {
+              "level": 0.0,
+              "persistence": 0.1983964034677923,
+              "reversal_propensity": 0.3833762654749645,
+              "strength": 0.9442596054316924,
+              "tau": 1.3105782538464847,
+              "uncertainty": 0.27014411951814876,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.19447130019577563,
+              "reversal_propensity": 0.38533881711097284,
+              "strength": 0.9255782362025632,
+              "tau": 4.563698548518832,
+              "uncertainty": 0.27308794697216127,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1886996459832291,
+              "reversal_propensity": 0.38822464421724606,
+              "strength": 0.8981082829465201,
+              "tau": 9.468500708715508,
+              "uncertainty": 0.2774166876315711,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.18139946483313832,
+              "reversal_propensity": 0.39187473479229146,
+              "strength": 0.863363367958766,
+              "tau": 15.891721368507092,
+              "uncertainty": 0.2828918234941392,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1728544708712928,
+              "reversal_propensity": 0.3961472317732142,
+              "strength": 0.8226938170707716,
+              "tau": 23.747011651153915,
+              "uncertainty": 0.28930056896552336,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.16333278277495572,
+              "reversal_propensity": 0.40090807582138277,
+              "strength": 0.7773757302116492,
+              "tau": 32.971234502168144,
+              "uncertainty": 0.2964418350377762,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1530896650809297,
+              "reversal_propensity": 0.4060296346683958,
+              "strength": 0.7286240285522912,
+              "tau": 43.51504425591447,
+              "uncertainty": 0.3041241733082957,
+              "velocity": 0.0
+            },
+            {
+              "level": 0.0,
+              "persistence": 0.1423657543169263,
+              "reversal_propensity": 0.4113915900503975,
+              "strength": 0.6775840118498393,
+              "tau": 55.338187956395615,
+              "uncertainty": 0.31216710638129824,
+              "velocity": 0.0
+            }
+          ],
+          "maximum_absolute_displacement": 0.0,
+          "model_time": 1680163200.0,
+          "path_direction": "FLAT",
+          "persistence": 0.2,
+          "projection_interval": 55.338187956395615,
+          "reversal_propensity": 0.3825744672088606,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.29220833242458466,
+          "strength": 0.9518918578430619,
+          "terminal_decay_factor": 0.7118287715846314,
+          "terminal_displacement": 0.0,
+          "uncertainty": 0.26894142211899297
+        }
+      },
+      "observation_id": "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+      "observation_index": 1,
+      "observation_timestamp": "2023-03-30T08:00:00Z",
+      "physical_row": 106605,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": null,
+      "source_fingerprint": "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+      "state_after": {
+        "completed_count": 1,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 0,
+        "context_ids": [],
+        "d01_state_hash": "1300a51849d51285050bfca8e399339dc6ba96b5b0b32a83f841d5d9258cc7f5",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 65800,
+        "D02": 29400,
+        "FOUR_FACTOR": 20000,
+        "SOURCE_ADMISSION": 7200
+      },
+      "context_end_timestamp": "2023-03-30T08:00:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 166700,
+      "emission_id": "888c02dd92c7b2382c55b55ded8f4ecad08fb9a9d2f3adc469b7815146a28414",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746529739000,
+      "lifecycle_start_ns": 258746529572300,
+      "mathematics": {
+        "C": 0.25715316140960703,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.4423141403859708,
+        "Q_S": 0.5813812807006596,
+        "dmo": {
+          "coherence": 0.8257977479599099,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 73.0331562585265,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163260.0,
+          "model_version": "0.2",
+          "observation_half_life": 73.0331562585265,
+          "parameter_state": {
+            "ref_alpha": 0.050311224602963556
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 7.3595854828655e-05
+          },
+          "persistence": 0.2799983433285848,
+          "perturbation_class": "STRUCTURAL/UNKNOWN",
+          "perturbation_magnitude": 0.015165987001217256,
+          "reversal_propensity": 0.6058780869843234,
+          "state_acceleration": -3.3134526165240296e-05,
+          "state_curvature": -3.3134329723439095e-05,
+          "state_hash": "E565BDD18A07D7B4485A65A9972DBD8F9BF3E9242FDD394F1705E7373ED88552",
+          "state_level": -0.11928429423462651,
+          "state_support_ratio": 0.21448177391915269,
+          "state_velocity": -0.001988071570245763,
+          "strength": 0.849872891756411,
+          "trace_id": "SPY:2",
+          "uncertainty": 0.5036008089770984
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 43.694240761255706,
+          "model_time": 1680163260.0,
+          "samples": [
+            {
+              "level": -0.12135931905598778,
+              "persistence": 0.27726186408909975,
+              "reversal_propensity": 0.6068554067809173,
+              "strength": 0.841566915739391,
+              "tau": 1.0348138216082683,
+              "uncertainty": 0.5050667886719892,
+              "velocity": -0.001968641753219297
+            },
+            {
+              "level": -0.126663294194802,
+              "persistence": 0.2705843936616751,
+              "reversal_propensity": 0.6092402317581096,
+              "strength": 0.8212989347423978,
+              "tau": 3.603431021230772,
+              "uncertainty": 0.5086440261377776,
+              "velocity": -0.0019212297258476175
+            },
+            {
+              "level": -0.13507350171510807,
+              "persistence": 0.26081940115218544,
+              "reversal_propensity": 0.6127277497174677,
+              "strength": 0.7916594650106767,
+              "tau": 7.476192569600046,
+              "uncertainty": 0.5138753030768147,
+              "velocity": -0.0018518953727904033
+            },
+            {
+              "level": -0.14683887105477617,
+              "persistence": 0.24856232126708827,
+              "reversal_propensity": 0.6171053041484642,
+              "strength": 0.7544558165797561,
+              "tau": 12.547875621324705,
+              "uncertainty": 0.5204416347233094,
+              "velocity": -0.0017648664576757288
+            },
+            {
+              "level": -0.16238584829569666,
+              "persistence": 0.23435270880165357,
+              "reversal_propensity": 0.6221801957697904,
+              "strength": 0.7113256884040868,
+              "tau": 18.75030033985679,
+              "uncertainty": 0.5280539721552988,
+              "velocity": -0.0016639739801313572
+            },
+            {
+              "level": -0.18226943078708183,
+              "persistence": 0.21870032090515892,
+              "reversal_propensity": 0.6277703673795296,
+              "strength": 0.6638163352902503,
+              "tau": 26.033614611102475,
+              "uncertainty": 0.5364392295699076,
+              "velocity": -0.001552837367630182
+            },
+            {
+              "level": -0.2071503258380387,
+              "persistence": 0.20208506616775157,
+              "reversal_propensity": 0.6337044220385277,
+              "strength": 0.6133844133614172,
+              "tau": 34.358855804111634,
+              "uncertainty": 0.5453403115584048,
+              "velocity": -0.0014348641139917968
+            },
+            {
+              "level": -0.2377815700057502,
+              "persistence": 0.18495044653342513,
+              "reversal_propensity": 0.6398239652581883,
+              "strength": 0.5613760744382043,
+              "tau": 43.694240761255706,
+              "uncertainty": 0.5545196263878956,
+              "velocity": -0.0013132032150128222
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.8257977479599099,
+          "current_level": -0.11928429423462651,
+          "entity_id": "SPY",
+          "forward_half_life": 73.0331562585265,
+          "forward_samples": [
+            {
+              "level": -0.12135931905598778,
+              "persistence": 0.27726186408909975,
+              "reversal_propensity": 0.6068554067809173,
+              "strength": 0.841566915739391,
+              "tau": 1.0348138216082683,
+              "uncertainty": 0.5050667886719892,
+              "velocity": -0.001968641753219297
+            },
+            {
+              "level": -0.126663294194802,
+              "persistence": 0.2705843936616751,
+              "reversal_propensity": 0.6092402317581096,
+              "strength": 0.8212989347423978,
+              "tau": 3.603431021230772,
+              "uncertainty": 0.5086440261377776,
+              "velocity": -0.0019212297258476175
+            },
+            {
+              "level": -0.13507350171510807,
+              "persistence": 0.26081940115218544,
+              "reversal_propensity": 0.6127277497174677,
+              "strength": 0.7916594650106767,
+              "tau": 7.476192569600046,
+              "uncertainty": 0.5138753030768147,
+              "velocity": -0.0018518953727904033
+            },
+            {
+              "level": -0.14683887105477617,
+              "persistence": 0.24856232126708827,
+              "reversal_propensity": 0.6171053041484642,
+              "strength": 0.7544558165797561,
+              "tau": 12.547875621324705,
+              "uncertainty": 0.5204416347233094,
+              "velocity": -0.0017648664576757288
+            },
+            {
+              "level": -0.16238584829569666,
+              "persistence": 0.23435270880165357,
+              "reversal_propensity": 0.6221801957697904,
+              "strength": 0.7113256884040868,
+              "tau": 18.75030033985679,
+              "uncertainty": 0.5280539721552988,
+              "velocity": -0.0016639739801313572
+            },
+            {
+              "level": -0.18226943078708183,
+              "persistence": 0.21870032090515892,
+              "reversal_propensity": 0.6277703673795296,
+              "strength": 0.6638163352902503,
+              "tau": 26.033614611102475,
+              "uncertainty": 0.5364392295699076,
+              "velocity": -0.001552837367630182
+            },
+            {
+              "level": -0.2071503258380387,
+              "persistence": 0.20208506616775157,
+              "reversal_propensity": 0.6337044220385277,
+              "strength": 0.6133844133614172,
+              "tau": 34.358855804111634,
+              "uncertainty": 0.5453403115584048,
+              "velocity": -0.0014348641139917968
+            },
+            {
+              "level": -0.2377815700057502,
+              "persistence": 0.18495044653342513,
+              "reversal_propensity": 0.6398239652581883,
+              "strength": 0.5613760744382043,
+              "tau": 43.694240761255706,
+              "uncertainty": 0.5545196263878956,
+              "velocity": -0.0013132032150128222
+            }
+          ],
+          "maximum_absolute_displacement": 0.11849727577112369,
+          "model_time": 1680163260.0,
+          "path_direction": "DOWNWARD",
+          "persistence": 0.2799983433285848,
+          "projection_interval": 43.694240761255706,
+          "reversal_propensity": 0.6058780869843234,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.21448177391915269,
+          "strength": 0.849872891756411,
+          "terminal_decay_factor": 0.6605412172613512,
+          "terminal_displacement": -0.11849727577112369,
+          "uncertainty": 0.5036008089770984
+        }
+      },
+      "observation_id": "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+      "observation_index": 2,
+      "observation_timestamp": "2023-03-30T08:01:00Z",
+      "physical_row": 106606,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+      "state_after": {
+        "completed_count": 2,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 1,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782"
+        ],
+        "d01_state_hash": "6f8bbb2e0abd5e5e863955f21f03ff1194a93b937a7ae7a5abfa82f579f64417",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 45200,
+        "D02": 24400,
+        "FOUR_FACTOR": 13700,
+        "SOURCE_ADMISSION": 5600
+      },
+      "context_end_timestamp": "2023-03-30T08:01:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 130100,
+      "emission_id": "90ca9f754b61a45b9da4c391b27f46e18e784fd7bb8ac884a9eb05a0a6c2cf2e",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746530256800,
+      "lifecycle_start_ns": 258746530126700,
+      "mathematics": {
+        "C": 0.2963392700880803,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5371678640119462,
+        "Q_S": 0.5516697664577529,
+        "dmo": {
+          "coherence": 0.9129493642786993,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 50.69400366386941,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163320.0,
+          "model_version": "0.2",
+          "observation_half_life": 50.69400366386941,
+          "parameter_state": {
+            "ref_alpha": 0.050459292093861255
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00014806749089769922
+          },
+          "persistence": 0.22399867466286785,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.02298439496719634,
+          "reversal_propensity": 0.5838196002447897,
+          "state_acceleration": 5.0617967193786534e-05,
+          "state_curvature": 5.061788364277953e-05,
+          "state_hash": "2123B18B0964A92005490117D8FA15F3508B3EF6415D9D8E549FF609B5C6C09B",
+          "state_level": -0.05634390651087992,
+          "state_support_ratio": 0.20651936786324737,
+          "state_velocity": 0.0010490064618876088,
+          "strength": 0.8210042621507894,
+          "trace_id": "SPY:3",
+          "uncertainty": 0.3066725047674611
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 50.618285851606174,
+          "model_time": 1680163320.0,
+          "samples": [
+            {
+              "level": -0.05504998939248145,
+              "persistence": 0.22035696512137948,
+              "reversal_propensity": 0.5854453730521375,
+              "strength": 0.8076565981095754,
+              "tau": 1.1987964755255995,
+              "uncertainty": 0.3091111639784828,
+              "velocity": 0.0010319520000829187
+            },
+            {
+              "level": -0.051523844054030876,
+              "persistence": 0.2115713283363807,
+              "reversal_propensity": 0.5893675555374678,
+              "strength": 0.7754553127356827,
+              "tau": 4.174451788184876,
+              "uncertainty": 0.3149944377064781,
+              "velocity": 0.000990808052364781
+            },
+            {
+              "level": -0.045360088979256585,
+              "persistence": 0.19898273901875332,
+              "reversal_propensity": 0.5949874947342393,
+              "strength": 0.7293153723999051,
+              "tau": 8.660913794964719,
+              "uncertainty": 0.3234243465016355,
+              "velocity": 0.0009318545270364924
+            },
+            {
+              "level": -0.03574736997902283,
+              "persistence": 0.18362271507272934,
+              "reversal_propensity": 0.6018446888534197,
+              "strength": 0.6730175164174815,
+              "tau": 14.536285422627424,
+              "uncertainty": 0.3337101376804059,
+              "velocity": 0.0008599221176221139
+            },
+            {
+              "level": -0.021616360258524196,
+              "persistence": 0.16644043176863926,
+              "reversal_propensity": 0.6095153964278954,
+              "strength": 0.6100406802939116,
+              "tau": 21.72158265873627,
+              "uncertainty": 0.3452161990421197,
+              "velocity": 0.0007794558994933603
+            },
+            {
+              "level": -0.0016866099743061101,
+              "persistence": 0.14830494543598197,
+              "reversal_propensity": 0.617611643586479,
+              "strength": 0.5435701460476783,
+              "tau": 30.159053531462835,
+              "uncertainty": 0.35736056977999503,
+              "velocity": 0.0006945257436294268
+            },
+            {
+              "level": 0.025507903355606355,
+              "persistence": 0.12998248469043802,
+              "reversal_propensity": 0.625791361958974,
+              "strength": 0.476414309577563,
+              "tau": 39.803561163346764,
+              "uncertainty": 0.36963014733873756,
+              "velocity": 0.000608719969337746
+            },
+            {
+              "level": 0.061601955129313136,
+              "persistence": 0.11211535047952739,
+              "reversal_propensity": 0.6337678083543832,
+              "strength": 0.41092734470308073,
+              "tau": 50.618285851606174,
+              "uncertainty": 0.3815948169318513,
+              "velocity": 0.0005250465312209026
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9129493642786993,
+          "current_level": -0.05634390651087992,
+          "entity_id": "SPY",
+          "forward_half_life": 50.69400366386941,
+          "forward_samples": [
+            {
+              "level": -0.05504998939248145,
+              "persistence": 0.22035696512137948,
+              "reversal_propensity": 0.5854453730521375,
+              "strength": 0.8076565981095754,
+              "tau": 1.1987964755255995,
+              "uncertainty": 0.3091111639784828,
+              "velocity": 0.0010319520000829187
+            },
+            {
+              "level": -0.051523844054030876,
+              "persistence": 0.2115713283363807,
+              "reversal_propensity": 0.5893675555374678,
+              "strength": 0.7754553127356827,
+              "tau": 4.174451788184876,
+              "uncertainty": 0.3149944377064781,
+              "velocity": 0.000990808052364781
+            },
+            {
+              "level": -0.045360088979256585,
+              "persistence": 0.19898273901875332,
+              "reversal_propensity": 0.5949874947342393,
+              "strength": 0.7293153723999051,
+              "tau": 8.660913794964719,
+              "uncertainty": 0.3234243465016355,
+              "velocity": 0.0009318545270364924
+            },
+            {
+              "level": -0.03574736997902283,
+              "persistence": 0.18362271507272934,
+              "reversal_propensity": 0.6018446888534197,
+              "strength": 0.6730175164174815,
+              "tau": 14.536285422627424,
+              "uncertainty": 0.3337101376804059,
+              "velocity": 0.0008599221176221139
+            },
+            {
+              "level": -0.021616360258524196,
+              "persistence": 0.16644043176863926,
+              "reversal_propensity": 0.6095153964278954,
+              "strength": 0.6100406802939116,
+              "tau": 21.72158265873627,
+              "uncertainty": 0.3452161990421197,
+              "velocity": 0.0007794558994933603
+            },
+            {
+              "level": -0.0016866099743061101,
+              "persistence": 0.14830494543598197,
+              "reversal_propensity": 0.617611643586479,
+              "strength": 0.5435701460476783,
+              "tau": 30.159053531462835,
+              "uncertainty": 0.35736056977999503,
+              "velocity": 0.0006945257436294268
+            },
+            {
+              "level": 0.025507903355606355,
+              "persistence": 0.12998248469043802,
+              "reversal_propensity": 0.625791361958974,
+              "strength": 0.476414309577563,
+              "tau": 39.803561163346764,
+              "uncertainty": 0.36963014733873756,
+              "velocity": 0.000608719969337746
+            },
+            {
+              "level": 0.061601955129313136,
+              "persistence": 0.11211535047952739,
+              "reversal_propensity": 0.6337678083543832,
+              "strength": 0.41092734470308073,
+              "tau": 50.618285851606174,
+              "uncertainty": 0.3815948169318513,
+              "velocity": 0.0005250465312209026
+            }
+          ],
+          "maximum_absolute_displacement": 0.11794586164019305,
+          "model_time": 1680163320.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.22399867466286785,
+          "projection_interval": 50.618285851606174,
+          "reversal_propensity": 0.5838196002447897,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.20651936786324737,
+          "strength": 0.8210042621507894,
+          "terminal_decay_factor": 0.5005179189040653,
+          "terminal_displacement": 0.11794586164019305,
+          "uncertainty": 0.3066725047674611
+        }
+      },
+      "observation_id": "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+      "observation_index": 3,
+      "observation_timestamp": "2023-03-30T08:02:00Z",
+      "physical_row": 106607,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+      "state_after": {
+        "completed_count": 3,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 2,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f"
+        ],
+        "d01_state_hash": "f71794f8928d7266dd3a0a3e7de7e817c8f2ac056c2d5c47ce2ec71596665b84",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 41900,
+        "D02": 23600,
+        "FOUR_FACTOR": 12100,
+        "SOURCE_ADMISSION": 4700
+      },
+      "context_end_timestamp": "2023-03-30T08:02:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 121300,
+      "emission_id": "991fe81eb7cedae707b322c9603aa56a5f7f96008e452ea614e21c34d1d6efc5",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746530744900,
+      "lifecycle_start_ns": 258746530623600,
+      "mathematics": {
+        "C": 0.3650467102167998,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5370752242284436,
+        "Q_S": 0.6796938189454222,
+        "dmo": {
+          "coherence": 0.9634592144672224,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 48.734925139642876,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163380.0,
+          "model_version": "0.2",
+          "observation_half_life": 48.734925139642876,
+          "parameter_state": {
+            "ref_alpha": 0.050639781004535624
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00018048891067436873
+          },
+          "persistence": 0.3791985235753942,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.003853352824955795,
+          "reversal_propensity": 0.6002085266713661,
+          "state_acceleration": -8.323167277702632e-06,
+          "state_curvature": -8.323163506332786e-06,
+          "state_hash": "2FC88E4DD5AC36EA26B20738192C649EDD530BFCBABFDFC7E108EF49EC20A9A2",
+          "state_level": -0.0233669209968506,
+          "state_support_ratio": 0.3709044922911749,
+          "state_velocity": 0.0005496164251422192,
+          "strength": 0.8594883396802638,
+          "trace_id": "SPY:4",
+          "uncertainty": 0.2784993784924388
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 59.26670576139199,
+          "model_time": 1680163380.0,
+          "samples": [
+            {
+              "level": -0.022603668610039287,
+              "persistence": 0.37170350303876903,
+              "reversal_propensity": 0.6021850693187256,
+              "strength": 0.8425001860974015,
+              "tau": 1.4036176213287357,
+              "uncertainty": 0.281464192463478,
+              "velocity": 0.0005387530221023907
+            },
+            {
+              "level": -0.020779989364109273,
+              "persistence": 0.35373334503694553,
+              "reversal_propensity": 0.6069240534878585,
+              "strength": 0.8017691697444109,
+              "tau": 4.887680443600387,
+              "uncertainty": 0.2885726687171773,
+              "velocity": 0.0005127067867239469
+            },
+            {
+              "level": -0.018221386550611462,
+              "persistence": 0.32826821334407696,
+              "reversal_propensity": 0.6136395679505106,
+              "strength": 0.7440501059883748,
+              "tau": 10.140679813136485,
+              "uncertainty": 0.29864594041115533,
+              "velocity": 0.0004757972162044101
+            },
+            {
+              "level": -0.015218022773120097,
+              "persistence": 0.29767114250648785,
+              "reversal_propensity": 0.6217084471616148,
+              "strength": 0.6746990300260494,
+              "tau": 17.019891853551066,
+              "uncertainty": 0.31074925922781166,
+              "velocity": 0.0004314493307352954
+            },
+            {
+              "level": -0.01208044961817869,
+              "persistence": 0.2641015444948484,
+              "reversal_propensity": 0.6305612237217969,
+              "strength": 0.5986104477533358,
+              "tau": 25.432837687968203,
+              "uncertainty": 0.32402842406808496,
+              "velocity": 0.00038279301667939374
+            },
+            {
+              "level": -0.00914812589995765,
+              "persistence": 0.22948226490037846,
+              "reversal_propensity": 0.6396908161231731,
+              "strength": 0.5201426656031719,
+              "tau": 35.311898094126406,
+              "uncertainty": 0.33772281267014925,
+              "velocity": 0.00033261527729289413
+            },
+            {
+              "level": -0.006791240916209128,
+              "persistence": 0.19543292617665212,
+              "reversal_propensity": 0.648670107076809,
+              "strength": 0.44296670687070644,
+              "tau": 46.60422430422518,
+              "uncertainty": 0.35119174910060313,
+              "velocity": 0.00028326361935040166
+            },
+            {
+              "level": -0.005410705078067648,
+              "persistence": 0.1632236372281666,
+              "reversal_propensity": 0.6571641509472308,
+              "strength": 0.3699613902371054,
+              "tau": 59.26670576139199,
+              "uncertainty": 0.36393281490623575,
+              "velocity": 0.0002365789590797779
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9634592144672224,
+          "current_level": -0.0233669209968506,
+          "entity_id": "SPY",
+          "forward_half_life": 48.734925139642876,
+          "forward_samples": [
+            {
+              "level": -0.022603668610039287,
+              "persistence": 0.37170350303876903,
+              "reversal_propensity": 0.6021850693187256,
+              "strength": 0.8425001860974015,
+              "tau": 1.4036176213287357,
+              "uncertainty": 0.281464192463478,
+              "velocity": 0.0005387530221023907
+            },
+            {
+              "level": -0.020779989364109273,
+              "persistence": 0.35373334503694553,
+              "reversal_propensity": 0.6069240534878585,
+              "strength": 0.8017691697444109,
+              "tau": 4.887680443600387,
+              "uncertainty": 0.2885726687171773,
+              "velocity": 0.0005127067867239469
+            },
+            {
+              "level": -0.018221386550611462,
+              "persistence": 0.32826821334407696,
+              "reversal_propensity": 0.6136395679505106,
+              "strength": 0.7440501059883748,
+              "tau": 10.140679813136485,
+              "uncertainty": 0.29864594041115533,
+              "velocity": 0.0004757972162044101
+            },
+            {
+              "level": -0.015218022773120097,
+              "persistence": 0.29767114250648785,
+              "reversal_propensity": 0.6217084471616148,
+              "strength": 0.6746990300260494,
+              "tau": 17.019891853551066,
+              "uncertainty": 0.31074925922781166,
+              "velocity": 0.0004314493307352954
+            },
+            {
+              "level": -0.01208044961817869,
+              "persistence": 0.2641015444948484,
+              "reversal_propensity": 0.6305612237217969,
+              "strength": 0.5986104477533358,
+              "tau": 25.432837687968203,
+              "uncertainty": 0.32402842406808496,
+              "velocity": 0.00038279301667939374
+            },
+            {
+              "level": -0.00914812589995765,
+              "persistence": 0.22948226490037846,
+              "reversal_propensity": 0.6396908161231731,
+              "strength": 0.5201426656031719,
+              "tau": 35.311898094126406,
+              "uncertainty": 0.33772281267014925,
+              "velocity": 0.00033261527729289413
+            },
+            {
+              "level": -0.006791240916209128,
+              "persistence": 0.19543292617665212,
+              "reversal_propensity": 0.648670107076809,
+              "strength": 0.44296670687070644,
+              "tau": 46.60422430422518,
+              "uncertainty": 0.35119174910060313,
+              "velocity": 0.00028326361935040166
+            },
+            {
+              "level": -0.005410705078067648,
+              "persistence": 0.1632236372281666,
+              "reversal_propensity": 0.6571641509472308,
+              "strength": 0.3699613902371054,
+              "tau": 59.26670576139199,
+              "uncertainty": 0.36393281490623575,
+              "velocity": 0.0002365789590797779
+            }
+          ],
+          "maximum_absolute_displacement": 0.017956215918782954,
+          "model_time": 1680163380.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.3791985235753942,
+          "projection_interval": 59.26670576139199,
+          "reversal_propensity": 0.6002085266713661,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.3709044922911749,
+          "strength": 0.8594883396802638,
+          "terminal_decay_factor": 0.4304437572413534,
+          "terminal_displacement": 0.017956215918782954,
+          "uncertainty": 0.2784993784924388
+        }
+      },
+      "observation_id": "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+      "observation_index": 4,
+      "observation_timestamp": "2023-03-30T08:03:00Z",
+      "physical_row": 106608,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+      "state_after": {
+        "completed_count": 4,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 3,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae"
+        ],
+        "d01_state_hash": "b91b22b674827ae0a50308ea411e4b1bb9125225159ac0001141b97e8f7ba014",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 41400,
+        "D02": 23500,
+        "FOUR_FACTOR": 12100,
+        "SOURCE_ADMISSION": 4400
+      },
+      "context_end_timestamp": "2023-03-30T08:03:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 120600,
+      "emission_id": "6171cf12a58829e3c50953c760d7c5d5fb10f6fa67086271a0f40547c6e0de76",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746531230900,
+      "lifecycle_start_ns": 258746531110300,
+      "mathematics": {
+        "C": 0.40156728523390584,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.55566148210625,
+        "Q_S": 0.7226833209884445,
+        "dmo": {
+          "coherence": 0.9990517852000967,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 47.45807396223815,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163440.0,
+          "model_version": "0.2",
+          "observation_half_life": 47.45807396223815,
+          "parameter_state": {
+            "ref_alpha": 0.05077136789622655
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00013158689169092547
+          },
+          "persistence": 0.5033586816185598,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.0012740622767383055,
+          "reversal_propensity": 0.5768589463243706,
+          "state_acceleration": -2.7448426456646112e-06,
+          "state_curvature": -2.744842035618275e-06,
+          "state_hash": "7A93C03C245AFAEFA8E87E2E8DBB66057C5B2BB98F05476C6336BD97B49D6596",
+          "state_level": -0.000271369010507696,
+          "state_support_ratio": 0.44594726742994106,
+          "state_velocity": 0.0003849258663748941,
+          "strength": 0.7505481023639711,
+          "trace_id": "SPY:5",
+          "uncertainty": 0.27031499303964285
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 61.09171572824968,
+          "model_time": 1680163440.0,
+          "samples": [
+            {
+              "level": 0.00028268397260323194,
+              "persistence": 0.492833426334148,
+              "reversal_propensity": 0.5789499513410254,
+              "strength": 0.7348541038911327,
+              "tau": 1.4468394625914358,
+              "uncertainty": 0.27345150056462514,
+              "velocity": 0.000376877047198593
+            },
+            {
+              "level": 0.0016331231007476145,
+              "persistence": 0.4676489621712706,
+              "reversal_propensity": 0.5839532352978842,
+              "strength": 0.6973020510970479,
+              "tau": 5.038187636632143,
+              "uncertainty": 0.2809564264999133,
+              "velocity": 0.0003576181130804581
+            },
+            {
+              "level": 0.0036022830509071318,
+              "persistence": 0.4320895733872102,
+              "reversal_propensity": 0.5910176587562656,
+              "strength": 0.6442801548872118,
+              "tau": 10.452943528352836,
+              "uncertainty": 0.2915530616874853,
+              "velocity": 0.0003304253198788926
+            },
+            {
+              "level": 0.006059346246551867,
+              "persistence": 0.38957831647593477,
+              "reversal_propensity": 0.5994631785145779,
+              "strength": 0.5808924666064251,
+              "tau": 17.543988340246724,
+              "uncertainty": 0.3042213413249536,
+              "velocity": 0.0002979163297793464
+            },
+            {
+              "level": 0.008876610204703393,
+              "persistence": 0.3432318712238431,
+              "reversal_propensity": 0.608670617850493,
+              "strength": 0.5117862053943993,
+              "tau": 26.215995477315964,
+              "uncertainty": 0.3180325003288265,
+              "velocity": 0.0002624745141446318
+            },
+            {
+              "level": 0.011921319258331743,
+              "persistence": 0.29579743408778636,
+              "reversal_propensity": 0.6180942036290338,
+              "strength": 0.44105766115892087,
+              "tau": 36.399263506840555,
+              "uncertainty": 0.3321678789966376,
+              "velocity": 0.00022620069494300258
+            },
+            {
+              "level": 0.015052965563211188,
+              "persistence": 0.24955179941430353,
+              "reversal_propensity": 0.6272816153817782,
+              "strength": 0.37210171659233326,
+              "tau": 48.03931627973174,
+              "uncertainty": 0.3459489966257542,
+              "velocity": 0.00019083597065632234
+            },
+            {
+              "level": 0.01812226484798659,
+              "persistence": 0.20623785921573942,
+              "reversal_propensity": 0.6358866006100626,
+              "strength": 0.3075171632527448,
+              "tau": 61.09171572824968,
+              "uncertainty": 0.3588564744681808,
+              "velocity": 0.00015771315671491703
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9990517852000967,
+          "current_level": -0.000271369010507696,
+          "entity_id": "SPY",
+          "forward_half_life": 47.45807396223815,
+          "forward_samples": [
+            {
+              "level": 0.00028268397260323194,
+              "persistence": 0.492833426334148,
+              "reversal_propensity": 0.5789499513410254,
+              "strength": 0.7348541038911327,
+              "tau": 1.4468394625914358,
+              "uncertainty": 0.27345150056462514,
+              "velocity": 0.000376877047198593
+            },
+            {
+              "level": 0.0016331231007476145,
+              "persistence": 0.4676489621712706,
+              "reversal_propensity": 0.5839532352978842,
+              "strength": 0.6973020510970479,
+              "tau": 5.038187636632143,
+              "uncertainty": 0.2809564264999133,
+              "velocity": 0.0003576181130804581
+            },
+            {
+              "level": 0.0036022830509071318,
+              "persistence": 0.4320895733872102,
+              "reversal_propensity": 0.5910176587562656,
+              "strength": 0.6442801548872118,
+              "tau": 10.452943528352836,
+              "uncertainty": 0.2915530616874853,
+              "velocity": 0.0003304253198788926
+            },
+            {
+              "level": 0.006059346246551867,
+              "persistence": 0.38957831647593477,
+              "reversal_propensity": 0.5994631785145779,
+              "strength": 0.5808924666064251,
+              "tau": 17.543988340246724,
+              "uncertainty": 0.3042213413249536,
+              "velocity": 0.0002979163297793464
+            },
+            {
+              "level": 0.008876610204703393,
+              "persistence": 0.3432318712238431,
+              "reversal_propensity": 0.608670617850493,
+              "strength": 0.5117862053943993,
+              "tau": 26.215995477315964,
+              "uncertainty": 0.3180325003288265,
+              "velocity": 0.0002624745141446318
+            },
+            {
+              "level": 0.011921319258331743,
+              "persistence": 0.29579743408778636,
+              "reversal_propensity": 0.6180942036290338,
+              "strength": 0.44105766115892087,
+              "tau": 36.399263506840555,
+              "uncertainty": 0.3321678789966376,
+              "velocity": 0.00022620069494300258
+            },
+            {
+              "level": 0.015052965563211188,
+              "persistence": 0.24955179941430353,
+              "reversal_propensity": 0.6272816153817782,
+              "strength": 0.37210171659233326,
+              "tau": 48.03931627973174,
+              "uncertainty": 0.3459489966257542,
+              "velocity": 0.00019083597065632234
+            },
+            {
+              "level": 0.01812226484798659,
+              "persistence": 0.20623785921573942,
+              "reversal_propensity": 0.6358866006100626,
+              "strength": 0.3075171632527448,
+              "tau": 61.09171572824968,
+              "uncertainty": 0.3588564744681808,
+              "velocity": 0.00015771315671491703
+            }
+          ],
+          "maximum_absolute_displacement": 0.018393633858494286,
+          "model_time": 1680163440.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.5033586816185598,
+          "projection_interval": 61.09171572824968,
+          "reversal_propensity": 0.5768589463243706,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.44594726742994106,
+          "strength": 0.7505481023639711,
+          "terminal_decay_factor": 0.4097234571430804,
+          "terminal_displacement": 0.018393633858494286,
+          "uncertainty": 0.27031499303964285
+        }
+      },
+      "observation_id": "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+      "observation_index": 5,
+      "observation_timestamp": "2023-03-30T08:04:00Z",
+      "physical_row": 106609,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+      "state_after": {
+        "completed_count": 5,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 4,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e"
+        ],
+        "d01_state_hash": "33984d70c85ae4a0c8323a041bcdaa99878706b979db75cb8c98282492c71fb6",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 41600,
+        "D02": 22400,
+        "FOUR_FACTOR": 11900,
+        "SOURCE_ADMISSION": 4400
+      },
+      "context_end_timestamp": "2023-03-30T08:04:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 121900,
+      "emission_id": "d48f4120542efc8b87947f0273b5447cc4968fc6e8e1ae90871a8d5b1fef50fd",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746531747700,
+      "lifecycle_start_ns": 258746531625800,
+      "mathematics": {
+        "C": 0.4448532688379067,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5891774968309846,
+        "Q_S": 0.7550411738918132,
+        "dmo": {
+          "coherence": 0.9999999897541839,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 35.016910118471316,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163500.0,
+          "model_version": "0.2",
+          "observation_half_life": 35.016910118471316,
+          "parameter_state": {
+            "ref_alpha": 0.050938238902561994
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00016687100633544505
+          },
+          "persistence": 0.5226869288176079,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.00015313517924589408,
+          "reversal_propensity": 0.5250724959565755,
+          "state_acceleration": 3.2954490762140305e-07,
+          "state_curvature": 3.295448266616649e-07,
+          "state_hash": "AA3C662E4F40A6655199E970543E6A8E6B9AFCCF8ACDA29C3974C6BD25ACF986",
+          "state_level": 0.024010544643667715,
+          "state_support_ratio": 0.542005292686066,
+          "state_velocity": 0.00040469856083547376,
+          "strength": 0.8235126420070604,
+          "trace_id": "SPY:6",
+          "uncertainty": 0.26908818753043756
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 64.24712890118508,
+          "model_time": 1680163500.0,
+          "samples": [
+            {
+              "level": 0.024626703041708782,
+              "persistence": 0.5071788784759961,
+              "reversal_propensity": 0.5280394824042169,
+              "strength": 0.7990791335240967,
+              "tau": 1.5215693379102375,
+              "uncertainty": 0.2735386672018998,
+              "velocity": 0.0003926912093816852
+            },
+            {
+              "level": 0.02615943011172112,
+              "persistence": 0.47064425389804054,
+              "reversal_propensity": 0.5350292544003528,
+              "strength": 0.741517477488449,
+              "tau": 5.298412176847472,
+              "uncertainty": 0.2840233251961035,
+              "velocity": 0.0003644037027076425
+            },
+            {
+              "level": 0.02847924372043709,
+              "persistence": 0.4204742757443062,
+              "reversal_propensity": 0.5446277301585329,
+              "strength": 0.6624728161798525,
+              "tau": 10.9928425197649,
+              "uncertainty": 0.2984210388333737,
+              "velocity": 0.0003255588094521457
+            },
+            {
+              "level": 0.03153338071391567,
+              "persistence": 0.36276988821324285,
+              "reversal_propensity": 0.5556676824415561,
+              "strength": 0.5715574134576095,
+              "tau": 18.45014282051844,
+              "uncertainty": 0.3149809672579085,
+              "velocity": 0.0002808802814458278
+            },
+            {
+              "level": 0.03529335431134218,
+              "persistence": 0.3028516767341558,
+              "reversal_propensity": 0.5671311815603557,
+              "strength": 0.4771540489979269,
+              "tau": 27.570062824821896,
+              "uncertainty": 0.33217621593610785,
+              "velocity": 0.0002344876654906587
+            },
+            {
+              "level": 0.03974356454598508,
+              "persistence": 0.24499986026511153,
+              "reversal_propensity": 0.5781993398171372,
+              "strength": 0.38600636651598214,
+              "tau": 38.27930099122767,
+              "uncertainty": 0.34877845332128027,
+              "velocity": 0.0001896949883144709
+            },
+            {
+              "level": 0.044876698888993774,
+              "persistence": 0.19227875337865877,
+              "reversal_propensity": 0.5882858952635716,
+              "strength": 0.3029423072715437,
+              "tau": 50.520567454312534,
+              "uncertainty": 0.36390828649093176,
+              "velocity": 0.00014887484358487905
+            },
+            {
+              "level": 0.05069139544623308,
+              "persistence": 0.14653052923470505,
+              "reversal_propensity": 0.5970384049632962,
+              "strength": 0.23086428340141749,
+              "tau": 64.24712890118508,
+              "uncertainty": 0.37703705104051866,
+              "velocity": 0.00011345356279310838
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999999897541839,
+          "current_level": 0.024010544643667715,
+          "entity_id": "SPY",
+          "forward_half_life": 35.016910118471316,
+          "forward_samples": [
+            {
+              "level": 0.024626703041708782,
+              "persistence": 0.5071788784759961,
+              "reversal_propensity": 0.5280394824042169,
+              "strength": 0.7990791335240967,
+              "tau": 1.5215693379102375,
+              "uncertainty": 0.2735386672018998,
+              "velocity": 0.0003926912093816852
+            },
+            {
+              "level": 0.02615943011172112,
+              "persistence": 0.47064425389804054,
+              "reversal_propensity": 0.5350292544003528,
+              "strength": 0.741517477488449,
+              "tau": 5.298412176847472,
+              "uncertainty": 0.2840233251961035,
+              "velocity": 0.0003644037027076425
+            },
+            {
+              "level": 0.02847924372043709,
+              "persistence": 0.4204742757443062,
+              "reversal_propensity": 0.5446277301585329,
+              "strength": 0.6624728161798525,
+              "tau": 10.9928425197649,
+              "uncertainty": 0.2984210388333737,
+              "velocity": 0.0003255588094521457
+            },
+            {
+              "level": 0.03153338071391567,
+              "persistence": 0.36276988821324285,
+              "reversal_propensity": 0.5556676824415561,
+              "strength": 0.5715574134576095,
+              "tau": 18.45014282051844,
+              "uncertainty": 0.3149809672579085,
+              "velocity": 0.0002808802814458278
+            },
+            {
+              "level": 0.03529335431134218,
+              "persistence": 0.3028516767341558,
+              "reversal_propensity": 0.5671311815603557,
+              "strength": 0.4771540489979269,
+              "tau": 27.570062824821896,
+              "uncertainty": 0.33217621593610785,
+              "velocity": 0.0002344876654906587
+            },
+            {
+              "level": 0.03974356454598508,
+              "persistence": 0.24499986026511153,
+              "reversal_propensity": 0.5781993398171372,
+              "strength": 0.38600636651598214,
+              "tau": 38.27930099122767,
+              "uncertainty": 0.34877845332128027,
+              "velocity": 0.0001896949883144709
+            },
+            {
+              "level": 0.044876698888993774,
+              "persistence": 0.19227875337865877,
+              "reversal_propensity": 0.5882858952635716,
+              "strength": 0.3029423072715437,
+              "tau": 50.520567454312534,
+              "uncertainty": 0.36390828649093176,
+              "velocity": 0.00014887484358487905
+            },
+            {
+              "level": 0.05069139544623308,
+              "persistence": 0.14653052923470505,
+              "reversal_propensity": 0.5970384049632962,
+              "strength": 0.23086428340141749,
+              "tau": 64.24712890118508,
+              "uncertainty": 0.37703705104051866,
+              "velocity": 0.00011345356279310838
+            }
+          ],
+          "maximum_absolute_displacement": 0.026680850802565364,
+          "model_time": 1680163500.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.5226869288176079,
+          "projection_interval": 64.24712890118508,
+          "reversal_propensity": 0.5250724959565755,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.542005292686066,
+          "strength": 0.8235126420070604,
+          "terminal_decay_factor": 0.2803409099327927,
+          "terminal_displacement": 0.026680850802565364,
+          "uncertainty": 0.26908818753043756
+        }
+      },
+      "observation_id": "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+      "observation_index": 6,
+      "observation_timestamp": "2023-03-30T08:05:00Z",
+      "physical_row": 106610,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+      "state_after": {
+        "completed_count": 6,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 5,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93"
+        ],
+        "d01_state_hash": "1ed0e4fffc89c973f5b676f05c85d799e5cf466fcb6745026c7c1e8fe1bb7822",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 39300,
+        "D02": 23500,
+        "FOUR_FACTOR": 11900,
+        "SOURCE_ADMISSION": 4700
+      },
+      "context_end_timestamp": "2023-03-30T08:05:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 119700,
+      "emission_id": "c64c348243b91263bd1423884117a6a4d4b58018c091662ba0d2adf456bd2239",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746532230600,
+      "lifecycle_start_ns": 258746532110900,
+      "mathematics": {
+        "C": 0.32256556830957156,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5473526041927878,
+        "Q_S": 0.589319509651877,
+        "dmo": {
+          "coherence": 0.7351247764183156,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 24.541018316608284,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163560.0,
+          "model_version": "0.2",
+          "observation_half_life": 24.541018316608284,
+          "parameter_state": {
+            "ref_alpha": 0.05101431969433836
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 7.60807917763659e-05
+          },
+          "persistence": 0.41814954305408636,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.014444559379179763,
+          "reversal_propensity": 0.5540917053369392,
+          "state_acceleration": -3.153525616176388e-05,
+          "state_curvature": -3.153515150873763e-05,
+          "state_hash": "04B2AF6AF165B848B34CB7DC9DEA595DE8FDCDDB3EA39D20D9EAB4E451D66234",
+          "state_level": -0.06523446392234916,
+          "state_support_ratio": 0.3155850209816794,
+          "state_velocity": -0.0014874168091857118,
+          "strength": 0.6658244969084275,
+          "trace_id": "SPY:7",
+          "uncertainty": 0.3281244666170479
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 52.27070956693007,
+          "model_time": 1680163560.0,
+          "samples": [
+            {
+              "level": -0.06709994668214829,
+              "persistence": 0.40378173326482214,
+              "reversal_propensity": 0.5575277511315428,
+              "strength": 0.6429464622829647,
+              "tau": 1.237930944278898,
+              "uncertainty": 0.33327853530895335,
+              "velocity": -0.0014363084864654587
+            },
+            {
+              "level": -0.07193930983029553,
+              "persistence": 0.37021544195299516,
+              "reversal_propensity": 0.5655550925144043,
+              "strength": 0.589498456905405,
+              "tau": 4.31072592345479,
+              "uncertainty": 0.3453195473832456,
+              "velocity": -0.0013169084614060558
+            },
+            {
+              "level": -0.07979862981545105,
+              "persistence": 0.3248069027256894,
+              "reversal_propensity": 0.5764144943675429,
+              "strength": 0.517193899149481,
+              "tau": 8.943647576055836,
+              "uncertainty": 0.3616086501629534,
+              "velocity": -0.0011553838928654485
+            },
+            {
+              "level": -0.09111464531195243,
+              "persistence": 0.27365468027236456,
+              "reversal_propensity": 0.5886474917013959,
+              "strength": 0.4357436061945329,
+              "tau": 15.010819523515087,
+              "uncertainty": 0.3799581461637329,
+              "velocity": -0.0009734282342544792
+            },
+            {
+              "level": -0.10653148488357184,
+              "persistence": 0.22191563281112495,
+              "reversal_propensity": 0.6010208275858134,
+              "strength": 0.3533589047913193,
+              "tau": 22.430679336266792,
+              "uncertainty": 0.39851814999035934,
+              "velocity": -0.0007893851564526439
+            },
+            {
+              "level": -0.12685135080167295,
+              "persistence": 0.17350493649335247,
+              "reversal_propensity": 0.6125981919813811,
+              "strength": 0.2762739765492758,
+              "tau": 31.143589741029693,
+              "uncertainty": 0.4158841965837108,
+              "velocity": -0.0006171814923722894
+            },
+            {
+              "level": -0.15301031453014827,
+              "persistence": 0.13096234331665524,
+              "reversal_propensity": 0.6227722060113796,
+              "strength": 0.2085328988186457,
+              "tau": 41.10294037609765,
+              "uncertainty": 0.4311452176287085,
+              "velocity": -0.0004658514975211795
+            },
+            {
+              "level": -0.18606353636862338,
+              "persistence": 0.09553402842520065,
+              "reversal_propensity": 0.6312448482705801,
+              "strength": 0.1521199711214727,
+              "tau": 52.27070956693007,
+              "uncertainty": 0.4438541810175093,
+              "velocity": -0.0003398279923756582
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.7351247764183156,
+          "current_level": -0.06523446392234916,
+          "entity_id": "SPY",
+          "forward_half_life": 24.541018316608284,
+          "forward_samples": [
+            {
+              "level": -0.06709994668214829,
+              "persistence": 0.40378173326482214,
+              "reversal_propensity": 0.5575277511315428,
+              "strength": 0.6429464622829647,
+              "tau": 1.237930944278898,
+              "uncertainty": 0.33327853530895335,
+              "velocity": -0.0014363084864654587
+            },
+            {
+              "level": -0.07193930983029553,
+              "persistence": 0.37021544195299516,
+              "reversal_propensity": 0.5655550925144043,
+              "strength": 0.589498456905405,
+              "tau": 4.31072592345479,
+              "uncertainty": 0.3453195473832456,
+              "velocity": -0.0013169084614060558
+            },
+            {
+              "level": -0.07979862981545105,
+              "persistence": 0.3248069027256894,
+              "reversal_propensity": 0.5764144943675429,
+              "strength": 0.517193899149481,
+              "tau": 8.943647576055836,
+              "uncertainty": 0.3616086501629534,
+              "velocity": -0.0011553838928654485
+            },
+            {
+              "level": -0.09111464531195243,
+              "persistence": 0.27365468027236456,
+              "reversal_propensity": 0.5886474917013959,
+              "strength": 0.4357436061945329,
+              "tau": 15.010819523515087,
+              "uncertainty": 0.3799581461637329,
+              "velocity": -0.0009734282342544792
+            },
+            {
+              "level": -0.10653148488357184,
+              "persistence": 0.22191563281112495,
+              "reversal_propensity": 0.6010208275858134,
+              "strength": 0.3533589047913193,
+              "tau": 22.430679336266792,
+              "uncertainty": 0.39851814999035934,
+              "velocity": -0.0007893851564526439
+            },
+            {
+              "level": -0.12685135080167295,
+              "persistence": 0.17350493649335247,
+              "reversal_propensity": 0.6125981919813811,
+              "strength": 0.2762739765492758,
+              "tau": 31.143589741029693,
+              "uncertainty": 0.4158841965837108,
+              "velocity": -0.0006171814923722894
+            },
+            {
+              "level": -0.15301031453014827,
+              "persistence": 0.13096234331665524,
+              "reversal_propensity": 0.6227722060113796,
+              "strength": 0.2085328988186457,
+              "tau": 41.10294037609765,
+              "uncertainty": 0.4311452176287085,
+              "velocity": -0.0004658514975211795
+            },
+            {
+              "level": -0.18606353636862338,
+              "persistence": 0.09553402842520065,
+              "reversal_propensity": 0.6312448482705801,
+              "strength": 0.1521199711214727,
+              "tau": 52.27070956693007,
+              "uncertainty": 0.4438541810175093,
+              "velocity": -0.0003398279923756582
+            }
+          ],
+          "maximum_absolute_displacement": 0.12082907244627422,
+          "model_time": 1680163560.0,
+          "path_direction": "DOWNWARD",
+          "persistence": 0.41814954305408636,
+          "projection_interval": 52.27070956693007,
+          "reversal_propensity": 0.5540917053369392,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.3155850209816794,
+          "strength": 0.6658244969084275,
+          "terminal_decay_factor": 0.22846857066359058,
+          "terminal_displacement": -0.12082907244627422,
+          "uncertainty": 0.3281244666170479
+        }
+      },
+      "observation_id": "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+      "observation_index": 7,
+      "observation_timestamp": "2023-03-30T08:06:00Z",
+      "physical_row": 106611,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+      "state_after": {
+        "completed_count": 7,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 6,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313"
+        ],
+        "d01_state_hash": "71f5b05b94cab2396b86aea463edc507663f960225ebf59d3e030120d3e96091",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 39700,
+        "D02": 23600,
+        "FOUR_FACTOR": 11700,
+        "SOURCE_ADMISSION": 4400
+      },
+      "context_end_timestamp": "2023-03-30T08:06:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 117800,
+      "emission_id": "8d18bb55388a97bc935c754972f8fc17d8dd5a2d76aceebe06d5f8fa2b578802",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746532716100,
+      "lifecycle_start_ns": 258746532598300,
+      "mathematics": {
+        "C": 0.35780246132114857,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.558444975905003,
+        "Q_S": 0.6407121144590874,
+        "dmo": {
+          "coherence": 0.9999999877369131,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 17.404542832731007,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163620.0,
+          "model_version": "0.2",
+          "observation_half_life": 17.404542832731007,
+          "parameter_state": {
+            "ref_alpha": 0.05115411196865296
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.0001397922743145985
+          },
+          "persistence": 0.3345196344432691,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.021436592554291613,
+          "reversal_propensity": 0.5604875169666417,
+          "state_acceleration": 4.713460870690426e-05,
+          "state_curvature": 4.713448162980061e-05,
+          "state_hash": "61B0E362383C64D1240A4FC721FDA2028A6437CC2911AAFDFF24E92AFA7C92F1",
+          "state_level": 0.015205118913050854,
+          "state_support_ratio": 0.3090982942952966,
+          "state_velocity": 0.00134065971369989,
+          "strength": 0.7862618405555295,
+          "trace_id": "SPY:8",
+          "uncertainty": 0.29043928636295513
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 54.531548658372515,
+          "model_time": 1680163620.0,
+          "samples": [
+            {
+              "level": 0.01697585488486331,
+              "persistence": 0.31774900090124697,
+              "reversal_propensity": 0.5655008650082097,
+              "strength": 0.7468437979704422,
+              "tau": 1.2914745577962983,
+              "uncertainty": 0.29795930842530716,
+              "velocity": 0.0012734477761990252
+            },
+            {
+              "level": 0.021710940118541817,
+              "persistence": 0.2796650527152007,
+              "reversal_propensity": 0.5768855325328613,
+              "strength": 0.6573305015499885,
+              "tau": 4.497175615088721,
+              "uncertainty": 0.31503630971228463,
+              "velocity": 0.001120818125157346
+            },
+            {
+              "level": 0.029765841434806737,
+              "persistence": 0.23069651602747138,
+              "reversal_propensity": 0.5915239966604532,
+              "strength": 0.5422338440713239,
+              "tau": 9.330482731491033,
+              "uncertainty": 0.3369940059036724,
+              "velocity": 0.0009245661338943121
+            },
+            {
+              "level": 0.041979548086672175,
+              "persistence": 0.17929328936396072,
+              "reversal_propensity": 0.6068902775512772,
+              "strength": 0.4214146411141978,
+              "tau": 15.660075059828317,
+              "uncertainty": 0.36004342723990856,
+              "velocity": 0.0007185565964970689
+            },
+            {
+              "level": 0.05948317675030454,
+              "persistence": 0.13172825002826108,
+              "reversal_propensity": 0.62110918563267,
+              "strength": 0.3096167927265399,
+              "tau": 23.400862391197542,
+              "uncertainty": 0.3813717893619977,
+              "velocity": 0.0005279294241218178
+            },
+            {
+              "level": 0.08364260548220358,
+              "persistence": 0.09171952615329468,
+              "reversal_propensity": 0.6330692381245221,
+              "strength": 0.21557946387269686,
+              "tau": 32.49062799089711,
+              "uncertainty": 0.3993118680997757,
+              "velocity": 0.00036758581862619816
+            },
+            {
+              "level": 0.11602818414378963,
+              "persistence": 0.06063923582004262,
+              "reversal_propensity": 0.6423602593780213,
+              "strength": 0.14252770915852842,
+              "tau": 42.88074548234976,
+              "uncertainty": 0.41324839998002455,
+              "velocity": 0.00024302483968923944
+            },
+            {
+              "level": 0.158395221872681,
+              "persistence": 0.038127711883897374,
+              "reversal_propensity": 0.6490897668921648,
+              "strength": 0.08961615951750088,
+              "tau": 54.531548658372515,
+              "uncertainty": 0.42334266125123987,
+              "velocity": 0.00015280504351671028
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999999877369131,
+          "current_level": 0.015205118913050854,
+          "entity_id": "SPY",
+          "forward_half_life": 17.404542832731007,
+          "forward_samples": [
+            {
+              "level": 0.01697585488486331,
+              "persistence": 0.31774900090124697,
+              "reversal_propensity": 0.5655008650082097,
+              "strength": 0.7468437979704422,
+              "tau": 1.2914745577962983,
+              "uncertainty": 0.29795930842530716,
+              "velocity": 0.0012734477761990252
+            },
+            {
+              "level": 0.021710940118541817,
+              "persistence": 0.2796650527152007,
+              "reversal_propensity": 0.5768855325328613,
+              "strength": 0.6573305015499885,
+              "tau": 4.497175615088721,
+              "uncertainty": 0.31503630971228463,
+              "velocity": 0.001120818125157346
+            },
+            {
+              "level": 0.029765841434806737,
+              "persistence": 0.23069651602747138,
+              "reversal_propensity": 0.5915239966604532,
+              "strength": 0.5422338440713239,
+              "tau": 9.330482731491033,
+              "uncertainty": 0.3369940059036724,
+              "velocity": 0.0009245661338943121
+            },
+            {
+              "level": 0.041979548086672175,
+              "persistence": 0.17929328936396072,
+              "reversal_propensity": 0.6068902775512772,
+              "strength": 0.4214146411141978,
+              "tau": 15.660075059828317,
+              "uncertainty": 0.36004342723990856,
+              "velocity": 0.0007185565964970689
+            },
+            {
+              "level": 0.05948317675030454,
+              "persistence": 0.13172825002826108,
+              "reversal_propensity": 0.62110918563267,
+              "strength": 0.3096167927265399,
+              "tau": 23.400862391197542,
+              "uncertainty": 0.3813717893619977,
+              "velocity": 0.0005279294241218178
+            },
+            {
+              "level": 0.08364260548220358,
+              "persistence": 0.09171952615329468,
+              "reversal_propensity": 0.6330692381245221,
+              "strength": 0.21557946387269686,
+              "tau": 32.49062799089711,
+              "uncertainty": 0.3993118680997757,
+              "velocity": 0.00036758581862619816
+            },
+            {
+              "level": 0.11602818414378963,
+              "persistence": 0.06063923582004262,
+              "reversal_propensity": 0.6423602593780213,
+              "strength": 0.14252770915852842,
+              "tau": 42.88074548234976,
+              "uncertainty": 0.41324839998002455,
+              "velocity": 0.00024302483968923944
+            },
+            {
+              "level": 0.158395221872681,
+              "persistence": 0.038127711883897374,
+              "reversal_propensity": 0.6490897668921648,
+              "strength": 0.08961615951750088,
+              "tau": 54.531548658372515,
+              "uncertainty": 0.42334266125123987,
+              "velocity": 0.00015280504351671028
+            }
+          ],
+          "maximum_absolute_displacement": 0.14319010295963017,
+          "model_time": 1680163620.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.3345196344432691,
+          "projection_interval": 54.531548658372515,
+          "reversal_propensity": 0.5604875169666417,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.3090982942952966,
+          "strength": 0.7862618405555295,
+          "terminal_decay_factor": 0.11397750074476845,
+          "terminal_displacement": 0.14319010295963017,
+          "uncertainty": 0.29043928636295513
+        }
+      },
+      "observation_id": "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+      "observation_index": 8,
+      "observation_timestamp": "2023-03-30T08:07:00Z",
+      "physical_row": 106612,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+      "state_after": {
+        "completed_count": 8,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 7,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83"
+        ],
+        "d01_state_hash": "868d5c2991d9872c22aec8c2727ed057c9d9e9b9f1122b6ebe3cec2ba8f683a7",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 37900,
+        "D02": 22600,
+        "FOUR_FACTOR": 14200,
+        "SOURCE_ADMISSION": 4200
+      },
+      "context_end_timestamp": "2023-03-30T08:07:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 116700,
+      "emission_id": "f57152b2ce09185ab0f3e54b67d07375cec05f12b8c714377b9ed210118c6813",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746533193000,
+      "lifecycle_start_ns": 258746533076300,
+      "mathematics": {
+        "C": 0.5198769346985328,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.6897776473947537,
+        "Q_S": 0.7536877088755701,
+        "dmo": {
+          "coherence": 0.9999999945573688,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 17.090314664945137,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163680.0,
+          "model_version": "0.2",
+          "observation_half_life": 17.090314664945137,
+          "parameter_state": {
+            "ref_alpha": 0.051368477517709434
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00021436554905647498
+          },
+          "persistence": 0.4676152690298595,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.004059645634010894,
+          "reversal_propensity": 0.345660749215737,
+          "state_acceleration": 8.770572037491457e-06,
+          "state_curvature": 8.77052618566673e-06,
+          "state_hash": "A860CD2EC4AF4AD5001FCACD59FEE035C09743292BADB9348731059561561F80",
+          "state_level": 0.12721876109394478,
+          "state_support_ratio": 0.6921763646365173,
+          "state_velocity": 0.0018668940360370833,
+          "strength": 0.9155574844432658,
+          "trace_id": "SPY:9",
+          "uncertainty": 0.2728646458619503
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 64.71658830980908,
+          "model_time": 1680163680.0,
+          "samples": [
+            {
+              "level": 0.13009042800577347,
+              "persistence": 0.43943213973330664,
+              "reversal_propensity": 0.3516877400270129,
+              "strength": 0.8603769189839211,
+              "tau": 1.5326875785814185,
+              "uncertainty": 0.2819051320788642,
+              "velocity": 0.0017543765040288698
+            },
+            {
+              "level": 0.13730752838226068,
+              "persistence": 0.376599844248229,
+              "reversal_propensity": 0.3651244902031637,
+              "strength": 0.7373557470802288,
+              "tau": 5.337128139564106,
+              "uncertainty": 0.3020602573430904,
+              "velocity": 0.0015035266163531083
+            },
+            {
+              "level": 0.1484288948184188,
+              "persistence": 0.2984318191482837,
+              "reversal_propensity": 0.3818408017261208,
+              "strength": 0.584308305808943,
+              "tau": 11.073168184688587,
+              "uncertainty": 0.3271347246275261,
+              "velocity": 0.0011914507934856426
+            },
+            {
+              "level": 0.16342959236131382,
+              "persistence": 0.2200553376485651,
+              "reversal_propensity": 0.3986016918617921,
+              "strength": 0.43085272171249117,
+              "tau": 18.58495963312451,
+              "uncertainty": 0.35227605983103305,
+              "velocity": 0.0008785427351560669
+            },
+            {
+              "level": 0.18244742946198858,
+              "persistence": 0.15160698009614154,
+              "reversal_propensity": 0.4132394426124103,
+              "strength": 0.29683569916105595,
+              "tau": 27.77151969318055,
+              "uncertainty": 0.37423268595696035,
+              "velocity": 0.0006052714393828024
+            },
+            {
+              "level": 0.20572438075299126,
+              "persistence": 0.09788306691982451,
+              "reversal_propensity": 0.42472835598510145,
+              "strength": 0.19164809289617926,
+              "tau": 38.55901120261348,
+              "uncertainty": 0.391466056015997,
+              "velocity": 0.00039078560082256514
+            },
+            {
+              "level": 0.23358134309691242,
+              "persistence": 0.05936268046367619,
+              "reversal_propensity": 0.43296597973422857,
+              "strength": 0.11622791212077008,
+              "tau": 50.88972567392619,
+              "uncertainty": 0.40382249163968764,
+              "velocity": 0.0002369978943389368
+            },
+            {
+              "level": 0.2664043901352245,
+              "persistence": 0.03388177694839271,
+              "reversal_propensity": 0.4384150968189096,
+              "strength": 0.06633811281589574,
+              "tau": 64.71658830980908,
+              "uncertainty": 0.4119961672667093,
+              "velocity": 0.0001352686524683479
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999999945573688,
+          "current_level": 0.12721876109394478,
+          "entity_id": "SPY",
+          "forward_half_life": 17.090314664945137,
+          "forward_samples": [
+            {
+              "level": 0.13009042800577347,
+              "persistence": 0.43943213973330664,
+              "reversal_propensity": 0.3516877400270129,
+              "strength": 0.8603769189839211,
+              "tau": 1.5326875785814185,
+              "uncertainty": 0.2819051320788642,
+              "velocity": 0.0017543765040288698
+            },
+            {
+              "level": 0.13730752838226068,
+              "persistence": 0.376599844248229,
+              "reversal_propensity": 0.3651244902031637,
+              "strength": 0.7373557470802288,
+              "tau": 5.337128139564106,
+              "uncertainty": 0.3020602573430904,
+              "velocity": 0.0015035266163531083
+            },
+            {
+              "level": 0.1484288948184188,
+              "persistence": 0.2984318191482837,
+              "reversal_propensity": 0.3818408017261208,
+              "strength": 0.584308305808943,
+              "tau": 11.073168184688587,
+              "uncertainty": 0.3271347246275261,
+              "velocity": 0.0011914507934856426
+            },
+            {
+              "level": 0.16342959236131382,
+              "persistence": 0.2200553376485651,
+              "reversal_propensity": 0.3986016918617921,
+              "strength": 0.43085272171249117,
+              "tau": 18.58495963312451,
+              "uncertainty": 0.35227605983103305,
+              "velocity": 0.0008785427351560669
+            },
+            {
+              "level": 0.18244742946198858,
+              "persistence": 0.15160698009614154,
+              "reversal_propensity": 0.4132394426124103,
+              "strength": 0.29683569916105595,
+              "tau": 27.77151969318055,
+              "uncertainty": 0.37423268595696035,
+              "velocity": 0.0006052714393828024
+            },
+            {
+              "level": 0.20572438075299126,
+              "persistence": 0.09788306691982451,
+              "reversal_propensity": 0.42472835598510145,
+              "strength": 0.19164809289617926,
+              "tau": 38.55901120261348,
+              "uncertainty": 0.391466056015997,
+              "velocity": 0.00039078560082256514
+            },
+            {
+              "level": 0.23358134309691242,
+              "persistence": 0.05936268046367619,
+              "reversal_propensity": 0.43296597973422857,
+              "strength": 0.11622791212077008,
+              "tau": 50.88972567392619,
+              "uncertainty": 0.40382249163968764,
+              "velocity": 0.0002369978943389368
+            },
+            {
+              "level": 0.2664043901352245,
+              "persistence": 0.03388177694839271,
+              "reversal_propensity": 0.4384150968189096,
+              "strength": 0.06633811281589574,
+              "tau": 64.71658830980908,
+              "uncertainty": 0.4119961672667093,
+              "velocity": 0.0001352686524683479
+            }
+          ],
+          "maximum_absolute_displacement": 0.1391856290412797,
+          "model_time": 1680163680.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.4676152690298595,
+          "projection_interval": 64.71658830980908,
+          "reversal_propensity": 0.345660749215737,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.6921763646365173,
+          "strength": 0.9155574844432658,
+          "terminal_decay_factor": 0.07245652396827357,
+          "terminal_displacement": 0.1391856290412797,
+          "uncertainty": 0.2728646458619503
+        }
+      },
+      "observation_id": "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+      "observation_index": 9,
+      "observation_timestamp": "2023-03-30T08:08:00Z",
+      "physical_row": 106613,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+      "state_after": {
+        "completed_count": 9,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 8,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5"
+        ],
+        "d01_state_hash": "4fa82e199c71c6ad319ba869241e7022cbab62459d3e72111e610293dc6619d2",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 44800,
+        "D02": 25400,
+        "FOUR_FACTOR": 14200,
+        "SOURCE_ADMISSION": 4900
+      },
+      "context_end_timestamp": "2023-03-30T08:08:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 130000,
+      "emission_id": "7ecf6c18e4b2fba7fb94d6919f07b8fa2b2fcd656dff21ad67a2a1bdfb2eefc4",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746533924200,
+      "lifecycle_start_ns": 258746533794200,
+      "mathematics": {
+        "C": 0.31164052688192717,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.41654293925647606,
+        "Q_S": 0.7481594273046654,
+        "dmo": {
+          "coherence": 0.9999863083222552,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163740.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05154543472159725
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00017695720388781477
+          },
+          "persistence": 0.494091656114964,
+          "perturbation_class": "CONTRADICTING",
+          "perturbation_magnitude": 0.005170195192932302,
+          "reversal_propensity": 0.7610240769382177,
+          "state_acceleration": -1.118230351585505e-05,
+          "state_curvature": -1.1182279524651505e-05,
+          "state_hash": "2B33380D2EB013F2E19727A0A322FE5DA8CBFFD7B78B24B774A3F465945EB71D",
+          "state_level": 0.19897611060434178,
+          "state_support_ratio": 0.40463006091328924,
+          "state_velocity": 0.0011959558249739573,
+          "strength": 0.8475803595030854,
+          "trace_id": "SPY:10",
+          "uncertainty": 0.2739518775723385
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 63.53054925317118,
+          "model_time": 1680163740.0,
+          "samples": [
+            {
+              "level": 0.2007628866387689,
+              "persistence": 0.46090586436180797,
+              "reversal_propensity": 0.7677406023728093,
+              "strength": 0.7906524090784585,
+              "tau": 1.5045985309771306,
+              "uncertainty": 0.2840266657242258,
+              "velocity": 0.0011156291478031026
+            },
+            {
+              "level": 0.2050886220103885,
+              "persistence": 0.3878478846453522,
+              "reversal_propensity": 0.7825269236579954,
+              "strength": 0.6653264539721963,
+              "tau": 5.2393163947066475,
+              "uncertainty": 0.30620614765200505,
+              "velocity": 0.0009387912770935545
+            },
+            {
+              "level": 0.2113157686420022,
+              "persistence": 0.2989898331771768,
+              "reversal_propensity": 0.8005110467186569,
+              "strength": 0.5128965590811646,
+              "tau": 10.870233971208574,
+              "uncertainty": 0.33318233224299726,
+              "velocity": 0.000723709109779089
+            },
+            {
+              "level": 0.2189345064135306,
+              "persistence": 0.212651063347466,
+              "reversal_propensity": 0.8179852883418794,
+              "strength": 0.3647883191106168,
+              "tau": 18.24435935479396,
+              "uncertainty": 0.3593936946778311,
+              "velocity": 0.0005147248992161348
+            },
+            {
+              "level": 0.22742532065989265,
+              "persistence": 0.1401794300872601,
+              "reversal_propensity": 0.8326529380306132,
+              "strength": 0.24046820114819417,
+              "tau": 27.262560431288986,
+              "uncertainty": 0.38139516921093175,
+              "velocity": 0.0003393062883769491
+            },
+            {
+              "level": 0.2362348470912334,
+              "persistence": 0.08593325676987768,
+              "reversal_propensity": 0.8436319077513164,
+              "strength": 0.1474126101197239,
+              "tau": 37.852353227185155,
+              "uncertainty": 0.39786362379198636,
+              "velocity": 0.00020800266048007324
+            },
+            {
+              "level": 0.24476868332929658,
+              "persistence": 0.049117404624193256,
+              "reversal_propensity": 0.8510831269107668,
+              "strength": 0.08425753998069063,
+              "tau": 49.957086858945324,
+              "uncertainty": 0.40904045253116217,
+              "velocity": 0.00011888937091104957
+            },
+            {
+              "level": 0.25238922185374013,
+              "persistence": 0.02623216420004065,
+              "reversal_propensity": 0.8557149072982558,
+              "strength": 0.04499947912101778,
+              "tau": 63.53054925317118,
+              "uncertainty": 0.41598812311239564,
+              "velocity": 6.349532356687329e-05
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999863083222552,
+          "current_level": 0.19897611060434178,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": 0.2007628866387689,
+              "persistence": 0.46090586436180797,
+              "reversal_propensity": 0.7677406023728093,
+              "strength": 0.7906524090784585,
+              "tau": 1.5045985309771306,
+              "uncertainty": 0.2840266657242258,
+              "velocity": 0.0011156291478031026
+            },
+            {
+              "level": 0.2050886220103885,
+              "persistence": 0.3878478846453522,
+              "reversal_propensity": 0.7825269236579954,
+              "strength": 0.6653264539721963,
+              "tau": 5.2393163947066475,
+              "uncertainty": 0.30620614765200505,
+              "velocity": 0.0009387912770935545
+            },
+            {
+              "level": 0.2113157686420022,
+              "persistence": 0.2989898331771768,
+              "reversal_propensity": 0.8005110467186569,
+              "strength": 0.5128965590811646,
+              "tau": 10.870233971208574,
+              "uncertainty": 0.33318233224299726,
+              "velocity": 0.000723709109779089
+            },
+            {
+              "level": 0.2189345064135306,
+              "persistence": 0.212651063347466,
+              "reversal_propensity": 0.8179852883418794,
+              "strength": 0.3647883191106168,
+              "tau": 18.24435935479396,
+              "uncertainty": 0.3593936946778311,
+              "velocity": 0.0005147248992161348
+            },
+            {
+              "level": 0.22742532065989265,
+              "persistence": 0.1401794300872601,
+              "reversal_propensity": 0.8326529380306132,
+              "strength": 0.24046820114819417,
+              "tau": 27.262560431288986,
+              "uncertainty": 0.38139516921093175,
+              "velocity": 0.0003393062883769491
+            },
+            {
+              "level": 0.2362348470912334,
+              "persistence": 0.08593325676987768,
+              "reversal_propensity": 0.8436319077513164,
+              "strength": 0.1474126101197239,
+              "tau": 37.852353227185155,
+              "uncertainty": 0.39786362379198636,
+              "velocity": 0.00020800266048007324
+            },
+            {
+              "level": 0.24476868332929658,
+              "persistence": 0.049117404624193256,
+              "reversal_propensity": 0.8510831269107668,
+              "strength": 0.08425753998069063,
+              "tau": 49.957086858945324,
+              "uncertainty": 0.40904045253116217,
+              "velocity": 0.00011888937091104957
+            },
+            {
+              "level": 0.25238922185374013,
+              "persistence": 0.02623216420004065,
+              "reversal_propensity": 0.8557149072982558,
+              "strength": 0.04499947912101778,
+              "tau": 63.53054925317118,
+              "uncertainty": 0.41598812311239564,
+              "velocity": 6.349532356687329e-05
+            }
+          ],
+          "maximum_absolute_displacement": 0.05341311124939835,
+          "model_time": 1680163740.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.494091656114964,
+          "projection_interval": 63.53054925317118,
+          "reversal_propensity": 0.7610240769382177,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.40463006091328924,
+          "strength": 0.8475803595030854,
+          "terminal_decay_factor": 0.053091696399619054,
+          "terminal_displacement": 0.05341311124939835,
+          "uncertainty": 0.2739518775723385
+        }
+      },
+      "observation_id": "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+      "observation_index": 10,
+      "observation_timestamp": "2023-03-30T08:09:00Z",
+      "physical_row": 106614,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+        "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+      "state_after": {
+        "completed_count": 10,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 9,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+          "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2"
+        ],
+        "d01_state_hash": "47e7462a86604227a12e2315d324ff4f766c511d0b717f4af1075264989833d0",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 43400,
+        "D02": 23500,
+        "FOUR_FACTOR": 13600,
+        "SOURCE_ADMISSION": 5200
+      },
+      "context_end_timestamp": "2023-03-30T08:09:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 128000,
+      "emission_id": "00a4cd2ecf7b3536c347dabfaa55b73bbe5cacaabe72166b0e7db4d3651b5001",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746534538000,
+      "lifecycle_start_ns": 258746534410000,
+      "mathematics": {
+        "C": 0.3927936002970857,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5623794265113838,
+        "Q_S": 0.6984494485043803,
+        "dmo": {
+          "coherence": 0.9976278607823365,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163800.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05172325572185993
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00017782100026268038
+          },
+          "persistence": 0.3952733248919712,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.020803102159188146,
+          "reversal_propensity": 0.5544439243755018,
+          "state_acceleration": -4.571210253772588e-05,
+          "state_curvature": -4.5711938489015006e-05,
+          "state_hash": "6E660B50D8B764FACC60AE30835FE28D964B4BD72A14FBB3884433E668B01DDE",
+          "state_level": 0.1061698909240711,
+          "state_support_ratio": 0.40437092283426307,
+          "state_velocity": -0.0015467703277467163,
+          "strength": 0.8640499715547526,
+          "trace_id": "SPY:11",
+          "uncertainty": 0.2901665207460515
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 59.02646652592871,
+          "model_time": 1680163800.0,
+          "samples": [
+            {
+              "level": 0.1039629519868055,
+              "persistence": 0.37054670508021786,
+              "reversal_propensity": 0.5606994995065864,
+              "strength": 0.80999867641403,
+              "tau": 1.397928018373775,
+              "uncertainty": 0.29954988344267836,
+              "velocity": -0.0014500109477891972
+            },
+            {
+              "level": 0.09809881680876227,
+              "persistence": 0.3156500671812357,
+              "reversal_propensity": 0.5745877723653697,
+              "strength": 0.6899970587282662,
+              "tau": 4.867868095370898,
+              "uncertainty": 0.3203822927308534,
+              "velocity": -0.001235191264173036
+            },
+            {
+              "level": 0.08821681984982016,
+              "persistence": 0.24786346691519348,
+              "reversal_propensity": 0.5917370703314211,
+              "strength": 0.54181855453076,
+              "tau": 10.099574286279738,
+              "uncertainty": 0.34610623967993037,
+              "velocity": -0.0009699310118172829
+            },
+            {
+              "level": 0.07338344084733911,
+              "persistence": 0.18059907636943376,
+              "reversal_propensity": 0.6087542547225365,
+              "strength": 0.3947815776399068,
+              "tau": 16.950901249905463,
+              "uncertainty": 0.3716320162666036,
+              "velocity": -0.0007067142530375628
+            },
+            {
+              "level": 0.05232624236300474,
+              "persistence": 0.12262056292175938,
+              "reversal_propensity": 0.6234222097289919,
+              "strength": 0.2680431165789655,
+              "tau": 25.3297449750643,
+              "uncertainty": 0.3936339487762866,
+              "velocity": -0.00047983467731047263
+            },
+            {
+              "level": 0.02350257858477881,
+              "persistence": 0.07782289613251495,
+              "reversal_propensity": 0.6347555489573569,
+              "strength": 0.17011740220007404,
+              "tau": 35.168760335887505,
+              "uncertainty": 0.4106339576188341,
+              "velocity": -0.00030453394898324404
+            },
+            {
+              "level": -0.014864586210244377,
+              "persistence": 0.046281143381004114,
+              "reversal_propensity": 0.6427352811490324,
+              "strength": 0.10116852846775619,
+              "tau": 46.415312788520524,
+              "uncertainty": 0.4226035559063474,
+              "velocity": -0.00018110581920875423
+            },
+            {
+              "level": -0.0647638071192974,
+              "persistence": 0.025841340744538543,
+              "reversal_propensity": 0.6479063365553268,
+              "strength": 0.05648802570058966,
+              "tau": 59.02646652592871,
+              "uncertainty": 0.43036013901578885,
+              "velocity": -0.00010112146855285134
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9976278607823365,
+          "current_level": 0.1061698909240711,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": 0.1039629519868055,
+              "persistence": 0.37054670508021786,
+              "reversal_propensity": 0.5606994995065864,
+              "strength": 0.80999867641403,
+              "tau": 1.397928018373775,
+              "uncertainty": 0.29954988344267836,
+              "velocity": -0.0014500109477891972
+            },
+            {
+              "level": 0.09809881680876227,
+              "persistence": 0.3156500671812357,
+              "reversal_propensity": 0.5745877723653697,
+              "strength": 0.6899970587282662,
+              "tau": 4.867868095370898,
+              "uncertainty": 0.3203822927308534,
+              "velocity": -0.001235191264173036
+            },
+            {
+              "level": 0.08821681984982016,
+              "persistence": 0.24786346691519348,
+              "reversal_propensity": 0.5917370703314211,
+              "strength": 0.54181855453076,
+              "tau": 10.099574286279738,
+              "uncertainty": 0.34610623967993037,
+              "velocity": -0.0009699310118172829
+            },
+            {
+              "level": 0.07338344084733911,
+              "persistence": 0.18059907636943376,
+              "reversal_propensity": 0.6087542547225365,
+              "strength": 0.3947815776399068,
+              "tau": 16.950901249905463,
+              "uncertainty": 0.3716320162666036,
+              "velocity": -0.0007067142530375628
+            },
+            {
+              "level": 0.05232624236300474,
+              "persistence": 0.12262056292175938,
+              "reversal_propensity": 0.6234222097289919,
+              "strength": 0.2680431165789655,
+              "tau": 25.3297449750643,
+              "uncertainty": 0.3936339487762866,
+              "velocity": -0.00047983467731047263
+            },
+            {
+              "level": 0.02350257858477881,
+              "persistence": 0.07782289613251495,
+              "reversal_propensity": 0.6347555489573569,
+              "strength": 0.17011740220007404,
+              "tau": 35.168760335887505,
+              "uncertainty": 0.4106339576188341,
+              "velocity": -0.00030453394898324404
+            },
+            {
+              "level": -0.014864586210244377,
+              "persistence": 0.046281143381004114,
+              "reversal_propensity": 0.6427352811490324,
+              "strength": 0.10116852846775619,
+              "tau": 46.415312788520524,
+              "uncertainty": 0.4226035559063474,
+              "velocity": -0.00018110581920875423
+            },
+            {
+              "level": -0.0647638071192974,
+              "persistence": 0.025841340744538543,
+              "reversal_propensity": 0.6479063365553268,
+              "strength": 0.05648802570058966,
+              "tau": 59.02646652592871,
+              "uncertainty": 0.43036013901578885,
+              "velocity": -0.00010112146855285134
+            }
+          ],
+          "maximum_absolute_displacement": 0.1709336980433685,
+          "model_time": 1680163800.0,
+          "path_direction": "DOWNWARD",
+          "persistence": 0.3952733248919712,
+          "projection_interval": 59.02646652592871,
+          "reversal_propensity": 0.5544439243755018,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.40437092283426307,
+          "strength": 0.8640499715547526,
+          "terminal_decay_factor": 0.0653758782017507,
+          "terminal_displacement": -0.1709336980433685,
+          "uncertainty": 0.2901665207460515
+        }
+      },
+      "observation_id": "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+      "observation_index": 11,
+      "observation_timestamp": "2023-03-30T08:10:00Z",
+      "physical_row": 106615,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+        "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+        "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+      "state_after": {
+        "completed_count": 11,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 10,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+          "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+          "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78"
+        ],
+        "d01_state_hash": "441f08d4dcfcf54bad26deda5b96ff6f86cb1eb8a20ff13d3c50d1fc174a9118",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 42000,
+        "D02": 23700,
+        "FOUR_FACTOR": 12200,
+        "SOURCE_ADMISSION": 4400
+      },
+      "context_end_timestamp": "2023-03-30T08:10:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 121700,
+      "emission_id": "8745513a872db98943ae6f8b9b2a830e5e02faf8fbe6fbf66c5e5bc32bfe0476",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746535036100,
+      "lifecycle_start_ns": 258746534914400,
+      "mathematics": {
+        "C": 0.43568558255121825,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.6672253123753416,
+        "Q_S": 0.6529811961122471,
+        "dmo": {
+          "coherence": 0.9999999935072554,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163860.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05191042539158335
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00018716966972342347
+          },
+          "persistence": 0.316218659913577,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.019710905119320256,
+          "reversal_propensity": 0.3741746394860315,
+          "state_acceleration": 4.3263885483127884e-05,
+          "state_curvature": 4.3263814063241075e-05,
+          "state_hash": "928A2CB58AD8947F0581C861752C2035DFAB0F3285C7AF235AEAE03526F7DF52",
+          "state_level": 0.16911365903497746,
+          "state_support_ratio": 0.4200611741672255,
+          "state_velocity": 0.0010490628016735957,
+          "strength": 0.8804699417028702,
+          "trace_id": "SPY:12",
+          "uncertainty": 0.288636022821521
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 56.59355640202784,
+          "model_time": 1680163860.0,
+          "samples": [
+            {
+              "level": 0.1705585878413231,
+              "persistence": 0.29722769599435034,
+              "reversal_propensity": 0.38018028251937336,
+              "strength": 0.8275920599883229,
+              "tau": 1.3403092343170968,
+              "uncertainty": 0.29764448737153376,
+              "velocity": 0.0009860598346095046
+            },
+            {
+              "level": 0.17448108309206886,
+              "persistence": 0.2548721928542569,
+              "reversal_propensity": 0.3935746543605763,
+              "strength": 0.7096586420466175,
+              "tau": 4.667227835702982,
+              "uncertainty": 0.3177360451333382,
+              "velocity": 0.0008455444621056018
+            },
+            {
+              "level": 0.18130039218380162,
+              "persistence": 0.2021420333083231,
+              "reversal_propensity": 0.41024987509560346,
+              "strength": 0.5628383357620991,
+              "tau": 9.683297351976288,
+              "uncertainty": 0.3427488762358789,
+              "velocity": 0.0006706109242774696
+            },
+            {
+              "level": 0.19187702398768217,
+              "persistence": 0.14921994868399052,
+              "reversal_propensity": 0.42698578961715516,
+              "strength": 0.41548363893075047,
+              "tau": 16.252231285610325,
+              "uncertainty": 0.3678527480182065,
+              "velocity": 0.0004950406705119811
+            },
+            {
+              "level": 0.20734934603147961,
+              "persistence": 0.10294504393089407,
+              "reversal_propensity": 0.4416196207660644,
+              "strength": 0.28663715434505277,
+              "tau": 24.285721901811375,
+              "uncertainty": 0.3898034947415704,
+              "velocity": 0.00034152259146905036
+            },
+            {
+              "level": 0.2290823995903418,
+              "persistence": 0.06657146608563282,
+              "reversal_propensity": 0.4531222872612049,
+              "strength": 0.18535963336101374,
+              "tau": 33.719199857307295,
+              "uncertainty": 0.4070574944842811,
+              "velocity": 0.00022085239606795958
+            },
+            {
+              "level": 0.25864015208132285,
+              "persistence": 0.040447127847994944,
+              "reversal_propensity": 0.4613837662785335,
+              "strength": 0.1126197938733457,
+              "tau": 44.50220006073065,
+              "uncertainty": 0.419449713010274,
+              "velocity": 0.00013418429282909585
+            },
+            {
+              "level": 0.29776730258828554,
+              "persistence": 0.023132911231051913,
+              "reversal_propensity": 0.46685915998922567,
+              "strength": 0.0644105980608118,
+              "tau": 56.59355640202784,
+              "uncertainty": 0.42766280357631226,
+              "velocity": 7.674397416504879e-05
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999999935072554,
+          "current_level": 0.16911365903497746,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": 0.1705585878413231,
+              "persistence": 0.29722769599435034,
+              "reversal_propensity": 0.38018028251937336,
+              "strength": 0.8275920599883229,
+              "tau": 1.3403092343170968,
+              "uncertainty": 0.29764448737153376,
+              "velocity": 0.0009860598346095046
+            },
+            {
+              "level": 0.17448108309206886,
+              "persistence": 0.2548721928542569,
+              "reversal_propensity": 0.3935746543605763,
+              "strength": 0.7096586420466175,
+              "tau": 4.667227835702982,
+              "uncertainty": 0.3177360451333382,
+              "velocity": 0.0008455444621056018
+            },
+            {
+              "level": 0.18130039218380162,
+              "persistence": 0.2021420333083231,
+              "reversal_propensity": 0.41024987509560346,
+              "strength": 0.5628383357620991,
+              "tau": 9.683297351976288,
+              "uncertainty": 0.3427488762358789,
+              "velocity": 0.0006706109242774696
+            },
+            {
+              "level": 0.19187702398768217,
+              "persistence": 0.14921994868399052,
+              "reversal_propensity": 0.42698578961715516,
+              "strength": 0.41548363893075047,
+              "tau": 16.252231285610325,
+              "uncertainty": 0.3678527480182065,
+              "velocity": 0.0004950406705119811
+            },
+            {
+              "level": 0.20734934603147961,
+              "persistence": 0.10294504393089407,
+              "reversal_propensity": 0.4416196207660644,
+              "strength": 0.28663715434505277,
+              "tau": 24.285721901811375,
+              "uncertainty": 0.3898034947415704,
+              "velocity": 0.00034152259146905036
+            },
+            {
+              "level": 0.2290823995903418,
+              "persistence": 0.06657146608563282,
+              "reversal_propensity": 0.4531222872612049,
+              "strength": 0.18535963336101374,
+              "tau": 33.719199857307295,
+              "uncertainty": 0.4070574944842811,
+              "velocity": 0.00022085239606795958
+            },
+            {
+              "level": 0.25864015208132285,
+              "persistence": 0.040447127847994944,
+              "reversal_propensity": 0.4613837662785335,
+              "strength": 0.1126197938733457,
+              "tau": 44.50220006073065,
+              "uncertainty": 0.419449713010274,
+              "velocity": 0.00013418429282909585
+            },
+            {
+              "level": 0.29776730258828554,
+              "persistence": 0.023132911231051913,
+              "reversal_propensity": 0.46685915998922567,
+              "strength": 0.0644105980608118,
+              "tau": 56.59355640202784,
+              "uncertainty": 0.42766280357631226,
+              "velocity": 7.674397416504879e-05
+            }
+          ],
+          "maximum_absolute_displacement": 0.12865364355330808,
+          "model_time": 1680163860.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.316218659913577,
+          "projection_interval": 56.59355640202784,
+          "reversal_propensity": 0.3741746394860315,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.4200611741672255,
+          "strength": 0.8804699417028702,
+          "terminal_decay_factor": 0.07315479496805839,
+          "terminal_displacement": 0.12865364355330808,
+          "uncertainty": 0.288636022821521
+        }
+      },
+      "observation_id": "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+      "observation_index": 12,
+      "observation_timestamp": "2023-03-30T08:11:00Z",
+      "physical_row": 106616,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+        "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+        "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+        "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+      "state_after": {
+        "completed_count": 12,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 11,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+          "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+          "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+          "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5"
+        ],
+        "d01_state_hash": "79ff8299d291d32715285dd67a79afa26654e41e71b4120aeebc28319a3fb8d2",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 40800,
+        "D02": 25700,
+        "FOUR_FACTOR": 12200,
+        "SOURCE_ADMISSION": 4500
+      },
+      "context_end_timestamp": "2023-03-30T08:11:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 122800,
+      "emission_id": "99a815ea4330948764420515d544c193d7a0fba093d6fe7540fda2b9d3b9ff89",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746535537200,
+      "lifecycle_start_ns": 258746535414400,
+      "mathematics": {
+        "C": 0.3286044396444886,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.5510787705537401,
+        "Q_S": 0.5962930477512266,
+        "dmo": {
+          "coherence": 0.9999382268406797,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163920.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.052081163625412374
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00017073823382902226
+          },
+          "persistence": 0.2529749279308616,
+          "perturbation_class": "REVERSING",
+          "perturbation_magnitude": 0.008240594496736586,
+          "reversal_propensity": 0.5799695525379011,
+          "state_acceleration": -1.787826376977265e-05,
+          "state_curvature": -1.78782637547946e-05,
+          "state_hash": "3003DF151D8E69AF39BAE283348B9C328B7C84D32E61DBEB6C9A894658D2F7F1",
+          "state_level": 0.16769567755324838,
+          "state_support_ratio": 0.24742733047598792,
+          "state_velocity": -2.3633024691545926e-05,
+          "strength": 0.838163193026432,
+          "trace_id": "SPY:13",
+          "uncertainty": 0.2769861966198897
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 53.845990450463745,
+          "model_time": 1680163920.0,
+          "samples": [
+            {
+              "level": 0.16765100270002672,
+              "persistence": 0.23849822224440057,
+              "reversal_propensity": 0.5856921376987584,
+              "strength": 0.7901985905185333,
+              "tau": 1.2752384338426341,
+              "uncertainty": 0.28557007436117576,
+              "velocity": -2.2280604727485765e-05
+            },
+            {
+              "level": 0.1674144587124543,
+              "persistence": 0.20604391601329636,
+              "reversal_propensity": 0.5985211980710867,
+              "strength": 0.6826701284665379,
+              "tau": 4.4406381476742895,
+              "uncertainty": 0.30481366491966816,
+              "velocity": -1.924870972200009e-05
+            },
+            {
+              "level": 0.1667191643385239,
+              "persistence": 0.16526512044177916,
+              "reversal_propensity": 0.6146408965349053,
+              "strength": 0.5475607491159635,
+              "tau": 9.213182027995561,
+              "uncertainty": 0.328993212615396,
+              "velocity": -1.54391374038431e-05
+            },
+            {
+              "level": 0.16519279453738148,
+              "persistence": 0.12380884600332899,
+              "reversal_propensity": 0.6310283997462038,
+              "strength": 0.41020672894283444,
+              "tau": 15.463200163408438,
+              "uncertainty": 0.35357446743234383,
+              "velocity": -1.1566274723589029e-05
+            },
+            {
+              "level": 0.16237683095026262,
+              "persistence": 0.08696758048607661,
+              "reversal_propensity": 0.6455916079734322,
+              "strength": 0.2881432778584088,
+              "tau": 23.10667207973339,
+              "uncertainty": 0.37541927977318645,
+              "velocity": -8.124548127366892e-06
+            },
+            {
+              "level": 0.15773674166018556,
+              "persistence": 0.05744222457860484,
+              "reversal_propensity": 0.6572628657336246,
+              "strength": 0.19031909114923506,
+              "tau": 32.08216321688505,
+              "uncertainty": 0.392926166413475,
+              "velocity": -5.366276899086656e-06
+            },
+            {
+              "level": 0.15066879701097374,
+              "persistence": 0.03575500657043627,
+              "reversal_propensity": 0.6658357382255957,
+              "strength": 0.11846442933644538,
+              "tau": 42.3416585180158,
+              "uncertainty": 0.4057854751514317,
+              "velocity": -3.3402478262843755e-06
+            },
+            {
+              "level": 0.14050509818920076,
+              "persistence": 0.021011655068954263,
+              "reversal_propensity": 0.6716637274346732,
+              "strength": 0.06961636889240615,
+              "tau": 53.845990450463745,
+              "uncertainty": 0.41452745896504783,
+              "velocity": -1.962917697482476e-06
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999382268406797,
+          "current_level": 0.16769567755324838,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": 0.16765100270002672,
+              "persistence": 0.23849822224440057,
+              "reversal_propensity": 0.5856921376987584,
+              "strength": 0.7901985905185333,
+              "tau": 1.2752384338426341,
+              "uncertainty": 0.28557007436117576,
+              "velocity": -2.2280604727485765e-05
+            },
+            {
+              "level": 0.1674144587124543,
+              "persistence": 0.20604391601329636,
+              "reversal_propensity": 0.5985211980710867,
+              "strength": 0.6826701284665379,
+              "tau": 4.4406381476742895,
+              "uncertainty": 0.30481366491966816,
+              "velocity": -1.924870972200009e-05
+            },
+            {
+              "level": 0.1667191643385239,
+              "persistence": 0.16526512044177916,
+              "reversal_propensity": 0.6146408965349053,
+              "strength": 0.5475607491159635,
+              "tau": 9.213182027995561,
+              "uncertainty": 0.328993212615396,
+              "velocity": -1.54391374038431e-05
+            },
+            {
+              "level": 0.16519279453738148,
+              "persistence": 0.12380884600332899,
+              "reversal_propensity": 0.6310283997462038,
+              "strength": 0.41020672894283444,
+              "tau": 15.463200163408438,
+              "uncertainty": 0.35357446743234383,
+              "velocity": -1.1566274723589029e-05
+            },
+            {
+              "level": 0.16237683095026262,
+              "persistence": 0.08696758048607661,
+              "reversal_propensity": 0.6455916079734322,
+              "strength": 0.2881432778584088,
+              "tau": 23.10667207973339,
+              "uncertainty": 0.37541927977318645,
+              "velocity": -8.124548127366892e-06
+            },
+            {
+              "level": 0.15773674166018556,
+              "persistence": 0.05744222457860484,
+              "reversal_propensity": 0.6572628657336246,
+              "strength": 0.19031909114923506,
+              "tau": 32.08216321688505,
+              "uncertainty": 0.392926166413475,
+              "velocity": -5.366276899086656e-06
+            },
+            {
+              "level": 0.15066879701097374,
+              "persistence": 0.03575500657043627,
+              "reversal_propensity": 0.6658357382255957,
+              "strength": 0.11846442933644538,
+              "tau": 42.3416585180158,
+              "uncertainty": 0.4057854751514317,
+              "velocity": -3.3402478262843755e-06
+            },
+            {
+              "level": 0.14050509818920076,
+              "persistence": 0.021011655068954263,
+              "reversal_propensity": 0.6716637274346732,
+              "strength": 0.06961636889240615,
+              "tau": 53.845990450463745,
+              "uncertainty": 0.41452745896504783,
+              "velocity": -1.962917697482476e-06
+            }
+          ],
+          "maximum_absolute_displacement": 0.027190579364047618,
+          "model_time": 1680163920.0,
+          "path_direction": "DOWNWARD",
+          "persistence": 0.2529749279308616,
+          "projection_interval": 53.845990450463745,
+          "reversal_propensity": 0.5799695525379011,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.24742733047598792,
+          "strength": 0.838163193026432,
+          "terminal_decay_factor": 0.08305825103227928,
+          "terminal_displacement": -0.027190579364047618,
+          "uncertainty": 0.2769861966198897
+        }
+      },
+      "observation_id": "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75",
+      "observation_index": 13,
+      "observation_timestamp": "2023-03-30T08:12:00Z",
+      "physical_row": 106617,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+        "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+        "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+        "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+        "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75",
+      "state_after": {
+        "completed_count": 13,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 12,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+          "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+          "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+          "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+          "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc"
+        ],
+        "d01_state_hash": "02c1a91b173a2c9dcc4524d758f5c18f4bc7d6ade7d5e6d9cd00d742896442e7",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 44200,
+        "D02": 22900,
+        "FOUR_FACTOR": 13200,
+        "SOURCE_ADMISSION": 5600
+      },
+      "context_end_timestamp": "2023-03-30T08:12:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 129300,
+      "emission_id": "757512726236aea7983bc537f49ea10c81c5e1e671d52743212e59926b56e639",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746536134000,
+      "lifecycle_start_ns": 258746536004700,
+      "mathematics": {
+        "C": 0.36321099671380785,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.6418622078620135,
+        "Q_S": 0.5658706686028948,
+        "dmo": {
+          "coherence": 0.999999994818861,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680163980.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05226859161719564
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.00018742799178326358
+          },
+          "persistence": 0.2023799423446893,
+          "perturbation_class": "REINFORCING",
+          "perturbation_magnitude": 0.03394455638080272,
+          "reversal_propensity": 0.40814632026282355,
+          "state_acceleration": 7.56033795833433e-05,
+          "state_curvature": 7.560107034228896e-05,
+          "state_hash": "55C2976936F75E1A15387B258927FD212221F9BA4B806BFE8FBBB57E2ADDA41F",
+          "state_level": 0.43844986266227925,
+          "state_support_ratio": 0.2544725748835312,
+          "state_velocity": 0.004512569751065086,
+          "strength": 0.8953319532163151,
+          "trace_id": "SPY:14",
+          "uncertainty": 0.30390380598047617
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 51.62835013619433,
+          "model_time": 1680163980.0,
+          "samples": [
+            {
+              "level": 0.44402397747500827,
+              "persistence": 0.19126220144547054,
+              "reversal_propensity": 0.41363981965333296,
+              "strength": 0.846146897823341,
+              "tau": 1.2227179000473298,
+              "uncertainty": 0.31214405506624027,
+              "velocity": 0.004264671759294014
+            },
+            {
+              "level": 0.45834854696136146,
+              "persistence": 0.1662340871853228,
+              "reversal_propensity": 0.4260067143021714,
+              "strength": 0.7354221384116916,
+              "tau": 4.257751026553827,
+              "uncertainty": 0.330694397039498,
+              "velocity": 0.003706607012224443
+            },
+            {
+              "level": 0.48126257515804166,
+              "persistence": 0.1345507494819742,
+              "reversal_propensity": 0.4416620887114526,
+              "strength": 0.5952545689297469,
+              "tau": 8.833738290085648,
+              "uncertainty": 0.35417745865341976,
+              "velocity": 0.003000147322215234
+            },
+            {
+              "level": 0.5136643946045116,
+              "persistence": 0.10200521879519427,
+              "reversal_propensity": 0.45774349001521875,
+              "strength": 0.4512726445321839,
+              "tau": 14.826350218164341,
+              "uncertainty": 0.37829956060906894,
+              "velocity": 0.002274462871434099
+            },
+            {
+              "level": 0.5569807443313013,
+              "persistence": 0.07270187778967066,
+              "reversal_propensity": 0.47222286018699927,
+              "strength": 0.3216342167597606,
+              "tau": 22.155026709225044,
+              "uncertainty": 0.40001861586673976,
+              "velocity": 0.0016210711929175892
+            },
+            {
+              "level": 0.6130295242454827,
+              "persistence": 0.048847007547169204,
+              "reversal_propensity": 0.48401003136914755,
+              "strength": 0.21609990678568217,
+              "tau": 30.760863377778406,
+              "uncertainty": 0.41769937263996215,
+              "velocity": 0.0010891668716457067
+            },
+            {
+              "level": 0.6839544793898416,
+              "persistence": 0.031004398425817516,
+              "reversal_propensity": 0.49282642340614224,
+              "strength": 0.13716393175764968,
+              "tau": 40.597822661027266,
+              "uncertainty": 0.4309239606954542,
+              "velocity": 0.000691321031448972
+            },
+            {
+              "level": 0.7721862890295103,
+              "persistence": 0.01862324399781309,
+              "reversal_propensity": 0.498944200832384,
+              "strength": 0.0823895156338528,
+              "tau": 51.62835013619433,
+              "uncertainty": 0.44010062683481677,
+              "velocity": 0.0004152520578748996
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.999999994818861,
+          "current_level": 0.43844986266227925,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": 0.44402397747500827,
+              "persistence": 0.19126220144547054,
+              "reversal_propensity": 0.41363981965333296,
+              "strength": 0.846146897823341,
+              "tau": 1.2227179000473298,
+              "uncertainty": 0.31214405506624027,
+              "velocity": 0.004264671759294014
+            },
+            {
+              "level": 0.45834854696136146,
+              "persistence": 0.1662340871853228,
+              "reversal_propensity": 0.4260067143021714,
+              "strength": 0.7354221384116916,
+              "tau": 4.257751026553827,
+              "uncertainty": 0.330694397039498,
+              "velocity": 0.003706607012224443
+            },
+            {
+              "level": 0.48126257515804166,
+              "persistence": 0.1345507494819742,
+              "reversal_propensity": 0.4416620887114526,
+              "strength": 0.5952545689297469,
+              "tau": 8.833738290085648,
+              "uncertainty": 0.35417745865341976,
+              "velocity": 0.003000147322215234
+            },
+            {
+              "level": 0.5136643946045116,
+              "persistence": 0.10200521879519427,
+              "reversal_propensity": 0.45774349001521875,
+              "strength": 0.4512726445321839,
+              "tau": 14.826350218164341,
+              "uncertainty": 0.37829956060906894,
+              "velocity": 0.002274462871434099
+            },
+            {
+              "level": 0.5569807443313013,
+              "persistence": 0.07270187778967066,
+              "reversal_propensity": 0.47222286018699927,
+              "strength": 0.3216342167597606,
+              "tau": 22.155026709225044,
+              "uncertainty": 0.40001861586673976,
+              "velocity": 0.0016210711929175892
+            },
+            {
+              "level": 0.6130295242454827,
+              "persistence": 0.048847007547169204,
+              "reversal_propensity": 0.48401003136914755,
+              "strength": 0.21609990678568217,
+              "tau": 30.760863377778406,
+              "uncertainty": 0.41769937263996215,
+              "velocity": 0.0010891668716457067
+            },
+            {
+              "level": 0.6839544793898416,
+              "persistence": 0.031004398425817516,
+              "reversal_propensity": 0.49282642340614224,
+              "strength": 0.13716393175764968,
+              "tau": 40.597822661027266,
+              "uncertainty": 0.4309239606954542,
+              "velocity": 0.000691321031448972
+            },
+            {
+              "level": 0.7721862890295103,
+              "persistence": 0.01862324399781309,
+              "reversal_propensity": 0.498944200832384,
+              "strength": 0.0823895156338528,
+              "tau": 51.62835013619433,
+              "uncertainty": 0.44010062683481677,
+              "velocity": 0.0004152520578748996
+            }
+          ],
+          "maximum_absolute_displacement": 0.333736426367231,
+          "model_time": 1680163980.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.2023799423446893,
+          "projection_interval": 51.62835013619433,
+          "reversal_propensity": 0.40814632026282355,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.2544725748835312,
+          "strength": 0.8953319532163151,
+          "terminal_decay_factor": 0.09202119430439587,
+          "terminal_displacement": 0.333736426367231,
+          "uncertainty": 0.30390380598047617
+        }
+      },
+      "observation_id": "f315954c9840d7f8f65e8017c3a41a50b10deb854209ac820a6003db0205a983",
+      "observation_index": 14,
+      "observation_timestamp": "2023-03-30T08:13:00Z",
+      "physical_row": 106618,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+        "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+        "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+        "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+        "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+        "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "f315954c9840d7f8f65e8017c3a41a50b10deb854209ac820a6003db0205a983",
+      "state_after": {
+        "completed_count": 14,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 13,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+          "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+          "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+          "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+          "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+          "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75"
+        ],
+        "d01_state_hash": "feda32137fceaa428cb878c4373f693004eed5a6177ad61c60331ad87bb2b9d8",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    },
+    {
+      "adaptive_properties": {},
+      "code_fingerprint": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "component_lifecycle_ns": {
+        "D01": 39900,
+        "D02": 22500,
+        "FOUR_FACTOR": 11900,
+        "SOURCE_ADMISSION": 4200
+      },
+      "context_end_timestamp": "2023-03-30T08:13:00Z",
+      "context_start_timestamp": "2023-03-30T08:00:00Z",
+      "decision_rule_path": "INITIALIZATION_NON_ACTIONABLE",
+      "direct_lifecycle_ns": 116800,
+      "emission_id": "f43508c51797c8334d53ce0a8d40d4873709d9414d3c6ee18334d00dfad89983",
+      "feedback_generated": [],
+      "future_access_count": 0,
+      "lifecycle_end_ns": 258746536619300,
+      "lifecycle_start_ns": 258746536502500,
+      "mathematics": {
+        "C": 0.24226183528320316,
+        "H": 1,
+        "Q_G": 1.0,
+        "Q_R": 0.3781229939101095,
+        "Q_S": 0.6406958560705663,
+        "dmo": {
+          "coherence": 0.9999840534803613,
+          "config_hash": "30DE0D125752D222FED57D80581C73939C4C0BA9ABD5F6FDAA9CFCB9970BF8DD",
+          "data_quality": 1.0,
+          "dmo_schema_version": "0.2.0",
+          "entity_id": "SPY",
+          "fmo_schema_version": "0.2.0",
+          "forward_half_life": 15.0,
+          "model_health": "DEGRADED_DATA",
+          "model_time": 1680164040.0,
+          "model_version": "0.2",
+          "observation_half_life": 15.0,
+          "parameter_state": {
+            "ref_alpha": 0.05248889292606539
+          },
+          "parameter_update_magnitude": {
+            "ref_alpha": 0.0002203013088697553
+          },
+          "persistence": 0.28190267865172164,
+          "perturbation_class": "CONTRADICTING",
+          "perturbation_magnitude": 0.011714849282415717,
+          "reversal_propensity": 0.8012962965166595,
+          "state_acceleration": -2.5505131091713047e-05,
+          "state_curvature": -2.5504790835905092e-05,
+          "state_hash": "2AB4FF1AF4E4D2B25CB5B5B36F554E2A81FCDBDE501AD8BE18D3D66364B8B612",
+          "state_level": 0.617385575810537,
+          "state_support_ratio": 0.24312898996052304,
+          "state_velocity": 0.002982261885307252,
+          "strength": 0.9329609538651703,
+          "trace_id": "SPY:15",
+          "uncertainty": 0.2804512647871609
+        },
+        "fmo": {
+          "entity_id": "SPY",
+          "interval_length": 57.289635042564846,
+          "model_time": 1680164040.0,
+          "samples": [
+            {
+              "level": 0.6214084162894481,
+              "persistence": 0.2647708356501566,
+              "reversal_propensity": 0.8073735154645257,
+              "strength": 0.876262874000682,
+              "tau": 1.3567945144273463,
+              "uncertainty": 0.28956709320896035,
+              "velocity": 0.002801023300938365
+            },
+            {
+              "level": 0.6311910037158878,
+              "persistence": 0.22661159148844626,
+              "reversal_propensity": 0.8209098338649814,
+              "strength": 0.7499743087335646,
+              "tau": 4.724632915247271,
+              "uncertainty": 0.30987157080964384,
+              "velocity": 0.0023973348366077445
+            },
+            {
+              "level": 0.6453935382497502,
+              "persistence": 0.1792165632684535,
+              "reversal_propensity": 0.8377223836593547,
+              "strength": 0.5931197838029231,
+              "tau": 9.802398127492097,
+              "uncertainty": 0.33509039550120373,
+              "velocity": 0.0018959405721418476
+            },
+            {
+              "level": 0.6629983594975468,
+              "persistence": 0.13180350120292345,
+              "reversal_propensity": 0.8545413306421561,
+              "strength": 0.4362055756021018,
+              "tau": 16.45212738294368,
+              "uncertainty": 0.3603188159754058,
+              "velocity": 0.0013943555267637274
+            },
+            {
+              "level": 0.6829952001948028,
+              "persistence": 0.09051541420532656,
+              "reversal_propensity": 0.8691875508182355,
+              "strength": 0.2995620601421579,
+              "tau": 24.584426796159857,
+              "uncertainty": 0.382288146239525,
+              "velocity": 0.0009575668848143293
+            },
+            {
+              "level": 0.7043235650635039,
+              "persistence": 0.058220602054728184,
+              "reversal_propensity": 0.8806435654630971,
+              "strength": 0.19268191663652348,
+              "tau": 34.13393284616447,
+              "uncertainty": 0.3994721682068174,
+              "velocity": 0.0006159185264854047
+            },
+            {
+              "level": 0.7258543029764989,
+              "persistence": 0.03515722737103105,
+              "reversal_propensity": 0.8888248905906213,
+              "strength": 0.11635334768796277,
+              "tau": 45.04955974067593,
+              "uncertainty": 0.4117441558981037,
+              "velocity": 0.00037192998549418524
+            },
+            {
+              "level": 0.7463830463250212,
+              "persistence": 0.019969750092542014,
+              "reversal_propensity": 0.8942123801140013,
+              "strength": 0.06609017404125077,
+              "tau": 57.289635042564846,
+              "uncertainty": 0.41982539018317366,
+              "velocity": 0.0002112609388635027
+            }
+          ]
+        },
+        "return_shape": {
+          "coherence": 0.9999840534803613,
+          "current_level": 0.617385575810537,
+          "entity_id": "SPY",
+          "forward_half_life": 15.0,
+          "forward_samples": [
+            {
+              "level": 0.6214084162894481,
+              "persistence": 0.2647708356501566,
+              "reversal_propensity": 0.8073735154645257,
+              "strength": 0.876262874000682,
+              "tau": 1.3567945144273463,
+              "uncertainty": 0.28956709320896035,
+              "velocity": 0.002801023300938365
+            },
+            {
+              "level": 0.6311910037158878,
+              "persistence": 0.22661159148844626,
+              "reversal_propensity": 0.8209098338649814,
+              "strength": 0.7499743087335646,
+              "tau": 4.724632915247271,
+              "uncertainty": 0.30987157080964384,
+              "velocity": 0.0023973348366077445
+            },
+            {
+              "level": 0.6453935382497502,
+              "persistence": 0.1792165632684535,
+              "reversal_propensity": 0.8377223836593547,
+              "strength": 0.5931197838029231,
+              "tau": 9.802398127492097,
+              "uncertainty": 0.33509039550120373,
+              "velocity": 0.0018959405721418476
+            },
+            {
+              "level": 0.6629983594975468,
+              "persistence": 0.13180350120292345,
+              "reversal_propensity": 0.8545413306421561,
+              "strength": 0.4362055756021018,
+              "tau": 16.45212738294368,
+              "uncertainty": 0.3603188159754058,
+              "velocity": 0.0013943555267637274
+            },
+            {
+              "level": 0.6829952001948028,
+              "persistence": 0.09051541420532656,
+              "reversal_propensity": 0.8691875508182355,
+              "strength": 0.2995620601421579,
+              "tau": 24.584426796159857,
+              "uncertainty": 0.382288146239525,
+              "velocity": 0.0009575668848143293
+            },
+            {
+              "level": 0.7043235650635039,
+              "persistence": 0.058220602054728184,
+              "reversal_propensity": 0.8806435654630971,
+              "strength": 0.19268191663652348,
+              "tau": 34.13393284616447,
+              "uncertainty": 0.3994721682068174,
+              "velocity": 0.0006159185264854047
+            },
+            {
+              "level": 0.7258543029764989,
+              "persistence": 0.03515722737103105,
+              "reversal_propensity": 0.8888248905906213,
+              "strength": 0.11635334768796277,
+              "tau": 45.04955974067593,
+              "uncertainty": 0.4117441558981037,
+              "velocity": 0.00037192998549418524
+            },
+            {
+              "level": 0.7463830463250212,
+              "persistence": 0.019969750092542014,
+              "reversal_propensity": 0.8942123801140013,
+              "strength": 0.06609017404125077,
+              "tau": 57.289635042564846,
+              "uncertainty": 0.41982539018317366,
+              "velocity": 0.0002112609388635027
+            }
+          ],
+          "maximum_absolute_displacement": 0.12899747051448418,
+          "model_time": 1680164040.0,
+          "path_direction": "UPWARD",
+          "persistence": 0.28190267865172164,
+          "projection_interval": 57.289635042564846,
+          "reversal_propensity": 0.8012962965166595,
+          "source_model_version": "0.2",
+          "state_support_ratio": 0.24312898996052304,
+          "strength": 0.9329609538651703,
+          "terminal_decay_factor": 0.07083916402658154,
+          "terminal_displacement": 0.12899747051448418,
+          "uncertainty": 0.2804512647871609
+        }
+      },
+      "observation_id": "315c10aaba62fe589bacf70d388b99e86ef9ec64df4420dfc045b15820f8c4f1",
+      "observation_index": 15,
+      "observation_timestamp": "2023-03-30T08:14:00Z",
+      "physical_row": 106619,
+      "position_decision": null,
+      "position_state_before": "FLAT",
+      "prior_context_ids": [
+        "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+        "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+        "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+        "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+        "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+        "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+        "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+        "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+        "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+        "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+        "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+        "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+        "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75",
+        "f315954c9840d7f8f65e8017c3a41a50b10deb854209ac820a6003db0205a983"
+      ],
+      "rule_fingerprint": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+      "source_delta_t_seconds": 60.0,
+      "source_fingerprint": "315c10aaba62fe589bacf70d388b99e86ef9ec64df4420dfc045b15820f8c4f1",
+      "state_after": {
+        "completed_count": 15,
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "state_before": {
+        "completed_count": 14,
+        "context_ids": [
+          "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+          "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+          "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+          "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+          "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+          "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+          "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+          "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+          "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+          "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+          "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+          "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+          "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75",
+          "f315954c9840d7f8f65e8017c3a41a50b10deb854209ac820a6003db0205a983"
+        ],
+        "d01_state_hash": "cecc74aba00af7bb1e2ce5af423b211a2aa2cf91d25738db599f37d359ff5710",
+        "position_state": "FLAT",
+        "previous_decision": null
+      },
+      "status": "INITIALIZING"
+    }
+  ],
+  "run_id": "TEST006B_ONE_WAY_RESERVE_RUN_V0_1_001",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "status": "PASS"
+}

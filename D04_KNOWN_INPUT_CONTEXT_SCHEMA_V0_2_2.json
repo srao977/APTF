@@ -1,0 +1,30 @@
+{
+  "schema_id": "D04_KNOWN_INPUT_CONTEXT_SCHEMA_V0_2_2",
+  "status": "VERSIONED_DESIGN_CORRECTION",
+  "scientific_field_count": 13,
+  "control_field_count": 2,
+  "context_roles": ["PRODUCTION", "TEST_FIXTURE"],
+  "provenance_domain": ["OBSERVED", "DERIVED", "STATE", "MATHEMATICAL_CONSTANT", "TEST_FIXTURE", "UNAVAILABLE"],
+  "required_active_fields": ["evaluation_time", "data_integrity"],
+  "optional_nullable_fields": [
+    "market_eligible", "clock_event_quality", "capital_available", "portfolio_capacity",
+    "position_capacity", "liquidity_quality", "spread_quality", "latency_quality",
+    "execution_feasibility", "risk_capacity", "broker_health"
+  ],
+  "rules": [
+    "Every scientific field has one provenance classification.",
+    "Null is permitted only with UNAVAILABLE provenance.",
+    "UNAVAILABLE provenance requires null.",
+    "PRODUCTION forbids TEST_FIXTURE provenance.",
+    "Active numeric values require OBSERVED, DERIVED, STATE, or MATHEMATICAL_CONSTANT provenance.",
+    "Unavailable gate dimensions do not participate in G.",
+    "The active gate set must be nonempty; required data_integrity proves nonempty under current config.",
+    "Unavailable market_eligible does not participate in H; known false still zeros H."
+  ],
+  "configured_gate_dimensions": [
+    "liquidity_quality", "spread_quality", "latency_quality", "execution_feasibility",
+    "capital_available", "portfolio_capacity", "position_capacity", "risk_capacity",
+    "broker_health", "data_integrity"
+  ],
+  "historical_v0_2_schema_replaced": false
+}

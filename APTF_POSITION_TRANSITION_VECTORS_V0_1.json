@@ -1,0 +1,32 @@
+{
+  "vector_set_id": "APTF_POSITION_TRANSITION_VECTORS_V0_1",
+  "position_domain": ["FLAT", "LONG", "SHORT"],
+  "valid_transitions": [
+    {"id":"P00","source":"FLAT","desired":"FLAT","class":"NO_CHANGE_FLAT","verbs":["NO_ACTION"],"result":"FLAT"},
+    {"id":"P01","source":"FLAT","desired":"LONG","class":"OPEN_LONG","verbs":["BUY"],"result":"LONG"},
+    {"id":"P02","source":"FLAT","desired":"SHORT","class":"OPEN_SHORT","verbs":["SELL_SHORT"],"result":"SHORT"},
+    {"id":"P10","source":"LONG","desired":"FLAT","class":"CLOSE_LONG","verbs":["SELL"],"result":"FLAT"},
+    {"id":"P11","source":"LONG","desired":"LONG","class":"HOLD_LONG","verbs":["HOLD"],"result":"LONG"},
+    {"id":"P12","source":"LONG","desired":"SHORT","class":"REVERSE_LONG_TO_SHORT","verbs":["SELL","SELL_SHORT"],"result":"SHORT"},
+    {"id":"P20","source":"SHORT","desired":"FLAT","class":"CLOSE_SHORT","verbs":["BUY_TO_COVER"],"result":"FLAT"},
+    {"id":"P21","source":"SHORT","desired":"LONG","class":"REVERSE_SHORT_TO_LONG","verbs":["BUY_TO_COVER","BUY"],"result":"LONG"},
+    {"id":"P22","source":"SHORT","desired":"SHORT","class":"HOLD_SHORT","verbs":["HOLD"],"result":"SHORT"}
+  ],
+  "partial_execution": [
+    {"id":"RLS_ALL","source":"LONG","desired":"SHORT","step_results":["SUCCESS","SUCCESS"],"result":"SHORT","second_executed":true},
+    {"id":"RLS_SECOND_FAIL","source":"LONG","desired":"SHORT","step_results":["SUCCESS","FAIL"],"result":"FLAT","second_executed":true},
+    {"id":"RLS_FIRST_FAIL","source":"LONG","desired":"SHORT","step_results":["FAIL","NOT_ATTEMPTED"],"result":"LONG","second_executed":false},
+    {"id":"RSL_ALL","source":"SHORT","desired":"LONG","step_results":["SUCCESS","SUCCESS"],"result":"LONG","second_executed":true},
+    {"id":"RSL_SECOND_FAIL","source":"SHORT","desired":"LONG","step_results":["SUCCESS","FAIL"],"result":"FLAT","second_executed":true},
+    {"id":"RSL_FIRST_FAIL","source":"SHORT","desired":"LONG","step_results":["FAIL","NOT_ATTEMPTED"],"result":"SHORT","second_executed":false}
+  ],
+  "d03_authorization_overlays": [
+    {"id":"A_READY","source":"FLAT","desired":"LONG","d03_intent":"OPEN","action_authorized":true,"plan_status":"READY","verbs":["BUY"],"executable":true},
+    {"id":"A_NO_CHANGE_FLAT","source":"FLAT","desired":"FLAT","d03_intent":"NO_CHANGE","action_authorized":false,"plan_status":"NON_EXECUTABLE_NO_CHANGE","verbs":["NO_ACTION"],"executable":false},
+    {"id":"A_HOLD_LONG","source":"LONG","desired":"LONG","d03_intent":"NO_CHANGE","action_authorized":false,"plan_status":"NON_EXECUTABLE_NO_CHANGE","verbs":["HOLD"],"executable":false},
+    {"id":"A_PENDING","source":"FLAT","desired":"LONG","d03_intent":"NO_CHANGE","action_authorized":false,"plan_status":"PENDING_ALREADY","verbs":[],"executable":false},
+    {"id":"A_BLOCKED","source":"LONG","desired":"SHORT","d03_intent":"BLOCKED","action_authorized":false,"plan_status":"BLOCKED","verbs":["SELL","SELL_SHORT"],"executable":false},
+    {"id":"A_RETARGET","source":"SHORT","desired":"LONG","d03_intent":"RETARGET","action_authorized":true,"plan_status":"READY","verbs":["BUY_TO_COVER","BUY"],"executable":true}
+  ],
+  "invalid_inputs": ["UNKNOWN_SOURCE_POSITION", "UNKNOWN_DESIRED_POSITION", "MALFORMED_D03_RECORD", "MISSING_D03_DECISION_ID", "UNKNOWN_ACTUAL_POSITION"]
+}

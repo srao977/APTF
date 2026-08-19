@@ -1,0 +1,69 @@
+{
+  "execution_timestamp_utc": "2026-08-18T23:20:48.4668982Z",
+  "freeze_id": "ADAPTIVE_EMITTER_PRE_RESERVE_FREEZE_V0_1",
+  "freeze_manifest_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+  "future_access_count": 0,
+  "immutable": true,
+  "lifecycle_ns": 324800,
+  "mathematics": {
+    "C": 0.2826673589039373,
+    "H": 1,
+    "Q_G": 1.0,
+    "Q_R": 0.5107573381425071,
+    "Q_S": 0.5534278957830066
+  },
+  "next_permitted": "O_17",
+  "observation": "O_16",
+  "physical_row": 106620,
+  "position_decision": "HOLD",
+  "position_state_before": "FLAT",
+  "prior_context_ids": [
+    "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+    "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+    "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+    "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+    "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+    "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+    "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+    "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+    "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+    "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+    "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+    "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+    "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75",
+    "f315954c9840d7f8f65e8017c3a41a50b10deb854209ac820a6003db0205a983",
+    "315c10aaba62fe589bacf70d388b99e86ef9ec64df4420dfc045b15820f8c4f1"
+  ],
+  "run_id": "TEST006B_ONE_WAY_RESERVE_RUN_V0_1_001",
+  "source_sha256": "73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d",
+  "state_after": {
+    "completed_count": 16,
+    "position_state": "FLAT",
+    "previous_decision": "HOLD"
+  },
+  "state_before": {
+    "completed_count": 15,
+    "context_ids": [
+      "96cbd6e88ef5ad55f1138242d1d60d3bfdc4f66aec15aae9ae6289fdce9b7782",
+      "6b371fa5eb34bcc7bedb081581c47747efa2281758e44c34011fbb53d62c762f",
+      "59e7f4252738cbb9035d41d549dfdf7ab7f39b69a259dd86fae73f61e6284bae",
+      "e401df04f4b01aeb2fae95d1ccd0bf988baec60f4133f7f74188a538e68bd09e",
+      "4d91070654ba055b4231c17d881e48340e948a2fad7b88230f914600477fcb93",
+      "cceab22a7c72387b08fa833c04a60fd22865cfaac00b98d286438a3f474b0313",
+      "f5767434c3d5d35b777d4cf313b8b3283f3c04e902aac808a534ff0992706b83",
+      "27b831c4cfda1b46b8d4a2c801a52d9f1845c6f8a295075c06721bb7babe02d5",
+      "9f708ff625f83d1976900c348c3bcd96d5427008ab05e6a46ffc0bdd7ff4c5b2",
+      "32939f30926c448a8fb3b85f683e153212491d15f9c322765babd96e1ad6da78",
+      "deb3a865121845f7e879f66f6df047ad8635e265828d7e1e7efc44474ee0b7a5",
+      "58fcc6373e24bdd9ebd2c7a7a76a7d64ab1fc3c098e8721fe95a2b09711cc5bc",
+      "c24ddb079f05ed089be688e4428018e76f96ba20ef9a625ec4ac2d724999fb75",
+      "f315954c9840d7f8f65e8017c3a41a50b10deb854209ac820a6003db0205a983",
+      "315c10aaba62fe589bacf70d388b99e86ef9ec64df4420dfc045b15820f8c4f1"
+    ],
+    "d01_state_hash": "cfa3459313348742e2585608189a6cf59080f2d4705ba85b0c76536503f06b7a",
+    "position_state": "FLAT",
+    "previous_decision": null
+  },
+  "status": "PASS",
+  "timestamp": "2023-03-30T08:16:00Z"
+}

@@ -1,0 +1,23 @@
+{
+  "audit_id": "APTF_D04_BEFORE_AFTER_INPUT_AUTHORITY_V0_1",
+  "affected": [
+    {"property":"market_eligible","previous_source":"real harness literal","previous_value":true,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"removed fake H pass; known false still zeros H"},
+    {"property":"clock_event_quality","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"diagnostic absence explicit"},
+    {"property":"liquidity_quality","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until producer"},
+    {"property":"spread_quality","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until producer"},
+    {"property":"latency_quality","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until producer"},
+    {"property":"execution_feasibility","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until producer"},
+    {"property":"capital_available","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until account producer"},
+    {"property":"portfolio_capacity","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until portfolio producer"},
+    {"property":"position_capacity","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until portfolio producer"},
+    {"property":"risk_capacity","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until risk/portfolio producer"},
+    {"property":"broker_health","previous_source":"real harness literal","previous_value":1.0,"previous_status":"ARBITRARY PLACEHOLDER","new_source":null,"new_representation":"null + UNAVAILABLE","active_now":false,"future_use":true,"d04_effect":"excluded from G until infrastructure producer"},
+    {"property":"critical_data_integrity_threshold","previous_source":"real harness override","previous_value":0.0,"previous_status":"ARBITRARY PROOF OVERRIDE","new_source":"d04_trading_envelope/config/default.yaml","new_representation":0.2,"active_now":true,"future_use":false,"d04_effect":"restores authoritative H/safety threshold"}
+  ],
+  "unchanged_known": [
+    {"property":"evaluation_time","source":"derived event time","active":true},
+    {"property":"data_integrity","source":"derived source quality","active":true},
+    {"property":"ReturnShape 17 fields","source":"frozen D01/D02","active":true},
+    {"property":"D04 persistent state 5 fields","source":"prior D04 lifecycle","active":true}
+  ]
+}

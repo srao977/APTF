@@ -1,0 +1,4 @@
+{
+  "run_id":"TEST005_FROZEN_D04_V0_2_RUN_001","freeze_id":"D04_FOUR_FACTOR_POST_TEST004R_FREEZE_V0_1","freeze_manifest_sha256":"a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79","source_data_sha256":"73957227a0cc09103f7ca5ff62b011edd7c80c220017d91fb97c5fb5e6a1055d","execution_timestamp_utc":"2026-08-18T21:54:17.859037Z",
+  "status":"INCONCLUSIVE_RESULT_E","state_counts":null,"transitions":null,"runtime_notice_observation":"No FIRST D04 != CLOSED or FIRST D04 OPEN notice was emitted; all ten checkpoints showed CLOSED.","scientific_classification":"Unavailable because complete per-observation state evidence was not persisted."
+}

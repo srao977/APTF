@@ -1,0 +1,22 @@
+{
+  "test_id": "APTF_TEST_003A_D04_REACHABILITY_V0_1",
+  "cycles": [
+    {"cycle":1,"Q_G":1.0,"Q_S":0.6043625386410295,"Q_R":0.36485420599454843,"G":1.0,"H":1,"reconstructed_C":0.22050421416872243,"stored_C":0.22050421416872243,"absolute_error":0.0,"limiting_family":"Q_R","required_Q_R_holding_others":1.2409769832631439,"primary_reason_below_threshold":"Q_S*Q_R=0.22050421416872243; required single-factor repair exceeds 1"},
+    {"cycle":2,"Q_G":1.0,"Q_S":0.3667482303751486,"Q_R":0.48169454948065005,"G":1.0,"H":1,"reconstructed_C":0.17666062360338286,"stored_C":0.17666062360338286,"absolute_error":0.0,"limiting_family":"Q_S","required_Q_S_holding_others":1.5570032934950782,"primary_reason_below_threshold":"Q_S*Q_R=0.17666062360338286; required single-factor repair exceeds 1"},
+    {"cycle":3,"Q_G":1.0,"Q_S":0.5043730622546775,"Q_R":0.5048353067296146,"G":1.0,"H":1,"reconstructed_C":0.25462532958949513,"stored_C":0.25462532958949513,"absolute_error":0.0,"limiting_family":"Q_S (nearly tied Q_R)","required_Q_S_holding_others":1.485633017346969,"primary_reason_below_threshold":"moderate structural and risk factors multiply to 0.25462532958949513"},
+    {"cycle":4,"Q_G":0.6832134425301885,"Q_S":0.2808653989173412,"Q_R":0.46112417816135437,"G":1.0,"H":1,"reconstructed_C":0.08848558708732783,"stored_C":0.08848558708732783,"absolute_error":0.0,"limiting_family":"Q_S; Q_G also attenuates","required_Q_S_holding_others":2.3806029447497816,"primary_reason_below_threshold":"three attenuating factors multiply; Q_S is smallest and Q_G<1"},
+    {"cycle":5,"Q_G":1.0,"Q_S":0.5555355673592773,"Q_R":0.5046321953114142,"G":1.0,"H":1,"reconstructed_C":0.28034113293008417,"stored_C":0.28034113293008417,"absolute_error":0.0,"limiting_family":"Q_R","required_Q_R_holding_others":1.3500485730645544,"primary_reason_below_threshold":"moderate structural and risk factors multiply to 0.28034113293008417"}
+  ],
+  "observed_term_table": {
+    "Q_G": {"values":[1.0,1.0,1.0,0.6832134425301885,1.0],"min":0.6832134425301885,"max":1.0,"mean":0.9366426885060377,"theoretical_range":"[0,1]"},
+    "Q_S": {"values":[0.6043625386410295,0.3667482303751486,0.5043730622546775,0.2808653989173412,0.5555355673592773],"min":0.2808653989173412,"max":0.6043625386410295,"mean":0.46237695950949487,"theoretical_range":"[0,1]","necessary_for_opening":">=0.75"},
+    "Q_R": {"values":[0.36485420599454843,0.48169454948065005,0.5048353067296146,0.46112417816135437,0.5046321953114142],"min":0.36485420599454843,"max":0.5048353067296146,"mean":0.46342808713551636,"theoretical_range":"[0,1]","necessary_for_opening":">=0.75"},
+    "G": {"values":[1.0,1.0,1.0,1.0,1.0],"min":1.0,"max":1.0,"mean":1.0,"theoretical_range":"[0,1]","necessary_for_opening":">=0.75"},
+    "H": {"values":[1,1,1,1,1],"min":1,"max":1,"mean":1.0,"theoretical_range":"{0,1}","necessary_for_opening":"=1"},
+    "C": {"values":[0.22050421416872243,0.17666062360338286,0.25462532958949513,0.08848558708732783,0.28034113293008417],"min":0.08848558708732783,"max":0.28034113293008417,"mean":0.20412337767580248,"theoretical_range":"[0,1]","opening_threshold":0.75}
+  },
+  "reconstruction_status": "5/5 PASS",
+  "maximum_absolute_error": 0.0,
+  "multiplicative_attenuation": "All cycles had H=G=1. C was therefore the product Q_G*Q_S*Q_R. Moderate Q_S and Q_R values systematically multiplied into smaller C; cycle 4 also had Q_G<1.",
+  "additive_penalty": "No additive or subtractive penalty exists in D04 C. Upstream D01 coordinates use additive logits and sigmoids before entering multiplicative D04."
+}

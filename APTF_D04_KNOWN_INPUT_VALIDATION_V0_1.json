@@ -1,0 +1,57 @@
+{
+  "validation_id": "APTF_D04_KNOWN_INPUT_VALIDATION_V0_1",
+  "status": "PASS",
+  "tests": {
+    "dedicated_known_input": {"passed":7,"failed":0},
+    "complete_d04": {"passed":86,"failed":0},
+    "d02": {"passed":26,"failed":0},
+    "d03": {"passed":40,"failed":0},
+    "position_controller_unit": {"passed":6,"failed":0,"warnings":6},
+    "temporal_runtime_contract_non_market": {"passed":7,"failed":0}
+  },
+  "provenance_assertions": {
+    "all_thirteen_context_values_classified": true,
+    "production_test_fixture_separation": true,
+    "unavailable_distinct_from_zero": true,
+    "unavailable_distinct_from_one": true,
+    "unavailable_market_eligibility_distinct_from_false": true,
+    "active_unknown_provenance_rejected": true,
+    "empty_active_gate_rejected": true,
+    "real_builder_fixed_neutral_scan_count": 0,
+    "authoritative_config_integrity_threshold": 0.2
+  },
+  "schema": {
+    "scientific_fields": 13,
+    "control_fields": 2,
+    "nullable_unavailable_fields": 11,
+    "required_known_fields": ["evaluation_time","data_integrity"],
+    "extra_fields_forbidden": true,
+    "invalid_provenance_rejected": true
+  },
+  "formula_non_drift": {
+    "Q_G":"UNCHANGED",
+    "Q_S":"UNCHANGED",
+    "Q_R":"UNCHANGED",
+    "B":"UNCHANGED",
+    "C":"UNCHANGED_EXCEPT_EXPLICIT_G_H_APPLICABILITY",
+    "open_threshold":0.75,
+    "close_threshold":0.55,
+    "open_persistence":3,
+    "close_persistence":2,
+    "aperture_alpha":0.5
+  },
+  "authorized_file_hashes": [
+    {"path":"d04_trading_envelope/src/aptf_d04/models/envelope_context.py","before":"b80a6241b46e26391b9f0c0808dc8b900115697c9b214ac44256522246c0a800","after":"b9604e4d80dc1a0963e0231dda20cf024df6adfa0714fdf2a9bb1b346a2910cc"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/capturability_model.py","before":"dd74886a8218749d2f98436edbddf25a9ec832989f5b870911295ad39d70b392","after":"eec1bc2d850992b18062854cb040e67289eaa962a2069d053948faab588e8146"},
+    {"path":"d04_trading_envelope/src/aptf_d04/envelope/trading_envelope.py","before":"d19c5c3338d81e1be2e3bb902dfc207fae9d05e9a99480212e04e1a9bee3677d","after":"70f52b0c7aef7984dfd590d304b8720452bf4c3244cb143ee9a3fb6e5d9d0cf9"},
+    {"path":"d04_trading_envelope/tests/test_modernization_v02.py","before":"7b46f42651f211aa668cfd6b95f48b9bff831fa1a97695947417bd2f2410df3a","after":"2e813bfea7f0faec542b062ea7a426096096f29f1396ca366556d5302f143f53"},
+    {"path":"d04_trading_envelope/tests/test_known_input_authority_v022.py","before":null,"after":"26bf428b332da10bad8f695aeafd462494807d32b70303f4dcc7fc9cebfbf454"},
+    {"path":"position_transition_controller/real_causal_replay_harness_v0_2.py","before":"d75453d28d30aabba049eac67898340c8b60ca34aeee8a5c29417e8772ef3d0c","after":"9fa29504d7114cd3539f7939d5d46e0fd22ab9cdb0ef72207ef937fd8249211c"},
+    {"path":"aptf_runtime/src/aptf_runtime/single_observation_pipeline.py","before":"175bedade54375319f06f3a4021488b3de52e29b544aeefab9510ac702085b21","after":"2a4168b55b24aeff1454a4757766d1a578f8c38b8051009976cfad7a8f64d47c"},
+    {"path":"diagnostics/aptf_test_001_row_10.py","before":"8f635fe23f6ae2b946bdd70bc1c6d7ff7771f96bf6b2256a1a5e8497ba410057","after":"59de5756933b5a4a79b09463fbf514030b54e4881c84b0dec491f9690d13632a"},
+    {"path":"diagnostics/aptf_test_002_two_observations.py","before":"7d1e1b9c056f41df0444da8fdd1a435bfb27d342edbaa69632295ca1a090f96d","after":"977df85faaf32d922e0db5635df46061af7006443b7836d36ae619ee33936368"}
+  ],
+  "protected_inventory": {"unchanged":27,"authorized_deltas":3,"unexpected_deltas":0},
+  "market_rows_read_or_processed": 0,
+  "acceptance_gates": {"passed":40,"required":40,"status":"PASS"}
+}
