@@ -1,0 +1,49 @@
+{
+  "future_observations_used_in_state": 0,
+  "intervals": [
+    3,
+    5,
+    8,
+    15
+  ],
+  "models_tested": [
+    "VOLUME_DERIVATIVE",
+    "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K15",
+    "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K3",
+    "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K5",
+    "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K8",
+    "VOLUME_INTERVAL_K15",
+    "VOLUME_INTERVAL_K3",
+    "VOLUME_INTERVAL_K5",
+    "VOLUME_INTERVAL_K8",
+    "VOLUME_POINT"
+  ],
+  "observer_events": 141920,
+  "primary": {
+    "VN_MAE": 2.2071033753236957,
+    "VN_RMSE": 27.479467124706428,
+    "VN_median_absolute_error": 0.4988814317673378,
+    "VN_signed_bias": -3.3110114034986355e-05,
+    "burst_persistence_accuracy": 0.7778864680598785,
+    "causal_availability": "CURRENT_AND_PAST_ONLY",
+    "coefficient_stability": null,
+    "failed_forecasts": 0,
+    "interval": "",
+    "median_condition_number": null,
+    "model_id": "VOLUME_POINT",
+    "noise_sensitivity": "LOW",
+    "representation": "POINT",
+    "suitability_for_ODE": "WEAK",
+    "suitability_for_state_update": "STRONG",
+    "valid_forecasts": 101205,
+    "volume_regime_transition_accuracy": 0.4895015068425473
+  },
+  "primary_model_id": "VOLUME_POINT",
+  "recommended_evolution": "G_V_DISCRETE_STATE_UPDATE",
+  "runge_kutta_used": false,
+  "selection_used_pnl": false,
+  "selection_used_trading_labels": false,
+  "status": "PASS",
+  "test_id": "APTF_TEST_010_VOLUME_ENGINE_SELECTION_V0_1",
+  "volume_emissions": 101205
+}

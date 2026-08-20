@@ -1,0 +1,31 @@
+{
+  "test_id":"APTF_TEST_013B_EXTERNAL_INSTRUMENT_VALIDATION_V0_1",
+  "instrument":"QQQ",
+  "development_instrument":"SPY",
+  "source_sha256":"c326e1e63886c444f75bb3d0bd87907490eac220931a742050faf3a03815e55e",
+  "unseen_status":"ESTABLISHED",
+  "validation_freeze_sha256":"180a434860271f4268f86a7eb76b86af059bb4753158a357cc83911301c47f98",
+  "rows":210482,
+  "initialization_rows":14,
+  "trading_sessions":251,
+  "primary_common_cover":118628,
+  "primary_sessions":251,
+  "sensitivity_common_cover":97712,
+  "sensitivity_sessions":251,
+  "primary":{
+    "F0_W15":{"P2_MAE":0.1009764664145937,"P2_RMSE":19.63351533475818,"P2_Q99":0.11371345734222481,"P2_Q99_9":0.9237751236426242,"P2_max":6032.834208740766,"P2_sign_accuracy":0.7826548762086203,"state_accuracy":0.672435448928153,"perturbation_Q99":50.35180360229735,"domain_exit_rate":0.7778161801276269,"jacobian_max_real_Q99":4.946096426491374,"RK_failures":1},
+    "F4_L1_W30":{"P2_MAE":0.004027458038912937,"P2_RMSE":0.00610509632251591,"P2_Q99":0.019702410280831206,"P2_Q99_9":0.04903012289438857,"P2_max":0.18497564727850044,"P2_sign_accuracy":0.8727366220453856,"state_accuracy":0.7625855615874836,"perturbation_Q99":2.666314020363303,"domain_exit_rate":0.4506946083555316,"jacobian_max_real_Q99":0.7654645694612237,"RK_failures":0}
+  },
+  "qqq_F4_vs_F0_relative_change":{"P2_MAE":-0.960114884369425,"P2_RMSE":-0.999689047212462,"P2_Q99":-0.8267363358627283,"P2_Q99_9":-0.9469241792298397,"P2_max":-0.9999693385163791,"P2_sign_accuracy":0.11509766127458919,"state_accuracy":0.13406508060071468,"perturbation_Q99":-0.9470463056016201,"domain_exit_rate":-0.42056411287101275,"jacobian_max_real_Q99":-0.8452386481263522},
+  "sensitivity_status":"COMPLETE_BROADLY_CONSISTENT",
+  "W30_highly_fragile":false,
+  "classification":"CONDITIONALLY_EXTERNALLY_VALIDATED_CONTINUOUS_CANDIDATE",
+  "method_generalization_supported":true,
+  "coefficient_transfer_tested":false,
+  "universality_claimed":false,
+  "frozen_authority_immutability":{"files_expected":201,"files_unchanged":201,"status":"PASS"},
+  "runtime_promotion":false,
+  "volume_used":false,
+  "pnl_used":false,
+  "trading_rules_changed":false
+}

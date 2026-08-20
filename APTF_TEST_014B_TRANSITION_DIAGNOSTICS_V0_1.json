@@ -1,0 +1,50 @@
+{
+  "normal_deceleration": {
+    "P1_negative_P2_positive": {
+      "AMBER": 902,
+      "AMBER_rate": 0.637906647807638,
+      "GREEN": 0,
+      "GREEN_rate": 0.0,
+      "RED": 512,
+      "RED_rate": 0.3620933521923621,
+      "count": 1414
+    },
+    "P1_positive_P2_negative": {
+      "AMBER": 879,
+      "AMBER_rate": 0.6574420344053852,
+      "GREEN": 458,
+      "GREEN_rate": 0.3425579655946148,
+      "RED": 0,
+      "RED_rate": 0.0,
+      "count": 1337
+    }
+  },
+  "turn_candidates": {
+    "down_turn_candidates": {
+      "count": 648,
+      "false": 360,
+      "false_rate": 0.5555555555555556,
+      "median_lead": 3.0,
+      "true": 288,
+      "true_rate": 0.4444444444444444
+    },
+    "persistent_deceleration_events": {
+      "count": 1198,
+      "useful": 545,
+      "useful_rate": 0.4549248747913189
+    },
+    "projected_p1_sign_cross_events": {
+      "count": 95,
+      "useful": 46,
+      "useful_rate": 0.4842105263157895
+    },
+    "up_turn_candidates": {
+      "count": 645,
+      "false": 342,
+      "false_rate": 0.5302325581395348,
+      "median_lead": 3.0,
+      "true": 303,
+      "true_rate": 0.4697674418604651
+    }
+  }
+}

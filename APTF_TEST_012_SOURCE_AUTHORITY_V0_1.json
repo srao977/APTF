@@ -1,0 +1,10 @@
+{
+  "test_id":"APTF_TEST_012_SOURCE_AUTHORITY_V0_1",
+  "price_source":"APTF_TEST_009_DERIVATIVE_OBSERVATIONS_V0_1.csv",
+  "test011_projections":"APTF_TEST_011_PRICE_RK45_PROJECTIONS_V0_1.csv",
+  "source_rows":101221,
+  "state":["P","P1","P2"],
+  "time_unit":"minute",
+  "continuous_target_pairs":"exactly one-minute INTRASESSION_CONTINUOUS only",
+  "status":"VERIFIED"
+}

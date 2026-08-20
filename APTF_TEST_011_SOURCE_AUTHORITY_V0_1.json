@@ -1,0 +1,15 @@
+{
+  "test_id": "APTF_TEST_011_SOURCE_AUTHORITY_V0_1",
+  "source_path": "APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv",
+  "source_sha256": "db2ea7733030fc170143e00873789d12a69e8ff13e6f8ab641f11f06b7732158",
+  "rows": 101221,
+  "actionable_rows": 101206,
+  "price_state_source": "APTF_TEST_009_DERIVATIVE_OBSERVATIONS_V0_1.csv",
+  "volume_state_source": "APTF_TEST_009V_PRICE_VOLUME_OBSERVATIONS_V0_1.csv",
+  "timestamp": "event_timestamp_utc",
+  "session": "session_type and local calendar date",
+  "eligible_elapsed_minutes": 1.0,
+  "eligible_transition_stratum": "INTRASESSION_CONTINUOUS",
+  "future_rows_authorized_during_projection": 0,
+  "status": "VERIFIED"
+}

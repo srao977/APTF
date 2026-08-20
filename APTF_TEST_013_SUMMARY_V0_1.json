@@ -1,0 +1,14 @@
+{
+  "test_id":"APTF_TEST_013_INDEPENDENT_CHRONOLOGICAL_VALIDATION_V0_1",
+  "status":"VALIDATION_BLOCKED",
+  "holdout":{"start":101099,"end":101220,"rows":122,"test012_selection_overlap":0,"local_trading_dates":1},
+  "eligibility":{"one_minute_intrasection":83,"W15":26,"W30":11,"W60":0,"primary_common_cover":11,"sensitivity_common_cover":0},
+  "scoring":{"projection_rows":0,"scorecard_rows":0,"outcome_metrics_computed":false},
+  "candidate":"F4_L1_W30_REMAINS_CONDITIONAL_NOT_INDEPENDENTLY_VALIDATED",
+  "runtime_promotion":false,
+  "retuning_performed":false,
+  "volume_used":false,
+  "pnl_used":false,
+  "trading_labels_used":false,
+  "reason":"Frozen validation contract cannot be executed on the available causal holdout cover"
+}

@@ -1,0 +1,23 @@
+{
+  "freeze_id":"APTF_TEST_013_VALIDATION_FREEZE_V0_1",
+  "frozen_before_holdout_scoring":true,
+  "holdout":{"observation_start":101099,"observation_end":101220,"row_count":122,"selection_overlap":0},
+  "primary":{"candidate":"F4","representation":"centered_scaled_affine_ridge","lambda":1.0,"window":30,"state":["P","P1","P2"]},
+  "baseline":{"candidate":"F0_W15","authority":"Test010/Test011 frozen per-observation field"},
+  "sensitivity":["F4_L1_W15","F4_L1_W60"],
+  "ridge_implementation":"exact Test012 implementation",
+  "target":"J_P contiguous one-minute intrasection pairs ending at or before current observation",
+  "solver":{"library":"scipy.solve_ivp","method":"RK45","rtol":1e-6,"atol":"component-scaled Test011 rule","horizon_minutes":1.0},
+  "primary_metrics":["P/P1/P2 MAE/RMSE","P2 quantiles/max/RMSE_MAE","sign/state","upper/lower confusion","solver/nonfinite","perturbation","domain exits/D_local","Jacobian","coefficient/condition","development drift"],
+  "status_vocabulary":["VALIDATED_CONTINUOUS_CANDIDATE","CONDITIONALLY_VALIDATED_CONTINUOUS_CANDIDATE","FAILED_INDEPENDENT_VALIDATION","VALIDATION_BLOCKED"],
+  "no_retuning":true,
+  "no_new_models":true,
+  "no_new_lambda":true,
+  "no_new_windows":true,
+  "no_volume":true,
+  "no_pnl":true,
+  "no_trading_labels":true,
+  "execution_status":"VALIDATION_BLOCKED_INSUFFICIENT_CAUSAL_COVER",
+  "scored_projection_rows":0,
+  "status":"FROZEN_BEFORE_SCORING_NOT_WEAKENED_AFTER_COVER_FAILURE"
+}

@@ -1,0 +1,11 @@
+{
+  "test_id":"APTF_TEST_012_TEST011_AUTHORITY_V0_1",
+  "artifact_inventory":"APTF_TEST_011_ARTIFACT_HASHES_V0_1.json",
+  "files_verified":28,
+  "eligible":90974,
+  "success":90968,
+  "failures":6,
+  "primary_rtol":1e-6,
+  "volume_RK":0,
+  "status":"FROZEN_VERIFIED"
+}

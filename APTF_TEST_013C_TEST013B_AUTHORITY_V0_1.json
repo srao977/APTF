@@ -1,0 +1,11 @@
+{
+  "test_id":"APTF_TEST_013C_TEST013B_AUTHORITY_V0_1",
+  "artifact_inventory":"APTF_TEST_013B_ARTIFACT_HASHES_V0_1.json",
+  "artifact_count":29,
+  "classification":"CONDITIONALLY_EXTERNALLY_VALIDATED_CONTINUOUS_CANDIDATE",
+  "primary_common_cover":118628,
+  "sensitivity_common_cover":97712,
+  "dia_predesignated":true,
+  "dia_values_used":false,
+  "status":"FROZEN_VERIFIED"
+}

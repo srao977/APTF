@@ -1,0 +1,470 @@
+{
+  "gates": {
+    "G001": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G002": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G003": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G004": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G005": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G006": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G007": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G008": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G009": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G010": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G011": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G012": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G013": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G014": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G015": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G016": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G017": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G018": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G019": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G020": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G021": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G022": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G023": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G024": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G025": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G026": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G027": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G028": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G029": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G030": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G031": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G032": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G033": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G034": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G035": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G036": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G037": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G038": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G039": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G040": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G041": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G042": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G043": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G044": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G045": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G046": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G047": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G048": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G049": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G050": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G051": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G052": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G053": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G054": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G055": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G056": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G057": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G058": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G059": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G060": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G061": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G062": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G063": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G064": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G065": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G066": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G067": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G068": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G069": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G070": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G071": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G072": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G073": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G074": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G075": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G076": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G077": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G078": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G079": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G080": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G081": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G082": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G083": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G084": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G085": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G086": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G087": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G088": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G089": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G090": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G091": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G092": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G093": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G094": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G095": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G096": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G097": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G098": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G099": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G100": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G101": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G102": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G103": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G104": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G105": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G106": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G107": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G108": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G109": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G110": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G111": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G112": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G113": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G114": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G115": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    },
+    "G116": {
+      "evidence": "Test-014B additive execution evidence",
+      "status": "PASS"
+    }
+  },
+  "passed": 116,
+  "required": 116
+}

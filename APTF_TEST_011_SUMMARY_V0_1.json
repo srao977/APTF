@@ -1,0 +1,88 @@
+{
+  "test_id": "APTF_TEST_011_RK45_ADAPTIVE_PRICE_TRAJECTORY_CONTROL_V0_1",
+  "status": "PASS",
+  "acceptance": "140/140 PASS",
+  "empirical_price_rk_result": "WORSE_THAN_TEST010_NOT_VALID_FOR_CURRENT_CONTROL_PROPAGATION",
+  "solver": {
+    "library": "scipy",
+    "version": "1.18.0",
+    "method": "RK45",
+    "primary_tolerance": "TOL_A",
+    "rtol": 1e-6,
+    "atol": "COMPONENT_SCALED_PER_LOCAL_EMISSION",
+    "authorized_horizon_minutes": 1.0
+  },
+  "price": {
+    "actionable": 101206,
+    "eligible": 90974,
+    "ineligible": 10232,
+    "solver_success": 90968,
+    "solver_failure": 6,
+    "P_MAE": 0.0877684623197826,
+    "P_RMSE": 0.14043339574695882,
+    "P1_MAE": 0.01840923075475812,
+    "P1_RMSE": 0.5518222365863898,
+    "P2_MAE": 0.04838932360733275,
+    "P2_RMSE": 8.89357804200684,
+    "price_movement_sign_accuracy": 0.46465790167971155,
+    "P1_sign_accuracy": 0.8888400316594847,
+    "P2_sign_accuracy": 0.7844296895611643,
+    "derivative_state_accuracy": 0.6644864128045027,
+    "projected_upper_crossings": 1410,
+    "actual_upper_crossings": 5717,
+    "upper_precision": 0.7297872340425532,
+    "upper_recall": 0.17998950498513205,
+    "projected_lower_crossings": 1282,
+    "actual_lower_crossings": 5715,
+    "lower_precision": 0.7542901716068643,
+    "lower_recall": 0.16920384951881015,
+    "rk45_vs_test010": "WORSE"
+  },
+  "volume": {
+    "observer_rows": 101206,
+    "G_V_updates": 101205,
+    "observer_event_rows": 78715,
+    "individual_V1_V2_events": 141920,
+    "RK_executions": 0,
+    "role": "INDEPENDENT_DISCRETE_PARTICIPATION_OBSERVER"
+  },
+  "control": {
+    "rows": 101206,
+    "price_transition_volume_changing": 2098,
+    "price_transition_volume_stable": 594,
+    "price_stable_volume_changing": 68746,
+    "both_stable": 19530,
+    "inconclusive": 10238,
+    "new_trading_actions": 0,
+    "scalar_mixtures": 0
+  },
+  "causality": {
+    "future_leakage_violations": 0,
+    "multi_minute_projections": 0,
+    "session_gap_integrations": 0,
+    "adaptive_loop_success_rows": 90968
+  },
+  "session": {
+    "prohibited_boundaries_audited": 380,
+    "same_session_time_gaps_excluded": 9837,
+    "RK_attempts_across_boundaries_or_gaps": 0,
+    "state_reset_at_close": false
+  },
+  "readiness": {
+    "price_cockpit_envelope": "NO_CURRENT_FP_UNSTABLE_UNDER_RK",
+    "volume_cockpit_envelope": "CONDITIONAL_DESCRIPTIVE_ONLY",
+    "next_test": "LOCAL_PRICE_DYNAMICS_STABILIZATION_AND_RK_COMPATIBILITY_AUDIT"
+  },
+  "architectural_prohibitions": {
+    "runtime_modified": false,
+    "test009_modified": false,
+    "test009v_modified": false,
+    "test010_modified": false,
+    "volume_RK": false,
+    "price_volume_scalar_mix": false,
+    "new_trading_rule": false,
+    "color_thresholds": false,
+    "autopilot": false,
+    "broker": false
+  }
+}

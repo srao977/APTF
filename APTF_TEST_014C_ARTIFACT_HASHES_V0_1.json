@@ -1,0 +1,139 @@
+{
+  "files": [
+    {
+      "path": "APTF_TEST_014C_ACCEPTANCE_GATES_V0_1.json",
+      "sha256": "854f9158a9af4df07b3755648ca5e9603e7b27f480f15e24d30320e4c107791c",
+      "size_bytes": 36598
+    },
+    {
+      "path": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "sha256": "27e74dd4e0e3c357fc365d29e216916cff898a4702503268eec25824551418ef",
+      "size_bytes": 1182
+    },
+    {
+      "path": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "sha256": "4df4acdf42cd61d3ced790dc886c4991b285779684037232cde9d5486696cec6",
+      "size_bytes": 320
+    },
+    {
+      "path": "APTF_TEST_014C_PLAN_V0_1.md",
+      "sha256": "6503b9dcbfb19577dfca45c9cce274032b2fb5ece14135e2daabd709d2f71486",
+      "size_bytes": 337
+    },
+    {
+      "path": "APTF_TEST_014C_PV_JOINT_REACTION_WINDOWS_V0_1.csv",
+      "sha256": "8a950e6d24fa6720587f8a870757af546f0728fe13ccf9f88b98a365569d29ea",
+      "size_bytes": 1293
+    },
+    {
+      "path": "APTF_TEST_014C_REACTION_WINDOW_SCORECARD_V0_1.csv",
+      "sha256": "457894dfcf85ef3fe0ab24c46fe03a79bdc7ae6d3be15976060029a714c1aac9",
+      "size_bytes": 698
+    },
+    {
+      "path": "APTF_TEST_014C_RESULT_V0_1.md",
+      "sha256": "0bc766bdd856538c4539a63563b5b4878aac6559cc19d5a36eea3e2b5985f085",
+      "size_bytes": 3232
+    },
+    {
+      "path": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "sha256": "40aecc5b7f781be21e70f21c242b6bb26014ad5af1e1ed4a2341ffe3de78838c",
+      "size_bytes": 98094
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_ENGINE_INTERVALS_V0_1.csv",
+      "sha256": "df369453523e314fc95f5bfc9e3e82e2a3a866a7a85888a0f4865292ad14183f",
+      "size_bytes": 1766933
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "sha256": "478326d07d631f6074dab8fcb087d60ce1fbccfb2c37f2f528a17f89d01e9594",
+      "size_bytes": 1263565
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_PV_ALIGNED_EMISSIONS_V0_1.csv",
+      "sha256": "0a4053b2ff0437625a08a36f82147cea947f9dc3d0a50a5a11e87150f486e999",
+      "size_bytes": 3894029
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "sha256": "3db568cdd6735d175b9ee686301a8a138285115e4883e59b683b088e28491100",
+      "size_bytes": 1877793
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_PV_TRANSITION_RELATIONSHIPS_V0_1.csv",
+      "sha256": "9449ac5057bcd7bbb1643e5a3e4c4cd3ac248e126b5e112de179227ff2461b80",
+      "size_bytes": 1525122
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_V_EMISSION_POLICY_V0_1.json",
+      "sha256": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "size_bytes": 1485
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_V_ENGINE_EMISSIONS_V0_1.csv",
+      "sha256": "ecd946532e32a8c5167aab72e8c56d3d3389ab00705a75d4cb91cf3031fd451e",
+      "size_bytes": 16384270
+    },
+    {
+      "path": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "sha256": "8bdccaa5529a5c5bdac4a86bfef1f0dd1226a30ec69049e3ad8b1a28bbc7c8bc",
+      "size_bytes": 503505
+    },
+    {
+      "path": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "sha256": "461fae59cd6a3437afe2ac14b077828d68ae48bc38886a8a72eca236ce959500",
+      "size_bytes": 493
+    },
+    {
+      "path": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "sha256": "100f0b4807831f6eebd2e44fe8ab7b2c9597113916243b635b75d819fe80044b",
+      "size_bytes": 4160
+    },
+    {
+      "path": "APTF_TEST_014C_V_AUTHORITY_V0_1.json",
+      "sha256": "6d8e74705f40c63a19a5216514d8fbd5eec8439912cb2469bcb5b9a31eb86e2d",
+      "size_bytes": 672
+    },
+    {
+      "path": "APTF_TEST_014C_V_DEVELOPMENT_SCORECARD_V0_1.csv",
+      "sha256": "4514b53db6d5b2a9a41c40e54b0dc296785eb419be5f96f7e59146cd1e6d2b5c",
+      "size_bytes": 1956
+    },
+    {
+      "path": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "sha256": "029d7bac58a1c1ba8635ec3fb46879b892c3034807e847260ee782a9d6ff8740",
+      "size_bytes": 230
+    },
+    {
+      "path": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "sha256": "e701e5db18d28ecd53082854b2f6afd75a44f2709f0aa1e0e1aec866c84cdcfa",
+      "size_bytes": 420
+    },
+    {
+      "path": "output/test014c_charts/APTF_TEST_014C_HIGH_VOLUME_NOISY_2023-08-25_V0_1.png",
+      "sha256": "e360e593de68f2815c34c00020e45b78ca7fcc9a30936ddae8f4e911f3ac9ccc",
+      "size_bytes": 124076
+    },
+    {
+      "path": "output/test014c_charts/APTF_TEST_014C_QUIET_2023-09-14_V0_1.png",
+      "sha256": "9b4bfee5e64e5dfb0aef997e6448a2287857fe0ef3c9a8c47fd92fb07d0b7902",
+      "size_bytes": 115848
+    },
+    {
+      "path": "output/test014c_charts/APTF_TEST_014C_REVERSAL_2023-09-21_V0_1.png",
+      "sha256": "bd6807a4804633c6bd249a5e2c7ddd81dbeb4c10541ebcf52ce35ad2d2fce420",
+      "size_bytes": 101295
+    },
+    {
+      "path": "output/test014c_charts/APTF_TEST_014C_SUSTAINED_DOWNWARD_2023-08-24_V0_1.png",
+      "sha256": "70562cf8333c5b5145fa7b1730b153c1b1228a7ceddd39377304a3081f504d2a",
+      "size_bytes": 97140
+    },
+    {
+      "path": "output/test014c_charts/APTF_TEST_014C_SUSTAINED_UPWARD_2023-08-29_V0_1.png",
+      "sha256": "ba409680f9a061ad4828342b5f1dd7c47c12a14328688515594a81343f850961",
+      "size_bytes": 94246
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "future_observations_used_in_fit": 0,
+  "models_tested": [
+    "PRICE_AFFINE_TIME_W15",
+    "PRICE_AFFINE_TIME_W30",
+    "PRICE_AFFINE_TIME_W60",
+    "PRICE_LINEAR_W15",
+    "PRICE_LINEAR_W30",
+    "PRICE_LINEAR_W60",
+    "PRICE_QUADRATIC_DIAGONAL_W15",
+    "PRICE_QUADRATIC_DIAGONAL_W30",
+    "PRICE_QUADRATIC_DIAGONAL_W60"
+  ],
+  "price_emissions": 101191,
+  "primary": {
+    "P2_evolution_sign_accuracy": 0.6953978120583847,
+    "coefficient_stability_median_step": 0.0003871999569071643,
+    "curvature_state_transition_accuracy": 0.8798608571908569,
+    "failed_fits": 14,
+    "intraday_P2_MAE": 0.0019521965457680777,
+    "lookback": 15,
+    "median_condition_number": 18.834356561997836,
+    "model_family": "PRICE_AFFINE_TIME",
+    "model_id": "PRICE_AFFINE_TIME_W15",
+    "one_step_P1_MAE": 0.18258557975675282,
+    "one_step_P2_MAE": 0.002125690083990186,
+    "one_step_P2_RMSE": 0.011399229350711077,
+    "one_step_P2_median_absolute_error": 0.0011925149699517357,
+    "one_step_P2_signed_bias": -1.1765290454094744e-05,
+    "one_step_P_MAE": 161.37254978214148,
+    "p95_condition_number": 39.439602904393325,
+    "parameter_count": 5,
+    "session_gap_P2_MAE": 0.0036705076572717842,
+    "singular_fits": 0,
+    "unstable_fits": 0,
+    "valid_fits": 101191
+  },
+  "primary_model_id": "PRICE_AFFINE_TIME_W15",
+  "runge_kutta_used": false,
+  "selection_used_pnl": false,
+  "selection_used_trading_labels": false,
+  "status": "PASS",
+  "structural_dynamics": {
+    "dP1_dt": "P2",
+    "dP2_dt": "F_P",
+    "dP_dt": "P1"
+  },
+  "test_id": "APTF_TEST_010_PRICE_ENGINE_SELECTION_V0_1",
+  "windows": [
+    15,
+    30,
+    60
+  ]
+}

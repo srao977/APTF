@@ -1,0 +1,47 @@
+{
+  "actionable_compared": 985,
+  "actionable_expected": 985,
+  "adaptation_match": true,
+  "adaptation_records_actual": 3602,
+  "adaptation_records_expected": 3602,
+  "decision_counts": {
+    "BUY": 131,
+    "HOLD": 752,
+    "SELL": 102
+  },
+  "deterministic_record_matches": 1000,
+  "development_physical_rows": [
+    115,
+    1114
+  ],
+  "difference_classification": "PROCESSING_TELEMETRY_AND_TELEMETRY_DERIVED_EMISSION_ID_ONLY",
+  "excluded_execution_specific_fields": [
+    "component_lifecycle_ns",
+    "direct_lifecycle_ns",
+    "emission_id",
+    "lifecycle_end_ns",
+    "lifecycle_start_ns"
+  ],
+  "feedback_match": true,
+  "feedback_records_actual": 1970,
+  "feedback_records_expected": 1970,
+  "field_matches": {
+    "C": 985,
+    "H": 985,
+    "Q_G": 985,
+    "Q_R": 985,
+    "Q_S": 985,
+    "context_identity": 985,
+    "emission_ordering": 985,
+    "position_decision": 985,
+    "state_evolution": 985
+  },
+  "initialization": 15,
+  "numeric_tolerance": 0.0,
+  "oracle": "APTF_TEST_006A_WALK_FORWARD_EMISSIONS_V0_1.json",
+  "oracle_sha256": "5f1c94d20c030f46a05133fa2f1bffea4fc2d4761a48ef1a135bc8ec07a6b13e",
+  "reserve_emitter_rerun": false,
+  "status": "PASS",
+  "test_id": "APTF_TEST_007A_EMITTER_EQUIVALENCE_V0_1",
+  "total_observations": 1000
+}

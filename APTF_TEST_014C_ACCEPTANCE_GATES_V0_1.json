@@ -1,0 +1,1200 @@
+{
+  "gates": {
+    "G001": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G002": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G003": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G004": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G005": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G006": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G007": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G008": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G009": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G010": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G011": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G012": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G013": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G014": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G015": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G016": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G017": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G018": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G019": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G020": {
+      "check": "NO_TRADING_PNL_BROKER",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    "G021": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G022": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G023": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G024": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G025": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G026": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G027": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G028": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G029": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G030": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G031": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G032": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G033": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G034": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G035": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G036": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G037": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G038": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G039": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G040": {
+      "check": "NO_TRADING_PNL_BROKER",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    "G041": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G042": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G043": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G044": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G045": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G046": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G047": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G048": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G049": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G050": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G051": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G052": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G053": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G054": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G055": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G056": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G057": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G058": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G059": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G060": {
+      "check": "NO_TRADING_PNL_BROKER",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    "G061": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G062": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G063": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G064": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G065": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G066": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G067": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G068": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G069": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G070": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G071": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G072": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G073": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G074": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G075": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G076": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G077": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G078": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G079": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G080": {
+      "check": "NO_TRADING_PNL_BROKER",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    "G081": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G082": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G083": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G084": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G085": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G086": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G087": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G088": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G089": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G090": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G091": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G092": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G093": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G094": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G095": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G096": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G097": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G098": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G099": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G100": {
+      "check": "NO_TRADING_PNL_BROKER",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    "G101": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G102": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G103": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G104": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G105": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G106": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G107": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G108": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G109": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G110": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G111": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G112": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G113": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G114": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G115": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G116": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G117": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G118": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G119": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G120": {
+      "check": "NO_TRADING_PNL_BROKER",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": [
+        false,
+        false,
+        false
+      ],
+      "status": "PASS"
+    },
+    "G121": {
+      "check": "P_AUTHORITY",
+      "evidence": "APTF_TEST_014C_P_AUTHORITY_V0_1.json",
+      "observed": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+      "status": "PASS"
+    },
+    "G122": {
+      "check": "V_FREEZE",
+      "evidence": "APTF_TEST_014C_V_POLICY_FREEZE_V0_1.json",
+      "observed": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+      "status": "PASS"
+    },
+    "G123": {
+      "check": "V_NOT_MODIFIED",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G124": {
+      "check": "V_VALIDATION_ROWS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 17312,
+      "status": "PASS"
+    },
+    "G125": {
+      "check": "V_VALIDATION_SESSIONS",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 39,
+      "status": "PASS"
+    },
+    "G126": {
+      "check": "V_INVALID_ZERO",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0,
+      "status": "PASS"
+    },
+    "G127": {
+      "check": "V_GREEN_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.5072781885397413,
+      "status": "PASS"
+    },
+    "G128": {
+      "check": "V_AMBER_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.40821395563770796,
+      "status": "PASS"
+    },
+    "G129": {
+      "check": "V_RED_OCCUPANCY",
+      "evidence": "APTF_TEST_014C_V_VALIDATION_SCORECARD_V0_1.csv",
+      "observed": 0.08450785582255083,
+      "status": "PASS"
+    },
+    "G130": {
+      "check": "V_PERSISTENCE",
+      "evidence": "APTF_TEST_014C_INTERVAL_DURATION_SCORECARD_V0_1.csv",
+      "observed": 7.0,
+      "status": "PASS"
+    },
+    "G131": {
+      "check": "P_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_P_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "p_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G132": {
+      "check": "V_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_V_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "cockpit_color",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G133": {
+      "check": "PV_INTERVAL_ASSIGNMENT",
+      "evidence": "APTF_TEST_014C_SPY_PV_JOINT_INTERVALS_V0_1.csv",
+      "observed": {
+        "adjacent_contiguous_intervals_differ": true,
+        "assigned_observations": 55199,
+        "chronologically_ordered": true,
+        "color_field": "joint_state",
+        "emissions": 55199,
+        "every_emission_assigned_once": true,
+        "multiply_assigned": 0,
+        "no_session_boundary_crossed": true,
+        "overlaps": 0,
+        "status": "PASS",
+        "unassigned": 0
+      },
+      "status": "PASS"
+    },
+    "G134": {
+      "check": "DETERMINISTIC_REPLAY",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+      "status": "PASS"
+    },
+    "G135": {
+      "check": "BOUNDED_STATE",
+      "evidence": "APTF_TEST_014C_STREAMING_PERFORMANCE_V0_1.json",
+      "observed": [
+        "current color",
+        "interval start",
+        "current age",
+        "last timestamp",
+        "current session"
+      ],
+      "status": "PASS"
+    },
+    "G136": {
+      "check": "FIVE_CHARTS",
+      "evidence": "output/test014c_charts",
+      "observed": 5,
+      "status": "PASS"
+    },
+    "G137": {
+      "check": "IMMUTABILITY",
+      "evidence": "APTF_TEST_014C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "observed": {
+        "all_unchanged": true,
+        "inventory_expected": 62,
+        "inventory_unchanged": 62,
+        "prior_expected": 264,
+        "prior_unchanged": 264
+      },
+      "status": "PASS"
+    },
+    "G138": {
+      "check": "NO_FUSION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    },
+    "G139": {
+      "check": "NO_EXECUTION",
+      "evidence": "APTF_TEST_014C_SUMMARY_V0_1.json",
+      "observed": false,
+      "status": "PASS"
+    }
+  },
+  "passed": 139,
+  "required": 139
+}

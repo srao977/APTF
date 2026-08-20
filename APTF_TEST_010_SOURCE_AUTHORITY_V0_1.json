@@ -1,0 +1,22 @@
+{
+  "test_id": "APTF_TEST_010_SOURCE_AUTHORITY_V0_1",
+  "source_path": "APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv",
+  "source_sha256": "db2ea7733030fc170143e00873789d12a69e8ff13e6f8ab641f11f06b7732158",
+  "rows": 101221,
+  "price_field": "close",
+  "volume_field": "volume",
+  "timestamp_field": "event_timestamp_utc",
+  "local_timestamp_field": "event_timestamp_local",
+  "session_field": "session_type",
+  "execution_window_authority": "is_regular_session=true, corresponding to local [09:30,16:00)",
+  "observed_session_span": "local 04:00 through available after-hours, approximately 20:00",
+  "session_id": "local calendar date from event_timestamp_local",
+  "session_open": "first observed source row for local date",
+  "execution_open": "first is_regular_session=true row for local date",
+  "execution_close": "last is_regular_session=true row for local date",
+  "session_close": "last observed source row for local date",
+  "state_reset_at_session_close": false,
+  "chronological_order": "UTC strict",
+  "actual_elapsed_time_required": true,
+  "status": "VERIFIED"
+}

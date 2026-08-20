@@ -1,0 +1,44 @@
+{
+  "F0_W15": {
+    "lower": {
+      "FN": 6166,
+      "FP": 432,
+      "TN": 110726,
+      "TP": 1303,
+      "precision": 0.7510086455331412,
+      "recall": 0.17445441156781363,
+      "specificity": 0.9961136400439015
+    },
+    "upper": {
+      "FN": 6051,
+      "FP": 524,
+      "TN": 110611,
+      "TP": 1441,
+      "precision": 0.7333333333333333,
+      "recall": 0.1923384943940203,
+      "specificity": 0.9952850137220498
+    }
+  },
+  "F4_L1_W30": {
+    "lower": {
+      "FN": 6703,
+      "FP": 340,
+      "TN": 110819,
+      "TP": 766,
+      "precision": 0.6925858951175407,
+      "recall": 0.10255723657785513,
+      "specificity": 0.9969413182918162
+    },
+    "upper": {
+      "FN": 6634,
+      "FP": 401,
+      "TN": 110735,
+      "TP": 858,
+      "precision": 0.6814932486100079,
+      "recall": 0.11452215696743193,
+      "specificity": 0.9963918082349553
+    }
+  },
+  "definitions": "endpoint P1 sign crossing under frozen Test012 authority",
+  "test_id": "APTF_TEST_013B_QQQ_TRANSITION_VALIDATION_V0_1"
+}

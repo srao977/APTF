@@ -1,0 +1,17 @@
+{
+  "test_id":"APTF_TEST_012_PRICE_VECTOR_FIELD_IDENTIFICATION_V0_1",
+  "status":"PASS",
+  "scientific_outcome":"CONDITIONAL_STABILIZED_CONTINUOUS_CANDIDATE_FOUND",
+  "baseline":{"candidate":"F0_W15","P2_MAE":0.01019327891526448,"P2_RMSE":0.04708815490390812,"P2_Q99_9":0.31004895468426236,"P2_max":8.056516728902178,"perturbation_Q99":95.51901478087245,"local_envelope_exit_rate":0.7762276052389505},
+  "recommended":{"candidate":"F4_L1_W30","lambda":1.0,"window":30,"P2_MAE":0.0030935758381358154,"P2_RMSE":0.004209984066778256,"P2_Q99_9":0.023332454697745864,"P2_max":0.060570197346469616,"P2_sign_accuracy":0.8725305532436812,"derivative_state_accuracy":0.7594726006395375,"perturbation_Q99":2.731982912368634,"median_condition":7.8291109859586445,"median_max_real_eigenvalue":0.419227345534848,"local_envelope_exit_rate":0.4597003810942223},
+  "common_cover":45658,
+  "implemented_variants":22,
+  "F5":"NOT_IMPLEMENTED_PREDECLARED",
+  "future_leakage":0,
+  "clipped_trajectories":0,
+  "volume_used":false,
+  "trading_or_pnl_used":false,
+  "rk45_only":true,
+  "runtime_modified":false,
+  "next_step":"INDEPENDENT_CHRONOLOGICAL_VALIDATION_OF_F4_L1_W30"
+}

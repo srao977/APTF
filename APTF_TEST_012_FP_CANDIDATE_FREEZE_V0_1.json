@@ -1,0 +1,35 @@
+{
+  "freeze_id": "APTF_TEST_012_FP_CANDIDATE_FREEZE_V0_1",
+  "created_before_candidate_scoring": true,
+  "state": ["P", "P1", "P2"],
+  "structural_dynamics": ["dP/dt=P1", "dP1/dt=P2"],
+  "target": "J_P=(P2_current-P2_previous)/delta_minutes for exactly-one-minute INTRASESSION_CONTINUOUS pairs only",
+  "families": {
+    "F0": "Exact frozen Test011 per-emission PRICE_AFFINE_TIME_W15 baseline",
+    "F1": "Raw affine state [1,P,P1,P2]",
+    "F2": "Centered affine state [1,P-Pc,P1-P1c,P2-P2c]",
+    "F3": "Centered scaled affine [1,zP,zP1,zP2]",
+    "F4": "Centered scaled affine ridge; intercept unpenalized",
+    "F5": "NOT IMPLEMENTED: a scalable nonarbitrary constrained estimator with guaranteed causal convergence could not be specified without adding optimizer/tuning authority; Hurwitz conditions remain diagnostic only"
+  },
+  "windows": [15, 30, 60],
+  "F0_windows": [15],
+  "ridge_lambda_grid": [1e-6, 1e-4, 1e-2, 1.0],
+  "centering_scaling": "causal local training window only",
+  "condition_limit": 100000000.0,
+  "rk45": {"rtol": 1e-6, "atol": "Test011 component-scaled vector", "horizon_minutes": 1.0, "alternative_solvers": false},
+  "common_cover": "intersection of exactly-one-minute intrasection rows with valid frozen state and valid fit for every primary compared candidate; failures on common rows count against model",
+  "primary_variants": [
+    "F0_W15", "F1_W15", "F1_W30", "F1_W60", "F2_W15", "F2_W30", "F2_W60",
+    "F3_W15", "F3_W30", "F3_W60",
+    "F4_L1e-6_W15", "F4_L1e-6_W30", "F4_L1e-6_W60",
+    "F4_L1e-4_W15", "F4_L1e-4_W30", "F4_L1e-4_W60",
+    "F4_L1e-2_W15", "F4_L1e-2_W30", "F4_L1e-2_W60",
+    "F4_L1_W15", "F4_L1_W30", "F4_L1_W60"
+  ],
+  "equivalence_note": "F1 raw affine, F2 centered affine, and F3 centered-scaled affine span the same affine function class under exact least squares. They retain separate coefficient/conditioning evidence; their physical vector fields must agree within floating-point tolerance or scoring stops.",
+  "rk_execution": "Chunked scipy.solve_ivp(method=RK45) over independent flattened affine systems; each trajectory retains its own frozen coefficients and state, with one-minute span and Test011 rtol/scale-aware atol. Chunking changes solver batching only, not mathematical coupling (derivative is block diagonal).",
+  "selection": "No scalar score. Identify Pareto/tradeoffs across endpoint/tail/directional/transition/numerical/perturbation/conditioning/domain criteria. A best continuous candidate requires zero material explosions, materially reduced Q99.9/max/perturbation, acceptable endpoint/state accuracy, and no hidden row removal.",
+  "prohibitions": {"clipping": false, "winsorization": false, "volume_input": false, "pnl_selection": false, "trading_label_selection": false, "alternative_solver": false},
+  "status": "FROZEN_BEFORE_SCORING"
+}

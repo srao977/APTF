@@ -1,0 +1,14 @@
+{
+  "test_id": "APTF_TEST_010_TEST009_AUTHORITY_V0_1",
+  "pretest_inventory": "APTF_TEST_010_PRETEST_HASHES_V0_1.json",
+  "files_verified": 18,
+  "price_observations": "APTF_TEST_009_DERIVATIVE_OBSERVATIONS_V0_1.csv",
+  "price_field": "close",
+  "price_derivative_window": 15,
+  "P1_field": "primary_D1",
+  "P2_field": "primary_D2",
+  "upper_crossings": 6606,
+  "lower_crossings": 6606,
+  "future_observations_in_frozen_price": 0,
+  "status": "FROZEN_VERIFIED"
+}

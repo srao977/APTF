@@ -1,0 +1,21 @@
+{
+  "context_identity_identical": true,
+  "deterministic_emission_sha256_left": "1aba935377a91af74439b510c5514ce9a44a981258453b23a0e641907877f273",
+  "deterministic_emission_sha256_right": "1aba935377a91af74439b510c5514ce9a44a981258453b23a0e641907877f273",
+  "emissions_identical": true,
+  "excluded_execution_specific_fields": [
+    "component_lifecycle_ns",
+    "direct_lifecycle_ns",
+    "emission_id",
+    "lifecycle_end_ns",
+    "lifecycle_start_ns"
+  ],
+  "final_position_state_identical": true,
+  "observations_per_replay": 1000,
+  "position_transition_sha256_left": "1b14b70bbaf9f97259f22540c4d9fd9e51193a30e9ba80bb2b97f66f9cd0ea77",
+  "position_transition_sha256_right": "1b14b70bbaf9f97259f22540c4d9fd9e51193a30e9ba80bb2b97f66f9cd0ea77",
+  "position_transitions_identical": true,
+  "replays": 2,
+  "status": "PASS",
+  "test_id": "APTF_TEST_007A_DETERMINISM_V0_1"
+}

@@ -1,0 +1,13 @@
+{
+  "test_id":"APTF_TEST_014_SPY_P_ENGINE_COCKPIT_EMISSION_V0_1",
+  "classification":"SPY_P_ENGINE_EMISSION_CONDITIONAL",
+  "mathematical_engine":{"state":["P","P1","P2"],"field":"F4_L1_W30","lambda":1,"solver":"RK45","horizon_minutes":1,"authority":"conditional experimental"},
+  "policy":{"id":"P_EMISSION_V0_1","sha256":"cae56998bb061cb477b01e9f44b5e47358185841e79d01fd03e5e8afc99a1e7a","selected_candidate":"PHASE_RULES_DEBOUNCE_1","modified_after_freeze":false},
+  "split":{"development_rows":37887,"development_sessions":88,"development_end":"2023-08-04T20:44:00Z","validation_rows":17312,"validation_sessions":39,"validation_start":"2023-08-07T11:25:00Z","overlap":0,"validation_untouched_by_test014_policy":true,"validation_globally_unseen_to_f4":false},
+  "validation":{"GREEN":3174,"GREEN_rate":0.18334103512014788,"AMBER":10831,"AMBER_rate":0.6256353974121996,"RED":3307,"RED_rate":0.1910235674676525,"INVALID":0,"in_session_color_changes":5245,"changes_per_session":134.48717948717947,"direct_GREEN_RED":0,"direct_RED_GREEN":0,"maxima":1601,"maxima_detected":357,"maxima_recall":0.22298563397876328,"maxima_median_lead":4.0,"minima":1601,"minima_detected":378,"minima_recall":0.23610243597751404,"minima_median_lead":4.0,"false_precursor_rate":0.5453559812070835,"false_deterioration_rate":0.5398818316100443,"false_recovery_rate":0.5357395612172682},
+  "replay":{"eligible_rows":55199,"solver_failures":0,"future_leakage_violations":0,"deterministic":true,"production_interface_output_equivalence":"5/5 PASS"},
+  "realtime_foundation":{"market_observation_contract":"READY","price_engine_runtime_interface":"READY_EXPERIMENTAL","price_emission_contract":"READY","historical_replay":"READY","cockpit_color":"CONDITIONAL","volume_engine_color":"NOT_PART_OF_TEST014","execution_controller":"NOT_ACTIVE","paper_account":"NOT_ACTIVE","live_feed":"NOT_CONNECTED","broker":"NONE"},
+  "frozen_input_immutability":{"files_expected":264,"files_unchanged":264,"status":"PASS"},
+  "volume_used":false,"pnl_used":false,"buy_sell_mapping":false,"short":false,"runtime_core_modified":false,
+  "next_missing_component":"P-emission policy refinement for chatter and turn discrimination before V-engine completion"
+}

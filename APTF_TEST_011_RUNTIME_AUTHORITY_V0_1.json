@@ -1,0 +1,10 @@
+{
+  "test_id": "APTF_TEST_011_RUNTIME_AUTHORITY_V0_1",
+  "runtime_version": "APTF Runtime Core V0.1",
+  "frozen_files": 22,
+  "pretest_files_matched": 22,
+  "runtime_modification_allowed": false,
+  "emitter_execution_allowed": false,
+  "position_operator_modification_allowed": false,
+  "status": "VERIFIED"
+}

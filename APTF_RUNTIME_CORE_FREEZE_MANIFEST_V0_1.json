@@ -1,0 +1,117 @@
+{
+  "freeze_id": "APTF_RUNTIME_CORE_V0_1_FROZEN_20260819",
+  "runtime_version": "APTF Runtime Core V0.1",
+  "status": "FROZEN_BEHAVIORAL_BASELINE",
+  "timestamp_utc": "2026-08-19T16:19:16.461115Z",
+  "source_commit": "853df4931bef682d69968e92e000c16b7399c18e",
+  "runtime_location": "aptf_runtime/src/aptf_runtime",
+  "source_module_count": 6,
+  "included_file_count": 22,
+  "included_files_hash_artifact": {
+    "path": "APTF_RUNTIME_CORE_FREEZE_HASHES_V0_1.json",
+    "sha256": "3a509f43a1bb7ca2ac09ac020b4e80ce50b85ac13c88819d01b4313c82c0f80e",
+    "all_files_matched": true
+  },
+  "authority": {
+    "authority_map": {
+      "path": "APTF_RUNTIME_AUTHORITY_MAP_V0_1.md",
+      "sha256": "143076b943ae458a57c34c2ab7da52a150b8f284012954eb3c799f8af75cae63"
+    },
+    "evolution_ledger": {
+      "path": "APTF_TEST_007A_ARCHITECTURAL_EVOLUTION_LEDGER_V0_1.md",
+      "sha256": "c364890cfe71366d1219becd4b3545788abf655931eb1613be1b71e36111a833"
+    },
+    "do_not_reintroduce": {
+      "path": "APTF_RUNTIME_DO_NOT_REINTRODUCE_V0_1.md",
+      "sha256": "9fd6a8032f6c4d5a9a3315044387aa73c063181fb9136d97341cfe70d60a4134"
+    },
+    "frozen_emitter_implementation_sha256": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+    "frozen_emitter_rule_sha256": "c4c5bbf36ab97b3e7fc4628dfe11708947f996bcd79901a9d19b6a0f2049e9e2",
+    "frozen_D04_manifest_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79"
+  },
+  "test_suite": {
+    "identity_sha256": "16427a0728da0ce908f6104b34100c5a930dd6a7a22c779974e1334e136a3161",
+    "files": 2,
+    "tests_passed": 21,
+    "tests_failed": 0,
+    "status": "PASS"
+  },
+  "behavioral_equivalence": {
+    "emitter": {
+      "oracle": "APTF_TEST_006A_WALK_FORWARD_EMISSIONS_V0_1.json",
+      "initialization": 15,
+      "actionable_expected": 985,
+      "actionable_matched": 985,
+      "H_matched": 985,
+      "Q_G_matched": 985,
+      "Q_S_matched": 985,
+      "Q_R_matched": 985,
+      "C_matched": 985,
+      "decision_matched": 985,
+      "state_matched": 985,
+      "context_matched": 985,
+      "feedback_records_matched": 1970,
+      "numeric_tolerance": 0.0,
+      "status": "PASS"
+    },
+    "position": {
+      "oracle": "APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv",
+      "actionable_expected": 101206,
+      "actionable_matched": 101206,
+      "truth_table_matched": 6,
+      "truth_table_expected": 6,
+      "status": "PASS"
+    },
+    "determinism": {
+      "replays": 2,
+      "observations_per_replay": 1000,
+      "emissions_identical": true,
+      "position_transitions_identical": true,
+      "status": "PASS"
+    }
+  },
+  "difference_classification": {
+    "scientific_differences": 0,
+    "decision_differences": 0,
+    "state_differences": 0,
+    "context_differences": 0,
+    "feedback_semantic_differences": 0,
+    "excluded_execution_specific_values": [
+      "lifecycle_start_ns",
+      "lifecycle_end_ns",
+      "direct_lifecycle_ns",
+      "component_lifecycle_ns",
+      "telemetry-derived emission_id"
+    ],
+    "classification": "PROCESSING_TELEMETRY_ONLY"
+  },
+  "historical_immutability": {
+    "Test005R": "UNCHANGED",
+    "Test006A": "UNCHANGED",
+    "Test006B": "UNCHANGED",
+    "Test007": "UNCHANGED",
+    "frozen_emitter": "UNCHANGED",
+    "reserve_emitter_rerun": false,
+    "status": "PASS"
+  },
+  "prohibitions": {
+    "new_trading_mathematics": false,
+    "retuning": false,
+    "absolute_C_0_75_adaptive_gate": false,
+    "data_integrity_D04_score": false,
+    "broker": false,
+    "pnl": false,
+    "execution_price": false,
+    "capital": false,
+    "share_quantity": false,
+    "future_access": false,
+    "production_short_state": false
+  },
+  "gates_before_freeze": {
+    "passed": 119,
+    "required": 119,
+    "status": "PASS"
+  },
+  "versioning_rule": "V0.1 files must not be silently modified; future changes are additive and versioned.",
+  "next_action": "STOP_FOR_HUMAN_REVIEW_BEFORE_TEST008"
+}

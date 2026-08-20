@@ -1,0 +1,216 @@
+{
+  "absolute_J_P_at_frozen_crossings": {
+    "count": 13210,
+    "mean": 0.00298013675637164,
+    "median": 0.0020548526799254855
+  },
+  "absolute_J_P_before_frozen_crossings": {
+    "LOWER": {
+      "1": {
+        "count": 6605,
+        "mean": 0.0024653279574361245,
+        "median": 0.0015068447597715098
+      },
+      "15": {
+        "count": 6605,
+        "mean": 0.002082439561568946,
+        "median": 0.0017490632581196011
+      },
+      "3": {
+        "count": 6605,
+        "mean": 0.002188592979441188,
+        "median": 0.001539528602604481
+      },
+      "5": {
+        "count": 6605,
+        "mean": 0.0020647008799689085,
+        "median": 0.0015529725553079016
+      },
+      "8": {
+        "count": 6605,
+        "mean": 0.0020738875103409105,
+        "median": 0.0016119993697773062
+      }
+    },
+    "UPPER": {
+      "1": {
+        "count": 6605,
+        "mean": 0.002427920449655291,
+        "median": 0.001476855261577984
+      },
+      "15": {
+        "count": 6605,
+        "mean": 0.0020768040946065117,
+        "median": 0.001724600810458829
+      },
+      "3": {
+        "count": 6605,
+        "mean": 0.0021208433857857543,
+        "median": 0.0014939762009536994
+      },
+      "5": {
+        "count": 6605,
+        "mean": 0.002010311323146796,
+        "median": 0.0015594472829911607
+      },
+      "8": {
+        "count": 6605,
+        "mean": 0.002042527713294297,
+        "median": 0.0016151164410249943
+      }
+    }
+  },
+  "actionable_control_rows": 101206,
+  "autopilot_implemented": false,
+  "broker_implemented": false,
+  "control_concurrence_counts": {
+    "BOTH_PERSISTENT": 19177,
+    "BOTH_TRANSITIONING": 11081,
+    "INCONCLUSIVE": 15,
+    "PRICE_TRANSITION_VOLUME_STABLE": 3311,
+    "VOLUME_TRANSITION_PRICE_PERSISTENT": 67622
+  },
+  "future_observations_used_in_model_fit": 0,
+  "lead_lag_baseline_comparison": "Volume-event rows are compared with frozen crossing-row frequency; temporal ordering is descriptive and not causal.",
+  "local_dynamics_price_identified": true,
+  "local_dynamics_volume_form": "G_V_DISCRETE_STATE_UPDATE",
+  "new_trading_action_created": false,
+  "price_P2_error_by_transition_stratum": {
+    "DATA_GAP_IRREGULAR_INTERVAL": {
+      "MAE": 0.0013574321899347853,
+      "count": 9837
+    },
+    "INTRASESSION_CONTINUOUS": {
+      "MAE": 0.0019521965457680777,
+      "count": 90974
+    },
+    "OVERNIGHT_GAP": {
+      "MAE": 0.16240288764399902,
+      "count": 99
+    },
+    "SESSION_TRANSITION": {
+      "MAE": 0.003111101801523749,
+      "count": 254
+    },
+    "WEEKEND_OR_HOLIDAY_GAP": {
+      "MAE": 0.2696448350968297,
+      "count": 27
+    }
+  },
+  "price_crossing_observation_baseline_frequency": 0.13054561982491156,
+  "price_engine": {
+    "future_observations_used_in_fit": 0,
+    "models_tested": [
+      "PRICE_AFFINE_TIME_W15",
+      "PRICE_AFFINE_TIME_W30",
+      "PRICE_AFFINE_TIME_W60",
+      "PRICE_LINEAR_W15",
+      "PRICE_LINEAR_W30",
+      "PRICE_LINEAR_W60",
+      "PRICE_QUADRATIC_DIAGONAL_W15",
+      "PRICE_QUADRATIC_DIAGONAL_W30",
+      "PRICE_QUADRATIC_DIAGONAL_W60"
+    ],
+    "price_emissions": 101191,
+    "primary": {
+      "P2_evolution_sign_accuracy": 0.6953978120583847,
+      "coefficient_stability_median_step": 0.0003871999569071643,
+      "curvature_state_transition_accuracy": 0.8798608571908569,
+      "failed_fits": 14,
+      "intraday_P2_MAE": 0.0019521965457680777,
+      "lookback": 15,
+      "median_condition_number": 18.834356561997836,
+      "model_family": "PRICE_AFFINE_TIME",
+      "model_id": "PRICE_AFFINE_TIME_W15",
+      "one_step_P1_MAE": 0.18258557975675282,
+      "one_step_P2_MAE": 0.002125690083990186,
+      "one_step_P2_RMSE": 0.011399229350711077,
+      "one_step_P2_median_absolute_error": 0.0011925149699517357,
+      "one_step_P2_signed_bias": -1.1765290454094744e-05,
+      "one_step_P_MAE": 161.37254978214148,
+      "p95_condition_number": 39.439602904393325,
+      "parameter_count": 5,
+      "session_gap_P2_MAE": 0.0036705076572717842,
+      "singular_fits": 0,
+      "unstable_fits": 0,
+      "valid_fits": 101191
+    },
+    "primary_model_id": "PRICE_AFFINE_TIME_W15",
+    "runge_kutta_used": false,
+    "selection_used_pnl": false,
+    "selection_used_trading_labels": false,
+    "status": "PASS",
+    "structural_dynamics": {
+      "dP1_dt": "P2",
+      "dP2_dt": "F_P",
+      "dP_dt": "P1"
+    },
+    "test_id": "APTF_TEST_010_PRICE_ENGINE_SELECTION_V0_1",
+    "windows": [
+      15,
+      30,
+      60
+    ]
+  },
+  "price_volume_scalar_mixture_created": false,
+  "runge_kutta_used": false,
+  "session_count": 127,
+  "session_gap_count": 126,
+  "status": "PASS",
+  "test_id": "APTF_TEST_010_SUMMARY_V0_1",
+  "volume_engine": {
+    "future_observations_used_in_state": 0,
+    "intervals": [
+      3,
+      5,
+      8,
+      15
+    ],
+    "models_tested": [
+      "VOLUME_DERIVATIVE",
+      "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K15",
+      "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K3",
+      "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K5",
+      "VOLUME_INTERVAL_DERIVATIVE_UPDATE_K8",
+      "VOLUME_INTERVAL_K15",
+      "VOLUME_INTERVAL_K3",
+      "VOLUME_INTERVAL_K5",
+      "VOLUME_INTERVAL_K8",
+      "VOLUME_POINT"
+    ],
+    "observer_events": 141920,
+    "primary": {
+      "VN_MAE": 2.2071033753236957,
+      "VN_RMSE": 27.479467124706428,
+      "VN_median_absolute_error": 0.4988814317673378,
+      "VN_signed_bias": -3.3110114034986355e-05,
+      "burst_persistence_accuracy": 0.7778864680598785,
+      "causal_availability": "CURRENT_AND_PAST_ONLY",
+      "coefficient_stability": null,
+      "failed_forecasts": 0,
+      "interval": "",
+      "median_condition_number": null,
+      "model_id": "VOLUME_POINT",
+      "noise_sensitivity": "LOW",
+      "representation": "POINT",
+      "suitability_for_ODE": "WEAK",
+      "suitability_for_state_update": "STRONG",
+      "valid_forecasts": 101205,
+      "volume_regime_transition_accuracy": 0.4895015068425473
+    },
+    "primary_model_id": "VOLUME_POINT",
+    "recommended_evolution": "G_V_DISCRETE_STATE_UPDATE",
+    "runge_kutta_used": false,
+    "selection_used_pnl": false,
+    "selection_used_trading_labels": false,
+    "status": "PASS",
+    "test_id": "APTF_TEST_010_VOLUME_ENGINE_SELECTION_V0_1",
+    "volume_emissions": 101205
+  },
+  "volume_event_at_crossing_frequency": 0.1302846674182638,
+  "volume_event_observation_baseline_frequency": 0.7777700926822521,
+  "volume_events_after_nearest_price_crossing": 66115,
+  "volume_events_at_nearest_price_crossing": 18490,
+  "volume_events_before_nearest_price_crossing": 57315,
+  "volume_observer_events": 141920
+}

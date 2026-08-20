@@ -1,0 +1,16 @@
+{
+  "actionable_rows": 101206,
+  "initializing_buy_executions": 0,
+  "initializing_pending_executions": 0,
+  "initializing_realized_gross_pnl": "0",
+  "initializing_rows_found": 15,
+  "initializing_rows_leading": true,
+  "initializing_rows_marked_excluded": 15,
+  "initializing_sell_executions": 0,
+  "initializing_trade_statistics_contribution": 0,
+  "initializing_trades": 0,
+  "status": "PASS",
+  "test_id": "APTF_TEST_008_INITIALIZATION_EXCLUSION_AUDIT_V0_2",
+  "total_source_rows": 101221,
+  "violations": []
+}

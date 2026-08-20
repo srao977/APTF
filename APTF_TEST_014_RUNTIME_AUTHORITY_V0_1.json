@@ -1,0 +1,16 @@
+{
+  "test_id":"APTF_TEST_014_RUNTIME_AUTHORITY_V0_1",
+  "frozen_runtime_path":"aptf_runtime/src/aptf_runtime",
+  "frozen_runtime_files":22,
+  "frozen_runtime_modification_allowed":false,
+  "new_runtime_oriented_package":"spy_price_engine",
+  "new_package_role":"additive experimental MarketObservation/PriceEmission/policy interfaces",
+  "test_harness_path":"diagnostics",
+  "emitter_modified":false,
+  "position_operator_modified":false,
+  "volume_engine_modified":false,
+  "execution_controller_active":false,
+  "paper_account_active":false,
+  "broker_connected":false,
+  "status":"FROZEN_BOUNDARY_VERIFIED"
+}

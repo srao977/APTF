@@ -1,0 +1,57 @@
+{
+  "actionable": 101206,
+  "classifications": {
+    "EPISODE_CLOSE": 2051,
+    "EPISODE_HOLD": 39787,
+    "EPISODE_OPEN": 2051,
+    "FLAT_HOLD": 37391,
+    "INITIALIZING": 15,
+    "REPEATED_BUY_WHILE_LONG": 12198,
+    "UNMATCHED_SELL_WHILE_FLAT": 7728
+  },
+  "complete_episodes": 2051,
+  "decision_counts": {
+    "BUY": 14249,
+    "HOLD": 77178,
+    "SELL": 9779
+  },
+  "direct_buy_sell_episodes": 0,
+  "episode_elapsed_source_seconds": {
+    "count": 2051,
+    "maximum": 296340.0,
+    "mean": 3782.106289614822,
+    "median": 1380.0,
+    "minimum": 120.0
+  },
+  "episode_observation_length": {
+    "count": 2051,
+    "maximum": 193,
+    "mean": 27.346172598732327,
+    "median": 21,
+    "minimum": 3
+  },
+  "episodes_with_hold": 2051,
+  "episodes_with_repeated_buy": 1665,
+  "hold_count_per_episode": {
+    "count": 2051,
+    "maximum": 141,
+    "mean": 19.398829839102877,
+    "median": 15,
+    "minimum": 1
+  },
+  "initializing": 15,
+  "more_than_one_hold_episodes": 1982,
+  "one_hold_episodes": 69,
+  "open_at_end_episodes": 0,
+  "overlapping_episodes": 0,
+  "repeated_buy_count_per_episode": {
+    "count": 2051,
+    "maximum": 52,
+    "mean": 5.947342759629449,
+    "median": 4,
+    "minimum": 0
+  },
+  "source_rows": 101221,
+  "total_episodes": 2051,
+  "zero_hold_episodes": 0
+}

@@ -1,0 +1,57 @@
+{
+  "IQR": 101351.0,
+  "extremes_removed": 0,
+  "max_divided_by_median": 135.4964879748258,
+  "maximum": 4822591.0,
+  "mean": 73723.95652088005,
+  "median": 35592.0,
+  "minimum": 100.0,
+  "missing_count": 0,
+  "order_of_magnitude_variation_present": true,
+  "population_standard_deviation": 139986.5645782968,
+  "q01": 100.0,
+  "q05": 128.0,
+  "q10": 300.0,
+  "q25": 1219.0,
+  "q50": 35592.0,
+  "q75": 102570.0,
+  "q90": 181955.0,
+  "q90_divided_by_median": 5.112244324567318,
+  "q95": 253716.0,
+  "q95_divided_by_median": 7.128455832771409,
+  "q99": 519004.60000000085,
+  "q99_divided_by_median": 14.58205776579009,
+  "regular_minute_of_session_structure": {
+    "group_count": 390,
+    "group_median_IQR": 44672.75,
+    "maximum_group_count": 127,
+    "maximum_group_median": 2006567.0,
+    "maximum_to_minimum_group_median": 35.16221568008972,
+    "minimum_group_count": 126,
+    "minimum_group_median": 57066.0
+  },
+  "session_volume": {
+    "AFTERHOURS": {
+      "count": 20445,
+      "mean": 24517.807238933725,
+      "median": 1400.0
+    },
+    "PREMARKET": {
+      "count": 31332,
+      "mean": 5019.912804800204,
+      "median": 1244.0
+    },
+    "REGULAR": {
+      "count": 49444,
+      "mean": 137607.4372219076,
+      "median": 101624.5
+    }
+  },
+  "source_modified": false,
+  "source_rows": 101221,
+  "source_volume_field": "volume",
+  "status": "PASS",
+  "test_id": "APTF_TEST_009V_RAW_VOLUME_AUDIT_V0_1",
+  "valid_count": 101221,
+  "zero_count": 0
+}

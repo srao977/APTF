@@ -1,0 +1,40 @@
+{
+  "test_id": "APTF_TEST_008_LONG_ONLY_100_SHARE_EXECUTION_AND_GROSS_PNL_V0_2",
+  "acceptance": "120/120 PASS",
+  "passed": 120,
+  "required": 120,
+  "evidence": {
+    "initialization": "APTF_TEST_008_INITIALIZATION_EXCLUSION_AUDIT_V0_2.json",
+    "structural_gate": "APTF_TEST_008_PRE_PNL_STRUCTURAL_GATE_V0_2.json",
+    "pnl_summary": "APTF_TEST_008_PNL_SUMMARY_V0_2.json",
+    "reconciliation": "APTF_TEST_008_EXECUTION_RECONCILIATION_V0_2.json",
+    "immutability": "APTF_TEST_008_RUNTIME_IMMUTABILITY_V0_2.json"
+  },
+  "gates": {
+    "G001":"PASS","G002":"PASS","G003":"PASS","G004":"PASS","G005":"PASS",
+    "G006":"PASS","G007":"PASS","G008":"PASS","G009":"PASS","G010":"PASS",
+    "G011":"PASS","G012":"PASS","G013":"PASS","G014":"PASS","G015":"PASS",
+    "G016":"PASS","G017":"PASS","G018":"PASS","G019":"PASS","G020":"PASS",
+    "G021":"PASS","G022":"PASS","G023":"PASS","G024":"PASS","G025":"PASS",
+    "G026":"PASS","G027":"PASS","G028":"PASS","G029":"PASS","G030":"PASS",
+    "G031":"PASS","G032":"PASS","G033":"PASS","G034":"PASS","G035":"PASS",
+    "G036":"PASS","G037":"PASS","G038":"PASS","G039":"PASS","G040":"PASS",
+    "G041":"PASS","G042":"PASS","G043":"PASS","G044":"PASS","G045":"PASS",
+    "G046":"PASS","G047":"PASS","G048":"PASS","G049":"PASS","G050":"PASS",
+    "G051":"PASS","G052":"PASS","G053":"PASS","G054":"PASS","G055":"PASS",
+    "G056":"PASS","G057":"PASS","G058":"PASS","G059":"PASS","G060":"PASS",
+    "G061":"PASS","G062":"PASS","G063":"PASS","G064":"PASS","G065":"PASS",
+    "G066":"PASS","G067":"PASS","G068":"PASS","G069":"PASS","G070":"PASS",
+    "G071":"PASS","G072":"PASS","G073":"PASS","G074":"PASS","G075":"PASS",
+    "G076":"PASS","G077":"PASS","G078":"PASS","G079":"PASS","G080":"PASS",
+    "G081":"PASS","G082":"PASS","G083":"PASS","G084":"PASS","G085":"PASS",
+    "G086":"PASS","G087":"PASS","G088":"PASS","G089":"PASS","G090":"PASS",
+    "G091":"PASS","G092":"PASS","G093":"PASS","G094":"PASS","G095":"PASS",
+    "G096":"PASS","G097":"PASS","G098":"PASS","G099":"PASS","G100":"PASS",
+    "G101":"PASS","G102":"PASS","G103":"PASS","G104":"PASS","G105":"PASS",
+    "G106":"PASS","G107":"PASS","G108":"PASS","G109":"PASS","G110":"PASS",
+    "G111":"PASS","G112":"PASS","G113":"PASS","G114":"PASS","G115":"PASS",
+    "G116":"PASS","G117":"PASS","G118":"PASS","G119":"PASS","G120":"PASS"
+  },
+  "status": "PASS"
+}

@@ -1,0 +1,9 @@
+{
+  "test_id":"APTF_TEST_013_RUNTIME_AUTHORITY_V0_1",
+  "runtime_files":22,
+  "runtime_modification_allowed":false,
+  "volume_modification_allowed":false,
+  "emitter_execution_allowed":false,
+  "position_operator_modification_allowed":false,
+  "status":"VERIFIED"
+}

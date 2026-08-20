@@ -1,0 +1,10 @@
+{
+  "flat_hold_count": 37391,
+  "flat_hold_csv": "APTF_TEST_007_FLAT_HOLDS_V0_1.csv",
+  "open_at_end_count": 0,
+  "overlapping_episodes": 0,
+  "repeated_buy_count": 12198,
+  "repeated_buy_csv": "APTF_TEST_007_REPEATED_BUYS_V0_1.csv",
+  "unmatched_sell_count": 7728,
+  "unmatched_sell_csv": "APTF_TEST_007_UNMATCHED_SELLS_V0_1.csv"
+}

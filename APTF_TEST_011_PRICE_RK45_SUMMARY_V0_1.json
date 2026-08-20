@@ -1,0 +1,162 @@
+{
+  "P": {
+    "MAE": 0.0877684623197826,
+    "RMSE": 0.14043339574695882,
+    "bias": -0.00013257333218591935,
+    "median_absolute_error": 0.059203835630796675
+  },
+  "P1": {
+    "MAE": 0.01840923075475812,
+    "RMSE": 0.5518222365863898,
+    "bias": -0.0020666566572765297,
+    "median_absolute_error": 0.010329804299998163
+  },
+  "P1_sign_accuracy": 0.8888400316594847,
+  "P2": {
+    "MAE": 0.04838932360733275,
+    "RMSE": 8.89357804200684,
+    "bias": -0.033411195256325625,
+    "median_absolute_error": 0.0036846779369983144
+  },
+  "P2_sign_accuracy": 0.7844296895611643,
+  "RK_D2_precursor_at_actual_lower": {
+    "actual_crossings": 5715,
+    "projected_P1_negative_P2_positive": 3374,
+    "projected_upcoming_lower_crossing": 967
+  },
+  "RK_D2_precursor_at_actual_upper": {
+    "actual_crossings": 5717,
+    "projected_P1_positive_P2_negative": 3323,
+    "projected_upcoming_upper_crossing": 1029
+  },
+  "control_concurrence_counts": {
+    "BOTH_STABLE": 19530,
+    "INCONCLUSIVE": 10238,
+    "PRICE_PROJECTED_TRANSITION_VOLUME_CHANGING": 2098,
+    "PRICE_PROJECTED_TRANSITION_VOLUME_STABLE": 594,
+    "PRICE_STABLE_VOLUME_CHANGING": 68746
+  },
+  "derivative_state_accuracy": 0.6644864128045027,
+  "derivative_state_confusion": {
+    "FALLING_STRENGTHENING->FALLING_STRENGTHENING": 25855,
+    "FALLING_STRENGTHENING->FALLING_WEAKENING": 6093,
+    "FALLING_STRENGTHENING->LOWER_TURNING_REGION": 440,
+    "FALLING_STRENGTHENING->RISING_STRENGTHENING": 503,
+    "FALLING_STRENGTHENING->RISING_WEAKENING": 1717,
+    "FALLING_STRENGTHENING->UPPER_TURNING_REGION": 1472,
+    "FALLING_WEAKENING->FALLING_STRENGTHENING": 1170,
+    "FALLING_WEAKENING->FALLING_WEAKENING": 3226,
+    "FALLING_WEAKENING->LOWER_TURNING_REGION": 223,
+    "FALLING_WEAKENING->RISING_STRENGTHENING": 256,
+    "FALLING_WEAKENING->RISING_WEAKENING": 153,
+    "FALLING_WEAKENING->UPPER_TURNING_REGION": 93,
+    "LOWER_TURNING_REGION->FALLING_STRENGTHENING": 429,
+    "LOWER_TURNING_REGION->FALLING_WEAKENING": 1065,
+    "LOWER_TURNING_REGION->LOWER_TURNING_REGION": 912,
+    "LOWER_TURNING_REGION->RISING_STRENGTHENING": 648,
+    "LOWER_TURNING_REGION->RISING_WEAKENING": 270,
+    "LOWER_TURNING_REGION->UPPER_TURNING_REGION": 403,
+    "RISING_STRENGTHENING->FALLING_STRENGTHENING": 516,
+    "RISING_STRENGTHENING->FALLING_WEAKENING": 1722,
+    "RISING_STRENGTHENING->LOWER_TURNING_REGION": 1480,
+    "RISING_STRENGTHENING->RISING_STRENGTHENING": 25994,
+    "RISING_STRENGTHENING->RISING_WEAKENING": 6221,
+    "RISING_STRENGTHENING->UPPER_TURNING_REGION": 446,
+    "RISING_WEAKENING->FALLING_STRENGTHENING": 241,
+    "RISING_WEAKENING->FALLING_WEAKENING": 141,
+    "RISING_WEAKENING->LOWER_TURNING_REGION": 124,
+    "RISING_WEAKENING->RISING_STRENGTHENING": 1360,
+    "RISING_WEAKENING->RISING_WEAKENING": 3435,
+    "RISING_WEAKENING->UPPER_TURNING_REGION": 251,
+    "UPPER_TURNING_REGION->FALLING_STRENGTHENING": 720,
+    "UPPER_TURNING_REGION->FALLING_WEAKENING": 349,
+    "UPPER_TURNING_REGION->LOWER_TURNING_REGION": 442,
+    "UPPER_TURNING_REGION->RISING_STRENGTHENING": 457,
+    "UPPER_TURNING_REGION->RISING_WEAKENING": 1116,
+    "UPPER_TURNING_REGION->UPPER_TURNING_REGION": 1025
+  },
+  "eligible_count": 90974,
+  "future_leakage_violations": 0,
+  "ineligible_count": 10232,
+  "lower_transition": {
+    "FN": 4748,
+    "FP": 315,
+    "TN": 84938,
+    "TP": 967,
+    "false_negative_rate": 0.8307961504811898,
+    "false_positive_rate": 0.0036948846374907627,
+    "precision": 0.7542901716068643,
+    "recall": 0.16920384951881015,
+    "specificity": 0.9963051153625092
+  },
+  "multi_minute_projections": 0,
+  "price_movement_sign_accuracy": 0.46465790167971155,
+  "primary_rtol": 1e-06,
+  "primary_tolerance": "TOL_A",
+  "rk45_vs_test010_result": "WORSE",
+  "scipy_version": "1.18.0",
+  "session_gap_audit_rows": 380,
+  "session_gap_integrations": 0,
+  "solver": "RK45",
+  "solver_failure_count": 6,
+  "solver_success_count": 90968,
+  "status": "PASS",
+  "test010_comparison": {
+    "P": {
+      "rk45": {
+        "MAE": 0.0877684623197826,
+        "RMSE": 0.14043339574695882,
+        "bias": -0.00013257333218591935,
+        "median_absolute_error": 0.059203835630796675
+      },
+      "test010": {
+        "MAE": 0.08761725341449655,
+        "RMSE": 0.13619775767561382,
+        "bias": -5.126506951476623e-06,
+        "median_absolute_error": 0.05918490812209143
+      }
+    },
+    "P1": {
+      "rk45": {
+        "MAE": 0.01840923075475812,
+        "RMSE": 0.5518222365863898,
+        "bias": -0.0020666566572765297,
+        "median_absolute_error": 0.010329804299998163
+      },
+      "test010": {
+        "MAE": 0.016471769062708835,
+        "RMSE": 0.024758454274649375,
+        "bias": 1.3149014208834818e-06,
+        "median_absolute_error": 0.010734548633380053
+      }
+    },
+    "P2": {
+      "rk45": {
+        "MAE": 0.04838932360733275,
+        "RMSE": 8.89357804200684,
+        "bias": -0.033411195256325625,
+        "median_absolute_error": 0.0036846779369983144
+      },
+      "test010": {
+        "MAE": 0.0019520892322553976,
+        "RMSE": 0.0030360348736529126,
+        "bias": 2.0950212569941684e-06,
+        "median_absolute_error": 0.0012607076871679213
+      }
+    }
+  },
+  "test_id": "APTF_TEST_011_PRICE_RK45_SUMMARY_V0_1",
+  "upper_transition": {
+    "FN": 4688,
+    "FP": 381,
+    "TN": 84870,
+    "TP": 1029,
+    "false_negative_rate": 0.8200104950148679,
+    "false_positive_rate": 0.0044691557870288915,
+    "precision": 0.7297872340425532,
+    "recall": 0.17998950498513205,
+    "specificity": 0.9955308442129711
+  },
+  "volume_RK_executions": 0,
+  "volume_observer_rows": 101206
+}

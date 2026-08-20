@@ -1,0 +1,13 @@
+{
+  "test_id":"APTF_TEST_013C_SOURCE_AUTHORITY_V0_1",
+  "development_instrument":"SPY",
+  "first_external_validation":"QQQ",
+  "second_external_replication":"DIA",
+  "dia_source":"DIA_1min_firstratedata.csv",
+  "price_field":"close",
+  "price_authority":"APTF_TEST_009_DERIVATIVE_METHOD_V0_1.md",
+  "derivative_authority":"diagnostics/run_test_009_derivative_analysis.py causal_quadratic window 15",
+  "timestamp_authority":"FirstRate naive timestamps interpreted as America/New_York local market time",
+  "volume_role":"RAW_SOURCE_ONLY_NOT_READ_BY_PRICE_ENGINE",
+  "status":"VERIFIED_METADATA_ONLY"
+}

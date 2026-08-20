@@ -1,0 +1,20 @@
+{
+  "test_id": "APTF_TEST_008_RUNTIME_CORE_AUTHORITY_V0_2",
+  "runtime_version": "APTF Runtime Core V0.1",
+  "runtime_location": "aptf_runtime/src/aptf_runtime",
+  "freeze_manifest": "APTF_RUNTIME_CORE_FREEZE_MANIFEST_V0_1.json",
+  "freeze_manifest_sha256": "ee93a9c92eb39d08e29772889a86d592b76399ea673a52e41c1e6a6c2d0e2379",
+  "freeze_hashes": "APTF_RUNTIME_CORE_FREEZE_HASHES_V0_1.json",
+  "freeze_hashes_sha256": "3a509f43a1bb7ca2ac09ac020b4e80ce50b85ac13c88819d01b4313c82c0f80e",
+  "frozen_file_count": 22,
+  "frozen_files_pretest_matched": 22,
+  "test007a_result": "APTF_TEST_007A_RESULT_V0_1.md",
+  "test007a_result_sha256": "adb86cd2b8273572dccc66bdd6fc6744802face1de69c74656adc39112879803",
+  "position_operator": "aptf_runtime.position.apply_position_decision",
+  "allowed_runtime_operation": "Read/import frozen Position State Operator only",
+  "adaptive_emitter_execution_allowed": false,
+  "reserve_emitter_reruns": 0,
+  "runtime_modification_allowed": false,
+  "pretest_hash_inventory": "APTF_TEST_008_PRETEST_HASHES_V0_2.json",
+  "status": "VERIFIED_PRETEST"
+}

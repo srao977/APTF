@@ -1,0 +1,28 @@
+{
+  "amplification_median": 2.2423650649621742,
+  "amplification_q95": 2.6637448484678754,
+  "color_is_trade_action": false,
+  "color_rules": "GREEN confident UP_ACCELERATING/TURNING_UP; RED confident DOWN_ACCELERATING/TURNING_DOWN; AMBER transitional/near-stationary/LOW; INVALID solver/nonfinite",
+  "condition_median": 7.835779770603297,
+  "condition_q95": 13.040323846425492,
+  "confidence_rules": "development Q50/Q95 thresholds over condition, max-real eigenvalue, perturbation amplification",
+  "confirmation_observations": 1,
+  "created_from_partition": "DEVELOPMENT_ONLY",
+  "direct_reversal_debounce": true,
+  "domain_exit_effect": "confidence LOW; not automatic RED",
+  "eigenvalue_median": 0.42217565243576405,
+  "eigenvalue_q95": 0.6449378901835623,
+  "epsilon": 0.0035332071428566536,
+  "phase_rules": "spy_price_engine.policy._phase",
+  "policy_id": "P_EMISSION_V0_1",
+  "reason_codes_required": true,
+  "selected_candidate": "PHASE_RULES_DEBOUNCE_1",
+  "selection_evidence": {
+    "color_change_reduction": -0.018909710391822765,
+    "direct_reversal_reduction": 0.96962879640045,
+    "recall_preserved": true
+  },
+  "status": "FROZEN_BEFORE_VALIDATION",
+  "turning_rules": "spy_price_engine.policy._turning_tendency",
+  "validation_outcomes_read": false
+}

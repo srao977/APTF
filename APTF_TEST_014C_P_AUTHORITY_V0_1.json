@@ -1,0 +1,8 @@
+{
+  "classification": "SPY_P_ENGINE_COCKPIT_CONDITIONAL",
+  "expected_sha256": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+  "hash_verified": true,
+  "modified": false,
+  "policy": "P_EMISSION_V0_2",
+  "policy_sha256": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef"
+}

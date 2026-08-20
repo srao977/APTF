@@ -1,0 +1,12 @@
+{
+  "FLAT_percent": 46.607908622018456,
+  "LONG_percent": 53.392091377981544,
+  "actionable_observations": 101206,
+  "note": "Time occupancy assigns each interval to the state carried from the preceding observation; no market-calendar assumptions.",
+  "observations_ending_FLAT": 47170,
+  "observations_ending_LONG": 54036,
+  "source_time_occupancy_seconds": {
+    "FLAT": 8110980.0,
+    "LONG": 7757100.0
+  }
+}

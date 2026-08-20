@@ -1,0 +1,17 @@
+{
+  "F0_eligible_rows": 90624,
+  "F4_W15_eligible_rows": 90624,
+  "F4_W30_eligible_rows": 84361,
+  "F4_W60_eligible_rows": 72702,
+  "complete_state_rows": 119701,
+  "contiguous_jp_targets": 105768,
+  "derivative_fit_failures": 0,
+  "eligible_contiguous_projection_origins": 105768,
+  "initialization_rows": 14,
+  "primary_common_cover": 84361,
+  "primary_sessions_represented": 251,
+  "sensitivity_common_cover": 72702,
+  "sensitivity_sessions_represented": 251,
+  "test_id": "APTF_TEST_013C_DIA_STATE_CONSTRUCTION_SUMMARY_V0_1",
+  "total_rows": 119715
+}

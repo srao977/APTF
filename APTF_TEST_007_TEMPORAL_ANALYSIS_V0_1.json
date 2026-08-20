@@ -1,0 +1,14 @@
+{
+  "complete_episode_temporal_order_violations": 0,
+  "episode_elapsed_source_seconds": {
+    "count": 2051,
+    "maximum": 296340.0,
+    "mean": 3782.106289614822,
+    "median": 1380.0,
+    "minimum": 120.0
+  },
+  "overlapping_episodes": 0,
+  "row_count_not_used_as_time": true,
+  "source_first_timestamp": "2023-03-30T08:00:00Z",
+  "source_last_timestamp": "2023-09-29T23:48:00Z"
+}

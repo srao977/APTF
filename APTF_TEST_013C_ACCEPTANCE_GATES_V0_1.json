@@ -1,0 +1,760 @@
+{
+  "acceptance": "187/187 PASS",
+  "classification": "SECOND_EXTERNAL_REPLICATION_CONDITIONAL",
+  "gates": {
+    "G001": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G002": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G003": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G004": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G005": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G006": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G007": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G008": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G009": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G010": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G011": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G012": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G013": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G014": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G015": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G016": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G017": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G018": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G019": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G020": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G021": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G022": {
+      "category": "PRIOR_USE",
+      "status": "PASS"
+    },
+    "G023": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G024": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G025": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G026": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G027": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G028": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G029": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G030": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G031": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G032": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G033": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G034": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G035": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G036": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G037": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G038": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G039": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G040": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G041": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G042": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G043": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G044": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G045": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G046": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G047": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G048": {
+      "category": "DIA_CHARACTERIZATION",
+      "status": "PASS"
+    },
+    "G049": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G050": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G051": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G052": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G053": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G054": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G055": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G056": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G057": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G058": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G059": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G060": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G061": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G062": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G063": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G064": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G065": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G066": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G067": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G068": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G069": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G070": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G071": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G072": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G073": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G074": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G075": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G076": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G077": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G078": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G079": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G080": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G081": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G082": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G083": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G084": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G085": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G086": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G087": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G088": {
+      "category": "PRIMARY",
+      "status": "PASS"
+    },
+    "G089": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G090": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G091": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G092": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G093": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G094": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G095": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G096": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G097": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G098": {
+      "category": "DIRECTION_QUIET_REGIME",
+      "status": "PASS"
+    },
+    "G099": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G100": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G101": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G102": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G103": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G104": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G105": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G106": {
+      "category": "TRANSITIONS",
+      "status": "PASS"
+    },
+    "G107": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G108": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G109": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G110": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G111": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G112": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G113": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G114": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G115": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G116": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G117": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G118": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G119": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G120": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G121": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G122": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G123": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G124": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G125": {
+      "category": "WINDOW",
+      "status": "PASS"
+    },
+    "G126": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G127": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G128": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G129": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G130": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G131": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G132": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G133": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G134": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G135": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G136": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G137": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G138": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G139": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G140": {
+      "category": "THREE_INSTRUMENTS",
+      "status": "PASS"
+    },
+    "G141": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G142": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G143": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G144": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G145": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G146": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G147": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G148": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G149": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G150": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G151": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G152": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G153": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G154": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G155": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G156": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G157": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G158": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G159": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G160": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G161": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G162": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G163": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G164": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G165": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G166": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G167": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G168": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G169": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G170": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G171": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G172": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G173": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G174": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G175": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G176": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G177": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G178": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G179": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G180": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G181": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G182": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G183": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G184": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G185": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G186": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G187": {
+      "category": "DECISION",
+      "status": "PASS"
+    }
+  },
+  "next_test_executed": false,
+  "no_post_result_retuning": true,
+  "passed": 187,
+  "required": 187,
+  "status": "PASS",
+  "test_id": "APTF_TEST_013C_SECOND_EXTERNAL_REPLICATION_V0_1"
+}

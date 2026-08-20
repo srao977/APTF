@@ -1,0 +1,44 @@
+{
+  "F0_W15": {
+    "lower": {
+      "FN": 4406,
+      "FP": 270,
+      "TN": 78710,
+      "TP": 975,
+      "precision": 0.7831325301204819,
+      "recall": 0.1811930867868426,
+      "specificity": 0.9965814130159534
+    },
+    "upper": {
+      "FN": 4372,
+      "FP": 306,
+      "TN": 78680,
+      "TP": 1003,
+      "precision": 0.7662337662337663,
+      "recall": 0.1866046511627907,
+      "specificity": 0.996125895728357
+    }
+  },
+  "F4_L1_W30": {
+    "lower": {
+      "FN": 4814,
+      "FP": 232,
+      "TN": 78748,
+      "TP": 567,
+      "precision": 0.7096370463078848,
+      "recall": 0.10537074893142538,
+      "specificity": 0.9970625474803748
+    },
+    "upper": {
+      "FN": 4789,
+      "FP": 276,
+      "TN": 78710,
+      "TP": 586,
+      "precision": 0.679814385150812,
+      "recall": 0.10902325581395349,
+      "specificity": 0.9965057098726356
+    }
+  },
+  "definitions": "endpoint P1 sign crossing under frozen authority",
+  "test_id": "APTF_TEST_013C_DIA_TRANSITION_VALIDATION_V0_1"
+}

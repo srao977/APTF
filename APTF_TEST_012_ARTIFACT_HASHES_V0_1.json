@@ -1,0 +1,151 @@
+{
+  "captured_at_utc": "2026-08-19T21:29:01.934968Z",
+  "files": [
+    {
+      "path": "APTF_TEST_012_PLAN_V0_1.md",
+      "sha256": "5fb38357f1ea1f525d968e97493e213ed70e8c376f7d54735e53ce15f6701f1f",
+      "size_bytes": 834
+    },
+    {
+      "path": "APTF_TEST_012_SOURCE_AUTHORITY_V0_1.json",
+      "sha256": "d8ce865f83eed686b48b60927d86ea01f950ea8172c57755ff88b23e9438f46b",
+      "size_bytes": 379
+    },
+    {
+      "path": "APTF_TEST_012_TEST011_AUTHORITY_V0_1.json",
+      "sha256": "e67835642b57dc5060fd014921c0bdb432c8410b54f260f831d8fd9a3068818e",
+      "size_bytes": 278
+    },
+    {
+      "path": "APTF_TEST_012_RUNTIME_AUTHORITY_V0_1.json",
+      "sha256": "18599ac5e1a1a759644eb3dccc0206bfd1a2041760bc3fbb945ce925893b4572",
+      "size_bytes": 276
+    },
+    {
+      "path": "APTF_TEST_012_DIAGNOSTIC_METHOD_V0_1.md",
+      "sha256": "f71a3ad515eb165ddd51216273aba118b4329bf777f5a938542b53aa7a0769f9",
+      "size_bytes": 1060
+    },
+    {
+      "path": "APTF_TEST_012_TEST011_P2_FAILURE_POPULATIONS_V0_1.csv",
+      "sha256": "0a172d4042b3ab4529b5f1f4adc4abe77479fee8b030d4db96cc1f3692d04a41",
+      "size_bytes": 34893665
+    },
+    {
+      "path": "APTF_TEST_012_SEVERE_TRAJECTORY_TRACES_V0_1.csv",
+      "sha256": "77e444949c7999d8d9cd649c764cd8000c010f558cf2a87afc6de09ae0e35802",
+      "size_bytes": 130542
+    },
+    {
+      "path": "APTF_TEST_012_MATCHED_STABLE_TRAJECTORY_TRACES_V0_1.csv",
+      "sha256": "d8f0a3ec6a14ba0ed5c97ebf6584bc14d486da73999150e217a7539e720bc33f",
+      "size_bytes": 140533
+    },
+    {
+      "path": "APTF_TEST_012_BASELINE_JACOBIAN_STABILITY_V0_1.csv",
+      "sha256": "3d46f4e16ea44aee7f6ca0d0e76a2859cf863f4810258a8ce02ebe4451dd24e6",
+      "size_bytes": 23426759
+    },
+    {
+      "path": "APTF_TEST_012_LOCAL_DOMAIN_EXIT_ANALYSIS_V0_1.csv",
+      "sha256": "156a31773579d541b1b7d6cdcee391bdf8aed42b9d10656cbb1357057fd708d8",
+      "size_bytes": 35923
+    },
+    {
+      "path": "APTF_TEST_012_JP_TARGET_AUDIT_V0_1.md",
+      "sha256": "04d468430d3a9887a58f96a33183081b6d032ba53386e47b1a030698dd57c435",
+      "size_bytes": 633
+    },
+    {
+      "path": "APTF_TEST_012_FP_CANDIDATE_FREEZE_V0_1.json",
+      "sha256": "3fd22ec240d3acc4995478c2046fa71e65815d3f24e69daafb0ad610dafc66bb",
+      "size_bytes": 2866
+    },
+    {
+      "path": "APTF_TEST_012_FP_CANDIDATE_RK45_PROJECTIONS_V0_1.csv",
+      "sha256": "70b90d6638aa623b0f141fdee65310e25c760c5a12c6fff363d1741a38a5001d",
+      "size_bytes": 518692470
+    },
+    {
+      "path": "APTF_TEST_012_FP_VECTOR_FIELD_SCORECARD_V0_1.csv",
+      "sha256": "8d7bcaf91bd68c1dfe14dbb22cb4a5b3023cfb071de89b55aaa8ed5bd9b4f514",
+      "size_bytes": 13408
+    },
+    {
+      "path": "APTF_TEST_012_FP_ERROR_QUANTILES_V0_1.csv",
+      "sha256": "949c1a48aa95a137b4279f769683e1a57c7ed579386d23999abf580c2c6b2eaa",
+      "size_bytes": 48703
+    },
+    {
+      "path": "APTF_TEST_012_FP_PERTURBATION_STABILITY_V0_1.csv",
+      "sha256": "c5b08890ca6ce83c632656ea2449df6131f480d22d1bfc513f12a8472b2f7128",
+      "size_bytes": 936016
+    },
+    {
+      "path": "APTF_TEST_012_FP_COEFFICIENT_STABILITY_V0_1.csv",
+      "sha256": "6051b9febc2078d5e64ca2df79b672f941be5d6f7579944b4927fcc032ec5d1a",
+      "size_bytes": 200088629
+    },
+    {
+      "path": "APTF_TEST_012_BASELINE_VS_CANDIDATE_COMPARISON_V0_1.csv",
+      "sha256": "e08559f5121083d8916225a6937fdf0d58be2603cb506e6cf118045641c4517f",
+      "size_bytes": 26646
+    },
+    {
+      "path": "APTF_TEST_012_PRICE_VECTOR_FIELD_DECISION_V0_1.md",
+      "sha256": "cf0a5189fe747406dd297f738d9a7716799fae9bbcfb7e6002b543939f77ec32",
+      "size_bytes": 1212
+    },
+    {
+      "path": "APTF_TEST_012_RUNTIME_IMMUTABILITY_V0_1.json",
+      "sha256": "1d8bb5fbbb40bfc37a1b9cd050415fc5b363b6cb1da443f037f768c9f6e3c0db",
+      "size_bytes": 44275
+    },
+    {
+      "path": "APTF_TEST_012_SUMMARY_V0_1.json",
+      "sha256": "62212ee52ad8e4712689c75a5f442b0a521c6c4b86875c7d509aa4dc6151970b",
+      "size_bytes": 1173
+    },
+    {
+      "path": "APTF_TEST_012_RESULT_V0_1.md",
+      "sha256": "d50277924e57599893d1cec3ceac6590767e75deda4001c128d75ce06f9fc057",
+      "size_bytes": 5763
+    },
+    {
+      "path": "APTF_TEST_012_NEXT_TEST_RECOMMENDATION_V0_1.md",
+      "sha256": "edfdec14bf4a81e495c3c41c371e9a95c5c1dfd7cf92aa3d1e0b478735934ebb",
+      "size_bytes": 617
+    },
+    {
+      "path": "APTF_TEST_012_ACCEPTANCE_GATES_V0_1.json",
+      "sha256": "860761775f07ff1c6476eecae04893a91dafd238232fcff734f6c127ad77f0ca",
+      "size_bytes": 2108
+    },
+    {
+      "path": "APTF_TEST_012_BASELINE_DIAGNOSIS_V0_1.json",
+      "sha256": "ddec55289e762494b53877c19941041ac07f4629c2e88a6a35e077eec7a135f4",
+      "size_bytes": 2005
+    },
+    {
+      "path": "APTF_TEST_012_CANDIDATE_SUMMARY_V0_1.json",
+      "sha256": "1cc429085577b6c762e96d36b600d2eb481734ccd56eeba35afd5f21edae3d5f",
+      "size_bytes": 1360
+    },
+    {
+      "path": "diagnostics/run_test_012_baseline_diagnosis.py",
+      "sha256": "9dbedc4f0769791395f28fc6701588bcd3610cd9ab9b79c489223471b9c6661f",
+      "size_bytes": 9255
+    },
+    {
+      "path": "diagnostics/run_test_012_candidates_optimized.py",
+      "sha256": "45f7bac0f83d33a74067dd579e400e6d5ca6b55efdfd0bb7334b35d965e3952f",
+      "size_bytes": 15059
+    },
+    {
+      "path": "diagnostics/finalize_test_012_scorecard.py",
+      "sha256": "789bb5135a088abc37315709f2e43c0a373d7c49fc0164467cf1b7973ac9a564",
+      "size_bytes": 6136
+    }
+  ],
+  "test_id": "APTF_TEST_012_ARTIFACT_HASHES_V0_1"
+}

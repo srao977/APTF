@@ -1,0 +1,29 @@
+{
+  "test_id": "APTF_TEST_009_SOURCE_AUTHORITY_V0_1",
+  "instrument": "SPY",
+  "source_rows": 101221,
+  "initializing_rows": 15,
+  "actionable_rows": 101206,
+  "source_path": "APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv",
+  "source_sha256": "db2ea7733030fc170143e00873789d12a69e8ff13e6f8ab641f11f06b7732158",
+  "upstream_test006b_sha256": "f4c4bcf3e03e37f99ff04444035915d8f28cc24dec6d16a22e32089ad83dbfd4",
+  "episode_path": "APTF_TEST_007_POSITION_EPISODES_V0_1.csv",
+  "episode_sha256": "9fc3911f66f7acfbca0d66f9f01067f1273170b19f7d735065f05823c28b1ba7",
+  "test008_trade_path": "APTF_TEST_008_TRADE_LEDGER_V0_2.csv",
+  "test008_trade_sha256": "d363a0097e5454f64dccf7fb029261ccd09e4a96e13d08fd986099bb6780c365",
+  "derivative_price_field": "close",
+  "derivative_price_authority": [
+    "D01_STAGE_2_INPUT_MAPPING_SPEC_V0_2.md: close -> price by numeric identity",
+    "aptf_runtime/src/aptf_runtime/observation.py: Observation.to_d01 sets price=float(close)",
+    "APTF_TEST_001_ROW_10_MATHEMATICAL_TRACE_V0_1.md: source close is direct D01 price mapping"
+  ],
+  "execution_open_used_for_derivatives": false,
+  "timestamp_field": "event_timestamp_utc",
+  "timestamp_semantics": "Canonical strict UTC causal ordering and actual elapsed time. Repository authority does not claim BAR_CLOSE clock role.",
+  "first_timestamp": "2023-03-30T08:00:00Z",
+  "last_timestamp": "2023-09-29T23:48:00Z",
+  "chronological_order": "PASS",
+  "duplicate_timestamps": 0,
+  "future_observations_authorized_for_primary_derivatives": 0,
+  "status": "VERIFIED"
+}

@@ -1,0 +1,11 @@
+{
+  "test_id":"APTF_TEST_013C_TEST012_AUTHORITY_V0_1",
+  "artifact_inventory":"APTF_TEST_012_ARTIFACT_HASHES_V0_1.json",
+  "artifact_count":29,
+  "candidate_freeze":"APTF_TEST_012_FP_CANDIDATE_FREEZE_V0_1.json",
+  "candidate_freeze_sha256":"3fd22ec240d3acc4995478c2046fa71e65815d3f24e69daafb0ad610dafc66bb",
+  "primary":"F4_L1_W30",
+  "baseline":"F0_W15",
+  "sensitivity":["F4_L1_W15","F4_L1_W60"],
+  "status":"FROZEN_VERIFIED"
+}

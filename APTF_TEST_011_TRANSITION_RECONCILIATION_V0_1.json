@@ -1,0 +1,30 @@
+{
+  "eligible": 90968,
+  "false_negative_rows_in_projection_file": false,
+  "false_negatives_preserved_in_this_reconciliation": true,
+  "lower": {
+    "FN": 4748,
+    "FP": 315,
+    "TN": 84938,
+    "TP": 967,
+    "false_negative_rate": 0.8307961504811898,
+    "false_positive_rate": 0.0036948846374907627,
+    "precision": 0.7542901716068643,
+    "recall": 0.16920384951881015,
+    "specificity": 0.9963051153625092
+  },
+  "projected_crossing_rows": 2692,
+  "status": "PASS",
+  "test_id": "APTF_TEST_011_TRANSITION_RECONCILIATION_V0_1",
+  "upper": {
+    "FN": 4688,
+    "FP": 381,
+    "TN": 84870,
+    "TP": 1029,
+    "false_negative_rate": 0.8200104950148679,
+    "false_positive_rate": 0.0044691557870288915,
+    "precision": 0.7297872340425532,
+    "recall": 0.17998950498513205,
+    "specificity": 0.9955308442129711
+  }
+}

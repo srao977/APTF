@@ -1,0 +1,12 @@
+{
+  "test_id": "APTF_TEST_010_TEST009V_AUTHORITY_V0_1",
+  "pretest_inventory": "APTF_TEST_010_PRETEST_HASHES_V0_1.json",
+  "files_verified": 25,
+  "volume_observations": "APTF_TEST_009V_PRICE_VOLUME_OBSERVATIONS_V0_1.csv",
+  "V_RAW_field": "V_RAW",
+  "V_N_authority": "ROLLING_MEDIAN_RATIO_15",
+  "V1_V2_authority": "causal trailing quadratic window 3",
+  "V1_V2_role": "observer channels; weak primary-state candidates",
+  "future_observations_in_frozen_volume": 0,
+  "status": "FROZEN_VERIFIED"
+}

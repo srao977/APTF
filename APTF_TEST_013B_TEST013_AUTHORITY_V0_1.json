@@ -1,0 +1,10 @@
+{
+  "test_id":"APTF_TEST_013B_TEST013_AUTHORITY_V0_1",
+  "artifact_inventory":"APTF_TEST_013_ARTIFACT_HASHES_V0_1.json",
+  "artifact_count":16,
+  "test013_status":"VALIDATION_BLOCKED",
+  "test013_scored_projection_rows":0,
+  "test013_model_changes":0,
+  "test013_retuning":false,
+  "status":"FROZEN_VERIFIED"
+}

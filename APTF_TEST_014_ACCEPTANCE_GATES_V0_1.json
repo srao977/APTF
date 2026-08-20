@@ -1,0 +1,534 @@
+{
+  "acceptance": "130/130 PASS",
+  "classification": "SPY_P_ENGINE_EMISSION_CONDITIONAL",
+  "execution_activated": false,
+  "gates": {
+    "G001": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G002": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G003": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G004": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G005": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G006": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G007": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G008": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G009": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G010": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G011": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G012": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G013": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G014": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G015": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G016": {
+      "category": "AUTHORITY",
+      "status": "PASS"
+    },
+    "G017": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G018": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G019": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G020": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G021": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G022": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G023": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G024": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G025": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G026": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G027": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G028": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G029": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G030": {
+      "category": "PRICE_ENGINE",
+      "status": "PASS"
+    },
+    "G031": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G032": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G033": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G034": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G035": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G036": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G037": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G038": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G039": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G040": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G041": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G042": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G043": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G044": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G045": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G046": {
+      "category": "EMISSION",
+      "status": "PASS"
+    },
+    "G047": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G048": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G049": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G050": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G051": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G052": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G053": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G054": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G055": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G056": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G057": {
+      "category": "TRAJECTORY",
+      "status": "PASS"
+    },
+    "G058": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G059": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G060": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G061": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G062": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G063": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G064": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G065": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G066": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G067": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G068": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G069": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G070": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G071": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G072": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G073": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G074": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G075": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G076": {
+      "category": "VALIDATION",
+      "status": "PASS"
+    },
+    "G077": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G078": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G079": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G080": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G081": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G082": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G083": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G084": {
+      "category": "DOMAIN_CONFIDENCE",
+      "status": "PASS"
+    },
+    "G085": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G086": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G087": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G088": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G089": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G090": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G091": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G092": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G093": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G094": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G095": {
+      "category": "REALTIME_FOUNDATION",
+      "status": "PASS"
+    },
+    "G096": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G097": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G098": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G099": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G100": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G101": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G102": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G103": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G104": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G105": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G106": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G107": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G108": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G109": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G110": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G111": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G112": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G113": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G114": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G115": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G116": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G117": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G118": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G119": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G120": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G121": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G122": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G123": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G124": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G125": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G126": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G127": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G128": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G129": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G130": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    }
+  },
+  "next_test_executed": false,
+  "passed": 130,
+  "pnl_used": false,
+  "policy_sha256": "cae56998bb061cb477b01e9f44b5e47358185841e79d01fd03e5e8afc99a1e7a",
+  "required": 130,
+  "status": "PASS",
+  "test_id": "APTF_TEST_014_SPY_P_ENGINE_COCKPIT_EMISSION_V0_1"
+}

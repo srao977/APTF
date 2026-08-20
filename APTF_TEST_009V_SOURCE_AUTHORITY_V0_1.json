@@ -1,0 +1,23 @@
+{
+  "test_id": "APTF_TEST_009V_SOURCE_AUTHORITY_V0_1",
+  "source_path": "APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv",
+  "source_sha256": "db2ea7733030fc170143e00873789d12a69e8ff13e6f8ab641f11f06b7732158",
+  "rows": 101221,
+  "instrument": "SPY",
+  "price_column": "close",
+  "volume_column": "volume",
+  "volume_source_type": "numeric source string parsed losslessly to float for analysis",
+  "volume_units": "provider-reported volume units; repository does not establish a more specific unit",
+  "timestamp_column": "event_timestamp_utc",
+  "price_volume_alignment": "same immutable source row and timestamp",
+  "missing_policy": "Missing required Volume is unavailable, not zero; no fabrication, interpolation, or forward fill.",
+  "zero_policy": "Exact source zero is preserved as observed activity. Ratio normalization yields zero when baseline>0; log-relative is unavailable for zero numerator.",
+  "extreme_policy": "Preserve every data_valid finite Volume regardless of magnitude; no clipping or winsorization.",
+  "session_coordinate": "session_type plus minute_of_session",
+  "time_of_day_support": {
+    "rows_with_minute": 101221,
+    "unique_session_minute_groups": 392,
+    "premarket_and_afterhours_limitation": "Extended sessions use coarse minute semantics; time-of-day is descriptive only and not a normalization candidate."
+  },
+  "status": "VERIFIED"
+}

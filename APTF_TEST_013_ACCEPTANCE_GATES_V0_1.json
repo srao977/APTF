@@ -1,0 +1,14 @@
+{
+  "test_id":"APTF_TEST_013_INDEPENDENT_CHRONOLOGICAL_VALIDATION_V0_1",
+  "acceptance":"NOT_EXECUTED_VALIDATION_BLOCKED",
+  "required":145,
+  "passed":0,
+  "failed":1,
+  "not_executed":144,
+  "failed_gate":{
+    "gate":"HOLDOUT_CAUSAL_COVER",
+    "reason":"W60=0, sensitivity intersection=0, W30=11 on one date"
+  },
+  "not_executed_scope":"All projection, score, tail, directional, perturbation, domain, drift, promotion, and 145/145 completion gates",
+  "status":"VALIDATION_BLOCKED"
+}

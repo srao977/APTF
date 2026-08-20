@@ -1,0 +1,171 @@
+{
+  "captured_at_utc": "2026-08-19T22:29:15.175302Z",
+  "files": [
+    {
+      "path": "APTF_TEST_013C_ACCEPTANCE_GATES_V0_1.json",
+      "sha256": "2fedd3e21b56f9c8008406b0e457dd880a2dcef5d8feb4a3e04a6edb218679d2",
+      "size_bytes": 15393
+    },
+    {
+      "path": "APTF_TEST_013C_ARCHITECTURE_INTERPRETATION_V0_1.md",
+      "sha256": "7f852f0eff4a8b57ac0ee9259d418fb3d9ad6ae3a2443e8e39192c6fb51b06d2",
+      "size_bytes": 761
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_CAUSALITY_AUDIT_V0_1.csv",
+      "sha256": "2228484d5a2c949227223f40b767855e682dfd23c500b39ac11244765c0c2625",
+      "size_bytes": 10405110
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_F4_COEFFICIENT_STABILITY_V0_1.csv",
+      "sha256": "66d49af84e182834e8cc9368b97756e536f014d87b1446bcf065446e6cb3cf44",
+      "size_bytes": 32043222
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_JACOBIAN_STABILITY_V0_1.csv",
+      "sha256": "a5ebbe68258b33d6cefaa2fb99edaab1a77938b2eafb35cdea86f3e519eff298",
+      "size_bytes": 35403376
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_LOCAL_DOMAIN_VALIDATION_V0_1.csv",
+      "sha256": "afd08acb0eba193b93205fb5075a5efcb2590f8553909d489f2b7e014b447f4f",
+      "size_bytes": 12111570
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_MOVEMENT_BAND_SCORECARD_V0_1.csv",
+      "sha256": "94cc1fe5d7b8974077b2cafca4fadae22dcab7256f3cef3adf2b3733e2072e4a",
+      "size_bytes": 1551
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_PERTURBATION_STABILITY_V0_1.csv",
+      "sha256": "854e24c2b799609b1832ddd9e6fbcb97965d92ea1989a4360e82bf47e0679fde",
+      "size_bytes": 143159
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_PRIMARY_PROJECTIONS_V0_1.csv",
+      "sha256": "e8c22616a944cb323e6eca78b85b6305c38b9c1484c028195021b2a5def0334b",
+      "size_bytes": 144400983
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_PRIMARY_SCORECARD_V0_1.csv",
+      "sha256": "111794c3558be170aeb5ab7cdde1686c7614c7b8c494520edd06bfa4259223cc",
+      "size_bytes": 2662
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_SOURCE_AUTHORITY_V0_1.json",
+      "sha256": "71f2cd410bfed3290bb88755901624dc8e83173e3c86132338c0427343eea479",
+      "size_bytes": 1084
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_STATE_CONSTRUCTION_SUMMARY_V0_1.json",
+      "sha256": "b57429d6c6dfae96d3c6b5b776bc7255b95a492abd352074a5a89638b3f669a9",
+      "size_bytes": 572
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_TRAJECTORY_CHARACTERISTICS_V0_1.csv",
+      "sha256": "af805b385b025be00f7b1e8d8b38ab5fd231bfdf9ca6630ee203813fb2127d1e",
+      "size_bytes": 2968
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_TRANSITION_VALIDATION_V0_1.json",
+      "sha256": "f33cbb92a36ab353a2679d87ed0fbe9a0239cc32f06ade773080b93c608fbfb8",
+      "size_bytes": 1050
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_WINDOW_SENSITIVITY_SCORECARD_V0_1.csv",
+      "sha256": "28dc8eb878875fd4cb6c82cfa6bcf160589d1d5ed571235f52a851ccfe25b985",
+      "size_bytes": 3573
+    },
+    {
+      "path": "APTF_TEST_013C_DIA_ZERO_MOVEMENT_DIAGNOSTIC_V0_1.csv",
+      "sha256": "f676d5f7990dc5eb299927d69309c25cbf80a0e251776d0d6f6c99c60f7ccb01",
+      "size_bytes": 1189
+    },
+    {
+      "path": "APTF_TEST_013C_EXTERNAL_REPLICATION_DECISION_V0_1.md",
+      "sha256": "e248b6f438b90a60f8312d3b60e2d201bdfb906f033c3487c2777a2ff26c605f",
+      "size_bytes": 1838
+    },
+    {
+      "path": "APTF_TEST_013C_NEXT_TEST_RECOMMENDATION_V0_1.md",
+      "sha256": "c04b6baa5d25915ab7e99459ece87b066a902ead89787735832ed037c7c61a18",
+      "size_bytes": 650
+    },
+    {
+      "path": "APTF_TEST_013C_PLAN_V0_1.md",
+      "sha256": "90b997a3d11bac5f37917fc1d2b77222cc56efeac57c07ac660cfdb3d43258e4",
+      "size_bytes": 648
+    },
+    {
+      "path": "APTF_TEST_013C_PRETEST_HASHES_V0_1.json",
+      "sha256": "07824b951937d1fdbf5a1995ef36546cbee1590eaeb82d1debe21b5f65c01eaa",
+      "size_bytes": 37573
+    },
+    {
+      "path": "APTF_TEST_013C_PRICE_PRECISION_AUDIT_V0_1.csv",
+      "sha256": "af805b385b025be00f7b1e8d8b38ab5fd231bfdf9ca6630ee203813fb2127d1e",
+      "size_bytes": 2968
+    },
+    {
+      "path": "APTF_TEST_013C_PRIOR_USE_AUDIT_V0_1.json",
+      "sha256": "f0e0db2e4c450afce3123b7035224cc2344bde276cf31cf7ee3333fa900ddd21",
+      "size_bytes": 922
+    },
+    {
+      "path": "APTF_TEST_013C_RESULT_V0_1.md",
+      "sha256": "9fc40067375249f338013678d5abb8b4901965851615edce718d27409edc80b2",
+      "size_bytes": 6137
+    },
+    {
+      "path": "APTF_TEST_013C_RUNTIME_AUTHORITY_V0_1.json",
+      "sha256": "4d83b5021ac39755baed36b07f4a19de197b05cb92f77f3e0d19190ab87e0dc3",
+      "size_bytes": 427
+    },
+    {
+      "path": "APTF_TEST_013C_RUNTIME_IMMUTABILITY_V0_1.json",
+      "sha256": "473b0e1f67e5001f94c9bafffcc048fc2078e49ca63986cc89c2f21ed1de8621",
+      "size_bytes": 66144
+    },
+    {
+      "path": "APTF_TEST_013C_SOURCE_AUTHORITY_V0_1.json",
+      "sha256": "c5684eabe7c341b3e3dae9b5ff8091a99878d80329cfac2cb25aee0cfc712fbd",
+      "size_bytes": 613
+    },
+    {
+      "path": "APTF_TEST_013C_SPY_QQQ_DIA_GENERALIZATION_V0_1.csv",
+      "sha256": "044eddc4074557ed75899b53d431a036b9d0154f0af2111a9a92845fd5172f05",
+      "size_bytes": 2687
+    },
+    {
+      "path": "APTF_TEST_013C_SUMMARY_V0_1.json",
+      "sha256": "cb8ecb49c3b1de248bd7c0ee6f5b3a100871b6edd1ec20587d17cb9f7a5ec3e1",
+      "size_bytes": 2334
+    },
+    {
+      "path": "APTF_TEST_013C_TEST012_AUTHORITY_V0_1.json",
+      "sha256": "015698d14ddee626a472f4f9b376797b41b75569dc31ce6c4897caf04e4c3cbb",
+      "size_bytes": 439
+    },
+    {
+      "path": "APTF_TEST_013C_TEST013B_AUTHORITY_V0_1.json",
+      "sha256": "8a158d2e67299fd7d9cb49c3a05bb49147bf6fff503b017649fec0cb7ac3681d",
+      "size_bytes": 388
+    },
+    {
+      "path": "APTF_TEST_013C_VALIDATION_FREEZE_V0_1.json",
+      "sha256": "a5eb9a9867cc2b08ec9670a3609df79f033bb10bda2df025be110d6eea42c6ba",
+      "size_bytes": 2360
+    },
+    {
+      "path": "APTF_TEST_013C_VALIDATION_METHOD_V0_1.md",
+      "sha256": "34c933a70a5e534a7e68007dcbe21ef648b2f5182567e6ba419e0c13418aef34",
+      "size_bytes": 1709
+    },
+    {
+      "path": "diagnostics/run_test_013c_dia_replication.py",
+      "sha256": "921674d167b995d0321f693b8f0ecc8a4b04bbc31eec4d24e289dc2220c8eb78",
+      "size_bytes": 16648
+    }
+  ],
+  "test_id": "APTF_TEST_013C_ARTIFACT_HASHES_V0_1"
+}

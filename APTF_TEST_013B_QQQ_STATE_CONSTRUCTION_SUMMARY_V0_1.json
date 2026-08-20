@@ -1,0 +1,22 @@
+{
+  "F0_eligible_rows": 134909,
+  "F4_W15_eligible_rows": 134909,
+  "F4_W30_eligible_rows": 118628,
+  "F4_W60_eligible_rows": 97712,
+  "complete_state_rows": 210468,
+  "contiguous_jp_targets": 193463,
+  "derivative_fit_failures": 0,
+  "eligible_contiguous_projection_origins": 193463,
+  "initialization_rows": 14,
+  "primary_common_cover": 118628,
+  "primary_sessions_represented": 251,
+  "sensitivity_common_cover": 97712,
+  "sensitivity_sessions_represented": 251,
+  "session_type_rows": {
+    "AFTERHOURS": 44304,
+    "PREMARKET": 68475,
+    "REGULAR": 97703
+  },
+  "test_id": "APTF_TEST_013B_QQQ_STATE_CONSTRUCTION_SUMMARY_V0_1",
+  "total_rows": 210482
+}

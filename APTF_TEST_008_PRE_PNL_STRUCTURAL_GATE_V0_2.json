@@ -1,0 +1,42 @@
+{
+  "actionable_expected": 101206,
+  "actionable_replayed": 101206,
+  "episode_ids_reconciled": true,
+  "filled_execution_intents": {
+    "BUY": 2051,
+    "SELL": 2051
+  },
+  "generated_execution_intents": {
+    "BUY": 2051,
+    "SELL": 2051
+  },
+  "initializing_excluded": 15,
+  "missing_open_executions": [],
+  "next_observation_open_available_for_all_entries": true,
+  "next_observation_open_available_for_all_exits": true,
+  "no_next_observation_executions": [],
+  "pending_execution_collisions": [],
+  "pnl_calculated": false,
+  "position_replay_matches": 101206,
+  "position_replay_violations": [],
+  "reserve_emitter_reruns": 0,
+  "runtime_core": {
+    "expected_files": 22,
+    "matched_files": 22,
+    "mismatches": [],
+    "status": "PASS"
+  },
+  "same_observation_execution_used": false,
+  "source_rows": 101221,
+  "status": "PASS",
+  "structural_counts": {
+    "EPISODE_CLOSE": 2051,
+    "EPISODE_HOLD": 39787,
+    "EPISODE_OPEN": 2051,
+    "FLAT_HOLD": 37391,
+    "REPEATED_BUY_WHILE_LONG": 12198,
+    "UNMATCHED_SELL_WHILE_FLAT": 7728
+  },
+  "test007_episode_count": 2051,
+  "test_id": "APTF_TEST_008_PRE_PNL_STRUCTURAL_GATE_V0_2"
+}

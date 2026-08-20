@@ -1,0 +1,14 @@
+{
+  "P_model_copied": false,
+  "RK45": false,
+  "V": "V_N = V_RAW / median(last 15 V_RAW including current)",
+  "V1": "causal 3-row quadratic derivative at current observation",
+  "V2": "causal 3-row quadratic second derivative at current observation",
+  "existing_runtime": "independent discrete observer authority; no cockpit runtime before Test 014C",
+  "normalization": "ROLLING_MEDIAN_RATIO_15",
+  "price_inputs": false,
+  "source_field": "volume / V_RAW",
+  "time_of_day_evaluated": true,
+  "time_of_day_handling": "Test-009V rejected sparse time-of-day normalization; causal local median retained",
+  "trajectory_model": "VOLUME_POINT discrete G_V"
+}

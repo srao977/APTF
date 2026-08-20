@@ -1,0 +1,23 @@
+{
+  "additional_state_fields": [
+    "previous_motion_state",
+    "previous_color",
+    "opposing_direction",
+    "opposing_count",
+    "candidate_direction",
+    "candidate_age"
+  ],
+  "deterministic_replay": true,
+  "latency": {
+    "max": 183.1,
+    "median": 3.3,
+    "q95": 4.5,
+    "q99": 7.7,
+    "unit": "microseconds"
+  },
+  "live_one_row_at_a_time": true,
+  "policy_id": "P_EMISSION_V0_2",
+  "replay_sha256": "298ce294eed3aa08317406d7a5e4d58cdb6e1820a1e7c13114ce82e7f14f2633",
+  "state_bounded": true,
+  "unbounded_history_required": false
+}

@@ -1,0 +1,21 @@
+{
+  "actionable_compared": 101206,
+  "actionable_expected": 101206,
+  "classification_matches": 101206,
+  "oracle": "APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv",
+  "oracle_sha256": "db2ea7733030fc170143e00873789d12a69e8ff13e6f8ab641f11f06b7732158",
+  "reserve_emitter_rerun": false,
+  "state_after_matches": 101206,
+  "status": "PASS",
+  "structural_counts": {
+    "EPISODE_CLOSE": 2051,
+    "EPISODE_HOLD": 39787,
+    "EPISODE_OPEN": 2051,
+    "FLAT_HOLD": 37391,
+    "REPEATED_BUY_WHILE_LONG": 12198,
+    "UNMATCHED_SELL_WHILE_FLAT": 7728
+  },
+  "test_id": "APTF_TEST_007A_POSITION_EQUIVALENCE_V0_1",
+  "truth_table_expected": 6,
+  "truth_table_matches": 6
+}

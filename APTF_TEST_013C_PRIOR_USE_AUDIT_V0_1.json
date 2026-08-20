@@ -1,0 +1,22 @@
+{
+  "test_id":"APTF_TEST_013C_PRIOR_USE_AUDIT_V0_1",
+  "searched_terms":["DIA_1min_firstratedata","DIA","3b76423cc064f553ba2d7ad3407687f1ea61f0de8ad242f5347410a9f6be930f"],
+  "repository_exact_filename_references_before_test013c":0,
+  "repository_exact_hash_references_before_test013c":0,
+  "git_history_filename_references":0,
+  "git_history_hash_references":0,
+  "predesignation_references":["APTF_TEST_013B_NEXT_TEST_RECOMMENDATION_V0_1.md","APTF_TEST_013B_RESULT_V0_1.md"],
+  "predesignation_used_dia_values":false,
+  "used_in_test009":false,
+  "used_in_test009v":false,
+  "used_in_test010":false,
+  "used_in_test011":false,
+  "used_in_test012":false,
+  "used_in_test013":false,
+  "used_in_test013b":false,
+  "used_in_f4_selection":false,
+  "used_in_lambda_selection":false,
+  "used_in_window_selection":false,
+  "used_in_price_engine_tuning":false,
+  "external_replication_status":"ESTABLISHED"
+}

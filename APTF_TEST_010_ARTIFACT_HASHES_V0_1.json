@@ -1,0 +1,141 @@
+{
+  "captured_at_utc": "2026-08-19T19:28:12.903552Z",
+  "files": [
+    {
+      "path": "APTF_TEST_010_PLAN_V0_1.md",
+      "sha256": "ec8799284382882f8f6427c367a700c403a34fbe51ca1592755bed8b994e4bfc",
+      "size_bytes": 1761
+    },
+    {
+      "path": "APTF_TEST_010_SOURCE_AUTHORITY_V0_1.json",
+      "sha256": "fb12c7a4eafbe10610b8b4f17e76692778e5c241839b7e0b4c38ac85a8b4dc2a",
+      "size_bytes": 1100
+    },
+    {
+      "path": "APTF_TEST_010_TEST009_AUTHORITY_V0_1.json",
+      "sha256": "0171a456e13f177cef885514263e26f6a6254bb93747ae5c88fc08e4266b141a",
+      "size_bytes": 475
+    },
+    {
+      "path": "APTF_TEST_010_TEST009V_AUTHORITY_V0_1.json",
+      "sha256": "d31ce58805a2996c0c6ff9fc5dde7316279dcee2878d79226d6b72265688377b",
+      "size_bytes": 509
+    },
+    {
+      "path": "APTF_TEST_010_RUNTIME_AUTHORITY_V0_1.json",
+      "sha256": "9f0d280a3f556e1ce6ce74707820bc0d0d047dd9f1b502fb008dc77ce6ceca3b",
+      "size_bytes": 484
+    },
+    {
+      "path": "APTF_TEST_010_PRICE_DYNAMICS_METHOD_V0_1.md",
+      "sha256": "a0ed5e0c66646a98719e27377692d01df7c6fabc33fd44fc265c95f6e1d47c73",
+      "size_bytes": 2338
+    },
+    {
+      "path": "APTF_TEST_010_PRICE_LOCAL_DYNAMICS_COMPARISON_V0_1.csv",
+      "sha256": "1800818c7d16dbbce4cbef80a8fefc771268452cfc8ba55fe7b12cf70183c0a8",
+      "size_bytes": 3323
+    },
+    {
+      "path": "APTF_TEST_010_PRICE_ENGINE_EMISSIONS_V0_1.csv",
+      "sha256": "4e8bd498eb7bad4e2f2c1f2dc0d01936d70afaf199f62547ade6f54db7577d34",
+      "size_bytes": 79171381
+    },
+    {
+      "path": "APTF_TEST_010_VOLUME_INTERVAL_METHOD_V0_1.md",
+      "sha256": "e991d7235aee9bca1ca7b66e99d4699e7b129cf2515d4c638b8c281c762c8a98",
+      "size_bytes": 1979
+    },
+    {
+      "path": "APTF_TEST_010_VOLUME_INTERVAL_STATES_V0_1.csv",
+      "sha256": "1de5880c8128da0dd18c2e0f3fe4e444e6d4f9f26ddc21077c8da3e68b1311f7",
+      "size_bytes": 115001532
+    },
+    {
+      "path": "APTF_TEST_010_VOLUME_OBSERVER_EVENTS_V0_1.csv",
+      "sha256": "d3a78ee7ee3aa4186b53294f4b467ea7c92a7cd5299a790af994434baffd1e7f",
+      "size_bytes": 40226904
+    },
+    {
+      "path": "APTF_TEST_010_VOLUME_ENGINE_MODEL_COMPARISON_V0_1.csv",
+      "sha256": "332d409ec2b461c3ceaf34e347c9f793b4d9644000593e63f9001777bb584b03",
+      "size_bytes": 2555
+    },
+    {
+      "path": "APTF_TEST_010_VOLUME_ENGINE_EMISSIONS_V0_1.csv",
+      "sha256": "0d9134f3a1996d83dd43257264ddd6a43b5e02215b61c94ec034c3e1ee152d3c",
+      "size_bytes": 42812387
+    },
+    {
+      "path": "APTF_TEST_010_PRICE_VOLUME_LEAD_LAG_V0_1.csv",
+      "sha256": "d7a41e478040c7865baa1546ec70c3e99b66d766581610045797044ab8ef0cdb",
+      "size_bytes": 12832781
+    },
+    {
+      "path": "APTF_TEST_010_CONTROL_OBSERVATIONS_V0_1.csv",
+      "sha256": "d7362e03c9a87e4c60547479e835e859059826f3081d829a5a9476c5fbbf469f",
+      "size_bytes": 34696619
+    },
+    {
+      "path": "APTF_TEST_010_SESSION_BOUNDARY_ANALYSIS_V0_1.csv",
+      "sha256": "98fd952b1929b895185af48208333424325f5380c4141ffef22adadcb8c444d6",
+      "size_bytes": 50647
+    },
+    {
+      "path": "APTF_TEST_010_TEST011_RK_INTERFACE_V0_1.md",
+      "sha256": "6d3f35fa27387ce02ea60d4584d9d263c7a44f57c455edb5a2146c7f8c58be5d",
+      "size_bytes": 3714
+    },
+    {
+      "path": "APTF_TEST_010_COCKPIT_CONTROL_ARCHITECTURE_V0_1.md",
+      "sha256": "173b2a43febfedf0a2e2f60afda0fa7ddee91a935544f59530dff45830ccb468",
+      "size_bytes": 2230
+    },
+    {
+      "path": "APTF_TEST_010_RUNTIME_IMMUTABILITY_V0_1.json",
+      "sha256": "3586e7c063117d312a6ab286479b407ca7685610b2ce86c8c1952be1067c70f7",
+      "size_bytes": 28590
+    },
+    {
+      "path": "APTF_TEST_010_SUMMARY_V0_1.json",
+      "sha256": "f19862a346fe7d154f41883bc0125f50c69a021fbadaf99d95bc4723c4d8ab4e",
+      "size_bytes": 6780
+    },
+    {
+      "path": "APTF_TEST_010_RESULT_V0_1.md",
+      "sha256": "6e9a46e2cc38bf0c0f82cc6bd0ffae22d2e1269b325a8e5fcbbd00777325c3cc",
+      "size_bytes": 7449
+    },
+    {
+      "path": "APTF_TEST_010_ACCEPTANCE_GATES_V0_1.json",
+      "sha256": "c295c89e45bea43196648567b487777612aac770287e654c45fefb90227f2b30",
+      "size_bytes": 2029
+    },
+    {
+      "path": "APTF_TEST_010_PRICE_ENGINE_SELECTION_V0_1.json",
+      "sha256": "5004c3a41ef1ffb31695ddc8c73923ba4cc0c2e3a345f9c7903c8ff34e1826c7",
+      "size_bytes": 1695
+    },
+    {
+      "path": "APTF_TEST_010_VOLUME_ENGINE_SELECTION_V0_1.json",
+      "sha256": "94f139db12119701899178b9d5325b95e0058df4abee763156539735c4bc35a1",
+      "size_bytes": 1510
+    },
+    {
+      "path": "diagnostics/run_test_010_price_engine.py",
+      "sha256": "01ffc74a53c782482fb700caf10ba58b903e4e47b6ea9a097227056d7bac7602",
+      "size_bytes": 16287
+    },
+    {
+      "path": "diagnostics/run_test_010_volume_engine.py",
+      "sha256": "9ad1195c8a4f021d07f67d5536737e9cf6b170fa3a0b9cd83d41f97160a2e27b",
+      "size_bytes": 17975
+    },
+    {
+      "path": "diagnostics/run_test_010_control_analysis.py",
+      "sha256": "3a6af3db2eeed4faf02e3d0bb8fd7029dd0d5c407e9c5b9fd6da1bcabee9f956",
+      "size_bytes": 14634
+    }
+  ],
+  "test_id": "APTF_TEST_010_ARTIFACT_HASHES_V0_1"
+}

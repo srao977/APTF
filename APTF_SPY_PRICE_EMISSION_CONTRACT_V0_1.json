@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"APTF_SPY_PRICE_EMISSION_CONTRACT_V0_1",
+  "title":"PriceEmission",
+  "type":"object",
+  "required":["symbol","timestamp","engine","p","p1","p2","projected_p","projected_p1","projected_p2","trajectory_phase","turning_tendency","domain_state","stability_state","confidence_state","raw_color","color","reason_codes","rk_success"],
+  "properties":{
+    "symbol":{"const":"SPY"},"timestamp":{"type":"string"},"engine":{"const":"P"},
+    "p":{"type":"number"},"p1":{"type":"number"},"p2":{"type":"number"},
+    "projected_p":{"type":"number"},"projected_p1":{"type":"number"},"projected_p2":{"type":"number"},
+    "trajectory_phase":{"enum":["UP_ACCELERATING","UP_DECELERATING","DOWN_ACCELERATING","DOWN_DECELERATING","NEAR_STATIONARY","TURNING_UP","TURNING_DOWN","UNCERTAIN"]},
+    "turning_tendency":{"type":"string"},"domain_state":{"enum":["IN_DOMAIN","OUT_OF_DOMAIN","INVALID"]},
+    "stability_state":{"enum":["STABLE","LOCALLY_EXPANSIVE","INVALID"]},
+    "confidence_state":{"enum":["HIGH","MEDIUM","LOW","INVALID"]},
+    "raw_color":{"enum":["GREEN","AMBER","RED","INVALID"]},"color":{"enum":["GREEN","AMBER","RED","INVALID"]},
+    "reason_codes":{"type":"array","items":{"type":"string"}},"rk_success":{"type":"boolean"}
+  },
+  "semantics":"Color is a human compression of numerical Price trajectory state, not BUY/HOLD/SELL."
+}

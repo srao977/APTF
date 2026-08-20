@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"APTF_SPY_EXECUTION_POLICY_SCHEMA_V0_1",
+  "title":"Future SPY Execution Policy",
+  "type":"object",
+  "required":["policy_id","rules"],
+  "properties":{
+    "policy_id":{"type":"string"},
+    "rules":{"type":"array","items":{"type":"object","required":["price_engine","volume_engine","position","action"],"properties":{"price_engine":{"enum":["GREEN","AMBER","RED","INVALID"]},"volume_engine":{"enum":["GREEN","AMBER","RED","INVALID"]},"position":{"enum":["FLAT","LONG"]},"action":{"enum":["BUY","HOLD","SELL"]}}}}
+  },
+  "active":false,
+  "test014_rules_defined":false,
+  "position_semantics":{"FLAT+HOLD":"FLAT","LONG+HOLD":"LONG","FLAT+BUY":"LONG","LONG+BUY":"LONG","LONG+SELL":"FLAT","FLAT+SELL":"FLAT"},
+  "short_allowed":false
+}

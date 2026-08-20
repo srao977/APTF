@@ -1,0 +1,23 @@
+{
+  "buy_executions": 2051,
+  "completed_trades": 2051,
+  "exit_notional_minus_entry_notional": "-2303.7300",
+  "final_cumulative_gross_pnl": "-2303.7300",
+  "final_simulated_quantity": 0,
+  "next_observation_open_used": true,
+  "no_next_observation_executions": 0,
+  "pending_execution_collisions": 0,
+  "quantity_maximum": 100,
+  "quantity_minimum": 0,
+  "same_observation_execution_used": false,
+  "sell_executions": 2051,
+  "shares_bought": 205100,
+  "shares_sold": 205100,
+  "short_executions": 0,
+  "status": "PASS",
+  "sum_trade_gross_pnl": "-2303.7300",
+  "test007_episode_count": 2051,
+  "test008_trade_rows": 2051,
+  "test_id": "APTF_TEST_008_EXECUTION_RECONCILIATION_V0_2",
+  "three_method_exact_match": true
+}

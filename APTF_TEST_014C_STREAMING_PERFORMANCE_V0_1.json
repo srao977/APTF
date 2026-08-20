@@ -1,0 +1,18 @@
+{
+  "V_replay_sha256": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+  "bounded_interval_state": [
+    "current color",
+    "interval start",
+    "current age",
+    "last timestamp",
+    "current session"
+  ],
+  "deterministic": true,
+  "intervalizer_Q95": 2.8,
+  "intervalizer_Q99": 3.2,
+  "intervalizer_max": 159418.4,
+  "intervalizer_median": 1.4,
+  "unbounded_history_required": false,
+  "unit": "microseconds",
+  "volume_interpreter_median": 3.5
+}

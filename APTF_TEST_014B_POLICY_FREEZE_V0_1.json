@@ -1,0 +1,9 @@
+{
+  "baseline_reproduced": true,
+  "candidate_count_excluding_control": 5,
+  "policy_frozen_before_validation": true,
+  "policy_path": "APTF_TEST_014B_SPY_P_EMISSION_POLICY_V0_2.json",
+  "policy_sha256": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+  "selected_candidate": "TRANSITION_EVIDENCE_P1",
+  "validation_read_during_selection": false
+}

@@ -1,0 +1,61 @@
+{
+  "test_id": "APTF_TEST_007A_HISTORICAL_IMMUTABILITY_V0_1",
+  "preextraction_inventory": "APTF_TEST_007A_PREEXTRACTION_AUTHORITY_HASHES_V0_1.json",
+  "authorities": {
+    "Test005R": {
+      "count": 16,
+      "pre_inventory_sha256": "efa31bf14f4e12f4080f4003ad73fa7edb8a284389c73e1efa02781b6a11c44d",
+      "post_inventory_sha256": "efa31bf14f4e12f4080f4003ad73fa7edb8a284389c73e1efa02781b6a11c44d",
+      "unchanged": true
+    },
+    "Test006A": {
+      "count": 21,
+      "pre_inventory_sha256": "ccd04b4b2870b7b9a647e1d93ed886fd981944a9912930b8eaae5e3841548c86",
+      "post_inventory_sha256": "ccd04b4b2870b7b9a647e1d93ed886fd981944a9912930b8eaae5e3841548c86",
+      "unchanged": true
+    },
+    "Test006B": {
+      "count": 20,
+      "pre_inventory_sha256": "638d4cc54f6249990bf7fe27d54e8b4db2fb9471bfa8e4e71a0334d240b8539b",
+      "post_inventory_sha256": "638d4cc54f6249990bf7fe27d54e8b4db2fb9471bfa8e4e71a0334d240b8539b",
+      "unchanged": true,
+      "reserve_emitter_rerun": false
+    },
+    "Test007": {
+      "count": 17,
+      "pre_inventory_sha256": "ce70c151a3272d5f5cecba2cde92b0fe5e6b466dfce82bdd2b30e9568f8b8996",
+      "post_inventory_sha256": "ce70c151a3272d5f5cecba2cde92b0fe5e6b466dfce82bdd2b30e9568f8b8996",
+      "unchanged": true
+    },
+    "frozen_emitter_implementation": {
+      "path": "experimental_adaptive_emitter/emitter.py",
+      "pre_sha256": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "post_sha256": "e8b736dfba03b454633831585222d5270c18b7f8eae510b34ee19dc1f5c58410",
+      "unchanged": true
+    },
+    "adaptive_emitter_freeze_manifest": {
+      "pre_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+      "post_sha256": "745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+      "unchanged": true
+    },
+    "D04_freeze_manifest": {
+      "pre_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+      "post_sha256": "a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79",
+      "unchanged": true
+    }
+  },
+  "temporal_v0_2_note": {
+    "test007a_modified_frozen_temporal_files": false,
+    "frozen_metadata_diff": "NONE",
+    "preexisting_manifest_discrepancy": {
+      "path": "aptf_runtime/src/aptf_runtime/single_observation_pipeline.py",
+      "manifest_sha256": "175bedade54375319f06f3a4021488b3de52e29b544aeefab9510ac702085b21",
+      "committed_LF_sha256": "d3b3c00c0d58268bd2c6945309756d14b9ff6ebd635b4880c3bfec9cde926ee5",
+      "working_tree_is_committed_content_after_line_ending_normalization": true,
+      "git_diff": "NONE",
+      "classification": "PREEXISTING_HISTORICAL_MANIFEST_DISCREPANCY_NOT_CAUSED_OR_REPAIRED_BY_TEST007A"
+    }
+  },
+  "all_test007a_acceptance_authorities_unchanged": true,
+  "status": "PASS"
+}

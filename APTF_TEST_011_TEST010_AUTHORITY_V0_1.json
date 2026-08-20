@@ -1,0 +1,18 @@
+{
+  "test_id": "APTF_TEST_011_TEST010_AUTHORITY_V0_1",
+  "pretest_inventory": "APTF_TEST_011_PRETEST_HASHES_V0_1.json",
+  "test010_files_verified": 27,
+  "price_emissions": "APTF_TEST_010_PRICE_ENGINE_EMISSIONS_V0_1.csv",
+  "price_emission_sha256": "4e8bd498eb7bad4e2f2c1f2dc0d01936d70afaf199f62547ade6f54db7577d34",
+  "price_model": "PRICE_AFFINE_TIME_W15",
+  "price_state": ["P", "P1", "P2"],
+  "price_F": ["P1", "P2", "PRICE_AFFINE_TIME_W15(P,P1,P2,t_local)"],
+  "price_horizon_minutes": 1.0,
+  "volume_emissions": "APTF_TEST_010_VOLUME_ENGINE_EMISSIONS_V0_1.csv",
+  "volume_model": "VOLUME_POINT",
+  "volume_evolution": "G_V_DISCRETE_STATE_UPDATE",
+  "volume_RK_allowed": false,
+  "session_authority": "APTF_TEST_010_SESSION_BOUNDARY_ANALYSIS_V0_1.csv",
+  "interface": "APTF_TEST_010_TEST011_RK_INTERFACE_V0_1.md",
+  "status": "FROZEN_VERIFIED"
+}

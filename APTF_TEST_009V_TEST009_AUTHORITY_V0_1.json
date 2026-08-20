@@ -1,0 +1,20 @@
+{
+  "test_id": "APTF_TEST_009V_TEST009_AUTHORITY_V0_1",
+  "pretest_hash_inventory": "APTF_TEST_009V_PRETEST_HASHES_V0_1.json",
+  "test009_files_prehashed": 18,
+  "computational_hash_authority": "APTF_TEST_009_ARTIFACT_HASHES_V0_1.json",
+  "frozen_price_observations": "APTF_TEST_009_DERIVATIVE_OBSERVATIONS_V0_1.csv",
+  "frozen_crossings": "APTF_TEST_009_DERIVATIVE_CROSSINGS_V0_1.csv",
+  "frozen_turning_trajectories": "APTF_TEST_009_TURNING_TRAJECTORIES_V0_1.csv",
+  "frozen_episode_alignment": "APTF_TEST_009_EPISODE_DERIVATIVE_ALIGNMENT_V0_1.csv",
+  "price_field": "close",
+  "price_primary_window": 15,
+  "price_method": "causal trailing quadratic fit on actual UTC elapsed minutes",
+  "price_near_zero_D1": 0.0035332071428566536,
+  "upper_crossings": 6606,
+  "lower_crossings": 6606,
+  "price_values_recomputed": false,
+  "price_crossings_recomputed": false,
+  "volume_may_move_price_crossing": false,
+  "status": "FROZEN_REFERENCE_VERIFIED"
+}

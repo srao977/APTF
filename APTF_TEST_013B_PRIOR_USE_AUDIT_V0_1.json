@@ -1,0 +1,25 @@
+{
+  "test_id":"APTF_TEST_013B_PRIOR_USE_AUDIT_V0_1",
+  "searched_terms":["QQQ_1min_firstratedata","QQQ","c326e1e63886c444f75bb3d0bd87907490eac220931a742050faf3a03815e55e"],
+  "repository_exact_filename_references":0,
+  "repository_exact_hash_references":0,
+  "git_history_filename_references":0,
+  "git_history_hash_references":0,
+  "generic_qqq_references":[{
+    "path":"d01_adaptive_parametric_model/tests/test_v012_structural_independence.py",
+    "purpose":"provider-neutral OHLCV capability equivalence test",
+    "source_values_used":false,
+    "candidate_metrics_used":false
+  }],
+  "used_in_test009":false,
+  "used_in_test009v":false,
+  "used_in_test010":false,
+  "used_in_test011":false,
+  "used_in_test012":false,
+  "used_in_test013":false,
+  "used_in_f4_selection":false,
+  "used_in_lambda_selection":false,
+  "used_in_window_selection":false,
+  "previously_scored_against_f4":false,
+  "unseen_external_validation_status":"ESTABLISHED"
+}

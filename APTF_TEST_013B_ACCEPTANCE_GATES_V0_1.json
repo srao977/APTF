@@ -1,0 +1,716 @@
+{
+  "acceptance": "176/176 PASS",
+  "classification": "CONDITIONALLY_EXTERNALLY_VALIDATED_CONTINUOUS_CANDIDATE",
+  "gates": {
+    "G001": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G002": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G003": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G004": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G005": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G006": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G007": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G008": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G009": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G010": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G011": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G012": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G013": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G014": {
+      "category": "SOURCE",
+      "status": "PASS"
+    },
+    "G015": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G016": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G017": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G018": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G019": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G020": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G021": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G022": {
+      "category": "UNSEEN_STATUS",
+      "status": "PASS"
+    },
+    "G023": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G024": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G025": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G026": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G027": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G028": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G029": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G030": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G031": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G032": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G033": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G034": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G035": {
+      "category": "FREEZE",
+      "status": "PASS"
+    },
+    "G036": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G037": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G038": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G039": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G040": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G041": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G042": {
+      "category": "STATE",
+      "status": "PASS"
+    },
+    "G043": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G044": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G045": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G046": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G047": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G048": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G049": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G050": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G051": {
+      "category": "ADAPTATION",
+      "status": "PASS"
+    },
+    "G052": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G053": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G054": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G055": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G056": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G057": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G058": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G059": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G060": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G061": {
+      "category": "CAUSALITY",
+      "status": "PASS"
+    },
+    "G062": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G063": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G064": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G065": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G066": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G067": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G068": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G069": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G070": {
+      "category": "TIME",
+      "status": "PASS"
+    },
+    "G071": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G072": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G073": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G074": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G075": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G076": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G077": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G078": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G079": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G080": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G081": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G082": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G083": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G084": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G085": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G086": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G087": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G088": {
+      "category": "PRIMARY_COMPARISON",
+      "status": "PASS"
+    },
+    "G089": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G090": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G091": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G092": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G093": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G094": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G095": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G096": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G097": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G098": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G099": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G100": {
+      "category": "DIRECTION",
+      "status": "PASS"
+    },
+    "G101": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G102": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G103": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G104": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G105": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G106": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G107": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G108": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G109": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G110": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G111": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G112": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G113": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G114": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G115": {
+      "category": "STABILITY",
+      "status": "PASS"
+    },
+    "G116": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G117": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G118": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G119": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G120": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G121": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G122": {
+      "category": "SENSITIVITY",
+      "status": "PASS"
+    },
+    "G123": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G124": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G125": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G126": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G127": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G128": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G129": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G130": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G131": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G132": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G133": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G134": {
+      "category": "GENERALIZATION",
+      "status": "PASS"
+    },
+    "G135": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G136": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G137": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G138": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G139": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G140": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G141": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G142": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G143": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G144": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G145": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G146": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G147": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G148": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G149": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G150": {
+      "category": "PROHIBITIONS",
+      "status": "PASS"
+    },
+    "G151": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G152": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G153": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G154": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G155": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G156": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G157": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G158": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G159": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G160": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G161": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G162": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G163": {
+      "category": "IMMUTABILITY",
+      "status": "PASS"
+    },
+    "G164": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G165": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G166": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G167": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G168": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G169": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G170": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G171": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G172": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G173": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G174": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G175": {
+      "category": "DECISION",
+      "status": "PASS"
+    },
+    "G176": {
+      "category": "DECISION",
+      "status": "PASS"
+    }
+  },
+  "next_test_executed": false,
+  "no_post_result_retuning": true,
+  "passed": 176,
+  "required": 176,
+  "status": "PASS",
+  "test_id": "APTF_TEST_013B_EXTERNAL_INSTRUMENT_VALIDATION_V0_1"
+}

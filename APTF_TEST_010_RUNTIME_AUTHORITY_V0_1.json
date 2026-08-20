@@ -1,0 +1,12 @@
+{
+  "test_id": "APTF_TEST_010_RUNTIME_AUTHORITY_V0_1",
+  "runtime_version": "APTF Runtime Core V0.1",
+  "freeze_manifest": "APTF_RUNTIME_CORE_FREEZE_MANIFEST_V0_1.json",
+  "freeze_manifest_sha256": "ee93a9c92eb39d08e29772889a86d592b76399ea673a52e41c1e6a6c2d0e2379",
+  "frozen_files": 22,
+  "pretest_files_matched": 22,
+  "runtime_modification_allowed": false,
+  "emitter_execution_allowed": false,
+  "position_operator_modification_allowed": false,
+  "status": "VERIFIED"
+}

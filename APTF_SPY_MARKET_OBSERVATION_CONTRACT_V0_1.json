@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"APTF_SPY_MARKET_OBSERVATION_CONTRACT_V0_1",
+  "title":"MarketObservation",
+  "type":"object",
+  "additionalProperties":false,
+  "required":["symbol","timestamp","open","high","low","close","volume","session","source"],
+  "properties":{
+    "symbol":{"const":"SPY"},"timestamp":{"type":"string","format":"date-time"},
+    "open":{"type":"number"},"high":{"type":"number"},"low":{"type":"number"},"close":{"type":"number"},
+    "volume":{"type":"number","minimum":0},"session":{"enum":["PREMARKET","REGULAR","AFTERHOURS"]},
+    "source":{"type":"string"}
+  },
+  "note":"The Price Engine consumes close and timestamp only; OHLCV is preserved for feed-adapter compatibility."
+}

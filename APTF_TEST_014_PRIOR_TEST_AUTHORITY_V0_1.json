@@ -1,0 +1,16 @@
+{
+  "test_id":"APTF_TEST_014_PRIOR_TEST_AUTHORITY_V0_1",
+  "test006b":{"status":"FOUNDATIONAL_GATE_READ_ONLY","source":"APTF_TEST_006B_OBSERVATIONS_WITH_EMITTED_POSITION_V0_1.csv","reserve_rerun_allowed":false,"role":"frozen out-of-sample Emitter evidence"},
+  "test007":{"status":"FROZEN","hold_semantics":{"FLAT_HOLD":"FLAT","LONG_HOLD":"LONG"},"short_authorized":false},
+  "test008":{"status":"FROZEN","pnl_role":"OUT_OF_SCOPE"},
+  "test009":{"status":"FROZEN","price":"close","state":["P","P1","P2"],"derivative_window":15},
+  "test009v":{"status":"FROZEN","price_volume_causality":"Price -> Trading -> observed Volume","volume_used_in_test014":false},
+  "test010":{"status":"FROZEN","architecture":"independent P Engine and V Engine"},
+  "test011":{"status":"FROZEN","solver":"RK45","horizon_minutes":1.0,"rtol":1e-6},
+  "test012":{"status":"FROZEN","candidate":"F4_L1_W30","classification":"conditional continuous candidate"},
+  "test013":{"status":"FROZEN","classification":"VALIDATION_BLOCKED","projection_rows":0},
+  "test013b":{"status":"FROZEN","classification":"CONDITIONALLY_EXTERNALLY_VALIDATED_CONTINUOUS_CANDIDATE"},
+  "test013c":{"status":"FROZEN","classification":"SECOND_EXTERNAL_REPLICATION_CONDITIONAL"},
+  "authority_conflicts":0,
+  "boundary_note":"F4 identity is consistent. Prior no-promotion language remains controlling for Runtime/Control; Test014 builds an additive experimental cockpit emission only."
+}

@@ -1,0 +1,18 @@
+{
+  "split_id":"APTF_TEST_014_DEVELOPMENT_VALIDATION_SPLIT_V0_1",
+  "created_before_emission_policy_development":true,
+  "basis":"chronological SPY F4_L1_W30 eligible session dates",
+  "random_shuffle":false,
+  "overlap":0,
+  "eligible_rows":55199,
+  "eligible_sessions":127,
+  "development":{"first_timestamp":"2023-03-30T11:07:00Z","last_timestamp":"2023-08-04T20:44:00Z","rows":37887,"sessions":88,"session_fraction":0.6929133858267716},
+  "validation":{"first_timestamp":"2023-08-07T11:25:00Z","last_timestamp":"2023-09-29T20:39:00Z","rows":17312,"sessions":39,"session_fraction":0.30708661417322836},
+  "first_validation_local_date":"2023-08-07",
+  "validation_untouched_by_test014_policy_selection":true,
+  "validation_globally_unseen_to_f4_development":false,
+  "turn_definition":{"method":"strict centered local Price extremum","radius_minutes":3,"contiguous_same_session_required":true},
+  "precursor_horizon_minutes":5,
+  "chart_session_selection":"validation source-only objective criteria: maximum absolute net change, minimum median absolute movement, maximum centered turn count, maximum return-sign-change rate",
+  "status":"FROZEN_BEFORE_POLICY_DEVELOPMENT"
+}

@@ -1,0 +1,32 @@
+{
+  "test_id":"APTF_TEST_013_HOLDOUT_AUTHORITY_V0_1",
+  "source":"immutable Test007 observation map",
+  "observation_start":101099,
+  "observation_end":101220,
+  "chronological_start":"2023-09-29T19:59:00Z",
+  "chronological_end":"2023-09-29T23:45:00Z",
+  "row_count":122,
+  "local_trading_dates":1,
+  "session_types":["REGULAR","AFTERHOURS"],
+  "test012_scored_projection_overlap":0,
+  "participated_in_test010_model_selection":true,
+  "participated_in_test011_evaluation":true,
+  "participated_in_test012_candidate_selection":false,
+  "independence_scope":"chronologically later and excluded from Test012 candidate-selection scorecard; not globally untouched",
+  "random_split":false,
+  "governance":"AUTHORIZED_BY_EXPLICIT_TEST013_USER_PROMPT_FOR_READ_ONLY_VALIDATION",
+  "reserve_emitter_rerun_authorized":false,
+  "holdout_access":"AUTHORIZED",
+  "outcomes_profiled_before_freeze":false,
+  "eligible_one_minute_rows":83,
+  "causal_fit_cover":{"W15":26,"W30":11,"W60":0},
+  "primary_common_cover_count":11,
+  "sensitivity_common_cover_count":0,
+  "blocking_reasons":[
+    "W60 sensitivity has zero valid causal projections",
+    "W15/W30/W60 sensitivity intersection is empty",
+    "W30 primary cover has only 11 rows on one local trading date",
+    "predeclared tail and drift validation is not statistically supportable"
+  ],
+  "status":"VALIDATION_BLOCKED_INSUFFICIENT_CAUSAL_COVER"
+}

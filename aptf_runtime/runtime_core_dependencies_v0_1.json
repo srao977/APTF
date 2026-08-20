@@ -1,0 +1,20 @@
+{
+  "runtime_core_version": "APTF Runtime Core V0.1",
+  "distribution": "aptf-runtime",
+  "additive_modules": [
+    "aptf_runtime.context",
+    "aptf_runtime.emitter",
+    "aptf_runtime.models",
+    "aptf_runtime.observation",
+    "aptf_runtime.position",
+    "aptf_runtime.runtime"
+  ],
+  "validated_local_dependencies": [
+    {"distribution":"aptf-d01-adaptive-parametric-model","version":"0.1.0"},
+    {"distribution":"aptf-d02-return-shape","version":"0.2.0"},
+    {"distribution":"aptf-d04-trading-envelope","version":"0.1.0"}
+  ],
+  "metadata_note": "Existing pyproject.toml is byte-frozen by Temporal Event Envelope V0.2 and is not modified by additive Test 007A extraction.",
+  "broker_dependency": false,
+  "pnl_dependency": false
+}

@@ -1,0 +1,33 @@
+{
+  "capital_introduced": false,
+  "decision_mismatches": 0,
+  "emitter_executions": 0,
+  "execution_price_selected": false,
+  "map_rows": 101221,
+  "pnl_calculated": false,
+  "position_decisions_recalculated": 0,
+  "rows_added": 0,
+  "rows_lost": 0,
+  "rows_reordered": 0,
+  "shares_introduced": false,
+  "source_field_mismatches": 0,
+  "source_immutable": true,
+  "source_post_sha256": "f4c4bcf3e03e37f99ff04444035915d8f28cc24dec6d16a22e32089ad83dbfd4",
+  "source_pre_sha256": "f4c4bcf3e03e37f99ff04444035915d8f28cc24dec6d16a22e32089ad83dbfd4",
+  "source_rows": 101221,
+  "output_hashes": [
+    {"path":"APTF_TEST_007_POSITION_EPISODES_V0_1.csv","sha256":"9fc3911f66f7acfbca0d66f9f01067f1273170b19f7d735065f05823c28b1ba7"},
+    {"path":"APTF_TEST_007_OBSERVATION_EPISODE_MAP_V0_1.csv","sha256":"db2ea7733030fc170143e00873789d12a69e8ff13e6f8ab641f11f06b7732158"},
+    {"path":"APTF_TEST_007_UNMATCHED_SELLS_V0_1.csv","sha256":"05c181f391aeed43450758a7c60887006e45d2665c1e750a3945db9ef1e92d7a"},
+    {"path":"APTF_TEST_007_REPEATED_BUYS_V0_1.csv","sha256":"d076698bba457676dd106046c7a59bfe7af003db27491d293074c3a284ff4cc7"},
+    {"path":"APTF_TEST_007_FLAT_HOLDS_V0_1.csv","sha256":"072cdf7f8a0e9a7050bbb837421424d83eb9ab038d9bdfc04a39378bf19873f7"}
+  ],
+  "historical_non_drift": {
+    "Test006B":{"count":20,"digest":"638d4cc54f6249990bf7fe27d54e8b4db2fb9471bfa8e4e71a0334d240b8539b","equal":true},
+    "Test006A":{"count":21,"digest":"ccd04b4b2870b7b9a647e1d93ed886fd981944a9912930b8eaae5e3841548c86","equal":true},
+    "Test005R":{"count":16,"digest":"efa31bf14f4e12f4080f4003ad73fa7edb8a284389c73e1efa02781b6a11c44d","equal":true},
+    "adaptive_emitter_freeze_sha256":"745065b8b6de0a19f7e5e025e9b00463d8fc727aaa4b2dc1b0e45bf3d57186b9",
+    "historical_D04_freeze_sha256":"a437cdb63bc7fe4aecdeece8ebd01082a62753774ad9ff7d93ee900eee3e4b79"
+  },
+  "test006b_decisions_modified": 0
+}

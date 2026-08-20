@@ -1,0 +1,34 @@
+{
+  "candidate_rule": "crossing OR (opposition persistent AND zero proximity threshold met AND deceleration strength threshold met)",
+  "color_is_trade_action": false,
+  "confidence_handling": "LOW causes AMBER only when low_confidence_requires_amber=true",
+  "created_from_partition": "TEST_014_DEVELOPMENT_ONLY",
+  "description": "one-observation opposition with normalized zero approach and minimum deceleration strength",
+  "domain_handling": "OUT_OF_DOMAIN is retained but does not automatically determine color",
+  "hysteresis": "candidate retained for candidate_hold_observations after evidence disappears",
+  "invalid_handling": "RK failure or nonfinite trajectory remains INVALID",
+  "normalization": {
+    "P1_zero_proximity": "abs(projected_P1) / max(abs(P1), abs(projected_P1), epsilon)",
+    "deceleration_strength": "opposing_abs(projected_P1 - P1) / max(abs(P1), epsilon)"
+  },
+  "parameters": {
+    "candidate_hold_observations": 0,
+    "deceleration_strength_threshold": 0.05,
+    "domain_exit_requires_amber": false,
+    "epsilon": 0.0035332071428566536,
+    "low_confidence_requires_amber": false,
+    "persistence_observations": 1,
+    "policy_id": "TRANSITION_EVIDENCE_P1",
+    "zero_proximity_threshold": 0.9
+  },
+  "policy_id": "P_EMISSION_V0_2",
+  "selected_candidate": "TRANSITION_EVIDENCE_P1",
+  "selection_rule": "minimum development changes/session subject to >=50% of V0.1 average recall and no worse combined directional false-warning rate",
+  "status": "FROZEN_BEFORE_VALIDATION",
+  "validation_outcomes_read": false,
+  "visible_colors": [
+    "GREEN",
+    "AMBER",
+    "RED"
+  ]
+}

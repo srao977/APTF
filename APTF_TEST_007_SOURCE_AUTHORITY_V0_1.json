@@ -1,0 +1,19 @@
+{
+  "source_path": "APTF_TEST_006B_OBSERVATIONS_WITH_EMITTED_POSITION_V0_1.csv",
+  "source_sha256": "f4c4bcf3e03e37f99ff04444035915d8f28cc24dec6d16a22e32089ad83dbfd4",
+  "row_count": 101221,
+  "column_count": 39,
+  "original_source_column_count": 22,
+  "appended_test006b_column_count": 17,
+  "first_timestamp": "2023-03-30T08:00:00Z",
+  "last_timestamp": "2023-09-29T23:48:00Z",
+  "decision_counts": {"INITIALIZING":15,"BUY":14249,"SELL":9779,"HOLD":77178},
+  "linked_evidence": [
+    "APTF_TEST_006B_RESULT_V0_1.md",
+    "APTF_TEST_006B_POSTEXECUTION_INTEGRITY_V0_1.json",
+    "APTF_TEST_006B_WALK_FORWARD_EMISSIONS_V0_1.json"
+  ],
+  "linked_test006b_status": "PASS_120_OF_120",
+  "emitter_executions": 0,
+  "position_decisions_recalculated": 0
+}

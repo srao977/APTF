@@ -1,0 +1,86 @@
+{
+  "captured_at_utc": "2026-08-19T21:45:52.704047Z",
+  "files": [
+    {
+      "path": "APTF_TEST_013_ACCEPTANCE_GATES_V0_1.json",
+      "sha256": "e881956650a41b70a738168ea383e9bd2877ffb9387ca5ef4a62f35f13412a4e",
+      "size_bytes": 501
+    },
+    {
+      "path": "APTF_TEST_013_HOLDOUT_AUTHORITY_V0_1.json",
+      "sha256": "d09ad356b535425d80e812cbfbf24dcd989a883cb0505632217a2690d1abdcec",
+      "size_bytes": 1422
+    },
+    {
+      "path": "APTF_TEST_013_NEXT_TEST_RECOMMENDATION_V0_1.md",
+      "sha256": "ad0291938c1908a05dd89f8d3e42a9a7700920ceaa00ff8151dc4caad1208a0e",
+      "size_bytes": 522
+    },
+    {
+      "path": "APTF_TEST_013_PLAN_V0_1.md",
+      "sha256": "21291326a2484e808aafe4597005f9e4d01ea0d858cdb6ae9e45140854b1b97a",
+      "size_bytes": 647
+    },
+    {
+      "path": "APTF_TEST_013_PRETEST_HASHES_V0_1.json",
+      "sha256": "f1a76f0ac9e4534a02aef4ddfceae76cbf1b94983e8de0b9ba2c45bb5cde05cd",
+      "size_bytes": 29888
+    },
+    {
+      "path": "APTF_TEST_013_RESULT_V0_1.md",
+      "sha256": "9f44be2a6a3c95ba143342359387ee59a3719984360efbcfc18ff6f825791484",
+      "size_bytes": 1474
+    },
+    {
+      "path": "APTF_TEST_013_RUNTIME_AUTHORITY_V0_1.json",
+      "sha256": "2fcd2561d8afb935a5f46439903dd1e1581921708b056fa32fce47185ddf36f9",
+      "size_bytes": 273
+    },
+    {
+      "path": "APTF_TEST_013_RUNTIME_IMMUTABILITY_V0_1.json",
+      "sha256": "2d9bac750716cb232ec09d21fe9b9e665d2bb8241a79468d3058dde83676398a",
+      "size_bytes": 52539
+    },
+    {
+      "path": "APTF_TEST_013_RUNTIME_PROMOTION_RECOMMENDATION_V0_1.md",
+      "sha256": "75ce097d3d0a10f3fbe635f77f9ca5c2c9b6e8dfa94f2d3012a3dbb20f426a0f",
+      "size_bytes": 328
+    },
+    {
+      "path": "APTF_TEST_013_SOURCE_AUTHORITY_V0_1.json",
+      "sha256": "e4f002e825fd5aa776096237b86c4f3cd1f02c5b45f963b76d1682ebd54bc96b",
+      "size_bytes": 350
+    },
+    {
+      "path": "APTF_TEST_013_SUMMARY_V0_1.json",
+      "sha256": "3ee51bb823d3de1adf32d5d47bcfd02598ef6f86961117fd8e6b898f8a4e146c",
+      "size_bytes": 749
+    },
+    {
+      "path": "APTF_TEST_013_TEST012_AUTHORITY_V0_1.json",
+      "sha256": "cb830f7ab687ce159055f48b0217db3c22a83cc32fd20ce9f37d3add762044f5",
+      "size_bytes": 548
+    },
+    {
+      "path": "APTF_TEST_013_VALIDATION_DECISION_V0_1.md",
+      "sha256": "e5d8775c5525d337d40794c0e4bd72b0262f372942ebe35f1bbd930dc77757f1",
+      "size_bytes": 892
+    },
+    {
+      "path": "APTF_TEST_013_VALIDATION_FREEZE_V0_1.json",
+      "sha256": "3fe1b54d10bfe71c38822e697dfe7512ed94dabff8aad640d97a789753506dce",
+      "size_bytes": 1485
+    },
+    {
+      "path": "APTF_TEST_013_VALIDATION_METHOD_V0_1.md",
+      "sha256": "fa9fc674ab52caea16d20d11900f8ae8d18c3d9e1b7b4387723eef6e1603d38e",
+      "size_bytes": 1208
+    },
+    {
+      "path": "diagnostics/run_test_013_validation.py",
+      "sha256": "3e661360c81026ae5aeefc3ee5f115fe3d073cc78b4ea9f42300af43df071642",
+      "size_bytes": 18961
+    }
+  ],
+  "test_id": "APTF_TEST_013_ARTIFACT_HASHES_V0_1"
+}

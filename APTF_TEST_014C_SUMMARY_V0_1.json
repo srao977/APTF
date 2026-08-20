@@ -1,0 +1,124 @@
+{
+  "P_V_fusion": false,
+  "P_and_L": false,
+  "P_classification": "SPY_P_ENGINE_COCKPIT_CONDITIONAL",
+  "P_policy_sha256": "bb295db1e94404e2422b76885083b32651433869882ddd84164c50c0cc9985ef",
+  "V_engine_classification": "SPY_V_ENGINE_COCKPIT_READY",
+  "V_policy_modified_after_validation": false,
+  "V_policy_sha256": "f719134f241b00888099e237c02f237a2db4b59f02b25ea5498c51006991bcd8",
+  "V_validation": {
+    "AMBER_count": 7067,
+    "AMBER_median_interval": 6.0,
+    "AMBER_occupancy": 0.40821395563770796,
+    "GREEN_count": 8782,
+    "GREEN_median_interval": 13.0,
+    "GREEN_occupancy": 0.5072781885397413,
+    "INVALID_count": 0,
+    "INVALID_occupancy": 0.0,
+    "RED_count": 1463,
+    "RED_median_interval": 4.0,
+    "RED_occupancy": 0.08450785582255083,
+    "changes_per_session": 44.76923076923077,
+    "color_changes": 1746,
+    "intervals": 1785,
+    "median_interval": 7.0,
+    "observations": 17312,
+    "policy_id": "V_EMISSION_V0_1",
+    "sessions": 39
+  },
+  "acceptance": "139/139 PASS",
+  "broker": false,
+  "charts": [
+    "output/test014c_charts/APTF_TEST_014C_QUIET_2023-09-14_V0_1.png",
+    "output/test014c_charts/APTF_TEST_014C_SUSTAINED_UPWARD_2023-08-29_V0_1.png",
+    "output/test014c_charts/APTF_TEST_014C_SUSTAINED_DOWNWARD_2023-08-24_V0_1.png",
+    "output/test014c_charts/APTF_TEST_014C_REVERSAL_2023-09-21_V0_1.png",
+    "output/test014c_charts/APTF_TEST_014C_HIGH_VOLUME_NOISY_2023-08-25_V0_1.png"
+  ],
+  "dual_observation_classification": "SPY_PV_INTERVAL_OBSERVATION_READY",
+  "execution_controller": false,
+  "immutability": {
+    "all_unchanged": true,
+    "inventory_expected": 62,
+    "inventory_unchanged": 62,
+    "prior_expected": 264,
+    "prior_unchanged": 264
+  },
+  "interval_counts": {
+    "P": 14611,
+    "PV": 18561,
+    "V": 5713
+  },
+  "invariants": {
+    "P": {
+      "adjacent_contiguous_intervals_differ": true,
+      "assigned_observations": 55199,
+      "chronologically_ordered": true,
+      "color_field": "p_color",
+      "emissions": 55199,
+      "every_emission_assigned_once": true,
+      "multiply_assigned": 0,
+      "no_session_boundary_crossed": true,
+      "overlaps": 0,
+      "status": "PASS",
+      "unassigned": 0
+    },
+    "PV": {
+      "adjacent_contiguous_intervals_differ": true,
+      "assigned_observations": 55199,
+      "chronologically_ordered": true,
+      "color_field": "joint_state",
+      "emissions": 55199,
+      "every_emission_assigned_once": true,
+      "multiply_assigned": 0,
+      "no_session_boundary_crossed": true,
+      "overlaps": 0,
+      "status": "PASS",
+      "unassigned": 0
+    },
+    "V": {
+      "adjacent_contiguous_intervals_differ": true,
+      "assigned_observations": 55199,
+      "chronologically_ordered": true,
+      "color_field": "cockpit_color",
+      "emissions": 55199,
+      "every_emission_assigned_once": true,
+      "multiply_assigned": 0,
+      "no_session_boundary_crossed": true,
+      "overlaps": 0,
+      "status": "PASS",
+      "unassigned": 0
+    }
+  },
+  "paper_trading": false,
+  "performance": {
+    "V_replay_sha256": "d586e79f51cd9f2f41af68878c1daab6248ccdef4d4bd5a2c66b3efbef7a0cac",
+    "bounded_interval_state": [
+      "current color",
+      "interval start",
+      "current age",
+      "last timestamp",
+      "current session"
+    ],
+    "deterministic": true,
+    "intervalizer_Q95": 2.8,
+    "intervalizer_Q99": 3.2,
+    "intervalizer_max": 159418.4,
+    "intervalizer_median": 1.4,
+    "unbounded_history_required": false,
+    "unit": "microseconds",
+    "volume_interpreter_median": 3.5
+  },
+  "test_id": "APTF_TEST_014C_SPY_V_ENGINE_AND_PV_INTERVAL_OBSERVATION_V0_1",
+  "transition_timing": {
+    "P_BEFORE_V": 2283,
+    "P_BEFORE_V_percentage": 0.4310800604229607,
+    "SIMULTANEOUS": 1355,
+    "SIMULTANEOUS_percentage": 0.2558534743202417,
+    "V_BEFORE_P": 1658,
+    "V_BEFORE_P_percentage": 0.3130664652567976,
+    "basis": "each V transition paired to nearest same-session P transition",
+    "causality_claim": false,
+    "median_absolute_transition_separation_minutes": 1.0
+  }
+}
